@@ -1,0 +1,8 @@
+{
+  "source_url": "https://www2.census.gov/geo/docs/reference/codes2020/national_county2020.txt",
+  "source_sha256": "9f6e5f6eb6ac2f5e9a36d5fd01dec77991bddc75118f748a069441a4782970d6",
+  "source_bytes": 126639,
+  "vintage": "Census2020",
+  "seed_rows": 6447,
+  "matching": "Uppercase, trim/collapse whitespace, remove periods/apostrophes on both source and official names; official full name plus suffix-stripped alias only when unique within state. No fuzzy matching or city/ZIP inference. Ambiguous aliases fail. Census2020 may not cover current county changes."
+}

@@ -1,0 +1,3823 @@
+{
+  "chromeVersion": "Google Chrome 156.0.8078.47",
+  "fonts": {
+    "/usr/share/fonts/truetype/open-sans/OpenSans-BoldItalic.ttf": {
+      "bytes": 213292,
+      "sha256": "3ca680f2444cc9e50447d057c006464566e92f2e77b0b6e26491e5bd757ed4e7"
+    },
+    "/usr/share/fonts/truetype/noto/NotoSerifThai-Bold.ttf": {
+      "bytes": 46992,
+      "sha256": "befef873c46740e20a49e8762c151d5fe1dddd0ecdddaf48766c709eae51f086"
+    },
+    "/usr/share/fonts/truetype/noto/NotoSansHanifiRohingya-Regular.ttf": {
+      "bytes": 27192,
+      "sha256": "abcfae7a163727e1d4507bc2603b2122cc3fbb9d5e14a8f5c11c89222de281f2"
+    },
+    "/usr/share/fonts/opentype/urw-base35/C059-Italic.otf": {
+      "bytes": 101324,
+      "sha256": "77852deabd3a84f7d0213932239de522410309374c2255ccbd510f01dc7c6e80"
+    },
+    "/usr/share/texmf/fonts/opentype/public/lm/lmromanslant8-regular.otf": {
+      "bytes": 118720,
+      "sha256": "a88ecd1a6b4d5aa1c9d537b98d0de8e19d63b292918fabf0cc36158ed770ca63"
+    },
+    "/usr/share/fonts/truetype/noto/NotoSansManichaean-Regular.ttf": {
+      "bytes": 50256,
+      "sha256": "50fd97d20306431271e23523a8d3e57210d105add3c340efd2ee5f77b63ac756"
+    },
+    "/usr/share/texmf/fonts/opentype/public/tex-gyre/texgyreadventor-italic.otf": {
+      "bytes": 170968,
+      "sha256": "1f21a5a07c207f70785dd6cbe4fcb2e0a3f60823b219efb01790a72d8a61b3cb"
+    },
+    "/usr/share/fonts/truetype/liberation/LiberationMono-Bold.ttf": {
+      "bytes": 308068,
+      "sha256": "50464e64aaadea741fb9516748aee296d570439406be11d63df22294e77ba867"
+    },
+    "/usr/share/fonts/opentype/urw-base35/NimbusSans-BoldItalic.otf": {
+      "bytes": 95396,
+      "sha256": "3f47fb34fcb7de09f8cbc9f305191340ddebf7a068419f4bb5f49287dea59b87"
+    },
+    "/usr/share/fonts/opentype/inter/Inter-BlackItalic.otf": {
+      "bytes": 598396,
+      "sha256": "54302c38cf020111ea06deaa137ba0c17b703d0f8acf0a5cd37f054c09f11c51"
+    },
+    "/usr/share/fonts/type1/urw-base35/NimbusSans-Italic.t1": {
+      "bytes": 120927,
+      "sha256": "b0527ec015601b5d29eecdb75a982b39fe316d5d53caf45108d712f99debe98e"
+    },
+    "/usr/share/fonts/type1/urw-base35/NimbusSansNarrow-Oblique.t1": {
+      "bytes": 107359,
+      "sha256": "eb92b8ab971fe2b53882b05948127940f23c3003b6f6f3f7bb25d6ed226a652e"
+    },
+    "/usr/share/fonts/opentype/lobster/lobster.otf": {
+      "bytes": 80892,
+      "sha256": "4605f4c5aac8d4bb55a28a63db6c1dd06394d4b6e0cb157f61603fb26021a617"
+    },
+    "/usr/share/fonts/opentype/lobstertwo/LobsterTwo-BoldItalic.otf": {
+      "bytes": 80892,
+      "sha256": "4605f4c5aac8d4bb55a28a63db6c1dd06394d4b6e0cb157f61603fb26021a617"
+    },
+    "/usr/share/fonts/truetype/noto/NotoSansMyanmar-Regular.ttf": {
+      "bytes": 196608,
+      "sha256": "3fe9a4babc12081adc979e0313433e6ec85bb3ad069681c23ee8d8ea8b91332b"
+    },
+    "/usr/share/fonts/truetype/noto/NotoSansOsage-Regular.ttf": {
+      "bytes": 21036,
+      "sha256": "27d3b1ea74cc799025ed5e8b58d1a33185530c43fbb4119fffbcd161269477d3"
+    },
+    "/usr/share/fonts/truetype/ubuntu/Ubuntu-Italic[wdth,wght].ttf": {
+      "bytes": 679224,
+      "sha256": "f5689f6ae7f16f7ede2012702abd605ac1afa03c950713523b9953d600937975"
+    },
+    "/usr/share/fonts/opentype/inter/InterDisplay-LightItalic.otf": {
+      "bytes": 590688,
+      "sha256": "5a84fbda0aa0b5c77dcf98eae361c4af1791ee952d443195b8947e11b2fc2225"
+    },
+    "/usr/share/fonts/truetype/noto/NotoSerifAhom-Regular.ttf": {
+      "bytes": 19536,
+      "sha256": "d6a2a355b4ef6f2228d58b61e2f650255d36488efe272a36e67aa16b663ffa03"
+    },
+    "/usr/share/fonts/type1/urw-base35/P052-Roman.t1": {
+      "bytes": 159843,
+      "sha256": "99a8259f8eaec4604ad8794dc63e67b0d4fe189bdf6acbd1a7047dbe1ef9c86f"
+    },
+    "/usr/share/fonts/truetype/liberation/LiberationSerif-BoldItalic.ttf": {
+      "bytes": 376892,
+      "sha256": "10ec0fa22bc6f12a239d600c051752884d155997aafd19ebc24c4f4a8d2b98d0"
+    },
+    "/usr/share/texmf/fonts/opentype/public/lm/lmsans10-boldoblique.otf": {
+      "bytes": 114984,
+      "sha256": "e45673d84754a94f2f053bd4c15950b4b320144fbb622c630a26fd7b68cfabc5"
+    },
+    "/usr/share/fonts/X11/Type1/NimbusSans-BoldItalic.pfb": {
+      "bytes": 123328,
+      "sha256": "f4b93fdba7fcf980e2a8cfd7840f06cd46ffd16b64edb6586551e722a6d5522b"
+    },
+    "/usr/share/fonts/type1/urw-base35/NimbusSansNarrow-Bold.t1": {
+      "bytes": 106239,
+      "sha256": "a383bbf4d6f8887a8ccda9e5ad2d6b2b6353c0620f4a29f49b27d68177d84ee2"
+    },
+    "/usr/share/fonts/truetype/noto/NotoSerifTangut-Regular.ttf": {
+      "bytes": 3419020,
+      "sha256": "0db5db0492d049c5bcaa3910ece7db3917475a6e91b6c74b5125760b01b3ef5d"
+    },
+    "/usr/share/fonts/truetype/charis/CharisSIL-Bold.ttf": {
+      "bytes": 805096,
+      "sha256": "968b864a931777ff1b686abde4ec236e5eb0c44138fc69c8d25f2d57f91d7796"
+    },
+    "/usr/share/fonts/truetype/noto/NotoSansIndicSiyaqNumbers-Regular.ttf": {
+      "bytes": 32660,
+      "sha256": "1d5fd023870ac85d0b16a7ac8b7f679db2c475e2719849670cac029d6d2ec43b"
+    },
+    "/usr/share/texmf/fonts/opentype/public/lm/lmsansquot8-oblique.otf": {
+      "bytes": 112648,
+      "sha256": "d858d237a69d432ca0ff67b930dabf5a60bfde69ca39bc555fab78ecbb5f4e4d"
+    },
+    "/usr/share/fonts/opentype/freefont/FreeMonoBoldOblique.otf": {
+      "bytes": 260576,
+      "sha256": "f4edfcc99f2e9e2227bf7443f6cf285b407af5be2b0dc97cc2102df414053eef"
+    },
+    "/usr/share/fonts/truetype/lato/Lato-Hairline.ttf": {
+      "bytes": 584784,
+      "sha256": "80dc280e8a05b80d7a566a15b379bba422a776e5bc58b92a9b8f3a9bbea7eb03"
+    },
+    "/usr/share/texmf/fonts/opentype/public/tex-gyre-math/texgyrepagella-math.otf": {
+      "bytes": 601220,
+      "sha256": "1f9e010f60e947d0e925910009b2ea85ad54edc7cefb106f8cdefb9ffd1d5f2f"
+    },
+    "/usr/share/texmf/fonts/opentype/public/tex-gyre-math/texgyredejavu-math.otf": {
+      "bytes": 525008,
+      "sha256": "ba91f8855fbaf58b6be6bd385b9342828cf72061f90abe1e69fe9d2cb0514bac"
+    },
+    "/usr/share/fonts/truetype/adf/UniversalisADFStd-Italic.otf": {
+      "bytes": 40452,
+      "sha256": "d092bc03d75f970a06e30bf3d895d4a694bb45cbf07c19bd53cf024e6276852d"
+    },
+    "/usr/share/fonts/type1/urw-base35/P052-BoldItalic.t1": {
+      "bytes": 163906,
+      "sha256": "557c1aad252d91a3ae4a19acf18277657cb34cd02caead1ea1d686961678cfd8"
+    },
+    "/usr/share/fonts/truetype/noto/NotoSansSharada-Regular.ttf": {
+      "bytes": 49256,
+      "sha256": "d70fdd4d55beb32020d1fecf38ec9dea8304cec2a3098bdf3da70040cc0b2db7"
+    },
+    "/usr/share/fonts/truetype/noto/NotoSerifGeorgian-Bold.ttf": {
+      "bytes": 63852,
+      "sha256": "635bc1529b2ca28dfc694aa7cd1e9960c04fdfcde99ee5b7f7b34761d37259fe"
+    },
+    "/usr/share/fonts/truetype/adf/GilliusADFNo2-BoldItalic.otf": {
+      "bytes": 39812,
+      "sha256": "6785d427ffdf9de42010971faace7838de48067d460b8790c9b5d041d390ca17"
+    },
+    "/usr/share/fonts/truetype/ubuntu/UbuntuSans-Italic[wdth,wght].ttf": {
+      "bytes": 738444,
+      "sha256": "603f7a4b837143b742a8df3ad3ad80164a50e4529f02e3f6aa533b78e209d3df"
+    },
+    "/usr/share/fonts/truetype/open-sans/OpenSans-Regular.ttf": {
+      "bytes": 217360,
+      "sha256": "e64e508b2aa2880f907e470c4550980ec4c0694d103a43f36150ac3f93189bee"
+    },
+    "/usr/share/fonts/truetype/ubuntu/UbuntuSansMono[wght].ttf": {
+      "bytes": 230324,
+      "sha256": "507870a3fe5737eb5b02f366587d30607c02a5ad45d8fe94b3ee20a80ccad32a"
+    },
+    "/usr/share/fonts/truetype/noto/NotoSansDisplay-Italic.ttf": {
+      "bytes": 531240,
+      "sha256": "4562c3241e077cd612b2d5f0bf1717767545cfeff79dcb704e78114a083aecb0"
+    },
+    "/usr/share/fonts/truetype/gentium-basic/GenBasI.ttf": {
+      "bytes": 258680,
+      "sha256": "191de1e709a691f1134775539dee8b2167baef3ee411744b5cdf3b43ce18707a"
+    },
+    "/usr/share/fonts/truetype/ubuntu/Ubuntu[wdth,wght].ttf": {
+      "bytes": 1072960,
+      "sha256": "28c4c189a44803b1986fd16074187034dc6d94ad35f5e87de13dd0e786b70b73"
+    },
+    "/usr/share/texmf/fonts/opentype/public/lm/lmromanslant10-bold.otf": {
+      "bytes": 117984,
+      "sha256": "5f6689646a5e88b402d2e60085c813fca3a4d60707b0383c65cb023107a8bddc"
+    },
+    "/usr/share/fonts/opentype/neohellenic/GFSNeohellenicBoldIt.otf": {
+      "bytes": 103688,
+      "sha256": "1739907b36bae01b56ee8dd7f366e981ba90f6b3846ac239f0ab1fd927f8bee6"
+    },
+    "/usr/share/texmf/fonts/opentype/public/lm/lmroman10-italic.otf": {
+      "bytes": 118828,
+      "sha256": "c1fce25075567bb8dbf2151658c3b442690041db17a2d49fc9e55905ea5b7169"
+    },
+    "/usr/share/fonts/opentype/linux-libertine/LinBiolinum_RB.otf": {
+      "bytes": 485452,
+      "sha256": "26bc2e961ecc78e198482cfd394e3c75680b6f0fc54630572b4bf24cf0bb9e33"
+    },
+    "/usr/share/fonts/truetype/freefont/FreeSansBoldOblique.ttf": {
+      "bytes": 579576,
+      "sha256": "f2651b5feb85f18aabe099cc077a70f7f78fe45968c53fee6bfbda7fedd10861"
+    },
+    "/usr/share/texmf/fonts/opentype/public/tex-gyre/texgyreheroscn-bold.otf": {
+      "bytes": 133220,
+      "sha256": "ba3b1a5915994b4186d0debe81ed0a45f482fde1750a7bc59b4649f505e4c627"
+    },
+    "/usr/share/fonts/truetype/adf/AccanthisADFStdNo3-Regular.otf": {
+      "bytes": 52204,
+      "sha256": "006c869ae8eb3f6073fc48fb313f9acdba116d3b23e00091186e0ea180294172"
+    },
+    "/usr/share/fonts/opentype/urw-base35/NimbusRoman-Italic.otf": {
+      "bytes": 105684,
+      "sha256": "b7c424e6cb79baddfcdcd9a9d87f9fc4fdd06f0e5160066e2b2e47bcd647c7b9"
+    },
+    "/usr/share/fonts/truetype/lato/Lato-Heavy.ttf": {
+      "bytes": 665420,
+      "sha256": "4ce7ec20cd9c391b271b4149ad8cf5a71301d98965403f14fc5530d017146dbb"
+    },
+    "/usr/share/fonts/truetype/ubuntu/UbuntuSans[wdth,wght].ttf": {
+      "bytes": 1080900,
+      "sha256": "37e90bba45a2a1172d9f6078e45daebaa1b4e537943205cc1309f142a254fe40"
+    },
+    "/usr/share/fonts/type1/urw-base35/NimbusMonoPS-Italic.t1": {
+      "bytes": 142983,
+      "sha256": "0db4cd31b146794a931de48ca15f8bad3252ad744deb651a582f75af4c7ae8df"
+    },
+    "/usr/share/fonts/truetype/gentiumplus/GentiumBookPlus-Bold.ttf": {
+      "bytes": 891340,
+      "sha256": "bad0c69e4452a2c34d66754ad56a0f0c12b043cb40c44216337439eeae500831"
+    },
+    "/usr/share/fonts/opentype/stix/STIXTwoText-MediumItalic.otf": {
+      "bytes": 326008,
+      "sha256": "cc6e00147828e7b1f1aeaae928cabdbf14f5bffefb4e19b0ba2c46ce56292f4e"
+    },
+    "/usr/share/fonts/opentype/ebgaramond/EBGaramondSC12-Regular.otf": {
+      "bytes": 353340,
+      "sha256": "a53ed3efdf2c5bc7e0ce04e28cb12c2a37b5f3811bb0faafba1abb4b900acab3"
+    },
+    "/usr/share/fonts/opentype/urw-base35/URWGothic-BookOblique.otf": {
+      "bytes": 85336,
+      "sha256": "ec4e947734950fd344918e560bc8ad0c5d8b17d0ab4853988824f13b9f77e53f"
+    },
+    "/usr/share/fonts/truetype/adf/AccanthisADFStdNo2-Regular.otf": {
+      "bytes": 49764,
+      "sha256": "b917cbb71a6e09b6bca87cf4d53b1bd93fcf7675cbf5792cc028bb3c78229fba"
+    },
+    "/usr/share/fonts/opentype/stix/STIXTwoText-Medium.otf": {
+      "bytes": 304420,
+      "sha256": "9cc9f870852a46d708907b96ed024b8d0067a05276d939bfe0b7e89752afc8d9"
+    },
+    "/usr/share/fonts/truetype/noto/NotoSansWancho-Regular.ttf": {
+      "bytes": 18940,
+      "sha256": "e9840bd886a6133e000474eed786f0985a3cf68d45fa240d38a2a306c6a9965c"
+    },
+    "/usr/share/fonts/type1/urw-base35/NimbusMonoPS-Bold.t1": {
+      "bytes": 155992,
+      "sha256": "63e2c80d0e6983c68dd986f7044944e9f58463f8bb118c21fb4372c298906b18"
+    },
+    "/usr/share/fonts/type1/urw-base35/URWBookman-DemiItalic.t1": {
+      "bytes": 142686,
+      "sha256": "c2877b3b139dec0544fa9b924517ccaa30600a206e89a9b9f89707ee003cbdfe"
+    },
+    "/usr/share/fonts/type1/urw-base35/C059-Bold.t1": {
+      "bytes": 146014,
+      "sha256": "78110e7b34a1e89c86f010ae1fb87d3cffba73bbd557374bd16dfd41bdc3c60f"
+    },
+    "/usr/share/fonts/truetype/adf/GilliusADFNo2-Cond.otf": {
+      "bytes": 36876,
+      "sha256": "22fce3cb74cf1fbb5a89e4d4bea9f0defc7038158053bc1768ff8df052346387"
+    },
+    "/usr/share/fonts/truetype/noto/NotoSansSundanese-Bold.ttf": {
+      "bytes": 22960,
+      "sha256": "b202131dee605b4bfee1dfe4e435ac8a4b2ec92e0febf6999c4bb6c3238f4770"
+    },
+    "/usr/share/fonts/truetype/ubuntu/UbuntuSansMono-Italic[wght].ttf": {
+      "bytes": 186356,
+      "sha256": "55c3678f40cafe4ac39f0071151626693ea7fa70f421408015cc5fcd858afd71"
+    },
+    "/usr/share/fonts/truetype/crosextra/Carlito-Regular.ttf": {
+      "bytes": 628032,
+      "sha256": "f6418f708baede9789daef5d458c0f53d2a888af9820e8062934e504fedc6595"
+    },
+    "/usr/share/fonts/opentype/stix/STIXTwoMath-Regular.otf": {
+      "bytes": 838652,
+      "sha256": "3a5f3f26f40d5698b3c62dd085d48d6663696a3f80825aab8b553d5097518e8c"
+    },
+    "/usr/share/fonts/truetype/noto/NotoSansMono-Bold.ttf": {
+      "bytes": 523412,
+      "sha256": "b22563d5f03b345a62115e78d8789c9ed99c2cfa8059fad6e7a5c4ced288e21e"
+    },
+    "/usr/share/fonts/truetype/croscore/Tinos-Bold.ttf": {
+      "bytes": 570480,
+      "sha256": "971d6af5fcb3a0c05535a92a635fb63a86ea5eb935639c9b864be33f3bfaba80"
+    },
+    "/usr/share/fonts/truetype/noto/NotoSerifHebrew-Bold.ttf": {
+      "bytes": 31888,
+      "sha256": "95150a28d438cba6c79393ef18ad06f39a8b53a7d457e61d8c9d585176ef36da"
+    },
+    "/usr/share/fonts/truetype/gentium/Gentium-I.ttf": {
+      "bytes": 314452,
+      "sha256": "396a5036ec5be03f17e46f56efe63905cbf030f28b608c45bc69c0320ab13c97"
+    },
+    "/usr/share/fonts/type1/urw-base35/NimbusRoman-BoldItalic.t1": {
+      "bytes": 140953,
+      "sha256": "4a305bcf1950e2db6bb03ed68715a74930d00d630661d6e0c03375b3cc983888"
+    },
+    "/usr/share/fonts/X11/Type1/NimbusMonoPS-Italic.pfb": {
+      "bytes": 143003,
+      "sha256": "684c1bae77b242edc911a073bcbbbfe7431af445a55b966bfead43e974bbf132"
+    },
+    "/usr/share/texmf/fonts/opentype/public/tex-gyre/texgyreschola-regular.otf": {
+      "bytes": 140596,
+      "sha256": "935b82e25f56b1d1276ca82793205e8ce254fbb37ebd38bedf7388cef21fbf44"
+    },
+    "/usr/share/fonts/truetype/noto/NotoSansTifinaghRhissaIxa-Regular.ttf": {
+      "bytes": 39760,
+      "sha256": "dc07364dbf1be6b105ea12ed3af1cb2620c912fe55299d38afb075b556718f2c"
+    },
+    "/usr/share/fonts/fonts-go/Go-Bold-Italic.ttf": {
+      "bytes": 150732,
+      "sha256": "3077e86bc9c65b4805fe8c95f86247e29e849d4b6c18179f22234f9f5eec85b7"
+    },
+    "/usr/share/fonts/X11/Type1/P052-Bold.pfb": {
+      "bytes": 162216,
+      "sha256": "dcd50f92602409cf6da8fe93c5a86728f8b5717bed2df85b2e4c451c59c60708"
+    },
+    "/usr/share/fonts/truetype/dejavu/DejaVuSerifCondensed-Italic.ttf": {
+      "bytes": 345868,
+      "sha256": "a9be76c39fe6235cba88bba6075ea1e69e54094943b0259a36690f3cbf24f4fa"
+    },
+    "/usr/share/fonts/truetype/noto/NotoSerifMyanmar-Regular.ttf": {
+      "bytes": 260396,
+      "sha256": "f88d1da5a75a8e09ff0b073fe3c861d095a72e94fea3235f09f80e6c5b2c9933"
+    },
+    "/usr/share/texmf/fonts/opentype/public/lm/lmmonoproplt10-oblique.otf": {
+      "bytes": 118244,
+      "sha256": "2d57934e1ae5f71cbcbed7b7ea6fa597f9212ebfd8d0cc91e9fabbb9622cab7f"
+    },
+    "/usr/share/fonts/truetype/noto/NotoSans-BoldItalic.ttf": {
+      "bytes": 534180,
+      "sha256": "4315b26e5afb62f70f5ffe0edaa3363e57765ff2af2beda12b6fef197e3e5f5a"
+    },
+    "/usr/share/fonts/type1/urw-base35/NimbusRoman-Italic.t1": {
+      "bytes": 142085,
+      "sha256": "0c5cc5161c325440ed7a9de00869535e8f10f0eeccf1e65dbcd2c387ffbc1eb4"
+    },
+    "/usr/share/fonts/truetype/noto/NotoSansTaiTham-Bold.ttf": {
+      "bytes": 94892,
+      "sha256": "2a4b050db8000a7a6688e8b9f873c55665cf4fb5a88d58844e3f73f2ca66fe9c"
+    },
+    "/usr/share/fonts/truetype/lato/Lato-Medium.ttf": {
+      "bytes": 637068,
+      "sha256": "be8bbf7105500e8fc1f9429307fb396905a0e6cff63fe1eb751bb319d0f1b0db"
+    },
+    "/usr/share/fonts/truetype/noto/NotoSansImperialAramaic-Regular.ttf": {
+      "bytes": 6432,
+      "sha256": "a1eaa5484ea50bace57ed59ea64e630abf196d7eaf55e26b0ed299223a5100c3"
+    },
+    "/usr/share/fonts/type1/urw-base35/URWBookman-Demi.t1": {
+      "bytes": 137163,
+      "sha256": "baee9214653525ad01de0bc326e3c11b7826c51567336619517d50eab313e37b"
+    },
+    "/usr/share/fonts/truetype/noto/NotoSansChakma-Regular.ttf": {
+      "bytes": 59588,
+      "sha256": "281bbdb5c31aae460c3a58acd0ba9ed5f92e58ebb03f7614be7c4441520c5525"
+    },
+    "/usr/share/fonts/opentype/roboto/slab/RobotoSlab-Regular.otf": {
+      "bytes": 93692,
+      "sha256": "72b72ce996a3257a0b01b63098914c2ac9e343b2f423c671b748bbb243d29920"
+    },
+    "/usr/share/fonts/truetype/noto/NotoSerifGujarati-Regular.ttf": {
+      "bytes": 144936,
+      "sha256": "fcd8029bb13fb27a410977bd10472bfa3cd195c9a35e5145916ab59bac5ed9da"
+    },
+    "/usr/share/fonts/truetype/lato/Lato-LightItalic.ttf": {
+      "bytes": 658212,
+      "sha256": "8926c41622b7400d7f6f7dbf31cea50495f31230cf40904b8b83e634bf3cf6c6"
+    },
+    "/usr/share/fonts/opentype/cantarell/Cantarell-VF.otf": {
+      "bytes": 166016,
+      "sha256": "ab1129dc6b0aa9842aaeaf7716b8937090bc2c43b84e986677ec4672f6d80d0c"
+    },
+    "/usr/share/fonts/truetype/noto/NotoSansArmenian-Regular.ttf": {
+      "bytes": 30892,
+      "sha256": "9636c32c121f4fc1fc6963dfad60ea32c41889507118a46f83a818eacf40348e"
+    },
+    "/usr/share/fonts/opentype/ebgaramond/EBGaramond12-AllSC.otf": {
+      "bytes": 211996,
+      "sha256": "360678a24a09151034ea233cd78b24d88b97034d224db4dd48bc267bb29e10b9"
+    },
+    "/usr/share/fonts/truetype/noto/NotoSansBassaVah-Regular.ttf": {
+      "bytes": 7808,
+      "sha256": "f00a72b0a05a8bc3da85a07b9a88a77b062737410e319726a0a7b217d8ca8169"
+    },
+    "/usr/share/fonts/truetype/roboto/unhinted/RobotoTTF/Roboto-BoldItalic.ttf": {
+      "bytes": 332160,
+      "sha256": "63d368b094a9bde61447b410b4261b30569eef1bf2094a52de9828121ba7baf7"
+    },
+    "/usr/share/fonts/opentype/lobstertwo/LobsterTwo-Bold.otf": {
+      "bytes": 79680,
+      "sha256": "b585c42cc217ac6d9351b85bd4381e1593e3ebed60231414673b943d393e6f26"
+    },
+    "/usr/share/texmf/fonts/opentype/public/tex-gyre/texgyrecursor-bolditalic.otf": {
+      "bytes": 90360,
+      "sha256": "6aa5c41f489b898aa890c543e7dcd5e732c63894babc65569e01ee7e46533d82"
+    },
+    "/usr/share/fonts/truetype/ubuntu/UbuntuMono[wght].ttf": {
+      "bytes": 172232,
+      "sha256": "fbf1e748836994f730e602f7dcf2525564d6d78aa336080cbb73af909d0e08ee"
+    },
+    "/usr/share/fonts/truetype/noto/NotoSerifKannada-Bold.ttf": {
+      "bytes": 214840,
+      "sha256": "201c469f27e419ad5676f9a293dbcc76d2fc9cf4b0ad831efbf2723da3631236"
+    },
+    "/usr/share/fonts/type1/texlive-fonts-recommended/putb8a.pfb": {
+      "bytes": 36737,
+      "sha256": "e06afdadd7a4e6fe53f16aa2235e126fec9dcbbca1012792863593f2576fe24c"
+    },
+    "/usr/share/fonts/opentype/freefont/FreeSerifItalic.otf": {
+      "bytes": 690728,
+      "sha256": "bfa3d527e892186d4d7fced94ef0c9d48feb3ded5abced114470aa2b04616514"
+    },
+    "/usr/share/texmf/fonts/opentype/public/tex-gyre/texgyrepagella-regular.otf": {
+      "bytes": 218100,
+      "sha256": "44e64260716d8f2bbe412baa1ee99b7c995190ac4573177c24def0b9200438c7"
+    },
+    "/usr/share/fonts/opentype/artemisia/GFSArtemisia.otf": {
+      "bytes": 152904,
+      "sha256": "33f8e57abcd8d58864b0a7ba9607107481c4c0f57dd9cc765d9e97eba17f2412"
+    },
+    "/usr/share/fonts/X11/Type1/P052-Roman.pfb": {
+      "bytes": 159863,
+      "sha256": "92bce52505c204e4f34fbc569948371cf06c2e1183927fe9e9483ad93e7748d7"
+    },
+    "/usr/share/fonts/truetype/paratype/PTS55F.ttf": {
+      "bytes": 429172,
+      "sha256": "3bbff9ab698453a4c705ec9ab9d8f528d21562a684bb6816f157163637eac914"
+    },
+    "/usr/share/fonts/opentype/linux-libertine/LinLibertine_RB.otf": {
+      "bytes": 406904,
+      "sha256": "baa80ebc4ae9514c037e867a72a1c1d09248a4305df20d2edc0f918117e45127"
+    },
+    "/usr/share/fonts/truetype/noto/NotoSansOldSouthArabian-Regular.ttf": {
+      "bytes": 5276,
+      "sha256": "e6cc76f093f7ae30373701f18f061bd7941841fb3775041c9c343b47e96c5d05"
+    },
+    "/usr/share/fonts/truetype/noto/NotoSans-Regular.ttf": {
+      "bytes": 512672,
+      "sha256": "89c3c497f618fdaa0b2d1e98fef93582f28c71debd2c4a8cdf41f190ced2909d"
+    },
+    "/usr/share/fonts/truetype/noto/NotoSansGurmukhi-Regular.ttf": {
+      "bytes": 52852,
+      "sha256": "1db960ff6f506a98f5b3ece78f54618388c6187e7edf8ceee5ab63389c0db3ab"
+    },
+    "/usr/share/fonts/type1/texlive-fonts-recommended/putbi8a.pfb": {
+      "bytes": 37993,
+      "sha256": "ad9e02419d8d99832a131637a73ecbc563a839a97ce06e7a2c2bccf30f6bc1e7"
+    },
+    "/usr/share/fonts/X11/Type1/C059-Bold.pfb": {
+      "bytes": 146034,
+      "sha256": "9d894dcd30c106a9a6479f7661be5c65e5393ab58f83c00f807e607f769371e3"
+    },
+    "/usr/share/fonts/woff/ebgaramond/EBGaramondSC12-Regular.woff": {
+      "bytes": 208924,
+      "sha256": "6b9f32e8ac99adad4228ab6a856638648059878ec107300f1638dae99b40cd69"
+    },
+    "/usr/share/fonts/opentype/stix/STIXTwoText-SemiBoldItalic.otf": {
+      "bytes": 325200,
+      "sha256": "93d337715289b8e3ba8757cff89d29ff95630a1d08581dd46123d4c1ad1a7e2c"
+    },
+    "/usr/share/fonts/truetype/noto/NotoSansSymbols-Regular.ttf": {
+      "bytes": 258148,
+      "sha256": "24b615ceb7d50a2c09060664ca9e24a160c9beb6bfca0563e8359369a4bc0993"
+    },
+    "/usr/share/fonts/truetype/noto/NotoSansTaiViet-Regular.ttf": {
+      "bytes": 30980,
+      "sha256": "b7e6d86488e34d9bbc3c6ba55097d8b1a16325650af50a7242df2c2a4a663ced"
+    },
+    "/usr/share/fonts/truetype/noto/NotoSansTifinaghAzawagh-Regular.ttf": {
+      "bytes": 39508,
+      "sha256": "f322e4b74b9b9d63d82f369ff89ff0d5daea2a5760a502aaac200696ab4612e3"
+    },
+    "/usr/share/fonts/truetype/noto/NotoSansTifinaghAgrawImazighen-Regular.ttf": {
+      "bytes": 40048,
+      "sha256": "1bf667c6101c751e370d6882db3362aeaed1c1e43113a1da1c5d4d8c6b15eeb9"
+    },
+    "/usr/share/fonts/truetype/noto/NotoSansEgyptianHieroglyphs-Regular.ttf": {
+      "bytes": 585400,
+      "sha256": "ad50e535500acc88b9582c648cc84ca9a4679c1810a426aa85b7ba8bada8af15"
+    },
+    "/usr/share/fonts/truetype/noto/NotoSansBrahmi-Regular.ttf": {
+      "bytes": 41916,
+      "sha256": "0c9e9d7ebc20b81fff7cf5bcfc4ed5552ad97b3a583c6e33baa2d38952182d05"
+    },
+    "/usr/share/fonts/truetype/noto/NotoSerifBengali-Bold.ttf": {
+      "bytes": 258152,
+      "sha256": "96cc17640329810e2ac1b53d61ec4f429ba9bf729d4f37623a296581d79a5133"
+    },
+    "/usr/share/fonts/truetype/stix/STIXTwoText-SemiBold.ttf": {
+      "bytes": 392232,
+      "sha256": "242c7cfb1e8ffb0b52e85faf18e9b18bacc45ce8d4046dc47215b2cf06ac77e0"
+    },
+    "/usr/share/fonts/truetype/crosextra/Carlito-BoldItalic.ttf": {
+      "bytes": 808508,
+      "sha256": "b32928186c119599e03ca6a1ffc680fdcb7fac95772f4b95d989cf6cd3861517"
+    },
+    "/usr/share/fonts/truetype/gentium-basic/GenBkBasR.ttf": {
+      "bytes": 267604,
+      "sha256": "f0e5c2d48408804caf9779ee2e039687b3ac5cf56edff51577fc0aedc0908994"
+    },
+    "/usr/share/fonts/truetype/noto/NotoSansOldSogdian-Regular.ttf": {
+      "bytes": 15540,
+      "sha256": "0337534324975907588adbc8655e4ca622a0cbffc49384eb7410aa443a87afaa"
+    },
+    "/usr/share/fonts/truetype/croscore/Cousine-Bold.ttf": {
+      "bytes": 298032,
+      "sha256": "1f224341677c5ceaa717417d1cb94efbdb276801b3ab1ccea697eb3a8057b6ac"
+    },
+    "/usr/share/fonts/truetype/noto/NotoSerifHebrew-Regular.ttf": {
+      "bytes": 31172,
+      "sha256": "789b7e7e3ff4d95a5e105872a385db12c50c08b60ad5b773d25a3bec86621abf"
+    },
+    "/usr/share/fonts/truetype/gentium/Gentium-R.ttf": {
+      "bytes": 362644,
+      "sha256": "4d2b95df5ebe24567f1bc1282cd8166a84046c6370248fa18f7dae16bf8ce408"
+    },
+    "/usr/share/fonts/truetype/roboto/unhinted/RobotoCondensed-Bold.ttf": {
+      "bytes": 303944,
+      "sha256": "7f109b2b6d72e7563522d3c3d2c6c8b79ec5a711bfdf483b93e345eab5b5ef94"
+    },
+    "/usr/share/texmf/fonts/opentype/public/tex-gyre/texgyreadventor-bolditalic.otf": {
+      "bytes": 175456,
+      "sha256": "d524c5596812aeee8fed5c81739056ada7a305b84591ea30e30c025b860b311d"
+    },
+    "/usr/share/fonts/truetype/noto/NotoSansMayanNumerals-Regular.ttf": {
+      "bytes": 4716,
+      "sha256": "5832050be8933ebbbe32e0ec2500ad27cace47a2cbe0a43e250cdef0a454bada"
+    },
+    "/usr/share/texmf/fonts/opentype/public/lm/lmromandemi10-regular.otf": {
+      "bytes": 111892,
+      "sha256": "63b6f9528e6117c5b0c0b1992517696ae09d05e7ca3711df0e0409d9db6df32c"
+    },
+    "/usr/share/texmf/fonts/opentype/public/lm/lmmonoltcond10-regular.otf": {
+      "bytes": 64160,
+      "sha256": "fd2e0afd73a6029887d222f1e379f9e977ed57f9471d48ba44fb42c52a650274"
+    },
+    "/usr/share/fonts/truetype/charis/CharisSIL-Italic.ttf": {
+      "bytes": 842092,
+      "sha256": "c1999f648e1196611bf03d37f0e524de30d5ecb2f7a66f90ed16ce61d7ec3cb4"
+    },
+    "/usr/share/fonts/truetype/noto/NotoSansWarangCiti-Regular.ttf": {
+      "bytes": 25328,
+      "sha256": "4d6dff50fd1e5f45eb643ccfc5f67e69bf9425a5e3cd375ddfd64e96ca8a48fb"
+    },
+    "/usr/share/fonts/truetype/noto/NotoSansGujarati-Bold.ttf": {
+      "bytes": 202944,
+      "sha256": "db2b642c28b021da8cb0f3463bf41376549c850aa718ca863ec3ff5d5df0f2f7"
+    },
+    "/usr/share/fonts/X11/Type1/StandardSymbolsPS.pfb": {
+      "bytes": 31464,
+      "sha256": "113fc4aed6eb0dc1e3812de5dc5f18de1276d3a885467d9f312b66d4c732eb40"
+    },
+    "/usr/share/fonts/truetype/ebgaramond/EBGaramond12-AllSC.ttf": {
+      "bytes": 188688,
+      "sha256": "cd4de7fc60a98f4eca16e82fcb06f36b7dccd90501d882011038e7947b86ec10"
+    },
+    "/usr/share/fonts/truetype/noto/NotoSerifThai-Regular.ttf": {
+      "bytes": 45992,
+      "sha256": "8e1bcaa4fef346b247092cf4327c4744eda2fa72afed96e2145dc30a3b04fdd1"
+    },
+    "/usr/share/fonts/opentype/didot/GFSDidot.otf": {
+      "bytes": 166580,
+      "sha256": "27d80cbfb7446a627f577b3a3bc519e1cec71d53328cd3873368e9c3b54e0fc1"
+    },
+    "/usr/share/fonts/type1/texlive-fonts-recommended/pcrbo8a.pfb": {
+      "bytes": 62405,
+      "sha256": "29e2091608c5878287ea506afdbd624932e4460dcb0462a32485d5d20d98fc53"
+    },
+    "/usr/share/fonts/opentype/roboto/slab/RobotoSlab-Light.otf": {
+      "bytes": 90476,
+      "sha256": "2f609ce708b0424e68c3da6a18f3d91b541e21ac43b4501ab396fdbc178355fd"
+    },
+    "/usr/share/fonts/truetype/noto/NotoSerifDisplay-Regular.ttf": {
+      "bytes": 559120,
+      "sha256": "bcdc596729c24044e28c54815ecbe6004f83b10169a49a51160b22f59116249f"
+    },
+    "/usr/share/texmf/fonts/opentype/public/tex-gyre/texgyretermes-bolditalic.otf": {
+      "bytes": 144180,
+      "sha256": "1bf6af99cb0e26c12951317032d79b96ae009551e59ccf02a5b24f325ecfec87"
+    },
+    "/usr/share/fonts/truetype/freefont/FreeMono.ttf": {
+      "bytes": 1126964,
+      "sha256": "5d8c9689e6108a04da659f98631faf577aa630ccac204137575d948207137684"
+    },
+    "/usr/share/fonts/truetype/croscore/Tinos-BoldItalic.ttf": {
+      "bytes": 552500,
+      "sha256": "0cd67b90617a03a69a815e758d0649d00f2be48a0cb570615e94e8e5a13aae2e"
+    },
+    "/usr/share/fonts/truetype/noto/NotoSansLycian-Regular.ttf": {
+      "bytes": 4488,
+      "sha256": "e75284df85c8ea4b55023d39d5452b8a8855f5fa02a497087eeeb30a32008a62"
+    },
+    "/usr/share/fonts/opentype/urw-base35/NimbusRoman-Regular.otf": {
+      "bytes": 98200,
+      "sha256": "fd41669443616a7ae890c42e53a58f47fa24a940fd1e367acaff665cf5b6e9d8"
+    },
+    "/usr/share/fonts/truetype/noto/NotoSerifTibetan-Bold.ttf": {
+      "bytes": 588444,
+      "sha256": "829c6fb19fed2dedfa5ba651009bbdea1eb71a84a237239345bc5b03c0cfb7b2"
+    },
+    "/usr/share/fonts/opentype/freefont/FreeSerif.otf": {
+      "bytes": 2181052,
+      "sha256": "c801709eab8217ca03aac290f836bb0c331af6a4c10306c986e55ed27ffdb9e9"
+    },
+    "/usr/share/fonts/truetype/noto/NotoSerifGeorgian-Regular.ttf": {
+      "bytes": 61452,
+      "sha256": "4489ca2f28b4a79b16bc8ba6a857a8cd14857e04a14b8fa1031b7b84a00fe537"
+    },
+    "/usr/share/texmf/fonts/opentype/public/lm/lmsansquot8-boldoblique.otf": {
+      "bytes": 112456,
+      "sha256": "0cac0a6909c1cb33df8d3aeda2817ef2671d7f466cc352d826551bf92ca5f877"
+    },
+    "/usr/share/fonts/opentype/artemisia/GFSArtemisiaBold.otf": {
+      "bytes": 118456,
+      "sha256": "65648d94b200cc5f9fd6856b111d6e68bee1563da5395ebc52913f78ad280a4b"
+    },
+    "/usr/share/texmf/fonts/opentype/public/tex-gyre/texgyrebonum-bolditalic.otf": {
+      "bytes": 145488,
+      "sha256": "bd037941d21149ea0d650286537a3266fadfb03f91b4a5a78848ea5781befac9"
+    },
+    "/usr/share/fonts/truetype/noto/NotoSerifDogra-Regular.ttf": {
+      "bytes": 28056,
+      "sha256": "eb4ca8fe9e5d5a489fcf0915a646918e6622bce1556bba23e5f8e9ec8040b288"
+    },
+    "/usr/share/fonts/X11/Type1/D050000L.pfb": {
+      "bytes": 43363,
+      "sha256": "ccdfebc4e67fa4345578124674cce4dc5a5360dfafcea10c33586b3cc608bbb1"
+    },
+    "/usr/share/fonts/truetype/paratype/PTS56F.ttf": {
+      "bytes": 412804,
+      "sha256": "12cf8874d07b5a3e290314ca575b980e5cb5742f42e7033e682b15b11531ad93"
+    },
+    "/usr/share/fonts/truetype/noto/NotoSansHanunoo-Regular.ttf": {
+      "bytes": 7852,
+      "sha256": "63e65378a4f2bbbdeb5f3bf1641baa4d4908a1808390450ec40abff3c94800d9"
+    },
+    "/usr/share/fonts/X11/Type1/Z003-MediumItalic.pfb": {
+      "bytes": 166560,
+      "sha256": "994f2d1a4a46fc5e1ca4f1e6b1427fedddaf1ceaeba3dbc89113eab2572ea408"
+    },
+    "/usr/share/texmf/fonts/opentype/public/lm/lmmonoprop10-oblique.otf": {
+      "bytes": 116764,
+      "sha256": "7306b49832153fb387be1c741962a72d36127a2176f855d11c9903e6a15bfaca"
+    },
+    "/usr/share/fonts/truetype/noto/NotoSerifEthiopic-Bold.ttf": {
+      "bytes": 283084,
+      "sha256": "57ae343eee78a8cb40532dc21edf7740001a39f557c61d85c06f66894cc15474"
+    },
+    "/usr/share/texmf/fonts/opentype/public/tex-gyre/texgyreadventor-regular.otf": {
+      "bytes": 170364,
+      "sha256": "ee265c1c9728be9491c7f0d7fcdcb2f97bc35040a6dc1f9815265cee333e155b"
+    },
+    "/usr/share/fonts/truetype/paratype/PTM75F.ttf": {
+      "bytes": 143308,
+      "sha256": "0f88102edd7bb584aa1f442390d99d96a149a963272cd49689f764b080230c62"
+    },
+    "/usr/share/texmf/fonts/opentype/public/tex-gyre/texgyretermes-italic.otf": {
+      "bytes": 141324,
+      "sha256": "6dd103a1672e50568cd2f8a706ccd48443d44d7d073a59d2286f4e6f746575d6"
+    },
+    "/usr/share/fonts/opentype/linux-libertine/LinLibertine_RI.otf": {
+      "bytes": 421204,
+      "sha256": "229641ea93453f81fa121a5874b8e05525756337df3a5f04552b19ddb646a907"
+    },
+    "/usr/share/fonts/truetype/noto/NotoNaskhArabic-Regular.ttf": {
+      "bytes": 175792,
+      "sha256": "8c67eaa2f0086872628fc3f7f760386f83c8be5c5e9a1ba3a38891237b2ac7cb"
+    },
+    "/usr/share/fonts/type1/urw-base35/URWGothic-Book.t1": {
+      "bytes": 100637,
+      "sha256": "aebc5a18ff50235f0850b3812d86a29d18932c4bb8a097b004b8abafc433a395"
+    },
+    "/usr/share/fonts/opentype/solomos/GFSSolomos.otf": {
+      "bytes": 46736,
+      "sha256": "3afba0af2b85c8b65970763c11ba2b65bcf060932566483f27f6a592170ed6f2"
+    },
+    "/usr/share/fonts/truetype/roboto/unhinted/RobotoTTF/Roboto-BlackItalic.ttf": {
+      "bytes": 330448,
+      "sha256": "923a413d6185c47543a9d6eaf517c6fb168bc745f90157d3d6092dfde3eef338"
+    },
+    "/usr/share/fonts/truetype/noto/NotoSansKayahLi-Regular.ttf": {
+      "bytes": 17720,
+      "sha256": "24fce18dd43d89de37f1be211ae935d30b2c87e19eece8d52cfc0d9c2ce44806"
+    },
+    "/usr/share/fonts/opentype/urw-base35/URWBookman-Light.otf": {
+      "bytes": 98396,
+      "sha256": "7b1bc8e6a16cef53785ce03d4848f8971f3ba38cd9e266e4786a50e08bd9235b"
+    },
+    "/usr/share/fonts/truetype/noto/NotoSansBalinese-Bold.ttf": {
+      "bytes": 91948,
+      "sha256": "655f5e8fe488bd1dd532148d9225ce7cb34d8de1acd8f84c25d86c43f023ca94"
+    },
+    "/usr/share/fonts/truetype/open-sans/OpenSans-Light.ttf": {
+      "bytes": 222412,
+      "sha256": "cf5f5184c1441a1660aa52526328e9d5c2793e77b6d8d3a3ad654bdb07ab8424"
+    },
+    "/usr/share/fonts/truetype/noto/NotoSerifTamil-Regular.ttf": {
+      "bytes": 79628,
+      "sha256": "f9c887e6c0b61f474b1916fdadd64d495321208efc0ecd1335e6526ca3d05488"
+    },
+    "/usr/share/fonts/truetype/noto/NotoSansSamaritan-Regular.ttf": {
+      "bytes": 11120,
+      "sha256": "4878dd9a29f8d24ba1869c85ae5c3b7056e677a14b355135f3359b90b14e1ecc"
+    },
+    "/usr/share/fonts/truetype/noto/NotoSansNewTaiLue-Regular.ttf": {
+      "bytes": 17024,
+      "sha256": "53005c3e1b61c5d3002510479144867a5a1370a32a78c5cf374f9a6dd576cf9b"
+    },
+    "/usr/share/texmf/fonts/opentype/public/tex-gyre-math/texgyreschola-math.otf": {
+      "bytes": 596860,
+      "sha256": "fa33e0bc72f97c32ac1e943ea6a5a5a56c956ba54eb40e8904045800dae32304"
+    },
+    "/usr/share/fonts/truetype/adf/GilliusADFNo2-BoldCond.otf": {
+      "bytes": 37436,
+      "sha256": "b8a8341c98fa17ff893c36aa55a3918fba657d7528bfedca5dde6b47916b421c"
+    },
+    "/usr/share/texmf/fonts/opentype/public/tex-gyre/texgyrebonum-italic.otf": {
+      "bytes": 147120,
+      "sha256": "518836a0e5bd71f644ae131185be53b04fadb30ef7dbdc483deb5f69bd1fe47d"
+    },
+    "/usr/share/fonts/truetype/noto/NotoSansGunjalaGondi-Regular.ttf": {
+      "bytes": 62592,
+      "sha256": "10b7744bfd151e4ad844155cefd0f60032b005269cf34738fea02b0ff5dacf9c"
+    },
+    "/usr/share/fonts/truetype/adf/GilliusADF-CondItalic.otf": {
+      "bytes": 35660,
+      "sha256": "01ad4eb830c9911e616fd8de0e2897355afaeca2f84ce6d18666f6bab2eb99dd"
+    },
+    "/usr/share/fonts/truetype/adf/UniversalisADFStd-Regular.otf": {
+      "bytes": 37724,
+      "sha256": "5fc575ce4b05bc80c57fdceeb63d72734df8570b22e9df9f10af0ccac7d9a2e6"
+    },
+    "/usr/share/fonts/truetype/noto/NotoSansOlChiki-Bold.ttf": {
+      "bytes": 14500,
+      "sha256": "8c92ae4977a5745e30b14c447b999f5c286a0f0a0f137160831c94bfda10dffa"
+    },
+    "/usr/share/fonts/X11/Type1/NimbusSans-Regular.pfb": {
+      "bytes": 104021,
+      "sha256": "5b8d9ada4eba53c6034aca723e4317d1d2f46ff9b7ff15afbfabb23797c55915"
+    },
+    "/usr/share/fonts/truetype/paratype/PTS75F.ttf": {
+      "bytes": 457448,
+      "sha256": "576b59732fff967895eba1eed0fc5f8cdb069ea31fde878c0cdc36aa2d4615ef"
+    },
+    "/usr/share/fonts/truetype/noto/NotoSansThai-Bold.ttf": {
+      "bytes": 37788,
+      "sha256": "97bbc8ea98328325285f2f552228c7aac1db39d8f38f0096a61ba7df1f1f780e"
+    },
+    "/usr/share/fonts/truetype/noto/NotoSansTifinagh-Regular.ttf": {
+      "bytes": 39208,
+      "sha256": "176233c9dd5649184f3206680debc1a50b411a9229049e0b5d212776af1e2034"
+    },
+    "/usr/share/fonts/opentype/stix/STIXTwoText-SemiBold.otf": {
+      "bytes": 304860,
+      "sha256": "896d80fbfd67e86ead7e2d593d631eab9bb142ee96dcd8e7aa8dff95ddda0f2a"
+    },
+    "/usr/share/fonts/truetype/noto/NotoSerifEthiopic-Regular.ttf": {
+      "bytes": 289600,
+      "sha256": "30bd9e21c81cd95a3004bbf75aba9b2ab5f861408a3fbb4f82b10fe82072952b"
+    },
+    "/usr/share/fonts/truetype/noto/NotoSansBalinese-Regular.ttf": {
+      "bytes": 92364,
+      "sha256": "97d94b44707d68adde5d0e766536c016e635b64006a4b2dcf4ed79959480f095"
+    },
+    "/usr/share/fonts/truetype/noto/NotoSerifYezidi-Bold.ttf": {
+      "bytes": 10028,
+      "sha256": "fbf1ea1bd1fcf6418c150ba962151ab39831477fdcabe15543d70b75142c9144"
+    },
+    "/usr/share/texmf/fonts/opentype/public/tex-gyre/texgyrecursor-regular.otf": {
+      "bytes": 84652,
+      "sha256": "0667deb48aa0e88be8f499c4d308e8b9116f290e7f969b0f5a34ee15c9644272"
+    },
+    "/usr/share/fonts/opentype/inter/InterDisplay-SemiBoldItalic.otf": {
+      "bytes": 601772,
+      "sha256": "fabf4d338bcd65d9d4d9b051ec40d787aa4b9bff526af954c0ab90189d4ee8d4"
+    },
+    "/usr/share/fonts/truetype/noto/NotoSansCarian-Regular.ttf": {
+      "bytes": 12848,
+      "sha256": "962bac788f4ab38c61f6de86d5b8c1bca2b105d88a511c10b9a9058c6b1291aa"
+    },
+    "/usr/share/fonts/opentype/inter/Inter-BoldItalic.otf": {
+      "bytes": 609372,
+      "sha256": "84e07cd77951a855c668f71e63af261f42d019dc80e963326b4c560b1fca8dcd"
+    },
+    "/usr/share/fonts/truetype/noto/NotoSansTifinaghAdrar-Regular.ttf": {
+      "bytes": 38920,
+      "sha256": "cd1ba1bff933b9215881080d4e5f58f5c5d2e9b48eb1a0c0393c8560e316cfe4"
+    },
+    "/usr/share/fonts/truetype/noto/NotoSansThaana-Bold.ttf": {
+      "bytes": 18536,
+      "sha256": "ea6d654f9bf355cde351a0ec89a3520b26f02b7f360edb161551efe0ccac5fc0"
+    },
+    "/usr/share/fonts/opentype/noto/NotoSansCJK-Bold.ttc": {
+      "bytes": 20050760,
+      "sha256": "faa5f3656a78b2e2d450d27fe8382c778bc2b6bb5ea29c986664a6a435056ceb"
+    },
+    "/usr/share/fonts/truetype/dejavu/DejaVuSerif-Bold.ttf": {
+      "bytes": 356668,
+      "sha256": "3f704f75238454f68a8202e5098cb0687887480dd63d3dc20b34bdbdfa9d9f3f"
+    },
+    "/usr/share/fonts/truetype/noto/NotoSansSymbols2-Regular.ttf": {
+      "bytes": 656852,
+      "sha256": "876598db5f1e3bef2bc77c4d94c5b0d5d2c1620be4878a06f18fb5434e331688"
+    },
+    "/usr/share/texmf/fonts/opentype/public/tex-gyre/texgyrepagella-bold.otf": {
+      "bytes": 219564,
+      "sha256": "dd4f9b69f0b24f1fb9be8634abf1fce2009e5c68a30842a3e9f5d6e535900abd"
+    },
+    "/usr/share/fonts/truetype/noto/NotoSansTifinaghAhaggar-Regular.ttf": {
+      "bytes": 39508,
+      "sha256": "89b0f1eee9455686e2f55679c2cd05fc8cbacea34a47095a7dd779f986644c28"
+    },
+    "/usr/share/fonts/truetype/dejavu/DejaVuMathTeXGyre.ttf": {
+      "bytes": 577192,
+      "sha256": "f98d7f2ad03cdceffb8bcee71eed84055d15b0098b4b1f5a22653ba5931d3da5"
+    },
+    "/usr/share/fonts/truetype/roboto/unhinted/RobotoTTF/Roboto-Thin.ttf": {
+      "bytes": 307664,
+      "sha256": "52cab88c2fe93c21152b483763745976861be2e3cc093554155f8a3b24de5b97"
+    },
+    "/usr/share/texmf/fonts/opentype/public/lm/lmroman8-italic.otf": {
+      "bytes": 117248,
+      "sha256": "fb0536b5c3eee5b5622cd827ceb410e6514e36512ebdc51d2cf98a96c06d44e8"
+    },
+    "/usr/share/fonts/opentype/inter/InterDisplay-Black.otf": {
+      "bytes": 623980,
+      "sha256": "84ca5a51b3303c01b48cdd271637d3d20c263e09d00ec0ff2a945f122492a4d0"
+    },
+    "/usr/share/fonts/truetype/noto/NotoSerifKhojki-Bold.ttf": {
+      "bytes": 144908,
+      "sha256": "aa978be32c5357001a5724a838a3e3bffa2f54073646bab89f87ed8d0c0b009e"
+    },
+    "/usr/share/fonts/truetype/croscore/Tinos-Regular.ttf": {
+      "bytes": 535480,
+      "sha256": "cf264a22292950ca1679b2ade07e9e6ecb26c649ab70975d0e113f979efa827a"
+    },
+    "/usr/share/fonts/truetype/noto/NotoSansGlagolitic-Regular.ttf": {
+      "bytes": 39832,
+      "sha256": "5526e640b205befa2f59b3c46513fc94be896a13c4428f84000eb22f8a8f3a32"
+    },
+    "/usr/share/fonts/truetype/roboto/unhinted/RobotoCondensed-MediumItalic.ttf": {
+      "bytes": 330348,
+      "sha256": "a000e42780bb486ecb7bc842ee699257d7399997886f9b7d7884d39106ccfd6f"
+    },
+    "/usr/share/fonts/truetype/noto/NotoSerifKhmer-Regular.ttf": {
+      "bytes": 151180,
+      "sha256": "98a2e27f6bc1d6ed58e6c9d32d84b84aa9dae4cdf727f3b3f36d03f3c06ff123"
+    },
+    "/usr/share/fonts/opentype/noto/NotoSerifCJK-Regular.ttc": {
+      "bytes": 26411360,
+      "sha256": "5d9c31a059600193c9d7968a998bde886ccdc77e934006ad243b41794c496a7d"
+    },
+    "/usr/share/fonts/truetype/noto/NotoSansKharoshthi-Regular.ttf": {
+      "bytes": 34240,
+      "sha256": "debbf499348e5a8ac8e292fef6cb4a9e24438ef8abfc4f50a3d32287e4a466d3"
+    },
+    "/usr/share/fonts/truetype/roboto/unhinted/RobotoTTF/Roboto-Regular.ttf": {
+      "bytes": 305608,
+      "sha256": "797e35f7f5d6020a5c6ea13b42ecd668bcfb3bbc4baa0e74773527e5b6cb3174"
+    },
+    "/usr/share/fonts/truetype/noto/NotoSansDisplay-BoldItalic.ttf": {
+      "bytes": 537268,
+      "sha256": "8f0fd329ff81a2469b95b95ee3b3c2b069e7cdec633f41b77174bf23a144ac81"
+    },
+    "/usr/share/fonts/truetype/ebgaramond/EBGaramond12-Regular.ttf": {
+      "bytes": 585512,
+      "sha256": "247e6a71c41828aab3d1c5660c82295e2d037b9c5c86837c13c9daeba2ac3733"
+    },
+    "/usr/share/fonts/opentype/inter/InterDisplay-ExtraLightItalic.otf": {
+      "bytes": 579136,
+      "sha256": "95803132d2f383a629ec49f3b090f1520a8afec281936c4bd6f520271856c7ff"
+    },
+    "/usr/share/fonts/opentype/cabin/Cabin-SemiBoldItalic.otf": {
+      "bytes": 48800,
+      "sha256": "521e73297726df38433055c85654bbb1e2019cc32523d953e5c7d97a70167c5a"
+    },
+    "/usr/share/fonts/type1/texlive-fonts-recommended/putri8a.pfb": {
+      "bytes": 37756,
+      "sha256": "081c20ca78698131e83459f49adb8c59061b7778f8a55e685eaf8cf48ea4d214"
+    },
+    "/usr/share/fonts/truetype/clear-sans/ClearSans-BoldItalic.ttf": {
+      "bytes": 287460,
+      "sha256": "89531e842c8b61efad634b6210a725a38fa3f2ac1a736d48a14af89b47361a70"
+    },
+    "/usr/share/fonts/truetype/gentiumplus/GentiumPlus-Bold.ttf": {
+      "bytes": 885156,
+      "sha256": "622ea9f2709d74f99d45c08d93cdf2a6d096406d3a1ec2939d02714f558b3dac"
+    },
+    "/usr/share/fonts/truetype/liberation/LiberationSans-Regular.ttf": {
+      "bytes": 410820,
+      "sha256": "075e71be4c58beda172ecb574a799308f04c3d054c6a5b7434954d3b0f1b28d8"
+    },
+    "/usr/share/fonts/truetype/noto/NotoSansElymaic-Regular.ttf": {
+      "bytes": 9024,
+      "sha256": "47760a41aa36d69b442a3988e12b904290c24e7b54ff11762d826e84aa0c1e7a"
+    },
+    "/usr/share/fonts/X11/Type1/NimbusSansNarrow-Oblique.pfb": {
+      "bytes": 107379,
+      "sha256": "758e2608b60bada9e0eb01707fccb9975d7d773e4c9ec825b07b14a3b06a37ba"
+    },
+    "/usr/share/fonts/opentype/urw-base35/C059-BdIta.otf": {
+      "bytes": 103444,
+      "sha256": "60d0ab6a22e4018b1232806d98f4015e04f9a0a569db7a169c40d55e2a9f6252"
+    },
+    "/usr/share/fonts/truetype/noto/NotoSansAdlamUnjoined-Bold.ttf": {
+      "bytes": 36908,
+      "sha256": "7e9335fcb64373e95aa9ca348f7ceb3561aca039e469d084c46538251c63d904"
+    },
+    "/usr/share/fonts/truetype/noto/NotoSansSylotiNagri-Regular.ttf": {
+      "bytes": 26704,
+      "sha256": "4ff931e443e1356a1207c12c4e18fff62442bd1d3a653430ac56a4aa0a70021b"
+    },
+    "/usr/share/fonts/truetype/lato/Lato-Italic.ttf": {
+      "bytes": 723544,
+      "sha256": "8c863f833b12bc8486671d26e3a58b13b0f9eaff1d6b10398e7c107a9b7ee05a"
+    },
+    "/usr/share/fonts/truetype/liberation/LiberationSans-Bold.ttf": {
+      "bytes": 414568,
+      "sha256": "b72c65e551d653b54217ffad0d1454ce0657e4e8d4a28bcc79e0acd2598f4bf3"
+    },
+    "/usr/share/fonts/truetype/adf/GilliusADF-BoldCond.otf": {
+      "bytes": 37336,
+      "sha256": "69b997b8b1a3141f98532747c0e6d5139a1a8a1139def8206a4a017a3f3b90b5"
+    },
+    "/usr/share/fonts/truetype/noto/NotoSansMendeKikakui-Regular.ttf": {
+      "bytes": 35384,
+      "sha256": "732aa89620f926e431f01764362166042cfc309f24272db33fde8aac30911183"
+    },
+    "/usr/share/fonts/X11/Type1/NimbusRoman-Regular.pfb": {
+      "bytes": 133547,
+      "sha256": "9b494780baf0161d3fc8fba4953f504199d63153d320d61c2375ea73c5a881e3"
+    },
+    "/usr/share/fonts/truetype/freefont/FreeMonoOblique.ttf": {
+      "bytes": 577920,
+      "sha256": "51918d6059f366f46f70aec32f14e9d74600b62f849ce086506823dd7e519569"
+    },
+    "/usr/share/fonts/truetype/ebgaramond/EBGaramond12-Bold.ttf": {
+      "bytes": 58452,
+      "sha256": "a8608114f86d4f40bb57fd7d1e4d8970143b2cfa11f2ac63bef31e9d20682e5a"
+    },
+    "/usr/share/fonts/truetype/noto/NotoSansMahajani-Regular.ttf": {
+      "bytes": 22852,
+      "sha256": "14602358186a2361d57707105b9ea35ac90ff235598f2a890cfa65bef1634958"
+    },
+    "/usr/share/fonts/type1/texlive-fonts-recommended/bchr8a.pfb": {
+      "bytes": 34869,
+      "sha256": "8ac5bad34cad9b59b087eebfaf9087c16901b0761f7f9cc538f2f65567fc3959"
+    },
+    "/usr/share/texmf/fonts/opentype/public/lm/lmmono10-italic.otf": {
+      "bytes": 63584,
+      "sha256": "14e6328a5383d2b927c47051093ce0aff60deea07e6df71b8b99ee8d9c2ff8f2"
+    },
+    "/usr/share/fonts/truetype/noto/NotoSansBengali-Bold.ttf": {
+      "bytes": 210996,
+      "sha256": "22c9ff99baca4d31c531ce450a1369beed889467e1ad964f4b8a6f810aa46955"
+    },
+    "/usr/share/fonts/truetype/adf/GilliusADF-BoldItalic.otf": {
+      "bytes": 38048,
+      "sha256": "39b7525f8ad1faac389c6c0045bfc70c7b601860650c0b46c736fefc77350ae3"
+    },
+    "/usr/share/fonts/truetype/liberation/LiberationMono-Italic.ttf": {
+      "bytes": 281608,
+      "sha256": "35c3116d4366eb0e58494d8e432d4ee0c60c5735c7f775ffc096008bd2907c74"
+    },
+    "/usr/share/fonts/opentype/inter/Inter-SemiBold.otf": {
+      "bytes": 629912,
+      "sha256": "0a4d30778fa2dc239368d90fd854b88b27e7ede737450da72686a90eca66f02c"
+    },
+    "/usr/share/fonts/opentype/urw-base35/StandardSymbolsPS.otf": {
+      "bytes": 21176,
+      "sha256": "df570efda2df425dbfc004e4e5f77c55ca1b47f8ff28ad60dfad0fccf422b0bd"
+    },
+    "/usr/share/texmf/fonts/opentype/public/lm/lmmonolt10-regular.otf": {
+      "bytes": 63628,
+      "sha256": "176f2e3745e3d97eb7b96b25be919ed0e198f491dc363ad28971be1d5707ace7"
+    },
+    "/usr/share/texmf/fonts/opentype/public/lm/lmmonoprop10-regular.otf": {
+      "bytes": 109500,
+      "sha256": "59036dd0b599f3e90c41dc4b063849bb36ba29058f94d386718fb9ce523d8657"
+    },
+    "/usr/share/fonts/X11/Type1/P052-BoldItalic.pfb": {
+      "bytes": 163926,
+      "sha256": "56282b038237b2657328d86b0fecc3c57f3f7cec9bca73aca86a5eadffcbe113"
+    },
+    "/usr/share/fonts/truetype/ebgaramond/EBGaramondSC12-Regular.ttf": {
+      "bytes": 437196,
+      "sha256": "d56fa5366c3dedf888bf429b69cdbfcb0bd1525adae745d0533678f17e9de426"
+    },
+    "/usr/share/fonts/truetype/dejavu/DejaVuSansCondensed.ttf": {
+      "bytes": 682828,
+      "sha256": "24111144e604b4328c34f1e7f9a6bee725963bdbafceaf644a348e95037add26"
+    },
+    "/usr/share/fonts/opentype/cabin/Cabin-Regular.otf": {
+      "bytes": 55824,
+      "sha256": "28b2901516089b2bf9d3c2b3dd86a1c875de7f3997bc4ebf4a651a8150aa49dc"
+    },
+    "/usr/share/fonts/opentype/comic-neue/ComicNeue-Regular.otf": {
+      "bytes": 35592,
+      "sha256": "39ddc49d0e64c49f8d787041b7c80d20d4a630b82623902c56a68438c45a1130"
+    },
+    "/usr/share/fonts/opentype/inter/InterDisplay-BoldItalic.otf": {
+      "bytes": 603476,
+      "sha256": "095f2bd9b95275826bd361f80ce40b3619b4cb586c7bc4f64d5210cedb29fd89"
+    },
+    "/usr/share/fonts/X11/Type1/NimbusSansNarrow-Regular.pfb": {
+      "bytes": 104272,
+      "sha256": "16c9e663fd33375edc6c7ef8141646f38bea5826a0b8e5e7292628f5dd3d8bdb"
+    },
+    "/usr/share/fonts/opentype/didot/GFSDidotBoldItalic.otf": {
+      "bytes": 141988,
+      "sha256": "074f1040beb899dbdd137117a519427017a5a73bec4a53715420f1a2d89cd917"
+    },
+    "/usr/share/fonts/type1/urw-base35/P052-Italic.t1": {
+      "bytes": 161531,
+      "sha256": "d384c8219f35cee51693c0ee09247fbf395910f7e6259e0956a90ab5173a8dbf"
+    },
+    "/usr/share/fonts/truetype/gentiumplus/GentiumBookPlus-BoldItalic.ttf": {
+      "bytes": 962640,
+      "sha256": "50ac2ccb9d3fc29b471492f17fa036e41e9f8e9ba954ac00768079d410b8c48c"
+    },
+    "/usr/share/fonts/truetype/noto/NotoSansCham-Regular.ttf": {
+      "bytes": 30532,
+      "sha256": "b87ef0181fb1f11da6a36846724a299143d73d8afffd238018fd91291beb87bb"
+    },
+    "/usr/share/fonts/woff/ebgaramond/EBGaramond08-Regular.woff": {
+      "bytes": 142180,
+      "sha256": "771b1fb43800cb9904d3eb8741216d82bad0b4830c0ae6b52199902568556e37"
+    },
+    "/usr/share/fonts/truetype/gentiumplus/GentiumBookPlus-Italic.ttf": {
+      "bytes": 951280,
+      "sha256": "ab3d2755ad7e43ca680d4b527cc126a0099fb19d659464b5ea6e1f8b537828ad"
+    },
+    "/usr/share/fonts/truetype/noto/NotoSansVai-Regular.ttf": {
+      "bytes": 91684,
+      "sha256": "5f58a9c96639c56ea31f85282084dde6d658ede746e3eec64869212fc25a393a"
+    },
+    "/usr/share/fonts/truetype/noto/NotoSerifTelugu-Regular.ttf": {
+      "bytes": 308116,
+      "sha256": "c5ac5a077a35eb18288fad9be81f55dec392d0ddb134a366a0d3a9b615c3df3a"
+    },
+    "/usr/share/fonts/opentype/roboto/slab/RobotoSlab-Thin.otf": {
+      "bytes": 89288,
+      "sha256": "fdd5eb73b1f3b2607f1fc63b8f2c0dd4376a0ad0ae7b844a43128263d40c86d6"
+    },
+    "/usr/share/fonts/truetype/noto/NotoSansSyriac-Regular.ttf": {
+      "bytes": 233508,
+      "sha256": "49917b4472e91dfb37291ef4f4821957f4225edaddb6100b1d8736df3910b237"
+    },
+    "/usr/share/fonts/truetype/noto/NotoSansTamilSupplement-Regular.ttf": {
+      "bytes": 15804,
+      "sha256": "0fadc30c3c3fd7846e607a3c0eaadcafc7c76579943bc8e7e2856c22d533b680"
+    },
+    "/usr/share/fonts/opentype/comic-neue/ComicNeue-Italic.otf": {
+      "bytes": 35320,
+      "sha256": "2146369510d8a812ec5567f699e252a466f2c451beb708a7e2f06e5b000f7e06"
+    },
+    "/usr/share/fonts/truetype/dejavu/DejaVuSerifCondensed.ttf": {
+      "bytes": 347208,
+      "sha256": "fc2e46c44851eaa57e9b552c931aae1bb06e8400e42ec7fc0bfb5045afa6b697"
+    },
+    "/usr/share/fonts/truetype/liberation/LiberationSerif-Italic.ttf": {
+      "bytes": 375760,
+      "sha256": "c1882fbb05e78537b9c39dad3c07c4f231c987a3747b20c8745737aed50cd488"
+    },
+    "/usr/share/fonts/opentype/urw-base35/URWGothic-Book.otf": {
+      "bytes": 82968,
+      "sha256": "04318316cee29950805110c9c8949eea189ef5575132881f4d4d7e03e5299903"
+    },
+    "/usr/share/fonts/fonts-go/Go-Medium-Italic.ttf": {
+      "bytes": 155436,
+      "sha256": "63cd9130ca7d8a5ca788c65b8fae5b3ead01dc9a48aa88183319b17c40c1beb2"
+    },
+    "/usr/share/fonts/X11/Type1/NimbusSansNarrow-BoldOblique.pfb": {
+      "bytes": 109835,
+      "sha256": "8a776d1dfba3a3abf515139bf5fb77e2d9f3be24d7982aeaa55aa5cefc0bc952"
+    },
+    "/usr/share/fonts/type1/texlive-fonts-recommended/bchbi8a.pfb": {
+      "bytes": 35229,
+      "sha256": "3e0c9ed37732c1ebcbed4e582fd70f5673ca415161396276097eca1cda87104b"
+    },
+    "/usr/share/fonts/truetype/noto/NotoSansEthiopic-Regular.ttf": {
+      "bytes": 343168,
+      "sha256": "58bc43b062961b38ee45757d2e74e6a991a12011aa0399fb03004ac432e5c852"
+    },
+    "/usr/share/fonts/truetype/adf/GilliusADFNo2-BoldCondItalic.otf": {
+      "bytes": 40852,
+      "sha256": "5af33ddabcd142b998552e0eea24c04920b51db9fc3212e120a3c5f507d9584c"
+    },
+    "/usr/share/fonts/truetype/noto/NotoSansRejang-Regular.ttf": {
+      "bytes": 7576,
+      "sha256": "929034bf94778de56bcfda14d4099eaf094e472eb4db2b173b6e838ab35d4427"
+    },
+    "/usr/share/fonts/truetype/noto/NotoSerifKannada-Regular.ttf": {
+      "bytes": 195288,
+      "sha256": "ced7b7899a1c20cc17ec4e6bc9209c911ccf4f469ee5fd6bc4cb4bf0335bd88e"
+    },
+    "/usr/share/fonts/opentype/inter/Inter-ExtraLightItalic.otf": {
+      "bytes": 582880,
+      "sha256": "192a8080af58199aa5954ccf254ed44ffd8b09944807d8f2010b9b36f4343818"
+    },
+    "/usr/share/fonts/woff/ebgaramond/EBGaramondSC08-Regular.woff": {
+      "bytes": 130644,
+      "sha256": "edea571551d78955c3df6f9c2208a19053e5db47e9822a99b8fcd459213b209d"
+    },
+    "/usr/share/fonts/truetype/adf/BerenisADFPro-BoldItalic.otf": {
+      "bytes": 184424,
+      "sha256": "bdebe516b54e3ee7a3cb46f173c0e3d49c018b0fc3279a68f2dc847009544c06"
+    },
+    "/usr/share/fonts/truetype/noto/NotoSerifTamilSlanted-Regular.ttf": {
+      "bytes": 79484,
+      "sha256": "a45fa44cbb140060dd2409d2072b1a5afa438b3208ac6e7ec22b7f711da049f9"
+    },
+    "/usr/share/texmf/fonts/opentype/public/lm/lmmonolt10-bold.otf": {
+      "bytes": 66332,
+      "sha256": "2f4ae1bd30d4203a1c74c61d61dddbd5e2c2d5a7001d456b1b98e08b7c47ffb9"
+    },
+    "/usr/share/fonts/opentype/inter/InterDisplay-Regular.otf": {
+      "bytes": 608160,
+      "sha256": "35c1f7437dd6d63f4e60a49144df4b4e4edc190e13ffc1e54b86083747fe3acf"
+    },
+    "/usr/share/fonts/truetype/noto/NotoTraditionalNushu-Regular.ttf": {
+      "bytes": 264568,
+      "sha256": "04b2fe18447e8794ea5226b1479074bccb86cf8e44639fff41e9d5a5f3457999"
+    },
+    "/usr/share/texmf/fonts/opentype/public/tex-gyre/texgyreschola-bold.otf": {
+      "bytes": 141752,
+      "sha256": "988c7b2a0ff0eae77d1df3338751b3c47a5e759117734a375b8e7f9de80e698b"
+    },
+    "/usr/share/fonts/truetype/lato/Lato-HeavyItalic.ttf": {
+      "bytes": 698924,
+      "sha256": "4c9af8df580f1b7a2e3336d69b225a38364a636dc014d8fd9c2b72adea68dd2d"
+    },
+    "/usr/share/fonts/X11/Type1/URWBookman-Light.pfb": {
+      "bytes": 137634,
+      "sha256": "d771b6b9dc8659781dccf3bf0888b37df8a29ecfb830d21a29058584ae35375e"
+    },
+    "/usr/share/fonts/opentype/inter/Inter-LightItalic.otf": {
+      "bytes": 592672,
+      "sha256": "8a82ddbbea502c53257e021de334990f3db64b4d78b03abbb713e405603188d0"
+    },
+    "/usr/share/texmf/fonts/opentype/public/tex-gyre/texgyreheros-italic.otf": {
+      "bytes": 139208,
+      "sha256": "6473df7fa107b3fb4be38973710afe22b0640c2ac076d5337cf126bed9aa108c"
+    },
+    "/usr/share/fonts/truetype/adf/GilliusADF-Italic.otf": {
+      "bytes": 37392,
+      "sha256": "c2c6d8b654599685381f29d869d3e706e82b3b17d39012b6c953f6fc3c147349"
+    },
+    "/usr/share/fonts/truetype/roboto/unhinted/RobotoTTF/Roboto-Light.ttf": {
+      "bytes": 307192,
+      "sha256": "e5c6b2b3cad15fd7dd820970eb859635d75bb2155b1a70f78a0668f8ba6d6eef"
+    },
+    "/usr/share/fonts/truetype/paratype/PTF55F.ttf": {
+      "bytes": 327120,
+      "sha256": "d074251529defb38523f3d89cfadfc2491515b32c22f154a8fc6b4c184415a69"
+    },
+    "/usr/share/fonts/truetype/adf/AccanthisADFStd-BoldItalic.otf": {
+      "bytes": 52800,
+      "sha256": "193331a436570e1f81fe76ca6a57f06f31204ab7fdabf7f2df2d06fe8c9b1329"
+    },
+    "/usr/share/fonts/truetype/paratype/PTC55F.ttf": {
+      "bytes": 355468,
+      "sha256": "17831d9f44e62fb9b80c91827af8eafa51cb0f61529a7176c9c5135555384e70"
+    },
+    "/usr/share/fonts/truetype/adf/BerenisADFProMath-Regular.otf": {
+      "bytes": 225516,
+      "sha256": "8c3f842f4a6551579f89a5ac4ab83d6ba67562ef5a30932d424c08dc0436ef7d"
+    },
+    "/usr/share/fonts/truetype/noto/NotoSans-Italic.ttf": {
+      "bytes": 530120,
+      "sha256": "5d7618dda819443fd07301c84adcee9fe8960c873ea5e5e1f0f59db384b78082"
+    },
+    "/usr/share/fonts/truetype/lato/Lato-BoldItalic.ttf": {
+      "bytes": 699008,
+      "sha256": "e2f9244fdcd20840f2480f91370cea885bf99230c49d153199fa64853ad74b69"
+    },
+    "/usr/share/fonts/X11/Type1/NimbusRoman-Bold.pfb": {
+      "bytes": 133024,
+      "sha256": "f9b971dad9e71ed5fe00171fc3edc759131e9528083f69daf36a7d324b89b177"
+    },
+    "/usr/share/fonts/truetype/noto/NotoSansDuployan-Regular.ttf": {
+      "bytes": 18728,
+      "sha256": "e18ee5ffd6a456541bb6f1c4db4a6d39f89ec1d2bacb2198f653da0d79b0dc8b"
+    },
+    "/usr/share/fonts/truetype/open-sans/OpenSans-Bold.ttf": {
+      "bytes": 224592,
+      "sha256": "5894a3649b213cf5b2d673b6e7a871815fd1d120fa68a463592f27db14eae323"
+    },
+    "/usr/share/fonts/truetype/roboto/unhinted/RobotoTTF/Roboto-Black.ttf": {
+      "bytes": 306428,
+      "sha256": "bbd81322180b38dee7c61668970af6159f7fd180eac6bf615f3d1e06f878d3f0"
+    },
+    "/usr/share/fonts/truetype/adf/AccanthisADFStdNo2-BoldItalic.otf": {
+      "bytes": 50320,
+      "sha256": "990342fbb3750bcd0bd37dccf7a6ad7c35ce4ea355e5bbe93dec68bf6ff6bbcc"
+    },
+    "/usr/share/fonts/truetype/noto/NotoSansOldTurkic-Regular.ttf": {
+      "bytes": 15160,
+      "sha256": "7da596306eb88cdab43bb44d45d0b5bb12614488be6e4eec31cc8413c3e18773"
+    },
+    "/usr/share/fonts/truetype/noto/NotoSansNushu-Regular.ttf": {
+      "bytes": 115064,
+      "sha256": "9a59c6a764740a008aad18ea495c27185176e4840cfa13c848f3a86c707af88f"
+    },
+    "/usr/share/fonts/truetype/stix/STIXTwoText-BoldItalic.ttf": {
+      "bytes": 420164,
+      "sha256": "f11eced04bcd8919ad92ccc0251878be9a46fa45fa76c514e3abfbf605a3160f"
+    },
+    "/usr/share/fonts/opentype/urw-base35/NimbusSansNarrow-BoldOblique.otf": {
+      "bytes": 87956,
+      "sha256": "3cefbe4a602a08a0400798fc4aba2d48f7b7e05fa6ed54c2009d68adc6eccef9"
+    },
+    "/usr/share/fonts/opentype/urw-base35/Z003-MediumItalic.otf": {
+      "bytes": 114052,
+      "sha256": "a04947e59fc9339ea3c4b34c31fd46764f22af7512afc2c074ce190e79ed7a09"
+    },
+    "/usr/share/fonts/truetype/noto/NotoSansKayahLi-Bold.ttf": {
+      "bytes": 17716,
+      "sha256": "5898d8592d842887e459a4d25905169a0a44de5f1eae5ed87c6a9e1935bd7e1a"
+    },
+    "/usr/share/fonts/truetype/noto/NotoSerifTamil-Bold.ttf": {
+      "bytes": 78452,
+      "sha256": "1cb01b8096603e16917c67769f0f6b3faad390cab02b35fa81662dd5611dcc22"
+    },
+    "/usr/share/fonts/opentype/linux-libertine/LinLibertine_RBI.otf": {
+      "bytes": 331128,
+      "sha256": "a6f051a24623b61a02b38d034606117de2687ce00b042a3ccb4e0e949657c33c"
+    },
+    "/usr/share/fonts/truetype/gentiumplus-compact/GentiumPlusCompact-I.ttf": {
+      "bytes": 1803572,
+      "sha256": "a1985a6738b4674fe86e50f58d51e67e3d49ca1c0fd6eb02ce5b2ec0ca5f05d0"
+    },
+    "/usr/share/fonts/truetype/noto/NotoMono-Regular.ttf": {
+      "bytes": 107848,
+      "sha256": "41fd7ccc82375e2a1e47f0cc2c941c14d7c99ba2f57cf69c9f738d07fb257686"
+    },
+    "/usr/share/fonts/truetype/noto/NotoSerifSinhala-Regular.ttf": {
+      "bytes": 322832,
+      "sha256": "c124f62c75ab6829e49ff46fb56ceda7ee18f99b8f90740fab5e27b605eeb193"
+    },
+    "/usr/share/fonts/truetype/noto/NotoLoopedThai-Bold.ttf": {
+      "bytes": 70556,
+      "sha256": "63112a2b7bb342442993c71c0e8d52e3dacd9606eabfa344a436c9578cb74f35"
+    },
+    "/usr/share/fonts/fonts-go/Go-Medium.ttf": {
+      "bytes": 146888,
+      "sha256": "e06de9901b99a112a29f67d2009823e78d57056b80ddb53cd2e14b6740728a10"
+    },
+    "/usr/share/fonts/opentype/cabin/Cabin-MediumItalic.otf": {
+      "bytes": 49072,
+      "sha256": "a74704e306a9dae3b2410246cb4be3785a59e151aaa7615d02f15dd4a2d592cb"
+    },
+    "/usr/share/fonts/truetype/noto/NotoSansHebrew-Regular.ttf": {
+      "bytes": 26892,
+      "sha256": "436900d5ad77d33e4234247f3076eaecd25b92b9bea0519514f684140e3566a7"
+    },
+    "/usr/share/fonts/opentype/inter/Inter-SemiBoldItalic.otf": {
+      "bytes": 608028,
+      "sha256": "a350102650a86612efa66e0291315dba24be43e1f3716359c17d365376bea11e"
+    },
+    "/usr/share/fonts/truetype/noto/NotoSansBuginese-Regular.ttf": {
+      "bytes": 7200,
+      "sha256": "9572118c512044497fa06cf5ae5209a245295a21746dac2f34ec5fad094f66c0"
+    },
+    "/usr/share/fonts/truetype/ebgaramond/EBGaramond08-Italic.ttf": {
+      "bytes": 199716,
+      "sha256": "8fadcf17d34cb2d74ff8f673de51ddcc7e349f628282177f9c8482484df437c0"
+    },
+    "/usr/share/texmf/fonts/opentype/public/tex-gyre/texgyretermes-regular.otf": {
+      "bytes": 140932,
+      "sha256": "cc3fe7c707b81428d23d54df3eadd9228a2bf6a4d43125d94df56f5f63134659"
+    },
+    "/usr/share/fonts/truetype/liberation/LiberationSansNarrow-Regular.ttf": {
+      "bytes": 112644,
+      "sha256": "8ff00a422289dce865973a299c9284ab7cb91a2b1ef1c7b9ef622b793cab5447"
+    },
+    "/usr/share/fonts/truetype/noto/NotoSansOldPermic-Regular.ttf": {
+      "bytes": 10008,
+      "sha256": "752d2519d4bbc1f961f2f79f2896267e18f5775531fa01718d67c1d2ecbb7f12"
+    },
+    "/usr/share/fonts/truetype/lato/Lato-MediumItalic.ttf": {
+      "bytes": 695588,
+      "sha256": "0739be048a122e3abb0cb731b49f6c07ac212a54eb182ebaa25a65829d5ac0cf"
+    },
+    "/usr/share/fonts/truetype/noto/NotoSansNKo-Regular.ttf": {
+      "bytes": 38352,
+      "sha256": "389f4082894bf1833dc5f140a282496114366b410779fbb16b3486f4660e9313"
+    },
+    "/usr/share/fonts/truetype/croscore/Cousine-Regular.ttf": {
+      "bytes": 296800,
+      "sha256": "829e776e4929eb6467838b92c7b700085fac2073801e6b54b224661affb34688"
+    },
+    "/usr/share/fonts/truetype/noto/NotoSerifNyiakengPuachueHmong-Bold.ttf": {
+      "bytes": 15152,
+      "sha256": "79b8495e99a4723e71a65248d0571e9447351874aced903a486f97569201b271"
+    },
+    "/usr/share/fonts/type1/urw-base35/URWBookman-Light.t1": {
+      "bytes": 137614,
+      "sha256": "17c7e83cf66537d631a9e0920af9bfa37c8db1a40e29d951869c3562100174ca"
+    },
+    "/usr/share/fonts/truetype/noto/NotoSansMiao-Regular.ttf": {
+      "bytes": 36276,
+      "sha256": "0568835387144b9d03b5b5b3694859766fedd59f7c17b3e1036fa944fc9a9298"
+    },
+    "/usr/share/texmf/fonts/opentype/public/lm/lmromanslant17-regular.otf": {
+      "bytes": 118092,
+      "sha256": "4f30eda1d4674a1f4eea513b3baf85e3ba3fb17b2e4cf09bf627aee91dc0a4cc"
+    },
+    "/usr/share/fonts/opentype/urw-base35/NimbusRoman-BoldItalic.otf": {
+      "bytes": 104772,
+      "sha256": "c84bcb17ab4ee54f16dadad6a3b0b2df37a24f9fc812897c4a59eeca785a5dec"
+    },
+    "/usr/share/texmf/fonts/opentype/public/lm/lmmono8-regular.otf": {
+      "bytes": 66268,
+      "sha256": "17319490d20f24e192bd7e7999484b95111a4654ac2620e7aa215591142ae997"
+    },
+    "/usr/share/fonts/opentype/asana-math/Asana-Math.otf": {
+      "bytes": 397540,
+      "sha256": "264c2f88892589d4aba44aa3629a13e8ab5fc00bd77c76ead1974e5d44f4de8d"
+    },
+    "/usr/share/fonts/truetype/adf/AccanthisADFStd-Bold.otf": {
+      "bytes": 51412,
+      "sha256": "5d7a3610bae701ea7e7c2c367503e493884689a4b88f4b4983a8527e2572cb84"
+    },
+    "/usr/share/fonts/truetype/comfortaa/Comfortaa-Bold.ttf": {
+      "bytes": 134916,
+      "sha256": "0b82ab5fdba8e0147e38e89237ea4a430f0d7017c313d9b8e56a309acde756c0"
+    },
+    "/usr/share/texmf/fonts/opentype/public/tex-gyre/texgyrepagella-italic.otf": {
+      "bytes": 221936,
+      "sha256": "069bb27f48eb98a741715227fc6e4b7baf3639c29fc13925f70d1ed8884ac29a"
+    },
+    "/usr/share/fonts/X11/Type1/NimbusMonoPS-Regular.pfb": {
+      "bytes": 140373,
+      "sha256": "49d0a528458cab48c8c4df850d182b3cf312d2b8a056a0dfae5202fc1f005dc1"
+    },
+    "/usr/share/fonts/opentype/stix/STIXTwoText-Italic.otf": {
+      "bytes": 308096,
+      "sha256": "cd64481fd10b69469074a3a8172fb5a22cb4116941d8aceafb8c77756b563df8"
+    },
+    "/usr/share/texmf/fonts/opentype/public/tex-gyre/texgyretermes-bold.otf": {
+      "bytes": 139480,
+      "sha256": "2fb3e952065fa153c7e4e64e04b98b9d79225739b6025aa3f0f0782d299ff61e"
+    },
+    "/usr/share/fonts/truetype/noto/NotoSansTifinaghGhat-Regular.ttf": {
+      "bytes": 39312,
+      "sha256": "0dd14b4d52d76e3018b0349e26f37f30f3a205a8a8407806258c5e2a9d624d65"
+    },
+    "/usr/share/fonts/X11/Type1/URWBookman-Demi.pfb": {
+      "bytes": 137183,
+      "sha256": "a00eaa50a57b194381f141fb290b7ea6ac6a4438c5fe3d010caf555cad6b30cd"
+    },
+    "/usr/share/fonts/truetype/noto/NotoSansLao-Regular.ttf": {
+      "bytes": 31136,
+      "sha256": "6c3de7db369e85cba20255d161eeeb3d934ea3c4c51e2574c2ddcce79a25025c"
+    },
+    "/usr/share/fonts/truetype/noto/NotoSansTifinaghTawellemmet-Regular.ttf": {
+      "bytes": 39744,
+      "sha256": "1a432e330242b70d8b9fbdb2bbbf13c5c9132fa758f575404a6c5a8a166fe62a"
+    },
+    "/usr/share/fonts/truetype/noto/NotoSansKannada-Regular.ttf": {
+      "bytes": 152168,
+      "sha256": "892b841b0b87ca3c2702bdc78d3031c8220f53e8f5f496ec5e37ccf0ca03ddf7"
+    },
+    "/usr/share/fonts/truetype/noto/NotoSerif-BoldItalic.ttf": {
+      "bytes": 656716,
+      "sha256": "78a6d685e5690b7dcda0f336b689193afc03b6bab5cf18fc1a9ecc3aa0600059"
+    },
+    "/usr/share/fonts/truetype/paratype/PTF76F.ttf": {
+      "bytes": 299176,
+      "sha256": "4d64a0a0a992b9efbbe4fef6ef1fdb2dcdd97b1dadac68d1c5e3fe0ed193c306"
+    },
+    "/usr/share/fonts/woff/ebgaramond/EBGaramond12-AllSC.woff": {
+      "bytes": 84800,
+      "sha256": "439e36ba53bec5f5940d917a8fbb52ff4f91079cae20952fc8ecef7eb7d14741"
+    },
+    "/usr/share/fonts/truetype/noto/NotoSansTagbanwa-Regular.ttf": {
+      "bytes": 6224,
+      "sha256": "108c5df5e6913a3b68280963b9ed9c43cadee644b3757e2edd6a969374f95c7c"
+    },
+    "/usr/share/fonts/truetype/noto/NotoSerifMyanmar-Bold.ttf": {
+      "bytes": 271320,
+      "sha256": "37ce93b711966fbade660e2f9173c04aa80d1232c16cb5458e22cb8f6d0560fd"
+    },
+    "/usr/share/fonts/X11/Type1/URWGothic-Book.pfb": {
+      "bytes": 100657,
+      "sha256": "1819f2a949a4cd015365d23fe4efb515cf983d4f922233511bf3c978743413d8"
+    },
+    "/usr/share/fonts/truetype/gentium-basic/GenBasB.ttf": {
+      "bytes": 266840,
+      "sha256": "26d5d4044a4bf92f265bf3b597076aa52d0497cb102cbdbfb1131f658ce97c9c"
+    },
+    "/usr/share/fonts/opentype/freefont/FreeMonoBold.otf": {
+      "bytes": 379068,
+      "sha256": "8c3b670f2419ef396879da6d8aca587b4817d473a2935aa479152fb4eed2f812"
+    },
+    "/usr/share/fonts/truetype/noto/NotoSansHebrew-Bold.ttf": {
+      "bytes": 27156,
+      "sha256": "d3b01343f71e8a93fffb84c345a1aecbaf4694b98d0eaace916cb9eac9e6dcd3"
+    },
+    "/usr/share/fonts/truetype/gentium/GentiumAlt-I.ttf": {
+      "bytes": 315840,
+      "sha256": "466f0296893ce9b1d29e96290f0e4458b039c482e0c424cb5f61deff28975068"
+    },
+    "/usr/share/texmf/fonts/opentype/public/lm/lmromancaps10-regular.otf": {
+      "bytes": 108740,
+      "sha256": "1ab40332a969892c7ed6cb010193b5276ccef1da6798bcbd1a465fee23d29334"
+    },
+    "/usr/share/fonts/truetype/noto/NotoSansArabic-Regular.ttf": {
+      "bytes": 244072,
+      "sha256": "504d7407d86875acf7d04dfaa0fd7524d0b8797723bc4aa18022f29db25b0b6e"
+    },
+    "/usr/share/fonts/truetype/noto/NotoSansTifinaghAPT-Regular.ttf": {
+      "bytes": 39532,
+      "sha256": "b9d61693c9166a56865d77df9ad353a67e8d0e169f88b5800743108d9d97a39e"
+    },
+    "/usr/share/fonts/opentype/ebgaramond/EBGaramondSC08-Regular.otf": {
+      "bytes": 226748,
+      "sha256": "47b326f092f82872768d96265e7a9e67f06b4bd2d75d85423f824148eb0b5860"
+    },
+    "/usr/share/fonts/opentype/inter/InterDisplay-Light.otf": {
+      "bytes": 606920,
+      "sha256": "86038978bb5204bce49cd306586d88dd325010bac065099b8588f8bbe8a94391"
+    },
+    "/usr/share/fonts/opentype/inter/Inter-ExtraLight.otf": {
+      "bytes": 593100,
+      "sha256": "09c80155d69174316313b9b81eabacea453aa76817f8fd4be9c3c263034b67f9"
+    },
+    "/usr/share/fonts/truetype/freefont/FreeSerifBold.ttf": {
+      "bytes": 2076128,
+      "sha256": "c34dbb7d840f9ca4ac1401971f4795f91c146e59f1dc628f5d33a21a9b13f1ce"
+    },
+    "/usr/share/texmf/fonts/opentype/public/lm/lmsans9-oblique.otf": {
+      "bytes": 101068,
+      "sha256": "ac0535d7d4a8eb1b531c5faeb9060a4b9bac397d72cf54191ef53eea6f66b617"
+    },
+    "/usr/share/fonts/opentype/urw-base35/NimbusSans-Bold.otf": {
+      "bytes": 83264,
+      "sha256": "7f33328e6b4d4cd21b45fa625791928c9407dc702db6780e56b09ca9a3ecaa67"
+    },
+    "/usr/share/fonts/opentype/linux-libertine/LinBiolinum_K.otf": {
+      "bytes": 120048,
+      "sha256": "3a7e751454b49cbdea6ab25733ff51b64ced0ae834dcbecc47483a67118d9d11"
+    },
+    "/usr/share/fonts/opentype/linux-libertine/LinLibertine_I.otf": {
+      "bytes": 389200,
+      "sha256": "57d69a207fb7af983ea0c1032ef2c9a1d1d02e19cc858c686ebed0c4df606ef4"
+    },
+    "/usr/share/fonts/truetype/dejavu/DejaVuSerif-Italic.ttf": {
+      "bytes": 346544,
+      "sha256": "730469e7a8dce387a760160f05e62ddf021870bd277505bbc5b250e909edeabf"
+    },
+    "/usr/share/fonts/truetype/comfortaa/Comfortaa-Regular.ttf": {
+      "bytes": 135304,
+      "sha256": "7aeecaf4c799f24f22e871a6f546ca89116cf11288c7a8ff42f11401dd5445c6"
+    },
+    "/usr/share/fonts/opentype/inter/Inter-Thin.otf": {
+      "bytes": 580244,
+      "sha256": "cac20f7a0c98f45770b098f3eea4bbf5ca020f91602ae119342198dfca14107c"
+    },
+    "/usr/share/fonts/truetype/charis/CharisSIL-Regular.ttf": {
+      "bytes": 822204,
+      "sha256": "5082098fdf2abe90e80253d649eb2b52aa84c1849f8c59db23abf2121cfa784e"
+    },
+    "/usr/share/fonts/truetype/adf/BerenisADFPro-Bold.otf": {
+      "bytes": 191652,
+      "sha256": "44e613530bf877d930525fab61a0ad85e5ecc813f1b9ef5b119178b074913c65"
+    },
+    "/usr/share/fonts/truetype/noto/NotoSansOriya-Bold.ttf": {
+      "bytes": 92964,
+      "sha256": "d563e031a325aa1d5fa7975a7fed3f34409b3ef10036f75d275653e7e4bad5c2"
+    },
+    "/usr/share/fonts/truetype/noto/NotoSansOldPersian-Regular.ttf": {
+      "bytes": 12764,
+      "sha256": "cda81a3d030784988209f9fb7cdf9b8a8ced66f3bd59239184d53e2158229893"
+    },
+    "/usr/share/fonts/X11/Type1/NimbusRoman-BoldItalic.pfb": {
+      "bytes": 140973,
+      "sha256": "514e0a862504e4accfebf076b506eee56f0ce1d37f9e9c9cde98ffa6fa4ada2d"
+    },
+    "/usr/share/fonts/type1/urw-base35/URWGothic-BookOblique.t1": {
+      "bytes": 102403,
+      "sha256": "03dd97fc09205d48cfb02cb00e1bb181cb10b1aeadef814ac107de21eb91c0b4"
+    },
+    "/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf": {
+      "bytes": 759720,
+      "sha256": "b4c632e3cdf9acc7f28758fb5a323c8524d7fc6660d46904d9b6cbe2809c419c"
+    },
+    "/usr/share/fonts/type1/urw-base35/C059-Roman.t1": {
+      "bytes": 145084,
+      "sha256": "be8224624a91fc315b66bbf640e18ebddc79076937bdb3bbb5b96aaf90ec84c5"
+    },
+    "/usr/share/fonts/truetype/adf/UniversalisADFStd-BoldCondIt.otf": {
+      "bytes": 41496,
+      "sha256": "f4962f3501a7ddd739be3a80d3f95846e41f4ef3fc042541d300d56c9f25b99c"
+    },
+    "/usr/share/fonts/type1/urw-base35/C059-Italic.t1": {
+      "bytes": 148928,
+      "sha256": "304c523c14d49e90733a73c301055377a0176d4b5b087b6fd2ef74d723348fe2"
+    },
+    "/usr/share/texmf/fonts/opentype/public/lm/lmmonoltcond10-oblique.otf": {
+      "bytes": 75908,
+      "sha256": "2af9fab2c4d4c7a98aaebb9d66ffe1b55b3319e48c5d84add7ef27c2890747d2"
+    },
+    "/usr/share/fonts/opentype/urw-base35/NimbusMonoPS-Italic.otf": {
+      "bytes": 82648,
+      "sha256": "7f1f85498027e07befadd3c7592518909b9e8c7f96ee5615e0b21be0c399c4b4"
+    },
+    "/usr/share/texmf/fonts/opentype/public/lm/lmmono9-regular.otf": {
+      "bytes": 63076,
+      "sha256": "cdd53c7dc01a1d25f21eaf7cae44bfb8a9665e4cbd60e5f8da14287aca819bb9"
+    },
+    "/usr/share/fonts/truetype/clear-sans/ClearSans-Regular.ttf": {
+      "bytes": 304516,
+      "sha256": "bb811af889b6a3984944678f04b033a4805c49a66f06cde62ef29902e8f0f06f"
+    },
+    "/usr/share/fonts/truetype/croscore/Arimo-Regular.ttf": {
+      "bytes": 478456,
+      "sha256": "5c315974260455a02fad62495a0ae9a783bb53f0eccf807deb75c7967e7a81d6"
+    },
+    "/usr/share/fonts/truetype/noto/NotoSansSoraSompeng-Regular.ttf": {
+      "bytes": 8164,
+      "sha256": "3e2bd4f583735c646675e05b4b3a2827015b20ebdfdad73f02c828321255fa23"
+    },
+    "/usr/share/fonts/truetype/andika/Andika-Regular.ttf": {
+      "bytes": 738780,
+      "sha256": "694d12d0f3fb2be696dbbde93eee3ccbdee766751d836eb1fbe8aab2d439d38a"
+    },
+    "/usr/share/fonts/truetype/gentiumplus/GentiumPlus-BoldItalic.ttf": {
+      "bytes": 957876,
+      "sha256": "960e0a58ce1d7849c7a3e49f4fbc1ac4a27b58ef19a2d013ce637fe364b0a1f0"
+    },
+    "/usr/share/fonts/truetype/lato/Lato-SemiboldItalic.ttf": {
+      "bytes": 698028,
+      "sha256": "0aa594079c213d1dba417a2fc34b8170445d0f03af02a3b35f16b9b775eef398"
+    },
+    "/usr/share/fonts/truetype/noto/NotoSansBuhid-Regular.ttf": {
+      "bytes": 11440,
+      "sha256": "435cfa275e7ccdff7326430ac498158d0377ac357570efd224f8c2888c8f6b94"
+    },
+    "/usr/share/fonts/type1/urw-base35/NimbusSans-Bold.t1": {
+      "bytes": 107795,
+      "sha256": "ebf5ba685a44a194cc61ba3e34a1bf4718980871e5b72304ba9633411c7d6391"
+    },
+    "/usr/share/fonts/truetype/noto/NotoSansAnatolianHieroglyphs-Regular.ttf": {
+      "bytes": 228424,
+      "sha256": "bdaafffb532df2c2000166dcb4250b1c48635c41d9502e223d9d51922a692728"
+    },
+    "/usr/share/fonts/truetype/noto/NotoSansTagalog-Regular.ttf": {
+      "bytes": 6612,
+      "sha256": "5fe89f89eef4e285575fe1bc5f4340e49cc63a8d43f925bb9af2e78baec6cc96"
+    },
+    "/usr/share/fonts/truetype/lato/Lato-ThinItalic.ttf": {
+      "bytes": 654216,
+      "sha256": "c8ad5351e800f8286890a4c8a57d849207cb930287caeb40c4ffbe538f2f3e0e"
+    },
+    "/usr/share/fonts/opentype/urw-base35/NimbusMonoPS-Regular.otf": {
+      "bytes": 77936,
+      "sha256": "4f225ca8e13acb16f733ce741693105e527d5f7a5443901b9ecc190fca4e149b"
+    },
+    "/usr/share/fonts/truetype/noto/NotoSansDeseret-Regular.ttf": {
+      "bytes": 19928,
+      "sha256": "35a4d331a76073eeff539442b2c3b49efb58baa0d34d1da0f685f6a4b98d1e2f"
+    },
+    "/usr/share/fonts/truetype/noto/NotoSansMarchen-Regular.ttf": {
+      "bytes": 131248,
+      "sha256": "95bc61fd3fa20fb43aa07047372334dff8db5f6cda9a5ee756784b99da7ec056"
+    },
+    "/usr/share/fonts/truetype/dejavu/DejaVuSansCondensed-BoldOblique.ttf": {
+      "bytes": 614068,
+      "sha256": "f9e5ad7d71d5f3c47b5e1e97939cdf9e1cadc812fd416242611548f9a576bf6a"
+    },
+    "/usr/share/fonts/opentype/didot/GFSDidotBold.otf": {
+      "bytes": 99164,
+      "sha256": "8f1febc6e7088c6721c968056f2600f6a1e8b591fd8e686df8b4de19f3ee435c"
+    },
+    "/usr/share/fonts/truetype/noto/NotoSerifGrantha-Regular.ttf": {
+      "bytes": 491220,
+      "sha256": "469306809e14c3ab636ae07d5c2552252352a9e924ce53c90da84dc2f0c8cfb4"
+    },
+    "/usr/share/fonts/truetype/ubuntu/UbuntuMono-Italic[wght].ttf": {
+      "bytes": 172196,
+      "sha256": "4148a3a8e6a702da461992047bcc07179f1eed12a3020384be754d015240678a"
+    },
+    "/usr/share/fonts/truetype/noto/NotoSansPahawhHmong-Regular.ttf": {
+      "bytes": 18296,
+      "sha256": "303dbcc71425c331cc5d293254acfdf15aed04cf5e0075ecba0ed0d8a5d5862b"
+    },
+    "/usr/share/fonts/type1/urw-base35/NimbusMonoPS-Regular.t1": {
+      "bytes": 140353,
+      "sha256": "b1c0f23ba9732ee495ea52658684dc36064d3c439ac81b7dfcf922e790e5160f"
+    },
+    "/usr/share/fonts/truetype/noto/NotoSerifKhojki-Regular.ttf": {
+      "bytes": 143760,
+      "sha256": "5f0055e1961b9cb53366106ed0c5eea9c9deb46d28e3dda3f0ccca0fb6057271"
+    },
+    "/usr/share/fonts/truetype/noto/NotoSansMro-Regular.ttf": {
+      "bytes": 6920,
+      "sha256": "6e054fa6b6a160e4ddd41fc9be84d6d62851b75e1e2872dcdfe5fd003958b33f"
+    },
+    "/usr/share/fonts/opentype/lobstertwo/LobsterTwo-Italic.otf": {
+      "bytes": 80760,
+      "sha256": "f90f8608f23e2373426d898e2ac96897ec658993830239ccf66dc84fb9e83d4a"
+    },
+    "/usr/share/texmf/fonts/opentype/public/tex-gyre-math/texgyretermes-math.otf": {
+      "bytes": 532404,
+      "sha256": "e5ce42b4fe826b7ea4c0874359decf0b294439355c511a4794107a9924e2cd5a"
+    },
+    "/usr/share/fonts/opentype/noto/NotoSansCJK-Regular.ttc": {
+      "bytes": 19484784,
+      "sha256": "b76b0433203017ca80401b2ee0dd69350349871c4b19d504c34dbdd80541690a"
+    },
+    "/usr/share/fonts/truetype/noto/NotoRashiHebrew-Bold.ttf": {
+      "bytes": 25012,
+      "sha256": "5e694fe897f81b0045ec840d22940aa6bd1818b0cb28a4b25cfac051a7a7295d"
+    },
+    "/usr/share/fonts/truetype/noto/NotoSerifBengali-Regular.ttf": {
+      "bytes": 263204,
+      "sha256": "32b4aeb731e3819d7a31216c885208a96e402ceeebb30fc39723b99220708fef"
+    },
+    "/usr/share/fonts/truetype/noto/NotoSansOriya-Regular.ttf": {
+      "bytes": 95800,
+      "sha256": "20751837a8cac9d0e610ffdf91c43d3391e2b267ca2cad07f6e3866798436369"
+    },
+    "/usr/share/texmf/fonts/opentype/public/lm/lmsans17-regular.otf": {
+      "bytes": 94828,
+      "sha256": "f6c395a436e4fa7e88bbf1445e64b9c78ce4effba3668b13cc433077fc71a984"
+    },
+    "/usr/share/fonts/truetype/freefont/FreeSansBold.ttf": {
+      "bytes": 996436,
+      "sha256": "54c95c618e4540a8318ccfcbcee14e3623ee1d0e3451db574f116f058586caa7"
+    },
+    "/usr/share/fonts/truetype/noto/NotoSansTifinaghAir-Regular.ttf": {
+      "bytes": 39476,
+      "sha256": "a9144f1c496af5c83759120dce99f904595333af50df41d86471917d65146a6d"
+    },
+    "/usr/share/fonts/truetype/noto/NotoSansAdlamUnjoined-Regular.ttf": {
+      "bytes": 36820,
+      "sha256": "9bea8524ccb964f82658e97831615a5ac9ed48869cb4008a7eedb55fbe863289"
+    },
+    "/usr/share/fonts/truetype/ebgaramond/EBGaramond08-Regular.ttf": {
+      "bytes": 303968,
+      "sha256": "620028e12849ddb1797ad2d8b2abf9ce74f8017d460162bdb4e5bdce45d616c8"
+    },
+    "/usr/share/fonts/truetype/noto/NotoSerifBalinese-Regular.ttf": {
+      "bytes": 51200,
+      "sha256": "1bf8d4f3e8615b0cacb92ffcf5b694256ba1f3813fa05b0871ad8f1e9a0e4377"
+    },
+    "/usr/share/fonts/truetype/noto/NotoSansTifinaghSIL-Regular.ttf": {
+      "bytes": 39756,
+      "sha256": "a9b0ce0d727578c4db1dca5acc5f6fcbd283b54c60b312fdadf5db1357e672ae"
+    },
+    "/usr/share/fonts/truetype/roboto/unhinted/RobotoTTF/Roboto-MediumItalic.ttf": {
+      "bytes": 330796,
+      "sha256": "48eefc3c8e548f21df2e9b18e06e40834a203e2ff09deed0a09a2c83536c0582"
+    },
+    "/usr/share/fonts/truetype/noto/NotoSansLimbu-Regular.ttf": {
+      "bytes": 12868,
+      "sha256": "2a7e9f84c1dedb1016a841a81363b2e609090c78799afe01247ccb0f25efd9b0"
+    },
+    "/usr/share/fonts/fonts-go/Go-Smallcaps.ttf": {
+      "bytes": 133604,
+      "sha256": "ee1984fc28d442ce191f3b7edc68b557155e158d77511de304dc9fa8ac4a1d14"
+    },
+    "/usr/share/fonts/opentype/artemisia/GFSArtemisiaIt.otf": {
+      "bytes": 118604,
+      "sha256": "91cf590d2991eca10eca0fac33551639a8524f151bb614b3e7f804917610fef0"
+    },
+    "/usr/share/fonts/truetype/noto/NotoLoopedLao-Regular.ttf": {
+      "bytes": 54852,
+      "sha256": "9efadfd2fcc973c1266c975507ea5b832c995d4a2126f2235bdde29756509aa4"
+    },
+    "/usr/share/fonts/truetype/noto/NotoSerifMalayalam-Regular.ttf": {
+      "bytes": 109996,
+      "sha256": "644e763e02252bc8674865aa78defdfdecbdbde71c9b408ff643f76337201dde"
+    },
+    "/usr/share/fonts/opentype/urw-base35/P052-Bold.otf": {
+      "bytes": 110980,
+      "sha256": "ba6503baaf0f9e4e40a69cc4c0e57049fbde313fe183aba8fe823208337a94af"
+    },
+    "/usr/share/fonts/truetype/adf/UniversalisADFStd-Bold.otf": {
+      "bytes": 39224,
+      "sha256": "2bb6e5f6ee4cec6ee797eeed9a633f2f5535900ef8e81476a21371b68c6ea79b"
+    },
+    "/usr/share/fonts/truetype/paratype/PTF75F.ttf": {
+      "bytes": 301536,
+      "sha256": "71a57caa616bec6f7266bddb176defd481f4edfca357123d4d3d8bb942b10f26"
+    },
+    "/usr/share/fonts/opentype/cabin/Cabin-Italic.otf": {
+      "bytes": 49032,
+      "sha256": "b9ec8445102fb15bd1eb5c10d2c0c4049154bcf60fcf2527d0bf06362c9f6e26"
+    },
+    "/usr/share/fonts/opentype/inter/InterDisplay-ExtraBoldItalic.otf": {
+      "bytes": 605612,
+      "sha256": "fe8ecdf422116dbd380707fdde10377aa6c23883b5f6bf5b024ca8ddbf001598"
+    },
+    "/usr/share/fonts/opentype/inter/InterDisplay-BlackItalic.otf": {
+      "bytes": 596692,
+      "sha256": "23567c0b610fc7a7687cadf0becd0826798fedfadfc9e1667917d62d19efbef4"
+    },
+    "/usr/share/fonts/truetype/noto/NotoSansMultani-Regular.ttf": {
+      "bytes": 16920,
+      "sha256": "feb45da05d09031ab31c9e34492c2672f6134c911eb73b66dab5ee1efd860973"
+    },
+    "/usr/share/fonts/truetype/noto/NotoSansZanabazarSquare-Regular.ttf": {
+      "bytes": 19440,
+      "sha256": "7fa099bf15f01ab7ac6fa001658d08696bf3321f6bed3e3b569fdc266e334745"
+    },
+    "/usr/share/fonts/opentype/freefont/FreeSansOblique.otf": {
+      "bytes": 525244,
+      "sha256": "ba6c7f4773f1133ff6c20fd57dc4b2b4270842f18a2ec4e380b422a753a0baf9"
+    },
+    "/usr/share/fonts/opentype/inter/Inter-Italic.otf": {
+      "bytes": 589784,
+      "sha256": "3bdf49f72ad2f2959a2619ceef700784504f6d17f502e2e2bc6edce5d43ca631"
+    },
+    "/usr/share/fonts/opentype/freefont/FreeMonoOblique.otf": {
+      "bytes": 396388,
+      "sha256": "f83d54de1dba1e15e0d86e1f38f8882030ac2cf5aafe691500c06a05d12ee778"
+    },
+    "/usr/share/fonts/truetype/liberation/LiberationSans-Italic.ttf": {
+      "bytes": 415920,
+      "sha256": "4ccb79043bd3a6d131b5a53901abb21261b1417f6052b38a9fa9716a4e5a3d81"
+    },
+    "/usr/share/fonts/truetype/adf/GilliusADF-Cond.otf": {
+      "bytes": 36056,
+      "sha256": "72aeb8c65caed216373dd3e1bd8c80254258a820377ba9983200849bdcdc100d"
+    },
+    "/usr/share/texmf/fonts/opentype/public/lm/lmsans8-oblique.otf": {
+      "bytes": 100084,
+      "sha256": "7f4227513bfd47b7077bedd125caa4c0a223a2cdad17a1470145cdea83353c88"
+    },
+    "/usr/share/fonts/opentype/freefont/FreeSans.otf": {
+      "bytes": 1105464,
+      "sha256": "1946d1d70ece21f257ea23256e11a6ef4a1c279191cff1d977e5abd2974c37c7"
+    },
+    "/usr/share/fonts/opentype/urw-base35/NimbusSans-Regular.otf": {
+      "bytes": 82264,
+      "sha256": "7c25be4d78155523080ab85b10277150657ff7dabbcad7037bdd536c9b6d0d08"
+    },
+    "/usr/share/fonts/X11/Type1/NimbusMonoPS-BoldItalic.pfb": {
+      "bytes": 154197,
+      "sha256": "586a30dddc478481a562cf78f323fc88b310fed15648be8f3b50ad55af02d05f"
+    },
+    "/usr/share/fonts/truetype/noto/NotoSansDisplay-Regular.ttf": {
+      "bytes": 508388,
+      "sha256": "3dd456595e9226472ab8adaf9408400c671b97dbba241d883d05e2ab70ceadac"
+    },
+    "/usr/share/fonts/truetype/croscore/Tinos-Italic.ttf": {
+      "bytes": 539624,
+      "sha256": "0f949a3fa0e23cd0ca94a0c4784bd8f9efb99c20070b9f73b5fd592b49c092ad"
+    },
+    "/usr/share/texmf/fonts/opentype/public/tex-gyre/texgyrecursor-italic.otf": {
+      "bytes": 87536,
+      "sha256": "545f24a2a9e5dd5ace865fe5e80134f55a37794b36e26abae5424aebff600056"
+    },
+    "/usr/share/fonts/truetype/noto/NotoSansBengali-Regular.ttf": {
+      "bytes": 201964,
+      "sha256": "9bb35b3547829ecc42041b6017e87fd4c5f1da1edcd00f59171777050f346018"
+    },
+    "/usr/share/fonts/truetype/roboto/unhinted/RobotoTTF/Roboto-Medium.ttf": {
+      "bytes": 306536,
+      "sha256": "7984aafeaf437899ce89b251d2875fc5048cb7d290152eac070239cca7ff726c"
+    },
+    "/usr/share/fonts/type1/texlive-fonts-recommended/bchri8a.pfb": {
+      "bytes": 35118,
+      "sha256": "0c3e189c6a52401c62c9fcde32f453a4dc95836d8c6e03fe8908100d854f3a83"
+    },
+    "/usr/share/fonts/truetype/noto/NotoSansKannada-Bold.ttf": {
+      "bytes": 156336,
+      "sha256": "fcb9918669a24e33b1464b33eeac24e9a0f54a50393dfdaeb1e596cfcf2dac47"
+    },
+    "/usr/share/fonts/truetype/noto/NotoSerifLao-Regular.ttf": {
+      "bytes": 38528,
+      "sha256": "18cecc9fc9ef0fe10f12cff8ddba88317d8b45fb1dfa2aa935d225184ad3893c"
+    },
+    "/usr/share/fonts/truetype/paratype/PTC75F.ttf": {
+      "bytes": 377508,
+      "sha256": "9a1a5425abb2f16d85cd8a677879b59b595c5c55014b0fc60233f810aedd7292"
+    },
+    "/usr/share/fonts/truetype/lato/Lato-BlackItalic.ttf": {
+      "bytes": 672480,
+      "sha256": "0ae5310fe1ed156ab6af26a8c0be61aee44c166896765d5a9473670ad9c28dbc"
+    },
+    "/usr/share/fonts/X11/Type1/C059-Roman.pfb": {
+      "bytes": 145104,
+      "sha256": "ba0422d833959fdc8487359619ce51b13e489e2bed7161d7ea35c17a49b1c0ac"
+    },
+    "/usr/share/fonts/truetype/noto/NotoSansEthiopic-Bold.ttf": {
+      "bytes": 340980,
+      "sha256": "cc16f0c43be76a2ecb5f6d08de4fe6705886b9be90251bfb5959a90955be7f1d"
+    },
+    "/usr/share/fonts/type1/texlive-fonts-recommended/bchb8a.pfb": {
+      "bytes": 33799,
+      "sha256": "c50fd6e717599f306b8b3261d309c56849f4366771c1983c875eabf46bc2b956"
+    },
+    "/usr/share/fonts/truetype/lato/Lato-Thin.ttf": {
+      "bytes": 627220,
+      "sha256": "11b51a8bb6361be3e4642de40b49c210ecb4a19b8bf630f3335ff07813726f3b"
+    },
+    "/usr/share/fonts/opentype/linux-libertine/LinBiolinum_R.otf": {
+      "bytes": 387392,
+      "sha256": "c23aab3a0b6617a765e202bffefcbc3b3271cc759aa88bbdb42cc4f53c187e3f"
+    },
+    "/usr/share/fonts/truetype/dejavu/DejaVuSansCondensed-Oblique.ttf": {
+      "bytes": 601448,
+      "sha256": "da4fff3a7830ac5e17b2401b83ed74d7661d2cd5b176c6108f31c620d951addb"
+    },
+    "/usr/share/fonts/opentype/inter/Inter-ExtraBold.otf": {
+      "bytes": 633580,
+      "sha256": "db2643a54b9c2492e99cd70f73702906d1677aedde969f63bffd4cbc3789ad6d"
+    },
+    "/usr/share/fonts/truetype/noto/NotoSansYi-Regular.ttf": {
+      "bytes": 182808,
+      "sha256": "f621f514dce105a414ef7373a36b54ccc8d760a6319ad7133695fb42a1f02552"
+    },
+    "/usr/share/fonts/truetype/noto/NotoSerif-Regular.ttf": {
+      "bytes": 588876,
+      "sha256": "9d7583b7dc9e812afd32a14280c5cac3160012efe50c8d08938f4fea266ff67f"
+    },
+    "/usr/share/fonts/truetype/noto/NotoSansTamil-Bold.ttf": {
+      "bytes": 75740,
+      "sha256": "7ef7071ba2fad67dcae397dc7f5bfd4dbce69d86cdc453c2cc4abe640df0b442"
+    },
+    "/usr/share/fonts/truetype/noto/NotoSansJavanese-Regular.ttf": {
+      "bytes": 127040,
+      "sha256": "faff63a3ea4c5a882508d85935f02e4f80e923551d4716e27706dd3c6cb07d67"
+    },
+    "/usr/share/fonts/truetype/gentium-basic/GenBkBasBI.ttf": {
+      "bytes": 245096,
+      "sha256": "dccbca56a0d1bdbcc440e3b2070ee0ef63fd834454196baeaa8226ead9c82f07"
+    },
+    "/usr/share/fonts/truetype/open-sans/OpenSans-CondBold.ttf": {
+      "bytes": 264372,
+      "sha256": "a859a438018739aee16c306586d91a453c208ee500c827d9e9aa063155c8a6e8"
+    },
+    "/usr/share/fonts/truetype/noto/NotoSerifDevanagari-Regular.ttf": {
+      "bytes": 263856,
+      "sha256": "662c3cd6e17dd0561f53fe28ce6c32d7d64e650119f4bb0428fc50206bbc46fe"
+    },
+    "/usr/share/fonts/truetype/comfortaa/Comfortaa-Light.ttf": {
+      "bytes": 135420,
+      "sha256": "6c7392e5bcb8b12441a2b2d3fbac08d598d1ec4cf66e4f6f7338b47c8bada638"
+    },
+    "/usr/share/fonts/opentype/freefont/FreeSerifBoldItalic.otf": {
+      "bytes": 505336,
+      "sha256": "318b40b6a2788b6926c836b22e97a0da14721fa244d4f707781fa704186a8fa5"
+    },
+    "/usr/share/fonts/truetype/roboto/unhinted/RobotoTTF/Roboto-Italic.ttf": {
+      "bytes": 328640,
+      "sha256": "5cd9337020d0b1593bae42dcca5cfc0fb86f5806ef469d66d09eae1e56ce346b"
+    },
+    "/usr/share/texmf/fonts/opentype/public/lm/lmroman9-bold.otf": {
+      "bytes": 113040,
+      "sha256": "f72feac9ea12eb858d8093d6c0ee710a6c25f59b61278c88ec41c0a680838415"
+    },
+    "/usr/share/texmf/fonts/opentype/public/tex-gyre/texgyrebonum-regular.otf": {
+      "bytes": 142660,
+      "sha256": "8ad5a53ae61d710fe1773f4ecc7fdf6dde7df1df59faa4492a24def95077d6b3"
+    },
+    "/usr/share/fonts/truetype/noto/NotoSansOldItalic-Regular.ttf": {
+      "bytes": 7596,
+      "sha256": "732462966b4e78346875e63b78c66094d64bf2a3a9a56d4084f623a542f74904"
+    },
+    "/usr/share/fonts/truetype/adf/BerenisADFPro-Regular.otf": {
+      "bytes": 193836,
+      "sha256": "677e222c4ce7e6ff9532bea78f3b0d31554faa18bd08b10573c99eaf67912bb2"
+    },
+    "/usr/share/texmf/fonts/opentype/public/tex-gyre/texgyreheroscn-regular.otf": {
+      "bytes": 132372,
+      "sha256": "1ecf653e4245d8e95e913fa43e3cf7cc8f25e2ff03ba16df7db1a9e83a401a7a"
+    },
+    "/usr/share/fonts/truetype/ebgaramond/EBGaramondSC08-Regular.ttf": {
+      "bytes": 282064,
+      "sha256": "6ac449ff8921f4510028404a018c63bb8e57ba9fb91a6d0cda5f1dfb2cab57de"
+    },
+    "/usr/share/fonts/type1/urw-base35/NimbusRoman-Bold.t1": {
+      "bytes": 133004,
+      "sha256": "4d31149fe14fb8fb9f84f8c6171eb90a654b6f7c4db8213a6e501b32e712e290"
+    },
+    "/usr/share/fonts/truetype/noto/NotoSansTakri-Regular.ttf": {
+      "bytes": 21828,
+      "sha256": "08f770fcc0bc890a7738ebc03f8f5e51d207e27a87ded0c567cba76343c51f5c"
+    },
+    "/usr/share/fonts/opentype/inter/Inter-Regular.otf": {
+      "bytes": 609600,
+      "sha256": "d4f2b9e148059a15f014cb0f0b8fea8cd11bfa447dd483bedf1b0adc0e2ba799"
+    },
+    "/usr/share/fonts/truetype/adf/UniversalisADFStd-BoldItalic.otf": {
+      "bytes": 41936,
+      "sha256": "181f82aaba295d27038b8ff14302abc0c717dc0671a01886e5eb171649603dd2"
+    },
+    "/usr/share/texmf/fonts/opentype/public/lm/lmsansdemicond10-regular.otf": {
+      "bytes": 106836,
+      "sha256": "3a8cc8f72acaf6d4cc9200a838e5e118bf6f265233aa078e105559f6db6c2948"
+    },
+    "/usr/share/texmf/fonts/opentype/public/lm/lmroman8-bold.otf": {
+      "bytes": 112404,
+      "sha256": "04d4f633c3da31a169f4c54a7fe8c7e63925b39d030381f8d3eab955f16be7b2"
+    },
+    "/usr/share/fonts/truetype/lato/Lato-Light.ttf": {
+      "bytes": 644556,
+      "sha256": "e9d59afb6d9cb9cf6e8d8159d4639d5b577e29efc64a15182f228659cfc1e818"
+    },
+    "/usr/share/fonts/type1/urw-base35/Z003-MediumItalic.t1": {
+      "bytes": 166540,
+      "sha256": "84ff513d45b7255ddc1ac0bad4b03b1a0fd055f9093617034b59d333ec77b1b6"
+    },
+    "/usr/share/texmf/fonts/opentype/public/lm/lmroman10-bolditalic.otf": {
+      "bytes": 118204,
+      "sha256": "c37a28eed7a6e03f792b98b5e5f637b2fcda378bb4855f99284f1a88fe35f124"
+    },
+    "/usr/share/texmf/fonts/opentype/public/lm/lmromanslant10-regular.otf": {
+      "bytes": 118508,
+      "sha256": "056ad4d08d2eb58d6b7fd0ac5de3f1fb799f2bb0c16b66c7e6b5bc5b6aef6481"
+    },
+    "/usr/share/fonts/opentype/inter/Inter-ExtraBoldItalic.otf": {
+      "bytes": 608668,
+      "sha256": "8ca47cd667caebb133732d7f4d50022385d9d27c23a272b9520afc841ae75c70"
+    },
+    "/usr/share/fonts/X11/Type1/P052-Italic.pfb": {
+      "bytes": 161551,
+      "sha256": "ce1443da1bd80360215a45eca7bcb193540586f6b20e15a6bb789dfeee9c42e1"
+    },
+    "/usr/share/texmf/fonts/opentype/public/lm/lmroman12-italic.otf": {
+      "bytes": 117732,
+      "sha256": "ada6b3f451238784e5a5ea75d43efa1eb4329cd75ce65bf047ed2f31b7b5e2f3"
+    },
+    "/usr/share/fonts/truetype/noto/NotoSansMasaramGondi-Regular.ttf": {
+      "bytes": 30828,
+      "sha256": "58fea17ae8fb1d51f647e20d0246ede2b0abca1917f9121a1451488a2295765c"
+    },
+    "/usr/share/fonts/truetype/adf/UniversalisADFStd-Cond.otf": {
+      "bytes": 37776,
+      "sha256": "04a933f99d189b8048f2dafb45836b896d48929d3af8f7009a2ab980affa0b31"
+    },
+    "/usr/share/fonts/truetype/noto/NotoSansOldHungarian-Regular.ttf": {
+      "bytes": 54112,
+      "sha256": "fd726b1df5a03c790c93b2be4e397f50319b1e04e6ae8a671386446e3c8e9888"
+    },
+    "/usr/share/texmf/fonts/opentype/public/lm/lmmono12-regular.otf": {
+      "bytes": 63012,
+      "sha256": "b826e490fa671f254840abe88afea0975b606f57fb4a8b93f53787c26d8ac319"
+    },
+    "/usr/share/fonts/truetype/noto/NotoSerifArmenian-Regular.ttf": {
+      "bytes": 31184,
+      "sha256": "9b6f1837a89ede5f9404bb5975539dbac8eff23e262fc3e459cba029f30292f4"
+    },
+    "/usr/share/fonts/truetype/noto/NotoSerifLao-Bold.ttf": {
+      "bytes": 40364,
+      "sha256": "0613b9803cc45e1794a0f87e79f5a70ff3119676509b6de8807540120107f4a0"
+    },
+    "/usr/share/fonts/truetype/noto/NotoSansMalayalam-Bold.ttf": {
+      "bytes": 115944,
+      "sha256": "abe54dff7c6539899f1208672ae4235207b3e6b8d49594e9ff02d972d5975a81"
+    },
+    "/usr/share/texmf/fonts/opentype/public/lm/lmmonoslant10-regular.otf": {
+      "bytes": 72212,
+      "sha256": "4b4a3e600db7f6ec434f8b48b31f22e12faced90e1681c93eeba5e23a6e55fde"
+    },
+    "/usr/share/fonts/truetype/noto/NotoKufiArabic-Bold.ttf": {
+      "bytes": 180552,
+      "sha256": "11c1608fb7c70135ab4cfd126f2300c81c7ca08c9bcffaff61b947edba234e65"
+    },
+    "/usr/share/fonts/truetype/noto/NotoSansShavian-Regular.ttf": {
+      "bytes": 13420,
+      "sha256": "c0135179225f1cd0d25089f5cab2e34d71b43cc1c4c413e153764e8d3ade1a20"
+    },
+    "/usr/share/fonts/truetype/noto/NotoSansCanadianAboriginal-Bold.ttf": {
+      "bytes": 87356,
+      "sha256": "7e6bf0f2b0795a238f090380a180d545a4d911b5a404dc1f478436b7c4c1b067"
+    },
+    "/usr/share/fonts/woff/ebgaramond/EBGaramond12-Bold.woff": {
+      "bytes": 29740,
+      "sha256": "e832f77aae5b945612fed35ded8c45be6a3710e58f9ca5af1480804342d776b6"
+    },
+    "/usr/share/fonts/truetype/noto/NotoSansPalmyrene-Regular.ttf": {
+      "bytes": 15708,
+      "sha256": "f8d17a44b0a90e742d4213fbba95ca61f5cc1c0b7e14127e93a8e7e86d975718"
+    },
+    "/usr/share/texmf/fonts/opentype/public/tex-gyre/texgyreheroscn-bolditalic.otf": {
+      "bytes": 138876,
+      "sha256": "af68d9d2e51c756a7b3ea05bbfc8501d561cbab7efd1c57da4202daf92b693e9"
+    },
+    "/usr/share/fonts/truetype/dejavu/DejaVuSansCondensed-Bold.ttf": {
+      "bytes": 667844,
+      "sha256": "5a3bb1f72d8861c272498b80f1fe075163b4ea37bb27dd9cdd7b985e59b0286e"
+    },
+    "/usr/share/fonts/truetype/noto/NotoSansOgham-Regular.ttf": {
+      "bytes": 4684,
+      "sha256": "0656e8c6a1adeedba26a04cd3537072924c5e114b5743e211e1e5e52fbddcedb"
+    },
+    "/usr/share/texmf/fonts/opentype/public/lm/lmmonolt10-boldoblique.otf": {
+      "bytes": 75300,
+      "sha256": "a739b6deaafe0b9e8ae1eec9db1f425c52e1f6f483ca8e07e359bdd118310bba"
+    },
+    "/usr/share/fonts/X11/Type1/URWGothic-Demi.pfb": {
+      "bytes": 103448,
+      "sha256": "3af87fd39cf8efedd4b497e8640bad98da932902e93a83b70c55e949a25eb594"
+    },
+    "/usr/share/fonts/truetype/noto/NotoSerifSinhala-Bold.ttf": {
+      "bytes": 334560,
+      "sha256": "a7b73afecc64acc2cf1aaf7a8eb2ab9eb2cc75bce6497240be29563fa450c87a"
+    },
+    "/usr/share/fonts/truetype/paratype/PTZ55F.ttf": {
+      "bytes": 366080,
+      "sha256": "43bff31fcb1a3f410df40fc4557d972a0a5d3eb77e3c1d9fa79c99933e2064ad"
+    },
+    "/usr/share/fonts/opentype/stix/STIXTwoText-BoldItalic.otf": {
+      "bytes": 316136,
+      "sha256": "90e88f2ac79d6c00a5ce2d8446bfdf9457aed6afc1159cde33262979d82c8586"
+    },
+    "/usr/share/fonts/truetype/noto/NotoSerifDisplay-Bold.ttf": {
+      "bytes": 568796,
+      "sha256": "8666c2488e681a31670f9fc0b5d59fa4f21f2a0664a76876fe49ebd832f673c7"
+    },
+    "/usr/share/fonts/truetype/adf/UniversalisADFStd-CondItalic.otf": {
+      "bytes": 40808,
+      "sha256": "6a3127f517f3ce24eb787984415b2a13a3521ee03cf89dd3c69acff0b02be211"
+    },
+    "/usr/share/fonts/X11/Type1/NimbusRoman-Italic.pfb": {
+      "bytes": 142105,
+      "sha256": "89302adb5f31f89ca743142f2142471c6a53cb358838806a48cc4399638e999c"
+    },
+    "/usr/share/fonts/truetype/noto/NotoSerifTibetan-Regular.ttf": {
+      "bytes": 595476,
+      "sha256": "5893c1e0aefb250bcbeff5c0f8ee4bb27cd3dc19b47d14954b154b094e10ee63"
+    },
+    "/usr/share/fonts/truetype/noto/NotoNastaliqUrdu-Bold.ttf": {
+      "bytes": 590824,
+      "sha256": "6b81290dc928bac40fa4b71370f4ef260ad8c33d17be38eab05376490077ebc4"
+    },
+    "/usr/share/fonts/truetype/crosextra/Carlito-Italic.ttf": {
+      "bytes": 615236,
+      "sha256": "0b019225e58d702bfedcbd35c21696769f8ee115cb6343f84c2f240312450d1c"
+    },
+    "/usr/share/fonts/opentype/freefont/FreeSansBold.otf": {
+      "bytes": 617272,
+      "sha256": "e5b0b3e5e42b81449879a5a50983deb7a6931999f8b029cbfec316b620243004"
+    },
+    "/usr/share/fonts/truetype/stix/STIXTwoMath-Regular.ttf": {
+      "bytes": 1518116,
+      "sha256": "49b22767985171bce579307b21d98f4d35012fa39e316acc4ffcab8644dfb69b"
+    },
+    "/usr/share/fonts/truetype/dejavu/DejaVuSansMono-Oblique.ttf": {
+      "bytes": 253448,
+      "sha256": "a033f17e7e42934146337ab2858f7bae5e10c59708d810f1fca0bc81dd543cae"
+    },
+    "/usr/share/fonts/opentype/inter/Inter-Light.otf": {
+      "bytes": 612020,
+      "sha256": "0817fd071377740a8e1cba673baf2c726ef5e5c4e6e0962c6e5bdc096329586d"
+    },
+    "/usr/share/fonts/truetype/noto/NotoSerifGujarati-Bold.ttf": {
+      "bytes": 147628,
+      "sha256": "3ffd3aca4b23f250f3d1370375ae8c70884370bb7c5078a3733769045ae31472"
+    },
+    "/usr/share/fonts/truetype/noto/NotoSansHatran-Regular.ttf": {
+      "bytes": 5044,
+      "sha256": "b4c2cee352c218a47f64c186636bd28ef7646156a5171ca348f2fbf8773e83fa"
+    },
+    "/usr/share/fonts/truetype/noto/NotoSansSinhala-Bold.ttf": {
+      "bytes": 339844,
+      "sha256": "9ac3c2da2562fd3ce449e600a9954a3c5dad982145c85159449fe1c31f648a6e"
+    },
+    "/usr/share/fonts/truetype/lato/Lato-HairlineItalic.ttf": {
+      "bytes": 609436,
+      "sha256": "9e469d156b0471556f202358939cc7fd2cab421659e3a3638136431d3c46ec8b"
+    },
+    "/usr/share/fonts/truetype/noto/NotoSansTelugu-Bold.ttf": {
+      "bytes": 202444,
+      "sha256": "34e3a81c02ea8474f00b1046cbb183461648fd253a56475140d6b025db828b5b"
+    },
+    "/usr/share/fonts/opentype/inter/InterDisplay-Medium.otf": {
+      "bytes": 623380,
+      "sha256": "9a17712bbd6da13b7ce9beb056d19fe15648799a11d5c35f8086a1270a0d13b2"
+    },
+    "/usr/share/fonts/truetype/noto/NotoSansNabataean-Regular.ttf": {
+      "bytes": 8328,
+      "sha256": "ac17e166ff5d68098dc766be70472fe4d730d56e00066a920ac4944d8c39b8b9"
+    },
+    "/usr/share/fonts/truetype/adf/GilliusADFNo2-Bold.otf": {
+      "bytes": 37044,
+      "sha256": "3623b36d0cad1b37ea49040e9eda2905a4589b94fa99909003f7a6da90a3132b"
+    },
+    "/usr/share/fonts/truetype/noto/NotoSansModi-Regular.ttf": {
+      "bytes": 42712,
+      "sha256": "54f8107cc084a48aec305329e25487b80887ed873faad3a1eff5e6c1927cbf66"
+    },
+    "/usr/share/texmf/fonts/opentype/public/lm/lmsans10-regular.otf": {
+      "bytes": 95128,
+      "sha256": "d431b786b9b603662718e79cfe9b441f47a8b0b3e854dde89d5acb3ed7cfd682"
+    },
+    "/usr/share/fonts/opentype/urw-base35/P052-Italic.otf": {
+      "bytes": 109824,
+      "sha256": "1feac6055211cf5c6c812c026e398195070f174064cc4d390f0db01647443b0e"
+    },
+    "/usr/share/fonts/truetype/noto/NotoSansSinhala-Regular.ttf": {
+      "bytes": 307684,
+      "sha256": "31f83eec724a27779d1434afc84beabee239c0ff77dc8d04bee9f49c60b23fdd"
+    },
+    "/usr/share/fonts/truetype/freefont/FreeSerifItalic.ttf": {
+      "bytes": 1158472,
+      "sha256": "03086b0c0bf2fada911b7aeb29dc2caa7d713ac389775d5a5599ffbf05a51366"
+    },
+    "/usr/share/fonts/truetype/noto/NotoSansKaithi-Regular.ttf": {
+      "bytes": 91276,
+      "sha256": "d217c8bc858594b12e13d0d4accce754284c8f80b5531313ddd1dc2359e03f0f"
+    },
+    "/usr/share/fonts/truetype/gentiumplus/GentiumBookPlus-Regular.ttf": {
+      "bytes": 875136,
+      "sha256": "298d3e2d2cdf0460d27151de50e2a5764d4de4921f5a6fc254ed5aeda6890f1e"
+    },
+    "/usr/share/texmf/fonts/opentype/public/lm/lmromanunsl10-regular.otf": {
+      "bytes": 124048,
+      "sha256": "21bbbe167e824b93a956327bcc1efda99c1bb472e761834da40cef33cab46194"
+    },
+    "/usr/share/fonts/truetype/clear-sans/ClearSans-MediumItalic.ttf": {
+      "bytes": 315792,
+      "sha256": "06ffba2360a5268ef58996e3dd7994a49dcd1c167ffbc874edacedeee71b9b21"
+    },
+    "/usr/share/texmf/fonts/opentype/public/lm/lmroman9-regular.otf": {
+      "bytes": 112680,
+      "sha256": "8ab7b017fc67ea0e30cbf9e7ebd940010442ea67b40cf65f87d73f3ca11b0e6f"
+    },
+    "/usr/share/fonts/truetype/ebgaramond/EBGaramond12-Italic.ttf": {
+      "bytes": 375636,
+      "sha256": "178e612e117f79b115b4f3e5e3f4dbf78def8baba37d6045be9edac7b519c1dd"
+    },
+    "/usr/share/fonts/truetype/freefont/FreeSerifBoldItalic.ttf": {
+      "bytes": 846556,
+      "sha256": "975d55783c88d480e9e292823c0066207e8b33ee4addf0e0019954cc9d9c4674"
+    },
+    "/usr/share/fonts/truetype/noto/NotoSansCuneiform-Regular.ttf": {
+      "bytes": 820248,
+      "sha256": "1138815fabc470753e09876c6deeb4a006219b756e6b2d9bfe0e91aa4bcc21e1"
+    },
+    "/usr/share/fonts/truetype/noto/NotoSansJavanese-Bold.ttf": {
+      "bytes": 120160,
+      "sha256": "5f22e4a45700f7ec3f1eb36d36fbc9669f7c2fe418fa32088857b9f7c214d764"
+    },
+    "/usr/share/fonts/fonts-go/Go-Smallcaps-Italic.ttf": {
+      "bytes": 140524,
+      "sha256": "316ebbed451d06aa3d7e428851a388456b97afa272b50d827e6eaa6595018a32"
+    },
+    "/usr/share/fonts/truetype/crosextra/Caladea-Italic.ttf": {
+      "bytes": 83780,
+      "sha256": "4359a8e24f748b6447b1ff6d7a174febe70961d29f8bb8634b56dacd740a3deb"
+    },
+    "/usr/share/fonts/truetype/adf/GilliusADF-Regular.otf": {
+      "bytes": 36488,
+      "sha256": "20e4e107fee0d0e2ea06dc3942c4d18d409e0336228d941688e1334681dca7b0"
+    },
+    "/usr/share/fonts/fonts-go/Go-Mono-Bold-Italic.ttf": {
+      "bytes": 176832,
+      "sha256": "ed3a5ccca68dac8f4b16e21717a6b551ab31503fbf6d581b7afd9d04cbfd37d0"
+    },
+    "/usr/share/texmf/fonts/opentype/public/lm/lmsansquot8-bold.otf": {
+      "bytes": 106232,
+      "sha256": "44cd928f556c68c3a6ce5938f6968c3da7b3d9d14d3c8add54005f0cc5e39a53"
+    },
+    "/usr/share/texmf/fonts/opentype/public/lm/lmmono10-regular.otf": {
+      "bytes": 64684,
+      "sha256": "22deb6d3be3ffcb40b33f0e010afb256c677d97c2a2bdee1f5740cdc97751558"
+    },
+    "/usr/share/fonts/opentype/linux-libertine/LinLibertine_M.otf": {
+      "bytes": 135296,
+      "sha256": "e00d49d4df335ad0dd0151b6fcbf438e212ddd18557c9cb63c770577cb50dbbe"
+    },
+    "/usr/share/fonts/truetype/gentiumplus/GentiumPlus-Regular.ttf": {
+      "bytes": 880592,
+      "sha256": "2c27e7da23ba44d135685836056833b304a388d3da346813189c60656dc02019"
+    },
+    "/usr/share/fonts/truetype/noto/NotoSansPhoenician-Regular.ttf": {
+      "bytes": 6192,
+      "sha256": "a79d2c4f0b4c04cfb8dc97c91145d29dc89965f3afc3985f7c4006ccbde58def"
+    },
+    "/usr/share/fonts/truetype/croscore/Cousine-Italic.ttf": {
+      "bytes": 306828,
+      "sha256": "64e8ed603232b28eceebe0d18838a5e62297605203b33720d775ed628cdc222b"
+    },
+    "/usr/share/fonts/opentype/urw-base35/NimbusSans-Italic.otf": {
+      "bytes": 95244,
+      "sha256": "7b0bef5686aa58c0fd0f0d01beeae56664208490e30ca6a25431281c9a0c6402"
+    },
+    "/usr/share/fonts/opentype/neohellenic/GFSNeohellenicIt.otf": {
+      "bytes": 102424,
+      "sha256": "3c2aaf027ed71e1a1bb39b2a5aa80c87b7e3f692d2ea4d7cacf8df74e7108620"
+    },
+    "/usr/share/texmf/fonts/opentype/public/lm/lmmonocaps10-oblique.otf": {
+      "bytes": 71232,
+      "sha256": "6bb7315ab000361195457b6c5efc75ed4bc24d278c6026d0aa8e0e4847394384"
+    },
+    "/usr/share/texmf/fonts/opentype/public/tex-gyre/texgyreheroscn-italic.otf": {
+      "bytes": 138940,
+      "sha256": "bbafd5028dd4631d5320ee8c3caafccf34548dff79496f5373596ef164ada288"
+    },
+    "/usr/share/fonts/truetype/noto/NotoSansAdlam-Bold.ttf": {
+      "bytes": 94372,
+      "sha256": "0111556561e7ddf39c4df3f87c2c2cc3c6df79a764d5ff8bac652576ed051ed8"
+    },
+    "/usr/share/fonts/truetype/noto/NotoLoopedThai-Regular.ttf": {
+      "bytes": 65536,
+      "sha256": "a13ebdee881ce1dcc84067c266345c86d2ace50cb599d2df02a1aa835552c1aa"
+    },
+    "/usr/share/fonts/truetype/noto/NotoSansDevanagari-Bold.ttf": {
+      "bytes": 237660,
+      "sha256": "77ad688cfe1dc55185bf4edb4db3c614202c65dd23a1463ad0e23fc52bcc9a5c"
+    },
+    "/usr/share/texmf/fonts/opentype/public/lm/lmroman7-italic.otf": {
+      "bytes": 117960,
+      "sha256": "19d20f2bb00fbffe5d3d66e9b6a54f0108289068029e9d88649d981d53613ddf"
+    },
+    "/usr/share/fonts/opentype/inter/Inter-Bold.otf": {
+      "bytes": 631880,
+      "sha256": "9fc6261e817d0b1b2bf1953d8799bb1c837d11aeebbf83ae352e7b4d6de6425d"
+    },
+    "/usr/share/fonts/truetype/croscore/Arimo-Italic.ttf": {
+      "bytes": 490776,
+      "sha256": "5f4917a32312ba8a011502e2147567d678984d820223367a2a4c5d6dda2a758c"
+    },
+    "/usr/share/fonts/truetype/lato/Lato-Black.ttf": {
+      "bytes": 614544,
+      "sha256": "4ed66fa3928ae769205635c916b4f9e6a63f6a77f5d9693ac31a83d0d96ae1ef"
+    },
+    "/usr/share/fonts/truetype/noto/NotoSansUgaritic-Regular.ttf": {
+      "bytes": 7300,
+      "sha256": "4fe28546a484fbb78df76aa349b99fd73df93bc8e2c486c9906ad0b5e89cb0c8"
+    },
+    "/usr/share/fonts/truetype/noto/NotoSansTaiTham-Regular.ttf": {
+      "bytes": 95316,
+      "sha256": "d3065a143eb21f13406307602940b9f7cd20e935a1e20a829f9867b152056714"
+    },
+    "/usr/share/fonts/truetype/noto/NotoSansDevanagari-Regular.ttf": {
+      "bytes": 229336,
+      "sha256": "79a470365ccb210fa3c7d8d8ff2e005ef9d983cfd067f735a0caf7e15070ca9f"
+    },
+    "/usr/share/fonts/opentype/cabin/Cabin-Medium.otf": {
+      "bytes": 55588,
+      "sha256": "d77f77eb73887e3ecd285ea12e5bc75650036e05223e25284278bdf4804d3c42"
+    },
+    "/usr/share/texmf/fonts/opentype/public/lm/lmroman10-bold.otf": {
+      "bytes": 111240,
+      "sha256": "102fe06c430a8b681b2bf6876b7cd967ae4d47b4b6b41d915eb7913b726d9fb1"
+    },
+    "/usr/share/fonts/truetype/open-sans/OpenSans-SemiboldItalic.ttf": {
+      "bytes": 212820,
+      "sha256": "30536248e59274548d51245662f9deec7fb52946faba33aade28c41473bdd39b"
+    },
+    "/usr/share/fonts/truetype/andika/Andika-Bold.ttf": {
+      "bytes": 748748,
+      "sha256": "568e48915cd0ebbadfc3309e0550d050ccf9df526e809dffea189c68a54fb760"
+    },
+    "/usr/share/fonts/type1/texlive-fonts-recommended/pcrr8a.pfb": {
+      "bytes": 62813,
+      "sha256": "c7686082bf884c75233310028cd190491e19ed933e2ed9486d7be445f0c4071c"
+    },
+    "/usr/share/fonts/truetype/lato/Lato-Regular.ttf": {
+      "bytes": 657212,
+      "sha256": "6f6940be0835c3ddec9199e5fc42be4cbc61ebcfd58c623fdf719366253f1780"
+    },
+    "/usr/share/texmf/fonts/opentype/public/lm/lmroman10-regular.otf": {
+      "bytes": 111536,
+      "sha256": "1aa18cfefa58132c52ce5de70db1fd1154201c19cd2b2cdaffba4906a33e6852"
+    },
+    "/usr/share/fonts/opentype/comic-neue/ComicNeue-LightItalic.otf": {
+      "bytes": 30112,
+      "sha256": "c06e7e72c11753d3d03daa06382f318fbb2e45cd0a2fe1a5ebe24d08925d3d8d"
+    },
+    "/usr/share/fonts/fonts-go/Go-Regular.ttf": {
+      "bytes": 140308,
+      "sha256": "dd02d2f04dbc9f6329f3777b999fd3985f70b8f69b7c8aa522db3ec1fef9ceb2"
+    },
+    "/usr/share/texmf/fonts/opentype/public/lm/lmsans12-regular.otf": {
+      "bytes": 95160,
+      "sha256": "f87ebdea035a96e8787e2c663cfcc78ce73205d37800eafe7948278e2cc7666a"
+    },
+    "/usr/share/fonts/truetype/stix/STIXTwoText-Bold.ttf": {
+      "bytes": 395644,
+      "sha256": "89adbb9907c40465e061f084598dbebd5a802e30c6e2d38612205b9c87281cae"
+    },
+    "/usr/share/fonts/truetype/noto/NotoSerif-Bold.ttf": {
+      "bytes": 611904,
+      "sha256": "0af0ff2be8f84910fb21ec5fe1b6b7395e3073250502a334baf6ca2f860c88fe"
+    },
+    "/usr/share/texmf/fonts/opentype/public/tex-gyre/texgyreschola-bolditalic.otf": {
+      "bytes": 144864,
+      "sha256": "95f085da44c04817771f2a3a754b6eeb442b9a79e79f51dc3b0612e3cc0d75cc"
+    },
+    "/usr/share/fonts/truetype/adf/AccanthisADFStdNo3-Italic.otf": {
+      "bytes": 53096,
+      "sha256": "a1260423bd9079a158b6b7253a6c611ff6052e8d9d2744873f115f6010f4d94f"
+    },
+    "/usr/share/fonts/truetype/noto/NotoSansSaurashtra-Regular.ttf": {
+      "bytes": 35308,
+      "sha256": "6b5944253e7a33a9336317de9b73bb8a137e7f7795e9f9f2ef82fc13cc665f5c"
+    },
+    "/usr/share/fonts/type1/urw-base35/D050000L.t1": {
+      "bytes": 43343,
+      "sha256": "51cc2fe0953718f9fc93e0de7853a700557cc8d0cd58089c9a2d531d06c8fa4b"
+    },
+    "/usr/share/fonts/opentype/urw-base35/C059-Bold.otf": {
+      "bytes": 100692,
+      "sha256": "75dea10068264324522e7b96612083582eee0158eb728fa9c219279890f33e26"
+    },
+    "/usr/share/fonts/truetype/noto/NotoRashiHebrew-Regular.ttf": {
+      "bytes": 24388,
+      "sha256": "ba8ca5f273ae72cdbb52eb3a7e699b5500a063b5141cf6e9f1efb80758d0a826"
+    },
+    "/usr/share/texmf/fonts/opentype/public/lm/lmmonoproplt10-boldoblique.otf": {
+      "bytes": 120732,
+      "sha256": "4d1193e06d6042695f8caf9cde48785867bee8de8460a7a9c99504074d280f57"
+    },
+    "/usr/share/fonts/opentype/urw-base35/P052-Roman.otf": {
+      "bytes": 110236,
+      "sha256": "f054a7389d8d0e9f4c5f7b4c21feb7e2b14bec8004a1e92778a78d149524eea9"
+    },
+    "/usr/share/fonts/truetype/noto/NotoSansCanadianAboriginal-Regular.ttf": {
+      "bytes": 86372,
+      "sha256": "66b4f453f27d176045bab8e168397ec46322d74306931c807f500eb41c984157"
+    },
+    "/usr/share/fonts/truetype/gentium-basic/GenBasR.ttf": {
+      "bytes": 264216,
+      "sha256": "f0248c5a6d76dca62c639fdfdde97f9ae60c05c96bec03925d522531d7c0ca37"
+    },
+    "/usr/share/fonts/type1/urw-base35/NimbusRoman-Regular.t1": {
+      "bytes": 133527,
+      "sha256": "cd63681b669f41d2b1cc828a6e26eeeee668ae3f9144f6ae2c1bad971fc146f2"
+    },
+    "/usr/share/fonts/truetype/freefont/FreeMonoBold.ttf": {
+      "bytes": 462256,
+      "sha256": "665f94a82e7e33c34f2cbe3269fecca567efc8bf68bf372ced2e35de1196e5c8"
+    },
+    "/usr/share/texmf/fonts/opentype/public/lm/lmromanslant12-regular.otf": {
+      "bytes": 117116,
+      "sha256": "25f2ecfb860f2e45e6ebe69d11bc6305f5bfbef8f13476638ba291f47d1f130c"
+    },
+    "/usr/share/fonts/truetype/open-sans/OpenSans-CondLight.ttf": {
+      "bytes": 221108,
+      "sha256": "d406b798f7c073d64e0b143accc363f5dbc9f5c735b3c8c1dd7d00500b81906a"
+    },
+    "/usr/share/fonts/type1/urw-base35/NimbusSansNarrow-BoldOblique.t1": {
+      "bytes": 109815,
+      "sha256": "df4df8204bc5ac63dc13162e9a604adadebb779fd524d6f457fec118d530af31"
+    },
+    "/usr/share/fonts/truetype/clear-sans/ClearSans-Bold.ttf": {
+      "bytes": 269792,
+      "sha256": "e95b1274e575a12d4f9ed0293c359f92a2a1b73bda862b2432ecc567b330bfeb"
+    },
+    "/usr/share/texmf/fonts/opentype/public/tex-gyre/texgyreschola-italic.otf": {
+      "bytes": 143152,
+      "sha256": "2f45b8c394037951aaec73d947f0b0c3af715950f8f207c9f4290ba37a53a4d2"
+    },
+    "/usr/share/fonts/type1/texlive-fonts-recommended/putr8a.pfb": {
+      "bytes": 36507,
+      "sha256": "40c3290fed71e658e5438ab56444e17c2e3f68d3c1ff24bf242a4386e34961d9"
+    },
+    "/usr/share/texmf/fonts/opentype/public/lm/lmroman12-bold.otf": {
+      "bytes": 110496,
+      "sha256": "28c8782ac2b6486958b5dc7610ada7800c53546ff7f36bc65909a876e1cd338e"
+    },
+    "/usr/share/fonts/truetype/noto/NotoSansLao-Bold.ttf": {
+      "bytes": 32396,
+      "sha256": "b87a8592f1cdd8b15e1e827967afd45a8c5ffc1123773bc4bd023fe1ccecd321"
+    },
+    "/usr/share/fonts/truetype/stix/STIXTwoText-Regular.ttf": {
+      "bytes": 395068,
+      "sha256": "0566a1be411c0b2463fad8563b33f1c299442b8882c7fce9ef95e079f43233da"
+    },
+    "/usr/share/fonts/woff/ebgaramond/EBGaramond12-Regular.woff": {
+      "bytes": 277364,
+      "sha256": "2553d2553616bc05cbe670d18b617d1d2706cfd11fadaecce7f93ba4c64bbe56"
+    },
+    "/usr/share/texmf/fonts/opentype/public/lm/lmroman8-regular.otf": {
+      "bytes": 111948,
+      "sha256": "f73015c3827596586faa380c398501caf9b5bcbb6f40b46af6a51277ca97c9fc"
+    },
+    "/usr/share/fonts/truetype/dejavu/DejaVuSans-BoldOblique.ttf": {
+      "bytes": 645600,
+      "sha256": "db536b2436d5823489aec205adfaee70629633dbe6c5c2d135ac6934e522e905"
+    },
+    "/usr/share/fonts/truetype/noto/NotoSansSoraSompeng-Bold.ttf": {
+      "bytes": 8324,
+      "sha256": "f55a4045733afd6451f96cf1f962cc828d5ae5f5b2cc0b874c5de697e1bd5970"
+    },
+    "/usr/share/fonts/truetype/noto/NotoSansMalayalam-Regular.ttf": {
+      "bytes": 110568,
+      "sha256": "5433f4a642b4325aa169a55c4c6b8d1c4a45c4e08bcd9cbe72888229709a8f2d"
+    },
+    "/usr/share/fonts/truetype/noto/NotoSansTelugu-Regular.ttf": {
+      "bytes": 194732,
+      "sha256": "cb3165071121b1e80c55a041d0c1f79b3bbc68e4b0eab37b0d881958dfc3ed7a"
+    },
+    "/usr/share/fonts/truetype/noto/NotoSansLinearA-Regular.ttf": {
+      "bytes": 58168,
+      "sha256": "230daa2578f04ad8a38441f1cf128d70d64dc90fca891fd3e93c15693701564e"
+    },
+    "/usr/share/fonts/truetype/noto/NotoSansGothic-Regular.ttf": {
+      "bytes": 11660,
+      "sha256": "c85e7780c3adda90f56591914d89c3ed4dc9ea1b23d7e3a462fcd39e888ec70f"
+    },
+    "/usr/share/fonts/truetype/noto/NotoSansMandaic-Regular.ttf": {
+      "bytes": 29068,
+      "sha256": "a50d69dc52998618f39e490423ab5943d6456f50ade486b54c339e06d53a2c3a"
+    },
+    "/usr/share/fonts/opentype/artemisia/GFSArtemisiaBoldIt.otf": {
+      "bytes": 125116,
+      "sha256": "2f308ac1f896200f6c10396a53e0a53208e46f2004deebaff269a0a81a1358f3"
+    },
+    "/usr/share/fonts/opentype/lobstertwo/LobsterTwo-Regular.otf": {
+      "bytes": 78332,
+      "sha256": "a2bed04bf1eed1caa82ae250d733bb597ffb599fd66d9882159f061144967a74"
+    },
+    "/usr/share/fonts/opentype/inter/InterDisplay-ExtraLight.otf": {
+      "bytes": 588108,
+      "sha256": "ce77d43ea6954950cdf0b72525a06555a2570e24c030a7ce28142aaf360b6f0b"
+    },
+    "/usr/share/fonts/opentype/urw-base35/NimbusMonoPS-Bold.otf": {
+      "bytes": 87520,
+      "sha256": "f036d05d2168c7f71cb11d31e81d11133f3d09711e24ebde19d08a24842384d5"
+    },
+    "/usr/share/fonts/truetype/freefont/FreeSans.ttf": {
+      "bytes": 1844796,
+      "sha256": "fd3cf5f7a88bb469fd0936ce6152509b60b817711b07d19abcb69e6c744b08ca"
+    },
+    "/usr/share/fonts/truetype/noto/NotoSansGujarati-Regular.ttf": {
+      "bytes": 205124,
+      "sha256": "4468a3a24516831874fb4a867b760a22257944584e478d32a97e3c4d4bfc6400"
+    },
+    "/usr/share/fonts/truetype/liberation/LiberationMono-BoldItalic.ttf": {
+      "bytes": 284184,
+      "sha256": "291872531f0e8013df602c412fc570241860e41b1fa1b7972537c27a19024d4d"
+    },
+    "/usr/share/fonts/opentype/roboto/slab/RobotoSlab-Bold.otf": {
+      "bytes": 93196,
+      "sha256": "05e046b1af3acb217325e6f3c7dcea2718dacfdc9a1c69bc697e605b6c9650ef"
+    },
+    "/usr/share/fonts/truetype/droid/DroidSansFallbackFull.ttf": {
+      "bytes": 4033420,
+      "sha256": "acb6440a713d880a13a21b468ba7cd43f5a2b2934972e51be791c880730777b8"
+    },
+    "/usr/share/fonts/truetype/noto/NotoSansPauCinHau-Regular.ttf": {
+      "bytes": 9840,
+      "sha256": "50fd145467b5d971b526643c73784e8530f5571f8192876b8d6654f94bf6d47b"
+    },
+    "/usr/share/fonts/truetype/crosextra/Caladea-BoldItalic.ttf": {
+      "bytes": 83356,
+      "sha256": "ccabaa7b7e2fdf253d2b1a5fa699dd8a3df8d835a9eb285ad82631a677eb76c0"
+    },
+    "/usr/share/fonts/opentype/freefont/FreeMono.otf": {
+      "bytes": 868792,
+      "sha256": "86b88d566edd69fbfd56e3585d8ebe82fbc56aeca28f9b88ee313b401a81a702"
+    },
+    "/usr/share/fonts/truetype/stix/STIXTwoText-SemiBoldItalic.ttf": {
+      "bytes": 422328,
+      "sha256": "0aaa247dda367d751c8a5609b28bb5eb2a0f26833c3ee72a455fdc25989dffae"
+    },
+    "/usr/share/fonts/truetype/noto/NotoSansLinearB-Regular.ttf": {
+      "bytes": 62892,
+      "sha256": "15faf3ff9b5d0343edb7ed4e55b2c9f5ba907473197d65f0739dc3a34d9bf334"
+    },
+    "/usr/share/texmf/fonts/opentype/public/lm/lmromancaps10-oblique.otf": {
+      "bytes": 116564,
+      "sha256": "603e6bb88c206f3252d2ca1a061d0faf252dd6c87501f2efa32ce2f70793b1ad"
+    },
+    "/usr/share/fonts/truetype/noto/NotoNastaliqUrdu-Regular.ttf": {
+      "bytes": 570552,
+      "sha256": "fe24c4a05b19482beac11e4b90a0f6754214f1cb5e925cf9e86b48283ac37522"
+    },
+    "/usr/share/fonts/truetype/open-sans/OpenSans-ExtraBold.ttf": {
+      "bytes": 222584,
+      "sha256": "0fcbdb5cbeea00ae532352c7c94a7d288ebc911ba85f4d595012032dcab64ba8"
+    },
+    "/usr/share/fonts/truetype/adf/UniversalisADFStd-BoldCond.otf": {
+      "bytes": 38796,
+      "sha256": "0a6d6ed47f616405e8ad0f8df7673484c99af3753de154ad495d42ca6cbb1f85"
+    },
+    "/usr/share/texmf/fonts/opentype/public/tex-gyre/texgyrepagella-bolditalic.otf": {
+      "bytes": 216296,
+      "sha256": "556fd64655a92bd9f5485ae2c03f7b9cdaf745a27a91d7edb3c3abde997206d2"
+    },
+    "/usr/share/texmf/fonts/opentype/public/lm/lmroman7-regular.otf": {
+      "bytes": 110792,
+      "sha256": "48c4b46ab255eec96588fb992fba1ed6102e53d051da480738a61cc6cdb328c3"
+    },
+    "/usr/share/fonts/truetype/roboto/unhinted/RobotoCondensed-BoldItalic.ttf": {
+      "bytes": 330504,
+      "sha256": "6dcbc5c98d5d61038a7cb5f4e7d53d628ec4e29dd4a37239018d8c377ed1daa3"
+    },
+    "/usr/share/texmf/fonts/opentype/public/lm/lmromandunh10-oblique.otf": {
+      "bytes": 122840,
+      "sha256": "5f7b9361353271246ac66a2681399052cc261a943c8a03c754ee212fdfb4a64c"
+    },
+    "/usr/share/fonts/opentype/inter/InterDisplay-Italic.otf": {
+      "bytes": 587700,
+      "sha256": "1aebd4cf46aadb7c59eca4007f41c6725cafc082876833b4c92543f5444f2cdb"
+    },
+    "/usr/share/texmf/fonts/opentype/public/lm/lmsans10-oblique.otf": {
+      "bytes": 101412,
+      "sha256": "1b38b36efc21f9d3f34edf6a13f9d71f59c41f824e790f5d3ee5ba5b4936f377"
+    },
+    "/usr/share/fonts/X11/Type1/URWBookman-DemiItalic.pfb": {
+      "bytes": 142706,
+      "sha256": "7844e30491a9db65da5c0f4853eefaab20ac7eb45c8be47988d978945884b039"
+    },
+    "/usr/share/fonts/opentype/inter/InterDisplay-MediumItalic.otf": {
+      "bytes": 599904,
+      "sha256": "50dc3f67a6b9c73e4174538c908d3970b6cff847258ab00deaffd75eaa67348d"
+    },
+    "/usr/share/fonts/truetype/liberation/LiberationSansNarrow-Italic.ttf": {
+      "bytes": 132068,
+      "sha256": "1e41d3cec0352efbf9b1035d872ad41033533b59b0789d9599f4fff1fcccf4b6"
+    },
+    "/usr/share/fonts/opentype/urw-base35/NimbusSansNarrow-Oblique.otf": {
+      "bytes": 87068,
+      "sha256": "6fd8dd67ab951f36f66563ef8443bafdf10836e73ebe856f85f4a9c282293585"
+    },
+    "/usr/share/fonts/opentype/freefont/FreeSerifBold.otf": {
+      "bytes": 1184580,
+      "sha256": "c0b25f39c1bf8ef61941bcc37645f50e110a0a9c52641d49d8542c0a68bf1fa0"
+    },
+    "/usr/share/fonts/truetype/roboto/unhinted/RobotoCondensed-LightItalic.ttf": {
+      "bytes": 332504,
+      "sha256": "dcb71d1f714be7850c359334ecfa0d3342809b9418e10adaa80987d6ed15144c"
+    },
+    "/usr/share/fonts/truetype/crosextra/Caladea-Regular.ttf": {
+      "bytes": 81600,
+      "sha256": "f1e899278b7b4491aba5b6a8253c4b04c050cc59b21865be5c37559a775153cd"
+    },
+    "/usr/share/texmf/fonts/opentype/public/lm/lmroman12-regular.otf": {
+      "bytes": 110400,
+      "sha256": "e6be218ae83e61aa8a29990d3cdc401c678c1962188cb9a4a8b6359e4f5e5870"
+    },
+    "/usr/share/fonts/truetype/noto/NotoSerifArmenian-Bold.ttf": {
+      "bytes": 30404,
+      "sha256": "fea8914af4f165301e619655e1e5fa447c65c08077010c8153bfe2d599d85bc1"
+    },
+    "/usr/share/fonts/truetype/noto/NotoSansMeeteiMayek-Regular.ttf": {
+      "bytes": 17152,
+      "sha256": "1e6633879d76284a1fb2e361205341a788313afdd6b1dfb8b7bbe77e27164393"
+    },
+    "/usr/share/fonts/truetype/adf/AccanthisADFStdNo3-BoldItalic.otf": {
+      "bytes": 53312,
+      "sha256": "52ae47ce270c5374863ea2ca62a5072297b879655c7f2addaece77ad7d072cfc"
+    },
+    "/usr/share/fonts/woff/ebgaramond/EBGaramond12-Italic.woff": {
+      "bytes": 182692,
+      "sha256": "4b2eb30e9b77d1464a51cf39559d98ac2f2e3fe46472ed561153b2f70b80248c"
+    },
+    "/usr/share/texmf/fonts/opentype/public/lm/lmmonocaps10-regular.otf": {
+      "bytes": 63228,
+      "sha256": "9fb93a8f39f8e55682d09edb93c4c07d976c13bb92253b875b5b6a19e9af9e0a"
+    },
+    "/usr/share/fonts/opentype/freefont/FreeSansBoldOblique.otf": {
+      "bytes": 366664,
+      "sha256": "ddd7b2d595d223afa5a2200298d7f126760f4236679998065f20afa85f754747"
+    },
+    "/usr/share/fonts/opentype/neohellenic/GFSNeohellenic.otf": {
+      "bytes": 122288,
+      "sha256": "acff5add00a6919b64e3f6d853a04a4d8665461b6a4d11c36ad2dad6a891f365"
+    },
+    "/usr/share/fonts/truetype/croscore/Arimo-Bold.ttf": {
+      "bytes": 481924,
+      "sha256": "10724c3733f60cdec733da1a439de9100e1593ceb219cc4d03c443bef1feb9b6"
+    },
+    "/usr/share/fonts/X11/Type1/URWGothic-DemiOblique.pfb": {
+      "bytes": 105130,
+      "sha256": "75659b3f8cbe1407f97ced044b52002a5c3e5d7034db5b3934394de619aae75a"
+    },
+    "/usr/share/texmf/fonts/opentype/public/lm/lmroman9-italic.otf": {
+      "bytes": 118380,
+      "sha256": "2106cffcdc9f9cb411d7c3441e34d77a168b998a58b40e727ab5b815437d1975"
+    },
+    "/usr/share/fonts/opentype/complutum/GFSPolyglot.otf": {
+      "bytes": 61524,
+      "sha256": "de93a528738958b989360fc098fb52bcad1e9881230d938de897eecd3d2ef1d2"
+    },
+    "/usr/share/fonts/truetype/noto/NotoSansKhojki-Regular.ttf": {
+      "bytes": 61960,
+      "sha256": "535cb9a795b8bd6e2c5f899574cd6bd26c267d0431aa7b03d6d8ac25ef0c9183"
+    },
+    "/usr/share/fonts/truetype/noto/NotoSansArabic-Bold.ttf": {
+      "bytes": 252940,
+      "sha256": "ded6fc7359ca36d15d7aab9ef0c066e21ce48b26a069994d6602fa2cb9a1b952"
+    },
+    "/usr/share/fonts/truetype/noto/NotoSansElbasan-Regular.ttf": {
+      "bytes": 19112,
+      "sha256": "6b4e554827154cbead6b00c8b261cdde9453845e33871ff081ad68f58c65166d"
+    },
+    "/usr/share/fonts/X11/Type1/URWGothic-BookOblique.pfb": {
+      "bytes": 102423,
+      "sha256": "6046ec5eb15e16171caf53c1d6382794fcda96c56b3ea37b6f80005f76780c3b"
+    },
+    "/usr/share/fonts/truetype/liberation/LiberationMono-Regular.ttf": {
+      "bytes": 319624,
+      "sha256": "d18235f1e874771f4eaec3ddd6ddb4db849d334bdc6930c5c2185d9344834e62"
+    },
+    "/usr/share/fonts/opentype/comic-neue/ComicNeue-BoldItalic.otf": {
+      "bytes": 30552,
+      "sha256": "e837a696d61545aa350c5c25041a511c49ef4a8054689ca9ff066b3745d97ae5"
+    },
+    "/usr/share/fonts/truetype/noto/NotoSansGrantha-Regular.ttf": {
+      "bytes": 454616,
+      "sha256": "493f987e5e8c86d3f4464fab2fb5b4f435e1d4e847a46b1922c311a3a7c441bc"
+    },
+    "/usr/share/fonts/type1/urw-base35/StandardSymbolsPS.t1": {
+      "bytes": 31444,
+      "sha256": "b2f78d6ad103708a4483f75087c6ecb71753e9210170c14462b37ef05a3f957a"
+    },
+    "/usr/share/texmf/fonts/opentype/public/lm/lmromandunh10-regular.otf": {
+      "bytes": 113276,
+      "sha256": "6c298b3680cc111c6e20eb2489bab9637ac316a686740fc1f8396230215e1161"
+    },
+    "/usr/share/texmf/fonts/opentype/public/lm/lmroman5-bold.otf": {
+      "bytes": 109564,
+      "sha256": "6326fb955d07bedcc8f73684e6b6bfa76706d38f3a85bd89c0659504ace366a1"
+    },
+    "/usr/share/texmf/fonts/opentype/public/tex-gyre/texgyreadventor-bold.otf": {
+      "bytes": 176096,
+      "sha256": "e373ae29c808c6d9149e3add46564f9acdb6ebfcd0ee311f6a55560226994720"
+    },
+    "/usr/share/fonts/truetype/noto/NotoSansGurmukhi-Bold.ttf": {
+      "bytes": 52856,
+      "sha256": "ded9c1f56a7ed0b835cfef5dd642f26cfc0f41a16fbc08008d376ddcc91d606e"
+    },
+    "/usr/share/texmf/fonts/opentype/public/lm/lmsans10-bold.otf": {
+      "bytes": 107448,
+      "sha256": "a597b710326c1a8a2c7238d808e5d38711638a72a32383478db4829d63afd687"
+    },
+    "/usr/share/fonts/opentype/comic-neue/ComicNeue-Light.otf": {
+      "bytes": 31140,
+      "sha256": "277b51ed0795ab34c9cef84fdc695822ec9c3945d2f1d3825d2392193fc436fb"
+    },
+    "/usr/share/fonts/truetype/noto/NotoSansTamil-Regular.ttf": {
+      "bytes": 72608,
+      "sha256": "a7bb7f92f165479af2f0556c4fd669b74c5959f464f603e18389b532f4d07a71"
+    },
+    "/usr/share/fonts/truetype/clear-sans/ClearSans-Light.ttf": {
+      "bytes": 272724,
+      "sha256": "7f914503fc95bc24f1dc7a5bd9c46257e50edb349905b1ae87e2ab8f89c1e80e"
+    },
+    "/usr/share/fonts/truetype/material-design-icons-iconfont/MaterialIcons-Regular.ttf": {
+      "bytes": 347588,
+      "sha256": "29c11fa532ebb58db7ef59c860e4eb935bc2921a8654172d8e889e51f85c6004"
+    },
+    "/usr/share/fonts/opentype/inter/InterDisplay-ExtraBold.otf": {
+      "bytes": 629712,
+      "sha256": "0c69ed0a858246e986f4205947fdb631cf0e0eda00bee13e3665e0745d47786b"
+    },
+    "/usr/share/fonts/opentype/linux-libertine/LinLibertine_RZ.otf": {
+      "bytes": 342672,
+      "sha256": "83fdb3c4fefec80d853931b4c4e6114fe99244e19282a5812fbeddb2f856c39f"
+    },
+    "/usr/share/fonts/type1/urw-base35/NimbusSans-Regular.t1": {
+      "bytes": 104001,
+      "sha256": "779a9c820bbe8b470d36e77bcf949eef7bf1b889184274ba0f51da4c8c883cfa"
+    },
+    "/usr/share/fonts/opentype/urw-base35/NimbusRoman-Bold.otf": {
+      "bytes": 100984,
+      "sha256": "e0ad81923bc6d85d5426f796217c87963ca1ae3c65e22c87a25b6c6353de299e"
+    },
+    "/usr/share/fonts/fonts-go/Go-Mono-Italic.ttf": {
+      "bytes": 173548,
+      "sha256": "11fb74a49ddb08891e3893d48469e75a4544baf0b8aaf1a6b53539417f2333c4"
+    },
+    "/usr/share/fonts/X11/Type1/C059-BdIta.pfb": {
+      "bytes": 152605,
+      "sha256": "84e46c470c20e491d0524c492e9475644c22c7fbd8d4051d2d0edd7378427f84"
+    },
+    "/usr/share/texmf/fonts/opentype/public/lm/lmroman5-regular.otf": {
+      "bytes": 111872,
+      "sha256": "954bd9c376597c7043e7b616430163e0158155edf7434fd70082cf8460c08533"
+    },
+    "/usr/share/texmf/fonts/opentype/public/lm/lmmonoproplt10-bold.otf": {
+      "bytes": 110276,
+      "sha256": "c30d83cb4cdd879ea251243590e135e012e5d43e889a0d0990d196b1083715d2"
+    },
+    "/usr/share/fonts/truetype/adf/AccanthisADFStd-Italic.otf": {
+      "bytes": 52448,
+      "sha256": "8e54a4dff035eda11dfd0ffd4a967ca744af17a852420d3d3fa01c399ff915cb"
+    },
+    "/usr/share/fonts/truetype/noto/NotoSansMeeteiMayek-Bold.ttf": {
+      "bytes": 16908,
+      "sha256": "ded09075316fab4182cd923ac464fbe25ad31ca26515a597f2e6473af86f3efc"
+    },
+    "/usr/share/fonts/fonts-go/Go-Italic.ttf": {
+      "bytes": 146980,
+      "sha256": "51e880f8a40b39baf291a4ef4c27c9e2eb8c36cb640063f867d213db444195b3"
+    },
+    "/usr/share/fonts/truetype/dejavu/DejaVuSans-ExtraLight.ttf": {
+      "bytes": 355824,
+      "sha256": "09a73dc31624ae9e759fd1187c8cbf37e320a74ce8d931d1ae0f735b0e41a2e5"
+    },
+    "/usr/share/texmf/fonts/opentype/public/tex-gyre/texgyreheros-bolditalic.otf": {
+      "bytes": 135264,
+      "sha256": "166fc6d068d9c9974281555cb3d730365537a9b676ab269bb5163f5a75496505"
+    },
+    "/usr/share/texmf/fonts/opentype/public/tex-gyre/texgyrebonum-bold.otf": {
+      "bytes": 141140,
+      "sha256": "173710158270252ec1ddd5e69a07fc71853680c7188d67a84d794a465a4dff81"
+    },
+    "/usr/share/fonts/opentype/inter/Inter-Black.otf": {
+      "bytes": 626660,
+      "sha256": "da79284ab25b9630e62d967d84fe1c3a1766fa2d7eb39314849ceb3b0759c362"
+    },
+    "/usr/share/fonts/truetype/dejavu/DejaVuSerif.ttf": {
+      "bytes": 380660,
+      "sha256": "a52c2a69dfc93d0b511b98c1019a57eb3d6a62d328bdf1387f00851b02e3a315"
+    },
+    "/usr/share/fonts/truetype/noto/NotoSansGeorgian-Bold.ttf": {
+      "bytes": 54956,
+      "sha256": "2cee22513f5c94b5577fe1a91df94836dc9825ac78e5b3a9f3c49d1f038a5f11"
+    },
+    "/usr/share/fonts/truetype/paratype/PTN77F.ttf": {
+      "bytes": 487796,
+      "sha256": "fc310ffbaf08063e924fe760ad2038c18e1bc94c94f532d284dc22f07babbd44"
+    },
+    "/usr/share/texmf/fonts/opentype/public/lm/lmroman6-regular.otf": {
+      "bytes": 112212,
+      "sha256": "501396c437f76c260b8724265b8495f318a640ee5a4674852ecbb20daf256696"
+    },
+    "/usr/share/fonts/truetype/noto/NotoSerifNyiakengPuachueHmong-Regular.ttf": {
+      "bytes": 14912,
+      "sha256": "437324d654ad5d8c0ed9cca7038dbdd62f2f2a3d3584c2dc24611fa36bfbf4fb"
+    },
+    "/usr/share/fonts/truetype/noto/NotoSansPhagsPa-Regular.ttf": {
+      "bytes": 39292,
+      "sha256": "26e1100003585ae36f3e88569626e4e0d99af3f835cb118fe27919d76351047b"
+    },
+    "/usr/share/texmf/fonts/opentype/public/lm/lmsans12-oblique.otf": {
+      "bytes": 102056,
+      "sha256": "1f138e6203f7092f9a01f6193ed97d971b5045b99969f3a62c7e43a7faabc1c0"
+    },
+    "/usr/share/fonts/truetype/freefont/FreeMonoBoldOblique.ttf": {
+      "bytes": 353368,
+      "sha256": "bab4af03f48d5c8c6386499ed85a3d04dd2da51835c0fea266adcb576e10f74c"
+    },
+    "/usr/share/fonts/truetype/noto/NotoSansMedefaidrin-Bold.ttf": {
+      "bytes": 30404,
+      "sha256": "59b9d3f299179c5364d2961e5d08b221d66830a846e9628acee60f25f32d08af"
+    },
+    "/usr/share/fonts/type1/texlive-fonts-recommended/pcrb8a.pfb": {
+      "bytes": 63215,
+      "sha256": "b2d7f1f030dbb4b66c756914acaf9f3de26adc64a9047d4d4971d43e883ad1ac"
+    },
+    "/usr/share/fonts/truetype/noto/NotoNaskhArabic-Bold.ttf": {
+      "bytes": 181192,
+      "sha256": "b5cbcb561b4b540ff11d7b6934577dbbbbb9e1d152d47f6f31f19176d58ff39c"
+    },
+    "/usr/share/fonts/opentype/urw-base35/URWBookman-LightItalic.otf": {
+      "bytes": 102764,
+      "sha256": "ed722e6c2996b08e8516d27a7c017972cfabf5d1736b496b6526da78fd17691a"
+    },
+    "/usr/share/fonts/truetype/noto/NotoSansSymbols-Bold.ttf": {
+      "bytes": 258912,
+      "sha256": "c46ee5f6447f99edf6a69e24969bcfee891e3699cff9fc45bfb98ec1b7d684fa"
+    },
+    "/usr/share/fonts/X11/Type1/URWBookman-LightItalic.pfb": {
+      "bytes": 143253,
+      "sha256": "6f5927e0692ff5d733a0b543af60f73193d4ccccf70baa3c8db9fd317b9a6d75"
+    },
+    "/usr/share/fonts/truetype/noto/NotoLoopedLao-Bold.ttf": {
+      "bytes": 54748,
+      "sha256": "a7daccd8bea541f092ef055fdaa0876a2ae42b0f1848fd5ef7186bf471dd1f64"
+    },
+    "/usr/share/fonts/truetype/adf/GilliusADFNo2-Regular.otf": {
+      "bytes": 36280,
+      "sha256": "0d72db2804a65144e7c93e9b0371679ff586f3220627d016c0cfd5e6187c565d"
+    },
+    "/usr/share/fonts/truetype/noto/NotoSansCham-Bold.ttf": {
+      "bytes": 31228,
+      "sha256": "e5c6d0db5ddbc295820eaa5f18d30413fdea6be914d7556b4e736686d948a516"
+    },
+    "/usr/share/fonts/truetype/noto/NotoSansTirhuta-Regular.ttf": {
+      "bytes": 96864,
+      "sha256": "6c2b525937ea47a0898a2a69675d84673f154f06d36aef5573f767ebdbdfefa0"
+    },
+    "/usr/share/fonts/truetype/noto/NotoSansSiddham-Regular.ttf": {
+      "bytes": 142364,
+      "sha256": "24eb19cc185685d185eb595766c79380160f76992d2023ae9b973e2f1ca4b763"
+    },
+    "/usr/share/fonts/truetype/adf/AccanthisADFStdNo3-Bold.otf": {
+      "bytes": 52400,
+      "sha256": "41e237cdb41777a178aa99b8748627cc0444e2d271a18378a64ded0ff1ab5d75"
+    },
+    "/usr/share/fonts/opentype/didot/GFSDidotItalic.otf": {
+      "bytes": 142668,
+      "sha256": "83f07e3f4e919d0a0dd8d07c224c624c7a383d013d33ade105908d044109dfe0"
+    },
+    "/usr/share/fonts/truetype/noto/NotoSansSoyombo-Regular.ttf": {
+      "bytes": 66968,
+      "sha256": "d6cbab7aa7ad154796b62eb3bb125170846e9c8c6eb5560806425377ff36223c"
+    },
+    "/usr/share/texmf/fonts/opentype/public/lm/lmmonoproplt10-regular.otf": {
+      "bytes": 110784,
+      "sha256": "dedec8ee86f7448949cb695ace72f2e0de3ccc380ff92dfbc6c45c20209e3349"
+    },
+    "/usr/share/fonts/woff/material-design-icons-iconfont/MaterialIcons-Regular.woff2": {
+      "bytes": 125116,
+      "sha256": "5743ed3d91616a10fca2bc2ba0f6f0707300c05bdc65bc6d9d4fb2cd75253ffe"
+    },
+    "/usr/share/texmf/fonts/opentype/public/lm/lmroman7-bold.otf": {
+      "bytes": 110212,
+      "sha256": "063ea9e378b4fca4fd59771cf522faa21eb7c8516c89464745c79725b384fb9a"
+    },
+    "/usr/share/fonts/opentype/inter/InterDisplay-ThinItalic.otf": {
+      "bytes": 570776,
+      "sha256": "8077baefe0ac4bd21391421eda7b592c46e0dde3b098dbec96f941f1142774a2"
+    },
+    "/usr/share/fonts/truetype/adf/GilliusADFNo2-CondItalic.otf": {
+      "bytes": 40848,
+      "sha256": "a35e98e55e66ce5bc620ff5e6636f131efcb5f0c3b2cc253d71c2dd455ccb6be"
+    },
+    "/usr/share/fonts/truetype/adf/AccanthisADFStdNo2-Italic.otf": {
+      "bytes": 49912,
+      "sha256": "49c0fb96d0369c615cc698b72be2b02a3ca5dbdd92df922e5bd92245cde1ae24"
+    },
+    "/usr/share/fonts/truetype/noto/NotoSansOsmanya-Regular.ttf": {
+      "bytes": 17008,
+      "sha256": "4263abe435e70af98ea372b94d181520bcf6a85f12c2432d2f16448256ceb198"
+    },
+    "/usr/share/fonts/opentype/noto/NotoSerifCJK-Bold.ttc": {
+      "bytes": 27397052,
+      "sha256": "1505ee3b9c0890fae6302ee0e9c6fd74d690f4a55a6ace1d9944f3f6352d622d"
+    },
+    "/usr/share/fonts/truetype/paratype/PTF56F.ttf": {
+      "bytes": 342524,
+      "sha256": "e2b2f71276ed2745ca137fef788246dcd381e88e66d9d23754112f51d73e05fc"
+    },
+    "/usr/share/fonts/truetype/freefont/FreeSansOblique.ttf": {
+      "bytes": 885180,
+      "sha256": "6881e99665097f549077ac1f0e6fc4721ae764004e97a4fd4c02f16192a3aef9"
+    },
+    "/usr/share/fonts/truetype/noto/NotoSansCherokee-Bold.ttf": {
+      "bytes": 108512,
+      "sha256": "2b09b627a4cf27aa1c4ddd72377509de07f0445f3f1a480dec14ca5211a07eef"
+    },
+    "/usr/share/fonts/truetype/adf/AccanthisADFStdNo2-Bold.otf": {
+      "bytes": 50420,
+      "sha256": "53ef030c051c84231093041cdcc9ce4cee4c06f6b59e0fc3babcef50b7df29c0"
+    },
+    "/usr/share/fonts/truetype/clear-sans/ClearSans-Thin.ttf": {
+      "bytes": 272304,
+      "sha256": "3b63de2164268eda08d67dfd4a08175a3eeb2d2e8e401722ab68a62dbff02b12"
+    },
+    "/usr/share/fonts/opentype/stix/STIXTwoText-Bold.otf": {
+      "bytes": 295708,
+      "sha256": "7ef76c666a6704f76ed3fa27bcdda55b36e558b5c2c93b49b03d854db96bdeb5"
+    },
+    "/usr/share/fonts/truetype/clear-sans/ClearSans-Italic.ttf": {
+      "bytes": 282800,
+      "sha256": "ac2f34c28ea1f755f0660033f50f615c0a30b0f80763b73363cc142113136c43"
+    },
+    "/usr/share/fonts/opentype/inter/Inter-ThinItalic.otf": {
+      "bytes": 575340,
+      "sha256": "d33dd9cdf84781e35accad58086a13b494cfac33f35d2eca697579a11a86b6f5"
+    },
+    "/usr/share/fonts/truetype/noto/NotoSansBatak-Regular.ttf": {
+      "bytes": 15104,
+      "sha256": "d7913a9681f6bf3f63a3c87f34c87d20bcf8515aceee9c081dc2851292f4efa4"
+    },
+    "/usr/share/fonts/truetype/noto/NotoSansCaucasianAlbanian-Regular.ttf": {
+      "bytes": 26852,
+      "sha256": "0faeefe156c6952e432ead92629ea3b835b060f45a01311ac27f3038c01888d9"
+    },
+    "/usr/share/fonts/truetype/roboto/unhinted/RobotoCondensed-Regular.ttf": {
+      "bytes": 300664,
+      "sha256": "936069d5e46da383bff37b629a73e0bfb8b8ac7bc54cfb927fb700f6a890e9aa"
+    },
+    "/usr/share/fonts/truetype/noto/NotoSansInscriptionalPahlavi-Regular.ttf": {
+      "bytes": 5988,
+      "sha256": "f5cf7e0d349edb45a9573ae9d1dd683977f0eef1794066fa9a29bdbb65abcf74"
+    },
+    "/usr/share/fonts/truetype/noto/NotoSansArmenian-Bold.ttf": {
+      "bytes": 30924,
+      "sha256": "a0f398d0205f0b96d6637ac66d92e6e42b230f8ed3853a050d0aa5792eb9b7f7"
+    },
+    "/usr/share/texmf/fonts/opentype/public/lm/lmroman6-bold.otf": {
+      "bytes": 112452,
+      "sha256": "f1ebd52916182bfc2e3f9d4b5ba847ad6acc6c7761354c0dc052fb01ec14f73c"
+    },
+    "/usr/share/fonts/truetype/noto/NotoSansPsalterPahlavi-Regular.ttf": {
+      "bytes": 33300,
+      "sha256": "90878c31ab37edb5f75c487e1a61ef5082acfecc2a74798f38499cbab3746dbb"
+    },
+    "/usr/share/texmf/fonts/opentype/public/tex-gyre-math/texgyrebonum-math.otf": {
+      "bytes": 527408,
+      "sha256": "d7b4245e4ec359940da7c9ddb982e49737455eaa29dafb809743cc1a58053147"
+    },
+    "/usr/share/fonts/X11/Type1/NimbusMonoPS-Bold.pfb": {
+      "bytes": 156012,
+      "sha256": "a58ba41467c2cfa7109f8044e4ccfc94f5a91b1e88cc28860339dbcdcb69be2b"
+    },
+    "/usr/share/fonts/X11/Type1/NimbusSans-Italic.pfb": {
+      "bytes": 120947,
+      "sha256": "f90ca2e7970ceb090139040597d8dced2bac63aebd61643b8ae0e8e1ddeef90d"
+    },
+    "/usr/share/fonts/truetype/noto/NotoSerifGurmukhi-Bold.ttf": {
+      "bytes": 53616,
+      "sha256": "a1550839d8dda8e422cc05b94ba13af13595f677255f106ad52b7fe020a7899a"
+    },
+    "/usr/share/fonts/truetype/andika/Andika-BoldItalic.ttf": {
+      "bytes": 785640,
+      "sha256": "500b68598d8b6335e00fb4aa3800181c11c304257254c186dc80804a6ac5151c"
+    },
+    "/usr/share/texmf/fonts/opentype/public/lm/lmromandemi10-oblique.otf": {
+      "bytes": 119632,
+      "sha256": "430d9237cfeb1b7ef25a36002adac0524a11a07f4a31b16ce5a0eb3330163217"
+    },
+    "/usr/share/fonts/truetype/noto/NotoSansGeorgian-Regular.ttf": {
+      "bytes": 53072,
+      "sha256": "ba75f2154fef9beac8439f94c631dc37ef9c708d32f9254bb019afdfa9aa3138"
+    },
+    "/usr/share/fonts/opentype/neohellenic/GFSNeohellenicBold.otf": {
+      "bytes": 91984,
+      "sha256": "750528dfec86e7db23d7fafb16eb89064563e1b86d1c1abb37b916fcc53798aa"
+    },
+    "/usr/share/fonts/truetype/gentiumplus/GentiumPlus-Italic.ttf": {
+      "bytes": 940752,
+      "sha256": "fedc1acdd2f1080941ed998cabee9759456f0e486fbd8169ff4238b37d3ac60d"
+    },
+    "/usr/share/fonts/opentype/cabin/Cabin-BoldItalic.otf": {
+      "bytes": 48648,
+      "sha256": "923e78aadcc922b0a415df42ee6507629639a1e94060efd104d3cffd00ad6d98"
+    },
+    "/usr/share/fonts/truetype/open-sans/OpenSans-LightItalic.ttf": {
+      "bytes": 213128,
+      "sha256": "4482d18b30c4534b5481d594b7c0bc7a9913a7c4c261985e452010a89ab755fc"
+    },
+    "/usr/share/fonts/opentype/urw-base35/URWBookman-DemiItalic.otf": {
+      "bytes": 101584,
+      "sha256": "4d9dbaae8178ffa2f5d557245d09dc968eeac9eed7e453cc2db4cc6a9aacb44d"
+    },
+    "/usr/share/texmf/fonts/opentype/public/tex-gyre/texgyrechorus-mediumitalic.otf": {
+      "bytes": 100924,
+      "sha256": "b26e0f8edc4c56d881be73c871fb3fbeed045873f9a3202ccad967256d192e65"
+    },
+    "/usr/share/fonts/truetype/lato/Lato-Bold.ttf": {
+      "bytes": 657188,
+      "sha256": "bf1b8130069b44b9148eeece35e5423bedac49777ba746615b826b8276574a7b"
+    },
+    "/usr/share/fonts/truetype/roboto/unhinted/RobotoCondensed-Italic.ttf": {
+      "bytes": 329372,
+      "sha256": "718ec69846837362c43937caf7fe1a72a5392ee60454ee54981050ee389ed43b"
+    },
+    "/usr/share/fonts/opentype/comic-neue/ComicNeue-Bold.otf": {
+      "bytes": 30176,
+      "sha256": "190cb1e57533ae580f4444a82ad10fa9dcebd5eb163bd0e074a6b2f39d1cb010"
+    },
+    "/usr/share/fonts/truetype/noto/NotoSansMeroitic-Regular.ttf": {
+      "bytes": 33668,
+      "sha256": "49c76f5da44b932249c6150f41d20e8f4a405e28d8823a6fd724b05bc1029375"
+    },
+    "/usr/share/fonts/truetype/noto/NotoSansBhaiksuki-Regular.ttf": {
+      "bytes": 247792,
+      "sha256": "c2b72982fc4c28287a5df6dccfbec65d2a74e3f7526e4a083195160d6211f80d"
+    },
+    "/usr/share/fonts/truetype/liberation/LiberationSansNarrow-Bold.ttf": {
+      "bytes": 109868,
+      "sha256": "3271f41b67a81a806aadbf71762c14a405e617b738d9ceeb81191dd681c66fc4"
+    },
+    "/usr/share/fonts/opentype/inter/Inter-MediumItalic.otf": {
+      "bytes": 605956,
+      "sha256": "e19606d43736c84eae63cd4934d9d877e36bc615a8e0bcfc98d87fb037b9826f"
+    },
+    "/usr/share/fonts/truetype/noto/NotoSansTifinaghHawad-Regular.ttf": {
+      "bytes": 39316,
+      "sha256": "9af823b2187ee3d91d27d6ace7419e41cd09bf6d9986282ff00af2187615352c"
+    },
+    "/usr/share/fonts/truetype/noto/NotoKufiArabic-Regular.ttf": {
+      "bytes": 176740,
+      "sha256": "befb9d07506942ba2a7e0e85c65a24a76792c937d812bc80f1095d0f660cf330"
+    },
+    "/usr/share/fonts/truetype/noto/NotoSansBamum-Regular.ttf": {
+      "bytes": 228920,
+      "sha256": "5de881d26f4913c63f81db283bcffaafe1f0775d1be8072f39a4f8c0c09b90aa"
+    },
+    "/usr/share/fonts/truetype/noto/NotoSansRunic-Regular.ttf": {
+      "bytes": 9044,
+      "sha256": "49e540798dedccf24301437fb5ea5c8a3f42143b1b6c108c1d48c78a41c4ce0f"
+    },
+    "/usr/share/fonts/opentype/inter/InterDisplay-SemiBold.otf": {
+      "bytes": 625296,
+      "sha256": "991234562ac06b47aefa2ca4d4ff74360a164a5653ec05357816fc4ffe3ca8a2"
+    },
+    "/usr/share/fonts/opentype/urw-base35/NimbusMonoPS-BoldItalic.otf": {
+      "bytes": 89580,
+      "sha256": "a67ed9e364c933c79fc3ce88e17a0265334697c184b065407e754d43cbbf6d0a"
+    },
+    "/usr/share/fonts/truetype/noto/NotoSansThaana-Regular.ttf": {
+      "bytes": 18728,
+      "sha256": "241b4be4717d495a72cf7eb8e69891e63a6eb1cc18d98fa357f5af7f58c02446"
+    },
+    "/usr/share/fonts/type1/urw-base35/URWGothic-Demi.t1": {
+      "bytes": 103428,
+      "sha256": "83cb6f17a042dea63345e222593be1a1ccb13ded278482d13f6511cad0768c54"
+    },
+    "/usr/share/fonts/truetype/noto/NotoSansSignWriting-Regular.ttf": {
+      "bytes": 5211268,
+      "sha256": "8a1bc26667a9f7c5a3555c5305bd875360df5d44900fe0ed1a78b05ab8f0e824"
+    },
+    "/usr/share/fonts/truetype/dejavu/DejaVuSansMono-Bold.ttf": {
+      "bytes": 334268,
+      "sha256": "2d67eed9b325ee2e69f906ce4f3f6264d5105230a13352c8494daad4f17b12c8"
+    },
+    "/usr/share/fonts/type1/urw-base35/NimbusSans-BoldItalic.t1": {
+      "bytes": 123308,
+      "sha256": "73871c05c5c4670d39b690b802aacd5369b9209256ff3abe7db755c276e2deda"
+    },
+    "/usr/share/fonts/opentype/inter/InterDisplay-Bold.otf": {
+      "bytes": 629020,
+      "sha256": "d7a7394984bbb3bc3c3e507a6618d34e006c94f27c7105d0ef4376667aeaf4ee"
+    },
+    "/usr/share/fonts/truetype/dejavu/DejaVuSerif-BoldItalic.ttf": {
+      "bytes": 348020,
+      "sha256": "f2c39b5964cb27d94bd4c02504cc4471f8c80571abb8df7923c51d13afdca989"
+    },
+    "/usr/share/fonts/X11/Type1/C059-Italic.pfb": {
+      "bytes": 148948,
+      "sha256": "0e41d03403505156c3b493f5e26b20e69710deab9c0666ff720fbb8856357224"
+    },
+    "/usr/share/fonts/truetype/gentiumplus-compact/GentiumPlusCompact-R.ttf": {
+      "bytes": 1903828,
+      "sha256": "60b328a2a665b27e6df6a657881aff817a561e8d5407a5297a1b7c7d6809a571"
+    },
+    "/usr/share/fonts/truetype/noto/NotoSansAvestan-Regular.ttf": {
+      "bytes": 23008,
+      "sha256": "7b12c0e594f8b13b9148763318238742a74dfe57032752238a0df3bd1a566331"
+    },
+    "/usr/share/fonts/truetype/noto/NotoSansLisu-Regular.ttf": {
+      "bytes": 12860,
+      "sha256": "243c09079c08619a4b11621f07027c10e5eb067b7e2e217537ae5e01be79e21b"
+    },
+    "/usr/share/fonts/truetype/noto/NotoSansMedefaidrin-Regular.ttf": {
+      "bytes": 30736,
+      "sha256": "508f0e59b886f1ff174ede2d1674bbb09624b37ffb0270b70ba18ef9f89c8dd4"
+    },
+    "/usr/share/fonts/truetype/noto/NotoSansKhmer-Bold.ttf": {
+      "bytes": 112372,
+      "sha256": "cc74e7ac685da9a84e18b773ec8d80d06765aa1754bb14acc390c3620023c4dc"
+    },
+    "/usr/share/fonts/truetype/noto/NotoSansNewa-Regular.ttf": {
+      "bytes": 150892,
+      "sha256": "dc8aea050ac05dea01c6a81e6a70d4a7506998a11c6e1ecaaa854b7ff18f9fc6"
+    },
+    "/usr/share/fonts/opentype/linux-libertine/LinLibertine_DR.otf": {
+      "bytes": 364864,
+      "sha256": "e00f0acb3eeeb284d19f7977132b7159bdd29a8dab4fcd9f44454d480d46a78c"
+    },
+    "/usr/share/fonts/truetype/roboto/unhinted/RobotoTTF/Roboto-Bold.ttf": {
+      "bytes": 306940,
+      "sha256": "36f3709dea3e3ce3c6aedc058079e55980825f898f1e901d091c73c40de8bab1"
+    },
+    "/usr/share/texmf/fonts/opentype/public/tex-gyre/texgyreheros-bold.otf": {
+      "bytes": 135204,
+      "sha256": "b170162835f4efc288886dd4231406dc47e19b614cf4416836635599d44a7d60"
+    },
+    "/usr/share/fonts/opentype/urw-base35/URWGothic-DemiOblique.otf": {
+      "bytes": 86232,
+      "sha256": "d57abaa6d40718cfbf735ad50080d0b095e7194e451992e02786a7c0113db35c"
+    },
+    "/usr/share/fonts/opentype/urw-base35/D050000L.otf": {
+      "bytes": 29832,
+      "sha256": "a7bd946b69ae526328f26b5339fb31057dd40950d7b60598f36b2bd06542f105"
+    },
+    "/usr/share/fonts/truetype/crosextra/Caladea-Bold.ttf": {
+      "bytes": 84492,
+      "sha256": "ae3cb2dcbc925809dd29d2a44e9802211cab66be541bacbfc9c08c74b27c3742"
+    },
+    "/usr/share/fonts/opentype/linux-libertine/LinLibertine_RZI.otf": {
+      "bytes": 390408,
+      "sha256": "dddb3e038c3e4aa590c005278142a0d3bd355de0c1c1f46fd41b6431663a6839"
+    },
+    "/usr/share/fonts/opentype/urw-base35/P052-BoldItalic.otf": {
+      "bytes": 110928,
+      "sha256": "63e15828175e55559ae09c9bdcd09fc0354537657d43109edb6e2a5509f8299f"
+    },
+    "/usr/share/fonts/type1/urw-base35/NimbusMonoPS-BoldItalic.t1": {
+      "bytes": 154177,
+      "sha256": "f9006fd0749c906fe51a570bb246883e0af127eff2ca13cdbd250db3e5a1cec9"
+    },
+    "/usr/share/fonts/fonts-go/Go-Mono.ttf": {
+      "bytes": 164200,
+      "sha256": "19ecaf9dab2b499c62d2b586a48995789e6a862d39f0f79d3e96214792aef41d"
+    },
+    "/usr/share/fonts/truetype/adf/GilliusADFNo2-Italic.otf": {
+      "bytes": 39280,
+      "sha256": "85981ffbcbd3340d0f50ff3da5a127b390117c5c94b7911eb14ca4605738b6f2"
+    },
+    "/usr/share/fonts/truetype/dejavu/DejaVuSansMono.ttf": {
+      "bytes": 343140,
+      "sha256": "a54dca07c76d6289e717e75e0a58c0128f6d7269ef3faf76417c9d7d3bba37ab"
+    },
+    "/usr/share/fonts/truetype/noto/NotoSansOlChiki-Regular.ttf": {
+      "bytes": 15172,
+      "sha256": "3dc960a2d687b0e4fe03e5c2eb88be2a3d244c4509029277ca2be248787d33b3"
+    },
+    "/usr/share/fonts/truetype/noto/NotoSansDisplay-Bold.ttf": {
+      "bytes": 513000,
+      "sha256": "1640ba8acb852d9e00406e166d1fc0cedd62a4c20342fd92f1f6dbc7baa61de2"
+    },
+    "/usr/share/texmf/fonts/opentype/public/tex-gyre/texgyreheros-regular.otf": {
+      "bytes": 133600,
+      "sha256": "6ae1a09d5a940367b7aaaa91ee8bd8a2c333bfe193e7096e23f931357d62081f"
+    },
+    "/usr/share/texmf/fonts/opentype/public/lm/lmsansdemicond10-oblique.otf": {
+      "bytes": 114848,
+      "sha256": "f98ed7d9cc5e10fd5c8e01f6ea708fddff5bbbf6f4503998c92b3c1f26d68d33"
+    },
+    "/usr/share/fonts/truetype/adf/GilliusADF-BoldCondItalic.otf": {
+      "bytes": 38236,
+      "sha256": "390771933cb265660c825ee4994fa33e421275c913985cb5640de6aea9e884eb"
+    },
+    "/usr/share/fonts/truetype/roboto/unhinted/RobotoTTF/Roboto-ThinItalic.ttf": {
+      "bytes": 329700,
+      "sha256": "07af4624ab4233724dce0cc0a8e96e59114f754d8fdea94755fcc867445de6ac"
+    },
+    "/usr/share/fonts/opentype/inter/Inter-Medium.otf": {
+      "bytes": 627988,
+      "sha256": "6c222ed2c3660524dd0c14fb745e00fee65c5361ab28f60fba6730bf4e648763"
+    },
+    "/usr/share/fonts/fonts-go/Go-Mono-Bold.ttf": {
+      "bytes": 168340,
+      "sha256": "6569b68caad376df8fddad04b0c779d0c3f1858b7c4586b96e706da5d3c6edc8"
+    },
+    "/usr/share/fonts/X11/Type1/NimbusSansNarrow-Bold.pfb": {
+      "bytes": 106259,
+      "sha256": "4975c4cc3177b228abc4af44625ae5087b166f90e27aa902f48a0516381e043c"
+    },
+    "/usr/share/fonts/truetype/noto/NotoSerifGurmukhi-Regular.ttf": {
+      "bytes": 52680,
+      "sha256": "7f7310c46abbe834227000c7bf854fbe1b31d470fb43c26aac22ec90a924c181"
+    },
+    "/usr/share/fonts/type1/urw-base35/URWGothic-DemiOblique.t1": {
+      "bytes": 105110,
+      "sha256": "bcd4c23341a2324459079f8757f6761cfc0c95781d61a4baf4132453ba80a832"
+    },
+    "/usr/share/fonts/truetype/noto/NotoSansMath-Regular.ttf": {
+      "bytes": 590896,
+      "sha256": "8242bd1e55368b27e32455260754cf9aa58f3ad7ea80664b66c21f1b09910d6c"
+    },
+    "/usr/share/fonts/truetype/open-sans/OpenSans-Italic.ttf": {
+      "bytes": 212896,
+      "sha256": "a54dc8488f8193bf30c3820cf6f261f911f9d328d699e1a1b8042641554cec70"
+    },
+    "/usr/share/fonts/opentype/cabin/Cabin-Bold.otf": {
+      "bytes": 53408,
+      "sha256": "f2a43add6a75ae9b203744857fe3e612a4b038b51585934208b1b5e5b7f455dd"
+    },
+    "/usr/share/fonts/opentype/cabin/Cabin-SemiBold.otf": {
+      "bytes": 54364,
+      "sha256": "75d50013da1e82b78abcb71235efef61ffe111edf04e6502819b306eb28826a1"
+    },
+    "/usr/share/fonts/opentype/weather-icons/weathericons-regular.otf": {
+      "bytes": 54112,
+      "sha256": "37ad41ec8e23b468c0fced8227cca7b492d42213fc1050643e3a3237198b01a0"
+    },
+    "/usr/share/fonts/truetype/noto/NotoSerifTelugu-Bold.ttf": {
+      "bytes": 327660,
+      "sha256": "3ccec8830f3a55b4395ae24ab73aae25b92ca05e293a352726b89cf5b06a16ad"
+    },
+    "/usr/share/fonts/truetype/adf/BerenisADFPro-Italic.otf": {
+      "bytes": 186152,
+      "sha256": "f1579483b97597f210193cba2d208fe42e487604fe1ecaafdbb88bca64187248"
+    },
+    "/usr/share/fonts/truetype/liberation/LiberationSansNarrow-BoldItalic.ttf": {
+      "bytes": 128084,
+      "sha256": "2340c7d3c4afc55bf1f6ddffad488039921580e3b07b9788d210e6ca18a77494"
+    },
+    "/usr/share/fonts/truetype/noto/NotoSerifTamilSlanted-Bold.ttf": {
+      "bytes": 80296,
+      "sha256": "e845281bb21eaa9e281a120616981913735c1774cca5fa16aaf5591e7c4d2321"
+    },
+    "/usr/share/texmf/fonts/opentype/public/lm-math/latinmodern-math.otf": {
+      "bytes": 733736,
+      "sha256": "6075562b771f8b82f0c179e363389684f2dd09de30038269e2628e504bd7be0f"
+    },
+    "/usr/share/fonts/truetype/noto/NotoSansKhmer-Regular.ttf": {
+      "bytes": 113376,
+      "sha256": "bc9a5e2afcee249849e409aabe6e22330c479b878ea3e59bf5e7c84482d7ee53"
+    },
+    "/usr/share/fonts/truetype/gentium-basic/GenBasBI.ttf": {
+      "bytes": 245852,
+      "sha256": "5bfddd753de0a9ad83940e9b6130a8082510416d7450bb8e39d90e7655a75e35"
+    },
+    "/usr/share/fonts/truetype/noto/NotoSansCoptic-Regular.ttf": {
+      "bytes": 45048,
+      "sha256": "9681bb92c70f4ff74a6a004a139719b6778dfabfcad17cec978a9601d9c69d29"
+    },
+    "/usr/share/fonts/truetype/andika/Andika-Italic.ttf": {
+      "bytes": 773992,
+      "sha256": "7bb4c2230c0c5d39f652dbe84218bf6bf8ad4fc92a3b4a29084115ec50b8f0ae"
+    },
+    "/usr/share/texmf/fonts/opentype/public/lm/lmsansquot8-regular.otf": {
+      "bytes": 105172,
+      "sha256": "5da041def6d17825bb9b2d1d4fef66099a1e871005c08fc8f0d29976a923f4c9"
+    },
+    "/usr/share/fonts/truetype/noto/NotoSansLisu-Bold.ttf": {
+      "bytes": 12868,
+      "sha256": "5823bd48592d03ab8b52c1fc5fcbcacb49fbb69a2686a176fd2d1fb28dd39dce"
+    },
+    "/usr/share/fonts/opentype/urw-base35/NimbusSansNarrow-Regular.otf": {
+      "bytes": 80864,
+      "sha256": "0111cf7c05377c4f1685d37bfa8b3edd2033278122f69e0a9803a8514e352b99"
+    },
+    "/usr/share/fonts/truetype/noto/NotoSerifDisplay-BoldItalic.ttf": {
+      "bytes": 590804,
+      "sha256": "d3c055380d05e41732096c337226afe96640e7eaeaf7d1294556545b95ccc123"
+    },
+    "/usr/share/fonts/truetype/noto/NotoSansCypriot-Regular.ttf": {
+      "bytes": 15080,
+      "sha256": "4d2a47dfc00ccf8971a3f2273d2c7682128bab03de721f0ee9239a5777e978df"
+    },
+    "/usr/share/fonts/truetype/noto/NotoSansOldNorthArabian-Regular.ttf": {
+      "bytes": 7228,
+      "sha256": "9068680d32d6bc14909bd1917d0270ce83e655f5e4d76c94ac55fc9a0a16d17f"
+    },
+    "/usr/share/fonts/opentype/urw-base35/C059-Roman.otf": {
+      "bytes": 97476,
+      "sha256": "e00cc7b88f0cf25ae43f0e48de39d0043fe042b55719a3ac32669ab3369542ec"
+    },
+    "/usr/share/fonts/truetype/paratype/PTN57F.ttf": {
+      "bytes": 383848,
+      "sha256": "91cc2663e17bd1056f4e7cb06ea9935ed6f75c0216db2e30fff3997ac73cb905"
+    },
+    "/usr/share/fonts/truetype/roboto/unhinted/RobotoCondensed-Light.ttf": {
+      "bytes": 302300,
+      "sha256": "54ac590712c9e832c0980b9c647520c93052d24f2d610b6bafde3a08ed93ace6"
+    },
+    "/usr/share/fonts/woff/ebgaramond/EBGaramond08-Italic.woff": {
+      "bytes": 91892,
+      "sha256": "9d0f4e76d887e20954a0d430a25d612c3bce93e68e34dc77c92955806eab1928"
+    },
+    "/usr/share/fonts/truetype/roboto/unhinted/RobotoCondensed-Medium.ttf": {
+      "bytes": 303604,
+      "sha256": "660d652c17a99d0b4a3f9b7072701bfb4421bb0bce29b2baf096a193d5564bde"
+    },
+    "/usr/share/fonts/truetype/roboto/unhinted/RobotoTTF/Roboto-LightItalic.ttf": {
+      "bytes": 332172,
+      "sha256": "a9d2a1c8bbd8b4fea43d2d4027e8d71c39d821831cff4cde97a8e0a723e310bf"
+    },
+    "/usr/share/fonts/truetype/noto/NotoSansInscriptionalParthian-Regular.ttf": {
+      "bytes": 7748,
+      "sha256": "6389b35ade6db9c469309d84034057c6738a032abe13f4eb2435cfd86ed10cc4"
+    },
+    "/usr/share/fonts/truetype/font-awesome/fontawesome-webfont.ttf": {
+      "bytes": 165548,
+      "sha256": "aa58f33f239a0fb02f5c7a6c45c043d7a9ac9a093335806694ecd6d4edc0d6a8"
+    },
+    "/usr/share/fonts/truetype/open-sans/OpenSans-ExtraBoldItalic.ttf": {
+      "bytes": 213420,
+      "sha256": "0eeca981116621a96a484ecc58fbfcdc78fda0065fd21fd13707b63bf8a9912c"
+    },
+    "/usr/share/fonts/truetype/noto/NotoSerifDisplay-Italic.ttf": {
+      "bytes": 591052,
+      "sha256": "96ad3a5588b1d6e564589d236b8fa1839e8169a6b87a055340c36b87904e93e0"
+    },
+    "/usr/share/fonts/fonts-go/Go-Bold.ttf": {
+      "bytes": 144572,
+      "sha256": "47d5aab3f49d958dd3ab857691b84dfc0b49e143e0e6f37b62f3d3f312c14bf0"
+    },
+    "/usr/share/fonts/opentype/urw-base35/NimbusSansNarrow-Bold.otf": {
+      "bytes": 81340,
+      "sha256": "6d7cec07f5a9035e208532dab35a51312aef4a7f26eb524dd614c9fcd97c3264"
+    },
+    "/usr/share/texmf/fonts/opentype/public/lm/lmsans17-oblique.otf": {
+      "bytes": 100500,
+      "sha256": "0f6a4450c5fc9afd3650f24ad9003684fff3252691bbf2a33be94b383db8a77c"
+    },
+    "/usr/share/fonts/truetype/noto/NotoSansHanifiRohingya-Bold.ttf": {
+      "bytes": 27924,
+      "sha256": "1b7510e112fb7567e614fe55151be9b6273758d2444dd81071bdb887faca00f5"
+    },
+    "/usr/share/fonts/truetype/stix/STIXTwoText-Italic.ttf": {
+      "bytes": 424488,
+      "sha256": "5a0ed1c0c1d3d4f83f2d00bcd4a0a991a7b0755beacee0a57b26762327a84c22"
+    },
+    "/usr/share/fonts/truetype/noto/NotoMusic-Regular.ttf": {
+      "bytes": 80984,
+      "sha256": "fdf04893f04fabd36261bc5fb4fb2b0ae4da268286318ab8919f34b3e3458397"
+    },
+    "/usr/share/fonts/truetype/dejavu/DejaVuSansMono-BoldOblique.ttf": {
+      "bytes": 254960,
+      "sha256": "3e19ce950e77f59d5d3607c4a4ed6a5152933f88937a4e0e7586ee5d5319aa5c"
+    },
+    "/usr/share/fonts/truetype/noto/NotoSans-Bold.ttf": {
+      "bytes": 515752,
+      "sha256": "e83493c945848ecd4a9ad0f6d19164541a0d3e23a9c952304a00a46e00272ac5"
+    },
+    "/usr/share/fonts/opentype/inter/InterDisplay-Thin.otf": {
+      "bytes": 575268,
+      "sha256": "19603bb14a8639d7ed6bbaaa93dc0769cacd37a0aa42be8683b8fc10fc71863c"
+    },
+    "/usr/share/fonts/opentype/stix/STIXTwoText-Regular.otf": {
+      "bytes": 292140,
+      "sha256": "c4864ca6ec071c2d31d0d8309001faa1ee3517fffb53a31a405a697b71f52ca1"
+    },
+    "/usr/share/fonts/truetype/liberation/LiberationSans-BoldItalic.ttf": {
+      "bytes": 409108,
+      "sha256": "64263238517af60213cdb469165fc7e9acd0c09c35f4155f924a379f97125a57"
+    },
+    "/usr/share/fonts/type1/urw-base35/NimbusSansNarrow-Regular.t1": {
+      "bytes": 104252,
+      "sha256": "77561ac22852f0c289012e3e8578ff56afe016d3bcae05a33562369cb675127f"
+    },
+    "/usr/share/fonts/type1/urw-base35/C059-BdIta.t1": {
+      "bytes": 152585,
+      "sha256": "f7aafd96bbb8ef07792d33302fb4905bfe7a47888b08782d95f6f1b8a388f5ee"
+    },
+    "/usr/share/fonts/opentype/urw-base35/URWBookman-Demi.otf": {
+      "bytes": 97208,
+      "sha256": "ab8b2fe57cbea9783c6179188dc013c76cfc5717c22cf59bbf3016ef2d7d93ee"
+    },
+    "/usr/share/fonts/truetype/charis/CharisSIL-BoldItalic.ttf": {
+      "bytes": 868044,
+      "sha256": "b372302061b96c0d82ed75b2b0afca833f201b364d9f3e9f0804bffea4621a40"
+    },
+    "/usr/share/fonts/X11/Type1/NimbusSans-Bold.pfb": {
+      "bytes": 107815,
+      "sha256": "803fd379b7d84dff114e3cf6b5916cab366ef840554f2b45abb23ab4c0abd482"
+    },
+    "/usr/share/fonts/truetype/paratype/PTM55F.ttf": {
+      "bytes": 180120,
+      "sha256": "984faf0ca006598f8cbaafb834d96189da61f2146405275985b16aa61acd7c48"
+    },
+    "/usr/share/fonts/truetype/noto/NotoSansAdlam-Regular.ttf": {
+      "bytes": 94464,
+      "sha256": "7360a8023487bff116bfde73a070da0f734f837f3056c81b20791b1f2839b7d3"
+    },
+    "/usr/share/fonts/truetype/noto/NotoSansBamum-Bold.ttf": {
+      "bytes": 229340,
+      "sha256": "33ad7daa344320fd5d106a1124f7279d530db1106647052aafcf50cea1c87fe6"
+    },
+    "/usr/share/fonts/truetype/croscore/Cousine-BoldItalic.ttf": {
+      "bytes": 308612,
+      "sha256": "82755a6d4b12067daabf89eb5bf48d52b9fea4073a59792d331651510a901728"
+    },
+    "/usr/share/texmf/fonts/opentype/public/tex-gyre/texgyrecursor-bold.otf": {
+      "bytes": 87288,
+      "sha256": "95e9755bfa05759e8d1f8fba21a919ba46091e1275aeb5bf831dffd9c93b041e"
+    },
+    "/usr/share/fonts/type1/texlive-fonts-recommended/pcrro8a.pfb": {
+      "bytes": 60885,
+      "sha256": "b2583ac18a5dc7d2e6721da92e1088f286628e3afda5a7ea1911ee5a57da2a77"
+    },
+    "/usr/share/fonts/truetype/freefont/FreeSerif.ttf": {
+      "bytes": 3686360,
+      "sha256": "55ec3a32b3b94995bc6063e5ff5cbe4d27cfd7b1991b53f01428a9547076c843"
+    },
+    "/usr/share/fonts/truetype/noto/NotoSansLydian-Regular.ttf": {
+      "bytes": 4524,
+      "sha256": "a01cc8ef4ce62c34d126a0c68b42944da3f5e45cde8e130056872f293dcab9e1"
+    },
+    "/usr/share/fonts/truetype/croscore/Arimo-BoldItalic.ttf": {
+      "bytes": 492528,
+      "sha256": "8e057ec4b127ee4242b35cf66f31b558aa46eb5e6808047324bf2a6f1e8c86a6"
+    },
+    "/usr/share/fonts/opentype/olga/GFSOlga.otf": {
+      "bytes": 31008,
+      "sha256": "2cb98f574d9b323dfd09ed4804dc2535ec8f47c1d77a72ab73afbf0c662bfc13"
+    },
+    "/usr/share/fonts/truetype/noto/NotoSansThai-Regular.ttf": {
+      "bytes": 37744,
+      "sha256": "dfbd5ed0f1e68c3cbc51aa08f646d1ab0e68e7c4ceab70a69e465225ff701f93"
+    },
+    "/usr/share/texmf/fonts/opentype/public/lm/lmromanslant9-regular.otf": {
+      "bytes": 119932,
+      "sha256": "7441aee0c9dfbca16118fc7fe339c2e6c79ecc966a51ac1f76860351b6a8f02e"
+    },
+    "/usr/share/fonts/truetype/crosextra/Carlito-Bold.ttf": {
+      "bytes": 682468,
+      "sha256": "bb5d20f79b82599ec72983597437373a80f2d2085fa91fc144fd74e876a594db"
+    },
+    "/usr/share/fonts/truetype/gentium/GentiumAlt-R.ttf": {
+      "bytes": 364032,
+      "sha256": "2df2c49a4c25a1be0f58028f60077b859b3984136fbbe64159675fe3989a945e"
+    },
+    "/usr/share/fonts/truetype/noto/NotoSerifYezidi-Regular.ttf": {
+      "bytes": 10156,
+      "sha256": "48e870c0755fea41ff44970fe6c428e8a5a69937835b2016379c8e2d1c229716"
+    },
+    "/usr/share/fonts/opentype/font-awesome/FontAwesome.otf": {
+      "bytes": 134808,
+      "sha256": "444dd4366615ffc4a16d012b2fa90137065d3ccb410fa6fd5e4ddd7b5e4ffcd5"
+    },
+    "/usr/share/fonts/truetype/gentium-basic/GenBkBasI.ttf": {
+      "bytes": 261328,
+      "sha256": "6879e401a0c44c6473fb796c284112f3139bd20c289cff92e6c4abb4dab7d369"
+    },
+    "/usr/share/fonts/opentype/linux-libertine/LinLibertine_R.otf": {
+      "bytes": 505884,
+      "sha256": "50273d3391ae94450672bda42f7ef3aea123d0e89e21dc10644a0bd227dbd615"
+    },
+    "/usr/share/fonts/truetype/adf/GilliusADF-Bold.otf": {
+      "bytes": 37180,
+      "sha256": "84eabbabf20845873686c5571b735f8dcc851be6829ef92980381f33d32691a6"
+    },
+    "/usr/share/fonts/truetype/noto/NotoSansMongolian-Regular.ttf": {
+      "bytes": 242252,
+      "sha256": "601afb9f08fbbc39f0cf72cb7e11079ada6fa3feed1fadca8e6e5095e7957687"
+    },
+    "/usr/share/fonts/truetype/noto/NotoSerifDevanagari-Bold.ttf": {
+      "bytes": 279792,
+      "sha256": "42a0d0664b51212894c8bb226ad8947c194f1ab1903555a41979877d3b9267be"
+    },
+    "/usr/share/fonts/truetype/liberation/LiberationSerif-Regular.ttf": {
+      "bytes": 393692,
+      "sha256": "350f4ffd773cae53560c63dca3d89a5070595614fde12f772bf43feb63d81064"
+    },
+    "/usr/share/fonts/truetype/noto/NotoSansMyanmar-Bold.ttf": {
+      "bytes": 210224,
+      "sha256": "e37e2ef189431020b1eaf4fb8d43252666dc24265d628145fff119613afea174"
+    },
+    "/usr/share/fonts/truetype/paratype/PTZ56F.ttf": {
+      "bytes": 340136,
+      "sha256": "9081b557ec4e3d1938df9a6b74ada5fa802595161713934b19bc9ac6e4cac0b7"
+    },
+    "/usr/share/fonts/truetype/noto/NotoSansKhudawadi-Regular.ttf": {
+      "bytes": 19056,
+      "sha256": "6f53c75ea5477f4ad68d32eff8d2cc0d0ec21600744c0804f3c6ad4f29006541"
+    },
+    "/usr/share/fonts/truetype/stix/STIXTwoText-MediumItalic.ttf": {
+      "bytes": 427048,
+      "sha256": "c25aec1b2b25dce4bb13dd1047384a736100786d4f89ad1a70644b5284aae537"
+    },
+    "/usr/share/fonts/truetype/lato/Lato-Semibold.ttf": {
+      "bytes": 669228,
+      "sha256": "2dc5d31e2cf1e29f3430eb2dfa1ba9911e08ee401b61dd12f40e0acb047a17a3"
+    },
+    "/usr/share/fonts/truetype/noto/NotoSerifKhmer-Bold.ttf": {
+      "bytes": 148960,
+      "sha256": "642cc0a8da68b6a2cb53017144eff68057c6731c42f5829601d15a25f28a9221"
+    },
+    "/usr/share/texmf/fonts/opentype/public/lm/lmsans9-regular.otf": {
+      "bytes": 94552,
+      "sha256": "80ef596460b7b402621780f7cd73a348efedc4cd2c6deca37da58f07ee61b85d"
+    },
+    "/usr/share/fonts/truetype/dejavu/DejaVuSans-Oblique.ttf": {
+      "bytes": 637648,
+      "sha256": "e6bb3d31b3afd8070753da4bac76ac6f97d99743d0bf070d7fe01336a1f1ae42"
+    },
+    "/usr/share/fonts/truetype/noto/NotoSansCherokee-Regular.ttf": {
+      "bytes": 94592,
+      "sha256": "bda37783ba22f62d71a647f5ddce6f8e4b4d6959eba3afd5a7eccbcaaa85f72c"
+    },
+    "/usr/share/fonts/truetype/clear-sans/ClearSans-Medium.ttf": {
+      "bytes": 313308,
+      "sha256": "93677acbadea77e254b491589812f1e218a97adcd10a4957622b8c7a86e14181"
+    },
+    "/usr/share/fonts/truetype/noto/NotoSansTaiLe-Regular.ttf": {
+      "bytes": 19796,
+      "sha256": "a2cde56384066013cf1efafc5d3cfc142b9a0d10c77c7e1f8ee2880cbe121d4c"
+    },
+    "/usr/share/fonts/truetype/noto/NotoColorEmoji.ttf": {
+      "bytes": 11020136,
+      "sha256": "9fd0a3d0ce84d77e3185dfbae77bd1abf3926aa49a032e354d076c4f17151f10"
+    },
+    "/usr/share/fonts/truetype/dejavu/DejaVuSerifCondensed-Bold.ttf": {
+      "bytes": 331820,
+      "sha256": "5c1e7bd74154206816ac85a9544831753e09ebf573c374500ede873ea2c1344f"
+    },
+    "/usr/share/fonts/truetype/noto/NotoSerifMalayalam-Bold.ttf": {
+      "bytes": 111200,
+      "sha256": "f76f82ffac39f7490b3608761b14e8c416aa4554b1591725de86d36ab51745b4"
+    },
+    "/usr/share/fonts/opentype/urw-base35/URWGothic-Demi.otf": {
+      "bytes": 83580,
+      "sha256": "5b009410cf5231dcb1e45b155c1afedcfc63d82042fd8c414d0dd7705c9fbbae"
+    },
+    "/usr/share/fonts/truetype/adf/AccanthisADFStd-Regular.otf": {
+      "bytes": 51728,
+      "sha256": "1b1dc599e4cd0270a3e3ec83fc8da18a21d9d69243732911e2153b977563ed89"
+    },
+    "/usr/share/fonts/truetype/noto/NotoSansLepcha-Regular.ttf": {
+      "bytes": 24456,
+      "sha256": "168771a2b64da0214bc92d0b93c20f910685b6b4107405fb57ce7ede438fe9d9"
+    },
+    "/usr/share/fonts/opentype/linux-libertine/LinBiolinum_RI.otf": {
+      "bytes": 617656,
+      "sha256": "320a008227096838c8d88dafd6974abbbf72b084a2caf27ac03cdf4449b30e5c"
+    },
+    "/usr/share/fonts/truetype/noto/NotoSansMono-Regular.ttf": {
+      "bytes": 510612,
+      "sha256": "6b692c4b6d15ccf59f1c1fe8d11cb8a92f51960f3e9f1f523781755a3af7e29f"
+    },
+    "/usr/share/fonts/truetype/noto/NotoSerif-Italic.ttf": {
+      "bytes": 637472,
+      "sha256": "bc25600aa27cd409e1e5b3d86340df3a329bb860fcfbe57a03a95070b229e1b0"
+    },
+    "/usr/share/fonts/truetype/noto/NotoSansSogdian-Regular.ttf": {
+      "bytes": 101648,
+      "sha256": "4a24b96ed2905d7257818e3db02a300a283e909448ccf967efa434e5e45bade8"
+    },
+    "/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf": {
+      "bytes": 708920,
+      "sha256": "e1d733afbbfce842a1b43dced0c9885a76a4e67290dc7e690c4e9b76ebfc7d23"
+    },
+    "/usr/share/fonts/truetype/noto/NotoSansSundanese-Regular.ttf": {
+      "bytes": 22888,
+      "sha256": "eff2b13deacba332b2ddbfebee7dce77cb999d99fb2e342d6027fce71902669b"
+    },
+    "/usr/share/fonts/truetype/gentium-basic/GenBkBasB.ttf": {
+      "bytes": 267024,
+      "sha256": "37fc25b7916e4055ffff0b9bda2b9a9efe7d3404773339fa8cde00a15d5589a9"
+    },
+    "/usr/share/fonts/truetype/open-sans/OpenSans-Semibold.ttf": {
+      "bytes": 221328,
+      "sha256": "aa3b0ef53db12e3d45094030cac0e69d384e44cc5978643dd4390041cad546e2"
+    },
+    "/usr/share/fonts/truetype/stix/STIXTwoText-Medium.ttf": {
+      "bytes": 397140,
+      "sha256": "b4e1e8e889ce42836b5d20dd75981b0f531cf43d93be3cd41ec5eb1b79584d04"
+    },
+    "/usr/share/texmf/fonts/opentype/public/lm/lmmonolt10-oblique.otf": {
+      "bytes": 73144,
+      "sha256": "f19451a27c178d48b99921e72ff6acf568f670bf58c71c6dd506b1f96a2d9c9e"
+    },
+    "/usr/share/texmf/fonts/opentype/public/lm/lmroman17-regular.otf": {
+      "bytes": 110248,
+      "sha256": "ed048c80fb4b67663b80899b89fe5fba17d7442e1286d61fd08fe5689c6b7c3c"
+    },
+    "/usr/share/fonts/woff/material-design-icons-iconfont/MaterialIcons-Regular.woff": {
+      "bytes": 160576,
+      "sha256": "11ec382a38dccab945e4d039c5844bd57dfce602a7adebcd19879e40a1be8126"
+    },
+    "/usr/share/fonts/type1/urw-base35/URWBookman-LightItalic.t1": {
+      "bytes": 143233,
+      "sha256": "ab7166058aefa485d11109195a0736633c17e5ad2164083492d94418ee0a657e"
+    },
+    "/usr/share/fonts/truetype/liberation/LiberationSerif-Bold.ttf": {
+      "bytes": 370196,
+      "sha256": "bb033fae52dcbf67a55494a08829aaa788324624d72a195af7f93da3061c928f"
+    },
+    "/usr/share/fonts/truetype/dejavu/DejaVuSerifCondensed-BoldItalic.ttf": {
+      "bytes": 347076,
+      "sha256": "1875f0ddf38fc49805c8fd6a1e033bc43c6b25a347f452ed7296a5a30549d6b3"
+    },
+    "/usr/share/fonts/truetype/open-sans/OpenSans-CondLightItalic.ttf": {
+      "bytes": 210804,
+      "sha256": "78192c6fac88767e8ea1d2b8971af5e9af617f6375bf50b39ead92841f90337c"
+    },
+    "/usr/share/fonts/truetype/paratype/PTS76F.ttf": {
+      "bytes": 345476,
+      "sha256": "fe325df7f1de2195db8faf13aad2376222a9b1257b178ceba1b1ec3c12fbd37a"
+    },
+    "/usr/share/fonts/type1/urw-base35/P052-Bold.t1": {
+      "bytes": 162196,
+      "sha256": "8e56ad1e6b08c6c931d4ff93fa4388abc6ea5be8c6a0ab23d0fdf9a504c1cdba"
+    },
+    "/usr/share/texmf/fonts/opentype/public/lm/lmsans8-regular.otf": {
+      "bytes": 94256,
+      "sha256": "04f0d25ca474494cb707e752170f6c22cdcb8ae2b5fb80872143e18d5cc463f8"
+    }
+  },
+  "configs": {
+    "/etc/fonts/conf.d/10-hinting-slight.conf": {
+      "bytes": 620,
+      "sha256": "d138eca2bac3f78d45ff7cfb649ad792caa4a6e61f73cea7cf0ea54b091f1ef4"
+    },
+    "/etc/fonts/conf.d/10-scale-bitmap-fonts.conf": {
+      "bytes": 2068,
+      "sha256": "df8e99abb6f82384c61978906a45a95794940545da95790d87f01d9391e0894b"
+    },
+    "/etc/fonts/conf.d/10-sub-pixel-rgb.conf": {
+      "bytes": 672,
+      "sha256": "e4cfc04f5fc5093d2ba20c40f8709c9dfc099997313d0f96bc8256597a15d057"
+    },
+    "/etc/fonts/conf.d/10-yes-antialias.conf": {
+      "bytes": 258,
+      "sha256": "e6d82a642d1b37f7d24dc37f938b999f00ff7aa4303b2602d04164d53f221005"
+    },
+    "/etc/fonts/conf.d/11-lcdfilter-default.conf": {
+      "bytes": 695,
+      "sha256": "76aec9d8dac48faabe1bbde9e887cfb09fa45f30be5f8826e945a394a0097e48"
+    },
+    "/etc/fonts/conf.d/20-unhint-small-dejavu-lgc-sans-mono.conf": {
+      "bytes": 874,
+      "sha256": "0a6b0f1c1f5d1c06a811b517a3d2690700bba8e961cd55dd2c7648cde3605a21"
+    },
+    "/etc/fonts/conf.d/20-unhint-small-dejavu-lgc-sans.conf": {
+      "bytes": 864,
+      "sha256": "144619057c0a040de247c74cf09f230d737b9c1c534f3ba8804fdd3ddeded8b0"
+    },
+    "/etc/fonts/conf.d/20-unhint-small-dejavu-lgc-serif.conf": {
+      "bytes": 866,
+      "sha256": "977c24eb43f10d21263bbdb624649e5edf63147bd7bb4f84db97ce7d53bb9054"
+    },
+    "/etc/fonts/conf.d/20-unhint-small-dejavu-sans-mono.conf": {
+      "bytes": 866,
+      "sha256": "3e90c9c36beef46f10d1529251f8683b9c4ac900695adbb4a23a4b6036f938a5"
+    },
+    "/etc/fonts/conf.d/20-unhint-small-dejavu-sans.conf": {
+      "bytes": 856,
+      "sha256": "0d9c177b6a85daa9957ed6750d4eb26122604da18d340e7ba31e6f4d24f963ed"
+    },
+    "/etc/fonts/conf.d/20-unhint-small-dejavu-serif.conf": {
+      "bytes": 858,
+      "sha256": "68777b1705ec7a05a86430def4be093668e84e305cc7e11291df52403a7318cc"
+    },
+    "/etc/fonts/conf.d/20-unhint-small-vera.conf": {
+      "bytes": 1377,
+      "sha256": "278732c68c16177f2aa3c7e4ea318b9f720aee13a433c32eb15ba626806c609d"
+    },
+    "/etc/fonts/conf.d/30-cjk-aliases.conf": {
+      "bytes": 16017,
+      "sha256": "999e51342e8ae1fc41a084a73d8474f2704e5904a26d85254e59f7e5c4b399eb"
+    },
+    "/etc/fonts/conf.d/30-comic-sans.conf": {
+      "bytes": 218,
+      "sha256": "ec204d4e8d8330cc2ec063208741ab01779547506f90d487962c45c441930f6c"
+    },
+    "/etc/fonts/conf.d/30-intel-clear.conf": {
+      "bytes": 216,
+      "sha256": "ca728b66a76e0eff9fc2ae1a59d1f6f1f0d92445beef4a19f1331586907f5113"
+    },
+    "/etc/fonts/conf.d/30-metric-aliases.conf": {
+      "bytes": 13610,
+      "sha256": "3baf25c82e1a14c606d45c212296852be06ae9795d60e84aab573226151450a2"
+    },
+    "/etc/fonts/conf.d/40-nonlatin.conf": {
+      "bytes": 7981,
+      "sha256": "9c56aeed6490db1d29602d7f8e028742b5e7a0268eaaa60de2fde582c6403715"
+    },
+    "/etc/fonts/conf.d/45-generic.conf": {
+      "bytes": 3490,
+      "sha256": "24de9f68189d544bb4cc084d9bd8f3a59d8b988a9dc44b11e9877d5add5fc948"
+    },
+    "/etc/fonts/conf.d/45-latin.conf": {
+      "bytes": 7258,
+      "sha256": "b46e539c25dfd5531c8fcf4f22c3d156b09272ffbc6f8a83a8eeb7431c09aee5"
+    },
+    "/etc/fonts/conf.d/48-spacing.conf": {
+      "bytes": 441,
+      "sha256": "99d839cd8aa28854e8f54f26e7200b6e57951f39f56791a0ed473662488bcef6"
+    },
+    "/etc/fonts/conf.d/49-sansserif.conf": {
+      "bytes": 639,
+      "sha256": "7849a11ce5243e8bb3d06bcad558737a8682e5122e73c8e427f4c011a2054818"
+    },
+    "/etc/fonts/conf.d/50-user.conf": {
+      "bytes": 542,
+      "sha256": "bc6e31684e4f5e0176200e558a250ff63e9ab0773300f47071223edc320c4c5e"
+    },
+    "/etc/fonts/conf.d/51-local.conf": {
+      "bytes": 263,
+      "sha256": "dca9d917e1f66f73bfa495943b4d1eaab2d93810a51bc8e600cf4d4e9df03e67"
+    },
+    "/etc/fonts/conf.d/56-language-selector-prefer.conf": {
+      "bytes": 6870,
+      "sha256": "8cb60d6a9315e2dddbc268bd15f7c1a3da91df8c7c9fff9d9ccc589926cf7370"
+    },
+    "/etc/fonts/conf.d/57-dejavu-sans-mono.conf": {
+      "bytes": 1201,
+      "sha256": "1f2ead86f8203d809abfc9d88d92b04316edd67b6291795ea74ea8a0c3c2e04d"
+    },
+    "/etc/fonts/conf.d/57-dejavu-sans.conf": {
+      "bytes": 1711,
+      "sha256": "f6285e2d336f93086acfa2ac7895ef75ef5ff34f833ba5a63c09fb2841aedc27"
+    },
+    "/etc/fonts/conf.d/57-dejavu-serif.conf": {
+      "bytes": 1357,
+      "sha256": "7c596f7e202090ded38fded904c4a17d5a189b6c9cc914a2e88554116f6474ca"
+    },
+    "/etc/fonts/conf.d/58-dejavu-lgc-sans-mono.conf": {
+      "bytes": 1545,
+      "sha256": "807e5222c6d11a72ad527ebc088f42daf2a807e7718c8f7ff227cbfecafd3d70"
+    },
+    "/etc/fonts/conf.d/58-dejavu-lgc-sans.conf": {
+      "bytes": 2063,
+      "sha256": "ecde2093f005c73d7da21cdd7b80c791910050609db36cb5eea84a4ba8da5cef"
+    },
+    "/etc/fonts/conf.d/58-dejavu-lgc-serif.conf": {
+      "bytes": 1689,
+      "sha256": "e685632c3edbb6868a7ca5275e7c71f25486a8cfd16113a478194a5631205619"
+    },
+    "/etc/fonts/conf.d/60-generic.conf": {
+      "bytes": 1911,
+      "sha256": "195bc8605dd23289d42c10d79cc13a5ce4a4b3cf965df5b30ecc0b7149bb951f"
+    },
+    "/etc/fonts/conf.d/60-latin.conf": {
+      "bytes": 2199,
+      "sha256": "14dc2bfaff9ad3cfda5050870364b30cd3331f385311635759d6dca90e8c0c54"
+    },
+    "/etc/fonts/conf.d/61-urw-bookman.conf": {
+      "bytes": 1021,
+      "sha256": "bf4b9e3b9ad7df22d2de13ba3988caa51af77bf1e691c84e6f70b1f3cd90c1f3"
+    },
+    "/etc/fonts/conf.d/61-urw-c059.conf": {
+      "bytes": 1124,
+      "sha256": "a2b8bca6be54cb95cebcfdf37ccd30b484a92c352d08ecd19af0180624afce5c"
+    },
+    "/etc/fonts/conf.d/61-urw-d050000l.conf": {
+      "bytes": 732,
+      "sha256": "74ef8dd5e6efca12c9061c486bb7f823486aae94433cc5e230fb67ae46c2d1bc"
+    },
+    "/etc/fonts/conf.d/61-urw-fallback-backwards.conf": {
+      "bytes": 3257,
+      "sha256": "43cc53d3d237db875169473bafb2cdbef749f1374b7619af54889c9e759352ee"
+    },
+    "/etc/fonts/conf.d/61-urw-fallback-generics.conf": {
+      "bytes": 2727,
+      "sha256": "de9e5b2783e2bc00065b7de27ac9efa0a667b996578c5a8926f712d9f67d13b9"
+    },
+    "/etc/fonts/conf.d/61-urw-gothic.conf": {
+      "bytes": 913,
+      "sha256": "bdb22104fb4980a1a2b14e5e9ecdd4f4d8339b42f7164de6afa8b4301f6ad95c"
+    },
+    "/etc/fonts/conf.d/61-urw-nimbus-mono-ps.conf": {
+      "bytes": 899,
+      "sha256": "40aa886614eea2f019420dc8f1844aaeef553aee30c36c8c468880f11def388f"
+    },
+    "/etc/fonts/conf.d/61-urw-nimbus-roman.conf": {
+      "bytes": 877,
+      "sha256": "7ce10a11b1385a85540fef15499bf8dd462fe95d773f20329f0c065d168462b7"
+    },
+    "/etc/fonts/conf.d/61-urw-nimbus-sans.conf": {
+      "bytes": 1572,
+      "sha256": "375ec83653a4dd3f6b088a334600bd3604a925e84e34cb5c5b47bf26b0442623"
+    },
+    "/etc/fonts/conf.d/61-urw-p052.conf": {
+      "bytes": 975,
+      "sha256": "6e290be00629b12668baae0c2c620654d1131038d9dc6125bd49bb807b2b7ba6"
+    },
+    "/etc/fonts/conf.d/61-urw-standard-symbols-ps.conf": {
+      "bytes": 1061,
+      "sha256": "5ab1a4f3128046c6273eb29e38f46f4460368b2835ec2daf78ddbc33cf369751"
+    },
+    "/etc/fonts/conf.d/61-urw-z003.conf": {
+      "bytes": 865,
+      "sha256": "f432bc765828b4b18e49a9f3d99fcd7af67dff9394a16f4ea2a129fbd53dc364"
+    },
+    "/etc/fonts/conf.d/64-language-selector-cjk-prefer.conf": {
+      "bytes": 847,
+      "sha256": "393882b8ccc78aee3c2174b10970496f604d81176787e45392320bb865622b38"
+    },
+    "/etc/fonts/conf.d/65-droid-sans-fallback.conf": {
+      "bytes": 202,
+      "sha256": "b772850650173e418b6a92a13c36e00c2e7a24043d729b2468a990e7ba7ce9d1"
+    },
+    "/etc/fonts/conf.d/65-fonts-lmodern.conf": {
+      "bytes": 2838,
+      "sha256": "dc252715b7a0e1988a895268543f2552fdc35afec39cdfd0db9d838184c1ef42"
+    },
+    "/etc/fonts/conf.d/65-fonts-persian.conf": {
+      "bytes": 10132,
+      "sha256": "c675fab143a3638346874798be45f51f6878ebec591b4362d83cfffb828ec4ca"
+    },
+    "/etc/fonts/conf.d/65-fonts-texgyre-math.conf": {
+      "bytes": 155,
+      "sha256": "bd24a4b42d3092f775238c999cc363f442aaf3654042c4b16004b878b97c1eb9"
+    },
+    "/etc/fonts/conf.d/65-fonts-texgyre.conf": {
+      "bytes": 1703,
+      "sha256": "514d3e04560f6daabd1edee666473bf3e9888cd282cf612caf361255438ddca6"
+    },
+    "/etc/fonts/conf.d/65-nonlatin.conf": {
+      "bytes": 9847,
+      "sha256": "ed3ef35f996f16cbd6829bc165246e9e94e4980e7ab2f9b283e27585bd2a3c5a"
+    },
+    "/etc/fonts/conf.d/69-language-selector-ja.conf": {
+      "bytes": 819,
+      "sha256": "181e83241c3099ec6c4149606592b9a4055ceb5384de172e42c0d110b49689ed"
+    },
+    "/etc/fonts/conf.d/69-language-selector-zh-cn.conf": {
+      "bytes": 1737,
+      "sha256": "981ec34e217822271b144e999822a0a181d7005a76df4a81aae3ef1db8686a82"
+    },
+    "/etc/fonts/conf.d/69-language-selector-zh-hk.conf": {
+      "bytes": 1551,
+      "sha256": "7b9b662a9e0530993eb4a6dc1c50b0ddb6f13c32c06cce9968325b8ad213bade"
+    },
+    "/etc/fonts/conf.d/69-language-selector-zh-mo.conf": {
+      "bytes": 1636,
+      "sha256": "54a26b1b55610ab35d83d0f8761b3890d40030129867d4e3ead4445d86090b4d"
+    },
+    "/etc/fonts/conf.d/69-language-selector-zh-sg.conf": {
+      "bytes": 1737,
+      "sha256": "3376539295efaff06446dc3de2c5cda8da6284c7d210e935b405d0d9cac8593f"
+    },
+    "/etc/fonts/conf.d/69-language-selector-zh-tw.conf": {
+      "bytes": 2120,
+      "sha256": "4041241462fcdb3d3a95d6d9ab7a4aaed21c66e5c30a06029939635d9bc27355"
+    },
+    "/etc/fonts/conf.d/69-unifont.conf": {
+      "bytes": 687,
+      "sha256": "fa97c0cf5f79d70e2dc3dc48155d4c9220cd7c6a8bc95b89c4ebcc517f97479e"
+    },
+    "/etc/fonts/conf.d/70-fonts-noto-cjk.conf": {
+      "bytes": 4904,
+      "sha256": "2417ac0e6720fe8da55ee59f16e36cfe96737bc21432460a322bb0f395e3a521"
+    },
+    "/etc/fonts/conf.d/70-no-bitmaps-except-emoji.conf": {
+      "bytes": 429,
+      "sha256": "bb5df65896bf3011b2f2935b63ab12db1ecf078674ff73a533123445f122a92b"
+    },
+    "/etc/fonts/conf.d/71-ubuntulegacy.conf": {
+      "bytes": 1086,
+      "sha256": "fa4cc1918a287a1958dcbd9fa72514908aee11304b27df0687d504fcf8fae24a"
+    },
+    "/etc/fonts/conf.d/80-delicious.conf": {
+      "bytes": 437,
+      "sha256": "34f27b7fe9cd83b2b6d46f16ef9c477412f2d7ef63634f86b9b38b79bc4f81ad"
+    },
+    "/etc/fonts/conf.d/90-fonts-linux-libertine.conf": {
+      "bytes": 352,
+      "sha256": "34f20be0290dc003c8162ac347c053d5b91e3589f818bcbdc5b2b411850eac99"
+    },
+    "/etc/fonts/conf.d/90-synthetic.conf": {
+      "bytes": 1757,
+      "sha256": "cdd0aac7840c664a7127b64db66bdfe8dc22be3774d10bc22f4a41c98de5d85e"
+    },
+    "/etc/fonts/conf.d/99-language-selector-zh.conf": {
+      "bytes": 1857,
+      "sha256": "ef4066201648e08522dcc9a3739f33c1231167985fc3c5e8a870abad45927bf5"
+    },
+    "/etc/fonts/fonts.conf": {
+      "bytes": 2940,
+      "sha256": "93a23ba073996edb8b42d6c89ebc2ec5fd2101ce82cb65ba0db358dabf55ca22"
+    }
+  }
+}

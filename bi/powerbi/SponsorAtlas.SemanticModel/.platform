@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "SemanticModel",
+    "displayName": "SponsorAtlas"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "ccad9dee-a09f-57eb-b291-365287031f54"
+  }
+}

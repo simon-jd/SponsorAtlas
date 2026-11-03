@@ -1,0 +1,32 @@
+/*! tailwindcss v4.3.3 | MIT License | https://tailwindcss.com */
+@layer properties;
+.rounded-md {
+  border-radius: var(--sa-radius-md);
+}
+.bg-surface {
+  background-color: var(--sa-color-surface);
+}
+.p-4 {
+  padding: var(--sa-space-4);
+}
+.text-lg {
+  font-size: var(--sa-font-size-lg);
+}
+.text-ink {
+  color: var(--sa-color-ink);
+}
+.duration-fast {
+  --tw-duration: var(--sa-motion-fast);
+  transition-duration: var(--sa-motion-fast);
+}
+@property --tw-duration {
+  syntax: "*";
+  inherits: false;
+}
+@layer properties {
+  @supports ((-webkit-hyphens: none) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color:rgb(from red r g b)))) {
+    *, ::before, ::after, ::backdrop {
+      --tw-duration: initial;
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "status": "SUCCEEDED",
+  "nproc": 32,
+  "load_before": [
+    5.35302734375,
+    6.318359375,
+    5.419921875
+  ],
+  "steps": [
+    {
+      "name": "er_export",
+      "exit_code": 0,
+      "seconds": 4.114,
+      "load_after": [
+        5.35302734375,
+        6.318359375,
+        5.419921875
+      ]
+    }
+  ],
+  "seconds": 4.114
+}

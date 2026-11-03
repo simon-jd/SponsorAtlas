@@ -1,0 +1,28 @@
+[
+  {
+    "service": "sponsoratlas_local_public_facts_duckdb",
+    "artifacts": "/home/postedism/Desktop/SponsorAtlas/.tools/governance/public-facts-artifacts-fy2025",
+    "database": "/home/postedism/Desktop/SponsorAtlas/.tools/facts/fy2025-full.duckdb",
+    "build": "/home/postedism/Desktop/SponsorAtlas/.tools/orchestration/backfill-fy2025/dbt_facts/target",
+    "copied": {
+      "manifest.json": "eee87818f1ce52a63c02b94ca282910ec09c10ef65f04e471e6a8c3fc494deac",
+      "run_results.json": "954ad848fc80268fdbf25fda1992d01700c5271fc2ec9d143da7607d55de475b"
+    },
+    "catalog_sha256": "07484cd5ec0ca6da358cf76d71169f0e8427550e9683e04e2c146426487c011a",
+    "catalog_nodes": 19,
+    "catalog_sources": 8
+  },
+  {
+    "service": "sponsoratlas_local_public_staging_duckdb",
+    "artifacts": "/home/postedism/Desktop/SponsorAtlas/.tools/governance/public-staging-artifacts-fy2025",
+    "database": "/home/postedism/Desktop/SponsorAtlas/.tools/staging/fy2025-full.duckdb",
+    "build": "/home/postedism/Desktop/SponsorAtlas/.tools/orchestration/backfill-fy2025/dbt_staging/target",
+    "copied": {
+      "manifest.json": "7e229308db351f632ea75060dd3a9c5a5a51bdd430e944cc3e6ffcb7658fa65b",
+      "run_results.json": "cb7f84f1e432ff9c5e5252291c84a3daee585534ab72fbb3020f2d058bef3d9a"
+    },
+    "catalog_sha256": "a7d3d654e25912f1c15fa1f2bc36c5569be964716400c9f6aa14392fee6194cb",
+    "catalog_nodes": 22,
+    "catalog_sources": 14
+  }
+]

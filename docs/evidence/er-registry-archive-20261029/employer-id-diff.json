@@ -1,0 +1,16 @@
+{
+  "check": "full-year ER predict in INHERIT mode from the archived canonical registry vs the canonical INITIALIZE prediction",
+  "canonical_registry_sha256": "09b6d36f42cd379fa7a0381e7b1b6219d3ac47aec56ac865d9f5f0655cb7f431",
+  "input": ".tools/er/fy2025-backfill/input",
+  "model": ".tools/er/fy2025-backfill/model",
+  "records_canonical": 161596,
+  "records_inherit": 161596,
+  "same_unique_ids": true,
+  "employer_id_differences": 0,
+  "employers_inherit": 98188,
+  "machine": {
+    "nproc": 32,
+    "uptime_before": "load average: 5.15, 3.79, 3.01",
+    "note": "other projects' sessions were running"
+  }
+}

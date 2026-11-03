@@ -1,0 +1,11 @@
+packages:
+  - packages/*
+  - apps/*
+storeDir: .cache/pnpm-store
+cacheDir: .cache/pnpm
+packageImportMethod: hardlink
+updateNotifier: false
+supportedArchitectures:
+  os: [linux]
+  cpu: [x64]
+  libc: [glibc]

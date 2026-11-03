@@ -1,0 +1,1462 @@
+{
+  "entity": {
+    "id": "9d5b179b-d257-40ea-a69f-668d01df06b7",
+    "type": "table",
+    "name": "fact_lca_case",
+    "fullyQualifiedName": "sponsoratlas_local_public_facts_duckdb.fy2025-full.MARTS.fact_lca_case",
+    "description": "One latest case; capture-time history is not backfilled.",
+    "displayName": "fact_lca_case",
+    "deleted": false,
+    "href": "http://localhost:8585/api/v1/tables/9d5b179b-d257-40ea-a69f-668d01df06b7"
+  },
+  "nodes": [
+    {
+      "id": "48b36bb9-00ac-4f8b-a621-1da3deed9283",
+      "type": "table",
+      "name": "int_lca_case_candidates",
+      "fullyQualifiedName": "sponsoratlas_local_public_facts_duckdb.fy2025-full.INTERMEDIATE.int_lca_case_candidates",
+      "displayName": "int_lca_case_candidates",
+      "deleted": false,
+      "href": "http://localhost:8585/api/v1/tables/48b36bb9-00ac-4f8b-a621-1da3deed9283"
+    },
+    {
+      "id": "bfa06e7c-07ca-407c-9a1b-1ead49ea1b14",
+      "type": "table",
+      "name": "dim_employer",
+      "fullyQualifiedName": "sponsoratlas_local_public_facts_duckdb.fy2025-full.MARTS.dim_employer",
+      "displayName": "dim_employer",
+      "deleted": false,
+      "href": "http://localhost:8585/api/v1/tables/bfa06e7c-07ca-407c-9a1b-1ead49ea1b14"
+    },
+    {
+      "id": "1e5bb1c3-91d5-493b-a510-fbb7f9259105",
+      "type": "table",
+      "name": "dim_date",
+      "fullyQualifiedName": "sponsoratlas_local_public_facts_duckdb.fy2025-full.MARTS.dim_date",
+      "displayName": "dim_date",
+      "deleted": false,
+      "href": "http://localhost:8585/api/v1/tables/1e5bb1c3-91d5-493b-a510-fbb7f9259105"
+    },
+    {
+      "id": "b36f8548-fee1-4e9f-aa14-a09ee6a2a3f7",
+      "type": "table",
+      "name": "lca",
+      "fullyQualifiedName": "sponsoratlas_local_public_facts_duckdb.fy2025-full.FACTS_INPUT.lca",
+      "displayName": "lca",
+      "deleted": false,
+      "href": "http://localhost:8585/api/v1/tables/b36f8548-fee1-4e9f-aa14-a09ee6a2a3f7"
+    },
+    {
+      "id": "76340ce5-dc66-4127-8137-b83c1904e422",
+      "type": "table",
+      "name": "int_dimension_mapping",
+      "fullyQualifiedName": "sponsoratlas_local_public_facts_duckdb.fy2025-full.INTERMEDIATE.int_dimension_mapping",
+      "displayName": "int_dimension_mapping",
+      "deleted": false,
+      "href": "http://localhost:8585/api/v1/tables/76340ce5-dc66-4127-8137-b83c1904e422"
+    },
+    {
+      "id": "fee78c26-41a7-4663-9c57-4d73f7046d56",
+      "type": "table",
+      "name": "stg_lca",
+      "fullyQualifiedName": "sponsoratlas_local_public_staging_duckdb.fy2025-full.STAGING.stg_lca",
+      "description": "One file release/hash/source-row; original payload retained. LCA is an application, not approval or a sponsorship promise. Annual wage assumes 2080h/52wk/26biweekly/12mo.",
+      "displayName": "stg_lca",
+      "deleted": false,
+      "href": "http://localhost:8585/api/v1/tables/fee78c26-41a7-4663-9c57-4d73f7046d56"
+    },
+    {
+      "id": "5f8e979d-fb2c-4c2d-8722-5b3597216b03",
+      "type": "table",
+      "name": "lca_attributes",
+      "fullyQualifiedName": "sponsoratlas_local_public_facts_duckdb.fy2025-full.DIMENSIONS_INPUT.lca_attributes",
+      "displayName": "lca_attributes",
+      "deleted": false,
+      "href": "http://localhost:8585/api/v1/tables/5f8e979d-fb2c-4c2d-8722-5b3597216b03"
+    },
+    {
+      "id": "9a270c11-e781-4bbe-b36a-e5a619a6ec41",
+      "type": "table",
+      "name": "employer_sources",
+      "fullyQualifiedName": "sponsoratlas_local_public_facts_duckdb.fy2025-full.DIMENSIONS_INPUT.employer_sources",
+      "displayName": "employer_sources",
+      "deleted": false,
+      "href": "http://localhost:8585/api/v1/tables/9a270c11-e781-4bbe-b36a-e5a619a6ec41"
+    },
+    {
+      "id": "d21eb003-0812-48e9-93d1-b647de739cab",
+      "type": "table",
+      "name": "dim_occupation",
+      "fullyQualifiedName": "sponsoratlas_local_public_facts_duckdb.fy2025-full.MARTS.dim_occupation",
+      "displayName": "dim_occupation",
+      "deleted": false,
+      "href": "http://localhost:8585/api/v1/tables/d21eb003-0812-48e9-93d1-b647de739cab"
+    },
+    {
+      "id": "4c71d98d-40af-46b0-96f5-f66e8e72a987",
+      "type": "table",
+      "name": "dim_geography",
+      "fullyQualifiedName": "sponsoratlas_local_public_facts_duckdb.fy2025-full.MARTS.dim_geography",
+      "displayName": "dim_geography",
+      "deleted": false,
+      "href": "http://localhost:8585/api/v1/tables/4c71d98d-40af-46b0-96f5-f66e8e72a987"
+    },
+    {
+      "id": "5fa68f82-f4b1-4bf0-b0cd-8038124399a4",
+      "type": "table",
+      "name": "snap_employer",
+      "fullyQualifiedName": "sponsoratlas_local_public_facts_duckdb.fy2025-full.SNAPSHOTS.snap_employer",
+      "displayName": "snap_employer",
+      "deleted": false,
+      "href": "http://localhost:8585/api/v1/tables/5fa68f82-f4b1-4bf0-b0cd-8038124399a4"
+    }
+  ],
+  "upstreamEdges": [
+    {
+      "fromEntity": "48b36bb9-00ac-4f8b-a621-1da3deed9283",
+      "toEntity": "9d5b179b-d257-40ea-a69f-668d01df06b7",
+      "lineageDetails": {
+        "sqlQuery": "create table \"fy2025-full\".\"MARTS\".\"fact_lca_case\" as\n\nwith winners as (\n select * from \"fy2025-full\".\"INTERMEDIATE\".\"int_lca_case_candidates\"\n where nullif(trim(case_number),?) is not null\n qualify row_number() over(partition by case_number order by winner_rank)=?\n), history as (\n select w.case_number,count(d.employer_key) as matching_versions,max(d.employer_key) as employer_key\n from winners w left join \"fy2025-full\".\"MARTS\".\"dim_employer\" d\n on w.employer_id=d.employer_id and d.valid_from<=cast(w.decision_date as timestamp)\n and (d.valid_to is null or d.valid_to>=cast(w.decision_date as timestamp)+interval ?)\n group by w.case_number\n), first_capture as (\n select employer_id,min(valid_from) as first_valid_from from \"fy2025-full\".\"MARTS\".\"dim_employer\" group by employer_id\n)\nselect w.case_number,w.case_status,w.case_status like ? as is_certified,\n w.visa_class,w.job_title,w.employer_name as source_employer_name,w.source_employer_key,\n w.employer_id,case when h.matching_versions=? then h.employer_key end as employer_key,\n case when w.employer_id is null then ?\n when w.decision_date is null then ?\n when cast(w.decision_date as timestamp)+interval ?<=f.first_valid_from then ?\n when h.matching_versions=? then ?\n else ? end as employer_history_status,\n ? as fact_time_precision,w.occupation_key,w.geography_key,\n d.date_key as decision_date_key,w.decision_date,w.received_date,w.begin_date,w.end_date,\n w.soc_code_raw,w.soc_code,w.occupation_mapping_status,w.county_mapping_status,\n w.wage_amount,w.wage_unit,cast(w.annual_wage as decimal(?,?)) as annual_wage,\n cast(w.worker_positions as decimal(?,?)) as worker_positions,\n w.source_system,w.source_release,w.source_sha256,w.source_url,w.source_row_number,w.fiscal_year,\n w.worksite_state,\n cast(w.source_occurrence_count as bigint) as source_occurrence_count,\n case when w.chronological_tie_count>? then ? else ? end as latest_selection_status\nfrom winners w join history h using(case_number)\nleft join first_capture f on w.employer_id=f.employer_id\nleft join \"fy2025-full\".\"MARTS\".\"dim_date\" d on w.decision_date=d.calendar_date",
+        "columnsLineage": [
+          {
+            "fromColumns": [
+              "sponsoratlas_local_public_facts_duckdb.fy2025-full.INTERMEDIATE.int_lca_case_candidates.case_status"
+            ],
+            "toColumn": "sponsoratlas_local_public_facts_duckdb.fy2025-full.MARTS.fact_lca_case.is_certified"
+          },
+          {
+            "fromColumns": [
+              "sponsoratlas_local_public_facts_duckdb.fy2025-full.INTERMEDIATE.int_lca_case_candidates.received_date"
+            ],
+            "toColumn": "sponsoratlas_local_public_facts_duckdb.fy2025-full.MARTS.fact_lca_case.received_date"
+          },
+          {
+            "fromColumns": [
+              "sponsoratlas_local_public_facts_duckdb.fy2025-full.INTERMEDIATE.int_lca_case_candidates.decision_date"
+            ],
+            "toColumn": "sponsoratlas_local_public_facts_duckdb.fy2025-full.MARTS.fact_lca_case.decision_date"
+          },
+          {
+            "fromColumns": [
+              "sponsoratlas_local_public_facts_duckdb.fy2025-full.INTERMEDIATE.int_lca_case_candidates.source_row_number"
+            ],
+            "toColumn": "sponsoratlas_local_public_facts_duckdb.fy2025-full.MARTS.fact_lca_case.source_row_number"
+          },
+          {
+            "fromColumns": [
+              "sponsoratlas_local_public_facts_duckdb.fy2025-full.INTERMEDIATE.int_lca_case_candidates.visa_class"
+            ],
+            "toColumn": "sponsoratlas_local_public_facts_duckdb.fy2025-full.MARTS.fact_lca_case.visa_class"
+          },
+          {
+            "fromColumns": [
+              "sponsoratlas_local_public_facts_duckdb.fy2025-full.INTERMEDIATE.int_lca_case_candidates.case_status"
+            ],
+            "toColumn": "sponsoratlas_local_public_facts_duckdb.fy2025-full.MARTS.fact_lca_case.case_status"
+          },
+          {
+            "fromColumns": [
+              "sponsoratlas_local_public_facts_duckdb.fy2025-full.INTERMEDIATE.int_lca_case_candidates.fiscal_year"
+            ],
+            "toColumn": "sponsoratlas_local_public_facts_duckdb.fy2025-full.MARTS.fact_lca_case.fiscal_year"
+          },
+          {
+            "fromColumns": [
+              "sponsoratlas_local_public_facts_duckdb.fy2025-full.INTERMEDIATE.int_lca_case_candidates.chronological_tie_count"
+            ],
+            "toColumn": "sponsoratlas_local_public_facts_duckdb.fy2025-full.MARTS.fact_lca_case.latest_selection_status"
+          },
+          {
+            "fromColumns": [
+              "sponsoratlas_local_public_facts_duckdb.fy2025-full.INTERMEDIATE.int_lca_case_candidates.end_date"
+            ],
+            "toColumn": "sponsoratlas_local_public_facts_duckdb.fy2025-full.MARTS.fact_lca_case.end_date"
+          },
+          {
+            "fromColumns": [
+              "sponsoratlas_local_public_facts_duckdb.fy2025-full.INTERMEDIATE.int_lca_case_candidates.source_sha256"
+            ],
+            "toColumn": "sponsoratlas_local_public_facts_duckdb.fy2025-full.MARTS.fact_lca_case.source_sha256"
+          },
+          {
+            "fromColumns": [
+              "sponsoratlas_local_public_facts_duckdb.fy2025-full.INTERMEDIATE.int_lca_case_candidates.annual_wage"
+            ],
+            "toColumn": "sponsoratlas_local_public_facts_duckdb.fy2025-full.MARTS.fact_lca_case.annual_wage"
+          },
+          {
+            "fromColumns": [
+              "sponsoratlas_local_public_facts_duckdb.fy2025-full.INTERMEDIATE.int_lca_case_candidates.geography_key"
+            ],
+            "toColumn": "sponsoratlas_local_public_facts_duckdb.fy2025-full.MARTS.fact_lca_case.geography_key"
+          },
+          {
+            "fromColumns": [
+              "sponsoratlas_local_public_facts_duckdb.fy2025-full.INTERMEDIATE.int_lca_case_candidates.job_title"
+            ],
+            "toColumn": "sponsoratlas_local_public_facts_duckdb.fy2025-full.MARTS.fact_lca_case.job_title"
+          },
+          {
+            "fromColumns": [
+              "sponsoratlas_local_public_facts_duckdb.fy2025-full.INTERMEDIATE.int_lca_case_candidates.source_employer_key"
+            ],
+            "toColumn": "sponsoratlas_local_public_facts_duckdb.fy2025-full.MARTS.fact_lca_case.source_employer_key"
+          },
+          {
+            "fromColumns": [
+              "sponsoratlas_local_public_facts_duckdb.fy2025-full.INTERMEDIATE.int_lca_case_candidates.soc_code_raw"
+            ],
+            "toColumn": "sponsoratlas_local_public_facts_duckdb.fy2025-full.MARTS.fact_lca_case.soc_code_raw"
+          },
+          {
+            "fromColumns": [
+              "sponsoratlas_local_public_facts_duckdb.fy2025-full.INTERMEDIATE.int_lca_case_candidates.employer_id"
+            ],
+            "toColumn": "sponsoratlas_local_public_facts_duckdb.fy2025-full.MARTS.fact_lca_case.employer_history_status"
+          },
+          {
+            "fromColumns": [
+              "sponsoratlas_local_public_facts_duckdb.fy2025-full.INTERMEDIATE.int_lca_case_candidates.source_occurrence_count"
+            ],
+            "toColumn": "sponsoratlas_local_public_facts_duckdb.fy2025-full.MARTS.fact_lca_case.source_occurrence_count"
+          },
+          {
+            "fromColumns": [
+              "sponsoratlas_local_public_facts_duckdb.fy2025-full.INTERMEDIATE.int_lca_case_candidates.source_system"
+            ],
+            "toColumn": "sponsoratlas_local_public_facts_duckdb.fy2025-full.MARTS.fact_lca_case.source_system"
+          },
+          {
+            "fromColumns": [
+              "sponsoratlas_local_public_facts_duckdb.fy2025-full.INTERMEDIATE.int_lca_case_candidates.employer_id"
+            ],
+            "toColumn": "sponsoratlas_local_public_facts_duckdb.fy2025-full.MARTS.fact_lca_case.employer_id"
+          },
+          {
+            "fromColumns": [
+              "sponsoratlas_local_public_facts_duckdb.fy2025-full.INTERMEDIATE.int_lca_case_candidates.case_number"
+            ],
+            "toColumn": "sponsoratlas_local_public_facts_duckdb.fy2025-full.MARTS.fact_lca_case.case_number"
+          },
+          {
+            "fromColumns": [
+              "sponsoratlas_local_public_facts_duckdb.fy2025-full.INTERMEDIATE.int_lca_case_candidates.worker_positions"
+            ],
+            "toColumn": "sponsoratlas_local_public_facts_duckdb.fy2025-full.MARTS.fact_lca_case.worker_positions"
+          },
+          {
+            "fromColumns": [
+              "sponsoratlas_local_public_facts_duckdb.fy2025-full.INTERMEDIATE.int_lca_case_candidates.begin_date"
+            ],
+            "toColumn": "sponsoratlas_local_public_facts_duckdb.fy2025-full.MARTS.fact_lca_case.begin_date"
+          },
+          {
+            "fromColumns": [
+              "sponsoratlas_local_public_facts_duckdb.fy2025-full.INTERMEDIATE.int_lca_case_candidates.source_url"
+            ],
+            "toColumn": "sponsoratlas_local_public_facts_duckdb.fy2025-full.MARTS.fact_lca_case.source_url"
+          },
+          {
+            "fromColumns": [
+              "sponsoratlas_local_public_facts_duckdb.fy2025-full.INTERMEDIATE.int_lca_case_candidates.wage_unit"
+            ],
+            "toColumn": "sponsoratlas_local_public_facts_duckdb.fy2025-full.MARTS.fact_lca_case.wage_unit"
+          },
+          {
+            "fromColumns": [
+              "sponsoratlas_local_public_facts_duckdb.fy2025-full.INTERMEDIATE.int_lca_case_candidates.occupation_mapping_status"
+            ],
+            "toColumn": "sponsoratlas_local_public_facts_duckdb.fy2025-full.MARTS.fact_lca_case.occupation_mapping_status"
+          },
+          {
+            "fromColumns": [
+              "sponsoratlas_local_public_facts_duckdb.fy2025-full.INTERMEDIATE.int_lca_case_candidates.employer_name"
+            ],
+            "toColumn": "sponsoratlas_local_public_facts_duckdb.fy2025-full.MARTS.fact_lca_case.source_employer_name"
+          },
+          {
+            "fromColumns": [
+              "sponsoratlas_local_public_facts_duckdb.fy2025-full.INTERMEDIATE.int_lca_case_candidates.wage_amount"
+            ],
+            "toColumn": "sponsoratlas_local_public_facts_duckdb.fy2025-full.MARTS.fact_lca_case.wage_amount"
+          },
+          {
+            "fromColumns": [
+              "sponsoratlas_local_public_facts_duckdb.fy2025-full.INTERMEDIATE.int_lca_case_candidates.county_mapping_status"
+            ],
+            "toColumn": "sponsoratlas_local_public_facts_duckdb.fy2025-full.MARTS.fact_lca_case.county_mapping_status"
+          },
+          {
+            "fromColumns": [
+              "sponsoratlas_local_public_facts_duckdb.fy2025-full.INTERMEDIATE.int_lca_case_candidates.occupation_key"
+            ],
+            "toColumn": "sponsoratlas_local_public_facts_duckdb.fy2025-full.MARTS.fact_lca_case.occupation_key"
+          },
+          {
+            "fromColumns": [
+              "sponsoratlas_local_public_facts_duckdb.fy2025-full.INTERMEDIATE.int_lca_case_candidates.worksite_state"
+            ],
+            "toColumn": "sponsoratlas_local_public_facts_duckdb.fy2025-full.MARTS.fact_lca_case.worksite_state"
+          },
+          {
+            "fromColumns": [
+              "sponsoratlas_local_public_facts_duckdb.fy2025-full.INTERMEDIATE.int_lca_case_candidates.source_release"
+            ],
+            "toColumn": "sponsoratlas_local_public_facts_duckdb.fy2025-full.MARTS.fact_lca_case.source_release"
+          },
+          {
+            "fromColumns": [
+              "sponsoratlas_local_public_facts_duckdb.fy2025-full.INTERMEDIATE.int_lca_case_candidates.decision_date"
+            ],
+            "toColumn": "sponsoratlas_local_public_facts_duckdb.fy2025-full.MARTS.fact_lca_case.employer_history_status"
+          },
+          {
+            "fromColumns": [
+              "sponsoratlas_local_public_facts_duckdb.fy2025-full.INTERMEDIATE.int_lca_case_candidates.soc_code"
+            ],
+            "toColumn": "sponsoratlas_local_public_facts_duckdb.fy2025-full.MARTS.fact_lca_case.soc_code"
+          }
+        ],
+        "source": "DbtLineage",
+        "createdAt": 1793175621265,
+        "createdBy": "sponsoratlas-admin",
+        "updatedAt": 1793175621482,
+        "updatedBy": "sponsoratlas-admin"
+      }
+    },
+    {
+      "fromEntity": "bfa06e7c-07ca-407c-9a1b-1ead49ea1b14",
+      "toEntity": "9d5b179b-d257-40ea-a69f-668d01df06b7",
+      "lineageDetails": {
+        "sqlQuery": "create table \"fy2025-full\".\"MARTS\".\"fact_lca_case\" as\n\nwith winners as (\n select * from \"fy2025-full\".\"INTERMEDIATE\".\"int_lca_case_candidates\"\n where nullif(trim(case_number),?) is not null\n qualify row_number() over(partition by case_number order by winner_rank)=?\n), history as (\n select w.case_number,count(d.employer_key) as matching_versions,max(d.employer_key) as employer_key\n from winners w left join \"fy2025-full\".\"MARTS\".\"dim_employer\" d\n on w.employer_id=d.employer_id and d.valid_from<=cast(w.decision_date as timestamp)\n and (d.valid_to is null or d.valid_to>=cast(w.decision_date as timestamp)+interval ?)\n group by w.case_number\n), first_capture as (\n select employer_id,min(valid_from) as first_valid_from from \"fy2025-full\".\"MARTS\".\"dim_employer\" group by employer_id\n)\nselect w.case_number,w.case_status,w.case_status like ? as is_certified,\n w.visa_class,w.job_title,w.employer_name as source_employer_name,w.source_employer_key,\n w.employer_id,case when h.matching_versions=? then h.employer_key end as employer_key,\n case when w.employer_id is null then ?\n when w.decision_date is null then ?\n when cast(w.decision_date as timestamp)+interval ?<=f.first_valid_from then ?\n when h.matching_versions=? then ?\n else ? end as employer_history_status,\n ? as fact_time_precision,w.occupation_key,w.geography_key,\n d.date_key as decision_date_key,w.decision_date,w.received_date,w.begin_date,w.end_date,\n w.soc_code_raw,w.soc_code,w.occupation_mapping_status,w.county_mapping_status,\n w.wage_amount,w.wage_unit,cast(w.annual_wage as decimal(?,?)) as annual_wage,\n cast(w.worker_positions as decimal(?,?)) as worker_positions,\n w.source_system,w.source_release,w.source_sha256,w.source_url,w.source_row_number,w.fiscal_year,\n w.worksite_state,\n cast(w.source_occurrence_count as bigint) as source_occurrence_count,\n case when w.chronological_tie_count>? then ? else ? end as latest_selection_status\nfrom winners w join history h using(case_number)\nleft join first_capture f on w.employer_id=f.employer_id\nleft join \"fy2025-full\".\"MARTS\".\"dim_date\" d on w.decision_date=d.calendar_date",
+        "columnsLineage": [
+          {
+            "fromColumns": [
+              "sponsoratlas_local_public_facts_duckdb.fy2025-full.MARTS.dim_employer.valid_from"
+            ],
+            "toColumn": "sponsoratlas_local_public_facts_duckdb.fy2025-full.MARTS.fact_lca_case.employer_history_status"
+          },
+          {
+            "fromColumns": [
+              "sponsoratlas_local_public_facts_duckdb.fy2025-full.MARTS.dim_employer.employer_key"
+            ],
+            "toColumn": "sponsoratlas_local_public_facts_duckdb.fy2025-full.MARTS.fact_lca_case.employer_key"
+          },
+          {
+            "fromColumns": [
+              "sponsoratlas_local_public_facts_duckdb.fy2025-full.MARTS.dim_employer.employer_key"
+            ],
+            "toColumn": "sponsoratlas_local_public_facts_duckdb.fy2025-full.MARTS.fact_lca_case.employer_history_status"
+          }
+        ],
+        "source": "DbtLineage",
+        "createdAt": 1793175621315,
+        "createdBy": "sponsoratlas-admin",
+        "updatedAt": 1793175621590,
+        "updatedBy": "sponsoratlas-admin"
+      }
+    },
+    {
+      "fromEntity": "1e5bb1c3-91d5-493b-a510-fbb7f9259105",
+      "toEntity": "9d5b179b-d257-40ea-a69f-668d01df06b7",
+      "lineageDetails": {
+        "sqlQuery": "create table \"fy2025-full\".\"MARTS\".\"fact_lca_case\" as\n\nwith winners as (\n select * from \"fy2025-full\".\"INTERMEDIATE\".\"int_lca_case_candidates\"\n where nullif(trim(case_number),?) is not null\n qualify row_number() over(partition by case_number order by winner_rank)=?\n), history as (\n select w.case_number,count(d.employer_key) as matching_versions,max(d.employer_key) as employer_key\n from winners w left join \"fy2025-full\".\"MARTS\".\"dim_employer\" d\n on w.employer_id=d.employer_id and d.valid_from<=cast(w.decision_date as timestamp)\n and (d.valid_to is null or d.valid_to>=cast(w.decision_date as timestamp)+interval ?)\n group by w.case_number\n), first_capture as (\n select employer_id,min(valid_from) as first_valid_from from \"fy2025-full\".\"MARTS\".\"dim_employer\" group by employer_id\n)\nselect w.case_number,w.case_status,w.case_status like ? as is_certified,\n w.visa_class,w.job_title,w.employer_name as source_employer_name,w.source_employer_key,\n w.employer_id,case when h.matching_versions=? then h.employer_key end as employer_key,\n case when w.employer_id is null then ?\n when w.decision_date is null then ?\n when cast(w.decision_date as timestamp)+interval ?<=f.first_valid_from then ?\n when h.matching_versions=? then ?\n else ? end as employer_history_status,\n ? as fact_time_precision,w.occupation_key,w.geography_key,\n d.date_key as decision_date_key,w.decision_date,w.received_date,w.begin_date,w.end_date,\n w.soc_code_raw,w.soc_code,w.occupation_mapping_status,w.county_mapping_status,\n w.wage_amount,w.wage_unit,cast(w.annual_wage as decimal(?,?)) as annual_wage,\n cast(w.worker_positions as decimal(?,?)) as worker_positions,\n w.source_system,w.source_release,w.source_sha256,w.source_url,w.source_row_number,w.fiscal_year,\n w.worksite_state,\n cast(w.source_occurrence_count as bigint) as source_occurrence_count,\n case when w.chronological_tie_count>? then ? else ? end as latest_selection_status\nfrom winners w join history h using(case_number)\nleft join first_capture f on w.employer_id=f.employer_id\nleft join \"fy2025-full\".\"MARTS\".\"dim_date\" d on w.decision_date=d.calendar_date",
+        "columnsLineage": [
+          {
+            "fromColumns": [
+              "sponsoratlas_local_public_facts_duckdb.fy2025-full.MARTS.dim_date.date_key"
+            ],
+            "toColumn": "sponsoratlas_local_public_facts_duckdb.fy2025-full.MARTS.fact_lca_case.decision_date_key"
+          }
+        ],
+        "source": "DbtLineage",
+        "createdAt": 1793175621362,
+        "createdBy": "sponsoratlas-admin",
+        "updatedAt": 1793175621537,
+        "updatedBy": "sponsoratlas-admin"
+      }
+    },
+    {
+      "fromEntity": "b36f8548-fee1-4e9f-aa14-a09ee6a2a3f7",
+      "toEntity": "48b36bb9-00ac-4f8b-a621-1da3deed9283",
+      "lineageDetails": {
+        "sqlQuery": "create table \"fy2025-full\".\"INTERMEDIATE\".\"int_lca_case_candidates\" as\n\nselect l.*,m.employer_id,m.occupation_key,m.geography_key,\n m.occupation_mapping_status,m.county_mapping_status,\n count(*) over(partition by l.case_number) as source_occurrence_count,\n count(*) over(partition by l.case_number,l.decision_date,l.received_date,l.fiscal_year) as chronological_tie_count,\n row_number() over(partition by l.case_number order by\n l.decision_date desc nulls last,l.received_date desc nulls last,l.fiscal_year desc,\n l.source_release desc,l.source_sha256,l.source_row_number) as winner_rank\nfrom \"fy2025-full\".\"FACTS_INPUT\".\"lca\" l\nleft join \"fy2025-full\".\"INTERMEDIATE\".\"int_dimension_mapping\" m\n on l.source_system=m.source_system and l.source_release=m.source_release\n and l.source_sha256=m.source_sha256 and l.source_row_number=m.source_row_number",
+        "columnsLineage": [
+          {
+            "fromColumns": [
+              "sponsoratlas_local_public_facts_duckdb.fy2025-full.FACTS_INPUT.lca.employer_address"
+            ],
+            "toColumn": "sponsoratlas_local_public_facts_duckdb.fy2025-full.INTERMEDIATE.int_lca_case_candidates.employer_address"
+          },
+          {
+            "fromColumns": [
+              "sponsoratlas_local_public_facts_duckdb.fy2025-full.FACTS_INPUT.lca.geography_vintage"
+            ],
+            "toColumn": "sponsoratlas_local_public_facts_duckdb.fy2025-full.INTERMEDIATE.int_lca_case_candidates.geography_vintage"
+          },
+          {
+            "fromColumns": [
+              "sponsoratlas_local_public_facts_duckdb.fy2025-full.FACTS_INPUT.lca.soc_unresolved"
+            ],
+            "toColumn": "sponsoratlas_local_public_facts_duckdb.fy2025-full.INTERMEDIATE.int_lca_case_candidates.soc_unresolved"
+          },
+          {
+            "fromColumns": [
+              "sponsoratlas_local_public_facts_duckdb.fy2025-full.FACTS_INPUT.lca.worker_positions_raw"
+            ],
+            "toColumn": "sponsoratlas_local_public_facts_duckdb.fy2025-full.INTERMEDIATE.int_lca_case_candidates.worker_positions_raw"
+          },
+          {
+            "fromColumns": [
+              "sponsoratlas_local_public_facts_duckdb.fy2025-full.FACTS_INPUT.lca.received_date_raw"
+            ],
+            "toColumn": "sponsoratlas_local_public_facts_duckdb.fy2025-full.INTERMEDIATE.int_lca_case_candidates.received_date_raw"
+          },
+          {
+            "fromColumns": [
+              "sponsoratlas_local_public_facts_duckdb.fy2025-full.FACTS_INPUT.lca.worksite_county"
+            ],
+            "toColumn": "sponsoratlas_local_public_facts_duckdb.fy2025-full.INTERMEDIATE.int_lca_case_candidates.worksite_county"
+          },
+          {
+            "fromColumns": [
+              "sponsoratlas_local_public_facts_duckdb.fy2025-full.FACTS_INPUT.lca.employer_state"
+            ],
+            "toColumn": "sponsoratlas_local_public_facts_duckdb.fy2025-full.INTERMEDIATE.int_lca_case_candidates.employer_state"
+          },
+          {
+            "fromColumns": [
+              "sponsoratlas_local_public_facts_duckdb.fy2025-full.FACTS_INPUT.lca.received_date"
+            ],
+            "toColumn": "sponsoratlas_local_public_facts_duckdb.fy2025-full.INTERMEDIATE.int_lca_case_candidates.received_date"
+          },
+          {
+            "fromColumns": [
+              "sponsoratlas_local_public_facts_duckdb.fy2025-full.FACTS_INPUT.lca.employer_country"
+            ],
+            "toColumn": "sponsoratlas_local_public_facts_duckdb.fy2025-full.INTERMEDIATE.int_lca_case_candidates.employer_country"
+          },
+          {
+            "fromColumns": [
+              "sponsoratlas_local_public_facts_duckdb.fy2025-full.FACTS_INPUT.lca.wage_unit"
+            ],
+            "toColumn": "sponsoratlas_local_public_facts_duckdb.fy2025-full.INTERMEDIATE.int_lca_case_candidates.wage_unit"
+          },
+          {
+            "fromColumns": [
+              "sponsoratlas_local_public_facts_duckdb.fy2025-full.FACTS_INPUT.lca.worksite_zip5"
+            ],
+            "toColumn": "sponsoratlas_local_public_facts_duckdb.fy2025-full.INTERMEDIATE.int_lca_case_candidates.worksite_zip5"
+          },
+          {
+            "fromColumns": [
+              "sponsoratlas_local_public_facts_duckdb.fy2025-full.FACTS_INPUT.lca.trade_name_dba"
+            ],
+            "toColumn": "sponsoratlas_local_public_facts_duckdb.fy2025-full.INTERMEDIATE.int_lca_case_candidates.trade_name_dba"
+          },
+          {
+            "fromColumns": [
+              "sponsoratlas_local_public_facts_duckdb.fy2025-full.FACTS_INPUT.lca.source_release"
+            ],
+            "toColumn": "sponsoratlas_local_public_facts_duckdb.fy2025-full.INTERMEDIATE.int_lca_case_candidates.source_release"
+          },
+          {
+            "fromColumns": [
+              "sponsoratlas_local_public_facts_duckdb.fy2025-full.FACTS_INPUT.lca.source_row_number"
+            ],
+            "toColumn": "sponsoratlas_local_public_facts_duckdb.fy2025-full.INTERMEDIATE.int_lca_case_candidates.source_row_number"
+          },
+          {
+            "fromColumns": [
+              "sponsoratlas_local_public_facts_duckdb.fy2025-full.FACTS_INPUT.lca.begin_date_raw"
+            ],
+            "toColumn": "sponsoratlas_local_public_facts_duckdb.fy2025-full.INTERMEDIATE.int_lca_case_candidates.begin_date_raw"
+          },
+          {
+            "fromColumns": [
+              "sponsoratlas_local_public_facts_duckdb.fy2025-full.FACTS_INPUT.lca.begin_date"
+            ],
+            "toColumn": "sponsoratlas_local_public_facts_duckdb.fy2025-full.INTERMEDIATE.int_lca_case_candidates.begin_date"
+          },
+          {
+            "fromColumns": [
+              "sponsoratlas_local_public_facts_duckdb.fy2025-full.FACTS_INPUT.lca.case_status"
+            ],
+            "toColumn": "sponsoratlas_local_public_facts_duckdb.fy2025-full.INTERMEDIATE.int_lca_case_candidates.case_status"
+          },
+          {
+            "fromColumns": [
+              "sponsoratlas_local_public_facts_duckdb.fy2025-full.FACTS_INPUT.lca.job_title"
+            ],
+            "toColumn": "sponsoratlas_local_public_facts_duckdb.fy2025-full.INTERMEDIATE.int_lca_case_candidates.job_title"
+          },
+          {
+            "fromColumns": [
+              "sponsoratlas_local_public_facts_duckdb.fy2025-full.FACTS_INPUT.lca.worksite_city_raw"
+            ],
+            "toColumn": "sponsoratlas_local_public_facts_duckdb.fy2025-full.INTERMEDIATE.int_lca_case_candidates.worksite_city_raw"
+          },
+          {
+            "fromColumns": [
+              "sponsoratlas_local_public_facts_duckdb.fy2025-full.FACTS_INPUT.lca.state_fips"
+            ],
+            "toColumn": "sponsoratlas_local_public_facts_duckdb.fy2025-full.INTERMEDIATE.int_lca_case_candidates.state_fips"
+          },
+          {
+            "fromColumns": [
+              "sponsoratlas_local_public_facts_duckdb.fy2025-full.FACTS_INPUT.lca.worksite_state"
+            ],
+            "toColumn": "sponsoratlas_local_public_facts_duckdb.fy2025-full.INTERMEDIATE.int_lca_case_candidates.worksite_state"
+          },
+          {
+            "fromColumns": [
+              "sponsoratlas_local_public_facts_duckdb.fy2025-full.FACTS_INPUT.lca.employer_name"
+            ],
+            "toColumn": "sponsoratlas_local_public_facts_duckdb.fy2025-full.INTERMEDIATE.int_lca_case_candidates.employer_name"
+          },
+          {
+            "fromColumns": [
+              "sponsoratlas_local_public_facts_duckdb.fy2025-full.FACTS_INPUT.lca.source_employer_key"
+            ],
+            "toColumn": "sponsoratlas_local_public_facts_duckdb.fy2025-full.INTERMEDIATE.int_lca_case_candidates.source_employer_key"
+          },
+          {
+            "fromColumns": [
+              "sponsoratlas_local_public_facts_duckdb.fy2025-full.FACTS_INPUT.lca.geography_status"
+            ],
+            "toColumn": "sponsoratlas_local_public_facts_duckdb.fy2025-full.INTERMEDIATE.int_lca_case_candidates.geography_status"
+          },
+          {
+            "fromColumns": [
+              "sponsoratlas_local_public_facts_duckdb.fy2025-full.FACTS_INPUT.lca.worker_positions"
+            ],
+            "toColumn": "sponsoratlas_local_public_facts_duckdb.fy2025-full.INTERMEDIATE.int_lca_case_candidates.worker_positions"
+          },
+          {
+            "fromColumns": [
+              "sponsoratlas_local_public_facts_duckdb.fy2025-full.FACTS_INPUT.lca.worksite_state_raw"
+            ],
+            "toColumn": "sponsoratlas_local_public_facts_duckdb.fy2025-full.INTERMEDIATE.int_lca_case_candidates.worksite_state_raw"
+          },
+          {
+            "fromColumns": [
+              "sponsoratlas_local_public_facts_duckdb.fy2025-full.FACTS_INPUT.lca.source_sha256"
+            ],
+            "toColumn": "sponsoratlas_local_public_facts_duckdb.fy2025-full.INTERMEDIATE.int_lca_case_candidates.source_sha256"
+          },
+          {
+            "fromColumns": [
+              "sponsoratlas_local_public_facts_duckdb.fy2025-full.FACTS_INPUT.lca.annual_wage"
+            ],
+            "toColumn": "sponsoratlas_local_public_facts_duckdb.fy2025-full.INTERMEDIATE.int_lca_case_candidates.annual_wage"
+          },
+          {
+            "fromColumns": [
+              "sponsoratlas_local_public_facts_duckdb.fy2025-full.FACTS_INPUT.lca.county_match_rule"
+            ],
+            "toColumn": "sponsoratlas_local_public_facts_duckdb.fy2025-full.INTERMEDIATE.int_lca_case_candidates.county_match_rule"
+          },
+          {
+            "fromColumns": [
+              "sponsoratlas_local_public_facts_duckdb.fy2025-full.FACTS_INPUT.lca.end_date"
+            ],
+            "toColumn": "sponsoratlas_local_public_facts_duckdb.fy2025-full.INTERMEDIATE.int_lca_case_candidates.end_date"
+          },
+          {
+            "fromColumns": [
+              "sponsoratlas_local_public_facts_duckdb.fy2025-full.FACTS_INPUT.lca.fiscal_year"
+            ],
+            "toColumn": "sponsoratlas_local_public_facts_duckdb.fy2025-full.INTERMEDIATE.int_lca_case_candidates.fiscal_year"
+          },
+          {
+            "fromColumns": [
+              "sponsoratlas_local_public_facts_duckdb.fy2025-full.FACTS_INPUT.lca.end_date_raw"
+            ],
+            "toColumn": "sponsoratlas_local_public_facts_duckdb.fy2025-full.INTERMEDIATE.int_lca_case_candidates.end_date_raw"
+          },
+          {
+            "fromColumns": [
+              "sponsoratlas_local_public_facts_duckdb.fy2025-full.FACTS_INPUT.lca.decision_date"
+            ],
+            "toColumn": "sponsoratlas_local_public_facts_duckdb.fy2025-full.INTERMEDIATE.int_lca_case_candidates.decision_date"
+          },
+          {
+            "fromColumns": [
+              "sponsoratlas_local_public_facts_duckdb.fy2025-full.FACTS_INPUT.lca.geo_unresolved"
+            ],
+            "toColumn": "sponsoratlas_local_public_facts_duckdb.fy2025-full.INTERMEDIATE.int_lca_case_candidates.geo_unresolved"
+          },
+          {
+            "fromColumns": [
+              "sponsoratlas_local_public_facts_duckdb.fy2025-full.FACTS_INPUT.lca.payload_json"
+            ],
+            "toColumn": "sponsoratlas_local_public_facts_duckdb.fy2025-full.INTERMEDIATE.int_lca_case_candidates.payload_json"
+          },
+          {
+            "fromColumns": [
+              "sponsoratlas_local_public_facts_duckdb.fy2025-full.FACTS_INPUT.lca.soc_code"
+            ],
+            "toColumn": "sponsoratlas_local_public_facts_duckdb.fy2025-full.INTERMEDIATE.int_lca_case_candidates.soc_code"
+          },
+          {
+            "fromColumns": [
+              "sponsoratlas_local_public_facts_duckdb.fy2025-full.FACTS_INPUT.lca.employer_state_raw"
+            ],
+            "toColumn": "sponsoratlas_local_public_facts_duckdb.fy2025-full.INTERMEDIATE.int_lca_case_candidates.employer_state_raw"
+          },
+          {
+            "fromColumns": [
+              "sponsoratlas_local_public_facts_duckdb.fy2025-full.FACTS_INPUT.lca.worksite_city"
+            ],
+            "toColumn": "sponsoratlas_local_public_facts_duckdb.fy2025-full.INTERMEDIATE.int_lca_case_candidates.worksite_city"
+          },
+          {
+            "fromColumns": [
+              "sponsoratlas_local_public_facts_duckdb.fy2025-full.FACTS_INPUT.lca.decision_date_raw"
+            ],
+            "toColumn": "sponsoratlas_local_public_facts_duckdb.fy2025-full.INTERMEDIATE.int_lca_case_candidates.decision_date_raw"
+          },
+          {
+            "fromColumns": [
+              "sponsoratlas_local_public_facts_duckdb.fy2025-full.FACTS_INPUT.lca.source_url"
+            ],
+            "toColumn": "sponsoratlas_local_public_facts_duckdb.fy2025-full.INTERMEDIATE.int_lca_case_candidates.source_url"
+          },
+          {
+            "fromColumns": [
+              "sponsoratlas_local_public_facts_duckdb.fy2025-full.FACTS_INPUT.lca.soc_code_raw"
+            ],
+            "toColumn": "sponsoratlas_local_public_facts_duckdb.fy2025-full.INTERMEDIATE.int_lca_case_candidates.soc_code_raw"
+          },
+          {
+            "fromColumns": [
+              "sponsoratlas_local_public_facts_duckdb.fy2025-full.FACTS_INPUT.lca.worksite_postal_code_raw"
+            ],
+            "toColumn": "sponsoratlas_local_public_facts_duckdb.fy2025-full.INTERMEDIATE.int_lca_case_candidates.worksite_postal_code_raw"
+          },
+          {
+            "fromColumns": [
+              "sponsoratlas_local_public_facts_duckdb.fy2025-full.FACTS_INPUT.lca.expected_release"
+            ],
+            "toColumn": "sponsoratlas_local_public_facts_duckdb.fy2025-full.INTERMEDIATE.int_lca_case_candidates.expected_release"
+          },
+          {
+            "fromColumns": [
+              "sponsoratlas_local_public_facts_duckdb.fy2025-full.FACTS_INPUT.lca.case_number"
+            ],
+            "toColumn": "sponsoratlas_local_public_facts_duckdb.fy2025-full.INTERMEDIATE.int_lca_case_candidates.case_number"
+          },
+          {
+            "fromColumns": [
+              "sponsoratlas_local_public_facts_duckdb.fy2025-full.FACTS_INPUT.lca.source_system"
+            ],
+            "toColumn": "sponsoratlas_local_public_facts_duckdb.fy2025-full.INTERMEDIATE.int_lca_case_candidates.source_system"
+          },
+          {
+            "fromColumns": [
+              "sponsoratlas_local_public_facts_duckdb.fy2025-full.FACTS_INPUT.lca.wage_amount"
+            ],
+            "toColumn": "sponsoratlas_local_public_facts_duckdb.fy2025-full.INTERMEDIATE.int_lca_case_candidates.wage_amount"
+          },
+          {
+            "fromColumns": [
+              "sponsoratlas_local_public_facts_duckdb.fy2025-full.FACTS_INPUT.lca.county_fips"
+            ],
+            "toColumn": "sponsoratlas_local_public_facts_duckdb.fy2025-full.INTERMEDIATE.int_lca_case_candidates.county_fips"
+          },
+          {
+            "fromColumns": [
+              "sponsoratlas_local_public_facts_duckdb.fy2025-full.FACTS_INPUT.lca.employer_fein"
+            ],
+            "toColumn": "sponsoratlas_local_public_facts_duckdb.fy2025-full.INTERMEDIATE.int_lca_case_candidates.employer_fein"
+          },
+          {
+            "fromColumns": [
+              "sponsoratlas_local_public_facts_duckdb.fy2025-full.FACTS_INPUT.lca.visa_class"
+            ],
+            "toColumn": "sponsoratlas_local_public_facts_duckdb.fy2025-full.INTERMEDIATE.int_lca_case_candidates.visa_class"
+          },
+          {
+            "fromColumns": [
+              "sponsoratlas_local_public_facts_duckdb.fy2025-full.FACTS_INPUT.lca.employer_zip"
+            ],
+            "toColumn": "sponsoratlas_local_public_facts_duckdb.fy2025-full.INTERMEDIATE.int_lca_case_candidates.employer_zip"
+          },
+          {
+            "fromColumns": [
+              "sponsoratlas_local_public_facts_duckdb.fy2025-full.FACTS_INPUT.lca.employer_city"
+            ],
+            "toColumn": "sponsoratlas_local_public_facts_duckdb.fy2025-full.INTERMEDIATE.int_lca_case_candidates.employer_city"
+          },
+          {
+            "fromColumns": [
+              "sponsoratlas_local_public_facts_duckdb.fy2025-full.FACTS_INPUT.lca.worksite_county_raw"
+            ],
+            "toColumn": "sponsoratlas_local_public_facts_duckdb.fy2025-full.INTERMEDIATE.int_lca_case_candidates.worksite_county_raw"
+          },
+          {
+            "fromColumns": [
+              "sponsoratlas_local_public_facts_duckdb.fy2025-full.FACTS_INPUT.lca.wage_amount_raw"
+            ],
+            "toColumn": "sponsoratlas_local_public_facts_duckdb.fy2025-full.INTERMEDIATE.int_lca_case_candidates.wage_amount_raw"
+          }
+        ],
+        "source": "DbtLineage",
+        "createdAt": 1793175624221,
+        "createdBy": "sponsoratlas-admin",
+        "updatedAt": 1793175624331,
+        "updatedBy": "sponsoratlas-admin"
+      }
+    },
+    {
+      "fromEntity": "76340ce5-dc66-4127-8137-b83c1904e422",
+      "toEntity": "48b36bb9-00ac-4f8b-a621-1da3deed9283",
+      "lineageDetails": {
+        "sqlQuery": "create table \"fy2025-full\".\"INTERMEDIATE\".\"int_lca_case_candidates\" as\n\nselect l.*,m.employer_id,m.occupation_key,m.geography_key,\n m.occupation_mapping_status,m.county_mapping_status,\n count(*) over(partition by l.case_number) as source_occurrence_count,\n count(*) over(partition by l.case_number,l.decision_date,l.received_date,l.fiscal_year) as chronological_tie_count,\n row_number() over(partition by l.case_number order by\n l.decision_date desc nulls last,l.received_date desc nulls last,l.fiscal_year desc,\n l.source_release desc,l.source_sha256,l.source_row_number) as winner_rank\nfrom \"fy2025-full\".\"FACTS_INPUT\".\"lca\" l\nleft join \"fy2025-full\".\"INTERMEDIATE\".\"int_dimension_mapping\" m\n on l.source_system=m.source_system and l.source_release=m.source_release\n and l.source_sha256=m.source_sha256 and l.source_row_number=m.source_row_number",
+        "columnsLineage": [
+          {
+            "fromColumns": [
+              "sponsoratlas_local_public_facts_duckdb.fy2025-full.INTERMEDIATE.int_dimension_mapping.county_fips"
+            ],
+            "toColumn": "sponsoratlas_local_public_facts_duckdb.fy2025-full.INTERMEDIATE.int_lca_case_candidates.county_fips"
+          },
+          {
+            "fromColumns": [
+              "sponsoratlas_local_public_facts_duckdb.fy2025-full.INTERMEDIATE.int_dimension_mapping.geography_key"
+            ],
+            "toColumn": "sponsoratlas_local_public_facts_duckdb.fy2025-full.INTERMEDIATE.int_lca_case_candidates.geography_key"
+          },
+          {
+            "fromColumns": [
+              "sponsoratlas_local_public_facts_duckdb.fy2025-full.INTERMEDIATE.int_dimension_mapping.geography_status"
+            ],
+            "toColumn": "sponsoratlas_local_public_facts_duckdb.fy2025-full.INTERMEDIATE.int_lca_case_candidates.geography_status"
+          },
+          {
+            "fromColumns": [
+              "sponsoratlas_local_public_facts_duckdb.fy2025-full.INTERMEDIATE.int_dimension_mapping.soc_code"
+            ],
+            "toColumn": "sponsoratlas_local_public_facts_duckdb.fy2025-full.INTERMEDIATE.int_lca_case_candidates.soc_code"
+          },
+          {
+            "fromColumns": [
+              "sponsoratlas_local_public_facts_duckdb.fy2025-full.INTERMEDIATE.int_dimension_mapping.soc_code_raw"
+            ],
+            "toColumn": "sponsoratlas_local_public_facts_duckdb.fy2025-full.INTERMEDIATE.int_lca_case_candidates.soc_code_raw"
+          },
+          {
+            "fromColumns": [
+              "sponsoratlas_local_public_facts_duckdb.fy2025-full.INTERMEDIATE.int_dimension_mapping.source_row_number"
+            ],
+            "toColumn": "sponsoratlas_local_public_facts_duckdb.fy2025-full.INTERMEDIATE.int_lca_case_candidates.source_row_number"
+          },
+          {
+            "fromColumns": [
+              "sponsoratlas_local_public_facts_duckdb.fy2025-full.INTERMEDIATE.int_dimension_mapping.source_system"
+            ],
+            "toColumn": "sponsoratlas_local_public_facts_duckdb.fy2025-full.INTERMEDIATE.int_lca_case_candidates.source_system"
+          },
+          {
+            "fromColumns": [
+              "sponsoratlas_local_public_facts_duckdb.fy2025-full.INTERMEDIATE.int_dimension_mapping.employer_id"
+            ],
+            "toColumn": "sponsoratlas_local_public_facts_duckdb.fy2025-full.INTERMEDIATE.int_lca_case_candidates.employer_id"
+          },
+          {
+            "fromColumns": [
+              "sponsoratlas_local_public_facts_duckdb.fy2025-full.INTERMEDIATE.int_dimension_mapping.decision_date"
+            ],
+            "toColumn": "sponsoratlas_local_public_facts_duckdb.fy2025-full.INTERMEDIATE.int_lca_case_candidates.decision_date"
+          },
+          {
+            "fromColumns": [
+              "sponsoratlas_local_public_facts_duckdb.fy2025-full.INTERMEDIATE.int_dimension_mapping.source_release"
+            ],
+            "toColumn": "sponsoratlas_local_public_facts_duckdb.fy2025-full.INTERMEDIATE.int_lca_case_candidates.source_release"
+          },
+          {
+            "fromColumns": [
+              "sponsoratlas_local_public_facts_duckdb.fy2025-full.INTERMEDIATE.int_dimension_mapping.fiscal_year"
+            ],
+            "toColumn": "sponsoratlas_local_public_facts_duckdb.fy2025-full.INTERMEDIATE.int_lca_case_candidates.fiscal_year"
+          },
+          {
+            "fromColumns": [
+              "sponsoratlas_local_public_facts_duckdb.fy2025-full.INTERMEDIATE.int_dimension_mapping.worksite_state"
+            ],
+            "toColumn": "sponsoratlas_local_public_facts_duckdb.fy2025-full.INTERMEDIATE.int_lca_case_candidates.worksite_state"
+          },
+          {
+            "fromColumns": [
+              "sponsoratlas_local_public_facts_duckdb.fy2025-full.INTERMEDIATE.int_dimension_mapping.county_mapping_status"
+            ],
+            "toColumn": "sponsoratlas_local_public_facts_duckdb.fy2025-full.INTERMEDIATE.int_lca_case_candidates.county_mapping_status"
+          },
+          {
+            "fromColumns": [
+              "sponsoratlas_local_public_facts_duckdb.fy2025-full.INTERMEDIATE.int_dimension_mapping.state_fips"
+            ],
+            "toColumn": "sponsoratlas_local_public_facts_duckdb.fy2025-full.INTERMEDIATE.int_lca_case_candidates.state_fips"
+          },
+          {
+            "fromColumns": [
+              "sponsoratlas_local_public_facts_duckdb.fy2025-full.INTERMEDIATE.int_dimension_mapping.geography_vintage"
+            ],
+            "toColumn": "sponsoratlas_local_public_facts_duckdb.fy2025-full.INTERMEDIATE.int_lca_case_candidates.geography_vintage"
+          },
+          {
+            "fromColumns": [
+              "sponsoratlas_local_public_facts_duckdb.fy2025-full.INTERMEDIATE.int_dimension_mapping.worksite_county"
+            ],
+            "toColumn": "sponsoratlas_local_public_facts_duckdb.fy2025-full.INTERMEDIATE.int_lca_case_candidates.worksite_county"
+          },
+          {
+            "fromColumns": [
+              "sponsoratlas_local_public_facts_duckdb.fy2025-full.INTERMEDIATE.int_dimension_mapping.source_sha256"
+            ],
+            "toColumn": "sponsoratlas_local_public_facts_duckdb.fy2025-full.INTERMEDIATE.int_lca_case_candidates.source_sha256"
+          },
+          {
+            "fromColumns": [
+              "sponsoratlas_local_public_facts_duckdb.fy2025-full.INTERMEDIATE.int_dimension_mapping.source_employer_key"
+            ],
+            "toColumn": "sponsoratlas_local_public_facts_duckdb.fy2025-full.INTERMEDIATE.int_lca_case_candidates.source_employer_key"
+          },
+          {
+            "fromColumns": [
+              "sponsoratlas_local_public_facts_duckdb.fy2025-full.INTERMEDIATE.int_dimension_mapping.occupation_key"
+            ],
+            "toColumn": "sponsoratlas_local_public_facts_duckdb.fy2025-full.INTERMEDIATE.int_lca_case_candidates.occupation_key"
+          },
+          {
+            "fromColumns": [
+              "sponsoratlas_local_public_facts_duckdb.fy2025-full.INTERMEDIATE.int_dimension_mapping.occupation_mapping_status"
+            ],
+            "toColumn": "sponsoratlas_local_public_facts_duckdb.fy2025-full.INTERMEDIATE.int_lca_case_candidates.occupation_mapping_status"
+          }
+        ],
+        "source": "DbtLineage",
+        "createdAt": 1793175624259,
+        "createdBy": "sponsoratlas-admin",
+        "updatedAt": 1793175624372,
+        "updatedBy": "sponsoratlas-admin"
+      }
+    },
+    {
+      "fromEntity": "fee78c26-41a7-4663-9c57-4d73f7046d56",
+      "toEntity": "b36f8548-fee1-4e9f-aa14-a09ee6a2a3f7",
+      "lineageDetails": {
+        "sqlQuery": "create table FACTS_INPUT.lca as select * from original.STAGING.stg_lca",
+        "columnsLineage": [
+          {
+            "fromColumns": [
+              "sponsoratlas_local_public_staging_duckdb.fy2025-full.STAGING.stg_lca.source_system"
+            ],
+            "toColumn": "sponsoratlas_local_public_facts_duckdb.fy2025-full.FACTS_INPUT.lca.source_system",
+            "function": "identity"
+          },
+          {
+            "fromColumns": [
+              "sponsoratlas_local_public_staging_duckdb.fy2025-full.STAGING.stg_lca.fiscal_year"
+            ],
+            "toColumn": "sponsoratlas_local_public_facts_duckdb.fy2025-full.FACTS_INPUT.lca.fiscal_year",
+            "function": "identity"
+          },
+          {
+            "fromColumns": [
+              "sponsoratlas_local_public_staging_duckdb.fy2025-full.STAGING.stg_lca.expected_release"
+            ],
+            "toColumn": "sponsoratlas_local_public_facts_duckdb.fy2025-full.FACTS_INPUT.lca.expected_release",
+            "function": "identity"
+          },
+          {
+            "fromColumns": [
+              "sponsoratlas_local_public_staging_duckdb.fy2025-full.STAGING.stg_lca.source_release"
+            ],
+            "toColumn": "sponsoratlas_local_public_facts_duckdb.fy2025-full.FACTS_INPUT.lca.source_release",
+            "function": "identity"
+          },
+          {
+            "fromColumns": [
+              "sponsoratlas_local_public_staging_duckdb.fy2025-full.STAGING.stg_lca.source_sha256"
+            ],
+            "toColumn": "sponsoratlas_local_public_facts_duckdb.fy2025-full.FACTS_INPUT.lca.source_sha256",
+            "function": "identity"
+          },
+          {
+            "fromColumns": [
+              "sponsoratlas_local_public_staging_duckdb.fy2025-full.STAGING.stg_lca.source_url"
+            ],
+            "toColumn": "sponsoratlas_local_public_facts_duckdb.fy2025-full.FACTS_INPUT.lca.source_url",
+            "function": "identity"
+          },
+          {
+            "fromColumns": [
+              "sponsoratlas_local_public_staging_duckdb.fy2025-full.STAGING.stg_lca.source_row_number"
+            ],
+            "toColumn": "sponsoratlas_local_public_facts_duckdb.fy2025-full.FACTS_INPUT.lca.source_row_number",
+            "function": "identity"
+          },
+          {
+            "fromColumns": [
+              "sponsoratlas_local_public_staging_duckdb.fy2025-full.STAGING.stg_lca.payload_json"
+            ],
+            "toColumn": "sponsoratlas_local_public_facts_duckdb.fy2025-full.FACTS_INPUT.lca.payload_json",
+            "function": "identity"
+          },
+          {
+            "fromColumns": [
+              "sponsoratlas_local_public_staging_duckdb.fy2025-full.STAGING.stg_lca.case_number"
+            ],
+            "toColumn": "sponsoratlas_local_public_facts_duckdb.fy2025-full.FACTS_INPUT.lca.case_number",
+            "function": "identity"
+          },
+          {
+            "fromColumns": [
+              "sponsoratlas_local_public_staging_duckdb.fy2025-full.STAGING.stg_lca.visa_class"
+            ],
+            "toColumn": "sponsoratlas_local_public_facts_duckdb.fy2025-full.FACTS_INPUT.lca.visa_class",
+            "function": "identity"
+          },
+          {
+            "fromColumns": [
+              "sponsoratlas_local_public_staging_duckdb.fy2025-full.STAGING.stg_lca.trade_name_dba"
+            ],
+            "toColumn": "sponsoratlas_local_public_facts_duckdb.fy2025-full.FACTS_INPUT.lca.trade_name_dba",
+            "function": "identity"
+          },
+          {
+            "fromColumns": [
+              "sponsoratlas_local_public_staging_duckdb.fy2025-full.STAGING.stg_lca.employer_country"
+            ],
+            "toColumn": "sponsoratlas_local_public_facts_duckdb.fy2025-full.FACTS_INPUT.lca.employer_country",
+            "function": "identity"
+          },
+          {
+            "fromColumns": [
+              "sponsoratlas_local_public_staging_duckdb.fy2025-full.STAGING.stg_lca.case_status"
+            ],
+            "toColumn": "sponsoratlas_local_public_facts_duckdb.fy2025-full.FACTS_INPUT.lca.case_status",
+            "function": "identity"
+          },
+          {
+            "fromColumns": [
+              "sponsoratlas_local_public_staging_duckdb.fy2025-full.STAGING.stg_lca.received_date_raw"
+            ],
+            "toColumn": "sponsoratlas_local_public_facts_duckdb.fy2025-full.FACTS_INPUT.lca.received_date_raw",
+            "function": "identity"
+          },
+          {
+            "fromColumns": [
+              "sponsoratlas_local_public_staging_duckdb.fy2025-full.STAGING.stg_lca.decision_date_raw"
+            ],
+            "toColumn": "sponsoratlas_local_public_facts_duckdb.fy2025-full.FACTS_INPUT.lca.decision_date_raw",
+            "function": "identity"
+          },
+          {
+            "fromColumns": [
+              "sponsoratlas_local_public_staging_duckdb.fy2025-full.STAGING.stg_lca.begin_date_raw"
+            ],
+            "toColumn": "sponsoratlas_local_public_facts_duckdb.fy2025-full.FACTS_INPUT.lca.begin_date_raw",
+            "function": "identity"
+          },
+          {
+            "fromColumns": [
+              "sponsoratlas_local_public_staging_duckdb.fy2025-full.STAGING.stg_lca.end_date_raw"
+            ],
+            "toColumn": "sponsoratlas_local_public_facts_duckdb.fy2025-full.FACTS_INPUT.lca.end_date_raw",
+            "function": "identity"
+          },
+          {
+            "fromColumns": [
+              "sponsoratlas_local_public_staging_duckdb.fy2025-full.STAGING.stg_lca.employer_name"
+            ],
+            "toColumn": "sponsoratlas_local_public_facts_duckdb.fy2025-full.FACTS_INPUT.lca.employer_name",
+            "function": "identity"
+          },
+          {
+            "fromColumns": [
+              "sponsoratlas_local_public_staging_duckdb.fy2025-full.STAGING.stg_lca.employer_city"
+            ],
+            "toColumn": "sponsoratlas_local_public_facts_duckdb.fy2025-full.FACTS_INPUT.lca.employer_city",
+            "function": "identity"
+          },
+          {
+            "fromColumns": [
+              "sponsoratlas_local_public_staging_duckdb.fy2025-full.STAGING.stg_lca.employer_zip"
+            ],
+            "toColumn": "sponsoratlas_local_public_facts_duckdb.fy2025-full.FACTS_INPUT.lca.employer_zip",
+            "function": "identity"
+          },
+          {
+            "fromColumns": [
+              "sponsoratlas_local_public_staging_duckdb.fy2025-full.STAGING.stg_lca.employer_address"
+            ],
+            "toColumn": "sponsoratlas_local_public_facts_duckdb.fy2025-full.FACTS_INPUT.lca.employer_address",
+            "function": "identity"
+          },
+          {
+            "fromColumns": [
+              "sponsoratlas_local_public_staging_duckdb.fy2025-full.STAGING.stg_lca.employer_fein"
+            ],
+            "toColumn": "sponsoratlas_local_public_facts_duckdb.fy2025-full.FACTS_INPUT.lca.employer_fein",
+            "function": "identity"
+          },
+          {
+            "fromColumns": [
+              "sponsoratlas_local_public_staging_duckdb.fy2025-full.STAGING.stg_lca.employer_state_raw"
+            ],
+            "toColumn": "sponsoratlas_local_public_facts_duckdb.fy2025-full.FACTS_INPUT.lca.employer_state_raw",
+            "function": "identity"
+          },
+          {
+            "fromColumns": [
+              "sponsoratlas_local_public_staging_duckdb.fy2025-full.STAGING.stg_lca.job_title"
+            ],
+            "toColumn": "sponsoratlas_local_public_facts_duckdb.fy2025-full.FACTS_INPUT.lca.job_title",
+            "function": "identity"
+          },
+          {
+            "fromColumns": [
+              "sponsoratlas_local_public_staging_duckdb.fy2025-full.STAGING.stg_lca.soc_code_raw"
+            ],
+            "toColumn": "sponsoratlas_local_public_facts_duckdb.fy2025-full.FACTS_INPUT.lca.soc_code_raw",
+            "function": "identity"
+          },
+          {
+            "fromColumns": [
+              "sponsoratlas_local_public_staging_duckdb.fy2025-full.STAGING.stg_lca.worksite_state_raw"
+            ],
+            "toColumn": "sponsoratlas_local_public_facts_duckdb.fy2025-full.FACTS_INPUT.lca.worksite_state_raw",
+            "function": "identity"
+          },
+          {
+            "fromColumns": [
+              "sponsoratlas_local_public_staging_duckdb.fy2025-full.STAGING.stg_lca.worksite_county_raw"
+            ],
+            "toColumn": "sponsoratlas_local_public_facts_duckdb.fy2025-full.FACTS_INPUT.lca.worksite_county_raw",
+            "function": "identity"
+          },
+          {
+            "fromColumns": [
+              "sponsoratlas_local_public_staging_duckdb.fy2025-full.STAGING.stg_lca.worksite_city_raw"
+            ],
+            "toColumn": "sponsoratlas_local_public_facts_duckdb.fy2025-full.FACTS_INPUT.lca.worksite_city_raw",
+            "function": "identity"
+          },
+          {
+            "fromColumns": [
+              "sponsoratlas_local_public_staging_duckdb.fy2025-full.STAGING.stg_lca.worksite_postal_code_raw"
+            ],
+            "toColumn": "sponsoratlas_local_public_facts_duckdb.fy2025-full.FACTS_INPUT.lca.worksite_postal_code_raw",
+            "function": "identity"
+          },
+          {
+            "fromColumns": [
+              "sponsoratlas_local_public_staging_duckdb.fy2025-full.STAGING.stg_lca.wage_amount_raw"
+            ],
+            "toColumn": "sponsoratlas_local_public_facts_duckdb.fy2025-full.FACTS_INPUT.lca.wage_amount_raw",
+            "function": "identity"
+          },
+          {
+            "fromColumns": [
+              "sponsoratlas_local_public_staging_duckdb.fy2025-full.STAGING.stg_lca.wage_unit"
+            ],
+            "toColumn": "sponsoratlas_local_public_facts_duckdb.fy2025-full.FACTS_INPUT.lca.wage_unit",
+            "function": "identity"
+          },
+          {
+            "fromColumns": [
+              "sponsoratlas_local_public_staging_duckdb.fy2025-full.STAGING.stg_lca.worker_positions_raw"
+            ],
+            "toColumn": "sponsoratlas_local_public_facts_duckdb.fy2025-full.FACTS_INPUT.lca.worker_positions_raw",
+            "function": "identity"
+          },
+          {
+            "fromColumns": [
+              "sponsoratlas_local_public_staging_duckdb.fy2025-full.STAGING.stg_lca.received_date"
+            ],
+            "toColumn": "sponsoratlas_local_public_facts_duckdb.fy2025-full.FACTS_INPUT.lca.received_date",
+            "function": "identity"
+          },
+          {
+            "fromColumns": [
+              "sponsoratlas_local_public_staging_duckdb.fy2025-full.STAGING.stg_lca.decision_date"
+            ],
+            "toColumn": "sponsoratlas_local_public_facts_duckdb.fy2025-full.FACTS_INPUT.lca.decision_date",
+            "function": "identity"
+          },
+          {
+            "fromColumns": [
+              "sponsoratlas_local_public_staging_duckdb.fy2025-full.STAGING.stg_lca.begin_date"
+            ],
+            "toColumn": "sponsoratlas_local_public_facts_duckdb.fy2025-full.FACTS_INPUT.lca.begin_date",
+            "function": "identity"
+          },
+          {
+            "fromColumns": [
+              "sponsoratlas_local_public_staging_duckdb.fy2025-full.STAGING.stg_lca.end_date"
+            ],
+            "toColumn": "sponsoratlas_local_public_facts_duckdb.fy2025-full.FACTS_INPUT.lca.end_date",
+            "function": "identity"
+          },
+          {
+            "fromColumns": [
+              "sponsoratlas_local_public_staging_duckdb.fy2025-full.STAGING.stg_lca.soc_code"
+            ],
+            "toColumn": "sponsoratlas_local_public_facts_duckdb.fy2025-full.FACTS_INPUT.lca.soc_code",
+            "function": "identity"
+          },
+          {
+            "fromColumns": [
+              "sponsoratlas_local_public_staging_duckdb.fy2025-full.STAGING.stg_lca.employer_state"
+            ],
+            "toColumn": "sponsoratlas_local_public_facts_duckdb.fy2025-full.FACTS_INPUT.lca.employer_state",
+            "function": "identity"
+          },
+          {
+            "fromColumns": [
+              "sponsoratlas_local_public_staging_duckdb.fy2025-full.STAGING.stg_lca.worksite_state"
+            ],
+            "toColumn": "sponsoratlas_local_public_facts_duckdb.fy2025-full.FACTS_INPUT.lca.worksite_state",
+            "function": "identity"
+          },
+          {
+            "fromColumns": [
+              "sponsoratlas_local_public_staging_duckdb.fy2025-full.STAGING.stg_lca.worksite_county"
+            ],
+            "toColumn": "sponsoratlas_local_public_facts_duckdb.fy2025-full.FACTS_INPUT.lca.worksite_county",
+            "function": "identity"
+          },
+          {
+            "fromColumns": [
+              "sponsoratlas_local_public_staging_duckdb.fy2025-full.STAGING.stg_lca.worksite_city"
+            ],
+            "toColumn": "sponsoratlas_local_public_facts_duckdb.fy2025-full.FACTS_INPUT.lca.worksite_city",
+            "function": "identity"
+          },
+          {
+            "fromColumns": [
+              "sponsoratlas_local_public_staging_duckdb.fy2025-full.STAGING.stg_lca.worksite_zip5"
+            ],
+            "toColumn": "sponsoratlas_local_public_facts_duckdb.fy2025-full.FACTS_INPUT.lca.worksite_zip5",
+            "function": "identity"
+          },
+          {
+            "fromColumns": [
+              "sponsoratlas_local_public_staging_duckdb.fy2025-full.STAGING.stg_lca.wage_amount"
+            ],
+            "toColumn": "sponsoratlas_local_public_facts_duckdb.fy2025-full.FACTS_INPUT.lca.wage_amount",
+            "function": "identity"
+          },
+          {
+            "fromColumns": [
+              "sponsoratlas_local_public_staging_duckdb.fy2025-full.STAGING.stg_lca.worker_positions"
+            ],
+            "toColumn": "sponsoratlas_local_public_facts_duckdb.fy2025-full.FACTS_INPUT.lca.worker_positions",
+            "function": "identity"
+          },
+          {
+            "fromColumns": [
+              "sponsoratlas_local_public_staging_duckdb.fy2025-full.STAGING.stg_lca.source_employer_key"
+            ],
+            "toColumn": "sponsoratlas_local_public_facts_duckdb.fy2025-full.FACTS_INPUT.lca.source_employer_key",
+            "function": "identity"
+          },
+          {
+            "fromColumns": [
+              "sponsoratlas_local_public_staging_duckdb.fy2025-full.STAGING.stg_lca.annual_wage"
+            ],
+            "toColumn": "sponsoratlas_local_public_facts_duckdb.fy2025-full.FACTS_INPUT.lca.annual_wage",
+            "function": "identity"
+          },
+          {
+            "fromColumns": [
+              "sponsoratlas_local_public_staging_duckdb.fy2025-full.STAGING.stg_lca.state_fips"
+            ],
+            "toColumn": "sponsoratlas_local_public_facts_duckdb.fy2025-full.FACTS_INPUT.lca.state_fips",
+            "function": "identity"
+          },
+          {
+            "fromColumns": [
+              "sponsoratlas_local_public_staging_duckdb.fy2025-full.STAGING.stg_lca.county_fips"
+            ],
+            "toColumn": "sponsoratlas_local_public_facts_duckdb.fy2025-full.FACTS_INPUT.lca.county_fips",
+            "function": "identity"
+          },
+          {
+            "fromColumns": [
+              "sponsoratlas_local_public_staging_duckdb.fy2025-full.STAGING.stg_lca.geography_vintage"
+            ],
+            "toColumn": "sponsoratlas_local_public_facts_duckdb.fy2025-full.FACTS_INPUT.lca.geography_vintage",
+            "function": "identity"
+          },
+          {
+            "fromColumns": [
+              "sponsoratlas_local_public_staging_duckdb.fy2025-full.STAGING.stg_lca.geography_status"
+            ],
+            "toColumn": "sponsoratlas_local_public_facts_duckdb.fy2025-full.FACTS_INPUT.lca.geography_status",
+            "function": "identity"
+          },
+          {
+            "fromColumns": [
+              "sponsoratlas_local_public_staging_duckdb.fy2025-full.STAGING.stg_lca.county_match_rule"
+            ],
+            "toColumn": "sponsoratlas_local_public_facts_duckdb.fy2025-full.FACTS_INPUT.lca.county_match_rule",
+            "function": "identity"
+          },
+          {
+            "fromColumns": [
+              "sponsoratlas_local_public_staging_duckdb.fy2025-full.STAGING.stg_lca.geo_unresolved"
+            ],
+            "toColumn": "sponsoratlas_local_public_facts_duckdb.fy2025-full.FACTS_INPUT.lca.geo_unresolved",
+            "function": "identity"
+          },
+          {
+            "fromColumns": [
+              "sponsoratlas_local_public_staging_duckdb.fy2025-full.STAGING.stg_lca.soc_unresolved"
+            ],
+            "toColumn": "sponsoratlas_local_public_facts_duckdb.fy2025-full.FACTS_INPUT.lca.soc_unresolved",
+            "function": "identity"
+          }
+        ],
+        "pipeline": {
+          "id": "68fed594-d329-4594-a6a6-0d0ed4074fb3",
+          "type": "pipeline",
+          "name": "load_fact_inputs_lca",
+          "fullyQualifiedName": "sponsoratlas_local_python.load_fact_inputs_lca",
+          "description": "scripts/load_fact_inputs.py copies fy2025-full.STAGING.stg_lca into fy2025-full.FACTS_INPUT.lca. Verified schema, source SHA and row hash; local DuckDB replay only.",
+          "displayName": "load_fact_inputs_lca",
+          "deleted": false
+        },
+        "description": "Cross-file local Python CTAS verified against schema and content hashes. Not inferred dbt ref, not Snowflake.",
+        "source": "PipelineLineage",
+        "createdAt": 1793161450908,
+        "createdBy": "sponsoratlas-admin",
+        "updatedAt": 1793161450908,
+        "updatedBy": "sponsoratlas-admin"
+      }
+    },
+    {
+      "fromEntity": "5f8e979d-fb2c-4c2d-8722-5b3597216b03",
+      "toEntity": "76340ce5-dc66-4127-8137-b83c1904e422",
+      "lineageDetails": {
+        "sqlQuery": "create table \"fy2025-full\".\"INTERMEDIATE\".\"int_dimension_mapping\" as\n\nselect l.*,\n o.occupation_key, g.geography_key, x.employer_id,\n case when l.soc_code_raw is null or trim(l.soc_code_raw) = ? then ?\n      when l.soc_code is null then ?\n      when o.occupation_key is null then ?\n      else ? end as occupation_mapping_status,\n case when l.geography_status not in (?,?,?) then l.geography_status\n      when g.geography_key is null then ?\n      else ? end as county_mapping_status,\n g.cbsa_status,\n case when x.employer_id is null then ?\n      when first_snapshot.first_valid_from is null then ?\n      when l.decision_date is null then ?\n      when l.decision_date < first_snapshot.first_valid_from then ?\n      else ? end as employer_history_status\nfrom \"fy2025-full\".\"DIMENSIONS_INPUT\".\"lca_attributes\" l\nleft join \"fy2025-full\".\"MARTS\".\"dim_occupation\" o on l.soc_code = o.soc_code and o.soc_vintage = ?\nleft join \"fy2025-full\".\"MARTS\".\"dim_geography\" g\n on l.county_fips = g.county_fips and l.geography_vintage = g.county_reference_vintage\nleft join \"fy2025-full\".\"DIMENSIONS_INPUT\".\"employer_sources\" x\n on l.source_system = x.source_system and l.source_employer_key = x.source_employer_key\nleft join (select employer_id,min(valid_from) as first_valid_from from \"fy2025-full\".\"MARTS\".\"dim_employer\" group by employer_id) first_snapshot\n on x.employer_id = first_snapshot.employer_id",
+        "columnsLineage": [
+          {
+            "fromColumns": [
+              "sponsoratlas_local_public_facts_duckdb.fy2025-full.DIMENSIONS_INPUT.lca_attributes.source_system"
+            ],
+            "toColumn": "sponsoratlas_local_public_facts_duckdb.fy2025-full.INTERMEDIATE.int_dimension_mapping.source_system"
+          },
+          {
+            "fromColumns": [
+              "sponsoratlas_local_public_facts_duckdb.fy2025-full.DIMENSIONS_INPUT.lca_attributes.soc_code"
+            ],
+            "toColumn": "sponsoratlas_local_public_facts_duckdb.fy2025-full.INTERMEDIATE.int_dimension_mapping.soc_code"
+          },
+          {
+            "fromColumns": [
+              "sponsoratlas_local_public_facts_duckdb.fy2025-full.DIMENSIONS_INPUT.lca_attributes.source_release"
+            ],
+            "toColumn": "sponsoratlas_local_public_facts_duckdb.fy2025-full.INTERMEDIATE.int_dimension_mapping.source_release"
+          },
+          {
+            "fromColumns": [
+              "sponsoratlas_local_public_facts_duckdb.fy2025-full.DIMENSIONS_INPUT.lca_attributes.state_fips"
+            ],
+            "toColumn": "sponsoratlas_local_public_facts_duckdb.fy2025-full.INTERMEDIATE.int_dimension_mapping.state_fips"
+          },
+          {
+            "fromColumns": [
+              "sponsoratlas_local_public_facts_duckdb.fy2025-full.DIMENSIONS_INPUT.lca_attributes.source_row_number"
+            ],
+            "toColumn": "sponsoratlas_local_public_facts_duckdb.fy2025-full.INTERMEDIATE.int_dimension_mapping.source_row_number"
+          },
+          {
+            "fromColumns": [
+              "sponsoratlas_local_public_facts_duckdb.fy2025-full.DIMENSIONS_INPUT.lca_attributes.source_sha256"
+            ],
+            "toColumn": "sponsoratlas_local_public_facts_duckdb.fy2025-full.INTERMEDIATE.int_dimension_mapping.source_sha256"
+          },
+          {
+            "fromColumns": [
+              "sponsoratlas_local_public_facts_duckdb.fy2025-full.DIMENSIONS_INPUT.lca_attributes.fiscal_year"
+            ],
+            "toColumn": "sponsoratlas_local_public_facts_duckdb.fy2025-full.INTERMEDIATE.int_dimension_mapping.fiscal_year"
+          },
+          {
+            "fromColumns": [
+              "sponsoratlas_local_public_facts_duckdb.fy2025-full.DIMENSIONS_INPUT.lca_attributes.source_employer_key"
+            ],
+            "toColumn": "sponsoratlas_local_public_facts_duckdb.fy2025-full.INTERMEDIATE.int_dimension_mapping.source_employer_key"
+          },
+          {
+            "fromColumns": [
+              "sponsoratlas_local_public_facts_duckdb.fy2025-full.DIMENSIONS_INPUT.lca_attributes.worksite_county"
+            ],
+            "toColumn": "sponsoratlas_local_public_facts_duckdb.fy2025-full.INTERMEDIATE.int_dimension_mapping.worksite_county"
+          },
+          {
+            "fromColumns": [
+              "sponsoratlas_local_public_facts_duckdb.fy2025-full.DIMENSIONS_INPUT.lca_attributes.decision_date"
+            ],
+            "toColumn": "sponsoratlas_local_public_facts_duckdb.fy2025-full.INTERMEDIATE.int_dimension_mapping.decision_date"
+          },
+          {
+            "fromColumns": [
+              "sponsoratlas_local_public_facts_duckdb.fy2025-full.DIMENSIONS_INPUT.lca_attributes.soc_code_raw"
+            ],
+            "toColumn": "sponsoratlas_local_public_facts_duckdb.fy2025-full.INTERMEDIATE.int_dimension_mapping.soc_code_raw"
+          },
+          {
+            "fromColumns": [
+              "sponsoratlas_local_public_facts_duckdb.fy2025-full.DIMENSIONS_INPUT.lca_attributes.worksite_state"
+            ],
+            "toColumn": "sponsoratlas_local_public_facts_duckdb.fy2025-full.INTERMEDIATE.int_dimension_mapping.worksite_state"
+          },
+          {
+            "fromColumns": [
+              "sponsoratlas_local_public_facts_duckdb.fy2025-full.DIMENSIONS_INPUT.lca_attributes.county_fips"
+            ],
+            "toColumn": "sponsoratlas_local_public_facts_duckdb.fy2025-full.INTERMEDIATE.int_dimension_mapping.county_fips"
+          },
+          {
+            "fromColumns": [
+              "sponsoratlas_local_public_facts_duckdb.fy2025-full.DIMENSIONS_INPUT.lca_attributes.geography_vintage"
+            ],
+            "toColumn": "sponsoratlas_local_public_facts_duckdb.fy2025-full.INTERMEDIATE.int_dimension_mapping.geography_vintage"
+          },
+          {
+            "fromColumns": [
+              "sponsoratlas_local_public_facts_duckdb.fy2025-full.DIMENSIONS_INPUT.lca_attributes.geography_status"
+            ],
+            "toColumn": "sponsoratlas_local_public_facts_duckdb.fy2025-full.INTERMEDIATE.int_dimension_mapping.geography_status"
+          }
+        ],
+        "source": "DbtLineage",
+        "createdAt": 1793175623758,
+        "createdBy": "sponsoratlas-admin",
+        "updatedAt": 1793175624050,
+        "updatedBy": "sponsoratlas-admin"
+      }
+    },
+    {
+      "fromEntity": "9a270c11-e781-4bbe-b36a-e5a619a6ec41",
+      "toEntity": "76340ce5-dc66-4127-8137-b83c1904e422",
+      "lineageDetails": {
+        "sqlQuery": "create table \"fy2025-full\".\"INTERMEDIATE\".\"int_dimension_mapping\" as\n\nselect l.*,\n o.occupation_key, g.geography_key, x.employer_id,\n case when l.soc_code_raw is null or trim(l.soc_code_raw) = ? then ?\n      when l.soc_code is null then ?\n      when o.occupation_key is null then ?\n      else ? end as occupation_mapping_status,\n case when l.geography_status not in (?,?,?) then l.geography_status\n      when g.geography_key is null then ?\n      else ? end as county_mapping_status,\n g.cbsa_status,\n case when x.employer_id is null then ?\n      when first_snapshot.first_valid_from is null then ?\n      when l.decision_date is null then ?\n      when l.decision_date < first_snapshot.first_valid_from then ?\n      else ? end as employer_history_status\nfrom \"fy2025-full\".\"DIMENSIONS_INPUT\".\"lca_attributes\" l\nleft join \"fy2025-full\".\"MARTS\".\"dim_occupation\" o on l.soc_code = o.soc_code and o.soc_vintage = ?\nleft join \"fy2025-full\".\"MARTS\".\"dim_geography\" g\n on l.county_fips = g.county_fips and l.geography_vintage = g.county_reference_vintage\nleft join \"fy2025-full\".\"DIMENSIONS_INPUT\".\"employer_sources\" x\n on l.source_system = x.source_system and l.source_employer_key = x.source_employer_key\nleft join (select employer_id,min(valid_from) as first_valid_from from \"fy2025-full\".\"MARTS\".\"dim_employer\" group by employer_id) first_snapshot\n on x.employer_id = first_snapshot.employer_id",
+        "columnsLineage": [
+          {
+            "fromColumns": [
+              "sponsoratlas_local_public_facts_duckdb.fy2025-full.DIMENSIONS_INPUT.employer_sources.employer_id"
+            ],
+            "toColumn": "sponsoratlas_local_public_facts_duckdb.fy2025-full.INTERMEDIATE.int_dimension_mapping.employer_id"
+          },
+          {
+            "fromColumns": [
+              "sponsoratlas_local_public_facts_duckdb.fy2025-full.DIMENSIONS_INPUT.employer_sources.employer_id"
+            ],
+            "toColumn": "sponsoratlas_local_public_facts_duckdb.fy2025-full.INTERMEDIATE.int_dimension_mapping.employer_history_status"
+          }
+        ],
+        "source": "DbtLineage",
+        "createdAt": 1793175623797,
+        "createdBy": "sponsoratlas-admin",
+        "updatedAt": 1793175624003,
+        "updatedBy": "sponsoratlas-admin"
+      }
+    },
+    {
+      "fromEntity": "d21eb003-0812-48e9-93d1-b647de739cab",
+      "toEntity": "76340ce5-dc66-4127-8137-b83c1904e422",
+      "lineageDetails": {
+        "sqlQuery": "create table \"fy2025-full\".\"INTERMEDIATE\".\"int_dimension_mapping\" as\n\nselect l.*,\n o.occupation_key, g.geography_key, x.employer_id,\n case when l.soc_code_raw is null or trim(l.soc_code_raw) = ? then ?\n      when l.soc_code is null then ?\n      when o.occupation_key is null then ?\n      else ? end as occupation_mapping_status,\n case when l.geography_status not in (?,?,?) then l.geography_status\n      when g.geography_key is null then ?\n      else ? end as county_mapping_status,\n g.cbsa_status,\n case when x.employer_id is null then ?\n      when first_snapshot.first_valid_from is null then ?\n      when l.decision_date is null then ?\n      when l.decision_date < first_snapshot.first_valid_from then ?\n      else ? end as employer_history_status\nfrom \"fy2025-full\".\"DIMENSIONS_INPUT\".\"lca_attributes\" l\nleft join \"fy2025-full\".\"MARTS\".\"dim_occupation\" o on l.soc_code = o.soc_code and o.soc_vintage = ?\nleft join \"fy2025-full\".\"MARTS\".\"dim_geography\" g\n on l.county_fips = g.county_fips and l.geography_vintage = g.county_reference_vintage\nleft join \"fy2025-full\".\"DIMENSIONS_INPUT\".\"employer_sources\" x\n on l.source_system = x.source_system and l.source_employer_key = x.source_employer_key\nleft join (select employer_id,min(valid_from) as first_valid_from from \"fy2025-full\".\"MARTS\".\"dim_employer\" group by employer_id) first_snapshot\n on x.employer_id = first_snapshot.employer_id",
+        "columnsLineage": [
+          {
+            "fromColumns": [
+              "sponsoratlas_local_public_facts_duckdb.fy2025-full.MARTS.dim_occupation.occupation_key"
+            ],
+            "toColumn": "sponsoratlas_local_public_facts_duckdb.fy2025-full.INTERMEDIATE.int_dimension_mapping.occupation_key"
+          },
+          {
+            "fromColumns": [
+              "sponsoratlas_local_public_facts_duckdb.fy2025-full.MARTS.dim_occupation.occupation_key"
+            ],
+            "toColumn": "sponsoratlas_local_public_facts_duckdb.fy2025-full.INTERMEDIATE.int_dimension_mapping.occupation_mapping_status"
+          }
+        ],
+        "source": "DbtLineage",
+        "createdAt": 1793175623834,
+        "createdBy": "sponsoratlas-admin",
+        "updatedAt": 1793175624184,
+        "updatedBy": "sponsoratlas-admin"
+      }
+    },
+    {
+      "fromEntity": "4c71d98d-40af-46b0-96f5-f66e8e72a987",
+      "toEntity": "76340ce5-dc66-4127-8137-b83c1904e422",
+      "lineageDetails": {
+        "sqlQuery": "create table \"fy2025-full\".\"INTERMEDIATE\".\"int_dimension_mapping\" as\n\nselect l.*,\n o.occupation_key, g.geography_key, x.employer_id,\n case when l.soc_code_raw is null or trim(l.soc_code_raw) = ? then ?\n      when l.soc_code is null then ?\n      when o.occupation_key is null then ?\n      else ? end as occupation_mapping_status,\n case when l.geography_status not in (?,?,?) then l.geography_status\n      when g.geography_key is null then ?\n      else ? end as county_mapping_status,\n g.cbsa_status,\n case when x.employer_id is null then ?\n      when first_snapshot.first_valid_from is null then ?\n      when l.decision_date is null then ?\n      when l.decision_date < first_snapshot.first_valid_from then ?\n      else ? end as employer_history_status\nfrom \"fy2025-full\".\"DIMENSIONS_INPUT\".\"lca_attributes\" l\nleft join \"fy2025-full\".\"MARTS\".\"dim_occupation\" o on l.soc_code = o.soc_code and o.soc_vintage = ?\nleft join \"fy2025-full\".\"MARTS\".\"dim_geography\" g\n on l.county_fips = g.county_fips and l.geography_vintage = g.county_reference_vintage\nleft join \"fy2025-full\".\"DIMENSIONS_INPUT\".\"employer_sources\" x\n on l.source_system = x.source_system and l.source_employer_key = x.source_employer_key\nleft join (select employer_id,min(valid_from) as first_valid_from from \"fy2025-full\".\"MARTS\".\"dim_employer\" group by employer_id) first_snapshot\n on x.employer_id = first_snapshot.employer_id",
+        "columnsLineage": [
+          {
+            "fromColumns": [
+              "sponsoratlas_local_public_facts_duckdb.fy2025-full.MARTS.dim_geography.geography_key"
+            ],
+            "toColumn": "sponsoratlas_local_public_facts_duckdb.fy2025-full.INTERMEDIATE.int_dimension_mapping.geography_key"
+          },
+          {
+            "fromColumns": [
+              "sponsoratlas_local_public_facts_duckdb.fy2025-full.MARTS.dim_geography.cbsa_status"
+            ],
+            "toColumn": "sponsoratlas_local_public_facts_duckdb.fy2025-full.INTERMEDIATE.int_dimension_mapping.cbsa_status"
+          },
+          {
+            "fromColumns": [
+              "sponsoratlas_local_public_facts_duckdb.fy2025-full.MARTS.dim_geography.geography_key"
+            ],
+            "toColumn": "sponsoratlas_local_public_facts_duckdb.fy2025-full.INTERMEDIATE.int_dimension_mapping.county_mapping_status"
+          }
+        ],
+        "source": "DbtLineage",
+        "createdAt": 1793175623878,
+        "createdBy": "sponsoratlas-admin",
+        "updatedAt": 1793175624136,
+        "updatedBy": "sponsoratlas-admin"
+      }
+    },
+    {
+      "fromEntity": "bfa06e7c-07ca-407c-9a1b-1ead49ea1b14",
+      "toEntity": "76340ce5-dc66-4127-8137-b83c1904e422",
+      "lineageDetails": {
+        "sqlQuery": "create table \"fy2025-full\".\"INTERMEDIATE\".\"int_dimension_mapping\" as\n\nselect l.*,\n o.occupation_key, g.geography_key, x.employer_id,\n case when l.soc_code_raw is null or trim(l.soc_code_raw) = ? then ?\n      when l.soc_code is null then ?\n      when o.occupation_key is null then ?\n      else ? end as occupation_mapping_status,\n case when l.geography_status not in (?,?,?) then l.geography_status\n      when g.geography_key is null then ?\n      else ? end as county_mapping_status,\n g.cbsa_status,\n case when x.employer_id is null then ?\n      when first_snapshot.first_valid_from is null then ?\n      when l.decision_date is null then ?\n      when l.decision_date < first_snapshot.first_valid_from then ?\n      else ? end as employer_history_status\nfrom \"fy2025-full\".\"DIMENSIONS_INPUT\".\"lca_attributes\" l\nleft join \"fy2025-full\".\"MARTS\".\"dim_occupation\" o on l.soc_code = o.soc_code and o.soc_vintage = ?\nleft join \"fy2025-full\".\"MARTS\".\"dim_geography\" g\n on l.county_fips = g.county_fips and l.geography_vintage = g.county_reference_vintage\nleft join \"fy2025-full\".\"DIMENSIONS_INPUT\".\"employer_sources\" x\n on l.source_system = x.source_system and l.source_employer_key = x.source_employer_key\nleft join (select employer_id,min(valid_from) as first_valid_from from \"fy2025-full\".\"MARTS\".\"dim_employer\" group by employer_id) first_snapshot\n on x.employer_id = first_snapshot.employer_id",
+        "columnsLineage": [
+          {
+            "fromColumns": [
+              "sponsoratlas_local_public_facts_duckdb.fy2025-full.MARTS.dim_employer.valid_from"
+            ],
+            "toColumn": "sponsoratlas_local_public_facts_duckdb.fy2025-full.INTERMEDIATE.int_dimension_mapping.employer_history_status"
+          }
+        ],
+        "source": "DbtLineage",
+        "createdAt": 1793175623922,
+        "createdBy": "sponsoratlas-admin",
+        "updatedAt": 1793175624092,
+        "updatedBy": "sponsoratlas-admin"
+      }
+    },
+    {
+      "fromEntity": "5fa68f82-f4b1-4bf0-b0cd-8038124399a4",
+      "toEntity": "bfa06e7c-07ca-407c-9a1b-1ead49ea1b14",
+      "lineageDetails": {
+        "columnsLineage": [],
+        "source": "DbtLineage",
+        "createdAt": 1793175621838,
+        "createdBy": "sponsoratlas-admin",
+        "updatedAt": 1793175621838,
+        "updatedBy": "sponsoratlas-admin"
+      }
+    }
+  ],
+  "downstreamEdges": []
+}

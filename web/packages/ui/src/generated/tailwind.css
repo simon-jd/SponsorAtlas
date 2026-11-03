@@ -1,0 +1,33 @@
+/* Tailwind v4 theme; import after tailwindcss and ui/tokens.css. */
+@theme inline {
+  --color-bg: var(--sa-color-bg);
+  --color-surface: var(--sa-color-surface);
+  --color-ink: var(--sa-color-ink);
+  --color-muted: var(--sa-color-muted);
+  --color-border: var(--sa-color-border);
+  --color-accent: var(--sa-color-accent);
+  --color-on-accent: var(--sa-color-on-accent);
+  --color-focus: var(--sa-color-focus);
+  --color-error: var(--sa-color-error);
+  --spacing-1: var(--sa-space-1);
+  --spacing-2: var(--sa-space-2);
+  --spacing-3: var(--sa-space-3);
+  --spacing-4: var(--sa-space-4);
+  --spacing-6: var(--sa-space-6);
+  --spacing-8: var(--sa-space-8);
+  --spacing-12: var(--sa-space-12);
+  --spacing-16: var(--sa-space-16);
+  --text-sm: var(--sa-font-size-sm);
+  --text-base: var(--sa-font-size-base);
+  --text-lg: var(--sa-font-size-lg);
+  --text-xl: var(--sa-font-size-xl);
+  --text-2xl: var(--sa-font-size-2xl);
+  --text-3xl: var(--sa-font-size-3xl);
+  --font-body: var(--sa-font-family-body);
+  --radius-sm: var(--sa-radius-sm);
+  --radius-md: var(--sa-radius-md);
+  --radius-lg: var(--sa-radius-lg);
+  --transition-duration-fast: var(--sa-motion-fast);
+  --transition-duration-base: var(--sa-motion-base);
+  --transition-duration-none: var(--sa-motion-none);
+}

@@ -1,0 +1,32 @@
+.venv/
+.tools/
+.superpowers/
+# Retired agent briefs/reports that were never tracked (the tracked archive was removed on 2026-10-29).
+docs/archive/process-2026-10/superpowers-sdd/
+__pycache__/
+.pytest_cache/
+.ruff_cache/
+*.pyc
+*.egg-info/
+.env
+.env.*
+!.env.example
+*.pem
+*.p8
+*.key
+*.tfstate*
+*.tfplan
+**/.terraform/
+**/terraform.tfvars
+node_modules/
+.next/
+dist/
+coverage/
+test-results/
+playwright-report/
+dbt/target/
+dbt/logs/
+data/raw/
+
+# dbt local installation identity (never a project artifact)
+dbt/.user.yml

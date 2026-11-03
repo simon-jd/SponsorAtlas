@@ -1,0 +1,11 @@
+table Metro
+
+	column metro
+		dataType: string
+		isKey
+		sourceColumn: [metro]
+		summarizeBy: none
+
+	partition Metro = calculated
+		mode: import
+		source = DISTINCT(UNION(SELECTCOLUMNS(lca, "metro", lca[metro]), SELECTCOLUMNS(postings, "metro", postings[metro]), SELECTCOLUMNS(wages, "metro", wages[metro])))

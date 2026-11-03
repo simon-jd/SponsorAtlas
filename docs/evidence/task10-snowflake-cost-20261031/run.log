@@ -1,0 +1,62 @@
+# Phase 9 item 4 (Task 10 cost report and experiment), 2026-10-31 UTC. Host: nproc 32, load average 6.65 / 4.93 / 2.90.
+# credits.jsonl: resource monitor USED_CREDITS before and after each phase-9 item (deploy identity, SHOW only).
+# Trial values from notes/snowflake-trial.txt, derived by the coordinator (not read from a billing page):
+# SNOWFLAKE_TRIAL_STARTED_AT=2026-10-25T07:29:00Z (earliest ACCOUNT_USAGE.QUERY_HISTORY minute),
+# SNOWFLAKE_TRIAL_EXPIRES_AT=2026-11-24T00:00:00Z (resource monitor end),
+# SPONSORATLAS_TRIAL_REMAINING_CREDITS=99 (lower bound: USD 400 trial at <= USD 4 per credit, 0.74 used).
+
+## 21:18:01 experiment as COST_EXPERIMENT_SVC / COST_EXPERIMENTER
+# SPONSORATLAS_COST_MODE=production SPONSORATLAS_COST_OPT_IN=YES SPONSORATLAS_COST_EXPERIMENT_OPT_IN=YES
+# SPONSORATLAS_WAREHOUSE_EXCLUSIVE=YES SPONSORATLAS_COST_MAX_CREDITS=20 SPONSORATLAS_CLUSTERING_MAX_CREDITS=0.5
+# .venv/bin/python -m scripts.query_profile_report experiment --run-id P9A --fiscal-year 2025 --state CA \
+#   --output docs/evidence/task10-snowflake-cost-20261031/experiment-P9A.json
+# (plus SNOWFLAKE_ACCOUNT, SNOWFLAKE_TRIAL_*, SPONSORATLAS_TRIAL_REMAINING_CREDITS=99, SNOWFLAKE_COST_USER/ROLE,
+#  SNOWFLAKE_COST_PRIVATE_KEY_FILE)
+Cost operation failed (ValueError); remote acceptance OPEN
+# cause (admission only, before any connection): "Owner-only cost RSA key required".
+# os.stat permission bits at 21:18 UTC: CUBE_SVC, DBT_SVC, COST_EXPERIMENT_SVC, COST_OBSERVER_SVC and
+# SPONSORATLAS_POLICY_NON_OWNER key files are all 0640 (the brief says 0600; at 16:28 UTC CUBE_SVC's key passed
+# the same owner-only check in semantic/source.cjs). The scripts refuse group-readable keys by design; the agent
+# does not change key-file permissions. No Snowflake statement was sent, no TASK10 schema or clustering key exists,
+# .tools/task10/remote-pending.json was never written. Items 4b (cost-refresh.cjs runs inside the experiment),
+# 4c (top-20 report as COST_OBSERVER_SVC: same check) and 4d (reconcile: nothing to reconcile) were not run.
+
+## To run once the key files are 0600 again (same environment as above; nobody else on SPONSORATLAS_XS):
+# 1) experiment (runs cost-refresh.cjs per phase; restores XS/60, drops clustering key and schema at the end):
+#    .venv/bin/python -m scripts.query_profile_report experiment --run-id P9A --fiscal-year 2025 --state CA \
+#      --output docs/evidence/task10-snowflake-cost-20261031/experiment-P9A.json
+#    if interrupted: .venv/bin/python -m scripts.query_profile_report recover \
+#      --output docs/evidence/task10-snowflake-cost-20261031/recover-P9A.json
+# 2) top-20, read-only, SNOWFLAKE_COST_USER=COST_OBSERVER_SVC SNOWFLAKE_COST_ROLE=COST_OBSERVER and its key:
+#    .venv/bin/python -m scripts.query_profile_report remote --start <started_at_utc> --end <ended_at_utc + 1 h> \
+#      --output docs/evidence/task10-snowflake-cost-20261031/top20-remote.json
+# 3) >= 8 h later, observer identity:
+#    .venv/bin/python -m scripts.query_profile_report reconcile docs/evidence/task10-snowflake-cost-20261031/experiment-P9A.json \
+#      --start <started_at_utc> --end <started_at_utc + 1 h> \
+#      --output docs/evidence/task10-snowflake-cost-20261031/experiment-P9A-reconciled.json
+#    (its clustering_history comes from AUTOMATIC_CLUSTERING_HISTORY for ANALYTICS.TASK10_P9A.FACT_LCA_CASE)
+
+## 21:18:34 / 21:18:49 final warehouse state (SHOW only; as CUBE_SVC the monitor column reads null, as the deploy identity:)
+[{"name": "SPONSORATLAS_XS", "state": "SUSPENDED", "size": "X-Small", "auto_suspend": 60, "resource_monitor": "SPONSORATLAS_BOOTSTRAP_RM"}]
+# Only warehouse in SHOW WAREHOUSES for CUBE_SVC; enable_query_acceleration false, single cluster.
+
+## 2026-11-01 coordinator run (key files owner-only again: ACL removed, dirs 0700, files 0600; approved by the user)
+# 07:29:32 attempt 1, same environment: refused in admission with "Monitor must have immediate suspension within
+# explicit run allowance". Cause: the check read SUSPEND_IMMEDIATE_AT, but SHOW RESOURCE MONITORS returns
+# suspend_immediately_at (the test fixtures had the same wrong name). Only SHOW statements ran. Fixed in
+# scripts/query_profile_report.py, with a regression test.
+# 07:31:56 attempt 2 (nproc 32, load average 14.06 / 14.49 / 11.81; other projects' jobs running): exit 0 at 07:32:58.
+#   phase         3 queries  Cube refresh  warehouse
+#   baseline      0.509 s    6.402 s       X-Small
+#   clustered     0.378 s    4.507 s       X-Small, clustering key (fiscal_year, worksite_state)
+#   small         1.317 s    5.340 s       Small
+#   cache_prime   0.415 s    4.253 s       X-Small, USE_CACHED_RESULT true
+#   cache_repeat  0.381 s    3.620 s       X-Small, USE_CACHED_RESULT true
+#   restoration VERIFIED -> experiment-P9A.json
+# 12:12 top-20 as COST_OBSERVER_SVC, --start 2026-11-01T07:32:00Z --end 2026-11-01T08:33:00Z -> top20-remote.json
+# 12:13 reconcile as COST_OBSERVER_SVC, --start 2026-11-01T07:32:00Z --end 2026-11-01T08:32:00Z -> experiment-P9A-reconciled.json
+# 15:40 the same reconcile again, 8.1 h after the run -> experiment-P9A-reconciled-8h.json, byte-identical to the 12:13 file.
+# Monitor (credits.jsonl): 0.69 before, 0.73 right after, 0.81 at 16:05 (includes the observer queries).
+
+## 16:05 final warehouse state (SHOW, deploy identity)
+[{"name": "SPONSORATLAS_XS", "state": "SUSPENDED", "size": "X-Small", "auto_suspend": 60, "resource_monitor": "SPONSORATLAS_BOOTSTRAP_RM"}]

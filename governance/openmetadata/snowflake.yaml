@@ -1,0 +1,40 @@
+# Real Snowflake metadata extraction. Only governance.remote_ingest may run this.
+source:
+  type: snowflake
+  serviceName: sponsoratlas_snowflake
+  serviceConnection:
+    config:
+      type: Snowflake
+      account: ${SNOWFLAKE_ACCOUNT}
+      username: ${SNOWFLAKE_METADATA_USER}
+      role: ${SNOWFLAKE_METADATA_ROLE}
+      warehouse: SPONSORATLAS_XS
+      queryTag: sponsoratlas:task8:metadata
+      # Populated in memory from SNOWFLAKE_PRIVATE_KEY_FILE; never saved to YAML/logs.
+      privateKey: null
+      clientSessionKeepAlive: false
+      connectionArguments:
+        authenticator: SNOWFLAKE_JWT
+        session_parameters:
+          STATEMENT_TIMEOUT_IN_SECONDS: 60
+  sourceConfig:
+    config:
+      type: DatabaseMetadata
+      databaseFilterPattern: {includes: ['^(RAW|ANALYTICS)$']}
+      includeTables: true
+      includeViews: true
+      includeStoredProcedures: false
+      includeOwners: false
+      markDeletedTables: false
+      includeTags: true
+sink:
+  type: metadata-rest
+  config: {}
+workflowConfig:
+  loggerLevel: INFO
+  openMetadataServerConfig:
+    hostPort: ${OPENMETADATA_URL}
+    storeServiceConnection: false
+    authProvider: openmetadata
+    securityConfig:
+      jwtToken: ${OPENMETADATA_JWT_TOKEN}

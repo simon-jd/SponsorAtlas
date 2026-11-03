@@ -1,0 +1,12 @@
+// Execute after refresh with no report filters. This query returns the five
+// mandatory query scopes; the OEWS filter is deliberately local to that row.
+EVALUATE
+UNION(
+    ROW("metric", "case_count", "value", [Case Count]),
+    ROW("metric", "certified_rate", "value", [Certified Rate]),
+    ROW("metric", "wage_p75", "value", [Wage P75]),
+    ROW("metric", "active_posting_days", "value", [Active Posting Days]),
+    ROW("metric", "oews_median", "value",
+        CALCULATE([OEWS Median], wages[soc]="15-1252", wages[area]="1:99", wages[survey_year]=2025))
+)
+ORDER BY [metric]

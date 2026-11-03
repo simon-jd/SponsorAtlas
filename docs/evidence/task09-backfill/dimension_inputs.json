@@ -1,0 +1,22 @@
+{
+  "status": "SUCCEEDED",
+  "nproc": 32,
+  "load_before": [
+    6.45751953125,
+    6.521484375,
+    5.5068359375
+  ],
+  "steps": [
+    {
+      "name": "dimension_inputs",
+      "exit_code": 0,
+      "seconds": 6.077,
+      "load_after": [
+        6.16552734375,
+        6.455078125,
+        5.49609375
+      ]
+    }
+  ],
+  "seconds": 6.077
+}

@@ -1,0 +1,9 @@
+{
+ "tables": 6,
+ "column_edges": 75,
+ "table_edges": {
+  "sponsoratlas_local_public_staging_duckdb.fy2025-full.STAGING.stg_lca -> sponsoratlas_local_public_facts_duckdb.fy2025-full.FACTS_INPUT.lca": 53,
+  "sponsoratlas_local_synthetic_duckdb.synthetic_applications.RAW_JOBS.CDC_APPLICATION_EVENTS -> sponsoratlas_local_synthetic_duckdb.synthetic_applications.STAGING.stg_private_application_events": 12,
+  "sponsoratlas_local_synthetic_duckdb.synthetic_applications.STAGING.stg_private_application_events -> sponsoratlas_local_synthetic_duckdb.synthetic_applications.MARTS.fact_my_applications": 10
+ }
+}

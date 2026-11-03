@@ -1,0 +1,7 @@
+# Phase 9 item 3, 2026-10-31 16:41:29-16:42:23 UTC. Host: nproc 32, load average 6.99 / 9.11 / 7.25 (shared CPU).
+# RUN_SNOWFLAKE_GRANTS=1 .venv/bin/python -m pytest -v -s warehouse/tests/test_grants.py
+#   warehouse/tests/test_live_marts_access.py warehouse/tests/test_live_account_defaults.py  -> pytest-live.log
+# ADMIN = deploy identity; LOADER/TRANSFORMER/ANALYST = AIRBYTE_SVC/DBT_SVC/CUBE_SVC; account and keys from
+# SNOWFLAKE_TEST_ACCOUNT and SNOWFLAKE_TEST_<ROLE>_PRIVATE_KEY_FILE.
+8 passed, 12 warnings in 53.37s
+account defaults: {"AIRBYTE_SVC": {"warehouses": ["SPONSORATLAS_XS"], "available_roles": ["LOADER", "PUBLIC"]}, "DBT_SVC": {"warehouses": ["SPONSORATLAS_XS"], "available_roles": ["PUBLIC", "TRANSFORMER"]}, "CUBE_SVC": {"warehouses": ["SPONSORATLAS_XS"], "available_roles": ["ANALYST", "PUBLIC"]}}

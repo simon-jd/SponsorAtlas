@@ -1,0 +1,106 @@
+{
+  "status": "SUCCEEDED",
+  "nproc": 32,
+  "load_before": [
+    3.5,
+    3.02685546875,
+    2.328125
+  ],
+  "steps": [
+    {
+      "name": "er_export",
+      "exit_code": 0,
+      "seconds": 3.856,
+      "load_after": [
+        3.5,
+        3.02685546875,
+        2.328125
+      ]
+    },
+    {
+      "name": "er_train",
+      "exit_code": 0,
+      "seconds": 7.306,
+      "load_after": [
+        3.50341796875,
+        3.04296875,
+        2.34130859375
+      ]
+    },
+    {
+      "name": "er_predict",
+      "exit_code": 0,
+      "seconds": 10.114,
+      "load_after": [
+        3.7275390625,
+        3.107421875,
+        2.37060546875
+      ]
+    },
+    {
+      "name": "dimension_inputs",
+      "exit_code": 0,
+      "seconds": 5.865,
+      "load_after": [
+        3.90966796875,
+        3.15576171875,
+        2.39013671875
+      ]
+    },
+    {
+      "name": "dbt_dimensions",
+      "exit_code": 0,
+      "seconds": 5.739,
+      "load_after": [
+        3.83642578125,
+        3.15283203125,
+        2.3935546875
+      ]
+    },
+    {
+      "name": "fact_inputs",
+      "exit_code": 0,
+      "seconds": 27.941,
+      "load_after": [
+        3.42138671875,
+        3.1201171875,
+        2.40771484375
+      ],
+      "projected_bytes": 23199155276
+    },
+    {
+      "name": "dbt_facts",
+      "exit_code": 0,
+      "seconds": 38.561,
+      "load_after": [
+        3.11572265625,
+        3.0732421875,
+        2.42236328125
+      ]
+    }
+  ],
+  "seconds": 99.69,
+  "readiness": {
+    "status": "READY",
+    "fiscal_year": 2025,
+    "requested_interval": [
+      "2024-10-01",
+      "2025-10-01"
+    ],
+    "available_releases": [
+      "FY2025_Q1",
+      "FY2025_Q2",
+      "FY2025_Q3",
+      "FY2025_Q4"
+    ],
+    "missing_releases": [],
+    "raw_rows": 596552,
+    "source_date_coverage": [
+      "2024-10-01",
+      "2025-09-30"
+    ],
+    "reason": null,
+    "mutations_started": false,
+    "seconds": 0.18913469999097288
+  }
+}

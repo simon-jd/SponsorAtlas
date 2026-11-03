@@ -1,0 +1,894 @@
+{
+  "source": "INFORMATION_SCHEMA.QUERY_HISTORY_BY_USER",
+  "start": "2026-10-30T22:00:00Z",
+  "users": [
+    {
+      "user": "AIRBYTE_SVC",
+      "queries": 112,
+      "running_excluded": 1,
+      "warehouse_queries": 112,
+      "total_elapsed_ms": 111805,
+      "total_execution_ms": 87138,
+      "total_bytes_scanned": 2898866912,
+      "failed": 2,
+      "by_tag_and_type": [
+        {
+          "query_tag": "sponsoratlas:phase8:raw-load",
+          "query_type": "COPY",
+          "queries": 20,
+          "elapsed_ms": 88146,
+          "execution_ms": 75875,
+          "bytes_scanned": 951223152,
+          "rows_produced": 2854212
+        },
+        {
+          "query_tag": "sponsoratlas:phase8:raw-load",
+          "query_type": "SELECT",
+          "queries": 22,
+          "elapsed_ms": 7931,
+          "execution_ms": 3437,
+          "bytes_scanned": 1554019328,
+          "rows_produced": 22
+        },
+        {
+          "query_tag": "sponsoratlas:phase8:raw-load",
+          "query_type": "CREATE_TABLE",
+          "queries": 22,
+          "elapsed_ms": 6483,
+          "execution_ms": 3832,
+          "bytes_scanned": 0,
+          "rows_produced": 0
+        },
+        {
+          "query_tag": "sponsoratlas:phase8:raw-load",
+          "query_type": "PUT_FILES",
+          "queries": 20,
+          "elapsed_ms": 4641,
+          "execution_ms": 2178,
+          "bytes_scanned": 0,
+          "rows_produced": 0
+        },
+        {
+          "query_tag": "",
+          "query_type": "SELECT",
+          "queries": 9,
+          "elapsed_ms": 1362,
+          "execution_ms": 138,
+          "bytes_scanned": 393606656,
+          "rows_produced": 8
+        },
+        {
+          "query_tag": "sponsoratlas:task1:grants",
+          "query_type": "INSERT",
+          "queries": 4,
+          "elapsed_ms": 1024,
+          "execution_ms": 594,
+          "bytes_scanned": 4096,
+          "rows_produced": 8
+        },
+        {
+          "query_tag": "sponsoratlas:phase8:history",
+          "query_type": "SELECT",
+          "queries": 3,
+          "elapsed_ms": 956,
+          "execution_ms": 263,
+          "bytes_scanned": 13680,
+          "rows_produced": 112
+        },
+        {
+          "query_tag": "sponsoratlas:task1:grants",
+          "query_type": "ROLLBACK",
+          "queries": 4,
+          "elapsed_ms": 770,
+          "execution_ms": 657,
+          "bytes_scanned": 0,
+          "rows_produced": 0
+        },
+        {
+          "query_tag": "sponsoratlas:task1:grants",
+          "query_type": "BEGIN",
+          "queries": 4,
+          "elapsed_ms": 261,
+          "execution_ms": 148,
+          "bytes_scanned": 0,
+          "rows_produced": 0
+        },
+        {
+          "query_tag": "sponsoratlas:task1:grants",
+          "query_type": "SELECT",
+          "queries": 2,
+          "elapsed_ms": 132,
+          "execution_ms": 8,
+          "bytes_scanned": 0,
+          "rows_produced": 0
+        },
+        {
+          "query_tag": "sponsoratlas:task1:grants",
+          "query_type": "USE",
+          "queries": 2,
+          "elapsed_ms": 99,
+          "execution_ms": 8,
+          "bytes_scanned": 0,
+          "rows_produced": 0
+        }
+      ],
+      "top_by_elapsed": [
+        {
+          "query_id": "01c81625-020a-6d55-0005-0f02000a779a",
+          "query_type": "COPY",
+          "query_tag": "sponsoratlas:phase8:raw-load",
+          "execution_status": "SUCCESS",
+          "warehouse_name": "SPONSORATLAS_XS",
+          "start_time": "2026-10-30 17:05:49.186000-07:00",
+          "total_elapsed_time": 15041,
+          "execution_time": 14661,
+          "bytes_scanned": 611649648,
+          "rows_produced": 717449
+        },
+        {
+          "query_id": "01c81623-020a-6d55-0005-0f02000a775a",
+          "query_type": "COPY",
+          "query_tag": "sponsoratlas:phase8:raw-load",
+          "execution_status": "SUCCESS",
+          "warehouse_name": "SPONSORATLAS_XS",
+          "start_time": "2026-10-30 17:03:53.226000-07:00",
+          "total_elapsed_time": 10936,
+          "execution_time": 10643,
+          "bytes_scanned": 84532000,
+          "rows_produced": 238425
+        },
+        {
+          "query_id": "01c81622-020a-6d55-0005-0f02000a7746",
+          "query_type": "COPY",
+          "query_tag": "sponsoratlas:phase8:raw-load",
+          "execution_status": "SUCCESS",
+          "warehouse_name": "SPONSORATLAS_XS",
+          "start_time": "2026-10-30 17:02:59.120000-07:00",
+          "total_elapsed_time": 8146,
+          "execution_time": 7502,
+          "bytes_scanned": 31667104,
+          "rows_produced": 413527
+        },
+        {
+          "query_id": "01c81625-020a-6cd6-0005-0f02000aa926",
+          "query_type": "COPY",
+          "query_tag": "sponsoratlas:phase8:raw-load",
+          "execution_status": "SUCCESS",
+          "warehouse_name": "SPONSORATLAS_XS",
+          "start_time": "2026-10-30 17:05:21.626000-07:00",
+          "total_elapsed_time": 7397,
+          "execution_time": 7111,
+          "bytes_scanned": 21448416,
+          "rows_produced": 717449
+        },
+        {
+          "query_id": "01c81623-020a-6cda-0005-0f02000b500e",
+          "query_type": "COPY",
+          "query_tag": "sponsoratlas:phase8:raw-load",
+          "execution_status": "SUCCESS",
+          "warehouse_name": "SPONSORATLAS_XS",
+          "start_time": "2026-10-30 17:03:23.515000-07:00",
+          "total_elapsed_time": 7297,
+          "execution_time": 6338,
+          "bytes_scanned": 43023008,
+          "rows_produced": 120897
+        },
+        {
+          "query_id": "01c81623-020a-6cda-0005-0f02000b501a",
+          "query_type": "COPY",
+          "query_tag": "sponsoratlas:phase8:raw-load",
+          "execution_status": "SUCCESS",
+          "warehouse_name": "SPONSORATLAS_XS",
+          "start_time": "2026-10-30 17:03:42.388000-07:00",
+          "total_elapsed_time": 7034,
+          "execution_time": 6774,
+          "bytes_scanned": 46104880,
+          "rows_produced": 132133
+        },
+        {
+          "query_id": "01c81624-020a-6cd6-0005-0f02000aa906",
+          "query_type": "COPY",
+          "query_tag": "sponsoratlas:phase8:raw-load",
+          "execution_status": "SUCCESS",
+          "warehouse_name": "SPONSORATLAS_XS",
+          "start_time": "2026-10-30 17:04:19.997000-07:00",
+          "total_elapsed_time": 6365,
+          "execution_time": 5977,
+          "bytes_scanned": 41443680,
+          "rows_produced": 118580
+        },
+        {
+          "query_id": "01c81623-020a-6d55-0005-0f02000a7756",
+          "query_type": "COPY",
+          "query_tag": "sponsoratlas:phase8:raw-load",
+          "execution_status": "SUCCESS",
+          "warehouse_name": "SPONSORATLAS_XS",
+          "start_time": "2026-10-30 17:03:33.785000-07:00",
+          "total_elapsed_time": 5752,
+          "execution_time": 5442,
+          "bytes_scanned": 37494752,
+          "rows_produced": 107414
+        },
+        {
+          "query_id": "01c81625-020a-6d55-0005-0f02000a778a",
+          "query_type": "COPY",
+          "query_tag": "sponsoratlas:phase8:raw-load",
+          "execution_status": "SUCCESS",
+          "warehouse_name": "SPONSORATLAS_XS",
+          "start_time": "2026-10-30 17:05:15.490000-07:00",
+          "total_elapsed_time": 4381,
+          "execution_time": 3794,
+          "bytes_scanned": 29255008,
+          "rows_produced": 161596
+        },
+        {
+          "query_id": "01c81621-020a-6d55-0005-0f02000a7742",
+          "query_type": "COPY",
+          "query_tag": "sponsoratlas:phase8:raw-load",
+          "execution_status": "SUCCESS",
+          "warehouse_name": "SPONSORATLAS_XS",
+          "start_time": "2026-10-30 17:01:48.879000-07:00",
+          "total_elapsed_time": 3572,
+          "execution_time": 1321,
+          "bytes_scanned": 989856,
+          "rows_produced": 33332
+        },
+        {
+          "query_id": "01c81624-020a-6d55-0005-0f02000a775e",
+          "query_type": "COPY",
+          "query_tag": "sponsoratlas:phase8:raw-load",
+          "execution_status": "SUCCESS",
+          "warehouse_name": "SPONSORATLAS_XS",
+          "start_time": "2026-10-30 17:04:27.830000-07:00",
+          "total_elapsed_time": 2118,
+          "execution_time": 1254,
+          "bytes_scanned": 1772512,
+          "rows_produced": 59983
+        },
+        {
+          "query_id": "01c81625-020a-6cd8-0005-0f02000b17c6",
+          "query_type": "COPY",
+          "query_tag": "sponsoratlas:phase8:raw-load",
+          "execution_status": "SUCCESS",
+          "warehouse_name": "SPONSORATLAS_XS",
+          "start_time": "2026-10-30 17:05:07.696000-07:00",
+          "total_elapsed_time": 2108,
+          "execution_time": 637,
+          "bytes_scanned": 1824,
+          "rows_produced": 1
+        },
+        {
+          "query_id": "01c81624-020a-6d55-0005-0f02000a7762",
+          "query_type": "COPY",
+          "query_tag": "sponsoratlas:phase8:raw-load",
+          "execution_status": "SUCCESS",
+          "warehouse_name": "SPONSORATLAS_XS",
+          "start_time": "2026-10-30 17:04:31.443000-07:00",
+          "total_elapsed_time": 1322,
+          "execution_time": 787,
+          "bytes_scanned": 989856,
+          "rows_produced": 33332
+        },
+        {
+          "query_id": "01c81625-020a-6cda-0005-0f02000b5036",
+          "query_type": "COPY",
+          "query_tag": "sponsoratlas:phase8:raw-load",
+          "execution_status": "SUCCESS",
+          "warehouse_name": "SPONSORATLAS_XS",
+          "start_time": "2026-10-30 17:05:05.180000-07:00",
+          "total_elapsed_time": 1315,
+          "execution_time": 515,
+          "bytes_scanned": 1744,
+          "rows_produced": 1
+        },
+        {
+          "query_id": "01c81625-020a-6cd8-0005-0f02000b17ca",
+          "query_type": "COPY",
+          "query_tag": "sponsoratlas:phase8:raw-load",
+          "execution_status": "SUCCESS",
+          "warehouse_name": "SPONSORATLAS_XS",
+          "start_time": "2026-10-30 17:05:12.290000-07:00",
+          "total_elapsed_time": 1257,
+          "execution_time": 702,
+          "bytes_scanned": 1328,
+          "rows_produced": 2
+        }
+      ]
+    },
+    {
+      "user": "DBT_SVC",
+      "queries": 320,
+      "running_excluded": 1,
+      "warehouse_queries": 320,
+      "total_elapsed_ms": 194645,
+      "total_execution_ms": 99485,
+      "total_bytes_scanned": 14374541226,
+      "failed": 6,
+      "by_tag_and_type": [
+        {
+          "query_tag": "sponsoratlas_task3",
+          "query_type": "CREATE_TABLE_AS_SELECT",
+          "queries": 24,
+          "elapsed_ms": 68891,
+          "execution_ms": 52306,
+          "bytes_scanned": 2802520300,
+          "rows_produced": 5303616
+        },
+        {
+          "query_tag": "sponsoratlas_task3",
+          "query_type": "INSERT",
+          "queries": 33,
+          "elapsed_ms": 50166,
+          "execution_ms": 9705,
+          "bytes_scanned": 832000,
+          "rows_produced": 189398
+        },
+        {
+          "query_tag": "sponsoratlas_task3",
+          "query_type": "SELECT",
+          "queries": 95,
+          "elapsed_ms": 37331,
+          "execution_ms": 11725,
+          "bytes_scanned": 9553860222,
+          "rows_produced": 104
+        },
+        {
+          "query_tag": "sponsoratlas:phase8:compare",
+          "query_type": "SELECT",
+          "queries": 25,
+          "elapsed_ms": 14442,
+          "execution_ms": 11372,
+          "bytes_scanned": 2016452096,
+          "rows_produced": 25
+        },
+        {
+          "query_tag": "sponsoratlas_task3",
+          "query_type": "COMMIT",
+          "queries": 28,
+          "elapsed_ms": 7789,
+          "execution_ms": 6675,
+          "bytes_scanned": 0,
+          "rows_produced": 0
+        },
+        {
+          "query_tag": "sponsoratlas_task3",
+          "query_type": "CREATE_TABLE",
+          "queries": 15,
+          "elapsed_ms": 3538,
+          "execution_ms": 2235,
+          "bytes_scanned": 0,
+          "rows_produced": 0
+        },
+        {
+          "query_tag": "sponsoratlas_task3",
+          "query_type": "SHOW",
+          "queries": 34,
+          "elapsed_ms": 3388,
+          "execution_ms": 1322,
+          "bytes_scanned": 0,
+          "rows_produced": 0
+        },
+        {
+          "query_tag": "sponsoratlas:task1:grants",
+          "query_type": "SELECT",
+          "queries": 20,
+          "elapsed_ms": 2894,
+          "execution_ms": 677,
+          "bytes_scanned": 576,
+          "rows_produced": 8
+        },
+        {
+          "query_tag": "sponsoratlas_task3",
+          "query_type": "BEGIN",
+          "queries": 28,
+          "elapsed_ms": 2228,
+          "execution_ms": 1160,
+          "bytes_scanned": 0,
+          "rows_produced": 0
+        },
+        {
+          "query_tag": "sponsoratlas:task1:grants",
+          "query_type": "CREATE_TABLE_AS_SELECT",
+          "queries": 2,
+          "elapsed_ms": 1611,
+          "execution_ms": 1151,
+          "bytes_scanned": 0,
+          "rows_produced": 2
+        },
+        {
+          "query_tag": "sponsoratlas:phase8:history",
+          "query_type": "SELECT",
+          "queries": 1,
+          "elapsed_ms": 1372,
+          "execution_ms": 868,
+          "bytes_scanned": 876032,
+          "rows_produced": 320
+        },
+        {
+          "query_tag": "sponsoratlas:task1:grants",
+          "query_type": "DROP",
+          "queries": 2,
+          "elapsed_ms": 323,
+          "execution_ms": 217,
+          "bytes_scanned": 0,
+          "rows_produced": 0
+        },
+        {
+          "query_tag": "sponsoratlas_task3",
+          "query_type": "DROP",
+          "queries": 4,
+          "elapsed_ms": 223,
+          "execution_ms": 53,
+          "bytes_scanned": 0,
+          "rows_produced": 0
+        },
+        {
+          "query_tag": "sponsoratlas:task1:grants",
+          "query_type": "USE",
+          "queries": 2,
+          "elapsed_ms": 131,
+          "execution_ms": 13,
+          "bytes_scanned": 0,
+          "rows_produced": 0
+        },
+        {
+          "query_tag": "sponsoratlas_task3",
+          "query_type": "DESCRIBE",
+          "queries": 2,
+          "elapsed_ms": 111,
+          "execution_ms": 5,
+          "bytes_scanned": 0,
+          "rows_produced": 0
+        },
+        {
+          "query_tag": "sponsoratlas:task1:grants",
+          "query_type": "INSERT",
+          "queries": 4,
+          "elapsed_ms": 105,
+          "execution_ms": 0,
+          "bytes_scanned": 0,
+          "rows_produced": 0
+        },
+        {
+          "query_tag": "",
+          "query_type": "SELECT",
+          "queries": 1,
+          "elapsed_ms": 102,
+          "execution_ms": 1,
+          "bytes_scanned": 0,
+          "rows_produced": 0
+        }
+      ],
+      "top_by_elapsed": [
+        {
+          "query_id": "01c816ce-020a-6d55-0005-0f02000a78c6",
+          "query_type": "SELECT",
+          "query_tag": "sponsoratlas_task3",
+          "execution_status": "SUCCESS",
+          "warehouse_name": "SPONSORATLAS_XS",
+          "start_time": "2026-10-30 19:54:33.467000-07:00",
+          "total_elapsed_time": 18223,
+          "execution_time": 7782,
+          "bytes_scanned": 486187360,
+          "rows_produced": 1
+        },
+        {
+          "query_id": "01c816ce-020a-6d55-0005-0f02000a788a",
+          "query_type": "CREATE_TABLE_AS_SELECT",
+          "query_tag": "sponsoratlas_task3",
+          "execution_status": "SUCCESS",
+          "warehouse_name": "SPONSORATLAS_XS",
+          "start_time": "2026-10-30 19:54:18.306000-07:00",
+          "total_elapsed_time": 13324,
+          "execution_time": 10515,
+          "bytes_scanned": 367668736,
+          "rows_produced": 717497
+        },
+        {
+          "query_id": "01c816ce-020a-6cd8-0005-0f02000b186a",
+          "query_type": "CREATE_TABLE_AS_SELECT",
+          "query_tag": "sponsoratlas_task3",
+          "execution_status": "SUCCESS",
+          "warehouse_name": "SPONSORATLAS_XS",
+          "start_time": "2026-10-30 19:54:13.724000-07:00",
+          "total_elapsed_time": 9257,
+          "execution_time": 6248,
+          "bytes_scanned": 113651712,
+          "rows_produced": 413569
+        },
+        {
+          "query_id": "01c816cf-020a-6cd6-0005-0f02000aaa82",
+          "query_type": "CREATE_TABLE_AS_SELECT",
+          "query_tag": "sponsoratlas_task3",
+          "execution_status": "SUCCESS",
+          "warehouse_name": "SPONSORATLAS_XS",
+          "start_time": "2026-10-30 19:55:42.685000-07:00",
+          "total_elapsed_time": 7619,
+          "execution_time": 7176,
+          "bytes_scanned": 1163482624,
+          "rows_produced": 717449
+        },
+        {
+          "query_id": "01c816cf-020a-6d55-0005-0f02000a793a",
+          "query_type": "CREATE_TABLE_AS_SELECT",
+          "query_tag": "sponsoratlas_task3",
+          "execution_status": "SUCCESS",
+          "warehouse_name": "SPONSORATLAS_XS",
+          "start_time": "2026-10-30 19:55:32.553000-07:00",
+          "total_elapsed_time": 6508,
+          "execution_time": 5259,
+          "bytes_scanned": 113651712,
+          "rows_produced": 413569
+        },
+        {
+          "query_id": "01c816cd-020a-6d55-0005-0f02000a786a",
+          "query_type": "INSERT",
+          "query_tag": "sponsoratlas_task3",
+          "execution_status": "SUCCESS",
+          "warehouse_name": "SPONSORATLAS_XS",
+          "start_time": "2026-10-30 19:53:58.071000-07:00",
+          "total_elapsed_time": 5626,
+          "execution_time": 182,
+          "bytes_scanned": 153088,
+          "rows_produced": 27359
+        },
+        {
+          "query_id": "01c816cd-020a-6cd6-0005-0f02000aa9a2",
+          "query_type": "INSERT",
+          "query_tag": "sponsoratlas_task3",
+          "execution_status": "SUCCESS",
+          "warehouse_name": "SPONSORATLAS_XS",
+          "start_time": "2026-10-30 19:53:46.165000-07:00",
+          "total_elapsed_time": 5008,
+          "execution_time": 173,
+          "bytes_scanned": 200704,
+          "rows_produced": 30000
+        },
+        {
+          "query_id": "01c816cf-020a-6cd8-0005-0f02000b1936",
+          "query_type": "CREATE_TABLE_AS_SELECT",
+          "query_tag": "sponsoratlas_task3",
+          "execution_status": "SUCCESS",
+          "warehouse_name": "SPONSORATLAS_XS",
+          "start_time": "2026-10-30 19:55:40.136000-07:00",
+          "total_elapsed_time": 4427,
+          "execution_time": 3551,
+          "bytes_scanned": 222261248,
+          "rows_produced": 237521
+        },
+        {
+          "query_id": "01c816cd-020a-6d55-0005-0f02000a7862",
+          "query_type": "INSERT",
+          "query_tag": "sponsoratlas_task3",
+          "execution_status": "SUCCESS",
+          "warehouse_name": "SPONSORATLAS_XS",
+          "start_time": "2026-10-30 19:53:48.814000-07:00",
+          "total_elapsed_time": 4087,
+          "execution_time": 200,
+          "bytes_scanned": 0,
+          "rows_produced": 10000
+        },
+        {
+          "query_id": "01c816ce-020a-6cd8-0005-0f02000b1872",
+          "query_type": "CREATE_TABLE_AS_SELECT",
+          "query_tag": "sponsoratlas_task3",
+          "execution_status": "SUCCESS",
+          "warehouse_name": "SPONSORATLAS_XS",
+          "start_time": "2026-10-30 19:54:23.117000-07:00",
+          "total_elapsed_time": 3621,
+          "execution_time": 2572,
+          "bytes_scanned": 5765120,
+          "rows_produced": 93337
+        },
+        {
+          "query_id": "01c816cf-020a-6d55-0005-0f02000a795e",
+          "query_type": "CREATE_TABLE_AS_SELECT",
+          "query_tag": "sponsoratlas_task3",
+          "execution_status": "SUCCESS",
+          "warehouse_name": "SPONSORATLAS_XS",
+          "start_time": "2026-10-30 19:55:50.835000-07:00",
+          "total_elapsed_time": 3612,
+          "execution_time": 2348,
+          "bytes_scanned": 361002496,
+          "rows_produced": 713467
+        },
+        {
+          "query_id": "01c816cf-020a-6cd8-0005-0f02000b1932",
+          "query_type": "CREATE_TABLE_AS_SELECT",
+          "query_tag": "sponsoratlas_task3",
+          "execution_status": "SUCCESS",
+          "warehouse_name": "SPONSORATLAS_XS",
+          "start_time": "2026-10-30 19:55:38.286000-07:00",
+          "total_elapsed_time": 3523,
+          "execution_time": 2494,
+          "bytes_scanned": 115086444,
+          "rows_produced": 717449
+        },
+        {
+          "query_id": "01c816cd-020a-6cd6-0005-0f02000aa982",
+          "query_type": "INSERT",
+          "query_tag": "sponsoratlas_task3",
+          "execution_status": "SUCCESS",
+          "warehouse_name": "SPONSORATLAS_XS",
+          "start_time": "2026-10-30 19:53:37.253000-07:00",
+          "total_elapsed_time": 3411,
+          "execution_time": 199,
+          "bytes_scanned": 0,
+          "rows_produced": 10000
+        },
+        {
+          "query_id": "01c816cd-020a-6cd6-0005-0f02000aa9ae",
+          "query_type": "INSERT",
+          "query_tag": "sponsoratlas_task3",
+          "execution_status": "SUCCESS",
+          "warehouse_name": "SPONSORATLAS_XS",
+          "start_time": "2026-10-30 19:53:54.032000-07:00",
+          "total_elapsed_time": 3382,
+          "execution_time": 156,
+          "bytes_scanned": 74240,
+          "rows_produced": 20000
+        },
+        {
+          "query_id": "01c816cd-020a-6cd8-0005-0f02000b1836",
+          "query_type": "INSERT",
+          "query_tag": "sponsoratlas_task3",
+          "execution_status": "SUCCESS",
+          "warehouse_name": "SPONSORATLAS_XS",
+          "start_time": "2026-10-30 19:53:41.768000-07:00",
+          "total_elapsed_time": 3282,
+          "execution_time": 185,
+          "bytes_scanned": 101888,
+          "rows_produced": 20000
+        }
+      ]
+    },
+    {
+      "user": "CUBE_SVC",
+      "queries": 33,
+      "running_excluded": 1,
+      "warehouse_queries": 33,
+      "total_elapsed_ms": 3985,
+      "total_execution_ms": 856,
+      "total_bytes_scanned": 236605488,
+      "failed": 10,
+      "by_tag_and_type": [
+        {
+          "query_tag": "sponsoratlas:task1:grants",
+          "query_type": "SELECT",
+          "queries": 23,
+          "elapsed_ms": 1953,
+          "execution_ms": 41,
+          "bytes_scanned": 0,
+          "rows_produced": 1
+        },
+        {
+          "query_tag": "sponsoratlas:phase8:compare",
+          "query_type": "SELECT",
+          "queries": 5,
+          "elapsed_ms": 1336,
+          "execution_ms": 622,
+          "bytes_scanned": 236600832,
+          "rows_produced": 280801
+        },
+        {
+          "query_tag": "sponsoratlas:phase8:history",
+          "query_type": "SELECT",
+          "queries": 1,
+          "elapsed_ms": 347,
+          "execution_ms": 174,
+          "bytes_scanned": 4656,
+          "rows_produced": 33
+        },
+        {
+          "query_tag": "sponsoratlas:task1:grants",
+          "query_type": "USE",
+          "queries": 2,
+          "elapsed_ms": 169,
+          "execution_ms": 17,
+          "bytes_scanned": 0,
+          "rows_produced": 0
+        },
+        {
+          "query_tag": "",
+          "query_type": "SELECT",
+          "queries": 1,
+          "elapsed_ms": 145,
+          "execution_ms": 2,
+          "bytes_scanned": 0,
+          "rows_produced": 0
+        },
+        {
+          "query_tag": "sponsoratlas:task1:grants",
+          "query_type": "INSERT",
+          "queries": 1,
+          "elapsed_ms": 35,
+          "execution_ms": 0,
+          "bytes_scanned": 0,
+          "rows_produced": 0
+        }
+      ],
+      "top_by_elapsed": [
+        {
+          "query_id": "01c816d0-020a-6cd6-0005-0f02000aaad2",
+          "query_type": "SELECT",
+          "query_tag": "sponsoratlas:phase8:compare",
+          "execution_status": "SUCCESS",
+          "warehouse_name": "SPONSORATLAS_XS",
+          "start_time": "2026-10-30 19:56:52.290000-07:00",
+          "total_elapsed_time": 775,
+          "execution_time": 502,
+          "bytes_scanned": 82494976,
+          "rows_produced": 280799
+        },
+        {
+          "query_id": "01c816d3-020a-6d55-0005-0f02000a7a0a",
+          "query_type": "SELECT",
+          "query_tag": "sponsoratlas:phase8:history",
+          "execution_status": "SUCCESS",
+          "warehouse_name": "SPONSORATLAS_XS",
+          "start_time": "2026-10-30 19:59:20.995000-07:00",
+          "total_elapsed_time": 347,
+          "execution_time": 174,
+          "bytes_scanned": 4656,
+          "rows_produced": 33
+        },
+        {
+          "query_id": "01c816d1-020a-6cd8-0005-0f02000b19ae",
+          "query_type": "SELECT",
+          "query_tag": "sponsoratlas:task1:grants",
+          "execution_status": "FAILED_WITH_ERROR",
+          "warehouse_name": "SPONSORATLAS_XS",
+          "start_time": "2026-10-30 19:57:32.602000-07:00",
+          "total_elapsed_time": 258,
+          "execution_time": 0,
+          "bytes_scanned": 0,
+          "rows_produced": 0
+        },
+        {
+          "query_id": "01c816d1-020a-6d55-0005-0f02000a79fa",
+          "query_type": "SELECT",
+          "query_tag": "sponsoratlas:task1:grants",
+          "execution_status": "SUCCESS",
+          "warehouse_name": "SPONSORATLAS_XS",
+          "start_time": "2026-10-30 19:57:54.578000-07:00",
+          "total_elapsed_time": 252,
+          "execution_time": 11,
+          "bytes_scanned": 0,
+          "rows_produced": 1
+        },
+        {
+          "query_id": "01c816d0-020a-6d55-0005-0f02000a798a",
+          "query_type": "SELECT",
+          "query_tag": "sponsoratlas:phase8:compare",
+          "execution_status": "SUCCESS",
+          "warehouse_name": "SPONSORATLAS_XS",
+          "start_time": "2026-10-30 19:56:51.766000-07:00",
+          "total_elapsed_time": 224,
+          "execution_time": 95,
+          "bytes_scanned": 81925120,
+          "rows_produced": 1
+        },
+        {
+          "query_id": "01c816d0-020a-6cd6-0005-0f02000aaaca",
+          "query_type": "SELECT",
+          "query_tag": "sponsoratlas:phase8:compare",
+          "execution_status": "SUCCESS",
+          "warehouse_name": "SPONSORATLAS_XS",
+          "start_time": "2026-10-30 19:56:51.570000-07:00",
+          "total_elapsed_time": 165,
+          "execution_time": 4,
+          "bytes_scanned": 0,
+          "rows_produced": 0
+        },
+        {
+          "query_id": "01c815c5-020a-6cd8-0005-0f02000b1792",
+          "query_type": "SELECT",
+          "query_tag": "",
+          "execution_status": "SUCCESS",
+          "warehouse_name": "SPONSORATLAS_XS",
+          "start_time": "2026-10-30 15:29:02.376000-07:00",
+          "total_elapsed_time": 145,
+          "execution_time": 2,
+          "bytes_scanned": 0,
+          "rows_produced": 0
+        },
+        {
+          "query_id": "01c816d1-020a-6cd6-0005-0f02000aab32",
+          "query_type": "SELECT",
+          "query_tag": "sponsoratlas:task1:grants",
+          "execution_status": "SUCCESS",
+          "warehouse_name": "SPONSORATLAS_XS",
+          "start_time": "2026-10-30 19:57:48.739000-07:00",
+          "total_elapsed_time": 143,
+          "execution_time": 2,
+          "bytes_scanned": 0,
+          "rows_produced": 0
+        },
+        {
+          "query_id": "01c816d1-020a-6cd8-0005-0f02000b1a0e",
+          "query_type": "SELECT",
+          "query_tag": "sponsoratlas:task1:grants",
+          "execution_status": "SUCCESS",
+          "warehouse_name": "SPONSORATLAS_XS",
+          "start_time": "2026-10-30 19:57:55.002000-07:00",
+          "total_elapsed_time": 121,
+          "execution_time": 2,
+          "bytes_scanned": 0,
+          "rows_produced": 0
+        },
+        {
+          "query_id": "01c816d1-020a-6cd8-0005-0f02000b19ea",
+          "query_type": "USE",
+          "query_tag": "sponsoratlas:task1:grants",
+          "execution_status": "SUCCESS",
+          "warehouse_name": "SPONSORATLAS_XS",
+          "start_time": "2026-10-30 19:57:48.581000-07:00",
+          "total_elapsed_time": 120,
+          "execution_time": 11,
+          "bytes_scanned": 0,
+          "rows_produced": 0
+        },
+        {
+          "query_id": "01c816d1-020a-6cd8-0005-0f02000b19fe",
+          "query_type": "SELECT",
+          "query_tag": "sponsoratlas:task1:grants",
+          "execution_status": "FAILED_WITH_ERROR",
+          "warehouse_name": "SPONSORATLAS_XS",
+          "start_time": "2026-10-30 19:57:50.099000-07:00",
+          "total_elapsed_time": 99,
+          "execution_time": 0,
+          "bytes_scanned": 0,
+          "rows_produced": 0
+        },
+        {
+          "query_id": "01c816d1-020a-6cd8-0005-0f02000b1a06",
+          "query_type": "SELECT",
+          "query_tag": "sponsoratlas:task1:grants",
+          "execution_status": "FAILED_WITH_ERROR",
+          "warehouse_name": "SPONSORATLAS_XS",
+          "start_time": "2026-10-30 19:57:50.877000-07:00",
+          "total_elapsed_time": 90,
+          "execution_time": 0,
+          "bytes_scanned": 0,
+          "rows_produced": 0
+        },
+        {
+          "query_id": "01c816d0-020a-6cd6-0005-0f02000aaace",
+          "query_type": "SELECT",
+          "query_tag": "sponsoratlas:phase8:compare",
+          "execution_status": "SUCCESS",
+          "warehouse_name": "SPONSORATLAS_XS",
+          "start_time": "2026-10-30 19:56:52.034000-07:00",
+          "total_elapsed_time": 88,
+          "execution_time": 2,
+          "bytes_scanned": 0,
+          "rows_produced": 0
+        },
+        {
+          "query_id": "01c816d0-020a-6d55-0005-0f02000a798e",
+          "query_type": "SELECT",
+          "query_tag": "sponsoratlas:phase8:compare",
+          "execution_status": "SUCCESS",
+          "warehouse_name": "SPONSORATLAS_XS",
+          "start_time": "2026-10-30 19:56:52.156000-07:00",
+          "total_elapsed_time": 84,
+          "execution_time": 19,
+          "bytes_scanned": 72180736,
+          "rows_produced": 1
+        },
+        {
+          "query_id": "01c816d1-020a-6cd6-0005-0f02000aab36",
+          "query_type": "SELECT",
+          "query_tag": "sponsoratlas:task1:grants",
+          "execution_status": "SUCCESS",
+          "warehouse_name": "SPONSORATLAS_XS",
+          "start_time": "2026-10-30 19:57:49.100000-07:00",
+          "total_elapsed_time": 84,
+          "execution_time": 1,
+          "bytes_scanned": 0,
+          "rows_produced": 0
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "tenant_id": "REQUIRED",
+  "workspace_id": "REQUIRED",
+  "warehouse_id": "REQUIRED",
+  "lakehouse_id": "REQUIRED",
+  "principal_id": "REQUIRED",
+  "warehouse": "SponsorAtlasLcaWarehouse",
+  "lakehouse": "SponsorAtlasLcaLakehouse",
+  "server": "REQUIRED.datawarehouse.fabric.microsoft.com",
+  "fabric_trial_expires_at": "REQUIRED_OBSERVED_UTC_EXPIRY",
+  "snapshot": "REQUIRED_NATIVE_SNOWFLAKE_TIME_TRAVEL_TIMESTAMP",
+  "manifest_file": "REQUIRED_COMPLETE_BUNDLE_MANIFEST_JSON",
+  "sql_token_file": "REQUIRED_OWNER_ONLY_ENTRA_SQL_TOKEN_FILE",
+  "fabric_token_file": "REQUIRED_OWNER_ONLY_ENTRA_FABRIC_TOKEN_FILE",
+  "identity": {
+    "scope": "LCA_FY2024_Q4+FY2025_Q4",
+    "manifest_sha256": "REQUIRED",
+    "model_version": "sponsoratlas-lca-port-v1",
+    "registry_sha256": "REQUIRED",
+    "history_sha256": "REQUIRED"
+  },
+  "history_file": "REQUIRED_NATIVE_EXPORT_DIRECTORY/history.jsonl"
+}

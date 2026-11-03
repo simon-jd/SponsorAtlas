@@ -1,0 +1,30 @@
+SAME	stg_lca	717449	717449	[]
+SAME	stg_uscis	93315	93315	[]
+SAME	stg_board_jobs	3	3	[]
+DIFF	stg_cdc_job_postings	1	1	['source_relation']
+DIFF	stg_cdc_application_events	1	1	['source_relation']
+SAME	stg_bls	413527	413527	[]
+DIFF	snap_employer	98188	98188	['dbt_scd_id']
+SAME	int_dimension_mapping	717449	717449	[]
+SAME	int_lca_case_candidates	717449	717449	[]
+SAME	int_bls_benchmark_candidates	237521	237521	[]
+SAME	int_employer_current	98188	98188	[]
+SAME	dim_date	13149	13149	[]
+DIFF	dim_employer	98188	98188	['employer_key']
+SAME	dim_geography	7042	7042	[]
+SAME	dim_occupation	1453	1453	[]
+SAME	fact_lca_case	713467	713467	[]
+SAME	fact_job_posting_daily	86	86	[]
+SAME	fact_wage_benchmark	237514	237514	[]
+EQUAL	case_count	713467	713467
+EQUAL	certified_cases	697613	697613
+EQUAL	latest_rows	713467	713467
+EQUAL	certified_rate	0.9777789302098064	0.9777789302098064
+DIFF	certified_rate_avg_sql	0.9777789302098064	0.977779
+EQUAL	wage_p50	120000.0	120000.0
+EQUAL	wage_p75	156383.63	156383.63
+EQUAL	wage_p90	200000.0	200000.0
+EQUAL	active_posting_days	86	86
+EQUAL	oews_estimates_15_1252_us_2025	1	1
+EQUAL	oews_median_15_1252_us_2025	135980.0	135980.0
+groups	{'count': 280799, 'sha256': 'f9fd5aa4763cca7a69feffd5ef42f23875311ab7600da1098c7563b0f92158ea'}	{'count': 280799, 'sha256': 'f9fd5aa4763cca7a69feffd5ef42f23875311ab7600da1098c7563b0f92158ea'}

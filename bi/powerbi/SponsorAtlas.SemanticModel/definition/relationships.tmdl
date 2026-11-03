@@ -1,0 +1,90 @@
+relationship lca_Employer
+	fromColumn: lca.employer
+	toColumn: Employer.employer
+	fromCardinality: many
+	toCardinality: one
+	crossFilteringBehavior: oneDirection
+
+relationship postings_Employer
+	fromColumn: postings.employer
+	toColumn: Employer.employer
+	fromCardinality: many
+	toCardinality: one
+	crossFilteringBehavior: oneDirection
+
+relationship lca_SOC
+	fromColumn: lca.soc
+	toColumn: SOC.soc
+	fromCardinality: many
+	toCardinality: one
+	crossFilteringBehavior: oneDirection
+
+relationship postings_SOC
+	fromColumn: postings.soc
+	toColumn: SOC.soc
+	fromCardinality: many
+	toCardinality: one
+	crossFilteringBehavior: oneDirection
+
+relationship wages_SOC
+	fromColumn: wages.soc
+	toColumn: SOC.soc
+	fromCardinality: many
+	toCardinality: one
+	crossFilteringBehavior: oneDirection
+
+relationship lca_Metro
+	fromColumn: lca.metro
+	toColumn: Metro.metro
+	fromCardinality: many
+	toCardinality: one
+	crossFilteringBehavior: oneDirection
+
+relationship postings_Metro
+	fromColumn: postings.metro
+	toColumn: Metro.metro
+	fromCardinality: many
+	toCardinality: one
+	crossFilteringBehavior: oneDirection
+
+relationship wages_Metro
+	fromColumn: wages.metro
+	toColumn: Metro.metro
+	fromCardinality: many
+	toCardinality: one
+	crossFilteringBehavior: oneDirection
+
+relationship lca_FiscalYear
+	fromColumn: lca.fiscal_year
+	toColumn: FiscalYear.fiscal_year
+	fromCardinality: many
+	toCardinality: one
+	crossFilteringBehavior: oneDirection
+
+relationship postings_FiscalYear
+	fromColumn: postings.fiscal_year
+	toColumn: FiscalYear.fiscal_year
+	fromCardinality: many
+	toCardinality: one
+	crossFilteringBehavior: oneDirection
+
+relationship postings_ObservationDate
+	fromColumn: postings.observation_date
+	toColumn: ObservationDate.observation_date
+	fromCardinality: many
+	toCardinality: one
+	crossFilteringBehavior: oneDirection
+
+relationship wages_SurveyYear
+	fromColumn: wages.survey_year
+	toColumn: SurveyYear.survey_year
+	fromCardinality: many
+	toCardinality: one
+	crossFilteringBehavior: oneDirection
+
+relationship wages_PublishedArea
+	fromColumn: wages.area
+	toColumn: PublishedArea.area
+	fromCardinality: many
+	toCardinality: one
+	crossFilteringBehavior: oneDirection

@@ -1,0 +1,66 @@
+name: sponsoratlas
+version: '0.1.0'
+config-version: 2
+profile: sponsoratlas
+model-paths: [models]
+seed-paths: [seeds]
+test-paths: [tests]
+macro-paths: [macros]
+clean-targets: [target, logs]
+models:
+  sponsoratlas:
+    staging:
+      +schema: STAGING
+      +materialized: table
+      +tags: [staging]
+seeds:
+  sponsoratlas:
+    +schema: STAGING
+    +quote_columns: false
+    +tags: [staging]
+    state_fips:
+      +column_types:
+        state_fips: varchar
+    county_fips:
+      +column_types:
+        state_fips: varchar
+        county_fips: varchar
+    place_county_fips:
+      +column_types:
+        state_fips: varchar
+        county_fips: varchar
+    zcta_county_fips:
+      +column_types:
+        zcta: varchar
+        state_fips: varchar
+        county_fips: varchar
+        land_share: decimal(5,4)
+    staging_flag_limits:
+      +column_types:
+        max_share: decimal(6,4)
+    wage_test_inputs:
+      +column_types:
+        amount: decimal(18,2)
+    ref_county_2023:
+      +tags: [dimensions]
+      +column_types:
+        county_fips: varchar
+        county_internal_latitude: decimal(10,7)
+        county_internal_longitude: decimal(10,7)
+    ref_county_cbsa_2023:
+      +tags: [dimensions]
+      +column_types:
+        county_fips: varchar
+        cbsa_code: varchar
+    ref_soc_2018:
+      +tags: [dimensions]
+    ref_bls_areas_2025:
+      +tags: [dimensions, facts]
+      +column_types:
+        area_type: varchar
+        area_code: varchar
+    ref_oews_2025:
+      +tags: [dimensions, facts]
+      +column_types:
+        soc_code: varchar
+        major_code: varchar

@@ -1,0 +1,69 @@
+table postings
+
+	column posting_id
+		dataType: string
+		sourceColumn: posting_id
+		summarizeBy: none
+		isHidden
+
+	column observation_date
+		dataType: dateTime
+		sourceColumn: observation_date
+		summarizeBy: none
+
+	column is_active
+		dataType: boolean
+		sourceColumn: is_active
+		summarizeBy: none
+
+	column employer
+		dataType: string
+		sourceColumn: employer
+		summarizeBy: none
+
+	column soc_major
+		dataType: string
+		sourceColumn: soc_major
+		summarizeBy: none
+
+	column soc
+		dataType: string
+		sourceColumn: soc
+		summarizeBy: none
+
+	column metro
+		dataType: string
+		sourceColumn: metro
+		summarizeBy: none
+
+	column fiscal_year
+		dataType: int64
+		sourceColumn: fiscal_year
+		summarizeBy: none
+
+	column employer_mapping_status
+		dataType: string
+		sourceColumn: employer_mapping_status
+		summarizeBy: none
+
+	column occupation_mapping_status
+		dataType: string
+		sourceColumn: occupation_mapping_status
+		summarizeBy: none
+
+	column geography_mapping_status
+		dataType: string
+		sourceColumn: geography_mapping_status
+		summarizeBy: none
+
+	measure 'Active Posting Days' = SUMX(postings, IF(postings[is_active], 1, 0))
+		formatString: #,0
+
+	measure 'Observed Dates' = DISTINCTCOUNT(postings[observation_date])
+		formatString: #,0
+
+	measure 'Trend Status' = IF([Observed Dates] < 2, "One original UTC observation date; trend unavailable", "Active observed posting-days by UTC date")
+
+	partition postings = m
+		mode: import
+		source = Public_postings

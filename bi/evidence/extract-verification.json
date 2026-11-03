@@ -1,0 +1,21 @@
+{
+  "origin": "REOPEN_PACKAGED_HYPER_FULL_ROW_COMPARISON_NOT_VIZQL",
+  "manifest_sha256": "b76f529c69a84b0d9a4305f12ab5825e2675afc636f047006fbe601693801a36",
+  "tables": {
+    "lca": {
+      "rows": 238891,
+      "sha256": "cebca5b2a0c637e9ffffd7396c15b2fd19f34dd3955cd3da4e8a8ea180fe226f"
+    },
+    "postings": {
+      "rows": 86,
+      "sha256": "b2d666fdaa277323706ac0160a89a071df3ef741ab60d9d3e708e9cd4fa5bfdb"
+    },
+    "wages": {
+      "rows": 237514,
+      "sha256": "75ffdfa9071eb30eeebb3385d6364bfe353fc00d8d71ee566208ce1ee72d97d2"
+    }
+  },
+  "status": "PASS",
+  "twbx_sha256": "97c4a81b7e349c40912e0a2e77e18d4bf339653f749d4f5ee4964c1a46c4cc03",
+  "xml_repack_preserved_extracts": true
+}

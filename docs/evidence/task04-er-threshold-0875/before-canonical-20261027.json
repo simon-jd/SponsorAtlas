@@ -1,0 +1,175 @@
+{
+  "label_origin": "subagent",
+  "human_labels": false,
+  "deployed_threshold": 0.875,
+  "input": "/home/postedism/Desktop/SponsorAtlas/.tools/er/fy2025-backfill/input",
+  "prediction": "/home/postedism/Desktop/SponsorAtlas/.tools/er/fy2025-backfill/prediction",
+  "labels": "/home/postedism/Desktop/SponsorAtlas/.tools/er/agent-annotation-20261025/revision-2/agent-pairs.csv",
+  "source_records": 164059,
+  "candidates": 631235,
+  "label_alignment": {
+    "pairs": 600,
+    "matched": 600,
+    "unmatched_by_reason": {},
+    "unmatched": []
+  },
+  "thresholds": {
+    "0.85": {
+      "accepted_edges": 114646,
+      "clusters": 98352,
+      "employers": 98343,
+      "holdout": {
+        "TP": 44,
+        "FP": 0,
+        "FN": 4,
+        "TN": 47,
+        "precision": 1.0,
+        "recall": 0.9166666666666666,
+        "abstained": 13,
+        "hard_cases": {
+          "TP": 32,
+          "FP": 0,
+          "FN": 4,
+          "TN": 3,
+          "precision": 1.0,
+          "recall": 0.8888888888888888
+        },
+        "errors_by_direct_reason": {
+          "FN:BELOW_THRESHOLD": 3,
+          "FN:INSUFFICIENT_CONTEXT": 1
+        }
+      },
+      "train": {
+        "TP": 147,
+        "FP": 0,
+        "FN": 11,
+        "TN": 250,
+        "precision": 1.0,
+        "recall": 0.930379746835443,
+        "abstained": 84,
+        "hard_cases": {
+          "TP": 88,
+          "FP": 0,
+          "FN": 11,
+          "TN": 27,
+          "precision": 1.0,
+          "recall": 0.8888888888888888
+        },
+        "errors_by_direct_reason": {
+          "FN:BELOW_THRESHOLD": 10,
+          "FN:INSUFFICIENT_CONTEXT": 1
+        }
+      }
+    },
+    "0.875": {
+      "accepted_edges": 114646,
+      "clusters": 98352,
+      "employers": 98343,
+      "holdout": {
+        "TP": 44,
+        "FP": 0,
+        "FN": 4,
+        "TN": 47,
+        "precision": 1.0,
+        "recall": 0.9166666666666666,
+        "abstained": 13,
+        "hard_cases": {
+          "TP": 32,
+          "FP": 0,
+          "FN": 4,
+          "TN": 3,
+          "precision": 1.0,
+          "recall": 0.8888888888888888
+        },
+        "errors_by_direct_reason": {
+          "FN:BELOW_THRESHOLD": 3,
+          "FN:INSUFFICIENT_CONTEXT": 1
+        }
+      },
+      "train": {
+        "TP": 147,
+        "FP": 0,
+        "FN": 11,
+        "TN": 250,
+        "precision": 1.0,
+        "recall": 0.930379746835443,
+        "abstained": 84,
+        "hard_cases": {
+          "TP": 88,
+          "FP": 0,
+          "FN": 11,
+          "TN": 27,
+          "precision": 1.0,
+          "recall": 0.8888888888888888
+        },
+        "errors_by_direct_reason": {
+          "FN:BELOW_THRESHOLD": 10,
+          "FN:INSUFFICIENT_CONTEXT": 1
+        }
+      }
+    },
+    "0.9": {
+      "accepted_edges": 114646,
+      "clusters": 98352,
+      "employers": 98343,
+      "holdout": {
+        "TP": 44,
+        "FP": 0,
+        "FN": 4,
+        "TN": 47,
+        "precision": 1.0,
+        "recall": 0.9166666666666666,
+        "abstained": 13,
+        "hard_cases": {
+          "TP": 32,
+          "FP": 0,
+          "FN": 4,
+          "TN": 3,
+          "precision": 1.0,
+          "recall": 0.8888888888888888
+        },
+        "errors_by_direct_reason": {
+          "FN:BELOW_THRESHOLD": 3,
+          "FN:INSUFFICIENT_CONTEXT": 1
+        }
+      },
+      "train": {
+        "TP": 147,
+        "FP": 0,
+        "FN": 11,
+        "TN": 250,
+        "precision": 1.0,
+        "recall": 0.930379746835443,
+        "abstained": 84,
+        "hard_cases": {
+          "TP": 88,
+          "FP": 0,
+          "FN": 11,
+          "TN": 27,
+          "precision": 1.0,
+          "recall": 0.8888888888888888
+        },
+        "errors_by_direct_reason": {
+          "FN:BELOW_THRESHOLD": 10,
+          "FN:INSUFFICIENT_CONTEXT": 1
+        }
+      }
+    }
+  },
+  "changes_vs_deployed": {
+    "0.85": {
+      "accepted_only_here": 0,
+      "accepted_only_at_deployed": 0,
+      "records_moved": 0,
+      "clusters_removed": 0,
+      "clusters_added": 0
+    },
+    "0.9": {
+      "accepted_only_here": 0,
+      "accepted_only_at_deployed": 0,
+      "records_moved": 0,
+      "clusters_removed": 0,
+      "clusters_added": 0
+    }
+  }
+}

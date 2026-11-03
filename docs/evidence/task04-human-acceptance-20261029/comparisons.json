@@ -1,0 +1,19 @@
+{
+  "deployed_vs_acceptance_prediction": {
+    "deployed": ".tools/er/fy2025-backfill/prediction (model b18498743678, unlabelled u/EM)",
+    "acceptance": ".tools/er/human-acceptance-20261029/prediction (model 905d18c6a796, u/EM without the 203 holdout endpoints)",
+    "records": 161596,
+    "xref_employer_or_status_differences": 0,
+    "accepted_edges": 107780,
+    "accepted_edges_only_in_one": 0
+  },
+  "human_vs_subagent_reference_labels": {
+    "subagent_labels": ".tools/er/agent-annotation-20261025/revision-2/agent-pairs.jsonl",
+    "pairs_both_resolved": 464,
+    "agree": 464,
+    "holdout_both_resolved": 93,
+    "holdout_agree": 93,
+    "subagent_abstained_human_labelled": 95
+  },
+  "machine": {"nproc": 32, "uptime_before_train": "load average: 2.16, 2.51, 2.75", "note": "other projects' sessions were running"}
+}

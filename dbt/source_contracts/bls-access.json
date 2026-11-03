@@ -1,0 +1,12 @@
+[
+  {
+    "year": 2024,
+    "url": "https://www.bls.gov/oes/special-requests/oesm24all.zip",
+    "error": "HTTP Error 403: Forbidden"
+  },
+  {
+    "year": 2025,
+    "url": "https://www.bls.gov/oes/special-requests/oesm25all.zip",
+    "error": "HTTP Error 403: Forbidden"
+  }
+]

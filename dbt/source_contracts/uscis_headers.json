@@ -1,0 +1,54 @@
+{
+  "FY2022": {
+    "url": "https://www.uscis.gov/sites/default/files/document/data/h1b_datahubexport-2022.csv",
+    "sha256": "692cc11c7d48739d5ff4363a6ba7cbe0c422334c417dd88813aa1ff596d5f879",
+    "source_rows": 59983,
+    "original_headers": [
+      "Fiscal Year",
+      "Employer",
+      "Initial Approval",
+      "Initial Denial",
+      "Continuing Approval",
+      "Continuing Denial",
+      "NAICS",
+      "Tax ID",
+      "State",
+      "City",
+      "ZIP"
+    ],
+    "derived_sha256": "a3a68d0f3b6a4f23120c1c6e70cff55f5fe9e4a09f78ec45b2a5604d357de116",
+    "http": {
+      "retrieved_at": "2026-10-24T03:16:34.024463+00:00",
+      "final_url": "https://www.uscis.gov/sites/default/files/document/data/h1b_datahubexport-2022.csv",
+      "etag": "\"3da5b3-5f342045c0988\"",
+      "last_modified": "Fri, 27 Jan 2023 17:15:50 GMT",
+      "content_type": "text/csv"
+    }
+  },
+  "FY2023": {
+    "url": "https://www.uscis.gov/sites/default/files/document/data/h1b_datahubexport-2023.csv",
+    "sha256": "96f42309393249a7368bd418b2b2c5111b45acc7ccec487a0f024dfa07d71931",
+    "source_rows": 33332,
+    "original_headers": [
+      "Fiscal Year",
+      "Employer",
+      "Initial Approval",
+      "Initial Denial",
+      "Continuing Approval",
+      "Continuing Denial",
+      "NAICS",
+      "Tax ID",
+      "State",
+      "City",
+      "ZIP"
+    ],
+    "derived_sha256": "9946a977a87c0dc2fb73848f729546207ea22bee82049ed2fe0e328010e791b9",
+    "http": {
+      "retrieved_at": "2026-10-24T03:16:34.740454+00:00",
+      "final_url": "https://www.uscis.gov/sites/default/files/document/data/h1b_datahubexport-2023.csv",
+      "etag": "\"219bce-5fd00d03b6108\"",
+      "last_modified": "Wed, 31 May 2023 17:40:18 GMT",
+      "content_type": "text/csv"
+    }
+  }
+}

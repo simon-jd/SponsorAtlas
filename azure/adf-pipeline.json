@@ -1,0 +1,78 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "factoryName": {"type": "string"},
+    "blobServiceEndpoint": {"type": "string"},
+    "blobContainer": {"type": "string"},
+    "workspaceId": {"type": "string"},
+    "lakehouseId": {"type": "string"},
+    "fabricTenantId": {"type": "string"},
+    "fabricServicePrincipalId": {"type": "string"},
+    "keyVaultBaseUrl": {"type": "string"},
+    "certificateSecretName": {"type": "string"},
+    "certificateSecretVersion": {"type": "string"}
+  },
+  "resources": [
+    {
+      "type": "Microsoft.DataFactory/factories/linkedservices", "apiVersion": "2018-06-01",
+      "name": "[concat(parameters('factoryName'), '/ArchiveBlob')]",
+      "properties": {"type": "AzureBlobStorage", "typeProperties": {
+        "serviceEndpoint": "[parameters('blobServiceEndpoint')]", "accountKind": "StorageV2"
+      }}
+    },
+    {
+      "type": "Microsoft.DataFactory/factories/linkedservices", "apiVersion": "2018-06-01",
+      "name": "[concat(parameters('factoryName'), '/PortKeyVault')]",
+      "properties": {"type": "AzureKeyVault", "typeProperties": {"baseUrl": "[parameters('keyVaultBaseUrl')]"}}
+    },
+    {
+      "type": "Microsoft.DataFactory/factories/linkedservices", "apiVersion": "2018-06-01",
+      "name": "[concat(parameters('factoryName'), '/FabricLakehouse')]",
+      "dependsOn": ["[resourceId('Microsoft.DataFactory/factories/linkedservices', parameters('factoryName'), 'PortKeyVault')]"],
+      "properties": {"type": "Lakehouse", "typeProperties": {
+        "workspaceId": "[parameters('workspaceId')]", "artifactId": "[parameters('lakehouseId')]",
+        "tenant": "[parameters('fabricTenantId')]", "servicePrincipalId": "[parameters('fabricServicePrincipalId')]",
+        "servicePrincipalCredentialType": "ServicePrincipalCert",
+        "servicePrincipalCredential": {"type": "AzureKeyVaultSecret", "store": {"referenceName": "PortKeyVault", "type": "LinkedServiceReference"}, "secretName": "[parameters('certificateSecretName')]", "secretVersion": "[parameters('certificateSecretVersion')]"}
+      }}
+    },
+    {
+      "type": "Microsoft.DataFactory/factories/datasets", "apiVersion": "2018-06-01",
+      "name": "[concat(parameters('factoryName'), '/ArchiveBinary')]",
+      "dependsOn": ["[resourceId('Microsoft.DataFactory/factories/linkedservices', parameters('factoryName'), 'ArchiveBlob')]"],
+      "properties": {"type": "Binary", "linkedServiceName": {"referenceName": "ArchiveBlob", "type": "LinkedServiceReference"},
+        "parameters": {"folder": {"type": "String"}, "file": {"type": "String"}},
+        "typeProperties": {"location": {"type": "AzureBlobStorageLocation", "container": "[parameters('blobContainer')]", "folderPath": {"value": "@dataset().folder", "type": "Expression"}, "fileName": {"value": "@dataset().file", "type": "Expression"}}}}
+    },
+    {
+      "type": "Microsoft.DataFactory/factories/datasets", "apiVersion": "2018-06-01",
+      "name": "[concat(parameters('factoryName'), '/LakehouseBinary')]",
+      "dependsOn": ["[resourceId('Microsoft.DataFactory/factories/linkedservices', parameters('factoryName'), 'FabricLakehouse')]"],
+      "properties": {"type": "Binary", "linkedServiceName": {"referenceName": "FabricLakehouse", "type": "LinkedServiceReference"},
+        "parameters": {"folder": {"type": "String"}, "file": {"type": "String"}},
+        "typeProperties": {"location": {"type": "LakehouseLocation", "folderPath": {"value": "@dataset().folder", "type": "Expression"}, "fileName": {"value": "@dataset().file", "type": "Expression"}}}}
+    },
+    {
+      "type": "Microsoft.DataFactory/factories/pipelines", "apiVersion": "2018-06-01",
+      "name": "[concat(parameters('factoryName'), '/CopyLcaSubjectBundle')]",
+      "dependsOn": ["[resourceId('Microsoft.DataFactory/factories/datasets', parameters('factoryName'), 'ArchiveBinary')]", "[resourceId('Microsoft.DataFactory/factories/datasets', parameters('factoryName'), 'LakehouseBinary')]"],
+      "properties": {
+        "concurrency": 1,
+        "parameters": {"manifestSha256": {"type": "String"}, "files": {"type": "Array"}},
+        "activities": [{"name": "CopyExactBundleFiles", "type": "ForEach", "typeProperties": {
+          "isSequential": true, "items": {"value": "@pipeline().parameters.files", "type": "Expression"},
+          "activities": [{"name": "CopyRawBytes", "type": "Copy", "policy": {"timeout": "0.01:00:00", "retry": 0, "secureInput": true, "secureOutput": true},
+            "inputs": [{"referenceName": "ArchiveBinary", "type": "DatasetReference", "parameters": {"folder": {"value": "@item().folder", "type": "Expression"}, "file": {"value": "@item().file", "type": "Expression"}}}],
+            "outputs": [{"referenceName": "LakehouseBinary", "type": "DatasetReference", "parameters": {"folder": {"value": "@concat('sponsoratlas/', pipeline().parameters.manifestSha256, '/', item().folder)", "type": "Expression"}, "file": {"value": "@item().file", "type": "Expression"}}}],
+            "typeProperties": {
+              "source": {"type": "BinarySource", "storeSettings": {"type": "AzureBlobStorageReadSettings", "recursive": false, "deleteFilesAfterCompletion": false}},
+              "sink": {"type": "BinarySink", "storeSettings": {"type": "LakehouseWriteSettings", "copyBehavior": "PreserveHierarchy"}},
+              "enableStaging": false, "parallelCopies": 1, "dataIntegrationUnits": 4, "validateDataConsistency": true
+            }
+          }]
+        }}]
+      }
+    }
+  ]
+}

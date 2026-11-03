@@ -1,0 +1,84 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.1.0/schema.json",
+  "name": "visual027",
+  "position": {
+    "x": 20,
+    "y": 410,
+    "width": 1400,
+    "height": 300,
+    "z": 27,
+    "tabOrder": 27
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "wages"
+                    }
+                  },
+                  "Property": "wage_status"
+                }
+              },
+              "queryRef": "wages.wage_status"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "wages"
+                    }
+                  },
+                  "Property": "median_raw"
+                }
+              },
+              "queryRef": "wages.median_raw"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "wages"
+                    }
+                  },
+                  "Property": "OEWS Estimate Count"
+                }
+              },
+              "queryRef": "wages.OEWS Estimate Count"
+            }
+          ]
+        }
+      }
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Published wage status and suppressed values'"
+                }
+              }
+            },
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "exported_at": "2026-10-28T08:21:14+00:00",
+  "server": {
+    "version": "2.0.6",
+    "revision": "a695261b19d48411a39502a5c5fc0b453729eb4e",
+    "timestamp": 1792559035171
+  },
+  "tables": 25,
+  "table_edges": {
+    "sponsoratlas_local_public_facts_duckdb.fy2025-full.DIMENSIONS_INPUT.employer_sources -> sponsoratlas_local_public_facts_duckdb.fy2025-full.INTERMEDIATE.int_dimension_mapping": 2,
+    "sponsoratlas_local_public_facts_duckdb.fy2025-full.DIMENSIONS_INPUT.lca_attributes -> sponsoratlas_local_public_facts_duckdb.fy2025-full.INTERMEDIATE.int_dimension_mapping": 15,
+    "sponsoratlas_local_public_facts_duckdb.fy2025-full.FACTS_INPUT.lca -> sponsoratlas_local_public_facts_duckdb.fy2025-full.INTERMEDIATE.int_lca_case_candidates": 53,
+    "sponsoratlas_local_public_facts_duckdb.fy2025-full.INTERMEDIATE.int_dimension_mapping -> sponsoratlas_local_public_facts_duckdb.fy2025-full.INTERMEDIATE.int_lca_case_candidates": 20,
+    "sponsoratlas_local_public_facts_duckdb.fy2025-full.INTERMEDIATE.int_lca_case_candidates -> sponsoratlas_local_public_facts_duckdb.fy2025-full.MARTS.fact_lca_case": 33,
+    "sponsoratlas_local_public_facts_duckdb.fy2025-full.MARTS.dim_date -> sponsoratlas_local_public_facts_duckdb.fy2025-full.MARTS.fact_lca_case": 1,
+    "sponsoratlas_local_public_facts_duckdb.fy2025-full.MARTS.dim_employer -> sponsoratlas_local_public_facts_duckdb.fy2025-full.INTERMEDIATE.int_dimension_mapping": 1,
+    "sponsoratlas_local_public_facts_duckdb.fy2025-full.MARTS.dim_employer -> sponsoratlas_local_public_facts_duckdb.fy2025-full.MARTS.fact_lca_case": 3,
+    "sponsoratlas_local_public_facts_duckdb.fy2025-full.MARTS.dim_geography -> sponsoratlas_local_public_facts_duckdb.fy2025-full.INTERMEDIATE.int_dimension_mapping": 3,
+    "sponsoratlas_local_public_facts_duckdb.fy2025-full.MARTS.dim_occupation -> sponsoratlas_local_public_facts_duckdb.fy2025-full.INTERMEDIATE.int_dimension_mapping": 2,
+    "sponsoratlas_local_public_facts_duckdb.fy2025-full.SNAPSHOTS.snap_employer -> sponsoratlas_local_public_facts_duckdb.fy2025-full.MARTS.dim_employer": 0,
+    "sponsoratlas_local_public_staging_duckdb.fy2025-full.RAW_LCA.LCA_FY2024_Q4 -> sponsoratlas_local_public_staging_duckdb.fy2025-full.STAGING.stg_lca": 45,
+    "sponsoratlas_local_public_staging_duckdb.fy2025-full.RAW_LCA.LCA_FY2025_Q1 -> sponsoratlas_local_public_staging_duckdb.fy2025-full.STAGING.stg_lca": 45,
+    "sponsoratlas_local_public_staging_duckdb.fy2025-full.RAW_LCA.LCA_FY2025_Q2 -> sponsoratlas_local_public_staging_duckdb.fy2025-full.STAGING.stg_lca": 45,
+    "sponsoratlas_local_public_staging_duckdb.fy2025-full.RAW_LCA.LCA_FY2025_Q3 -> sponsoratlas_local_public_staging_duckdb.fy2025-full.STAGING.stg_lca": 45,
+    "sponsoratlas_local_public_staging_duckdb.fy2025-full.RAW_LCA.LCA_FY2025_Q4 -> sponsoratlas_local_public_staging_duckdb.fy2025-full.STAGING.stg_lca": 45,
+    "sponsoratlas_local_public_staging_duckdb.fy2025-full.STAGING.county_fips -> sponsoratlas_local_public_staging_duckdb.fy2025-full.STAGING.stg_lca": 5,
+    "sponsoratlas_local_public_staging_duckdb.fy2025-full.STAGING.lca_column_map -> sponsoratlas_local_public_staging_duckdb.fy2025-full.STAGING.stg_lca": 0,
+    "sponsoratlas_local_public_staging_duckdb.fy2025-full.STAGING.place_county_fips -> sponsoratlas_local_public_staging_duckdb.fy2025-full.STAGING.stg_lca": 5,
+    "sponsoratlas_local_public_staging_duckdb.fy2025-full.STAGING.state_fips -> sponsoratlas_local_public_staging_duckdb.fy2025-full.STAGING.stg_lca": 1,
+    "sponsoratlas_local_public_staging_duckdb.fy2025-full.STAGING.stg_lca -> sponsoratlas_local_public_facts_duckdb.fy2025-full.FACTS_INPUT.lca": 53,
+    "sponsoratlas_local_public_staging_duckdb.fy2025-full.STAGING.zcta_county_fips -> sponsoratlas_local_public_staging_duckdb.fy2025-full.STAGING.stg_lca": 5,
+    "sponsoratlas_local_synthetic_duckdb.synthetic_applications.RAW_JOBS.CDC_APPLICATION_EVENTS -> sponsoratlas_local_synthetic_duckdb.synthetic_applications.STAGING.stg_private_application_events": 12,
+    "sponsoratlas_local_synthetic_duckdb.synthetic_applications.STAGING.stg_private_application_events -> sponsoratlas_local_synthetic_duckdb.synthetic_applications.MARTS.fact_my_applications": 10
+  },
+  "column_edges": 449,
+  "chains": {
+    "synthetic_private_contact_email": [
+      "sponsoratlas_local_synthetic_duckdb.synthetic_applications.RAW_JOBS.CDC_APPLICATION_EVENTS.contact_email",
+      "sponsoratlas_local_synthetic_duckdb.synthetic_applications.STAGING.stg_private_application_events.contact_email",
+      "sponsoratlas_local_synthetic_duckdb.synthetic_applications.MARTS.fact_my_applications.contact_email"
+    ],
+    "public_lca_case_number": [
+      "sponsoratlas_local_public_staging_duckdb.fy2025-full.RAW_LCA.LCA_FY2025_Q4.payload_json",
+      "sponsoratlas_local_public_staging_duckdb.fy2025-full.STAGING.stg_lca.case_number",
+      "sponsoratlas_local_public_facts_duckdb.fy2025-full.FACTS_INPUT.lca.case_number",
+      "sponsoratlas_local_public_facts_duckdb.fy2025-full.INTERMEDIATE.int_lca_case_candidates.case_number",
+      "sponsoratlas_local_public_facts_duckdb.fy2025-full.MARTS.fact_lca_case.case_number"
+    ],
+    "public_lca_worksite_zip5": [
+      "sponsoratlas_local_public_staging_duckdb.fy2025-full.RAW_LCA.LCA_FY2025_Q4.payload_json",
+      "sponsoratlas_local_public_staging_duckdb.fy2025-full.STAGING.stg_lca.worksite_zip5",
+      "sponsoratlas_local_public_facts_duckdb.fy2025-full.FACTS_INPUT.lca.worksite_zip5",
+      "sponsoratlas_local_public_facts_duckdb.fy2025-full.INTERMEDIATE.int_lca_case_candidates.worksite_zip5"
+    ],
+    "public_lca_county_from_zcta_county_fips": [
+      "sponsoratlas_local_public_staging_duckdb.fy2025-full.STAGING.zcta_county_fips.county_fips",
+      "sponsoratlas_local_public_staging_duckdb.fy2025-full.STAGING.stg_lca.county_fips",
+      "sponsoratlas_local_public_facts_duckdb.fy2025-full.FACTS_INPUT.lca.county_fips",
+      "sponsoratlas_local_public_facts_duckdb.fy2025-full.INTERMEDIATE.int_lca_case_candidates.county_fips"
+    ],
+    "public_lca_county_from_place_county_fips": [
+      "sponsoratlas_local_public_staging_duckdb.fy2025-full.STAGING.place_county_fips.county_fips",
+      "sponsoratlas_local_public_staging_duckdb.fy2025-full.STAGING.stg_lca.county_fips",
+      "sponsoratlas_local_public_facts_duckdb.fy2025-full.FACTS_INPUT.lca.county_fips",
+      "sponsoratlas_local_public_facts_duckdb.fy2025-full.INTERMEDIATE.int_lca_case_candidates.county_fips"
+    ]
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "kind": "WORKSITE_ZCTA_OR_PLACE_INTERNAL_POINT",
+  "sourceSnapshot": "6d185ed4bcae56ee9b5aad7de36e33a63bb84e836a34a559cdf826cb3be9ceff",
+  "sha256": "48069ecddf30ace3a6f13a2a414c45f7eb008b94879d8c71a50a2008d74e61c8",
+  "bytes": 103036467,
+  "rows": 713467,
+  "frequencyRows": 517991,
+  "nullWages": 0,
+  "unmapped": 336,
+  "bySemantics": {
+    "COUNTY_INTERNAL_POINT_NOT_WORKSITE": 1729,
+    "PLACE_INTERNAL_POINT": 25396,
+    "UNMAPPED": 336,
+    "ZCTA_INTERNAL_POINT": 686006
+  },
+  "checks": [
+    [
+      713467,
+      713467
+    ],
+    [
+      713467
+    ],
+    [
+      0
+    ]
+  ],
+  "sourceProtection": {
+    "unchanged": true
+  },
+  "coordinateCaveat": "Census2020 ZCTA/place internal points, county internal point as fallback; representative points, not worksite addresses"
+}

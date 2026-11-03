@@ -1,0 +1,5 @@
+views:
+  - name: wage_metrics
+    cubes:
+      - join_path: wages
+        includes: [oews_median, estimate_count, soc_major, soc, metro, fiscal_year, survey_year, area, geography_level, occupation_level, median_raw, wage_status, annual_flag, hourly_flag]

@@ -1,0 +1,4 @@
+.venv/
+__pycache__/
+.env*
+dbt-readonly/.user.yml

@@ -1,0 +1,116 @@
+{
+  "dataset": "SYNTHETIC_CDC_DRILL",
+  "started_at": "2026-10-27T17:03:18.331911+00:00",
+  "postgres": {
+    "version": "PostgreSQL 16.15 on x86_64-pc-linux-musl, compiled by gcc (Alpine 15.2.0) 15.2.0, 64-bit",
+    "wal_level": "logical",
+    "plugin": "pgoutput",
+    "slot_type": "logical"
+  },
+  "poll_interval_seconds": 30.0,
+  "seed_rows": {
+    "job_postings": 200,
+    "application_events": 80
+  },
+  "changes": [
+    {
+      "table": "job_postings",
+      "op": "insert",
+      "id": "drill-new",
+      "committed_at": "2026-10-27T17:03:19.457280+00:00",
+      "cdc_commit_at": "2026-10-27T17:03:19.445127+00:00",
+      "raw_extracted_at": "2026-10-27T17:03:48.879594+00:00",
+      "lsn": "0/196A7B8",
+      "commit_to_raw_seconds": 29.434467,
+      "within_15_min": true
+    },
+    {
+      "table": "job_postings",
+      "op": "update",
+      "id": "seed-0001",
+      "committed_at": "2026-10-27T17:03:19.461802+00:00",
+      "cdc_commit_at": "2026-10-27T17:03:19.458380+00:00",
+      "raw_extracted_at": "2026-10-27T17:03:48.879594+00:00",
+      "lsn": "0/196A8E0",
+      "commit_to_raw_seconds": 29.421214,
+      "within_15_min": true
+    },
+    {
+      "table": "job_postings",
+      "op": "delete",
+      "id": "seed-0002",
+      "committed_at": "2026-10-27T17:03:19.465696+00:00",
+      "cdc_commit_at": "2026-10-27T17:03:19.462125+00:00",
+      "raw_extracted_at": "2026-10-27T17:03:48.879594+00:00",
+      "lsn": "0/196AA60",
+      "commit_to_raw_seconds": 29.417469,
+      "within_15_min": true
+    },
+    {
+      "table": "application_events",
+      "op": "insert",
+      "id": "drill-ev",
+      "committed_at": "2026-10-27T17:03:19.469533+00:00",
+      "cdc_commit_at": "2026-10-27T17:03:19.466081+00:00",
+      "raw_extracted_at": "2026-10-27T17:03:48.879594+00:00",
+      "lsn": "0/196AB08",
+      "commit_to_raw_seconds": 29.413513,
+      "within_15_min": true
+    },
+    {
+      "table": "application_events",
+      "op": "update",
+      "id": "seed-ev-0001",
+      "committed_at": "2026-10-27T17:03:19.473707+00:00",
+      "cdc_commit_at": "2026-10-27T17:03:19.470347+00:00",
+      "raw_extracted_at": "2026-10-27T17:03:48.879594+00:00",
+      "lsn": "0/196AC40",
+      "commit_to_raw_seconds": 29.409247,
+      "within_15_min": true
+    },
+    {
+      "table": "application_events",
+      "op": "delete",
+      "id": "seed-ev-0002",
+      "committed_at": "2026-10-27T17:03:19.477363+00:00",
+      "cdc_commit_at": "2026-10-27T17:03:19.474018+00:00",
+      "raw_extracted_at": "2026-10-27T17:03:48.879594+00:00",
+      "lsn": "0/196ADE8",
+      "commit_to_raw_seconds": 29.405576,
+      "within_15_min": true
+    }
+  ],
+  "max_commit_to_raw_seconds": 29.434467,
+  "all_within_15_min": true,
+  "tombstones": {
+    "job_postings": 1,
+    "application_events": 1
+  },
+  "reconciliation": [
+    {
+      "release": "postgres_cdc",
+      "table": "RAW.JOBS.CDC_APPLICATION_EVENTS",
+      "sha256": "",
+      "source_rows": 80,
+      "raw_rows": 80,
+      "difference": 0,
+      "status": "MATCH"
+    },
+    {
+      "release": "postgres_cdc",
+      "table": "RAW.JOBS.CDC_JOB_POSTINGS",
+      "sha256": "",
+      "source_rows": 200,
+      "raw_rows": 200,
+      "difference": 0,
+      "status": "MATCH"
+    }
+  ],
+  "reconciled": true,
+  "slot_after": {
+    "confirmed_flush_lsn": "0/196AEA8",
+    "retained_wal_bytes": 294176
+  },
+  "replicator_cycles": 3,
+  "replicator_error": null
+}

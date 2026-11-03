@@ -1,0 +1,22 @@
+{
+ "dimensions_t09_20261027": {
+  "dim_employer": 98343,
+  "dim_geography": 7042,
+  "dim_occupation": 1453
+ },
+ "dimensions_t0875": {
+  "dim_employer": 98188,
+  "dim_geography": 7042,
+  "dim_occupation": 1453
+ },
+ "facts_t09_20261027": {
+  "fact_lca_case": 713467,
+  "fact_wage_benchmark": 237514,
+  "fact_job_posting_daily": 86
+ },
+ "facts_t0875": {
+  "fact_lca_case": 713467,
+  "fact_wage_benchmark": 237514,
+  "fact_job_posting_daily": 86
+ }
+}

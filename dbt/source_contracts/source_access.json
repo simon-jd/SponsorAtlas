@@ -1,0 +1,96 @@
+{
+  "checks": [
+    {
+      "url": "https://www.dol.gov/sites/dolgov/files/ETA/oflc/pdfs/LCA_Record_Layout_FY2024_Q4.pdf",
+      "final_url": "https://www.dol.gov/sites/dolgov/files/ETA/oflc/pdfs/LCA_Record_Layout_FY2024_Q4.pdf",
+      "http_status": 200,
+      "content_type": "application/pdf",
+      "last_modified": "Tue, 12 Nov 2024 13:29:41 GMT",
+      "etag": "\"67335845-29c5d\"",
+      "checked_at_utc": "2026-10-24T03:13:36.173814+00:00"
+    },
+    {
+      "url": "https://www.dol.gov/sites/dolgov/files/ETA/oflc/pdfs/LCA_Disclosure_Data_FY2024_Q4.xlsx",
+      "final_url": "https://www.dol.gov/sites/dolgov/files/ETA/oflc/pdfs/LCA_Disclosure_Data_FY2024_Q4.xlsx",
+      "http_status": 200,
+      "content_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+      "last_modified": "Tue, 12 Nov 2024 13:57:09 GMT",
+      "etag": "\"67335eb5-4f358cb\"",
+      "checked_at_utc": "2026-10-24T03:13:36.156046+00:00"
+    },
+    {
+      "url": "https://www.dol.gov/sites/dolgov/files/ETA/oflc/pdfs/LCA_Record_Layout_FY2025_Q4.pdf",
+      "final_url": "https://www.dol.gov/sites/dolgov/files/ETA/oflc/pdfs/LCA_Record_Layout_FY2025_Q4.pdf",
+      "http_status": 200,
+      "content_type": "application/pdf",
+      "last_modified": "Mon, 15 Dec 2025 16:44:23 GMT",
+      "etag": "\"69403ae7-29e11\"",
+      "checked_at_utc": "2026-10-24T03:13:36.154488+00:00"
+    },
+    {
+      "url": "https://www.dol.gov/sites/dolgov/files/ETA/oflc/pdfs/LCA_Disclosure_Data_FY2025_Q4.xlsx",
+      "final_url": "https://www.dol.gov/sites/dolgov/files/ETA/oflc/pdfs/LCA_Disclosure_Data_FY2025_Q4.xlsx",
+      "http_status": 200,
+      "content_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+      "last_modified": "Thu, 18 Dec 2025 15:46:27 GMT",
+      "etag": "\"694421d3-4b77dcc\"",
+      "checked_at_utc": "2026-10-24T03:13:36.269181+00:00"
+    },
+    {
+      "url": "https://www.uscis.gov/tools/reports-and-studies/h-1b-employer-data-hub/h-1b-employer-data-hub-files",
+      "final_url": "https://www.uscis.gov/archive/h-1b-employer-data-hub-files",
+      "http_status": 200,
+      "content_type": "text/html; charset=utf-8",
+      "last_modified": "Sat, 24 Oct 2026 03:00:00 GMT",
+      "etag": "\"1792810800\"",
+      "checked_at_utc": "2026-10-24T03:13:36.371840+00:00"
+    }
+  ],
+  "prior_limited_probe": [
+    {
+      "url": "https://www.dol.gov/sites/dolgov/files/ETA/oflc/pdfs/LCA_Record_Layout_FY2025_Q4.pdf",
+      "status": 200,
+      "bytes_read": 171537,
+      "content_type": "application/pdf"
+    },
+    {
+      "url": "https://www.dol.gov/sites/dolgov/files/ETA/oflc/pdfs/LCA_Record_Layout_FY2024_Q4.pdf",
+      "status": 200,
+      "bytes_read": 171101,
+      "content_type": "application/pdf"
+    },
+    {
+      "url": "https://www.dol.gov/sites/dolgov/files/ETA/oflc/pdfs/LCA_Disclosure_Data_FY2024_Q4.xlsx",
+      "status": 200,
+      "bytes_read": 2000000,
+      "content_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+    },
+    {
+      "url": "https://www.dol.gov/sites/dolgov/files/ETA/oflc/pdfs/LCA_Disclosure_Data_FY2025_Q4.xlsx",
+      "status": 200,
+      "bytes_read": 2000000,
+      "content_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+    },
+    {
+      "url": "https://www.bls.gov/oes/special.requests/oesm24all.zip",
+      "status": 403
+    },
+    {
+      "url": "https://www.bls.gov/oes/special.requests/oesm25all.zip",
+      "status": 403
+    },
+    {
+      "url": "https://www.uscis.gov/tools/reports-and-studies/h-1b-employer-data-hub/h-1b-employer-data-hub-files",
+      "status": 200,
+      "bytes_read": 85197,
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://www2.census.gov/geo/docs/reference/codes2020/national_county2020.txt",
+      "status": 200,
+      "bytes_read": 126639,
+      "content_type": "text/plain"
+    }
+  ],
+  "note": "Probe bytes_read can be partial and do not assert full-file size. Full LCA SHA256/bytes and workbook validation are recorded separately. Original archive HTTP retrieval timestamp was conservatively recorded at download completion to second resolution; ETag/Last-Modified below are subsequent access checks, not historical original response metadata."
+}

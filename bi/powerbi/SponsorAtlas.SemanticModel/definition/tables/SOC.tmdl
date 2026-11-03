@@ -1,0 +1,11 @@
+table SOC
+
+	column soc
+		dataType: string
+		isKey
+		sourceColumn: [soc]
+		summarizeBy: none
+
+	partition SOC = calculated
+		mode: import
+		source = DISTINCT(UNION(SELECTCOLUMNS(lca, "soc", lca[soc]), SELECTCOLUMNS(postings, "soc", postings[soc]), SELECTCOLUMNS(wages, "soc", wages[soc])))

@@ -1,0 +1,49 @@
+{
+  "snapshot_kind": "ACTUAL_PUBLIC_MARTS",
+  "manifest_sha256": "b76f529c69a84b0d9a4305f12ab5825e2675afc636f047006fbe601693801a36",
+  "sql_engine": "DuckDB v2.0.0",
+  "cube_sql_match": true,
+  "native_acceptance": false,
+  "rows": [
+    {
+      "metric": "active_posting_days",
+      "sql_oracle": 86.0,
+      "cube_rest": 86.0,
+      "powerbi_dax": null,
+      "tableau": null,
+      "status": "FAIL"
+    },
+    {
+      "metric": "case_count",
+      "sql_oracle": 238891.0,
+      "cube_rest": 238891.0,
+      "powerbi_dax": null,
+      "tableau": null,
+      "status": "FAIL"
+    },
+    {
+      "metric": "certified_rate",
+      "sql_oracle": 0.9777848474827432,
+      "cube_rest": 0.9777848474827432,
+      "powerbi_dax": null,
+      "tableau": null,
+      "status": "FAIL"
+    },
+    {
+      "metric": "oews_median",
+      "sql_oracle": 135980.0,
+      "cube_rest": 135980.0,
+      "powerbi_dax": null,
+      "tableau": null,
+      "status": "FAIL"
+    },
+    {
+      "metric": "wage_p75",
+      "sql_oracle": 160000.0,
+      "cube_rest": 160000.0,
+      "powerbi_dax": null,
+      "tableau": null,
+      "status": "FAIL"
+    }
+  ]
+}

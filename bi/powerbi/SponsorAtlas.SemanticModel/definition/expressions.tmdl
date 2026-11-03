@@ -1,0 +1,57 @@
+expression SourceMode = "Parquet" meta [IsParameterQuery=true, Type="Text", IsParameterQueryRequired=true]
+
+expression SnapshotDirectory = "SET_ABSOLUTE_VERIFIED_SNAPSHOT_DIRECTORY" meta [IsParameterQuery=true, Type="Text", IsParameterQueryRequired=true]
+
+expression SnowflakeServer = "" meta [IsParameterQuery=true, Type="Text", IsParameterQueryRequired=true]
+
+expression TrialStartedUTC = "" meta [IsParameterQuery=true, Type="Text", IsParameterQueryRequired=true]
+
+expression TrialExpiresUTC = "" meta [IsParameterQuery=true, Type="Text", IsParameterQueryRequired=true]
+
+expression Public_lca =
+	let
+	    Local = () => Parquet.Document(File.Contents(SnapshotDirectory & "/lca.parquet")),
+	    Remote = () => let
+	        Start = DateTimeZone.FromText(TrialStartedUTC),
+	        Expiry = DateTimeZone.FromText(TrialExpiresUTC),
+	        Now = DateTimeZone.UtcNow(),
+	        Valid = Start <= Now and Expiry > Now + #duration(0,0,7,0) and Expiry > Start and Duration.TotalDays(Expiry - Start) <= 30,
+	        Source = if not Valid or SnowflakeServer = "" then error "Explicit active <=30-day project trial required" else
+	            Snowflake.Databases(SnowflakeServer, "SPONSORATLAS_XS", [Role="ANALYST", Implementation="2.0", CreateNavigationProperties=false, ConnectionTimeout=60, CommandTimeout=240]),
+	        Database = Source{[Name="ANALYTICS",Kind="Database"]}[Data],
+	        Data = Value.NativeQuery(Database, "select f.case_number, f.is_certified, f.annual_wage,#(lf) coalesce(f.employer_id,'UNKNOWN') employer, coalesce(o.major_code,'UNKNOWN') soc_major,#(lf) coalesce(f.soc_code,'UNKNOWN') soc,#(lf) coalesce(case when g.cbsa_type='Metropolitan Statistical Area' then g.cbsa_code end,'UNKNOWN') metro,#(lf) f.fiscal_year, f.employer_history_status#(lf) from ANALYTICS.MARTS.fact_lca_case f left join ANALYTICS.MARTS.dim_occupation o using(occupation_key)#(lf) left join ANALYTICS.MARTS.dim_geography g using(geography_key)", null, [EnableFolding=false])
+	    in Table.TransformColumnNames(Data, Text.Lower),
+	    Result = if SourceMode = "Parquet" then Local() else if SourceMode = "Snowflake" then Remote() else error "Choose explicit Parquet or Snowflake source"
+	in Result
+
+expression Public_postings =
+	let
+	    Local = () => Parquet.Document(File.Contents(SnapshotDirectory & "/postings.parquet")),
+	    Remote = () => let
+	        Start = DateTimeZone.FromText(TrialStartedUTC),
+	        Expiry = DateTimeZone.FromText(TrialExpiresUTC),
+	        Now = DateTimeZone.UtcNow(),
+	        Valid = Start <= Now and Expiry > Now + #duration(0,0,7,0) and Expiry > Start and Duration.TotalDays(Expiry - Start) <= 30,
+	        Source = if not Valid or SnowflakeServer = "" then error "Explicit active <=30-day project trial required" else
+	            Snowflake.Databases(SnowflakeServer, "SPONSORATLAS_XS", [Role="ANALYST", Implementation="2.0", CreateNavigationProperties=false, ConnectionTimeout=60, CommandTimeout=240]),
+	        Database = Source{[Name="ANALYTICS",Kind="Database"]}[Data],
+	        Data = Value.NativeQuery(Database, "select f.posting_id, f.observation_date, f.is_active,#(lf) coalesce(f.employer_id,'UNKNOWN') employer, coalesce(o.major_code,'UNKNOWN') soc_major,#(lf) coalesce(o.soc_code,'UNKNOWN') soc,#(lf) coalesce(case when g.cbsa_type='Metropolitan Statistical Area' then g.cbsa_code end,'UNKNOWN') metro,#(lf) d.fiscal_year, f.employer_mapping_status, f.occupation_mapping_status, f.geography_mapping_status#(lf) from ANALYTICS.MARTS.fact_job_posting_daily f left join ANALYTICS.MARTS.dim_occupation o using(occupation_key)#(lf) left join ANALYTICS.MARTS.dim_geography g using(geography_key)#(lf) left join ANALYTICS.MARTS.dim_date d on f.observation_date_key=d.date_key", null, [EnableFolding=false])
+	    in Table.TransformColumnNames(Data, Text.Lower),
+	    Result = if SourceMode = "Parquet" then Local() else if SourceMode = "Snowflake" then Remote() else error "Choose explicit Parquet or Snowflake source"
+	in Result
+
+expression Public_wages =
+	let
+	    Local = () => Parquet.Document(File.Contents(SnapshotDirectory & "/wages.parquet")),
+	    Remote = () => let
+	        Start = DateTimeZone.FromText(TrialStartedUTC),
+	        Expiry = DateTimeZone.FromText(TrialExpiresUTC),
+	        Now = DateTimeZone.UtcNow(),
+	        Valid = Start <= Now and Expiry > Now + #duration(0,0,7,0) and Expiry > Start and Duration.TotalDays(Expiry - Start) <= 30,
+	        Source = if not Valid or SnowflakeServer = "" then error "Explicit active <=30-day project trial required" else
+	            Snowflake.Databases(SnowflakeServer, "SPONSORATLAS_XS", [Role="ANALYST", Implementation="2.0", CreateNavigationProperties=false, ConnectionTimeout=60, CommandTimeout=240]),
+	        Database = Source{[Name="ANALYTICS",Kind="Database"]}[Data],
+	        Data = Value.NativeQuery(Database, "select f.soc_code soc, coalesce(o.major_code,'UNKNOWN') soc_major,#(lf) case when f.area_type='4' then f.area_code else 'UNKNOWN' end metro,#(lf) f.area_type||':'||f.area_code area, f.survey_year,#(lf) cast(null as integer) fiscal_year, f.occupation_group occupation_level,#(lf) g.geography_level, f.annual_median_wage, f.annual_median_wage_raw median_raw,#(lf) f.wage_status, f.annual_flag, f.hourly_flag#(lf) from ANALYTICS.MARTS.fact_wage_benchmark f left join ANALYTICS.MARTS.dim_occupation o using(occupation_key)#(lf) left join ANALYTICS.MARTS.dim_geography g using(geography_key)", null, [EnableFolding=false])
+	    in Table.TransformColumnNames(Data, Text.Lower),
+	    Result = if SourceMode = "Parquet" then Local() else if SourceMode = "Snowflake" then Remote() else error "Choose explicit Parquet or Snowflake source"
+	in Result

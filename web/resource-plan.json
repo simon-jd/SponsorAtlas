@@ -1,0 +1,26 @@
+{
+  "baselineBytes": 13789905466,
+  "quotaBytes": 18000000000,
+  "metadataPeakBytes": 420088831,
+  "estimatedIncrementalPeakBytes": 2250000000,
+  "budgetsBytes": {
+    "pnpmBootstrap": 150000000,
+    "metadataAndDownloadCache": 200000000,
+    "pnpmStore": 500000000,
+    "nodeModules": 500000000,
+    "buildAndViteCache": 250000000,
+    "isolatedBrowserProfilesAndTestTemp": 300000000,
+    "sourceEvidenceAndGit": 50000000,
+    "contingency": 300000000
+  },
+  "browserDownloadBytes": 0,
+  "rssLimitBytes": 6000000000,
+  "graph": "graph-estimate.json",
+  "notes": [
+    "Linux/x64 only; 434159830 reported unpacked bytes (including glibc/musl candidates; install glibc only) plus 52 missing sizes reserved at 1MB each.",
+    "Hardlink store/node_modules expected; budget conservatively counts both.",
+    "Metadata-only npm cache 420088831 removed before install.",
+    "Existing system Chrome155.0.8059.84; isolated temporary contexts only.",
+    "Serial build/test, one test worker; no cloud/services other than127.0.0.1 Storybook."
+  ]
+}

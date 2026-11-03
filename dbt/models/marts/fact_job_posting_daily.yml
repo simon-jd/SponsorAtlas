@@ -1,0 +1,88 @@
+version: 2
+models:
+- name: fact_job_posting_daily
+  description: One posting per UTC observation date, including explicit unlisted/tombstones.
+  config:
+    contract:
+      enforced: true
+  columns:
+  - name: posting_id
+    data_type: varchar
+    data_tests:
+    - not_null
+  - name: job_key
+    data_type: varchar
+  - name: source_provider
+    data_type: varchar
+  - name: source_board
+    data_type: varchar
+  - name: source_url
+    data_type: varchar
+  - name: source_sha256
+    data_type: varchar
+  - name: payload_json
+    data_type: varchar
+  - name: job_title
+    data_type: varchar
+  - name: source_employer_name
+    data_type: varchar
+  - name: location_raw
+    data_type: varchar
+  - name: job_url
+    data_type: varchar
+  - name: employer_id
+    data_type: varchar
+    data_tests:
+    - relationships:
+        arguments:
+          to: ref('dim_employer')
+          field: employer_id
+  - name: employer_key
+    data_type: varchar
+    data_tests:
+    - relationships:
+        arguments:
+          to: ref('dim_employer')
+          field: employer_key
+  - name: occupation_key
+    data_type: varchar
+    data_tests:
+    - relationships:
+        arguments:
+          to: ref('dim_occupation')
+          field: occupation_key
+  - name: geography_key
+    data_type: varchar
+    data_tests:
+    - relationships:
+        arguments:
+          to: ref('dim_geography')
+          field: geography_key
+  - name: employer_mapping_status
+    data_type: varchar
+  - name: occupation_mapping_status
+    data_type: varchar
+  - name: geography_mapping_status
+    data_type: varchar
+  - name: replay_kind
+    data_type: varchar
+  - name: observation_date
+    data_type: date
+    data_tests:
+    - not_null
+  - name: observation_date_key
+    data_type: integer
+    data_tests:
+    - not_null
+    - relationships:
+        arguments:
+          to: ref('dim_date')
+          field: date_key
+  - name: observed_at_utc
+    data_type: timestamp
+  - name: source_deleted_at
+    data_type: timestamp
+  - name: is_listed
+    data_type: boolean
+  - name: is_active
+    data_type: boolean

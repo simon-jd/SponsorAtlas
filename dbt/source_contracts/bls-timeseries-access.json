@@ -1,0 +1,18 @@
+[
+  {
+    "url": "https://download.bls.gov/pub/time.series/oe/oe.datatype",
+    "error": "HTTP Error 403: Forbidden"
+  },
+  {
+    "url": "https://download.bls.gov/pub/time.series/oe/oe.areatype",
+    "error": "HTTP Error 403: Forbidden"
+  },
+  {
+    "url": "https://download.bls.gov/pub/time.series/oe/oe.area",
+    "error": "HTTP Error 403: Forbidden"
+  },
+  {
+    "url": "https://download.bls.gov/pub/time.series/oe/oe.occupation",
+    "error": "HTTP Error 403: Forbidden"
+  }
+]

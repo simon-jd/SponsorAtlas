@@ -1,0 +1,34 @@
+{
+  "kind": "splink-duckdb-u-em",
+  "input_kind": "real-staging-lca-uscis",
+  "splink_version": "5.0.0",
+  "seed": 42,
+  "records": 161384,
+  "excluded_holdout_records": 203,
+  "labels_sha256": "d290ca4fd87dde34748c9281ba47ac526745577e53ed1fd88f72ec68814931e8",
+  "acceptance_eligible": true,
+  "untrained_parameters": [],
+  "input_records_sha256": "ebbca4e6c437dc27a69b9b9def6d8d13192cbec3cb1dbc14dd644f5bf800f736",
+  "input_occurrences_sha256": "7220500b38dd2b119ac480dbd24ee9d4a2163daa735904d7e82070b9badbc81b",
+  "model_sha256": "905d18c6a79623f6f189eeb39f50cf161243f9a864e47c906253b2e1ef2aac2a",
+  "training_ids_sha256": "72a2a90f77759399b1c786c4951aaa915169eac6a3950dc23104d47cd70b01a2",
+  "candidate_upper_bound": 707194,
+  "max_u_pairs": 2000000,
+  "em_sessions": [
+    {
+      "rule": "l.first_token = r.first_token AND l.state = r.state",
+      "pairs": 596038
+    },
+    {
+      "rule": "l.strong_id = r.strong_id",
+      "pairs": 29386
+    }
+  ],
+  "limits": {
+    "max_temp_directory_size": "1.8 GiB",
+    "memory_limit": "3.7 GiB",
+    "temp_directory": "/home/postedism/Desktop/SponsorAtlas/.tools/er/human-acceptance-20261029/model/spill",
+    "threads": "1"
+  },
+  "seconds": 8.737
+}

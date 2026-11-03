@@ -1,0 +1,42 @@
+[0m22:03:45  Running with dbt=1.12.6
+[0m22:03:46  Registered adapter: duckdb=1.11.0
+[0m22:03:46  Found 18 models, 1 snapshot, 82 data tests, 15 seeds, 20 sources, 532 macros, 1 unit test
+[0m22:03:46  
+[0m22:03:46  Concurrency: 1 threads (target='local')
+[0m22:03:46  
+[0m22:03:46  1 of 15 START seed file STAGING.board_column_map ............................... [RUN]
+[0m22:03:46  1 of 15 OK loaded seed file STAGING.board_column_map ........................... [[32mINSERT 61[0m in 0.04s]
+[0m22:03:46  2 of 15 START seed file STAGING.county_fips .................................... [RUN]
+[0m22:03:46  2 of 15 OK loaded seed file STAGING.county_fips ................................ [[32mINSERT 6447[0m in 0.03s]
+[0m22:03:46  3 of 15 START seed file STAGING.file_column_map ................................ [RUN]
+[0m22:03:46  3 of 15 OK loaded seed file STAGING.file_column_map ............................ [[32mINSERT 64[0m in 0.02s]
+[0m22:03:46  4 of 15 START seed file STAGING.lca_column_map ................................. [RUN]
+[0m22:03:46  4 of 15 OK loaded seed file STAGING.lca_column_map ............................. [[32mINSERT 196[0m in 0.02s]
+[0m22:03:46  5 of 15 START seed file STAGING.physical_column_map ............................ [RUN]
+[0m22:03:46  5 of 15 OK loaded seed file STAGING.physical_column_map ........................ [[32mINSERT 139[0m in 0.02s]
+[0m22:03:46  6 of 15 START seed file STAGING.place_county_fips .............................. [RUN]
+[0m22:03:46  6 of 15 OK loaded seed file STAGING.place_county_fips .......................... [[32mINSERT 30587[0m in 0.13s]
+[0m22:03:46  7 of 15 START seed file STAGING.ref_bls_areas_2025 ............................. [RUN]
+[0m22:03:46  7 of 15 OK loaded seed file STAGING.ref_bls_areas_2025 ......................... [[32mINSERT 585[0m in 0.02s]
+[0m22:03:46  8 of 15 START seed file STAGING.ref_county_2023 ................................ [RUN]
+[0m22:03:46  8 of 15 OK loaded seed file STAGING.ref_county_2023 ............................ [[32mINSERT 3222[0m in 0.03s]
+[0m22:03:46  9 of 15 START seed file STAGING.ref_county_cbsa_2023 ........................... [RUN]
+[0m22:03:46  9 of 15 OK loaded seed file STAGING.ref_county_cbsa_2023 ....................... [[32mINSERT 1915[0m in 0.02s]
+[0m22:03:46  10 of 15 START seed file STAGING.ref_oews_2025 ................................. [RUN]
+[0m22:03:46  10 of 15 OK loaded seed file STAGING.ref_oews_2025 ............................. [[32mINSERT 6[0m in 0.02s]
+[0m22:03:46  11 of 15 START seed file STAGING.ref_soc_2018 .................................. [RUN]
+[0m22:03:46  11 of 15 OK loaded seed file STAGING.ref_soc_2018 .............................. [[32mINSERT 1447[0m in 0.02s]
+[0m22:03:46  12 of 15 START seed file STAGING.staging_flag_limits ........................... [RUN]
+[0m22:03:46  12 of 15 OK loaded seed file STAGING.staging_flag_limits ....................... [[32mINSERT 4[0m in 0.02s]
+[0m22:03:46  13 of 15 START seed file STAGING.state_fips .................................... [RUN]
+[0m22:03:46  13 of 15 OK loaded seed file STAGING.state_fips ................................ [[32mINSERT 57[0m in 0.02s]
+[0m22:03:46  14 of 15 START seed file STAGING.wage_test_inputs .............................. [RUN]
+[0m22:03:46  14 of 15 OK loaded seed file STAGING.wage_test_inputs .......................... [[32mINSERT 1[0m in 0.02s]
+[0m22:03:46  15 of 15 START seed file STAGING.zcta_county_fips .............................. [RUN]
+[0m22:03:47  15 of 15 OK loaded seed file STAGING.zcta_county_fips .......................... [[32mINSERT 27359[0m in 0.12s]
+[0m22:03:47  
+[0m22:03:47  Finished running 15 seeds in 0 hours 0 minutes and 0.63 seconds (0.63s).
+[0m22:03:47  
+[0m22:03:47  [32mCompleted successfully[0m
+[0m22:03:47  
+[0m22:03:47  Done. PASS=15 WARN=0 ERROR=0 SKIP=0 NO-OP=0 REUSED=0 TOTAL=15

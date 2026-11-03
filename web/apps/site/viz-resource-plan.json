@@ -1,0 +1,40 @@
+{
+  "metadataOnly": true,
+  "base": "7f867199ab2753aca5ff6b652daca08ff95a8047",
+  "baselineCompleteBytes": 15287751484,
+  "dependencyGraphFile": "viz-dependency-estimate.json",
+  "incrementalPeakCapsBytes": {
+    "pnpmUnpackedStore": 220000000,
+    "modulesConservativeNoHardlinkSaving": 220000000,
+    "downloadExtractionTemporary": 220000000,
+    "metadataCache": 15000000,
+    "nextBuildCacheDelta": 256000000,
+    "duckdbSpill": 64000000,
+    "isolatedChromeProfileAndTestOutput": 35000000,
+    "gitEvidenceAndSource": 20000000,
+    "otherLogsTmp": 25000000,
+    "projectionManifestAndAllOptionalH3Artifacts": 120000000,
+    "secureSwcCache": 32000000
+  },
+  "incrementalPeakCapBytes": 1227000000,
+  "predictedCompletePeakBytes": 16514751484,
+  "memoryPerPhaseBytes": 6000000000,
+  "serviceTotalLimitBytes": 16000000000,
+  "phaseTimeboxSeconds": 180,
+  "rules": [
+    "No new runtime/browser or native downloads",
+    "Ignore install scripts",
+    "Reuse reviewed monitor and SWC wrapper",
+    "Stop before exceeding any phase envelope",
+    "GPU flock bounded wait 30s, owned lifetime <=180s per run",
+    "No full source copy/hash/export preparation"
+  ],
+  "artifactLimits": {
+    "frequencyJsonBytes": 45000000,
+    "optionalH3Files": 2,
+    "optionalH3TotalBytes": 5001000,
+    "aggregateMemoryCacheEntries": 16,
+    "cellsPerScope": 10000,
+    "diskScopeCache": false
+  }
+}

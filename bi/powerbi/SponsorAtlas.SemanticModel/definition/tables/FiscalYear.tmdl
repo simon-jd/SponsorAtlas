@@ -1,0 +1,11 @@
+table FiscalYear
+
+	column fiscal_year
+		dataType: int64
+		isKey
+		sourceColumn: [fiscal_year]
+		summarizeBy: none
+
+	partition FiscalYear = calculated
+		mode: import
+		source = DISTINCT(UNION(SELECTCOLUMNS(lca, "fiscal_year", lca[fiscal_year]), SELECTCOLUMNS(postings, "fiscal_year", postings[fiscal_year])))

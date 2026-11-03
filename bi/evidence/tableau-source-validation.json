@@ -1,0 +1,28 @@
+{
+  "status": "PASS_WITH_UPSTREAM_SCHEMA_WARNINGS",
+  "scope": "TWB XSD and references only; native interactions/render NOT executed",
+  "target_schema": "2022.4",
+  "schema_url": "https://raw.githubusercontent.com/tableau/tableau-plugin/main/src/plugin/skills/tableau-workbook-authoring/resources/schemas/2022_4/twb_2022.4.0.xsd",
+  "schema_sha256": "7717254caf88f41a54129ce2bdba04b889401f817e61acd68b89627614cfcc85",
+  "filter_action_reference": "https://raw.githubusercontent.com/tableau/tableau-plugin/main/src/plugin/skills/tableau-workbook-authoring/resources/examples/dashboard-filter-action.json",
+  "validator_gap_reference": "https://raw.githubusercontent.com/tableau/tableau-plugin/main/src/plugin/skills/tableau-workbook-authoring/scripts/validate_workbook.py",
+  "actions": 4,
+  "comparison": {
+    "dashboard": "SponsorAtlas - matched wage comparison",
+    "sheets": 6,
+    "shared_parameters": 4,
+    "native_behavior": "NOT_EXECUTED"
+  },
+  "errors": [],
+  "warnings": [
+    {
+      "line": 2,
+      "message": "Element 'workbook': The attribute 'source-build' is required but missing."
+    },
+    {
+      "line": 2,
+      "message": "Element 'workbook': Missing child element(s). Expected is one of ( datagraph, thumbnails, external, referenced-extensions, explain-data )."
+    }
+  ],
+  "twbx_sha256": "97c4a81b7e349c40912e0a2e77e18d4bf339653f749d4f5ee4964c1a46c4cc03"
+}

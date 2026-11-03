@@ -1,0 +1,14 @@
+{
+  "case_count": {"measures": ["lca.case_count"]},
+  "certified_rate": {"measures": ["lca.certified_rate"]},
+  "wage_p75": {"measures": ["lca.wage_p75"]},
+  "active_posting_days": {"measures": ["postings.count"]},
+  "oews_median": {
+    "measures": ["wages.oews_median"],
+    "filters": [
+      {"member": "wages.soc", "operator": "equals", "values": ["15-1252"]},
+      {"member": "wages.area", "operator": "equals", "values": ["1:99"]},
+      {"member": "wages.survey_year", "operator": "equals", "values": ["2025"]}
+    ]
+  }
+}

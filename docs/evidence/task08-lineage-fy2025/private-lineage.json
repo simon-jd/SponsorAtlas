@@ -1,0 +1,194 @@
+{
+  "entity": {
+    "id": "f60cddb0-8be4-4ffd-8350-1cd52044e442",
+    "type": "table",
+    "name": "fact_my_applications",
+    "fullyQualifiedName": "sponsoratlas_local_synthetic_duckdb.synthetic_applications.MARTS.fact_my_applications",
+    "displayName": "fact_my_applications",
+    "deleted": false,
+    "href": "http://localhost:8585/api/v1/tables/f60cddb0-8be4-4ffd-8350-1cd52044e442"
+  },
+  "nodes": [
+    {
+      "id": "51addc2a-0842-4639-a8c9-e5cdce7cac85",
+      "type": "table",
+      "name": "stg_private_application_events",
+      "fullyQualifiedName": "sponsoratlas_local_synthetic_duckdb.synthetic_applications.STAGING.stg_private_application_events",
+      "displayName": "stg_private_application_events",
+      "deleted": false,
+      "href": "http://localhost:8585/api/v1/tables/51addc2a-0842-4639-a8c9-e5cdce7cac85"
+    },
+    {
+      "id": "ccda87f1-d1bc-4b12-b338-ae527784b2de",
+      "type": "table",
+      "name": "CDC_APPLICATION_EVENTS",
+      "fullyQualifiedName": "sponsoratlas_local_synthetic_duckdb.synthetic_applications.RAW_JOBS.CDC_APPLICATION_EVENTS",
+      "displayName": "CDC_APPLICATION_EVENTS",
+      "deleted": false,
+      "href": "http://localhost:8585/api/v1/tables/ccda87f1-d1bc-4b12-b338-ae527784b2de"
+    }
+  ],
+  "upstreamEdges": [
+    {
+      "fromEntity": "51addc2a-0842-4639-a8c9-e5cdce7cac85",
+      "toEntity": "f60cddb0-8be4-4ffd-8350-1cd52044e442",
+      "lineageDetails": {
+        "sqlQuery": "create table \"synthetic_applications\".\"MARTS\".\"fact_my_applications\" as\nwith current_events as (\n    select application_id, owner_role, job_id, event_id, event_type, event_at,\n           contact_email, source_lsn, source_cdc_updated_at, source_extracted_at,\n           row_number() over (\n        partition by application_id order by event_at desc, source_lsn desc, event_id desc\n    ) as application_rank\n    from \"synthetic_applications\".\"STAGING\".\"stg_private_application_events\"\n    where source_deleted_at is null\n)\nselect application_id, owner_role, job_id, event_id, event_type as application_status,\n       event_at as last_event_at, contact_email, source_lsn, source_cdc_updated_at,\n       source_extracted_at\nfrom current_events\nwhere application_rank = ? and event_type <> ?",
+        "columnsLineage": [
+          {
+            "fromColumns": [
+              "sponsoratlas_local_synthetic_duckdb.synthetic_applications.STAGING.stg_private_application_events.source_extracted_at"
+            ],
+            "toColumn": "sponsoratlas_local_synthetic_duckdb.synthetic_applications.MARTS.fact_my_applications.source_extracted_at"
+          },
+          {
+            "fromColumns": [
+              "sponsoratlas_local_synthetic_duckdb.synthetic_applications.STAGING.stg_private_application_events.event_type"
+            ],
+            "toColumn": "sponsoratlas_local_synthetic_duckdb.synthetic_applications.MARTS.fact_my_applications.application_status"
+          },
+          {
+            "fromColumns": [
+              "sponsoratlas_local_synthetic_duckdb.synthetic_applications.STAGING.stg_private_application_events.source_cdc_updated_at"
+            ],
+            "toColumn": "sponsoratlas_local_synthetic_duckdb.synthetic_applications.MARTS.fact_my_applications.source_cdc_updated_at"
+          },
+          {
+            "fromColumns": [
+              "sponsoratlas_local_synthetic_duckdb.synthetic_applications.STAGING.stg_private_application_events.contact_email"
+            ],
+            "toColumn": "sponsoratlas_local_synthetic_duckdb.synthetic_applications.MARTS.fact_my_applications.contact_email"
+          },
+          {
+            "fromColumns": [
+              "sponsoratlas_local_synthetic_duckdb.synthetic_applications.STAGING.stg_private_application_events.application_id"
+            ],
+            "toColumn": "sponsoratlas_local_synthetic_duckdb.synthetic_applications.MARTS.fact_my_applications.application_id"
+          },
+          {
+            "fromColumns": [
+              "sponsoratlas_local_synthetic_duckdb.synthetic_applications.STAGING.stg_private_application_events.source_lsn"
+            ],
+            "toColumn": "sponsoratlas_local_synthetic_duckdb.synthetic_applications.MARTS.fact_my_applications.source_lsn"
+          },
+          {
+            "fromColumns": [
+              "sponsoratlas_local_synthetic_duckdb.synthetic_applications.STAGING.stg_private_application_events.owner_role"
+            ],
+            "toColumn": "sponsoratlas_local_synthetic_duckdb.synthetic_applications.MARTS.fact_my_applications.owner_role"
+          },
+          {
+            "fromColumns": [
+              "sponsoratlas_local_synthetic_duckdb.synthetic_applications.STAGING.stg_private_application_events.event_id"
+            ],
+            "toColumn": "sponsoratlas_local_synthetic_duckdb.synthetic_applications.MARTS.fact_my_applications.event_id"
+          },
+          {
+            "fromColumns": [
+              "sponsoratlas_local_synthetic_duckdb.synthetic_applications.STAGING.stg_private_application_events.job_id"
+            ],
+            "toColumn": "sponsoratlas_local_synthetic_duckdb.synthetic_applications.MARTS.fact_my_applications.job_id"
+          },
+          {
+            "fromColumns": [
+              "sponsoratlas_local_synthetic_duckdb.synthetic_applications.STAGING.stg_private_application_events.event_at"
+            ],
+            "toColumn": "sponsoratlas_local_synthetic_duckdb.synthetic_applications.MARTS.fact_my_applications.last_event_at"
+          }
+        ],
+        "source": "DbtLineage",
+        "createdAt": 1792869830110,
+        "createdBy": "sponsoratlas-admin",
+        "updatedAt": 1792870309654,
+        "updatedBy": "sponsoratlas-admin"
+      }
+    },
+    {
+      "fromEntity": "ccda87f1-d1bc-4b12-b338-ae527784b2de",
+      "toEntity": "51addc2a-0842-4639-a8c9-e5cdce7cac85",
+      "lineageDetails": {
+        "sqlQuery": "create table \"synthetic_applications\".\"STAGING\".\"stg_private_application_events\" as\n\nselect id as event_id, application_id, owner_role, job_id, event_type,\n       cast(event_at as timestamp) as event_at, contact_email, contract_version,\n       cast(_ab_cdc_lsn as decimal(?,?)) as source_lsn,\n       cast(_ab_cdc_updated_at as timestamp) as source_cdc_updated_at,\n       cast(_ab_cdc_deleted_at as timestamp) as source_deleted_at,\n       cast(_airbyte_extracted_at as timestamp) as source_extracted_at\nfrom \"synthetic_applications\".\"RAW_JOBS\".\"CDC_APPLICATION_EVENTS\"",
+        "columnsLineage": [
+          {
+            "fromColumns": [
+              "sponsoratlas_local_synthetic_duckdb.synthetic_applications.RAW_JOBS.CDC_APPLICATION_EVENTS._airbyte_extracted_at"
+            ],
+            "toColumn": "sponsoratlas_local_synthetic_duckdb.synthetic_applications.STAGING.stg_private_application_events.source_extracted_at"
+          },
+          {
+            "fromColumns": [
+              "sponsoratlas_local_synthetic_duckdb.synthetic_applications.RAW_JOBS.CDC_APPLICATION_EVENTS.contact_email"
+            ],
+            "toColumn": "sponsoratlas_local_synthetic_duckdb.synthetic_applications.STAGING.stg_private_application_events.contact_email"
+          },
+          {
+            "fromColumns": [
+              "sponsoratlas_local_synthetic_duckdb.synthetic_applications.RAW_JOBS.CDC_APPLICATION_EVENTS.owner_role"
+            ],
+            "toColumn": "sponsoratlas_local_synthetic_duckdb.synthetic_applications.STAGING.stg_private_application_events.owner_role"
+          },
+          {
+            "fromColumns": [
+              "sponsoratlas_local_synthetic_duckdb.synthetic_applications.RAW_JOBS.CDC_APPLICATION_EVENTS._ab_cdc_deleted_at"
+            ],
+            "toColumn": "sponsoratlas_local_synthetic_duckdb.synthetic_applications.STAGING.stg_private_application_events.source_deleted_at"
+          },
+          {
+            "fromColumns": [
+              "sponsoratlas_local_synthetic_duckdb.synthetic_applications.RAW_JOBS.CDC_APPLICATION_EVENTS._ab_cdc_lsn"
+            ],
+            "toColumn": "sponsoratlas_local_synthetic_duckdb.synthetic_applications.STAGING.stg_private_application_events.source_lsn"
+          },
+          {
+            "fromColumns": [
+              "sponsoratlas_local_synthetic_duckdb.synthetic_applications.RAW_JOBS.CDC_APPLICATION_EVENTS._ab_cdc_updated_at"
+            ],
+            "toColumn": "sponsoratlas_local_synthetic_duckdb.synthetic_applications.STAGING.stg_private_application_events.source_cdc_updated_at"
+          },
+          {
+            "fromColumns": [
+              "sponsoratlas_local_synthetic_duckdb.synthetic_applications.RAW_JOBS.CDC_APPLICATION_EVENTS.application_id"
+            ],
+            "toColumn": "sponsoratlas_local_synthetic_duckdb.synthetic_applications.STAGING.stg_private_application_events.application_id"
+          },
+          {
+            "fromColumns": [
+              "sponsoratlas_local_synthetic_duckdb.synthetic_applications.RAW_JOBS.CDC_APPLICATION_EVENTS.contract_version"
+            ],
+            "toColumn": "sponsoratlas_local_synthetic_duckdb.synthetic_applications.STAGING.stg_private_application_events.contract_version"
+          },
+          {
+            "fromColumns": [
+              "sponsoratlas_local_synthetic_duckdb.synthetic_applications.RAW_JOBS.CDC_APPLICATION_EVENTS.id"
+            ],
+            "toColumn": "sponsoratlas_local_synthetic_duckdb.synthetic_applications.STAGING.stg_private_application_events.event_id"
+          },
+          {
+            "fromColumns": [
+              "sponsoratlas_local_synthetic_duckdb.synthetic_applications.RAW_JOBS.CDC_APPLICATION_EVENTS.event_type"
+            ],
+            "toColumn": "sponsoratlas_local_synthetic_duckdb.synthetic_applications.STAGING.stg_private_application_events.event_type"
+          },
+          {
+            "fromColumns": [
+              "sponsoratlas_local_synthetic_duckdb.synthetic_applications.RAW_JOBS.CDC_APPLICATION_EVENTS.event_at"
+            ],
+            "toColumn": "sponsoratlas_local_synthetic_duckdb.synthetic_applications.STAGING.stg_private_application_events.event_at"
+          },
+          {
+            "fromColumns": [
+              "sponsoratlas_local_synthetic_duckdb.synthetic_applications.RAW_JOBS.CDC_APPLICATION_EVENTS.job_id"
+            ],
+            "toColumn": "sponsoratlas_local_synthetic_duckdb.synthetic_applications.STAGING.stg_private_application_events.job_id"
+          }
+        ],
+        "source": "DbtLineage",
+        "createdAt": 1792869831068,
+        "createdBy": "sponsoratlas-admin",
+        "updatedAt": 1792870309939,
+        "updatedBy": "sponsoratlas-admin"
+      }
+    }
+  ],
+  "downstreamEdges": []
+}

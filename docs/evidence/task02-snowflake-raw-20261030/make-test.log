@@ -1,0 +1,188 @@
+/home/postedism/Desktop/SponsorAtlas/.venv/bin/python -m pytest -q -p no:cacheprovider
+sss.sss................................................................. [ 13%]
+........................................................................ [ 27%]
+........................................................................ [ 40%]
+........................................................................ [ 54%]
+.........s.................................................s............ [ 67%]
+........................................................................ [ 81%]
+........................................................................ [ 94%]
+...........................                                              [100%]
+=========================== short test summary info ============================
+SKIPPED [1] warehouse/tests/test_grants.py:102: live Snowflake: set RUN_SNOWFLAKE_GRANTS=1 with key-pair credentials
+SKIPPED [1] warehouse/tests/test_grants.py:112: live Snowflake: set RUN_SNOWFLAKE_GRANTS=1 with key-pair credentials
+SKIPPED [1] warehouse/tests/test_grants.py:119: live Snowflake: set RUN_SNOWFLAKE_GRANTS=1 with key-pair credentials
+SKIPPED [1] warehouse/tests/test_policies.py:40: OPEN: RUN_SNOWFLAKE_POLICIES=1 requires authorized Enterprise trial and dedicated identities
+SKIPPED [1] warehouse/tests/test_policies.py:53: OPEN: RUN_SNOWFLAKE_POLICIES=1 requires authorized Enterprise trial and dedicated identities
+SKIPPED [1] warehouse/tests/test_policies.py:63: OPEN: RUN_SNOWFLAKE_POLICIES=1 requires authorized Enterprise trial and dedicated identities
+SKIPPED [1] er/tests/test_evaluate.py:19: opt-in: real human-label employer acceptance (SPONSORATLAS_ER_ACCEPTANCE=1)
+SKIPPED [1] er/tests/test_spark_live.py:29: opt-in isolated local Spark Connect+Delta server required; not Databricks
+523 passed, 8 skipped in 154.58s (0:02:34)
+semantic/run.sh prepare fixture >/dev/null
+orchestration/run.sh pytest -q -p no:cacheprovider orchestration/tests
+....................................................                     [100%]
+=============================== warnings summary ===============================
+orchestration/tests/test_dag_integrity.py::test_dag_integrity
+  /home/postedism/Desktop/SponsorAtlas/.tools/orchestration/venv/lib/python3.12/site-packages/cosmos/converter.py:206: DeprecationWarning: operator_args with 'env' is deprecated since Cosmos 1.3 and will be removed in Cosmos 2.0. Use ProjectConfig.env_vars instead.
+    warn(
+
+orchestration/tests/test_dag_integrity.py::test_dag_integrity
+  /home/postedism/Desktop/SponsorAtlas/.tools/orchestration/venv/lib/python3.12/site-packages/cosmos/converter.py:215: DeprecationWarning: The operator argument `install_deps` is deprecated since Cosmos 1.9 and will be removed in Cosmos 2.0. Use `ProjectConfig.install_dbt_deps` instead.
+    warn(
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+52 passed, 2 warnings in 17.03s
+semantic/run.sh test fixture
+{"kind": "SYNTHETIC_ANALYTICS_TEST_ONLY", "rows": {"ANALYTICS_TEST.fact_lca_case": 6, "ANALYTICS_TEST.fact_job_posting_daily": 6, "ANALYTICS_TEST.fact_wage_benchmark": 5}, "parquet_bytes": 5713, "oracle": {"fiscal_groups": [{"fiscal_year": 2025, "case_count": 3, "certified_rate": 0.6666666666666666}, {"fiscal_year": 2026, "case_count": 3, "certified_rate": 0.3333333333333333}], "lca_groups": {"count": 5, "sha256": "252df1319726829ce1420ce87c93e7246e24e4fceceff38a0d21c799a324afba"}, "lca": {"case_count": 6.0, "certified_rate": 0.5, "wage_p50": 30.0, "wage_p75": 40.0, "wage_p90": 76.0}, "postings": 4, "oews_median": 80.0, "wage_filters": [{"member": "wages.soc", "operator": "equals", "values": ["15-1252"]}, {"member": "wages.area", "operator": "equals", "values": ["1:99"]}, {"member": "wages.survey_year", "operator": "equals", "values": ["2025"]}]}}
+▶ real Cube REST semantic contract
+  ✔ requires JWT (2.647801ms)
+  ✔ SQL and extra API routes disabled (17.828987ms)
+  ✔ bounded engine refuses source writes and external reads (0.262712ms)
+  ✔ all seven metrics present in actual Cube meta (1.431872ms)
+  ✔ LCA five metrics match independent SQL and hand fixture (38.354176ms)
+  ✔ postings and OEWS match independent SQL (62.002545ms)
+  ✔ five dimensions grouped together preserve every LCA row (13.877502ms)
+  ✔ views execute and additive preaggregation is built and used (66.226165ms)
+  ✔ combined filters, unknown members, denominator and null wages (48.067142ms)
+  ✔ OEWS cannot average benchmarks; major uses official major row; suppression explicit (34.803984ms)
+✔ real Cube REST semantic contract (1494.204831ms)
+ℹ tests 11
+ℹ suites 0
+ℹ pass 11
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1565.691502
+{"kind": "fixture", "built_rollups": 2, "rollup_rows": 4}
+semantic/run.sh test-source
+✔ true Cube cold-builds external rollups from a physical read-only source into a separate real DuckDB (802.912352ms)
+✔ fallback requires a real native seven-metric validation record and exact file fingerprints (7080.391471ms)
+✔ native snapshot entry rejects null/empty/missing numeric oracle values for zero metrics (1949.238134ms)
+✔ query: delayed connection cannot dispatch after cutoff (2.203763ms)
+✔ memory: delayed connection cannot dispatch after cutoff (0.500601ms)
+✔ downloadQueryResults: delayed connection cannot dispatch after cutoff (0.314919ms)
+✔ stream: delayed connection cannot dispatch after cutoff (0.325903ms)
+✔ deadline closes a still-connecting SDK connection and prevents late session statements (25.534623ms)
+✔ cutoff is rechecked at SDK dispatch after the connection wait has resolved (0.513781ms)
+✔ reconnect crossing cutoff does not initialize a new session or dispatch the query (0.685715ms)
+✔ cutoff interrupts pending session initialization and release awaits its destroy (40.589305ms)
+✔ successful SDK initialization retains the fixed session controls (2.674172ms)
+✔ cancellation remains on the original query promise before and after dispatch (4.117828ms)
+✔ release waits for destroy callback and repeated calls share one cleanup (1.898409ms)
+✔ release waits for a pending connection, and tolerates a rejected connection (1.950355ms)
+✔ release rejects a destroy failure and never reports completed cleanup early (0.845471ms)
+✔ release retains a destroy failure from a rejected session initialization (0.764871ms)
+✔ pinned Cube shutdown storage waits for the source destroy callback (2.170251ms)
+✔ Snowflake source fails closed and uses key-pair read-only configuration (3622.883535ms)
+✔ real Cube Snowflake compiler uses shared marts projections and isolated external rollups (526.55526ms)
+✔ acceptance rejects missing, nonnumeric and null-as-zero values (0.622273ms)
+✔ verification waits for graceful child cleanup and rejects forced/nonzero exits (146.251556ms)
+✔ acceptance supports finite numbers/numeric strings, strict null and tolerance (0.450029ms)
+ℹ tests 23
+ℹ suites 0
+ℹ pass 23
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 15551.770859
+cd web/apps/site && node --conditions=react-server --test tests/*.test.ts
+✔ Parquet provenance requires an immutable valid SHA256 (0.873958ms)
+✔ non-Parquet source revisions are explicit and source identity stays distinct (0.155445ms)
+✔ bounded ID search excludes unresolved aggregate and owns all members (1.596511ms)
+✔ Cube rows preserve null, fiscal period and uncertain identity history (0.397681ms)
+✔ unresolved identity stays aggregate evidence, never a search result (0.342555ms)
+✔ NULL history stays unknown instead of becoming a fabricated status (0.136173ms)
+✔ container binding is explicit, defaults loopback, rejects invalid host/port (0.84749ms)
+✔ validated ingress bind accepts a real HTTP loopback connection without changing auth behavior (13.077211ms)
+✔ deployment staging preserves public bytes/ancestry and rewrites only derived manifest destinations (8.368818ms)
+✔ source directory defaults preserve local work and explicit container source is required (0.486429ms)
+✔ SWA artifact physically contains actual projection, runtime identity and rebased internal dependencies (8.052937ms)
+✔ en Intl snapshot, USD and UTC date-only (33.099808ms)
+✔ zh Intl snapshot, USD and UTC date-only (0.698883ms)
+✔ missing and invalid values never become zero or invalid dates (0.344991ms)
+✔ scalar allowlist rejects URLs, unknown keys, invalid values and oversized streaming body (21.724163ms)
+✔ document metric registration helper preserves scope, sequences, BFcache and omits softnav/absent INP (0.22296ms)
+✔ latest metric value deduplicates by navigation/name; reordered retry cannot overwrite; scope immutable (0.269574ms)
+✔ retention, hard quota and global minute rate stay bounded (1.648101ms)
+✔ local QA sink persists final dedup state across adapter instances; production misconfiguration fails closed (3.475815ms)
+✔ Blob adapter uses private HTTPS path, ETag and bounded retry; no fallback (1.156701ms)
+✔ canonical origin fails closed for absent/invalid production settings and restricts HTTP to explicit loopback QA (0.615128ms)
+✔ p75 nearest-rank groups per metric and never fabricates absent INP (0.143793ms)
+✔ per-frame work sums script and render of the same frame; zero-length measures are allowed (1.376964ms)
+✔ frame work rejects mismatched, empty, negative or nonfinite samples (0.294578ms)
+✔ physical16.7ms threshold uses exact integer units, not tenth-ms rounding or epsilon (0.264779ms)
+✔ reject nonfinite/nonpositive/unsafe/ambiguous subunit intervals and preserve raw nearest rank (0.269961ms)
+✔ native site transport sends only named scope/auth/source identity; strict response reconstruction and cache separation (15.186694ms)
+✔ server source verifies snapshot identity/integrity and invalidates aggregation cache across revisions (3.299316ms)
+✔ exact weighted median uses eligible rows, never county medians or NULL zero (0.460316ms)
+✔ scope rejects unsafe resolution, identifier, fiscal period and unknown parameters (0.613931ms)
+✔ coordinate validation rejects wrapping/nonfinite/missing values (0.086417ms)
+✔ aggregate preserves count, missing coordinates, wage NULL and source vintage; filters before math (1.627455ms)
+✔ coarse cells/pentagon coordinates remain valid strings at one requested resolution (7.344975ms)
+✔ one scope may return up to the shared cell limit, sized for the full-year projection (64.294934ms)
+ℹ tests 34
+ℹ suites 0
+ℹ pass 34
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 166.803736
+cd web/packages/ui && node --test tests/tokens.test.mjs
+✔ both color themes and all token groups are generated (0.394039ms)
+✔ Tailwind consumes generated aliases as real utility CSS (7.475352ms)
+ℹ tests 2
+ℹ suites 0
+ℹ pass 2
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 58.101491
+node --test web/scripts/quality-environment.test.mjs
+✔ environment fingerprint rejects drift before rendering (7.894618ms)
+ℹ tests 1
+ℹ suites 0
+ℹ pass 1
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 45.300239
+node --max-old-space-size=768 --test --test-concurrency=1 --test-force-exit --test-timeout=120000 orchestration/tests/*.test.cjs azure/tests/*.test.cjs
+✔ sealed template enum and original public policy reject arbitrary/private SQL (2.727082ms)
+✔ fixed history read keeps cancellation, dispatch cutoff, and awaited async release (2.410868ms)
+✔ fixed query is hydrated through reviewed driver and rejects native failures (0.66412ms)
+✔ typed timestamp transport rejects sub-microsecond loss and schema mutation (0.468764ms)
+✔ same-hour read-only source change builds new physical revision; restart reuses it; failure preserves ready state (2927.727995ms)
+✔ trusted revision and ownership are fail-closed, atomic and recoverable (1.667325ms)
+ℹ tests 6
+ℹ suites 0
+ℹ pass 6
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 4085.705678
+cd semantic && node --max-old-space-size=768 --test --test-concurrency=1 --test-force-exit --test-timeout=120000 tests/*.test.cjs
+✔ private settings fail closed; production source guard still rejects lab SQL (0.909493ms)
+✔ private repository reuses canonical public projections without private fields (10.662184ms)
+✔ native Cube REST measures seven metrics and verifies new closed physical rollups in two fresh phases (1413.071615ms)
+✔ native canonical aggregate scopes both queries, preserves NULL/unmapped/vintages, rejects truncation (1.668669ms)
+✔ named native HTTP endpoint checks authentication/source identity/scope before any driver dispatch (49.498374ms)
+✔ aborted native query cancels the owned pending statement and prevents second query (0.358886ms)
+✔ native named endpoint admits only one active aggregation (0.641911ms)
+✔ native H3 validates scope before Snowflake wrapping; fixed public SQL has exact median (0.718556ms)
+✔ optional model only accepts complete fixed scope and cannot combine medians (0.191699ms)
+✔ default repository excludes H3; opt-in Snowflake rewrites it canonically without breaking original projections (469.54173ms)
+✔ invalid H3 projections are client errors in the installed Cube formatter (0.44848ms)
+ℹ tests 11
+ℹ suites 0
+ℹ pass 11
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 2704.728798
+make test: all offline suites passed

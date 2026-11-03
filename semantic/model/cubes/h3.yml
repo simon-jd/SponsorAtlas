@@ -1,0 +1,19 @@
+cubes:
+  - name: h3
+    sql_table: mart_h3
+    # Optional immutable single scope/resolution. Never aggregate cell medians.
+    dimensions:
+      - name: h3
+        sql: h3
+        type: string
+        primary_key: true
+        public: true
+      - name: count
+        sql: count
+        type: number
+      - name: wage_p50
+        sql: wage_p50
+        type: number
+      - name: resolution
+        sql: resolution
+        type: number

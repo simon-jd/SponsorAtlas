@@ -1,0 +1,41 @@
+{
+ "band_0.85_0.9_by_reason": [
+  [
+   "INSUFFICIENT_CONTEXT",
+   false,
+   207
+  ],
+  [
+   "STRONG_ID_CONFLICT",
+   false,
+   4
+  ]
+ ],
+ "scores_in_band": 211,
+ "absent_endpoint_ids": 40,
+ "absent_ids_in_old_input": [
+  [
+   "uscis",
+   40
+  ]
+ ],
+ "absent_ids_unreleased_uscis_rows": [
+  [
+   false,
+   40
+  ]
+ ],
+ "old_vs_new": {
+  "old_records": 164059,
+  "new_records": 161596
+ },
+ "records_only_old": [
+  [
+   "uscis",
+   2463
+  ]
+ ],
+ "records_only_new": 0,
+ "accepted_edges_only_old": 6866,
+ "accepted_edges_only_new": 0
+}

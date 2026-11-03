@@ -1,0 +1,70 @@
+{
+  "database": "/home/postedism/Desktop/SponsorAtlas/.tools/facts/fy2025-full.duckdb",
+  "bytes": 2626695168,
+  "fact_lca_case_rows": 713467,
+  "fact_lca_distinct_cases": 713467,
+  "facts_input_lca_rows": 717449,
+  "fact_job_posting_daily_rows": 86,
+  "fact_wage_benchmark_rows": 237514,
+  "dim_employer_rows": 98343,
+  "dim_geography_rows": 7042,
+  "lca_winner_content_mismatches": 0,
+  "lca_newer_decision_exists": 0,
+  "wage_mismatches": 0,
+  "lca_by_fiscal_year": [
+    {
+      "fiscal_year": 2024,
+      "cases": 118646,
+      "certified": 116224,
+      "county_not_matched": 54
+    },
+    {
+      "fiscal_year": 2025,
+      "cases": 594821,
+      "certified": 581389,
+      "county_not_matched": 6716
+    }
+  ],
+  "lca_by_release": [
+    {
+      "source_release": "FY2024_Q4",
+      "cases": 118646
+    },
+    {
+      "source_release": "FY2025_Q1",
+      "cases": 105683
+    },
+    {
+      "source_release": "FY2025_Q2",
+      "cases": 132133
+    },
+    {
+      "source_release": "FY2025_Q3",
+      "cases": 238425
+    },
+    {
+      "source_release": "FY2025_Q4",
+      "cases": 118580
+    }
+  ],
+  "lca_county_mapping_status": [
+    {
+      "county_mapping_status": "MATCHED",
+      "cases": 706697
+    },
+    {
+      "county_mapping_status": "SOURCE_COUNTY_MISSING",
+      "cases": 6480
+    },
+    {
+      "county_mapping_status": "UNRESOLVED_COUNTY",
+      "cases": 290
+    }
+  ],
+  "nproc": 32,
+  "load": [
+    6.01953125,
+    6.90283203125,
+    6.763671875
+  ]
+}

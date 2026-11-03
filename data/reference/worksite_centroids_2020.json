@@ -1,0 +1,23 @@
+{
+  "vintage": "Census2020",
+  "retrieved_at": "2026-10-27",
+  "publisher_checksum": "none published by the Census Bureau for these files",
+  "sources": {
+    "zcta_gazetteer": {
+      "url": "https://www2.census.gov/geo/docs/maps-data/data/gazetteer/2020_Gazetteer/2020_Gaz_zcta_national.zip",
+      "sha256": "335402fb16b41303a3760f8956d2af005bbd6919b8dc6f4a96048af0005957a6",
+      "bytes": 998037
+    },
+    "place_gazetteer": {
+      "url": "https://www2.census.gov/geo/docs/maps-data/data/gazetteer/2020_Gazetteer/2020_Gaz_place_national.zip",
+      "sha256": "6e5745b3e1adf7a1e024a988301d484697e2a0f25b3cf10114eef676f09d5c18",
+      "bytes": 1206088
+    },
+    "relationship": {
+      "url": "https://www2.census.gov/geo/docs/maps-data/data/rel2020/zcta520/tab20_zcta520_county20_natl.txt",
+      "sha256": "3ed41278d637dc249e0323306f68be8a6c234e3090f4de88ef328dee71aeaaaf",
+      "bytes": 6821287
+    }
+  },
+  "semantics": "Census internal (representative) points of the worksite ZCTA, else of the worksite place; not worksite addresses. A ZCTA is used only for states in which it has land."
+}

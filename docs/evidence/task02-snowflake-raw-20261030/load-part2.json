@@ -1,0 +1,509 @@
+{
+  "loader": "scripts.load_snowflake_raw (PUT to table stage + COPY INTO), not Airbyte",
+  "identity": "AIRBYTE_SVC / LOADER",
+  "wall_seconds": 69.1,
+  "tables": [
+    {
+      "table": "RAW.BLS.BLS_FY2024",
+      "kind": "empty",
+      "source": "none (empty, as RAW_BLS.BLS_FY2024 in the local fact build)",
+      "expected_rows": 0,
+      "release": "FY2024",
+      "snowflake_rows": 0,
+      "provenance_mismatches": 0,
+      "local_fingerprint": null,
+      "snowflake_fingerprint": null,
+      "status": "MATCH",
+      "seconds": {
+        "CREATE": 0.383
+      },
+      "query_ids": {
+        "CREATE": "01c81625-020a-6cda-0005-0f02000b502e"
+      },
+      "copy_result": null
+    },
+    {
+      "table": "RAW.JOBS.ACME_GH_GREENHOUSE",
+      "kind": "parquet",
+      "source": ".tools/staging/fy2025-full.duckdb#RAW_JOBS.ACME_GH_GREENHOUSE",
+      "expected_rows": 1,
+      "file_sha256": {
+        "data_0.parquet": "1b654ca6e2d40d79cf83170e235fb3d871e54b03044dda3b9845545690f40f05"
+      },
+      "snowflake_rows": 1,
+      "provenance_mismatches": 0,
+      "local_fingerprint": 2188033982,
+      "snowflake_fingerprint": 2188033982,
+      "status": "MATCH",
+      "seconds": {
+        "CREATE": 0.335,
+        "PUT": 0.399,
+        "COPY": 0.885
+      },
+      "query_ids": {
+        "CREATE": "01c81625-020a-6cda-0005-0f02000b5032",
+        "PUT": "01c81625-020a-6cd6-0005-0f02000aa912",
+        "COPY": "01c81625-020a-6d55-0005-0f02000a776e"
+      },
+      "copy_result": [
+        [
+          "data_0.parquet",
+          "LOADED",
+          "1",
+          "1",
+          "1",
+          "0",
+          "None",
+          "None",
+          "None",
+          "None"
+        ]
+      ]
+    },
+    {
+      "table": "RAW.JOBS.ACME_LV_LEVER",
+      "kind": "parquet",
+      "source": ".tools/staging/fy2025-full.duckdb#RAW_JOBS.ACME_LV_LEVER",
+      "expected_rows": 1,
+      "file_sha256": {
+        "data_0.parquet": "82aa6623472566ca19d5292fe412bf12b72c01e138f321b3ffaa62fa86c6e65c"
+      },
+      "snowflake_rows": 1,
+      "provenance_mismatches": 0,
+      "local_fingerprint": 3258019705,
+      "snowflake_fingerprint": 3258019705,
+      "status": "MATCH",
+      "seconds": {
+        "CREATE": 0.329,
+        "PUT": 0.234,
+        "COPY": 1.353
+      },
+      "query_ids": {
+        "CREATE": "01c81625-020a-6cd8-0005-0f02000b17be",
+        "PUT": "01c81625-020a-6cd6-0005-0f02000aa916",
+        "COPY": "01c81625-020a-6cda-0005-0f02000b5036"
+      },
+      "copy_result": [
+        [
+          "data_0.parquet",
+          "LOADED",
+          "1",
+          "1",
+          "1",
+          "0",
+          "None",
+          "None",
+          "None",
+          "None"
+        ]
+      ]
+    },
+    {
+      "table": "RAW.JOBS.ACME_AB_ASHBY",
+      "kind": "parquet",
+      "source": ".tools/staging/fy2025-full.duckdb#RAW_JOBS.ACME_AB_ASHBY",
+      "expected_rows": 1,
+      "file_sha256": {
+        "data_0.parquet": "0f82ead7cc6e215dada5193a1e3a995e10df33390b24e587ddb62b5728aa0281"
+      },
+      "snowflake_rows": 1,
+      "provenance_mismatches": 0,
+      "local_fingerprint": 3041329860,
+      "snowflake_fingerprint": 3041329860,
+      "status": "MATCH",
+      "seconds": {
+        "CREATE": 0.299,
+        "PUT": 0.248,
+        "COPY": 2.581
+      },
+      "query_ids": {
+        "CREATE": "01c81625-020a-6d55-0005-0f02000a7776",
+        "PUT": "01c81625-020a-6cd8-0005-0f02000b17c2",
+        "COPY": "01c81625-020a-6cd8-0005-0f02000b17c6"
+      },
+      "copy_result": [
+        [
+          "data_0.parquet",
+          "LOADED",
+          "1",
+          "1",
+          "1",
+          "0",
+          "None",
+          "None",
+          "None",
+          "None"
+        ]
+      ]
+    },
+    {
+      "table": "RAW.JOBS.CDC_JOB_POSTINGS",
+      "kind": "parquet",
+      "source": ".tools/staging/fy2025-full.duckdb#RAW_JOBS.CDC_JOB_POSTINGS",
+      "expected_rows": 2,
+      "file_sha256": {
+        "data_0.parquet": "49739792ee02409bc928713273e713e1ae62062aa8f26738ebc20cdfd1aec8af"
+      },
+      "snowflake_rows": 2,
+      "provenance_mismatches": 0,
+      "local_fingerprint": 5845016575,
+      "snowflake_fingerprint": 5845016575,
+      "status": "MATCH",
+      "seconds": {
+        "CREATE": 0.536,
+        "PUT": 0.241,
+        "COPY": 0.759
+      },
+      "query_ids": {
+        "CREATE": "01c81625-020a-6d55-0005-0f02000a777a",
+        "PUT": "01c81625-020a-6cda-0005-0f02000b503a",
+        "COPY": "01c81625-020a-6d55-0005-0f02000a777e"
+      },
+      "copy_result": [
+        [
+          "data_0.parquet",
+          "LOADED",
+          "2",
+          "2",
+          "1",
+          "0",
+          "None",
+          "None",
+          "None",
+          "None"
+        ]
+      ]
+    },
+    {
+      "table": "RAW.JOBS.CDC_APPLICATION_EVENTS",
+      "kind": "parquet",
+      "source": ".tools/staging/fy2025-full.duckdb#RAW_JOBS.CDC_APPLICATION_EVENTS",
+      "expected_rows": 2,
+      "file_sha256": {
+        "data_0.parquet": "b41ab324cefcebfc8dab9ea9d27ed18907ae6511fd15baa2c660d4a46c47fc00"
+      },
+      "snowflake_rows": 2,
+      "provenance_mismatches": 0,
+      "local_fingerprint": 4942309711,
+      "snowflake_fingerprint": 4942309711,
+      "status": "MATCH",
+      "seconds": {
+        "CREATE": 0.299,
+        "PUT": 0.25,
+        "COPY": 1.3
+      },
+      "query_ids": {
+        "CREATE": "01c81625-020a-6d55-0005-0f02000a7782",
+        "PUT": "01c81625-020a-6d55-0005-0f02000a7786",
+        "COPY": "01c81625-020a-6cd8-0005-0f02000b17ca"
+      },
+      "copy_result": [
+        [
+          "data_0.parquet",
+          "LOADED",
+          "2",
+          "2",
+          "1",
+          "0",
+          "None",
+          "None",
+          "None",
+          "None"
+        ]
+      ]
+    },
+    {
+      "table": "RAW.LCA.DIMENSIONS_INPUT_EMPLOYER_SOURCES",
+      "kind": "parquet",
+      "source": ".tools/facts/fy2025-full.duckdb#DIMENSIONS_INPUT.employer_sources",
+      "expected_rows": 161596,
+      "file_sha256": {
+        "data_0.parquet": "35fcf9ff2380f230040a92f33e5cba91a039b26b788b1ad97e467f5a485e4203"
+      },
+      "snowflake_rows": 161596,
+      "provenance_mismatches": 0,
+      "local_fingerprint": 346517182281678,
+      "snowflake_fingerprint": 346517182281678,
+      "status": "MATCH",
+      "seconds": {
+        "CREATE": 0.486,
+        "PUT": 1.244,
+        "COPY": 4.435
+      },
+      "query_ids": {
+        "CREATE": "01c81625-020a-6cd8-0005-0f02000b17ce",
+        "PUT": "01c81625-020a-6cda-0005-0f02000b5042",
+        "COPY": "01c81625-020a-6d55-0005-0f02000a778a"
+      },
+      "copy_result": [
+        [
+          "data_0.parquet",
+          "LOADED",
+          "161596",
+          "161596",
+          "1",
+          "0",
+          "None",
+          "None",
+          "None",
+          "None"
+        ]
+      ]
+    },
+    {
+      "table": "RAW.LCA.DIMENSIONS_INPUT_LCA_ATTRIBUTES",
+      "kind": "parquet",
+      "source": ".tools/facts/fy2025-full.duckdb#DIMENSIONS_INPUT.lca_attributes",
+      "expected_rows": 717449,
+      "file_sha256": {
+        "data_0.parquet": "9ad1e5485f437df7be73104b56d79891bfd79f7aa1ad699fa7dbebbfc1d1dc99"
+      },
+      "snowflake_rows": 717449,
+      "provenance_mismatches": 0,
+      "local_fingerprint": 1540058379045885,
+      "snowflake_fingerprint": 1540058379045885,
+      "status": "MATCH",
+      "seconds": {
+        "CREATE": 0.322,
+        "PUT": 1.081,
+        "COPY": 7.431
+      },
+      "query_ids": {
+        "CREATE": "01c81625-020a-6cd8-0005-0f02000b17d2",
+        "PUT": "01c81625-020a-6cd8-0005-0f02000b17d6",
+        "COPY": "01c81625-020a-6cd6-0005-0f02000aa926"
+      },
+      "copy_result": [
+        [
+          "data_0.parquet",
+          "LOADED",
+          "717449",
+          "717449",
+          "1",
+          "0",
+          "None",
+          "None",
+          "None",
+          "None"
+        ]
+      ]
+    },
+    {
+      "table": "RAW.LCA.DIMENSIONS_INPUT_LINEAGE",
+      "kind": "parquet",
+      "source": ".tools/facts/fy2025-full.duckdb#DIMENSIONS_INPUT.lineage",
+      "expected_rows": 1,
+      "file_sha256": {
+        "data_0.parquet": "82fce16e8705081d140130025713b5b3a2fbaf9420836ba12eb7bf114d63a62a"
+      },
+      "snowflake_rows": 1,
+      "provenance_mismatches": 0,
+      "local_fingerprint": 3383359976,
+      "snowflake_fingerprint": 3383359976,
+      "status": "MATCH",
+      "seconds": {
+        "CREATE": 0.24,
+        "PUT": 0.216,
+        "COPY": 0.716
+      },
+      "query_ids": {
+        "CREATE": "01c81625-020a-6d55-0005-0f02000a7792",
+        "PUT": "01c81625-020a-6cd6-0005-0f02000aa92e",
+        "COPY": "01c81625-020a-6cda-0005-0f02000b5046"
+      },
+      "copy_result": [
+        [
+          "data_0.parquet",
+          "LOADED",
+          "1",
+          "1",
+          "1",
+          "0",
+          "None",
+          "None",
+          "None",
+          "None"
+        ]
+      ]
+    },
+    {
+      "table": "RAW.LCA.FACTS_INPUT_LCA",
+      "kind": "parquet",
+      "source": ".tools/facts/fy2025-full.duckdb#FACTS_INPUT.lca",
+      "expected_rows": 717449,
+      "file_sha256": {
+        "data_0.parquet": "62d66cccdaf7c16a41a62affd12d5f0e6b1460be5c30bc6e6833e7ee7671c45b",
+        "data_1.parquet": "104fa7620b120b750c7b9f8ac5c6e0bc54476f6a2ff21e6568a9ff031e07fb9f",
+        "data_2.parquet": "c992cbef7846aab13f9c76901443063db2506556524e55bb5b23af42d7ae80b0",
+        "data_3.parquet": "bb393631eee54494fc8abad3ef55e8ba4a8ff1e38209ef67d70aee3f4e4e2288",
+        "data_4.parquet": "35813c43758e44b1c03729b9cb472f99680ca7b5bd58cb03e076ef54b6181b60",
+        "data_5.parquet": "77951814050f37361b6c94af873f64f8d95446d14fc81e26c46dae28690ce7de"
+      },
+      "snowflake_rows": 717449,
+      "provenance_mismatches": 0,
+      "local_fingerprint": 1539064935365940,
+      "snowflake_fingerprint": 1539064935365940,
+      "status": "MATCH",
+      "seconds": {
+        "CREATE": 0.31,
+        "PUT": 17.924,
+        "COPY": 15.074
+      },
+      "query_ids": {
+        "CREATE": "01c81625-020a-6cda-0005-0f02000b504a",
+        "PUT": "01c81625-020a-6cd8-0005-0f02000b17da",
+        "COPY": "01c81625-020a-6d55-0005-0f02000a779a"
+      },
+      "copy_result": [
+        [
+          "data_5.parquet",
+          "LOADED",
+          "103049",
+          "103049",
+          "1",
+          "0",
+          "None",
+          "None",
+          "None",
+          "None"
+        ],
+        [
+          "data_4.parquet",
+          "LOADED",
+          "122880",
+          "122880",
+          "1",
+          "0",
+          "None",
+          "None",
+          "None",
+          "None"
+        ],
+        [
+          "data_1.parquet",
+          "LOADED",
+          "122880",
+          "122880",
+          "1",
+          "0",
+          "None",
+          "None",
+          "None",
+          "None"
+        ],
+        [
+          "data_3.parquet",
+          "LOADED",
+          "122880",
+          "122880",
+          "1",
+          "0",
+          "None",
+          "None",
+          "None",
+          "None"
+        ],
+        [
+          "data_0.parquet",
+          "LOADED",
+          "122880",
+          "122880",
+          "1",
+          "0",
+          "None",
+          "None",
+          "None",
+          "None"
+        ],
+        [
+          "data_2.parquet",
+          "LOADED",
+          "122880",
+          "122880",
+          "1",
+          "0",
+          "None",
+          "None",
+          "None",
+          "None"
+        ]
+      ]
+    },
+    {
+      "table": "RAW.LCA.FACTS_INPUT_LINEAGE",
+      "kind": "parquet",
+      "source": ".tools/facts/fy2025-full.duckdb#FACTS_INPUT.lineage",
+      "expected_rows": 1,
+      "file_sha256": {
+        "data_0.parquet": "5e496248591d633cfaee3e7d27e88a73ffb82725798540b5b2430d004b5c2e52"
+      },
+      "snowflake_rows": 1,
+      "provenance_mismatches": 0,
+      "local_fingerprint": 547171587,
+      "snowflake_fingerprint": 547171587,
+      "status": "MATCH",
+      "seconds": {
+        "CREATE": 0.283,
+        "PUT": 0.247,
+        "COPY": 0.824
+      },
+      "query_ids": {
+        "CREATE": "01c81626-020a-6cd8-0005-0f02000b17de",
+        "PUT": "01c81626-020a-6cd8-0005-0f02000b17e2",
+        "COPY": "01c81626-020a-6cd6-0005-0f02000aa932"
+      },
+      "copy_result": [
+        [
+          "data_0.parquet",
+          "LOADED",
+          "1",
+          "1",
+          "1",
+          "0",
+          "None",
+          "None",
+          "None",
+          "None"
+        ]
+      ]
+    },
+    {
+      "table": "RAW.LCA.FACTS_INPUT_JOB_OBSERVATIONS",
+      "kind": "parquet",
+      "source": ".tools/facts/fy2025-full.duckdb#FACTS_INPUT.job_observations",
+      "expected_rows": 86,
+      "file_sha256": {
+        "data_0.parquet": "05175214f3ba1a140dc19e4acfd36ac33fba91aedadb12fd0d42caade3e4b419"
+      },
+      "snowflake_rows": 86,
+      "provenance_mismatches": 0,
+      "local_fingerprint": 186813184052,
+      "snowflake_fingerprint": 186813184052,
+      "status": "MATCH",
+      "seconds": {
+        "CREATE": 0.214,
+        "PUT": 0.387,
+        "COPY": 1.086
+      },
+      "query_ids": {
+        "CREATE": "01c81626-020a-6cd6-0005-0f02000aa936",
+        "PUT": "01c81626-020a-6d55-0005-0f02000a779e",
+        "COPY": "01c81626-020a-6cda-0005-0f02000b5056"
+      },
+      "copy_result": [
+        [
+          "data_0.parquet",
+          "LOADED",
+          "86",
+          "86",
+          "1",
+          "0",
+          "None",
+          "None",
+          "None",
+          "None"
+        ]
+      ]
+    }
+  ]
+}

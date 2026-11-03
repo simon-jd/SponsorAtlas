@@ -1,0 +1,11 @@
+*.tsbuildinfo
+
+# Large local QA artifacts; compact receipts/reviewed baselines are committed explicitly.
+.lighthouseci/
+evidence/quality-lhci/
+evidence/quality-rum-local/
+evidence/quality-annex/
+deploy/stage/
+
+/deploy/artifact/
+/deploy/downloaded-viz/

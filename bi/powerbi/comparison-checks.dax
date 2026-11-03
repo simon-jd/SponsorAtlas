@@ -1,0 +1,8 @@
+// Pending actual native execution. Compare with LOCAL SQL comparison-scope.json, never import SQL as DAX.
+EVALUATE
+UNION(
+CALCULATETABLE(ROW("scenario", "national", "p50", [Comparison Wage P50], "p75", [Comparison Wage P75], "p90", [Comparison Wage P90], "oews_median", [Comparison OEWS Median], "ratio", [Wage P75 vs OEWS], "scope", [Comparison Scope]), TREATAS({"15-1252"}, SOC[soc]), TREATAS({"1:99"}, PublishedArea[area]), TREATAS({2025}, SurveyYear[survey_year])),
+CALCULATETABLE(ROW("scenario", "CBSA35620", "p50", [Comparison Wage P50], "p75", [Comparison Wage P75], "p90", [Comparison Wage P90], "oews_median", [Comparison OEWS Median], "ratio", [Wage P75 vs OEWS], "scope", [Comparison Scope]), TREATAS({"15-1252"}, SOC[soc]), TREATAS({"4:35620"}, PublishedArea[area]), TREATAS({2025}, SurveyYear[survey_year])),
+CALCULATETABLE(ROW("scenario", "CBSA35620_FY2025", "p50", [Comparison Wage P50], "p75", [Comparison Wage P75], "p90", [Comparison Wage P90], "oews_median", [Comparison OEWS Median], "ratio", [Wage P75 vs OEWS], "scope", [Comparison Scope]), TREATAS({"15-1252"}, SOC[soc]), TREATAS({"4:35620"}, PublishedArea[area]), TREATAS({2025}, SurveyYear[survey_year]), TREATAS({2025}, FiscalYear[fiscal_year])),
+CALCULATETABLE(ROW("scenario", "unsupported_state", "p50", [Comparison Wage P50], "p75", [Comparison Wage P75], "p90", [Comparison Wage P90], "oews_median", [Comparison OEWS Median], "ratio", [Wage P75 vs OEWS], "scope", [Comparison Scope]), TREATAS({"15-1252"}, SOC[soc]), TREATAS({"2:06"}, PublishedArea[area]), TREATAS({2025}, SurveyYear[survey_year]))
+)

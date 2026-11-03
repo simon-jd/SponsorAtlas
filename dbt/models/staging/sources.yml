@@ -1,0 +1,42 @@
+version: 2
+sources:
+  - name: lca
+    database: "{{ 'RAW' if target.type == 'snowflake' else target.database }}"
+    schema: "{{ 'LCA' if target.type == 'snowflake' else 'RAW_LCA' }}"
+    tables:
+      - {name: lca_fy2024_q4, identifier: LCA_FY2024_Q4}
+      - {name: lca_fy2025_q1, identifier: LCA_FY2025_Q1}
+      - {name: lca_fy2025_q2, identifier: LCA_FY2025_Q2}
+      - {name: lca_fy2025_q3, identifier: LCA_FY2025_Q3}
+      - {name: lca_fy2025_q4, identifier: LCA_FY2025_Q4}
+  - name: uscis
+    database: "{{ 'RAW' if target.type == 'snowflake' else target.database }}"
+    schema: "{{ 'USCIS' if target.type == 'snowflake' else 'RAW_USCIS' }}"
+    tables:
+      - {name: uscis_fy2022, identifier: USCIS_FY2022}
+      - {name: uscis_fy2023, identifier: USCIS_FY2023}
+  - name: bls
+    database: "{{ 'RAW' if target.type == 'snowflake' else target.database }}"
+    schema: "{{ 'BLS' if target.type == 'snowflake' else 'RAW_BLS' }}"
+    tables:
+      - {name: bls_fy2024, identifier: BLS_FY2024}
+      - {name: bls_fy2025, identifier: BLS_FY2025}
+  - name: jobs
+    config:
+      loaded_at_field: _airbyte_extracted_at
+      freshness:
+        error_after: {count: 24, period: hour}
+    database: "{{ 'RAW' if target.type == 'snowflake' else target.database }}"
+    schema: "{{ 'JOBS' if target.type == 'snowflake' else 'RAW_JOBS' }}"
+    tables:
+      - name: greenhouse
+        identifier: "{{ var('greenhouse_table', 'ACME_GH_GREENHOUSE') }}"
+      - name: lever
+        identifier: "{{ var('lever_table', 'ACME_LV_LEVER') }}"
+      - name: ashby
+        identifier: "{{ var('ashby_table', 'ACME_AB_ASHBY') }}"
+      - {name: cdc_job_postings, identifier: CDC_JOB_POSTINGS}
+      - name: cdc_application_events
+        identifier: CDC_APPLICATION_EVENTS
+        config:
+          freshness: null  # Private events have a separate opt-in contract; public DAG checks job streams.

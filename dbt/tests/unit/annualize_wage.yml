@@ -1,0 +1,25 @@
+version: 2
+unit_tests:
+  - name: annualize_wage_exact_cases
+    model: annualize_wage_examples
+    given:
+      - input: ref('wage_test_inputs')
+        rows:
+          - {amount: 50, unit: Hour}
+          - {amount: 2000, unit: Week}
+          - {amount: 4000, unit: Bi-Weekly}
+          - {amount: 8666.67, unit: Month}
+          - {amount: 104000, unit: Year}
+          - {amount: 50, unit: null}
+          - {amount: 50, unit: Unknown}
+          - {amount: 50, unit: hour}
+    expect:
+      rows:
+        - {amount: 50, unit: Hour, annual_wage: 104000}
+        - {amount: 2000, unit: Week, annual_wage: 104000}
+        - {amount: 4000, unit: Bi-Weekly, annual_wage: 104000}
+        - {amount: 8666.67, unit: Month, annual_wage: 104000.04}
+        - {amount: 104000, unit: Year, annual_wage: 104000}
+        - {amount: 50, unit: null, annual_wage: null}
+        - {amount: 50, unit: Unknown, annual_wage: null}
+        - {amount: 50, unit: hour, annual_wage: null}

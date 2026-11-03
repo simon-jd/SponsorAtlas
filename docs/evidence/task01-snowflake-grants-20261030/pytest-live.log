@@ -1,0 +1,35 @@
+============================= test session starts ==============================
+platform linux -- Python 3.12.15, pytest-8.4.2, pluggy-1.7.0 -- /home/postedism/Desktop/SponsorAtlas/.venv/bin/python
+rootdir: /home/postedism/Desktop/SponsorAtlas
+configfile: pyproject.toml
+plugins: platformdirs-4.13.5
+collecting ... collected 6 items
+
+warehouse/tests/test_grants.py::test_analyst_cannot_read_raw PASSED
+warehouse/tests/test_grants.py::test_analyst_reads_marts PASSED
+warehouse/tests/test_grants.py::test_transformer_cannot_write_raw PASSED
+warehouse/tests/test_live_marts_access.py::test_cube_reads_every_mart_and_nothing_upstream CUBE_SVC MARTS counts: {"DIM_DATE": 13149, "DIM_EMPLOYER": 98188, "DIM_GEOGRAPHY": 7042, "DIM_OCCUPATION": 1453, "FACT_LCA_CASE": 713467, "FACT_JOB_POSTING_DAILY": 86, "FACT_WAGE_BENCHMARK": 237514}
+CUBE_SVC denied: ['RAW.LCA.LCA_FY2025_Q1', 'RAW.LCA.DIMENSIONS_INPUT_EMPLOYER_SOURCES', 'ANALYTICS.STAGING.STG_LCA', 'ANALYTICS.INTERMEDIATE.INT_LCA_CASE_CANDIDATES', 'ANALYTICS.INTERMEDIATE.SNAP_EMPLOYER']
+PASSED
+warehouse/tests/test_live_marts_access.py::test_policy_references_on_the_real_build POLICY_REFERENCES before probes: {"ANALYTICS.MARTS.APPLICATION_OWNER_V1": [], "ANALYTICS.MARTS.CONTACT_EMAIL_V1": []}
+PASSED
+warehouse/tests/test_live_marts_access.py::test_policies_take_effect_for_analyst_without_pii_reader POLICY_REFERENCES with probes: {"ANALYTICS.MARTS.APPLICATION_OWNER_V1": [["ROW_ACCESS_POLICY", "ANALYTICS", "MARTS", "SA_POLICY_PROBE_3109D0BB61C74D28B78A5B0DF6D1B1AB", null]], "ANALYTICS.MARTS.CONTACT_EMAIL_V1": [["MASKING_POLICY", "ANALYTICS", "MARTS", "SA_MASK_PROBE_3109D0BB61C74D28B78A5B0DF6D1B1AB", "CONTACT_EMAIL"], ["MASKING_POLICY", "ANALYTICS", "MARTS", "SA_POLICY_PROBE_3109D0BB61C74D28B78A5B0DF6D1B1AB", "CONTACT_EMAIL"]]}
+CUBE_SVC/ANALYST rows in RAP probe: 0
+DBT_SVC/TRANSFORMER rows in RAP probe: 0
+CUBE_SVC/ANALYST email in mask probe: [('***MASKED***',)]
+PASSED
+
+=============================== warnings summary ===============================
+warehouse/tests/test_grants.py::test_analyst_cannot_read_raw
+warehouse/tests/test_grants.py::test_analyst_cannot_read_raw
+warehouse/tests/test_grants.py::test_analyst_cannot_read_raw
+warehouse/tests/test_grants.py::test_analyst_cannot_read_raw
+warehouse/tests/test_live_marts_access.py::test_cube_reads_every_mart_and_nothing_upstream
+warehouse/tests/test_live_marts_access.py::test_cube_reads_every_mart_and_nothing_upstream
+warehouse/tests/test_live_marts_access.py::test_cube_reads_every_mart_and_nothing_upstream
+warehouse/tests/test_live_marts_access.py::test_cube_reads_every_mart_and_nothing_upstream
+  /home/postedism/Desktop/SponsorAtlas/.venv/lib/python3.12/site-packages/snowflake/connector/vendored/urllib3/contrib/pyopenssl.py:413: DeprecationWarning: X509.get_subject is deprecated. You should use cryptography's X.509 APIs instead.
+    "subject": ((("commonName", x509.get_subject().CN),),),  # type: ignore[dict-item]
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+======================== 6 passed, 8 warnings in 38.17s ========================

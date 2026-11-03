@@ -1,0 +1,59 @@
+cubes:
+  - name: lca
+    sql_table: mart_lca
+    description: Latest unique LCA cases from archived Q4 releases; applications are not approvals or sponsorship offers.
+    dimensions:
+      - name: case_number
+        sql: case_number
+        type: string
+        primary_key: true
+        public: false
+      - name: employer
+        sql: employer
+        type: string
+        description: Canonical identity only, not present-day attributes projected into history; UNKNOWN is unresolved.
+      - name: soc_major
+        sql: soc_major
+        type: string
+      - name: soc
+        sql: soc
+        type: string
+      - name: metro
+        sql: metro
+        type: string
+        description: Metropolitan CBSA from the unique county member; micropolitan or unresolved is UNKNOWN.
+      - name: fiscal_year
+        sql: fiscal_year
+        type: number
+      - name: employer_history_status
+        sql: employer_history_status
+        type: string
+    measures:
+      - name: case_count
+        type: count
+        description: Count of unique case_number in latest-case facts, including unknown employer history.
+      - name: certified_count
+        sql: CASE WHEN is_certified THEN 1 ELSE 0 END
+        type: sum
+        public: false
+      - name: certified_rate
+        sql: "1.0 * {certified_count} / NULLIF({case_count}, 0)"
+        type: number
+        description: Certified plus Certified - Withdrawn divided by every latest case, including denied and withdrawn; empty denominator returns null.
+      - name: wage_p50
+        sql: PERCENTILE_CONT(0.5) WITHIN GROUP (ORDER BY annual_wage)
+        type: number
+      - name: wage_p75
+        sql: PERCENTILE_CONT(0.75) WITHIN GROUP (ORDER BY annual_wage)
+        type: number
+      - name: wage_p90
+        sql: PERCENTILE_CONT(0.9) WITHIN GROUP (ORDER BY annual_wage)
+        type: number
+    pre_aggregations:
+      - name: counts
+        type: rollup
+        external: false
+        measures: [case_count, certified_count]
+        dimensions: [fiscal_year]
+        refresh_key:
+          every: 1 hour

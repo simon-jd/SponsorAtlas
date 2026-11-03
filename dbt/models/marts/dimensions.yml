@@ -1,0 +1,26 @@
+version: 2
+models:
+  - name: dim_employer
+    columns:
+      - name: employer_key
+        data_tests: [unique, not_null]
+      - name: employer_id
+        data_tests: [not_null]
+  - name: dim_occupation
+    columns:
+      - name: occupation_key
+        data_tests: [unique, not_null]
+      - name: soc_code
+        data_tests: [unique, not_null]
+      - name: soc_vintage
+        data_tests: [not_null]
+  - name: dim_geography
+    columns:
+      - name: geography_key
+        data_tests: [unique, not_null]
+  - name: dim_date
+    columns:
+      - name: date_key
+        data_tests: [unique, not_null]
+      - name: calendar_date
+        data_tests: [unique, not_null]

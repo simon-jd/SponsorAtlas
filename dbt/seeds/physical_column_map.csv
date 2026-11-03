@@ -1,0 +1,140 @@
+source_system,release_key,source_column,disposition,reason
+lca,FILE,SOURCE_RELEASE,mapped,immutable file envelope
+lca,FILE,SOURCE_SHA256,mapped,immutable file envelope
+lca,FILE,SOURCE_URL,mapped,immutable file envelope
+lca,FILE,SOURCE_ROW_NUMBER,mapped,immutable file envelope
+lca,FILE,PAYLOAD_JSON,mapped,immutable file envelope
+lca,FILE,_AIRBYTE_RAW_ID,excluded,Airbyte exact metadata name
+lca,FILE,_AIRBYTE_EXTRACTED_AT,excluded,Airbyte exact metadata name
+lca,FILE,_AIRBYTE_META,excluded,Airbyte exact metadata name
+lca,FILE,_AIRBYTE_GENERATION_ID,excluded,Airbyte exact metadata name
+uscis,FILE,SOURCE_RELEASE,mapped,immutable file envelope
+uscis,FILE,SOURCE_SHA256,mapped,immutable file envelope
+uscis,FILE,SOURCE_URL,mapped,immutable file envelope
+uscis,FILE,SOURCE_ROW_NUMBER,mapped,immutable file envelope
+uscis,FILE,PAYLOAD_JSON,mapped,immutable file envelope
+uscis,FILE,_AIRBYTE_RAW_ID,excluded,Airbyte exact metadata name
+uscis,FILE,_AIRBYTE_EXTRACTED_AT,excluded,Airbyte exact metadata name
+uscis,FILE,_AIRBYTE_META,excluded,Airbyte exact metadata name
+uscis,FILE,_AIRBYTE_GENERATION_ID,excluded,Airbyte exact metadata name
+bls,FILE,SOURCE_RELEASE,mapped,immutable file envelope
+bls,FILE,SOURCE_SHA256,mapped,immutable file envelope
+bls,FILE,SOURCE_URL,mapped,immutable file envelope
+bls,FILE,SOURCE_ROW_NUMBER,mapped,immutable file envelope
+bls,FILE,PAYLOAD_JSON,mapped,immutable file envelope
+bls,FILE,_AIRBYTE_RAW_ID,excluded,Airbyte exact metadata name
+bls,FILE,_AIRBYTE_EXTRACTED_AT,excluded,Airbyte exact metadata name
+bls,FILE,_AIRBYTE_META,excluded,Airbyte exact metadata name
+bls,FILE,_AIRBYTE_GENERATION_ID,excluded,Airbyte exact metadata name
+jobs,greenhouse,JOB_KEY,mapped,explicit board source field or envelope
+jobs,greenhouse,SOURCE_PROVIDER,mapped,explicit board source field or envelope
+jobs,greenhouse,SOURCE_BOARD,mapped,explicit board source field or envelope
+jobs,greenhouse,SOURCE_URL,mapped,explicit board source field or envelope
+jobs,greenhouse,PAYLOAD_JSON,mapped,explicit board source field or envelope
+jobs,greenhouse,_AIRBYTE_RAW_ID,mapped,explicit board source field or envelope
+jobs,greenhouse,_AIRBYTE_EXTRACTED_AT,mapped,explicit board source field or envelope
+jobs,greenhouse,_AIRBYTE_META,mapped,explicit board source field or envelope
+jobs,greenhouse,_AIRBYTE_GENERATION_ID,mapped,explicit board source field or envelope
+jobs,greenhouse,id,mapped,explicit board source field or envelope
+jobs,greenhouse,internal_job_id,mapped,explicit board source field or envelope
+jobs,greenhouse,title,mapped,explicit board source field or envelope
+jobs,greenhouse,updated_at,mapped,explicit board source field or envelope
+jobs,greenhouse,requisition_id,mapped,explicit board source field or envelope
+jobs,greenhouse,location,mapped,explicit board source field or envelope
+jobs,greenhouse,absolute_url,mapped,explicit board source field or envelope
+jobs,greenhouse,language,mapped,explicit board source field or envelope
+jobs,greenhouse,metadata,mapped,explicit board source field or envelope
+jobs,greenhouse,company_name,mapped,explicit board source field or envelope
+jobs,greenhouse,departments,mapped,explicit board source field or envelope
+jobs,greenhouse,offices,mapped,explicit board source field or envelope
+jobs,greenhouse,content,mapped,explicit board source field or envelope
+jobs,greenhouse,data_compliance,mapped,explicit board source field or envelope
+jobs,greenhouse,education,mapped,explicit board source field or envelope
+jobs,greenhouse,demographic_questions,mapped,explicit board source field or envelope
+jobs,greenhouse,questions,mapped,explicit board source field or envelope
+jobs,greenhouse,location_questions,mapped,explicit board source field or envelope
+jobs,greenhouse,compliance,mapped,explicit board source field or envelope
+jobs,greenhouse,pay_input_ranges,mapped,explicit board source field or envelope
+jobs,lever,JOB_KEY,mapped,explicit board source field or envelope
+jobs,lever,SOURCE_PROVIDER,mapped,explicit board source field or envelope
+jobs,lever,SOURCE_BOARD,mapped,explicit board source field or envelope
+jobs,lever,SOURCE_URL,mapped,explicit board source field or envelope
+jobs,lever,PAYLOAD_JSON,mapped,explicit board source field or envelope
+jobs,lever,_AIRBYTE_RAW_ID,mapped,explicit board source field or envelope
+jobs,lever,_AIRBYTE_EXTRACTED_AT,mapped,explicit board source field or envelope
+jobs,lever,_AIRBYTE_META,mapped,explicit board source field or envelope
+jobs,lever,_AIRBYTE_GENERATION_ID,mapped,explicit board source field or envelope
+jobs,lever,id,mapped,explicit board source field or envelope
+jobs,lever,text,mapped,explicit board source field or envelope
+jobs,lever,categories,mapped,explicit board source field or envelope
+jobs,lever,country,mapped,explicit board source field or envelope
+jobs,lever,description,mapped,explicit board source field or envelope
+jobs,lever,descriptionPlain,mapped,explicit board source field or envelope
+jobs,lever,lists,mapped,explicit board source field or envelope
+jobs,lever,additional,mapped,explicit board source field or envelope
+jobs,lever,additionalPlain,mapped,explicit board source field or envelope
+jobs,lever,hostedUrl,mapped,explicit board source field or envelope
+jobs,lever,applyUrl,mapped,explicit board source field or envelope
+jobs,lever,commitment,mapped,explicit board source field or envelope
+jobs,lever,team,mapped,explicit board source field or envelope
+jobs,lever,department,mapped,explicit board source field or envelope
+jobs,lever,location,mapped,explicit board source field or envelope
+jobs,lever,workplaceType,mapped,explicit board source field or envelope
+jobs,lever,salaryRange,mapped,explicit board source field or envelope
+jobs,lever,salaryDescription,mapped,explicit board source field or envelope
+jobs,lever,salaryDescriptionPlain,mapped,explicit board source field or envelope
+jobs,lever,createdAt,mapped,explicit board source field or envelope
+jobs,lever,tags,mapped,explicit board source field or envelope
+jobs,lever,opening,mapped,explicit board source field or envelope
+jobs,lever,descriptionBody,mapped,explicit board source field or envelope
+jobs,lever,descriptionBodyPlain,mapped,explicit board source field or envelope
+jobs,ashby,JOB_KEY,mapped,explicit board source field or envelope
+jobs,ashby,SOURCE_PROVIDER,mapped,explicit board source field or envelope
+jobs,ashby,SOURCE_BOARD,mapped,explicit board source field or envelope
+jobs,ashby,SOURCE_URL,mapped,explicit board source field or envelope
+jobs,ashby,PAYLOAD_JSON,mapped,explicit board source field or envelope
+jobs,ashby,_AIRBYTE_RAW_ID,mapped,explicit board source field or envelope
+jobs,ashby,_AIRBYTE_EXTRACTED_AT,mapped,explicit board source field or envelope
+jobs,ashby,_AIRBYTE_META,mapped,explicit board source field or envelope
+jobs,ashby,_AIRBYTE_GENERATION_ID,mapped,explicit board source field or envelope
+jobs,ashby,id,mapped,explicit board source field or envelope
+jobs,ashby,title,mapped,explicit board source field or envelope
+jobs,ashby,department,mapped,explicit board source field or envelope
+jobs,ashby,team,mapped,explicit board source field or envelope
+jobs,ashby,employmentType,mapped,explicit board source field or envelope
+jobs,ashby,location,mapped,explicit board source field or envelope
+jobs,ashby,secondaryLocations,mapped,explicit board source field or envelope
+jobs,ashby,isRemote,mapped,explicit board source field or envelope
+jobs,ashby,workplaceType,mapped,explicit board source field or envelope
+jobs,ashby,publishedAt,mapped,explicit board source field or envelope
+jobs,ashby,isListed,mapped,explicit board source field or envelope
+jobs,ashby,jobUrl,mapped,explicit board source field or envelope
+jobs,ashby,applyUrl,mapped,explicit board source field or envelope
+jobs,ashby,descriptionHtml,mapped,explicit board source field or envelope
+jobs,ashby,descriptionPlain,mapped,explicit board source field or envelope
+jobs,ashby,compensation,mapped,explicit board source field or envelope
+jobs,ashby,address,mapped,explicit board source field or envelope
+jobs,cdc_job_postings,id,mapped,Task2 CDC demo schema plus exact Airbyte metadata; review actual replica before adding fields
+jobs,cdc_job_postings,title,mapped,Task2 CDC demo schema plus exact Airbyte metadata; review actual replica before adding fields
+jobs,cdc_job_postings,company_name,mapped,Task2 CDC demo schema plus exact Airbyte metadata; review actual replica before adding fields
+jobs,cdc_job_postings,updated_at,mapped,Task2 CDC demo schema plus exact Airbyte metadata; review actual replica before adding fields
+jobs,cdc_job_postings,_AB_CDC_LSN,mapped,Task2 CDC demo schema plus exact Airbyte metadata; review actual replica before adding fields
+jobs,cdc_job_postings,_AB_CDC_UPDATED_AT,mapped,Task2 CDC demo schema plus exact Airbyte metadata; review actual replica before adding fields
+jobs,cdc_job_postings,_AB_CDC_DELETED_AT,mapped,Task2 CDC demo schema plus exact Airbyte metadata; review actual replica before adding fields
+jobs,cdc_job_postings,_AB_CDC_CURSOR,mapped,Task2 CDC demo schema plus exact Airbyte metadata; review actual replica before adding fields
+jobs,cdc_job_postings,_AIRBYTE_RAW_ID,mapped,Task2 CDC demo schema plus exact Airbyte metadata; review actual replica before adding fields
+jobs,cdc_job_postings,_AIRBYTE_EXTRACTED_AT,mapped,Task2 CDC demo schema plus exact Airbyte metadata; review actual replica before adding fields
+jobs,cdc_job_postings,_AIRBYTE_META,mapped,Task2 CDC demo schema plus exact Airbyte metadata; review actual replica before adding fields
+jobs,cdc_job_postings,_AIRBYTE_GENERATION_ID,mapped,Task2 CDC demo schema plus exact Airbyte metadata; review actual replica before adding fields
+jobs,cdc_application_events,id,mapped,Task2 CDC demo schema plus exact Airbyte metadata; review actual replica before adding fields
+jobs,cdc_application_events,job_id,mapped,Task2 CDC demo schema plus exact Airbyte metadata; review actual replica before adding fields
+jobs,cdc_application_events,event_type,mapped,Task2 CDC demo schema plus exact Airbyte metadata; review actual replica before adding fields
+jobs,cdc_application_events,event_at,mapped,Task2 CDC demo schema plus exact Airbyte metadata; review actual replica before adding fields
+jobs,cdc_application_events,_AB_CDC_LSN,mapped,Task2 CDC demo schema plus exact Airbyte metadata; review actual replica before adding fields
+jobs,cdc_application_events,_AB_CDC_UPDATED_AT,mapped,Task2 CDC demo schema plus exact Airbyte metadata; review actual replica before adding fields
+jobs,cdc_application_events,_AB_CDC_DELETED_AT,mapped,Task2 CDC demo schema plus exact Airbyte metadata; review actual replica before adding fields
+jobs,cdc_application_events,_AB_CDC_CURSOR,mapped,Task2 CDC demo schema plus exact Airbyte metadata; review actual replica before adding fields
+jobs,cdc_application_events,_AIRBYTE_RAW_ID,mapped,Task2 CDC demo schema plus exact Airbyte metadata; review actual replica before adding fields
+jobs,cdc_application_events,_AIRBYTE_EXTRACTED_AT,mapped,Task2 CDC demo schema plus exact Airbyte metadata; review actual replica before adding fields
+jobs,cdc_application_events,_AIRBYTE_META,mapped,Task2 CDC demo schema plus exact Airbyte metadata; review actual replica before adding fields
+jobs,cdc_application_events,_AIRBYTE_GENERATION_ID,mapped,Task2 CDC demo schema plus exact Airbyte metadata; review actual replica before adding fields

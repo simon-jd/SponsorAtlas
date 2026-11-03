@@ -1,0 +1,7 @@
+soc_code,soc_title,soc_level,source_row_number,soc_vintage,major_code,classification_type,source_sha256
+00-0000,All Occupations,total,1,OEWS_May2025,,AGGREGATE_TOTAL,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+21-1018,"Substance Abuse, Behavioral Disorder, and Mental Health Counselors",detailed,313,OEWS_May2025,21-0000,OEWS_SPECIFIC,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+25-2052,"Special Education Teachers, Kindergarten and Elementary School",detailed,411,OEWS_May2025,25-0000,OEWS_SPECIFIC,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+25-9045,"Teaching Assistants, Except Postsecondary",detailed,442,OEWS_May2025,25-0000,OEWS_SPECIFIC,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+51-2028,"Electrical, Electronic, and Electromechanical Assemblers, Except Coil Winders, Tapers, and Finishers",detailed,1153,OEWS_May2025,51-0000,OEWS_SPECIFIC,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+53-1047,"First-Line Supervisors of Transportation and Material Moving Workers, Except Aircraft Cargo Handling Supervisors",detailed,1315,OEWS_May2025,53-0000,OEWS_SPECIFIC,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde

@@ -1,0 +1,2370 @@
+{
+  "kind": "ACTUAL_SNOWFLAKE_SOURCE_REFRESH_EXPERIMENT",
+  "schema": "ANALYTICS.TASK10_P9A",
+  "mutation_protocol": 1,
+  "originating_session": 1423876148310050,
+  "mutations": [
+    {
+      "intent_id": "fc86489a606142ddabcb21a017620a10",
+      "originating_session": 1423876148310050,
+      "statement": "CREATE SCHEMA ANALYTICS.TASK10_P9A COMMENT='Task10:ad8a2425bbd44ec69a5eece6427d5b79'",
+      "query_id": "01c81d84-020a-73aa-0005-0f02000cf03e",
+      "state": "SUCCESS"
+    },
+    {
+      "intent_id": "006fdd913a5c43a299a15c6800e3645c",
+      "originating_session": 1423876148310050,
+      "statement": "CREATE TRANSIENT TABLE ANALYTICS.TASK10_P9A.fact_lca_case CLONE ANALYTICS.MARTS.fact_lca_case",
+      "query_id": "01c81d84-020a-71c1-0005-0f02000c908e",
+      "state": "SUCCESS"
+    },
+    {
+      "intent_id": "d79f98b9a05e4e4d9dcff4fa9793f730",
+      "originating_session": 1423876148310050,
+      "statement": "CREATE TRANSIENT TABLE ANALYTICS.TASK10_P9A.fact_job_posting_daily CLONE ANALYTICS.MARTS.fact_job_posting_daily",
+      "query_id": "01c81d84-020a-71c1-0005-0f02000c9092",
+      "state": "SUCCESS"
+    },
+    {
+      "intent_id": "4a435b39d9184de6af394d3a933e6a73",
+      "originating_session": 1423876148310050,
+      "statement": "CREATE TRANSIENT TABLE ANALYTICS.TASK10_P9A.fact_wage_benchmark CLONE ANALYTICS.MARTS.fact_wage_benchmark",
+      "query_id": "01c81d84-020a-71fa-0005-0f02000ca052",
+      "state": "SUCCESS"
+    },
+    {
+      "intent_id": "4e3c4fe82e7e49a9977ecfcabb12b1e1",
+      "originating_session": 1423876148310050,
+      "statement": "CREATE TRANSIENT TABLE ANALYTICS.TASK10_P9A.dim_occupation CLONE ANALYTICS.MARTS.dim_occupation",
+      "query_id": "01c81d84-020a-71c1-0005-0f02000c9096",
+      "state": "SUCCESS"
+    },
+    {
+      "intent_id": "6e96ef1eab7c4290bc7840337514cbd0",
+      "originating_session": 1423876148310050,
+      "statement": "CREATE TRANSIENT TABLE ANALYTICS.TASK10_P9A.dim_geography CLONE ANALYTICS.MARTS.dim_geography",
+      "query_id": "01c81d84-020a-73aa-0005-0f02000cf042",
+      "state": "SUCCESS"
+    },
+    {
+      "intent_id": "9c688e1e4f8a4947a2bdacd646c1ed23",
+      "originating_session": 1423876148310050,
+      "statement": "CREATE TRANSIENT TABLE ANALYTICS.TASK10_P9A.dim_date CLONE ANALYTICS.MARTS.dim_date",
+      "query_id": "01c81d84-020a-71fa-0005-0f02000ca056",
+      "state": "SUCCESS"
+    },
+    {
+      "intent_id": "1b129e027aa743dab46d628a480e5096",
+      "originating_session": 1423876148310050,
+      "statement": "ALTER SESSION SET USE_CACHED_RESULT=FALSE",
+      "query_id": "01c81d84-020a-71fa-0005-0f02000ca062",
+      "state": "SUCCESS"
+    },
+    {
+      "intent_id": "82f65d559a6f451abb73cf6af1c02df5",
+      "originating_session": 1423876148310050,
+      "statement": "ALTER SESSION SET QUERY_TAG='SponsorAtlas_Task10_P9A_baseline'",
+      "query_id": "01c81d84-020a-73aa-0005-0f02000cf052",
+      "state": "SUCCESS"
+    },
+    {
+      "intent_id": "ce6328d6d6a9471e831514acd9985481",
+      "originating_session": 1423876148310050,
+      "statement": "ALTER TABLE ANALYTICS.TASK10_P9A.fact_lca_case CLUSTER BY (fiscal_year,worksite_state)",
+      "query_id": "01c81d84-020a-71c1-0005-0f02000c90ba",
+      "state": "SUCCESS"
+    },
+    {
+      "intent_id": "804945c76aaa4caf8f7fb73b1c44c7b9",
+      "originating_session": 1423876148310050,
+      "statement": "ALTER TABLE ANALYTICS.TASK10_P9A.fact_lca_case RESUME RECLUSTER",
+      "query_id": "01c81d84-020a-71c1-0005-0f02000c90be",
+      "state": "SUCCESS"
+    },
+    {
+      "intent_id": "d26871a579fd4794a516b6888511771a",
+      "originating_session": 1423876148310050,
+      "statement": "ALTER SESSION SET USE_CACHED_RESULT=FALSE",
+      "query_id": "01c81d84-020a-73aa-0005-0f02000cf06e",
+      "state": "SUCCESS"
+    },
+    {
+      "intent_id": "17124bd9c380440783ca4a56ae811ff4",
+      "originating_session": 1423876148310050,
+      "statement": "ALTER SESSION SET QUERY_TAG='SponsorAtlas_Task10_P9A_clustered'",
+      "query_id": "01c81d84-020a-71c1-0005-0f02000c90c2",
+      "state": "SUCCESS"
+    },
+    {
+      "intent_id": "8dc7eb72c8024184ae98e464e577988f",
+      "originating_session": 1423876148310050,
+      "statement": "ALTER WAREHOUSE SPONSORATLAS_XS SET WAREHOUSE_SIZE='SMALL' WAIT_FOR_COMPLETION=TRUE",
+      "query_id": "01c81d84-020a-71c1-0005-0f02000c90d2",
+      "state": "SUCCESS"
+    },
+    {
+      "intent_id": "68faf365398846fa9c692073f8686772",
+      "originating_session": 1423876148310050,
+      "statement": "ALTER SESSION SET USE_CACHED_RESULT=FALSE",
+      "query_id": "01c81d84-020a-73aa-0005-0f02000cf08e",
+      "state": "SUCCESS"
+    },
+    {
+      "intent_id": "6c6b199a404740df81906c908c21fa81",
+      "originating_session": 1423876148310050,
+      "statement": "ALTER SESSION SET QUERY_TAG='SponsorAtlas_Task10_P9A_small'",
+      "query_id": "01c81d84-020a-71c1-0005-0f02000c90d6",
+      "state": "SUCCESS"
+    },
+    {
+      "intent_id": "b59a5354b8854633a429c4979e163025",
+      "originating_session": 1423876148310050,
+      "statement": "ALTER WAREHOUSE SPONSORATLAS_XS SET WAREHOUSE_SIZE='XSMALL' WAIT_FOR_COMPLETION=TRUE",
+      "query_id": "01c81d84-020a-73aa-0005-0f02000cf0aa",
+      "state": "SUCCESS"
+    },
+    {
+      "intent_id": "d31e96cae95c4cce9f7e24245aac680b",
+      "originating_session": 1423876148310050,
+      "statement": "ALTER SESSION SET USE_CACHED_RESULT=TRUE",
+      "query_id": "01c81d84-020a-71fa-0005-0f02000ca0b2",
+      "state": "SUCCESS"
+    },
+    {
+      "intent_id": "ac1cb4c1e21540a1a368ff1180dae5da",
+      "originating_session": 1423876148310050,
+      "statement": "ALTER SESSION SET QUERY_TAG='SponsorAtlas_Task10_P9A_cache_prime'",
+      "query_id": "01c81d84-020a-71c1-0005-0f02000c90ee",
+      "state": "SUCCESS"
+    },
+    {
+      "intent_id": "fdc10bdadd4f4b5faef0c45917959446",
+      "originating_session": 1423876148310050,
+      "statement": "ALTER SESSION SET USE_CACHED_RESULT=TRUE",
+      "query_id": "01c81d84-020a-73aa-0005-0f02000cf0c6",
+      "state": "SUCCESS"
+    },
+    {
+      "intent_id": "866cb0644c704a8bb83155e46a7ce318",
+      "originating_session": 1423876148310050,
+      "statement": "ALTER SESSION SET QUERY_TAG='SponsorAtlas_Task10_P9A_cache_repeat'",
+      "query_id": "01c81d84-020a-71c1-0005-0f02000c910a",
+      "state": "SUCCESS"
+    },
+    {
+      "intent_id": "e2e6651aba3c48599819d8632eb129a6",
+      "originating_session": 1423876148310050,
+      "statement": "ALTER WAREHOUSE SPONSORATLAS_XS ABORT ALL QUERIES",
+      "query_id": "01c81d84-020a-71fa-0005-0f02000ca0ea",
+      "state": "SUCCESS"
+    },
+    {
+      "intent_id": "e3cf8ccc622c44faacb62c961d500d58",
+      "originating_session": 1423876148310050,
+      "statement": "ALTER TABLE ANALYTICS.TASK10_P9A.fact_lca_case SUSPEND RECLUSTER",
+      "query_id": "01c81d84-020a-71c1-0005-0f02000c9136",
+      "state": "SUCCESS"
+    },
+    {
+      "intent_id": "035b941a05394c4c917c171e6a24bb39",
+      "originating_session": 1423876148310050,
+      "statement": "ALTER TABLE ANALYTICS.TASK10_P9A.fact_lca_case DROP CLUSTERING KEY",
+      "query_id": "01c81d84-020a-71fa-0005-0f02000ca0f2",
+      "state": "SUCCESS"
+    },
+    {
+      "intent_id": "2c6bc076554443bc85d04186b449b4e1",
+      "originating_session": 1423876148310050,
+      "statement": "DROP SCHEMA ANALYTICS.TASK10_P9A",
+      "query_id": "01c81d84-020a-71c1-0005-0f02000c913a",
+      "state": "SUCCESS"
+    },
+    {
+      "intent_id": "ddf99ae515804af38d896121548ca499",
+      "originating_session": 1423876148310050,
+      "statement": "ALTER WAREHOUSE SPONSORATLAS_XS SET WAREHOUSE_SIZE='XSMALL' AUTO_SUSPEND=60",
+      "query_id": "01c81d84-020a-73aa-0005-0f02000cf0e6",
+      "state": "SUCCESS"
+    },
+    {
+      "intent_id": "9836308ca21c46b285ed512f77626a19",
+      "originating_session": 1423876148310050,
+      "statement": "ALTER SESSION SET USE_CACHED_RESULT=TRUE",
+      "query_id": "01c81d84-020a-71fa-0005-0f02000ca0f6",
+      "state": "SUCCESS"
+    },
+    {
+      "intent_id": "6899b501f05b4999b70354a6cc4499f2",
+      "originating_session": 1423876148310050,
+      "statement": "ALTER WAREHOUSE SPONSORATLAS_XS SUSPEND",
+      "query_id": "01c81d84-020a-71c1-0005-0f02000c913e",
+      "state": "SUCCESS"
+    }
+  ],
+  "owner_token": "ad8a2425bbd44ec69a5eece6427d5b79",
+  "started_at_utc": "2026-11-01T07:32:00Z",
+  "samples": [
+    {
+      "phase": "baseline",
+      "elapsed_seconds": 0.5094670348335057,
+      "measured_at_utc": "2026-11-01T07:32:17Z",
+      "query_tag": "SponsorAtlas_Task10_P9A_baseline",
+      "query_ids": [
+        "01c81d84-020a-71fa-0005-0f02000ca066",
+        "01c81d84-020a-71fa-0005-0f02000ca06a",
+        "01c81d84-020a-73aa-0005-0f02000cf056"
+      ],
+      "result_sha256": "070100a64fe873c1d84fa1dc71415ba20a467260954d82399e04c90f64109137",
+      "use_cached_result": false,
+      "credits": null,
+      "credits_status": "INCOMPLETE_DELAY_OR_SHORT_QUERY",
+      "persisted_result_hit": "UNKNOWN",
+      "warehouse": "X-Small",
+      "cube": {
+        "kind": "ACTUAL_SNOWFLAKE_CUBE_REFRESH",
+        "revision": "3cbd315901ad2be50522c7740790acba",
+        "elapsed_seconds": 6.402,
+        "results": [
+          {
+            "data": [
+              {
+                "lca.fiscal_year": "2025",
+                "lca.case_count": "594821",
+                "lca.certified_rate": "0.977418416632903"
+              },
+              {
+                "lca.fiscal_year": "2024",
+                "lca.case_count": "118646",
+                "lca.certified_rate": "0.9795863324511572"
+              }
+            ],
+            "usedPreAggregations": {
+              "semantic_preagg.lca_counts": {
+                "preAggregationId": "lca.counts",
+                "lastUpdatedAt": 1793518343000,
+                "type": "rollup"
+              }
+            }
+          },
+          {
+            "data": [
+              {
+                "lca.wage_p50": "120000.00000",
+                "lca.wage_p75": "156383.63000",
+                "lca.wage_p90": "200000.00000"
+              }
+            ]
+          },
+          {
+            "data": [
+              {
+                "postings.count": "86"
+              }
+            ],
+            "usedPreAggregations": {
+              "semantic_preagg.postings_counts": {
+                "preAggregationId": "postings.counts",
+                "lastUpdatedAt": 1793518344000,
+                "type": "rollup"
+              }
+            }
+          },
+          {
+            "data": [
+              {
+                "wages.oews_median": "135980.00"
+              }
+            ]
+          }
+        ],
+        "query_ids": [
+          "01c81d84-020a-71c1-0005-0f02000c90a2",
+          "01c81d84-020a-71fa-0005-0f02000ca06e",
+          "01c81d84-020a-73aa-0005-0f02000cf05e",
+          "01c81d84-020a-71c1-0005-0f02000c90a6",
+          "01c81d84-020a-71c1-0005-0f02000c90aa",
+          "01c81d84-020a-71fa-0005-0f02000ca072",
+          "01c81d84-020a-73aa-0005-0f02000cf062",
+          "01c81d84-020a-71c1-0005-0f02000c90ae",
+          "01c81d84-020a-71fa-0005-0f02000ca076",
+          "01c81d84-020a-71fa-0005-0f02000ca07a",
+          "01c81d84-020a-71c1-0005-0f02000c90b2",
+          "01c81d84-020a-71c1-0005-0f02000c90b6",
+          "01c81d84-020a-73aa-0005-0f02000cf066"
+        ],
+        "query_tag": "SponsorAtlas_Task10_P9A_baseline_cube",
+        "warehouse": {
+          "name": "SPONSORATLAS_XS",
+          "size": "X-Small",
+          "auto_suspend": 60
+        },
+        "use_cached_result": false,
+        "persisted_result_hit": "UNKNOWN",
+        "result_sha256": "25648a95c41a2ebf07b10080c5a8c3d4ae17796433d319bbb77e9f8587a3e743",
+        "closed_file_physical_tables": [
+          {
+            "name": "lca_counts_pw4zihpg_1ets0wr1_1ledqo7",
+            "rows": [
+              {
+                "lca__fiscal_year": 2025,
+                "lca__case_count": 594821,
+                "lca__certified_count": 581389
+              },
+              {
+                "lca__fiscal_year": 2024,
+                "lca__case_count": 118646,
+                "lca__certified_count": 116224
+              }
+            ]
+          },
+          {
+            "name": "postings_counts_vwxgcgm2_w1shd1w1_1ledqo8",
+            "rows": [
+              {
+                "postings__fiscal_year": 2027,
+                "postings__count": 86
+              }
+            ]
+          }
+        ],
+        "rest_elapsed_seconds": 6.275,
+        "maxRSS_KiB": 705412,
+        "credits": null,
+        "credits_status": "INCOMPLETE_DELAY_OR_SHORT_QUERY",
+        "query_profile": {
+          "kind": "ACTUAL_SNOWFLAKE_QUERY_HISTORY",
+          "rank_by": "credits_attributed_compute DESC NULLS LAST, query_id",
+          "queries": [
+            {
+              "query_id": "01c81d84-020a-71c1-0005-0f02000c90b2",
+              "query_hash": "7951f8e3dc7357f66f326ae5f902cfda",
+              "execution_status": "SUCCESS",
+              "credits_attributed_compute": 0.0,
+              "credits_used_query_acceleration": null,
+              "attribution_status": "AVAILABLE",
+              "elapsed_ms": 372,
+              "execution_ms": 67,
+              "partitions_scanned": 10,
+              "partitions_total": 10,
+              "bytes_scanned": 4923904,
+              "bytes_read_from_result": 0,
+              "warehouse_cache_fraction": 1.0,
+              "cloud_services_unadjusted_credits": 4.8e-05
+            },
+            {
+              "query_id": "01c81d84-020a-71c1-0005-0f02000c90b6",
+              "query_hash": "6c19c734848298393d49e62d647b213d",
+              "execution_status": "SUCCESS",
+              "credits_attributed_compute": 0.0,
+              "credits_used_query_acceleration": null,
+              "attribution_status": "AVAILABLE",
+              "elapsed_ms": 410,
+              "execution_ms": 25,
+              "partitions_scanned": 2,
+              "partitions_total": 3,
+              "bytes_scanned": 59904,
+              "bytes_read_from_result": 0,
+              "warehouse_cache_fraction": 1.0,
+              "cloud_services_unadjusted_credits": 6e-05
+            },
+            {
+              "query_id": "01c81d84-020a-71fa-0005-0f02000ca07a",
+              "query_hash": "65a056ad27076f63c6b8eaa7bdf919d4",
+              "execution_status": "SUCCESS",
+              "credits_attributed_compute": 0.0,
+              "credits_used_query_acceleration": null,
+              "attribution_status": "AVAILABLE",
+              "elapsed_ms": 509,
+              "execution_ms": 60,
+              "partitions_scanned": 10,
+              "partitions_total": 10,
+              "bytes_scanned": 6611456,
+              "bytes_read_from_result": 0,
+              "warehouse_cache_fraction": 1.0,
+              "cloud_services_unadjusted_credits": 6.9e-05
+            },
+            {
+              "query_id": "01c81d84-020a-73aa-0005-0f02000cf066",
+              "query_hash": "a1213b29eeffc45ef71a4c1553596142",
+              "execution_status": "SUCCESS",
+              "credits_attributed_compute": 0.0,
+              "credits_used_query_acceleration": null,
+              "attribution_status": "AVAILABLE",
+              "elapsed_ms": 330,
+              "execution_ms": 46,
+              "partitions_scanned": 10,
+              "partitions_total": 10,
+              "bytes_scanned": 2523648,
+              "bytes_read_from_result": 0,
+              "warehouse_cache_fraction": 1.0,
+              "cloud_services_unadjusted_credits": 4.4e-05
+            },
+            {
+              "query_id": "01c81d84-020a-71c1-0005-0f02000c90a2",
+              "query_hash": "de9e9374b09cd8bdc58e8558e04243f2",
+              "execution_status": "SUCCESS",
+              "credits_attributed_compute": null,
+              "credits_used_query_acceleration": null,
+              "attribution_status": "MISSING_DELAY_OR_SHORT_QUERY",
+              "elapsed_ms": 58,
+              "execution_ms": 15,
+              "partitions_scanned": 0,
+              "partitions_total": 0,
+              "bytes_scanned": 0,
+              "bytes_read_from_result": 0,
+              "warehouse_cache_fraction": 0.0,
+              "cloud_services_unadjusted_credits": 9e-06
+            },
+            {
+              "query_id": "01c81d84-020a-71c1-0005-0f02000c90a6",
+              "query_hash": "0f9db94df93ee5cca33e6f3f59f3abef",
+              "execution_status": "SUCCESS",
+              "credits_attributed_compute": null,
+              "credits_used_query_acceleration": null,
+              "attribution_status": "MISSING_DELAY_OR_SHORT_QUERY",
+              "elapsed_ms": 49,
+              "execution_ms": 13,
+              "partitions_scanned": 0,
+              "partitions_total": 0,
+              "bytes_scanned": 0,
+              "bytes_read_from_result": 0,
+              "warehouse_cache_fraction": 0.0,
+              "cloud_services_unadjusted_credits": 7e-06
+            },
+            {
+              "query_id": "01c81d84-020a-71c1-0005-0f02000c90aa",
+              "query_hash": "632baa3e8d1a66edc5788d6b7a8b120b",
+              "execution_status": "SUCCESS",
+              "credits_attributed_compute": null,
+              "credits_used_query_acceleration": null,
+              "attribution_status": "MISSING_DELAY_OR_SHORT_QUERY",
+              "elapsed_ms": 30,
+              "execution_ms": 1,
+              "partitions_scanned": 0,
+              "partitions_total": 0,
+              "bytes_scanned": 0,
+              "bytes_read_from_result": 0,
+              "warehouse_cache_fraction": 0.0,
+              "cloud_services_unadjusted_credits": 4e-06
+            },
+            {
+              "query_id": "01c81d84-020a-71c1-0005-0f02000c90ae",
+              "query_hash": "c71fb0f0a4c05485e3913c04bb8fbf32",
+              "execution_status": "SUCCESS",
+              "credits_attributed_compute": null,
+              "credits_used_query_acceleration": null,
+              "attribution_status": "MISSING_DELAY_OR_SHORT_QUERY",
+              "elapsed_ms": 83,
+              "execution_ms": 54,
+              "partitions_scanned": 0,
+              "partitions_total": 0,
+              "bytes_scanned": 0,
+              "bytes_read_from_result": 0,
+              "warehouse_cache_fraction": 0.0,
+              "cloud_services_unadjusted_credits": 1.3e-05
+            },
+            {
+              "query_id": "01c81d84-020a-71fa-0005-0f02000ca06e",
+              "query_hash": "847c7c064c75828fa29ce281e8163fee",
+              "execution_status": "SUCCESS",
+              "credits_attributed_compute": null,
+              "credits_used_query_acceleration": null,
+              "attribution_status": "MISSING_DELAY_OR_SHORT_QUERY",
+              "elapsed_ms": 125,
+              "execution_ms": 6,
+              "partitions_scanned": 0,
+              "partitions_total": 0,
+              "bytes_scanned": 0,
+              "bytes_read_from_result": 0,
+              "warehouse_cache_fraction": 0.0,
+              "cloud_services_unadjusted_credits": 1.9e-05
+            },
+            {
+              "query_id": "01c81d84-020a-71fa-0005-0f02000ca072",
+              "query_hash": "c71fb0f0a4c05485e3913c04bb8fbf32",
+              "execution_status": "SUCCESS",
+              "credits_attributed_compute": null,
+              "credits_used_query_acceleration": null,
+              "attribution_status": "MISSING_DELAY_OR_SHORT_QUERY",
+              "elapsed_ms": 126,
+              "execution_ms": 87,
+              "partitions_scanned": 0,
+              "partitions_total": 0,
+              "bytes_scanned": 0,
+              "bytes_read_from_result": 0,
+              "warehouse_cache_fraction": 0.0,
+              "cloud_services_unadjusted_credits": 1.9e-05
+            },
+            {
+              "query_id": "01c81d84-020a-71fa-0005-0f02000ca076",
+              "query_hash": "af88445c4c31ac1daa1005791450c41c",
+              "execution_status": "SUCCESS",
+              "credits_attributed_compute": null,
+              "credits_used_query_acceleration": null,
+              "attribution_status": "MISSING_DELAY_OR_SHORT_QUERY",
+              "elapsed_ms": 41,
+              "execution_ms": 2,
+              "partitions_scanned": 0,
+              "partitions_total": 0,
+              "bytes_scanned": 0,
+              "bytes_read_from_result": 0,
+              "warehouse_cache_fraction": 0.0,
+              "cloud_services_unadjusted_credits": 6e-06
+            },
+            {
+              "query_id": "01c81d84-020a-73aa-0005-0f02000cf05e",
+              "query_hash": "d88083e7e95c163578298e506c250f6a",
+              "execution_status": "SUCCESS",
+              "credits_attributed_compute": null,
+              "credits_used_query_acceleration": null,
+              "attribution_status": "MISSING_DELAY_OR_SHORT_QUERY",
+              "elapsed_ms": 55,
+              "execution_ms": 14,
+              "partitions_scanned": 0,
+              "partitions_total": 0,
+              "bytes_scanned": 0,
+              "bytes_read_from_result": 0,
+              "warehouse_cache_fraction": 0.0,
+              "cloud_services_unadjusted_credits": 8e-06
+            },
+            {
+              "query_id": "01c81d84-020a-73aa-0005-0f02000cf062",
+              "query_hash": "632baa3e8d1a66edc5788d6b7a8b120b",
+              "execution_status": "SUCCESS",
+              "credits_attributed_compute": null,
+              "credits_used_query_acceleration": null,
+              "attribution_status": "MISSING_DELAY_OR_SHORT_QUERY",
+              "elapsed_ms": 30,
+              "execution_ms": 1,
+              "partitions_scanned": 0,
+              "partitions_total": 0,
+              "bytes_scanned": 0,
+              "bytes_read_from_result": 0,
+              "warehouse_cache_fraction": 0.0,
+              "cloud_services_unadjusted_credits": 4e-06
+            }
+          ],
+          "input_queries": 13,
+          "missing_attribution": 9,
+          "cost_scope": "query compute only; idle, cloud services, storage and clustering separate",
+          "attribution_latency_hours": 8,
+          "result_cache_hit": "UNKNOWN: missing attribution or fast execution is not proof"
+        }
+      },
+      "query_profile": {
+        "kind": "ACTUAL_SNOWFLAKE_QUERY_HISTORY",
+        "rank_by": "credits_attributed_compute DESC NULLS LAST, query_id",
+        "queries": [
+          {
+            "query_id": "01c81d84-020a-71fa-0005-0f02000ca066",
+            "query_hash": "7c29ce885d9d9b19ae76ca338878bae7",
+            "execution_status": "SUCCESS",
+            "credits_attributed_compute": 0.0,
+            "credits_used_query_acceleration": null,
+            "attribution_status": "AVAILABLE",
+            "elapsed_ms": 212,
+            "execution_ms": 47,
+            "partitions_scanned": 8,
+            "partitions_total": 8,
+            "bytes_scanned": 3309568,
+            "bytes_read_from_result": 0,
+            "warehouse_cache_fraction": 1.0,
+            "cloud_services_unadjusted_credits": 2.8e-05
+          },
+          {
+            "query_id": "01c81d84-020a-73aa-0005-0f02000cf056",
+            "query_hash": "082257bedb3ee77e2ae50d767f4b3587",
+            "execution_status": "SUCCESS",
+            "credits_attributed_compute": 0.0,
+            "credits_used_query_acceleration": null,
+            "attribution_status": "AVAILABLE",
+            "elapsed_ms": 65,
+            "execution_ms": 17,
+            "partitions_scanned": 8,
+            "partitions_total": 8,
+            "bytes_scanned": 1736704,
+            "bytes_read_from_result": 0,
+            "warehouse_cache_fraction": 1.0,
+            "cloud_services_unadjusted_credits": 7e-06
+          },
+          {
+            "query_id": "01c81d84-020a-71fa-0005-0f02000ca06a",
+            "query_hash": "122f772244ece37720618dd06b50d03e",
+            "execution_status": "SUCCESS",
+            "credits_attributed_compute": null,
+            "credits_used_query_acceleration": null,
+            "attribution_status": "MISSING_DELAY_OR_SHORT_QUERY",
+            "elapsed_ms": 34,
+            "execution_ms": 2,
+            "partitions_scanned": 0,
+            "partitions_total": 0,
+            "bytes_scanned": 0,
+            "bytes_read_from_result": 0,
+            "warehouse_cache_fraction": 0.0,
+            "cloud_services_unadjusted_credits": 5e-06
+          }
+        ],
+        "input_queries": 3,
+        "missing_attribution": 1,
+        "cost_scope": "query compute only; idle, cloud services, storage and clustering separate",
+        "attribution_latency_hours": 8,
+        "result_cache_hit": "UNKNOWN: missing attribution or fast execution is not proof"
+      }
+    },
+    {
+      "phase": "clustered",
+      "elapsed_seconds": 0.3778339410200715,
+      "measured_at_utc": "2026-11-01T07:32:27Z",
+      "query_tag": "SponsorAtlas_Task10_P9A_clustered",
+      "query_ids": [
+        "01c81d84-020a-73aa-0005-0f02000cf072",
+        "01c81d84-020a-71fa-0005-0f02000ca07e",
+        "01c81d84-020a-73aa-0005-0f02000cf076"
+      ],
+      "result_sha256": "070100a64fe873c1d84fa1dc71415ba20a467260954d82399e04c90f64109137",
+      "use_cached_result": false,
+      "credits": null,
+      "credits_status": "INCOMPLETE_DELAY_OR_SHORT_QUERY",
+      "persisted_result_hit": "UNKNOWN",
+      "warehouse": "X-Small",
+      "cube": {
+        "kind": "ACTUAL_SNOWFLAKE_CUBE_REFRESH",
+        "revision": "f41b9bf1ae613a24fb7e28fe50ead458",
+        "elapsed_seconds": 4.507,
+        "results": [
+          {
+            "data": [
+              {
+                "lca.fiscal_year": "2025",
+                "lca.case_count": "594821",
+                "lca.certified_rate": "0.977418416632903"
+              },
+              {
+                "lca.fiscal_year": "2024",
+                "lca.case_count": "118646",
+                "lca.certified_rate": "0.9795863324511572"
+              }
+            ],
+            "usedPreAggregations": {
+              "semantic_preagg.lca_counts": {
+                "preAggregationId": "lca.counts",
+                "lastUpdatedAt": 1793518351000,
+                "type": "rollup"
+              }
+            }
+          },
+          {
+            "data": [
+              {
+                "lca.wage_p50": "120000.00000",
+                "lca.wage_p75": "156383.63000",
+                "lca.wage_p90": "200000.00000"
+              }
+            ]
+          },
+          {
+            "data": [
+              {
+                "postings.count": "86"
+              }
+            ],
+            "usedPreAggregations": {
+              "semantic_preagg.postings_counts": {
+                "preAggregationId": "postings.counts",
+                "lastUpdatedAt": 1793518352000,
+                "type": "rollup"
+              }
+            }
+          },
+          {
+            "data": [
+              {
+                "wages.oews_median": "135980.00"
+              }
+            ]
+          }
+        ],
+        "query_ids": [
+          "01c81d84-020a-71fa-0005-0f02000ca086",
+          "01c81d84-020a-73aa-0005-0f02000cf07a",
+          "01c81d84-020a-71fa-0005-0f02000ca08a",
+          "01c81d84-020a-73aa-0005-0f02000cf07e",
+          "01c81d84-020a-71c1-0005-0f02000c90c6",
+          "01c81d84-020a-73aa-0005-0f02000cf082",
+          "01c81d84-020a-73aa-0005-0f02000cf086",
+          "01c81d84-020a-71c1-0005-0f02000c90ca",
+          "01c81d84-020a-71fa-0005-0f02000ca08e",
+          "01c81d84-020a-71fa-0005-0f02000ca092",
+          "01c81d84-020a-73aa-0005-0f02000cf08a",
+          "01c81d84-020a-71c1-0005-0f02000c90ce",
+          "01c81d84-020a-71fa-0005-0f02000ca096"
+        ],
+        "query_tag": "SponsorAtlas_Task10_P9A_clustered_cube",
+        "warehouse": {
+          "name": "SPONSORATLAS_XS",
+          "size": "X-Small",
+          "auto_suspend": 60
+        },
+        "use_cached_result": false,
+        "persisted_result_hit": "UNKNOWN",
+        "result_sha256": "25648a95c41a2ebf07b10080c5a8c3d4ae17796433d319bbb77e9f8587a3e743",
+        "closed_file_physical_tables": [
+          {
+            "name": "lca_counts_zl3dj4py_1ets0wr1_1ledqof",
+            "rows": [
+              {
+                "lca__fiscal_year": 2025,
+                "lca__case_count": 594821,
+                "lca__certified_count": 581389
+              },
+              {
+                "lca__fiscal_year": 2024,
+                "lca__case_count": 118646,
+                "lca__certified_count": 116224
+              }
+            ]
+          },
+          {
+            "name": "postings_counts_ocyem4xh_w1shd1w1_1ledqog",
+            "rows": [
+              {
+                "postings__fiscal_year": 2027,
+                "postings__count": 86
+              }
+            ]
+          }
+        ],
+        "rest_elapsed_seconds": 4.375,
+        "maxRSS_KiB": 695540,
+        "credits": null,
+        "credits_status": "INCOMPLETE_DELAY_OR_SHORT_QUERY",
+        "query_profile": {
+          "kind": "ACTUAL_SNOWFLAKE_QUERY_HISTORY",
+          "rank_by": "credits_attributed_compute DESC NULLS LAST, query_id",
+          "queries": [
+            {
+              "query_id": "01c81d84-020a-71c1-0005-0f02000c90ce",
+              "query_hash": "6c19c734848298393d49e62d647b213d",
+              "execution_status": "SUCCESS",
+              "credits_attributed_compute": 0.0,
+              "credits_used_query_acceleration": null,
+              "attribution_status": "AVAILABLE",
+              "elapsed_ms": 108,
+              "execution_ms": 27,
+              "partitions_scanned": 2,
+              "partitions_total": 3,
+              "bytes_scanned": 59904,
+              "bytes_read_from_result": 0,
+              "warehouse_cache_fraction": 1.0,
+              "cloud_services_unadjusted_credits": 1.3e-05
+            },
+            {
+              "query_id": "01c81d84-020a-71fa-0005-0f02000ca092",
+              "query_hash": "65a056ad27076f63c6b8eaa7bdf919d4",
+              "execution_status": "SUCCESS",
+              "credits_attributed_compute": 0.0,
+              "credits_used_query_acceleration": null,
+              "attribution_status": "AVAILABLE",
+              "elapsed_ms": 418,
+              "execution_ms": 59,
+              "partitions_scanned": 10,
+              "partitions_total": 10,
+              "bytes_scanned": 6611456,
+              "bytes_read_from_result": 0,
+              "warehouse_cache_fraction": 1.0,
+              "cloud_services_unadjusted_credits": 5.6e-05
+            },
+            {
+              "query_id": "01c81d84-020a-71fa-0005-0f02000ca096",
+              "query_hash": "a1213b29eeffc45ef71a4c1553596142",
+              "execution_status": "SUCCESS",
+              "credits_attributed_compute": 0.0,
+              "credits_used_query_acceleration": null,
+              "attribution_status": "AVAILABLE",
+              "elapsed_ms": 329,
+              "execution_ms": 44,
+              "partitions_scanned": 10,
+              "partitions_total": 10,
+              "bytes_scanned": 2523648,
+              "bytes_read_from_result": 0,
+              "warehouse_cache_fraction": 1.0,
+              "cloud_services_unadjusted_credits": 4.4e-05
+            },
+            {
+              "query_id": "01c81d84-020a-73aa-0005-0f02000cf08a",
+              "query_hash": "7951f8e3dc7357f66f326ae5f902cfda",
+              "execution_status": "SUCCESS",
+              "credits_attributed_compute": 0.0,
+              "credits_used_query_acceleration": null,
+              "attribution_status": "AVAILABLE",
+              "elapsed_ms": 150,
+              "execution_ms": 53,
+              "partitions_scanned": 10,
+              "partitions_total": 10,
+              "bytes_scanned": 4923904,
+              "bytes_read_from_result": 0,
+              "warehouse_cache_fraction": 1.0,
+              "cloud_services_unadjusted_credits": 1.5e-05
+            },
+            {
+              "query_id": "01c81d84-020a-71c1-0005-0f02000c90c6",
+              "query_hash": "632baa3e8d1a66edc5788d6b7a8b120b",
+              "execution_status": "SUCCESS",
+              "credits_attributed_compute": null,
+              "credits_used_query_acceleration": null,
+              "attribution_status": "MISSING_DELAY_OR_SHORT_QUERY",
+              "elapsed_ms": 37,
+              "execution_ms": 1,
+              "partitions_scanned": 0,
+              "partitions_total": 0,
+              "bytes_scanned": 0,
+              "bytes_read_from_result": 0,
+              "warehouse_cache_fraction": 0.0,
+              "cloud_services_unadjusted_credits": 6e-06
+            },
+            {
+              "query_id": "01c81d84-020a-71c1-0005-0f02000c90ca",
+              "query_hash": "c71fb0f0a4c05485e3913c04bb8fbf32",
+              "execution_status": "SUCCESS",
+              "credits_attributed_compute": null,
+              "credits_used_query_acceleration": null,
+              "attribution_status": "MISSING_DELAY_OR_SHORT_QUERY",
+              "elapsed_ms": 63,
+              "execution_ms": 34,
+              "partitions_scanned": 0,
+              "partitions_total": 0,
+              "bytes_scanned": 0,
+              "bytes_read_from_result": 0,
+              "warehouse_cache_fraction": 0.0,
+              "cloud_services_unadjusted_credits": 9e-06
+            },
+            {
+              "query_id": "01c81d84-020a-71fa-0005-0f02000ca086",
+              "query_hash": "de9e9374b09cd8bdc58e8558e04243f2",
+              "execution_status": "SUCCESS",
+              "credits_attributed_compute": null,
+              "credits_used_query_acceleration": null,
+              "attribution_status": "MISSING_DELAY_OR_SHORT_QUERY",
+              "elapsed_ms": 58,
+              "execution_ms": 17,
+              "partitions_scanned": 0,
+              "partitions_total": 0,
+              "bytes_scanned": 0,
+              "bytes_read_from_result": 0,
+              "warehouse_cache_fraction": 0.0,
+              "cloud_services_unadjusted_credits": 9e-06
+            },
+            {
+              "query_id": "01c81d84-020a-71fa-0005-0f02000ca08a",
+              "query_hash": "d88083e7e95c163578298e506c250f6a",
+              "execution_status": "SUCCESS",
+              "credits_attributed_compute": null,
+              "credits_used_query_acceleration": null,
+              "attribution_status": "MISSING_DELAY_OR_SHORT_QUERY",
+              "elapsed_ms": 81,
+              "execution_ms": 34,
+              "partitions_scanned": 0,
+              "partitions_total": 0,
+              "bytes_scanned": 0,
+              "bytes_read_from_result": 0,
+              "warehouse_cache_fraction": 0.0,
+              "cloud_services_unadjusted_credits": 1.2e-05
+            },
+            {
+              "query_id": "01c81d84-020a-71fa-0005-0f02000ca08e",
+              "query_hash": "bc4b8b08448e30cc21f3d56488df35bb",
+              "execution_status": "SUCCESS",
+              "credits_attributed_compute": null,
+              "credits_used_query_acceleration": null,
+              "attribution_status": "MISSING_DELAY_OR_SHORT_QUERY",
+              "elapsed_ms": 33,
+              "execution_ms": 1,
+              "partitions_scanned": 0,
+              "partitions_total": 0,
+              "bytes_scanned": 0,
+              "bytes_read_from_result": 0,
+              "warehouse_cache_fraction": 0.0,
+              "cloud_services_unadjusted_credits": 5e-06
+            },
+            {
+              "query_id": "01c81d84-020a-73aa-0005-0f02000cf07a",
+              "query_hash": "847c7c064c75828fa29ce281e8163fee",
+              "execution_status": "SUCCESS",
+              "credits_attributed_compute": null,
+              "credits_used_query_acceleration": null,
+              "attribution_status": "MISSING_DELAY_OR_SHORT_QUERY",
+              "elapsed_ms": 40,
+              "execution_ms": 4,
+              "partitions_scanned": 0,
+              "partitions_total": 0,
+              "bytes_scanned": 0,
+              "bytes_read_from_result": 0,
+              "warehouse_cache_fraction": 0.0,
+              "cloud_services_unadjusted_credits": 6e-06
+            },
+            {
+              "query_id": "01c81d84-020a-73aa-0005-0f02000cf07e",
+              "query_hash": "0f9db94df93ee5cca33e6f3f59f3abef",
+              "execution_status": "SUCCESS",
+              "credits_attributed_compute": null,
+              "credits_used_query_acceleration": null,
+              "attribution_status": "MISSING_DELAY_OR_SHORT_QUERY",
+              "elapsed_ms": 57,
+              "execution_ms": 24,
+              "partitions_scanned": 0,
+              "partitions_total": 0,
+              "bytes_scanned": 0,
+              "bytes_read_from_result": 0,
+              "warehouse_cache_fraction": 0.0,
+              "cloud_services_unadjusted_credits": 9e-06
+            },
+            {
+              "query_id": "01c81d84-020a-73aa-0005-0f02000cf082",
+              "query_hash": "c71fb0f0a4c05485e3913c04bb8fbf32",
+              "execution_status": "SUCCESS",
+              "credits_attributed_compute": null,
+              "credits_used_query_acceleration": null,
+              "attribution_status": "MISSING_DELAY_OR_SHORT_QUERY",
+              "elapsed_ms": 66,
+              "execution_ms": 32,
+              "partitions_scanned": 0,
+              "partitions_total": 0,
+              "bytes_scanned": 0,
+              "bytes_read_from_result": 0,
+              "warehouse_cache_fraction": 0.0,
+              "cloud_services_unadjusted_credits": 1e-05
+            },
+            {
+              "query_id": "01c81d84-020a-73aa-0005-0f02000cf086",
+              "query_hash": "632baa3e8d1a66edc5788d6b7a8b120b",
+              "execution_status": "SUCCESS",
+              "credits_attributed_compute": null,
+              "credits_used_query_acceleration": null,
+              "attribution_status": "MISSING_DELAY_OR_SHORT_QUERY",
+              "elapsed_ms": 37,
+              "execution_ms": 1,
+              "partitions_scanned": 0,
+              "partitions_total": 0,
+              "bytes_scanned": 0,
+              "bytes_read_from_result": 0,
+              "warehouse_cache_fraction": 0.0,
+              "cloud_services_unadjusted_credits": 6e-06
+            }
+          ],
+          "input_queries": 13,
+          "missing_attribution": 9,
+          "cost_scope": "query compute only; idle, cloud services, storage and clustering separate",
+          "attribution_latency_hours": 8,
+          "result_cache_hit": "UNKNOWN: missing attribution or fast execution is not proof"
+        }
+      },
+      "query_profile": {
+        "kind": "ACTUAL_SNOWFLAKE_QUERY_HISTORY",
+        "rank_by": "credits_attributed_compute DESC NULLS LAST, query_id",
+        "queries": [
+          {
+            "query_id": "01c81d84-020a-73aa-0005-0f02000cf072",
+            "query_hash": "7c29ce885d9d9b19ae76ca338878bae7",
+            "execution_status": "SUCCESS",
+            "credits_attributed_compute": 0.0,
+            "credits_used_query_acceleration": null,
+            "attribution_status": "AVAILABLE",
+            "elapsed_ms": 115,
+            "execution_ms": 40,
+            "partitions_scanned": 8,
+            "partitions_total": 8,
+            "bytes_scanned": 3309568,
+            "bytes_read_from_result": 0,
+            "warehouse_cache_fraction": 1.0,
+            "cloud_services_unadjusted_credits": 1.2e-05
+          },
+          {
+            "query_id": "01c81d84-020a-73aa-0005-0f02000cf076",
+            "query_hash": "082257bedb3ee77e2ae50d767f4b3587",
+            "execution_status": "SUCCESS",
+            "credits_attributed_compute": 0.0,
+            "credits_used_query_acceleration": null,
+            "attribution_status": "AVAILABLE",
+            "elapsed_ms": 55,
+            "execution_ms": 17,
+            "partitions_scanned": 8,
+            "partitions_total": 8,
+            "bytes_scanned": 1736704,
+            "bytes_read_from_result": 0,
+            "warehouse_cache_fraction": 1.0,
+            "cloud_services_unadjusted_credits": 6e-06
+          },
+          {
+            "query_id": "01c81d84-020a-71fa-0005-0f02000ca07e",
+            "query_hash": "122f772244ece37720618dd06b50d03e",
+            "execution_status": "SUCCESS",
+            "credits_attributed_compute": null,
+            "credits_used_query_acceleration": null,
+            "attribution_status": "MISSING_DELAY_OR_SHORT_QUERY",
+            "elapsed_ms": 72,
+            "execution_ms": 2,
+            "partitions_scanned": 0,
+            "partitions_total": 0,
+            "bytes_scanned": 0,
+            "bytes_read_from_result": 0,
+            "warehouse_cache_fraction": 0.0,
+            "cloud_services_unadjusted_credits": 1.1e-05
+          }
+        ],
+        "input_queries": 3,
+        "missing_attribution": 1,
+        "cost_scope": "query compute only; idle, cloud services, storage and clustering separate",
+        "attribution_latency_hours": 8,
+        "result_cache_hit": "UNKNOWN: missing attribution or fast execution is not proof"
+      }
+    },
+    {
+      "phase": "small",
+      "elapsed_seconds": 1.3168258529622108,
+      "measured_at_utc": "2026-11-01T07:32:36Z",
+      "query_tag": "SponsorAtlas_Task10_P9A_small",
+      "query_ids": [
+        "01c81d84-020a-73aa-0005-0f02000cf092",
+        "01c81d84-020a-73aa-0005-0f02000cf096",
+        "01c81d84-020a-71c1-0005-0f02000c90da"
+      ],
+      "result_sha256": "070100a64fe873c1d84fa1dc71415ba20a467260954d82399e04c90f64109137",
+      "use_cached_result": false,
+      "credits": null,
+      "credits_status": "INCOMPLETE_DELAY_OR_SHORT_QUERY",
+      "persisted_result_hit": "UNKNOWN",
+      "warehouse": "Small",
+      "cube": {
+        "kind": "ACTUAL_SNOWFLAKE_CUBE_REFRESH",
+        "revision": "2184bf93b37c35f7f873306756ec5e62",
+        "elapsed_seconds": 5.34,
+        "results": [
+          {
+            "data": [
+              {
+                "lca.fiscal_year": "2025",
+                "lca.case_count": "594821",
+                "lca.certified_rate": "0.977418416632903"
+              },
+              {
+                "lca.fiscal_year": "2024",
+                "lca.case_count": "118646",
+                "lca.certified_rate": "0.9795863324511572"
+              }
+            ],
+            "usedPreAggregations": {
+              "semantic_preagg.lca_counts": {
+                "preAggregationId": "lca.counts",
+                "lastUpdatedAt": 1793518360000,
+                "type": "rollup"
+              }
+            }
+          },
+          {
+            "data": [
+              {
+                "lca.wage_p50": "120000.00000",
+                "lca.wage_p75": "156383.63000",
+                "lca.wage_p90": "200000.00000"
+              }
+            ]
+          },
+          {
+            "data": [
+              {
+                "postings.count": "86"
+              }
+            ],
+            "usedPreAggregations": {
+              "semantic_preagg.postings_counts": {
+                "preAggregationId": "postings.counts",
+                "lastUpdatedAt": 1793518361000,
+                "type": "rollup"
+              }
+            }
+          },
+          {
+            "data": [
+              {
+                "wages.oews_median": "135980.00"
+              }
+            ]
+          }
+        ],
+        "query_ids": [
+          "01c81d84-020a-71fa-0005-0f02000ca09a",
+          "01c81d84-020a-71c1-0005-0f02000c90de",
+          "01c81d84-020a-73aa-0005-0f02000cf09e",
+          "01c81d84-020a-71c1-0005-0f02000c90e2",
+          "01c81d84-020a-73aa-0005-0f02000cf0a2",
+          "01c81d84-020a-71fa-0005-0f02000ca09e",
+          "01c81d84-020a-71c1-0005-0f02000c90e6",
+          "01c81d84-020a-71c1-0005-0f02000c90ea",
+          "01c81d84-020a-71fa-0005-0f02000ca0a2",
+          "01c81d84-020a-71fa-0005-0f02000ca0a6",
+          "01c81d84-020a-71fa-0005-0f02000ca0aa",
+          "01c81d84-020a-71fa-0005-0f02000ca0ae",
+          "01c81d84-020a-73aa-0005-0f02000cf0a6"
+        ],
+        "query_tag": "SponsorAtlas_Task10_P9A_small_cube",
+        "warehouse": {
+          "name": "SPONSORATLAS_XS",
+          "size": "Small",
+          "auto_suspend": 60
+        },
+        "use_cached_result": false,
+        "persisted_result_hit": "UNKNOWN",
+        "result_sha256": "25648a95c41a2ebf07b10080c5a8c3d4ae17796433d319bbb77e9f8587a3e743",
+        "closed_file_physical_tables": [
+          {
+            "name": "lca_counts_ws53topy_1ets0wr1_1ledqoo",
+            "rows": [
+              {
+                "lca__fiscal_year": 2024,
+                "lca__case_count": 118646,
+                "lca__certified_count": 116224
+              },
+              {
+                "lca__fiscal_year": 2025,
+                "lca__case_count": 594821,
+                "lca__certified_count": 581389
+              }
+            ]
+          },
+          {
+            "name": "postings_counts_orlr4faj_w1shd1w1_1ledqop",
+            "rows": [
+              {
+                "postings__fiscal_year": 2027,
+                "postings__count": 86
+              }
+            ]
+          }
+        ],
+        "rest_elapsed_seconds": 5.183,
+        "maxRSS_KiB": 690820,
+        "credits": null,
+        "credits_status": "INCOMPLETE_DELAY_OR_SHORT_QUERY",
+        "query_profile": {
+          "kind": "ACTUAL_SNOWFLAKE_QUERY_HISTORY",
+          "rank_by": "credits_attributed_compute DESC NULLS LAST, query_id",
+          "queries": [
+            {
+              "query_id": "01c81d84-020a-71fa-0005-0f02000ca0a6",
+              "query_hash": "65a056ad27076f63c6b8eaa7bdf919d4",
+              "execution_status": "SUCCESS",
+              "credits_attributed_compute": 0.0,
+              "credits_used_query_acceleration": null,
+              "attribution_status": "AVAILABLE",
+              "elapsed_ms": 480,
+              "execution_ms": 180,
+              "partitions_scanned": 10,
+              "partitions_total": 10,
+              "bytes_scanned": 8168928,
+              "bytes_read_from_result": 0,
+              "warehouse_cache_fraction": 0.41399801785497437,
+              "cloud_services_unadjusted_credits": 4.6e-05
+            },
+            {
+              "query_id": "01c81d84-020a-71fa-0005-0f02000ca0aa",
+              "query_hash": "7951f8e3dc7357f66f326ae5f902cfda",
+              "execution_status": "SUCCESS",
+              "credits_attributed_compute": 0.0,
+              "credits_used_query_acceleration": null,
+              "attribution_status": "AVAILABLE",
+              "elapsed_ms": 116,
+              "execution_ms": 45,
+              "partitions_scanned": 10,
+              "partitions_total": 10,
+              "bytes_scanned": 4923904,
+              "bytes_read_from_result": 0,
+              "warehouse_cache_fraction": 1.0,
+              "cloud_services_unadjusted_credits": 1.1e-05
+            },
+            {
+              "query_id": "01c81d84-020a-71fa-0005-0f02000ca0ae",
+              "query_hash": "6c19c734848298393d49e62d647b213d",
+              "execution_status": "SUCCESS",
+              "credits_attributed_compute": 0.0,
+              "credits_used_query_acceleration": null,
+              "attribution_status": "AVAILABLE",
+              "elapsed_ms": 407,
+              "execution_ms": 56,
+              "partitions_scanned": 2,
+              "partitions_total": 3,
+              "bytes_scanned": 227856,
+              "bytes_read_from_result": 0,
+              "warehouse_cache_fraction": 0.0,
+              "cloud_services_unadjusted_credits": 5.4e-05
+            },
+            {
+              "query_id": "01c81d84-020a-73aa-0005-0f02000cf0a6",
+              "query_hash": "a1213b29eeffc45ef71a4c1553596142",
+              "execution_status": "SUCCESS",
+              "credits_attributed_compute": 0.0,
+              "credits_used_query_acceleration": null,
+              "attribution_status": "AVAILABLE",
+              "elapsed_ms": 469,
+              "execution_ms": 55,
+              "partitions_scanned": 10,
+              "partitions_total": 10,
+              "bytes_scanned": 2523848,
+              "bytes_read_from_result": 0,
+              "warehouse_cache_fraction": 0.8052370824233472,
+              "cloud_services_unadjusted_credits": 6.4e-05
+            },
+            {
+              "query_id": "01c81d84-020a-71c1-0005-0f02000c90de",
+              "query_hash": "847c7c064c75828fa29ce281e8163fee",
+              "execution_status": "SUCCESS",
+              "credits_attributed_compute": null,
+              "credits_used_query_acceleration": null,
+              "attribution_status": "MISSING_DELAY_OR_SHORT_QUERY",
+              "elapsed_ms": 87,
+              "execution_ms": 10,
+              "partitions_scanned": 0,
+              "partitions_total": 0,
+              "bytes_scanned": 0,
+              "bytes_read_from_result": 0,
+              "warehouse_cache_fraction": 0.0,
+              "cloud_services_unadjusted_credits": 1.3e-05
+            },
+            {
+              "query_id": "01c81d84-020a-71c1-0005-0f02000c90e2",
+              "query_hash": "0f9db94df93ee5cca33e6f3f59f3abef",
+              "execution_status": "SUCCESS",
+              "credits_attributed_compute": null,
+              "credits_used_query_acceleration": null,
+              "attribution_status": "MISSING_DELAY_OR_SHORT_QUERY",
+              "elapsed_ms": 64,
+              "execution_ms": 17,
+              "partitions_scanned": 0,
+              "partitions_total": 0,
+              "bytes_scanned": 0,
+              "bytes_read_from_result": 0,
+              "warehouse_cache_fraction": 0.0,
+              "cloud_services_unadjusted_credits": 1e-05
+            },
+            {
+              "query_id": "01c81d84-020a-71c1-0005-0f02000c90e6",
+              "query_hash": "632baa3e8d1a66edc5788d6b7a8b120b",
+              "execution_status": "SUCCESS",
+              "credits_attributed_compute": null,
+              "credits_used_query_acceleration": null,
+              "attribution_status": "MISSING_DELAY_OR_SHORT_QUERY",
+              "elapsed_ms": 79,
+              "execution_ms": 2,
+              "partitions_scanned": 0,
+              "partitions_total": 0,
+              "bytes_scanned": 0,
+              "bytes_read_from_result": 0,
+              "warehouse_cache_fraction": 0.0,
+              "cloud_services_unadjusted_credits": 1.2e-05
+            },
+            {
+              "query_id": "01c81d84-020a-71c1-0005-0f02000c90ea",
+              "query_hash": "c71fb0f0a4c05485e3913c04bb8fbf32",
+              "execution_status": "SUCCESS",
+              "credits_attributed_compute": null,
+              "credits_used_query_acceleration": null,
+              "attribution_status": "MISSING_DELAY_OR_SHORT_QUERY",
+              "elapsed_ms": 145,
+              "execution_ms": 93,
+              "partitions_scanned": 0,
+              "partitions_total": 0,
+              "bytes_scanned": 0,
+              "bytes_read_from_result": 0,
+              "warehouse_cache_fraction": 0.0,
+              "cloud_services_unadjusted_credits": 2.2e-05
+            },
+            {
+              "query_id": "01c81d84-020a-71fa-0005-0f02000ca09a",
+              "query_hash": "de9e9374b09cd8bdc58e8558e04243f2",
+              "execution_status": "SUCCESS",
+              "credits_attributed_compute": null,
+              "credits_used_query_acceleration": null,
+              "attribution_status": "MISSING_DELAY_OR_SHORT_QUERY",
+              "elapsed_ms": 143,
+              "execution_ms": 20,
+              "partitions_scanned": 0,
+              "partitions_total": 0,
+              "bytes_scanned": 0,
+              "bytes_read_from_result": 0,
+              "warehouse_cache_fraction": 0.0,
+              "cloud_services_unadjusted_credits": 2.2e-05
+            },
+            {
+              "query_id": "01c81d84-020a-71fa-0005-0f02000ca09e",
+              "query_hash": "c71fb0f0a4c05485e3913c04bb8fbf32",
+              "execution_status": "SUCCESS",
+              "credits_attributed_compute": null,
+              "credits_used_query_acceleration": null,
+              "attribution_status": "MISSING_DELAY_OR_SHORT_QUERY",
+              "elapsed_ms": 107,
+              "execution_ms": 62,
+              "partitions_scanned": 0,
+              "partitions_total": 0,
+              "bytes_scanned": 0,
+              "bytes_read_from_result": 0,
+              "warehouse_cache_fraction": 0.0,
+              "cloud_services_unadjusted_credits": 1.6e-05
+            },
+            {
+              "query_id": "01c81d84-020a-71fa-0005-0f02000ca0a2",
+              "query_hash": "f118ce3c27e17071e763afc3e26da839",
+              "execution_status": "SUCCESS",
+              "credits_attributed_compute": null,
+              "credits_used_query_acceleration": null,
+              "attribution_status": "MISSING_DELAY_OR_SHORT_QUERY",
+              "elapsed_ms": 37,
+              "execution_ms": 2,
+              "partitions_scanned": 0,
+              "partitions_total": 0,
+              "bytes_scanned": 0,
+              "bytes_read_from_result": 0,
+              "warehouse_cache_fraction": 0.0,
+              "cloud_services_unadjusted_credits": 6e-06
+            },
+            {
+              "query_id": "01c81d84-020a-73aa-0005-0f02000cf09e",
+              "query_hash": "d88083e7e95c163578298e506c250f6a",
+              "execution_status": "SUCCESS",
+              "credits_attributed_compute": null,
+              "credits_used_query_acceleration": null,
+              "attribution_status": "MISSING_DELAY_OR_SHORT_QUERY",
+              "elapsed_ms": 57,
+              "execution_ms": 23,
+              "partitions_scanned": 0,
+              "partitions_total": 0,
+              "bytes_scanned": 0,
+              "bytes_read_from_result": 0,
+              "warehouse_cache_fraction": 0.0,
+              "cloud_services_unadjusted_credits": 9e-06
+            },
+            {
+              "query_id": "01c81d84-020a-73aa-0005-0f02000cf0a2",
+              "query_hash": "632baa3e8d1a66edc5788d6b7a8b120b",
+              "execution_status": "SUCCESS",
+              "credits_attributed_compute": null,
+              "credits_used_query_acceleration": null,
+              "attribution_status": "MISSING_DELAY_OR_SHORT_QUERY",
+              "elapsed_ms": 39,
+              "execution_ms": 1,
+              "partitions_scanned": 0,
+              "partitions_total": 0,
+              "bytes_scanned": 0,
+              "bytes_read_from_result": 0,
+              "warehouse_cache_fraction": 0.0,
+              "cloud_services_unadjusted_credits": 6e-06
+            }
+          ],
+          "input_queries": 13,
+          "missing_attribution": 9,
+          "cost_scope": "query compute only; idle, cloud services, storage and clustering separate",
+          "attribution_latency_hours": 8,
+          "result_cache_hit": "UNKNOWN: missing attribution or fast execution is not proof"
+        }
+      },
+      "query_profile": {
+        "kind": "ACTUAL_SNOWFLAKE_QUERY_HISTORY",
+        "rank_by": "credits_attributed_compute DESC NULLS LAST, query_id",
+        "queries": [
+          {
+            "query_id": "01c81d84-020a-71c1-0005-0f02000c90da",
+            "query_hash": "082257bedb3ee77e2ae50d767f4b3587",
+            "execution_status": "SUCCESS",
+            "credits_attributed_compute": 0.0024471883270804906,
+            "credits_used_query_acceleration": null,
+            "attribution_status": "AVAILABLE",
+            "elapsed_ms": 664,
+            "execution_ms": 290,
+            "partitions_scanned": 8,
+            "partitions_total": 8,
+            "bytes_scanned": 3367104,
+            "bytes_read_from_result": 0,
+            "warehouse_cache_fraction": 0.24572807967915455,
+            "cloud_services_unadjusted_credits": 5.8e-05
+          },
+          {
+            "query_id": "01c81d84-020a-73aa-0005-0f02000cf092",
+            "query_hash": "7c29ce885d9d9b19ae76ca338878bae7",
+            "execution_status": "SUCCESS",
+            "credits_attributed_compute": 0.0006179768502728513,
+            "credits_used_query_acceleration": null,
+            "attribution_status": "AVAILABLE",
+            "elapsed_ms": 326,
+            "execution_ms": 144,
+            "partitions_scanned": 8,
+            "partitions_total": 8,
+            "bytes_scanned": 3637568,
+            "bytes_read_from_result": 0,
+            "warehouse_cache_fraction": 0.4549149321744638,
+            "cloud_services_unadjusted_credits": 2.8e-05
+          },
+          {
+            "query_id": "01c81d84-020a-73aa-0005-0f02000cf096",
+            "query_hash": "122f772244ece37720618dd06b50d03e",
+            "execution_status": "SUCCESS",
+            "credits_attributed_compute": null,
+            "credits_used_query_acceleration": null,
+            "attribution_status": "MISSING_DELAY_OR_SHORT_QUERY",
+            "elapsed_ms": 94,
+            "execution_ms": 2,
+            "partitions_scanned": 0,
+            "partitions_total": 0,
+            "bytes_scanned": 0,
+            "bytes_read_from_result": 0,
+            "warehouse_cache_fraction": 0.0,
+            "cloud_services_unadjusted_credits": 1.4e-05
+          }
+        ],
+        "input_queries": 3,
+        "missing_attribution": 1,
+        "cost_scope": "query compute only; idle, cloud services, storage and clustering separate",
+        "attribution_latency_hours": 8,
+        "result_cache_hit": "UNKNOWN: missing attribution or fast execution is not proof"
+      }
+    },
+    {
+      "phase": "cache_prime",
+      "elapsed_seconds": 0.4146252148784697,
+      "measured_at_utc": "2026-11-01T07:32:44Z",
+      "query_tag": "SponsorAtlas_Task10_P9A_cache_prime",
+      "query_ids": [
+        "01c81d84-020a-71fa-0005-0f02000ca0b6",
+        "01c81d84-020a-73aa-0005-0f02000cf0ae",
+        "01c81d84-020a-71fa-0005-0f02000ca0ba"
+      ],
+      "result_sha256": "070100a64fe873c1d84fa1dc71415ba20a467260954d82399e04c90f64109137",
+      "use_cached_result": true,
+      "credits": null,
+      "credits_status": "INCOMPLETE_DELAY_OR_SHORT_QUERY",
+      "persisted_result_hit": "UNKNOWN",
+      "warehouse": "X-Small",
+      "cube": {
+        "kind": "ACTUAL_SNOWFLAKE_CUBE_REFRESH",
+        "revision": "6dc21189781fe627c3979756258bdb73",
+        "elapsed_seconds": 4.253,
+        "results": [
+          {
+            "data": [
+              {
+                "lca.fiscal_year": "2025",
+                "lca.case_count": "594821",
+                "lca.certified_rate": "0.977418416632903"
+              },
+              {
+                "lca.fiscal_year": "2024",
+                "lca.case_count": "118646",
+                "lca.certified_rate": "0.9795863324511572"
+              }
+            ],
+            "usedPreAggregations": {
+              "semantic_preagg.lca_counts": {
+                "preAggregationId": "lca.counts",
+                "lastUpdatedAt": 1793518368000,
+                "type": "rollup"
+              }
+            }
+          },
+          {
+            "data": [
+              {
+                "lca.wage_p50": "120000.00000",
+                "lca.wage_p75": "156383.63000",
+                "lca.wage_p90": "200000.00000"
+              }
+            ]
+          },
+          {
+            "data": [
+              {
+                "postings.count": "86"
+              }
+            ],
+            "usedPreAggregations": {
+              "semantic_preagg.postings_counts": {
+                "preAggregationId": "postings.counts",
+                "lastUpdatedAt": 1793518368000,
+                "type": "rollup"
+              }
+            }
+          },
+          {
+            "data": [
+              {
+                "wages.oews_median": "135980.00"
+              }
+            ]
+          }
+        ],
+        "query_ids": [
+          "01c81d84-020a-71c1-0005-0f02000c90f2",
+          "01c81d84-020a-73aa-0005-0f02000cf0b2",
+          "01c81d84-020a-71c1-0005-0f02000c90f6",
+          "01c81d84-020a-71fa-0005-0f02000ca0c2",
+          "01c81d84-020a-73aa-0005-0f02000cf0b6",
+          "01c81d84-020a-71fa-0005-0f02000ca0c6",
+          "01c81d84-020a-73aa-0005-0f02000cf0ba",
+          "01c81d84-020a-71c1-0005-0f02000c90fa",
+          "01c81d84-020a-73aa-0005-0f02000cf0be",
+          "01c81d84-020a-71c1-0005-0f02000c90fe",
+          "01c81d84-020a-71fa-0005-0f02000ca0ca",
+          "01c81d84-020a-71c1-0005-0f02000c9102",
+          "01c81d84-020a-71c1-0005-0f02000c9106"
+        ],
+        "query_tag": "SponsorAtlas_Task10_P9A_cache_prime_cube",
+        "warehouse": {
+          "name": "SPONSORATLAS_XS",
+          "size": "X-Small",
+          "auto_suspend": 60
+        },
+        "use_cached_result": true,
+        "persisted_result_hit": "UNKNOWN",
+        "result_sha256": "25648a95c41a2ebf07b10080c5a8c3d4ae17796433d319bbb77e9f8587a3e743",
+        "closed_file_physical_tables": [
+          {
+            "name": "lca_counts_fkfsbfjx_1ets0wr1_1ledqp0",
+            "rows": [
+              {
+                "lca__fiscal_year": 2024,
+                "lca__case_count": 118646,
+                "lca__certified_count": 116224
+              },
+              {
+                "lca__fiscal_year": 2025,
+                "lca__case_count": 594821,
+                "lca__certified_count": 581389
+              }
+            ]
+          },
+          {
+            "name": "postings_counts_1spg4okt_w1shd1w1_1ledqp0",
+            "rows": [
+              {
+                "postings__fiscal_year": 2027,
+                "postings__count": 86
+              }
+            ]
+          }
+        ],
+        "rest_elapsed_seconds": 4.135,
+        "maxRSS_KiB": 721120,
+        "credits": null,
+        "credits_status": "INCOMPLETE_DELAY_OR_SHORT_QUERY",
+        "query_profile": {
+          "kind": "ACTUAL_SNOWFLAKE_QUERY_HISTORY",
+          "rank_by": "credits_attributed_compute DESC NULLS LAST, query_id",
+          "queries": [
+            {
+              "query_id": "01c81d84-020a-71c1-0005-0f02000c90fe",
+              "query_hash": "65a056ad27076f63c6b8eaa7bdf919d4",
+              "execution_status": "SUCCESS",
+              "credits_attributed_compute": 0.0,
+              "credits_used_query_acceleration": null,
+              "attribution_status": "AVAILABLE",
+              "elapsed_ms": 169,
+              "execution_ms": 59,
+              "partitions_scanned": 10,
+              "partitions_total": 10,
+              "bytes_scanned": 6611456,
+              "bytes_read_from_result": 0,
+              "warehouse_cache_fraction": 1.0,
+              "cloud_services_unadjusted_credits": 1.7e-05
+            },
+            {
+              "query_id": "01c81d84-020a-71c1-0005-0f02000c9102",
+              "query_hash": "6c19c734848298393d49e62d647b213d",
+              "execution_status": "SUCCESS",
+              "credits_attributed_compute": 0.0,
+              "credits_used_query_acceleration": null,
+              "attribution_status": "AVAILABLE",
+              "elapsed_ms": 117,
+              "execution_ms": 19,
+              "partitions_scanned": 2,
+              "partitions_total": 3,
+              "bytes_scanned": 59904,
+              "bytes_read_from_result": 0,
+              "warehouse_cache_fraction": 1.0,
+              "cloud_services_unadjusted_credits": 1.5e-05
+            },
+            {
+              "query_id": "01c81d84-020a-71c1-0005-0f02000c9106",
+              "query_hash": "a1213b29eeffc45ef71a4c1553596142",
+              "execution_status": "SUCCESS",
+              "credits_attributed_compute": 0.0,
+              "credits_used_query_acceleration": null,
+              "attribution_status": "AVAILABLE",
+              "elapsed_ms": 222,
+              "execution_ms": 43,
+              "partitions_scanned": 10,
+              "partitions_total": 10,
+              "bytes_scanned": 2523648,
+              "bytes_read_from_result": 0,
+              "warehouse_cache_fraction": 1.0,
+              "cloud_services_unadjusted_credits": 2.8e-05
+            },
+            {
+              "query_id": "01c81d84-020a-71fa-0005-0f02000ca0ca",
+              "query_hash": "7951f8e3dc7357f66f326ae5f902cfda",
+              "execution_status": "SUCCESS",
+              "credits_attributed_compute": 0.0,
+              "credits_used_query_acceleration": null,
+              "attribution_status": "AVAILABLE",
+              "elapsed_ms": 228,
+              "execution_ms": 57,
+              "partitions_scanned": 10,
+              "partitions_total": 10,
+              "bytes_scanned": 4923904,
+              "bytes_read_from_result": 0,
+              "warehouse_cache_fraction": 1.0,
+              "cloud_services_unadjusted_credits": 2.7e-05
+            },
+            {
+              "query_id": "01c81d84-020a-71c1-0005-0f02000c90f2",
+              "query_hash": "de9e9374b09cd8bdc58e8558e04243f2",
+              "execution_status": "SUCCESS",
+              "credits_attributed_compute": null,
+              "credits_used_query_acceleration": null,
+              "attribution_status": "MISSING_DELAY_OR_SHORT_QUERY",
+              "elapsed_ms": 91,
+              "execution_ms": 53,
+              "partitions_scanned": 0,
+              "partitions_total": 0,
+              "bytes_scanned": 0,
+              "bytes_read_from_result": 0,
+              "warehouse_cache_fraction": 0.0,
+              "cloud_services_unadjusted_credits": 1.4e-05
+            },
+            {
+              "query_id": "01c81d84-020a-71c1-0005-0f02000c90f6",
+              "query_hash": "d88083e7e95c163578298e506c250f6a",
+              "execution_status": "SUCCESS",
+              "credits_attributed_compute": null,
+              "credits_used_query_acceleration": null,
+              "attribution_status": "MISSING_DELAY_OR_SHORT_QUERY",
+              "elapsed_ms": 45,
+              "execution_ms": 16,
+              "partitions_scanned": 0,
+              "partitions_total": 0,
+              "bytes_scanned": 0,
+              "bytes_read_from_result": 0,
+              "warehouse_cache_fraction": 0.0,
+              "cloud_services_unadjusted_credits": 7e-06
+            },
+            {
+              "query_id": "01c81d84-020a-71c1-0005-0f02000c90fa",
+              "query_hash": "c71fb0f0a4c05485e3913c04bb8fbf32",
+              "execution_status": "SUCCESS",
+              "credits_attributed_compute": null,
+              "credits_used_query_acceleration": null,
+              "attribution_status": "MISSING_DELAY_OR_SHORT_QUERY",
+              "elapsed_ms": 76,
+              "execution_ms": 44,
+              "partitions_scanned": 0,
+              "partitions_total": 0,
+              "bytes_scanned": 0,
+              "bytes_read_from_result": 0,
+              "warehouse_cache_fraction": 0.0,
+              "cloud_services_unadjusted_credits": 1.1e-05
+            },
+            {
+              "query_id": "01c81d84-020a-71fa-0005-0f02000ca0c2",
+              "query_hash": "80a46c845794ade219c2386036313e37",
+              "execution_status": "SUCCESS",
+              "credits_attributed_compute": null,
+              "credits_used_query_acceleration": null,
+              "attribution_status": "MISSING_DELAY_OR_SHORT_QUERY",
+              "elapsed_ms": 80,
+              "execution_ms": 15,
+              "partitions_scanned": 0,
+              "partitions_total": 0,
+              "bytes_scanned": 0,
+              "bytes_read_from_result": 0,
+              "warehouse_cache_fraction": 0.0,
+              "cloud_services_unadjusted_credits": 1.2e-05
+            },
+            {
+              "query_id": "01c81d84-020a-71fa-0005-0f02000ca0c6",
+              "query_hash": "c71fb0f0a4c05485e3913c04bb8fbf32",
+              "execution_status": "SUCCESS",
+              "credits_attributed_compute": null,
+              "credits_used_query_acceleration": null,
+              "attribution_status": "MISSING_DELAY_OR_SHORT_QUERY",
+              "elapsed_ms": 89,
+              "execution_ms": 53,
+              "partitions_scanned": 0,
+              "partitions_total": 0,
+              "bytes_scanned": 0,
+              "bytes_read_from_result": 0,
+              "warehouse_cache_fraction": 0.0,
+              "cloud_services_unadjusted_credits": 1.3e-05
+            },
+            {
+              "query_id": "01c81d84-020a-73aa-0005-0f02000cf0b2",
+              "query_hash": "847c7c064c75828fa29ce281e8163fee",
+              "execution_status": "SUCCESS",
+              "credits_attributed_compute": null,
+              "credits_used_query_acceleration": null,
+              "attribution_status": "MISSING_DELAY_OR_SHORT_QUERY",
+              "elapsed_ms": 68,
+              "execution_ms": 5,
+              "partitions_scanned": 0,
+              "partitions_total": 0,
+              "bytes_scanned": 0,
+              "bytes_read_from_result": 0,
+              "warehouse_cache_fraction": 0.0,
+              "cloud_services_unadjusted_credits": 1e-05
+            },
+            {
+              "query_id": "01c81d84-020a-73aa-0005-0f02000cf0b6",
+              "query_hash": "632baa3e8d1a66edc5788d6b7a8b120b",
+              "execution_status": "SUCCESS",
+              "credits_attributed_compute": null,
+              "credits_used_query_acceleration": null,
+              "attribution_status": "MISSING_DELAY_OR_SHORT_QUERY",
+              "elapsed_ms": 70,
+              "execution_ms": 3,
+              "partitions_scanned": 0,
+              "partitions_total": 0,
+              "bytes_scanned": 0,
+              "bytes_read_from_result": 0,
+              "warehouse_cache_fraction": 0.0,
+              "cloud_services_unadjusted_credits": 1.1e-05
+            },
+            {
+              "query_id": "01c81d84-020a-73aa-0005-0f02000cf0ba",
+              "query_hash": "632baa3e8d1a66edc5788d6b7a8b120b",
+              "execution_status": "SUCCESS",
+              "credits_attributed_compute": null,
+              "credits_used_query_acceleration": null,
+              "attribution_status": "MISSING_DELAY_OR_SHORT_QUERY",
+              "elapsed_ms": 43,
+              "execution_ms": 1,
+              "partitions_scanned": 0,
+              "partitions_total": 0,
+              "bytes_scanned": 0,
+              "bytes_read_from_result": 0,
+              "warehouse_cache_fraction": 0.0,
+              "cloud_services_unadjusted_credits": 6e-06
+            },
+            {
+              "query_id": "01c81d84-020a-73aa-0005-0f02000cf0be",
+              "query_hash": "114fab20c31abd6ef2c319934e20a66f",
+              "execution_status": "SUCCESS",
+              "credits_attributed_compute": null,
+              "credits_used_query_acceleration": null,
+              "attribution_status": "MISSING_DELAY_OR_SHORT_QUERY",
+              "elapsed_ms": 41,
+              "execution_ms": 2,
+              "partitions_scanned": 0,
+              "partitions_total": 0,
+              "bytes_scanned": 0,
+              "bytes_read_from_result": 0,
+              "warehouse_cache_fraction": 0.0,
+              "cloud_services_unadjusted_credits": 6e-06
+            }
+          ],
+          "input_queries": 13,
+          "missing_attribution": 9,
+          "cost_scope": "query compute only; idle, cloud services, storage and clustering separate",
+          "attribution_latency_hours": 8,
+          "result_cache_hit": "UNKNOWN: missing attribution or fast execution is not proof"
+        }
+      },
+      "query_profile": {
+        "kind": "ACTUAL_SNOWFLAKE_QUERY_HISTORY",
+        "rank_by": "credits_attributed_compute DESC NULLS LAST, query_id",
+        "queries": [
+          {
+            "query_id": "01c81d84-020a-71fa-0005-0f02000ca0b6",
+            "query_hash": "7c29ce885d9d9b19ae76ca338878bae7",
+            "execution_status": "SUCCESS",
+            "credits_attributed_compute": 0.0,
+            "credits_used_query_acceleration": null,
+            "attribution_status": "AVAILABLE",
+            "elapsed_ms": 112,
+            "execution_ms": 28,
+            "partitions_scanned": 8,
+            "partitions_total": 8,
+            "bytes_scanned": 3309568,
+            "bytes_read_from_result": 0,
+            "warehouse_cache_fraction": 1.0,
+            "cloud_services_unadjusted_credits": 1.3e-05
+          },
+          {
+            "query_id": "01c81d84-020a-71fa-0005-0f02000ca0ba",
+            "query_hash": "082257bedb3ee77e2ae50d767f4b3587",
+            "execution_status": "SUCCESS",
+            "credits_attributed_compute": 0.0,
+            "credits_used_query_acceleration": null,
+            "attribution_status": "AVAILABLE",
+            "elapsed_ms": 122,
+            "execution_ms": 16,
+            "partitions_scanned": 8,
+            "partitions_total": 8,
+            "bytes_scanned": 1736704,
+            "bytes_read_from_result": 0,
+            "warehouse_cache_fraction": 1.0,
+            "cloud_services_unadjusted_credits": 1.6e-05
+          },
+          {
+            "query_id": "01c81d84-020a-73aa-0005-0f02000cf0ae",
+            "query_hash": "122f772244ece37720618dd06b50d03e",
+            "execution_status": "SUCCESS",
+            "credits_attributed_compute": null,
+            "credits_used_query_acceleration": null,
+            "attribution_status": "MISSING_DELAY_OR_SHORT_QUERY",
+            "elapsed_ms": 60,
+            "execution_ms": 3,
+            "partitions_scanned": 0,
+            "partitions_total": 0,
+            "bytes_scanned": 0,
+            "bytes_read_from_result": 0,
+            "warehouse_cache_fraction": 0.0,
+            "cloud_services_unadjusted_credits": 9e-06
+          }
+        ],
+        "input_queries": 3,
+        "missing_attribution": 1,
+        "cost_scope": "query compute only; idle, cloud services, storage and clustering separate",
+        "attribution_latency_hours": 8,
+        "result_cache_hit": "UNKNOWN: missing attribution or fast execution is not proof"
+      }
+    },
+    {
+      "phase": "cache_repeat",
+      "elapsed_seconds": 0.3813237810973078,
+      "measured_at_utc": "2026-11-01T07:32:50Z",
+      "query_tag": "SponsorAtlas_Task10_P9A_cache_repeat",
+      "query_ids": [
+        "01c81d84-020a-71fa-0005-0f02000ca0ce",
+        "01c81d84-020a-71fa-0005-0f02000ca0d2",
+        "01c81d84-020a-71c1-0005-0f02000c910e"
+      ],
+      "result_sha256": "070100a64fe873c1d84fa1dc71415ba20a467260954d82399e04c90f64109137",
+      "use_cached_result": true,
+      "credits": null,
+      "credits_status": "INCOMPLETE_DELAY_OR_SHORT_QUERY",
+      "persisted_result_hit": "UNKNOWN",
+      "warehouse": "X-Small",
+      "cube": {
+        "kind": "ACTUAL_SNOWFLAKE_CUBE_REFRESH",
+        "revision": "73a7522eb603ce4904412a149dc0a2e2",
+        "elapsed_seconds": 3.62,
+        "results": [
+          {
+            "data": [
+              {
+                "lca.fiscal_year": "2025",
+                "lca.case_count": "594821",
+                "lca.certified_rate": "0.977418416632903"
+              },
+              {
+                "lca.fiscal_year": "2024",
+                "lca.case_count": "118646",
+                "lca.certified_rate": "0.9795863324511572"
+              }
+            ],
+            "usedPreAggregations": {
+              "semantic_preagg.lca_counts": {
+                "preAggregationId": "lca.counts",
+                "lastUpdatedAt": 1793518374000,
+                "type": "rollup"
+              }
+            }
+          },
+          {
+            "data": [
+              {
+                "lca.wage_p50": "120000.00000",
+                "lca.wage_p75": "156383.63000",
+                "lca.wage_p90": "200000.00000"
+              }
+            ]
+          },
+          {
+            "data": [
+              {
+                "postings.count": "86"
+              }
+            ],
+            "usedPreAggregations": {
+              "semantic_preagg.postings_counts": {
+                "preAggregationId": "postings.counts",
+                "lastUpdatedAt": 1793518374000,
+                "type": "rollup"
+              }
+            }
+          },
+          {
+            "data": [
+              {
+                "wages.oews_median": "135980.00"
+              }
+            ]
+          }
+        ],
+        "query_ids": [
+          "01c81d84-020a-71c1-0005-0f02000c9112",
+          "01c81d84-020a-71fa-0005-0f02000ca0d6",
+          "01c81d84-020a-73aa-0005-0f02000cf0ce",
+          "01c81d84-020a-71c1-0005-0f02000c9116",
+          "01c81d84-020a-71fa-0005-0f02000ca0da",
+          "01c81d84-020a-71fa-0005-0f02000ca0de",
+          "01c81d84-020a-73aa-0005-0f02000cf0d2",
+          "01c81d84-020a-73aa-0005-0f02000cf0d6",
+          "01c81d84-020a-71c1-0005-0f02000c911a",
+          "01c81d84-020a-71c1-0005-0f02000c911e",
+          "01c81d84-020a-71c1-0005-0f02000c9122",
+          "01c81d84-020a-71fa-0005-0f02000ca0e2",
+          "01c81d84-020a-73aa-0005-0f02000cf0da"
+        ],
+        "query_tag": "SponsorAtlas_Task10_P9A_cache_repeat_cube",
+        "warehouse": {
+          "name": "SPONSORATLAS_XS",
+          "size": "X-Small",
+          "auto_suspend": 60
+        },
+        "use_cached_result": true,
+        "persisted_result_hit": "UNKNOWN",
+        "result_sha256": "25648a95c41a2ebf07b10080c5a8c3d4ae17796433d319bbb77e9f8587a3e743",
+        "closed_file_physical_tables": [
+          {
+            "name": "lca_counts_l1teba2d_1ets0wr1_1ledqp6",
+            "rows": [
+              {
+                "lca__fiscal_year": 2024,
+                "lca__case_count": 118646,
+                "lca__certified_count": 116224
+              },
+              {
+                "lca__fiscal_year": 2025,
+                "lca__case_count": 594821,
+                "lca__certified_count": 581389
+              }
+            ]
+          },
+          {
+            "name": "postings_counts_5djqrmx2_w1shd1w1_1ledqp6",
+            "rows": [
+              {
+                "postings__fiscal_year": 2027,
+                "postings__count": 86
+              }
+            ]
+          }
+        ],
+        "rest_elapsed_seconds": 3.507,
+        "maxRSS_KiB": 703436,
+        "credits": null,
+        "credits_status": "INCOMPLETE_DELAY_OR_SHORT_QUERY",
+        "query_profile": {
+          "kind": "ACTUAL_SNOWFLAKE_QUERY_HISTORY",
+          "rank_by": "credits_attributed_compute DESC NULLS LAST, query_id",
+          "queries": [
+            {
+              "query_id": "01c81d84-020a-71c1-0005-0f02000c9112",
+              "query_hash": "de9e9374b09cd8bdc58e8558e04243f2",
+              "execution_status": "SUCCESS",
+              "credits_attributed_compute": null,
+              "credits_used_query_acceleration": null,
+              "attribution_status": "MISSING_DELAY_OR_SHORT_QUERY",
+              "elapsed_ms": 62,
+              "execution_ms": 26,
+              "partitions_scanned": 0,
+              "partitions_total": 0,
+              "bytes_scanned": 0,
+              "bytes_read_from_result": 0,
+              "warehouse_cache_fraction": 0.0,
+              "cloud_services_unadjusted_credits": 9e-06
+            },
+            {
+              "query_id": "01c81d84-020a-71c1-0005-0f02000c9116",
+              "query_hash": "80a46c845794ade219c2386036313e37",
+              "execution_status": "SUCCESS",
+              "credits_attributed_compute": null,
+              "credits_used_query_acceleration": null,
+              "attribution_status": "MISSING_DELAY_OR_SHORT_QUERY",
+              "elapsed_ms": 51,
+              "execution_ms": 19,
+              "partitions_scanned": 0,
+              "partitions_total": 0,
+              "bytes_scanned": 0,
+              "bytes_read_from_result": 0,
+              "warehouse_cache_fraction": 0.0,
+              "cloud_services_unadjusted_credits": 8e-06
+            },
+            {
+              "query_id": "01c81d84-020a-71c1-0005-0f02000c911a",
+              "query_hash": "fdaf604d0c3e823ba291746fb33ccf02",
+              "execution_status": "SUCCESS",
+              "credits_attributed_compute": null,
+              "credits_used_query_acceleration": null,
+              "attribution_status": "MISSING_DELAY_OR_SHORT_QUERY",
+              "elapsed_ms": 38,
+              "execution_ms": 1,
+              "partitions_scanned": 0,
+              "partitions_total": 0,
+              "bytes_scanned": 0,
+              "bytes_read_from_result": 0,
+              "warehouse_cache_fraction": 0.0,
+              "cloud_services_unadjusted_credits": 6e-06
+            },
+            {
+              "query_id": "01c81d84-020a-71c1-0005-0f02000c911e",
+              "query_hash": "65a056ad27076f63c6b8eaa7bdf919d4",
+              "execution_status": "SUCCESS",
+              "credits_attributed_compute": null,
+              "credits_used_query_acceleration": null,
+              "attribution_status": "MISSING_DELAY_OR_SHORT_QUERY",
+              "elapsed_ms": 48,
+              "execution_ms": 1,
+              "partitions_scanned": 0,
+              "partitions_total": 0,
+              "bytes_scanned": 0,
+              "bytes_read_from_result": 0,
+              "warehouse_cache_fraction": 0.0,
+              "cloud_services_unadjusted_credits": 7e-06
+            },
+            {
+              "query_id": "01c81d84-020a-71c1-0005-0f02000c9122",
+              "query_hash": "7951f8e3dc7357f66f326ae5f902cfda",
+              "execution_status": "SUCCESS",
+              "credits_attributed_compute": null,
+              "credits_used_query_acceleration": null,
+              "attribution_status": "MISSING_DELAY_OR_SHORT_QUERY",
+              "elapsed_ms": 62,
+              "execution_ms": 1,
+              "partitions_scanned": 0,
+              "partitions_total": 0,
+              "bytes_scanned": 0,
+              "bytes_read_from_result": 0,
+              "warehouse_cache_fraction": 0.0,
+              "cloud_services_unadjusted_credits": 9e-06
+            },
+            {
+              "query_id": "01c81d84-020a-71fa-0005-0f02000ca0d6",
+              "query_hash": "847c7c064c75828fa29ce281e8163fee",
+              "execution_status": "SUCCESS",
+              "credits_attributed_compute": null,
+              "credits_used_query_acceleration": null,
+              "attribution_status": "MISSING_DELAY_OR_SHORT_QUERY",
+              "elapsed_ms": 82,
+              "execution_ms": 11,
+              "partitions_scanned": 0,
+              "partitions_total": 0,
+              "bytes_scanned": 0,
+              "bytes_read_from_result": 0,
+              "warehouse_cache_fraction": 0.0,
+              "cloud_services_unadjusted_credits": 1.3e-05
+            },
+            {
+              "query_id": "01c81d84-020a-71fa-0005-0f02000ca0da",
+              "query_hash": "632baa3e8d1a66edc5788d6b7a8b120b",
+              "execution_status": "SUCCESS",
+              "credits_attributed_compute": null,
+              "credits_used_query_acceleration": null,
+              "attribution_status": "MISSING_DELAY_OR_SHORT_QUERY",
+              "elapsed_ms": 54,
+              "execution_ms": 2,
+              "partitions_scanned": 0,
+              "partitions_total": 0,
+              "bytes_scanned": 0,
+              "bytes_read_from_result": 0,
+              "warehouse_cache_fraction": 0.0,
+              "cloud_services_unadjusted_credits": 8e-06
+            },
+            {
+              "query_id": "01c81d84-020a-71fa-0005-0f02000ca0de",
+              "query_hash": "c71fb0f0a4c05485e3913c04bb8fbf32",
+              "execution_status": "SUCCESS",
+              "credits_attributed_compute": null,
+              "credits_used_query_acceleration": null,
+              "attribution_status": "MISSING_DELAY_OR_SHORT_QUERY",
+              "elapsed_ms": 100,
+              "execution_ms": 69,
+              "partitions_scanned": 0,
+              "partitions_total": 0,
+              "bytes_scanned": 0,
+              "bytes_read_from_result": 0,
+              "warehouse_cache_fraction": 0.0,
+              "cloud_services_unadjusted_credits": 1.5e-05
+            },
+            {
+              "query_id": "01c81d84-020a-71fa-0005-0f02000ca0e2",
+              "query_hash": "6c19c734848298393d49e62d647b213d",
+              "execution_status": "SUCCESS",
+              "credits_attributed_compute": null,
+              "credits_used_query_acceleration": null,
+              "attribution_status": "MISSING_DELAY_OR_SHORT_QUERY",
+              "elapsed_ms": 130,
+              "execution_ms": 2,
+              "partitions_scanned": 0,
+              "partitions_total": 0,
+              "bytes_scanned": 0,
+              "bytes_read_from_result": 0,
+              "warehouse_cache_fraction": 0.0,
+              "cloud_services_unadjusted_credits": 2e-05
+            },
+            {
+              "query_id": "01c81d84-020a-73aa-0005-0f02000cf0ce",
+              "query_hash": "d88083e7e95c163578298e506c250f6a",
+              "execution_status": "SUCCESS",
+              "credits_attributed_compute": null,
+              "credits_used_query_acceleration": null,
+              "attribution_status": "MISSING_DELAY_OR_SHORT_QUERY",
+              "elapsed_ms": 49,
+              "execution_ms": 13,
+              "partitions_scanned": 0,
+              "partitions_total": 0,
+              "bytes_scanned": 0,
+              "bytes_read_from_result": 0,
+              "warehouse_cache_fraction": 0.0,
+              "cloud_services_unadjusted_credits": 7e-06
+            },
+            {
+              "query_id": "01c81d84-020a-73aa-0005-0f02000cf0d2",
+              "query_hash": "632baa3e8d1a66edc5788d6b7a8b120b",
+              "execution_status": "SUCCESS",
+              "credits_attributed_compute": null,
+              "credits_used_query_acceleration": null,
+              "attribution_status": "MISSING_DELAY_OR_SHORT_QUERY",
+              "elapsed_ms": 39,
+              "execution_ms": 1,
+              "partitions_scanned": 0,
+              "partitions_total": 0,
+              "bytes_scanned": 0,
+              "bytes_read_from_result": 0,
+              "warehouse_cache_fraction": 0.0,
+              "cloud_services_unadjusted_credits": 6e-06
+            },
+            {
+              "query_id": "01c81d84-020a-73aa-0005-0f02000cf0d6",
+              "query_hash": "c71fb0f0a4c05485e3913c04bb8fbf32",
+              "execution_status": "SUCCESS",
+              "credits_attributed_compute": null,
+              "credits_used_query_acceleration": null,
+              "attribution_status": "MISSING_DELAY_OR_SHORT_QUERY",
+              "elapsed_ms": 88,
+              "execution_ms": 35,
+              "partitions_scanned": 0,
+              "partitions_total": 0,
+              "bytes_scanned": 0,
+              "bytes_read_from_result": 0,
+              "warehouse_cache_fraction": 0.0,
+              "cloud_services_unadjusted_credits": 1.3e-05
+            },
+            {
+              "query_id": "01c81d84-020a-73aa-0005-0f02000cf0da",
+              "query_hash": "a1213b29eeffc45ef71a4c1553596142",
+              "execution_status": "SUCCESS",
+              "credits_attributed_compute": null,
+              "credits_used_query_acceleration": null,
+              "attribution_status": "MISSING_DELAY_OR_SHORT_QUERY",
+              "elapsed_ms": 55,
+              "execution_ms": 2,
+              "partitions_scanned": 0,
+              "partitions_total": 0,
+              "bytes_scanned": 0,
+              "bytes_read_from_result": 0,
+              "warehouse_cache_fraction": 0.0,
+              "cloud_services_unadjusted_credits": 8e-06
+            }
+          ],
+          "input_queries": 13,
+          "missing_attribution": 13,
+          "cost_scope": "query compute only; idle, cloud services, storage and clustering separate",
+          "attribution_latency_hours": 8,
+          "result_cache_hit": "UNKNOWN: missing attribution or fast execution is not proof"
+        }
+      },
+      "query_profile": {
+        "kind": "ACTUAL_SNOWFLAKE_QUERY_HISTORY",
+        "rank_by": "credits_attributed_compute DESC NULLS LAST, query_id",
+        "queries": [
+          {
+            "query_id": "01c81d84-020a-71c1-0005-0f02000c910e",
+            "query_hash": "082257bedb3ee77e2ae50d767f4b3587",
+            "execution_status": "SUCCESS",
+            "credits_attributed_compute": null,
+            "credits_used_query_acceleration": null,
+            "attribution_status": "MISSING_DELAY_OR_SHORT_QUERY",
+            "elapsed_ms": 33,
+            "execution_ms": 1,
+            "partitions_scanned": 0,
+            "partitions_total": 0,
+            "bytes_scanned": 0,
+            "bytes_read_from_result": 0,
+            "warehouse_cache_fraction": 0.0,
+            "cloud_services_unadjusted_credits": 5e-06
+          },
+          {
+            "query_id": "01c81d84-020a-71fa-0005-0f02000ca0ce",
+            "query_hash": "7c29ce885d9d9b19ae76ca338878bae7",
+            "execution_status": "SUCCESS",
+            "credits_attributed_compute": null,
+            "credits_used_query_acceleration": null,
+            "attribution_status": "MISSING_DELAY_OR_SHORT_QUERY",
+            "elapsed_ms": 74,
+            "execution_ms": 2,
+            "partitions_scanned": 0,
+            "partitions_total": 0,
+            "bytes_scanned": 0,
+            "bytes_read_from_result": 0,
+            "warehouse_cache_fraction": 0.0,
+            "cloud_services_unadjusted_credits": 1.1e-05
+          },
+          {
+            "query_id": "01c81d84-020a-71fa-0005-0f02000ca0d2",
+            "query_hash": "122f772244ece37720618dd06b50d03e",
+            "execution_status": "SUCCESS",
+            "credits_attributed_compute": null,
+            "credits_used_query_acceleration": null,
+            "attribution_status": "MISSING_DELAY_OR_SHORT_QUERY",
+            "elapsed_ms": 111,
+            "execution_ms": 2,
+            "partitions_scanned": 0,
+            "partitions_total": 0,
+            "bytes_scanned": 0,
+            "bytes_read_from_result": 0,
+            "warehouse_cache_fraction": 0.0,
+            "cloud_services_unadjusted_credits": 1.7e-05
+          }
+        ],
+        "input_queries": 3,
+        "missing_attribution": 3,
+        "cost_scope": "query compute only; idle, cloud services, storage and clustering separate",
+        "attribution_latency_hours": 8,
+        "result_cache_hit": "UNKNOWN: missing attribution or fast execution is not proof"
+      }
+    }
+  ],
+  "query_ids": [
+    "01c81d83-020a-73aa-0005-0f02000cf032",
+    "01c81d84-020a-73aa-0005-0f02000cf036",
+    "01c81d84-020a-73aa-0005-0f02000cf03a",
+    "01c81d84-020a-71c1-0005-0f02000c908a",
+    "01c81d84-020a-71fa-0005-0f02000ca04e",
+    "01c81d84-020a-73aa-0005-0f02000cf03e",
+    "01c81d84-020a-71c1-0005-0f02000c908e",
+    "01c81d84-020a-71c1-0005-0f02000c9092",
+    "01c81d84-020a-71fa-0005-0f02000ca052",
+    "01c81d84-020a-71c1-0005-0f02000c9096",
+    "01c81d84-020a-73aa-0005-0f02000cf042",
+    "01c81d84-020a-71fa-0005-0f02000ca056",
+    "01c81d84-020a-71fa-0005-0f02000ca05a",
+    "01c81d84-020a-71c1-0005-0f02000c909a",
+    "01c81d84-020a-71fa-0005-0f02000ca05e",
+    "01c81d84-020a-73aa-0005-0f02000cf046",
+    "01c81d84-020a-71c1-0005-0f02000c909e",
+    "01c81d84-020a-73aa-0005-0f02000cf04a",
+    "01c81d84-020a-73aa-0005-0f02000cf04e",
+    "01c81d84-020a-71fa-0005-0f02000ca062",
+    "01c81d84-020a-73aa-0005-0f02000cf052",
+    "01c81d84-020a-71fa-0005-0f02000ca066",
+    "01c81d84-020a-71fa-0005-0f02000ca06a",
+    "01c81d84-020a-73aa-0005-0f02000cf056",
+    "01c81d84-020a-73aa-0005-0f02000cf05a",
+    "01c81d84-020a-71c1-0005-0f02000c90ba",
+    "01c81d84-020a-71c1-0005-0f02000c90be",
+    "01c81d84-020a-73aa-0005-0f02000cf06a",
+    "01c81d84-020a-73aa-0005-0f02000cf06e",
+    "01c81d84-020a-71c1-0005-0f02000c90c2",
+    "01c81d84-020a-73aa-0005-0f02000cf072",
+    "01c81d84-020a-71fa-0005-0f02000ca07e",
+    "01c81d84-020a-73aa-0005-0f02000cf076",
+    "01c81d84-020a-71fa-0005-0f02000ca082",
+    "01c81d84-020a-71c1-0005-0f02000c90d2",
+    "01c81d84-020a-73aa-0005-0f02000cf08e",
+    "01c81d84-020a-71c1-0005-0f02000c90d6",
+    "01c81d84-020a-73aa-0005-0f02000cf092",
+    "01c81d84-020a-73aa-0005-0f02000cf096",
+    "01c81d84-020a-71c1-0005-0f02000c90da",
+    "01c81d84-020a-73aa-0005-0f02000cf09a",
+    "01c81d84-020a-73aa-0005-0f02000cf0aa",
+    "01c81d84-020a-71fa-0005-0f02000ca0b2",
+    "01c81d84-020a-71c1-0005-0f02000c90ee",
+    "01c81d84-020a-71fa-0005-0f02000ca0b6",
+    "01c81d84-020a-73aa-0005-0f02000cf0ae",
+    "01c81d84-020a-71fa-0005-0f02000ca0ba",
+    "01c81d84-020a-71fa-0005-0f02000ca0be",
+    "01c81d84-020a-73aa-0005-0f02000cf0c6",
+    "01c81d84-020a-71c1-0005-0f02000c910a",
+    "01c81d84-020a-71fa-0005-0f02000ca0ce",
+    "01c81d84-020a-71fa-0005-0f02000ca0d2",
+    "01c81d84-020a-71c1-0005-0f02000c910e",
+    "01c81d84-020a-73aa-0005-0f02000cf0ca",
+    "01c81d84-020a-73aa-0005-0f02000cf0de",
+    "01c81d84-020a-71c1-0005-0f02000c9126",
+    "01c81d84-020a-71c1-0005-0f02000c912a",
+    "01c81d84-020a-71fa-0005-0f02000ca0e6",
+    "01c81d84-020a-71c1-0005-0f02000c912e",
+    "01c81d84-020a-73aa-0005-0f02000cf0e2"
+  ],
+  "status": "MEASURED_ATTRIBUTION_PENDING",
+  "cube_end_to_end": "MEASURED_ATTRIBUTION_PENDING",
+  "clustering_allowance_credits": 0.5,
+  "clustering_budget_scope": "operator allowance; serverless billing is delayed, not a hard cap",
+  "source_fingerprints": [
+    [
+      {
+        "N": 713467,
+        "H": 575373465525092646
+      }
+    ],
+    [
+      {
+        "N": 86,
+        "H": -8131953364267740626
+      }
+    ],
+    [
+      {
+        "N": 237514,
+        "H": -1311337240067052453
+      }
+    ],
+    [
+      {
+        "N": 1453,
+        "H": -7147618337733677279
+      }
+    ],
+    [
+      {
+        "N": 7042,
+        "H": 647600777184778431
+      }
+    ],
+    [
+      {
+        "N": 13149,
+        "H": 9114270817110152065
+      }
+    ]
+  ],
+  "cube_result_sha256": "25648a95c41a2ebf07b10080c5a8c3d4ae17796433d319bbb77e9f8587a3e743",
+  "clustering_information": [
+    {
+      "INFO": "{\n  \"average_depth\": 8,\n  \"average_overlaps\": 7,\n  \"cluster_by_keys\": \"LINEAR(fiscal_year,worksite_state)\",\n  \"clustering_errors\": [],\n  \"total_constant_partition_count\": 0,\n  \"total_partition_count\": 8,\n  \"version\": \"OPTIMA\"\n}"
+    }
+  ],
+  "clustering_completion": "UNKNOWN: key configured; asynchronous maintenance not presumed complete",
+  "restoration": {
+    "status": "VERIFIED",
+    "errors": []
+  },
+  "ended_at_utc": "2026-11-01T07:32:58Z",
+  "warehouse_hour_buckets": [
+    {
+      "START_TIME": "2026-11-01 00:00:00-07:00",
+      "END_TIME": "2026-11-01 01:00:00-07:00",
+      "CREDITS_USED_COMPUTE": "0.041688000",
+      "CREDITS_USED_CLOUD_SERVICES": "0.004043887",
+      "CREDITS_ATTRIBUTED_COMPUTE_QUERIES": "0.018119081"
+    }
+  ],
+  "clustering_history": [],
+  "billing_scope": "query compute, whole warehouse hours, and serverless maintenance separate; no dollar conversion"
+}

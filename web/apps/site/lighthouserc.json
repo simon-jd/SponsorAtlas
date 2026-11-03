@@ -1,0 +1,27 @@
+{
+  "ci": {
+    "collect": {
+      "url": ["http://127.0.0.1:3100/en"],
+      "numberOfRuns": 1,
+      "chromePath": "/usr/bin/google-chrome",
+      "settings": {
+        "chromeFlags": "--headless --no-sandbox --disable-gpu",
+        "onlyCategories": ["performance"],
+        "formFactor": "desktop",
+        "screenEmulation": {"mobile": false, "width": 1280, "height": 900, "deviceScaleFactor": 1, "disabled": false},
+        "throttlingMethod": "simulate",
+        "throttling": {"rttMs": 40, "throughputKbps": 10240, "cpuSlowdownMultiplier": 4},
+        "maxWaitForLoad": 15000
+      }
+    },
+    "assert": {
+      "assertions": {
+        "largest-contentful-paint": ["error", {"maxNumericValue": 2500}],
+        "cumulative-layout-shift": ["error", {"maxNumericValue": 0.1}],
+        "total-blocking-time": ["error", {"maxNumericValue": 200}],
+        "resource-summary:script:size": ["error", {"maxNumericValue": 200000}]
+      }
+    },
+    "upload": {"target": "filesystem", "outputDir": "evidence/quality-lhci"}
+  }
+}

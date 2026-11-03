@@ -1,0 +1,119 @@
+version: 2
+models:
+- name: fact_wage_benchmark
+  description: Cross-industry all-ownership official estimates; survey date is month
+    anchor, not observation day.
+  config:
+    contract:
+      enforced: true
+  columns:
+  - name: soc_code
+    data_type: varchar
+    data_tests:
+    - not_null
+  - name: area_type
+    data_type: varchar
+    data_tests:
+    - not_null
+  - name: area_code
+    data_type: varchar
+    data_tests:
+    - not_null
+  - name: survey_month
+    data_type: varchar
+  - name: occupation_key
+    data_type: varchar
+    data_tests:
+    - not_null
+    - relationships:
+        arguments:
+          to: ref('dim_occupation')
+          field: occupation_key
+  - name: geography_key
+    data_type: varchar
+    data_tests:
+    - not_null
+    - relationships:
+        arguments:
+          to: ref('dim_geography')
+          field: geography_key
+  - name: occupation_vintage
+    data_type: varchar
+  - name: occupation_title
+    data_type: varchar
+  - name: occupation_group
+    data_type: varchar
+  - name: area_title
+    data_type: varchar
+  - name: industry_group
+    data_type: varchar
+  - name: naics
+    data_type: varchar
+  - name: ownership_code
+    data_type: varchar
+  - name: annual_median_wage_raw
+    data_type: varchar
+  - name: hourly_median_wage_raw
+    data_type: varchar
+  - name: total_employment_raw
+    data_type: varchar
+  - name: annual_flag
+    data_type: varchar
+  - name: hourly_flag
+    data_type: varchar
+  - name: wage_status
+    data_type: varchar
+  - name: source_release
+    data_type: varchar
+  - name: source_sha256
+    data_type: varchar
+  - name: source_url
+    data_type: varchar
+  - name: canonical_payload_json
+    data_type: varchar
+  - name: survey_year
+    data_type: integer
+    data_tests:
+    - not_null
+  - name: survey_date_key
+    data_type: integer
+    data_tests:
+    - not_null
+    - relationships:
+        arguments:
+          to: ref('dim_date')
+          field: date_key
+  - name: source_row_number
+    data_type: bigint
+  - name: source_occurrence_count
+    data_type: bigint
+  - name: source_first_row_number
+    data_type: bigint
+  - name: source_last_row_number
+    data_type: bigint
+  - name: annual_mean_wage
+    data_type: decimal(18,2)
+  - name: hourly_mean_wage
+    data_type: decimal(18,2)
+  - name: annual_median_wage
+    data_type: decimal(18,2)
+  - name: hourly_median_wage
+    data_type: decimal(18,2)
+  - name: annual_p10_wage
+    data_type: decimal(18,2)
+  - name: annual_p25_wage
+    data_type: decimal(18,2)
+  - name: annual_p75_wage
+    data_type: decimal(18,2)
+  - name: annual_p90_wage
+    data_type: decimal(18,2)
+  - name: hourly_p10_wage
+    data_type: decimal(18,2)
+  - name: hourly_p25_wage
+    data_type: decimal(18,2)
+  - name: hourly_p75_wage
+    data_type: decimal(18,2)
+  - name: hourly_p90_wage
+    data_type: decimal(18,2)
+  - name: total_employment
+    data_type: decimal(38,0)

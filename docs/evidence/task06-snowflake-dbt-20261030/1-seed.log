@@ -1,0 +1,43 @@
+[0m02:53:26  Running with dbt=1.12.6
+[0m02:53:26  Registered adapter: snowflake=1.12.4
+[0m02:53:26  Unable to do partial parsing because saved manifest not found. Starting full parse.
+[0m02:53:28  Found 18 models, 1 snapshot, 82 data tests, 15 seeds, 20 sources, 595 macros, 1 unit test
+[0m02:53:28  
+[0m02:53:28  Concurrency: 2 threads (target='snowflake')
+[0m02:53:28  
+[0m02:53:29  1 of 15 START seed file STAGING.board_column_map ............................... [RUN]
+[0m02:53:29  2 of 15 START seed file STAGING.county_fips .................................... [RUN]
+[0m02:53:33  1 of 15 OK loaded seed file STAGING.board_column_map ........................... [[32mINSERT 61[0m in 3.92s]
+[0m02:53:33  3 of 15 START seed file STAGING.file_column_map ................................ [RUN]
+[0m02:53:34  2 of 15 OK loaded seed file STAGING.county_fips ................................ [[32mINSERT 6447[0m in 4.59s]
+[0m02:53:34  4 of 15 START seed file STAGING.lca_column_map ................................. [RUN]
+[0m02:53:35  3 of 15 OK loaded seed file STAGING.file_column_map ............................ [[32mINSERT 64[0m in 1.72s]
+[0m02:53:35  5 of 15 START seed file STAGING.physical_column_map ............................ [RUN]
+[0m02:53:35  4 of 15 OK loaded seed file STAGING.lca_column_map ............................. [[32mINSERT 196[0m in 1.38s]
+[0m02:53:35  6 of 15 START seed file STAGING.place_county_fips .............................. [RUN]
+[0m02:53:36  5 of 15 OK loaded seed file STAGING.physical_column_map ........................ [[32mINSERT 139[0m in 1.31s]
+[0m02:53:36  7 of 15 START seed file STAGING.ref_bls_areas_2025 ............................. [RUN]
+[0m02:53:37  7 of 15 OK loaded seed file STAGING.ref_bls_areas_2025 ......................... [[32mINSERT 585[0m in 1.15s]
+[0m02:53:37  8 of 15 START seed file STAGING.ref_county_2023 ................................ [RUN]
+[0m02:53:39  8 of 15 OK loaded seed file STAGING.ref_county_2023 ............................ [[32mINSERT 3222[0m in 2.10s]
+[0m02:53:39  9 of 15 START seed file STAGING.ref_county_cbsa_2023 ........................... [RUN]
+[0m02:53:41  9 of 15 OK loaded seed file STAGING.ref_county_cbsa_2023 ....................... [[32mINSERT 1915[0m in 1.62s]
+[0m02:53:41  10 of 15 START seed file STAGING.ref_oews_2025 ................................. [RUN]
+[0m02:53:42  10 of 15 OK loaded seed file STAGING.ref_oews_2025 ............................. [[32mINSERT 6[0m in 1.27s]
+[0m02:53:42  11 of 15 START seed file STAGING.ref_soc_2018 .................................. [RUN]
+[0m02:53:44  11 of 15 OK loaded seed file STAGING.ref_soc_2018 .............................. [[32mINSERT 1447[0m in 1.46s]
+[0m02:53:44  12 of 15 START seed file STAGING.staging_flag_limits ........................... [RUN]
+[0m02:53:45  12 of 15 OK loaded seed file STAGING.staging_flag_limits ....................... [[32mINSERT 4[0m in 1.04s]
+[0m02:53:45  13 of 15 START seed file STAGING.state_fips .................................... [RUN]
+[0m02:53:46  13 of 15 OK loaded seed file STAGING.state_fips ................................ [[32mINSERT 57[0m in 1.04s]
+[0m02:53:46  14 of 15 START seed file STAGING.wage_test_inputs .............................. [RUN]
+[0m02:53:47  14 of 15 OK loaded seed file STAGING.wage_test_inputs .......................... [[32mINSERT 1[0m in 1.01s]
+[0m02:53:47  15 of 15 START seed file STAGING.zcta_county_fips .............................. [RUN]
+[0m02:53:52  6 of 15 OK loaded seed file STAGING.place_county_fips .......................... [[32mINSERT 30587[0m in 16.65s]
+[0m02:54:04  15 of 15 OK loaded seed file STAGING.zcta_county_fips .......................... [[32mINSERT 27359[0m in 16.84s]
+[0m02:54:04  
+[0m02:54:04  Finished running 15 seeds in 0 hours 0 minutes and 36.14 seconds (36.14s).
+[0m02:54:04  
+[0m02:54:04  [32mCompleted successfully[0m
+[0m02:54:04  
+[0m02:54:04  Done. PASS=15 WARN=0 ERROR=0 SKIP=0 NO-OP=0 REUSED=0 TOTAL=15

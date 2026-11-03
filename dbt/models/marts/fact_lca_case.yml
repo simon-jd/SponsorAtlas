@@ -1,0 +1,107 @@
+version: 2
+models:
+- name: fact_lca_case
+  description: One latest case; capture-time history is not backfilled.
+  config:
+    contract:
+      enforced: true
+  columns:
+  - name: case_number
+    data_type: varchar
+    data_tests:
+    - unique
+    - not_null
+  - name: case_status
+    data_type: varchar
+  - name: visa_class
+    data_type: varchar
+  - name: job_title
+    data_type: varchar
+  - name: source_employer_name
+    data_type: varchar
+  - name: source_employer_key
+    data_type: varchar
+  - name: employer_id
+    data_type: varchar
+    data_tests:
+    - relationships:
+        arguments:
+          to: ref('dim_employer')
+          field: employer_id
+  - name: employer_key
+    data_type: varchar
+    data_tests:
+    - relationships:
+        arguments:
+          to: ref('dim_employer')
+          field: employer_key
+  - name: employer_history_status
+    data_type: varchar
+  - name: fact_time_precision
+    data_type: varchar
+  - name: occupation_key
+    data_type: varchar
+    data_tests:
+    - relationships:
+        arguments:
+          to: ref('dim_occupation')
+          field: occupation_key
+  - name: geography_key
+    data_type: varchar
+    data_tests:
+    - relationships:
+        arguments:
+          to: ref('dim_geography')
+          field: geography_key
+  - name: soc_code_raw
+    data_type: varchar
+  - name: soc_code
+    data_type: varchar
+  - name: occupation_mapping_status
+    data_type: varchar
+  - name: county_mapping_status
+    data_type: varchar
+  - name: wage_unit
+    data_type: varchar
+  - name: source_system
+    data_type: varchar
+  - name: source_release
+    data_type: varchar
+  - name: source_sha256
+    data_type: varchar
+  - name: source_url
+    data_type: varchar
+  - name: latest_selection_status
+    data_type: varchar
+  - name: is_certified
+    data_type: boolean
+  - name: decision_date_key
+    data_type: integer
+    data_tests:
+    - relationships:
+        arguments:
+          to: ref('dim_date')
+          field: date_key
+  - name: fiscal_year
+    data_type: integer
+  - name: worksite_state
+    data_type: varchar
+    description: Normalized event worksite state from the winning LCA source occurrence; never employer address or inferred geography. Missing and malformed source values remain visible.
+  - name: decision_date
+    data_type: date
+  - name: received_date
+    data_type: date
+  - name: begin_date
+    data_type: date
+  - name: end_date
+    data_type: date
+  - name: source_row_number
+    data_type: bigint
+  - name: source_occurrence_count
+    data_type: bigint
+  - name: wage_amount
+    data_type: decimal(18,2)
+  - name: annual_wage
+    data_type: decimal(24,2)
+  - name: worker_positions
+    data_type: decimal(38,0)

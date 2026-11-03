@@ -1,0 +1,5 @@
+views:
+  - name: lca_metrics
+    cubes:
+      - join_path: lca
+        includes: [case_count, certified_rate, wage_p50, wage_p75, wage_p90, employer, soc_major, soc, metro, fiscal_year, employer_history_status]

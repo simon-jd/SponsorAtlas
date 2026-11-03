@@ -1,0 +1,73 @@
+{
+  "kind": "SYNTHETIC_REAL_CLI_AND_GATEWAY_RESTART_NOT_SNOWFLAKE",
+  "ready_revision": "310af3c508a726da3ebc07d329d631a0",
+  "tables_after_cli_closed": [
+    {
+      "table": "lca_counts_vbpk4bc5_e5vx1yt0_1ldq6c1",
+      "rows": [
+        [
+          2025,
+          3,
+          2
+        ],
+        [
+          2026,
+          3,
+          1
+        ]
+      ]
+    },
+    {
+      "table": "postings_counts_u00u4wti_rukmy5ud_1ldq6c1",
+      "rows": [
+        [
+          2025,
+          3
+        ],
+        [
+          2026,
+          1
+        ]
+      ]
+    }
+  ],
+  "tables_after_gateway_closed": [
+    {
+      "table": "lca_counts_vbpk4bc5_e5vx1yt0_1ldq6c1",
+      "rows": [
+        [
+          2025,
+          3,
+          2
+        ],
+        [
+          2026,
+          3,
+          1
+        ]
+      ]
+    },
+    {
+      "table": "postings_counts_u00u4wti_rukmy5ud_1ldq6c1",
+      "rows": [
+        [
+          2025,
+          3
+        ],
+        [
+          2026,
+          1
+        ]
+      ]
+    }
+  ],
+  "gateway_data": [
+    {
+      "postings.count": "4"
+    }
+  ],
+  "active_gateway_refresh_refused": true,
+  "cli_exit_code_after_awaited_shutdown": 0,
+  "gateway_exit_code_after_sigterm_awaited_shutdown": 0,
+  "closed_file_rows_and_ready_revision_reused": true
+}

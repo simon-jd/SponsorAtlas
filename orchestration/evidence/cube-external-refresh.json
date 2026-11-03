@@ -1,0 +1,139 @@
+{
+  "kind": "SYNTHETIC_READ_ONLY_EXTERNAL_REFRESH_NOT_SNOWFLAKE",
+  "runs": [
+    {
+      "revision": "11111111111111111111111111111111",
+      "data": [
+        {
+          "postings.count": "4"
+        }
+      ],
+      "usedPreAggregations": {
+        "semantic_preagg.postings_counts": {
+          "preAggregationId": "postings.counts",
+          "lastUpdatedAt": 1792874349000,
+          "type": "rollup"
+        }
+      },
+      "physical_tables": [
+        {
+          "table_name": "postings_counts_hqqjobsf_rukmy5ud_1ldq5rd"
+        }
+      ],
+      "writes": [
+        "CREATE TABLE semantic_preagg.postings_counts_hqqjobsf_rukmy5ud_1ldq5rd (\"postings__fiscal_year\" int, \"postings__count\" int)",
+        "INSERT INTO semantic_preagg.postings_counts_hqqjobsf_rukmy5ud_1ldq5rd\n          (\"postings__fiscal_year\", \"postings__count\")\n          VALUES (?, ?)",
+        "INSERT INTO semantic_preagg.postings_counts_hqqjobsf_rukmy5ud_1ldq5rd\n          (\"postings__fiscal_year\", \"postings__count\")\n          VALUES (?, ?)"
+      ]
+    },
+    {
+      "revision": "11111111111111111111111111111111",
+      "data": [
+        {
+          "postings.count": "4"
+        }
+      ],
+      "usedPreAggregations": {
+        "semantic_preagg.postings_counts": {
+          "preAggregationId": "postings.counts",
+          "lastUpdatedAt": 1792874349000,
+          "type": "rollup"
+        }
+      },
+      "physical_tables": [
+        {
+          "table_name": "postings_counts_hqqjobsf_rukmy5ud_1ldq5rd"
+        }
+      ],
+      "writes": []
+    },
+    {
+      "revision": "11111111111111111111111111111111",
+      "data": [
+        {
+          "postings.count": "4"
+        }
+      ],
+      "usedPreAggregations": {
+        "semantic_preagg.postings_counts": {
+          "preAggregationId": "postings.counts",
+          "lastUpdatedAt": 1792874349000,
+          "type": "rollup"
+        }
+      },
+      "physical_tables": [
+        {
+          "table_name": "postings_counts_hqqjobsf_rukmy5ud_1ldq5rd"
+        }
+      ],
+      "writes": []
+    },
+    {
+      "revision": "22222222222222222222222222222222",
+      "data": [
+        {
+          "postings.count": "5"
+        }
+      ],
+      "usedPreAggregations": {
+        "semantic_preagg.postings_counts": {
+          "preAggregationId": "postings.counts",
+          "lastUpdatedAt": 1792874350000,
+          "type": "rollup"
+        }
+      },
+      "physical_tables": [
+        {
+          "table_name": "postings_counts_hqqjobsf_rukmy5ud_1ldq5rd"
+        },
+        {
+          "table_name": "postings_counts_qrp1ixpg_rukmy5ud_1ldq5re"
+        }
+      ],
+      "writes": [
+        "CREATE TABLE semantic_preagg.postings_counts_qrp1ixpg_rukmy5ud_1ldq5re (\"postings__fiscal_year\" int, \"postings__count\" int)",
+        "INSERT INTO semantic_preagg.postings_counts_qrp1ixpg_rukmy5ud_1ldq5re\n          (\"postings__fiscal_year\", \"postings__count\")\n          VALUES (?, ?)",
+        "INSERT INTO semantic_preagg.postings_counts_qrp1ixpg_rukmy5ud_1ldq5re\n          (\"postings__fiscal_year\", \"postings__count\")\n          VALUES (?, ?)"
+      ]
+    },
+    {
+      "revision": "22222222222222222222222222222222",
+      "data": [
+        {
+          "postings.count": "5"
+        }
+      ],
+      "usedPreAggregations": {
+        "semantic_preagg.postings_counts": {
+          "preAggregationId": "postings.counts",
+          "lastUpdatedAt": 1792874350000,
+          "type": "rollup"
+        }
+      },
+      "physical_tables": [
+        {
+          "table_name": "postings_counts_hqqjobsf_rukmy5ud_1ldq5rd"
+        },
+        {
+          "table_name": "postings_counts_m4kiu5tl_rukmy5ud_1ldq5rf"
+        },
+        {
+          "table_name": "postings_counts_qrp1ixpg_rukmy5ud_1ldq5re"
+        }
+      ],
+      "writes": []
+    }
+  ],
+  "sourceQueries": [
+    "SELECT 1",
+    "SELECT '11111111111111111111111111111111'",
+    "SELECT \"postings\".fiscal_year \"postings__fiscal_year\", sum(CASE WHEN is_active THEN 1 ELSE 0 END) \"postings__count\" \nFROM  mart_postings  AS \"postings\"\nGROUP BY 1",
+    "SELECT 1",
+    "SELECT '22222222222222222222222222222222'",
+    "SELECT \"postings\".fiscal_year \"postings__fiscal_year\", sum(CASE WHEN is_active THEN 1 ELSE 0 END) \"postings__count\" \nFROM  mart_postings  AS \"postings\"\nGROUP BY 1",
+    "SELECT 1",
+    "SELECT '33333333333333333333333333333333'",
+    "SELECT \"postings\".fiscal_year \"postings__fiscal_year\", sum(CASE WHEN is_active THEN 1 ELSE 0 END) \"postings__count\" \nFROM  mart_postings  AS \"postings\"\nGROUP BY 1"
+  ],
+  "maxRSS_KiB": 987200
+}

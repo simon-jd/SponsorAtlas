@@ -1,0 +1,26 @@
+nproc; uptime
+32
+ 21:55:37 up 12 days, 19:58,  4 users,  load average: 3.35, 3.28, 2.56
+semantic/run.sh test actual
+{"kind": "ACTUAL_PUBLIC_MARTS", "rows": {"MARTS.fact_lca_case": 713467, "MARTS.fact_job_posting_daily": 86, "MARTS.fact_wage_benchmark": 237514}, "parquet_bytes": 12004809, "oracle": {"fiscal_groups": [{"fiscal_year": 2024, "case_count": 118646, "certified_rate": 0.9795863324511572}, {"fiscal_year": 2025, "case_count": 594821, "certified_rate": 0.977418416632903}], "lca_groups": {"count": 280799, "sha256": "f9fd5aa4763cca7a69feffd5ef42f23875311ab7600da1098c7563b0f92158ea"}, "lca": {"case_count": 713467.0, "certified_rate": 0.9777789302098064, "wage_p50": 120000.0, "wage_p75": 156383.63, "wage_p90": 200000.0}, "postings": 86, "oews_median": 135980.0, "wage_filters": [{"member": "wages.soc", "operator": "equals", "values": ["15-1252"]}, {"member": "wages.area", "operator": "equals", "values": ["1:99"]}, {"member": "wages.survey_year", "operator": "equals", "values": ["2025"]}]}}
+▶ real Cube REST semantic contract
+  ✔ requires JWT (2.117852ms)
+  ✔ SQL and extra API routes disabled (8.475019ms)
+  ✔ bounded engine refuses source writes and external reads (0.293397ms)
+  ✔ all seven metrics present in actual Cube meta (1.688957ms)
+  ✔ LCA five metrics match independent SQL and hand fixture (128.674926ms)
+  ✔ postings and OEWS match independent SQL (62.570762ms)
+  ✔ five dimensions grouped together preserve every LCA row (1915.371805ms)
+  ✔ views execute and additive preaggregation is built and used (105.069329ms)
+✔ real Cube REST semantic contract (3705.489484ms)
+ℹ tests 9
+ℹ suites 0
+ℹ pass 9
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 3806.944272
+{"kind": "actual", "built_rollups": 2, "rollup_rows": 3}
+uptime
+ 21:55:45 up 12 days, 19:58,  4 users,  load average: 3.37, 3.29, 2.57

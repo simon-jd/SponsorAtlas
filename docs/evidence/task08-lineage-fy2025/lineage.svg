@@ -1,0 +1,209 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1670" height="1764" viewBox="0 0 1670 1764" font-family="sans-serif">
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="10" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#52606d"/></marker></defs>
+<rect width="1670" height="1764" fill="#ffffff"/>
+<text x="30" y="38" font-size="16" font-weight="bold" text-anchor="start" fill="#1f2933">SponsorAtlas column lineage, OpenMetadata 2.0.6 API, 2026-10-28T08:21:14+00:00</text>
+<path class="table-edge" d="M280,93.0 C495.0,93.0 495.0,161.0 710,161.0" fill="none" stroke="#52606d" stroke-width="1.4" marker-end="url(#arrow)"/>
+<text x="495.0" y="122.0" font-size="10" font-weight="normal" text-anchor="middle" fill="#52606d">2 columns (DbtLineage)</text>
+<path class="table-edge" d="M280,161.0 C495.0,161.0 495.0,161.0 710,161.0" fill="none" stroke="#52606d" stroke-width="1.4" marker-end="url(#arrow)"/>
+<text x="495.0" y="156.0" font-size="10" font-weight="normal" text-anchor="middle" fill="#52606d">15 columns (DbtLineage)</text>
+<path class="table-edge" d="M960,93.0 C1005.0,93.0 1005.0,93.0 1050,93.0" fill="none" stroke="#52606d" stroke-width="1.4" marker-end="url(#arrow)"/>
+<text x="1005.0" y="88.0" font-size="10" font-weight="normal" text-anchor="middle" fill="#52606d">53 columns (DbtLineage)</text>
+<path class="table-edge" d="M960,161.0 C1005.0,161.0 1005.0,93.0 1050,93.0" fill="none" stroke="#52606d" stroke-width="1.4" marker-end="url(#arrow)"/>
+<text x="1005.0" y="122.0" font-size="10" font-weight="normal" text-anchor="middle" fill="#52606d">20 columns (DbtLineage)</text>
+<path class="table-edge" d="M1300,93.0 C1345.0,93.0 1345.0,93.0 1390,93.0" fill="none" stroke="#52606d" stroke-width="1.4" marker-end="url(#arrow)"/>
+<text x="1345.0" y="88.0" font-size="10" font-weight="normal" text-anchor="middle" fill="#52606d">33 columns (DbtLineage)</text>
+<path class="table-edge" d="M280,229.0 C835.0,229.0 835.0,93.0 1390,93.0" fill="none" stroke="#52606d" stroke-width="1.4" marker-end="url(#arrow)"/>
+<text x="835.0" y="156.0" font-size="10" font-weight="normal" text-anchor="middle" fill="#52606d">1 column (DbtLineage)</text>
+<path class="table-edge" d="M620,93.0 C665.0,93.0 665.0,161.0 710,161.0" fill="none" stroke="#52606d" stroke-width="1.4" marker-end="url(#arrow)"/>
+<text x="665.0" y="122.0" font-size="10" font-weight="normal" text-anchor="middle" fill="#52606d">1 column (DbtLineage)</text>
+<path class="table-edge" d="M620,93.0 C1005.0,93.0 1005.0,93.0 1390,93.0" fill="none" stroke="#52606d" stroke-width="1.4" marker-end="url(#arrow)"/>
+<text x="1005.0" y="88.0" font-size="10" font-weight="normal" text-anchor="middle" fill="#52606d">3 columns (DbtLineage)</text>
+<path class="table-edge" d="M280,297.0 C495.0,297.0 495.0,161.0 710,161.0" fill="none" stroke="#52606d" stroke-width="1.4" marker-end="url(#arrow)"/>
+<text x="495.0" y="224.0" font-size="10" font-weight="normal" text-anchor="middle" fill="#52606d">3 columns (DbtLineage)</text>
+<path class="table-edge" d="M280,365.0 C495.0,365.0 495.0,161.0 710,161.0" fill="none" stroke="#52606d" stroke-width="1.4" marker-end="url(#arrow)"/>
+<text x="495.0" y="258.0" font-size="10" font-weight="normal" text-anchor="middle" fill="#52606d">2 columns (DbtLineage)</text>
+<path class="table-edge" d="M280,433.0 C325.0,433.0 325.0,93.0 370,93.0" fill="none" stroke="#52606d" stroke-width="1.4" marker-end="url(#arrow)"/>
+<text x="325.0" y="258.0" font-size="10" font-weight="normal" text-anchor="middle" fill="#52606d">0 columns (DbtLineage)</text>
+<path class="table-edge" d="M280,501.0 C325.0,501.0 325.0,161.0 370,161.0" fill="none" stroke="#52606d" stroke-width="1.4" marker-end="url(#arrow)"/>
+<text x="325.0" y="326.0" font-size="10" font-weight="normal" text-anchor="middle" fill="#52606d">45 columns (DbtLineage)</text>
+<path class="table-edge" d="M280,569.0 C325.0,569.0 325.0,161.0 370,161.0" fill="none" stroke="#52606d" stroke-width="1.4" marker-end="url(#arrow)"/>
+<text x="325.0" y="360.0" font-size="10" font-weight="normal" text-anchor="middle" fill="#52606d">45 columns (DbtLineage)</text>
+<path class="table-edge" d="M280,637.0 C325.0,637.0 325.0,161.0 370,161.0" fill="none" stroke="#52606d" stroke-width="1.4" marker-end="url(#arrow)"/>
+<text x="325.0" y="394.0" font-size="10" font-weight="normal" text-anchor="middle" fill="#52606d">45 columns (DbtLineage)</text>
+<path class="table-edge" d="M280,705.0 C325.0,705.0 325.0,161.0 370,161.0" fill="none" stroke="#52606d" stroke-width="1.4" marker-end="url(#arrow)"/>
+<text x="325.0" y="428.0" font-size="10" font-weight="normal" text-anchor="middle" fill="#52606d">45 columns (DbtLineage)</text>
+<path class="table-edge" d="M280,773.0 C325.0,773.0 325.0,161.0 370,161.0" fill="none" stroke="#52606d" stroke-width="1.4" marker-end="url(#arrow)"/>
+<text x="325.0" y="462.0" font-size="10" font-weight="normal" text-anchor="middle" fill="#52606d">45 columns (DbtLineage)</text>
+<path class="table-edge" d="M280,841.0 C325.0,841.0 325.0,161.0 370,161.0" fill="none" stroke="#52606d" stroke-width="1.4" marker-end="url(#arrow)"/>
+<text x="325.0" y="496.0" font-size="10" font-weight="normal" text-anchor="middle" fill="#52606d">5 columns (DbtLineage)</text>
+<path class="table-edge" d="M280,909.0 C325.0,909.0 325.0,161.0 370,161.0" fill="none" stroke="#52606d" stroke-width="1.4" marker-end="url(#arrow)"/>
+<text x="325.0" y="530.0" font-size="10" font-weight="normal" text-anchor="middle" fill="#52606d">0 columns (DbtLineage)</text>
+<path class="table-edge" d="M280,977.0 C325.0,977.0 325.0,161.0 370,161.0" fill="none" stroke="#52606d" stroke-width="1.4" marker-end="url(#arrow)"/>
+<text x="325.0" y="564.0" font-size="10" font-weight="normal" text-anchor="middle" fill="#52606d">5 columns (DbtLineage)</text>
+<path class="table-edge" d="M280,1045.0 C325.0,1045.0 325.0,161.0 370,161.0" fill="none" stroke="#52606d" stroke-width="1.4" marker-end="url(#arrow)"/>
+<text x="325.0" y="598.0" font-size="10" font-weight="normal" text-anchor="middle" fill="#52606d">1 column (DbtLineage)</text>
+<path class="table-edge" d="M620,161.0 C665.0,161.0 665.0,93.0 710,93.0" fill="none" stroke="#52606d" stroke-width="1.4" marker-end="url(#arrow)"/>
+<text x="665.0" y="122.0" font-size="10" font-weight="normal" text-anchor="middle" fill="#52606d">53 columns (PipelineLineage)</text>
+<path class="table-edge" d="M280,1113.0 C325.0,1113.0 325.0,161.0 370,161.0" fill="none" stroke="#52606d" stroke-width="1.4" marker-end="url(#arrow)"/>
+<text x="325.0" y="632.0" font-size="10" font-weight="normal" text-anchor="middle" fill="#52606d">5 columns (DbtLineage)</text>
+<path class="table-edge" d="M280,1181.0 C325.0,1181.0 325.0,229.0 370,229.0" fill="none" stroke="#52606d" stroke-width="1.4" marker-end="url(#arrow)"/>
+<text x="325.0" y="700.0" font-size="10" font-weight="normal" text-anchor="middle" fill="#52606d">12 columns (DbtLineage)</text>
+<path class="table-edge" d="M620,229.0 C665.0,229.0 665.0,229.0 710,229.0" fill="none" stroke="#52606d" stroke-width="1.4" marker-end="url(#arrow)"/>
+<text x="665.0" y="224.0" font-size="10" font-weight="normal" text-anchor="middle" fill="#52606d">10 columns (DbtLineage)</text>
+<rect x="30" y="70" width="250" height="46" rx="6" fill="#e4f0fb" stroke="#2b6cb0"/>
+<text x="40" y="89" font-size="12" font-weight="bold" text-anchor="start" fill="#1f2933">DIMENSIONS_INPUT.employer_sources</text>
+<text x="40" y="106" font-size="9" font-weight="normal" text-anchor="start" fill="#52606d">sponsoratlas_local_public_facts_duckdb / fy2025-full</text>
+<rect x="30" y="138" width="250" height="46" rx="6" fill="#e4f0fb" stroke="#2b6cb0"/>
+<text x="40" y="157" font-size="12" font-weight="bold" text-anchor="start" fill="#1f2933">DIMENSIONS_INPUT.lca_attributes</text>
+<text x="40" y="174" font-size="9" font-weight="normal" text-anchor="start" fill="#52606d">sponsoratlas_local_public_facts_duckdb / fy2025-full</text>
+<rect x="710" y="70" width="250" height="46" rx="6" fill="#e4f0fb" stroke="#2b6cb0"/>
+<text x="720" y="89" font-size="12" font-weight="bold" text-anchor="start" fill="#1f2933">FACTS_INPUT.lca</text>
+<text x="720" y="106" font-size="9" font-weight="normal" text-anchor="start" fill="#52606d">sponsoratlas_local_public_facts_duckdb / fy2025-full</text>
+<rect x="710" y="138" width="250" height="46" rx="6" fill="#e4f0fb" stroke="#2b6cb0"/>
+<text x="720" y="157" font-size="12" font-weight="bold" text-anchor="start" fill="#1f2933">INTERMEDIATE.int_dimension_mapping</text>
+<text x="720" y="174" font-size="9" font-weight="normal" text-anchor="start" fill="#52606d">sponsoratlas_local_public_facts_duckdb / fy2025-full</text>
+<rect x="1050" y="70" width="250" height="46" rx="6" fill="#e4f0fb" stroke="#2b6cb0"/>
+<text x="1060" y="89" font-size="12" font-weight="bold" text-anchor="start" fill="#1f2933">INTERMEDIATE.int_lca_case_candidates</text>
+<text x="1060" y="106" font-size="9" font-weight="normal" text-anchor="start" fill="#52606d">sponsoratlas_local_public_facts_duckdb / fy2025-full</text>
+<rect x="30" y="206" width="250" height="46" rx="6" fill="#e4f0fb" stroke="#2b6cb0"/>
+<text x="40" y="225" font-size="12" font-weight="bold" text-anchor="start" fill="#1f2933">MARTS.dim_date</text>
+<text x="40" y="242" font-size="9" font-weight="normal" text-anchor="start" fill="#52606d">sponsoratlas_local_public_facts_duckdb / fy2025-full</text>
+<rect x="370" y="70" width="250" height="46" rx="6" fill="#e4f0fb" stroke="#2b6cb0"/>
+<text x="380" y="89" font-size="12" font-weight="bold" text-anchor="start" fill="#1f2933">MARTS.dim_employer</text>
+<text x="380" y="106" font-size="9" font-weight="normal" text-anchor="start" fill="#52606d">sponsoratlas_local_public_facts_duckdb / fy2025-full</text>
+<rect x="30" y="274" width="250" height="46" rx="6" fill="#e4f0fb" stroke="#2b6cb0"/>
+<text x="40" y="293" font-size="12" font-weight="bold" text-anchor="start" fill="#1f2933">MARTS.dim_geography</text>
+<text x="40" y="310" font-size="9" font-weight="normal" text-anchor="start" fill="#52606d">sponsoratlas_local_public_facts_duckdb / fy2025-full</text>
+<rect x="30" y="342" width="250" height="46" rx="6" fill="#e4f0fb" stroke="#2b6cb0"/>
+<text x="40" y="361" font-size="12" font-weight="bold" text-anchor="start" fill="#1f2933">MARTS.dim_occupation</text>
+<text x="40" y="378" font-size="9" font-weight="normal" text-anchor="start" fill="#52606d">sponsoratlas_local_public_facts_duckdb / fy2025-full</text>
+<rect x="1390" y="70" width="250" height="46" rx="6" fill="#e4f0fb" stroke="#2b6cb0"/>
+<text x="1400" y="89" font-size="12" font-weight="bold" text-anchor="start" fill="#1f2933">MARTS.fact_lca_case</text>
+<text x="1400" y="106" font-size="9" font-weight="normal" text-anchor="start" fill="#52606d">sponsoratlas_local_public_facts_duckdb / fy2025-full</text>
+<rect x="30" y="410" width="250" height="46" rx="6" fill="#e4f0fb" stroke="#2b6cb0"/>
+<text x="40" y="429" font-size="12" font-weight="bold" text-anchor="start" fill="#1f2933">SNAPSHOTS.snap_employer</text>
+<text x="40" y="446" font-size="9" font-weight="normal" text-anchor="start" fill="#52606d">sponsoratlas_local_public_facts_duckdb / fy2025-full</text>
+<rect x="30" y="478" width="250" height="46" rx="6" fill="#e4f0fb" stroke="#2b6cb0"/>
+<text x="40" y="497" font-size="12" font-weight="bold" text-anchor="start" fill="#1f2933">RAW_LCA.LCA_FY2024_Q4</text>
+<text x="40" y="514" font-size="9" font-weight="normal" text-anchor="start" fill="#52606d">sponsoratlas_local_public_staging_duckdb / fy2025-full</text>
+<rect x="30" y="546" width="250" height="46" rx="6" fill="#e4f0fb" stroke="#2b6cb0"/>
+<text x="40" y="565" font-size="12" font-weight="bold" text-anchor="start" fill="#1f2933">RAW_LCA.LCA_FY2025_Q1</text>
+<text x="40" y="582" font-size="9" font-weight="normal" text-anchor="start" fill="#52606d">sponsoratlas_local_public_staging_duckdb / fy2025-full</text>
+<rect x="30" y="614" width="250" height="46" rx="6" fill="#e4f0fb" stroke="#2b6cb0"/>
+<text x="40" y="633" font-size="12" font-weight="bold" text-anchor="start" fill="#1f2933">RAW_LCA.LCA_FY2025_Q2</text>
+<text x="40" y="650" font-size="9" font-weight="normal" text-anchor="start" fill="#52606d">sponsoratlas_local_public_staging_duckdb / fy2025-full</text>
+<rect x="30" y="682" width="250" height="46" rx="6" fill="#e4f0fb" stroke="#2b6cb0"/>
+<text x="40" y="701" font-size="12" font-weight="bold" text-anchor="start" fill="#1f2933">RAW_LCA.LCA_FY2025_Q3</text>
+<text x="40" y="718" font-size="9" font-weight="normal" text-anchor="start" fill="#52606d">sponsoratlas_local_public_staging_duckdb / fy2025-full</text>
+<rect x="30" y="750" width="250" height="46" rx="6" fill="#e4f0fb" stroke="#2b6cb0"/>
+<text x="40" y="769" font-size="12" font-weight="bold" text-anchor="start" fill="#1f2933">RAW_LCA.LCA_FY2025_Q4</text>
+<text x="40" y="786" font-size="9" font-weight="normal" text-anchor="start" fill="#52606d">sponsoratlas_local_public_staging_duckdb / fy2025-full</text>
+<rect x="30" y="818" width="250" height="46" rx="6" fill="#e4f0fb" stroke="#2b6cb0"/>
+<text x="40" y="837" font-size="12" font-weight="bold" text-anchor="start" fill="#1f2933">STAGING.county_fips</text>
+<text x="40" y="854" font-size="9" font-weight="normal" text-anchor="start" fill="#52606d">sponsoratlas_local_public_staging_duckdb / fy2025-full</text>
+<rect x="30" y="886" width="250" height="46" rx="6" fill="#e4f0fb" stroke="#2b6cb0"/>
+<text x="40" y="905" font-size="12" font-weight="bold" text-anchor="start" fill="#1f2933">STAGING.lca_column_map</text>
+<text x="40" y="922" font-size="9" font-weight="normal" text-anchor="start" fill="#52606d">sponsoratlas_local_public_staging_duckdb / fy2025-full</text>
+<rect x="30" y="954" width="250" height="46" rx="6" fill="#e4f0fb" stroke="#2b6cb0"/>
+<text x="40" y="973" font-size="12" font-weight="bold" text-anchor="start" fill="#1f2933">STAGING.place_county_fips</text>
+<text x="40" y="990" font-size="9" font-weight="normal" text-anchor="start" fill="#52606d">sponsoratlas_local_public_staging_duckdb / fy2025-full</text>
+<rect x="30" y="1022" width="250" height="46" rx="6" fill="#e4f0fb" stroke="#2b6cb0"/>
+<text x="40" y="1041" font-size="12" font-weight="bold" text-anchor="start" fill="#1f2933">STAGING.state_fips</text>
+<text x="40" y="1058" font-size="9" font-weight="normal" text-anchor="start" fill="#52606d">sponsoratlas_local_public_staging_duckdb / fy2025-full</text>
+<rect x="370" y="138" width="250" height="46" rx="6" fill="#e4f0fb" stroke="#2b6cb0"/>
+<text x="380" y="157" font-size="12" font-weight="bold" text-anchor="start" fill="#1f2933">STAGING.stg_lca</text>
+<text x="380" y="174" font-size="9" font-weight="normal" text-anchor="start" fill="#52606d">sponsoratlas_local_public_staging_duckdb / fy2025-full</text>
+<rect x="30" y="1090" width="250" height="46" rx="6" fill="#e4f0fb" stroke="#2b6cb0"/>
+<text x="40" y="1109" font-size="12" font-weight="bold" text-anchor="start" fill="#1f2933">STAGING.zcta_county_fips</text>
+<text x="40" y="1126" font-size="9" font-weight="normal" text-anchor="start" fill="#52606d">sponsoratlas_local_public_staging_duckdb / fy2025-full</text>
+<rect x="710" y="206" width="250" height="46" rx="6" fill="#e4f0fb" stroke="#2b6cb0"/>
+<text x="720" y="225" font-size="12" font-weight="bold" text-anchor="start" fill="#1f2933">MARTS.fact_my_applications</text>
+<text x="720" y="242" font-size="9" font-weight="normal" text-anchor="start" fill="#52606d">sponsoratlas_local_synthetic_duckdb / synthetic_applications</text>
+<rect x="30" y="1158" width="250" height="46" rx="6" fill="#e4f0fb" stroke="#2b6cb0"/>
+<text x="40" y="1177" font-size="12" font-weight="bold" text-anchor="start" fill="#1f2933">RAW_JOBS.CDC_APPLICATION_EVENTS</text>
+<text x="40" y="1194" font-size="9" font-weight="normal" text-anchor="start" fill="#52606d">sponsoratlas_local_synthetic_duckdb / synthetic_applications</text>
+<rect x="370" y="206" width="250" height="46" rx="6" fill="#e4f0fb" stroke="#2b6cb0"/>
+<text x="380" y="225" font-size="12" font-weight="bold" text-anchor="start" fill="#1f2933">STAGING.stg_private_application_events</text>
+<text x="380" y="242" font-size="9" font-weight="normal" text-anchor="start" fill="#52606d">sponsoratlas_local_synthetic_duckdb / synthetic_applications</text>
+<text x="30" y="1264" font-size="14" font-weight="bold" text-anchor="start" fill="#1f2933">Column chains (every arrow is an API column edge)</text>
+<text x="30" y="1290" font-size="12" font-weight="bold" text-anchor="start" fill="#1f2933">synthetic_private_contact_email</text>
+<rect x="30" y="1298" width="230" height="40" rx="5" fill="#fdf6e3" stroke="#b7791f"/>
+<text x="38" y="1314" font-size="9" font-weight="normal" text-anchor="start" fill="#52606d">RAW_JOBS.CDC_APPLICATION_EVENTS</text>
+<text x="38" y="1330" font-size="12" font-weight="bold" text-anchor="start" fill="#1f2933">contact_email</text>
+<rect x="300" y="1298" width="230" height="40" rx="5" fill="#fdf6e3" stroke="#b7791f"/>
+<text x="308" y="1314" font-size="9" font-weight="normal" text-anchor="start" fill="#52606d">STAGING.stg_private_application_events</text>
+<text x="308" y="1330" font-size="12" font-weight="bold" text-anchor="start" fill="#1f2933">contact_email</text>
+<path class="column-edge" d="M260,1318.0 L300,1318.0" stroke="#b7791f" stroke-width="1.6" marker-end="url(#arrow)"/>
+<rect x="570" y="1298" width="230" height="40" rx="5" fill="#fdf6e3" stroke="#b7791f"/>
+<text x="578" y="1314" font-size="9" font-weight="normal" text-anchor="start" fill="#52606d">MARTS.fact_my_applications</text>
+<text x="578" y="1330" font-size="12" font-weight="bold" text-anchor="start" fill="#1f2933">contact_email</text>
+<path class="column-edge" d="M530,1318.0 L570,1318.0" stroke="#b7791f" stroke-width="1.6" marker-end="url(#arrow)"/>
+<text x="30" y="1380" font-size="12" font-weight="bold" text-anchor="start" fill="#1f2933">public_lca_case_number</text>
+<rect x="30" y="1388" width="230" height="40" rx="5" fill="#fdf6e3" stroke="#b7791f"/>
+<text x="38" y="1404" font-size="9" font-weight="normal" text-anchor="start" fill="#52606d">RAW_LCA.LCA_FY2025_Q4</text>
+<text x="38" y="1420" font-size="12" font-weight="bold" text-anchor="start" fill="#1f2933">payload_json</text>
+<rect x="300" y="1388" width="230" height="40" rx="5" fill="#fdf6e3" stroke="#b7791f"/>
+<text x="308" y="1404" font-size="9" font-weight="normal" text-anchor="start" fill="#52606d">STAGING.stg_lca</text>
+<text x="308" y="1420" font-size="12" font-weight="bold" text-anchor="start" fill="#1f2933">case_number</text>
+<path class="column-edge" d="M260,1408.0 L300,1408.0" stroke="#b7791f" stroke-width="1.6" marker-end="url(#arrow)"/>
+<rect x="570" y="1388" width="230" height="40" rx="5" fill="#fdf6e3" stroke="#b7791f"/>
+<text x="578" y="1404" font-size="9" font-weight="normal" text-anchor="start" fill="#52606d">FACTS_INPUT.lca</text>
+<text x="578" y="1420" font-size="12" font-weight="bold" text-anchor="start" fill="#1f2933">case_number</text>
+<path class="column-edge" d="M530,1408.0 L570,1408.0" stroke="#b7791f" stroke-width="1.6" marker-end="url(#arrow)"/>
+<rect x="840" y="1388" width="230" height="40" rx="5" fill="#fdf6e3" stroke="#b7791f"/>
+<text x="848" y="1404" font-size="9" font-weight="normal" text-anchor="start" fill="#52606d">INTERMEDIATE.int_lca_case_candidates</text>
+<text x="848" y="1420" font-size="12" font-weight="bold" text-anchor="start" fill="#1f2933">case_number</text>
+<path class="column-edge" d="M800,1408.0 L840,1408.0" stroke="#b7791f" stroke-width="1.6" marker-end="url(#arrow)"/>
+<rect x="1110" y="1388" width="230" height="40" rx="5" fill="#fdf6e3" stroke="#b7791f"/>
+<text x="1118" y="1404" font-size="9" font-weight="normal" text-anchor="start" fill="#52606d">MARTS.fact_lca_case</text>
+<text x="1118" y="1420" font-size="12" font-weight="bold" text-anchor="start" fill="#1f2933">case_number</text>
+<path class="column-edge" d="M1070,1408.0 L1110,1408.0" stroke="#b7791f" stroke-width="1.6" marker-end="url(#arrow)"/>
+<text x="30" y="1470" font-size="12" font-weight="bold" text-anchor="start" fill="#1f2933">public_lca_worksite_zip5</text>
+<rect x="30" y="1478" width="230" height="40" rx="5" fill="#fdf6e3" stroke="#b7791f"/>
+<text x="38" y="1494" font-size="9" font-weight="normal" text-anchor="start" fill="#52606d">RAW_LCA.LCA_FY2025_Q4</text>
+<text x="38" y="1510" font-size="12" font-weight="bold" text-anchor="start" fill="#1f2933">payload_json</text>
+<rect x="300" y="1478" width="230" height="40" rx="5" fill="#fdf6e3" stroke="#b7791f"/>
+<text x="308" y="1494" font-size="9" font-weight="normal" text-anchor="start" fill="#52606d">STAGING.stg_lca</text>
+<text x="308" y="1510" font-size="12" font-weight="bold" text-anchor="start" fill="#1f2933">worksite_zip5</text>
+<path class="column-edge" d="M260,1498.0 L300,1498.0" stroke="#b7791f" stroke-width="1.6" marker-end="url(#arrow)"/>
+<rect x="570" y="1478" width="230" height="40" rx="5" fill="#fdf6e3" stroke="#b7791f"/>
+<text x="578" y="1494" font-size="9" font-weight="normal" text-anchor="start" fill="#52606d">FACTS_INPUT.lca</text>
+<text x="578" y="1510" font-size="12" font-weight="bold" text-anchor="start" fill="#1f2933">worksite_zip5</text>
+<path class="column-edge" d="M530,1498.0 L570,1498.0" stroke="#b7791f" stroke-width="1.6" marker-end="url(#arrow)"/>
+<rect x="840" y="1478" width="230" height="40" rx="5" fill="#fdf6e3" stroke="#b7791f"/>
+<text x="848" y="1494" font-size="9" font-weight="normal" text-anchor="start" fill="#52606d">INTERMEDIATE.int_lca_case_candidates</text>
+<text x="848" y="1510" font-size="12" font-weight="bold" text-anchor="start" fill="#1f2933">worksite_zip5</text>
+<path class="column-edge" d="M800,1498.0 L840,1498.0" stroke="#b7791f" stroke-width="1.6" marker-end="url(#arrow)"/>
+<text x="30" y="1560" font-size="12" font-weight="bold" text-anchor="start" fill="#1f2933">public_lca_county_from_zcta_county_fips</text>
+<rect x="30" y="1568" width="230" height="40" rx="5" fill="#fdf6e3" stroke="#b7791f"/>
+<text x="38" y="1584" font-size="9" font-weight="normal" text-anchor="start" fill="#52606d">STAGING.zcta_county_fips</text>
+<text x="38" y="1600" font-size="12" font-weight="bold" text-anchor="start" fill="#1f2933">county_fips</text>
+<rect x="300" y="1568" width="230" height="40" rx="5" fill="#fdf6e3" stroke="#b7791f"/>
+<text x="308" y="1584" font-size="9" font-weight="normal" text-anchor="start" fill="#52606d">STAGING.stg_lca</text>
+<text x="308" y="1600" font-size="12" font-weight="bold" text-anchor="start" fill="#1f2933">county_fips</text>
+<path class="column-edge" d="M260,1588.0 L300,1588.0" stroke="#b7791f" stroke-width="1.6" marker-end="url(#arrow)"/>
+<rect x="570" y="1568" width="230" height="40" rx="5" fill="#fdf6e3" stroke="#b7791f"/>
+<text x="578" y="1584" font-size="9" font-weight="normal" text-anchor="start" fill="#52606d">FACTS_INPUT.lca</text>
+<text x="578" y="1600" font-size="12" font-weight="bold" text-anchor="start" fill="#1f2933">county_fips</text>
+<path class="column-edge" d="M530,1588.0 L570,1588.0" stroke="#b7791f" stroke-width="1.6" marker-end="url(#arrow)"/>
+<rect x="840" y="1568" width="230" height="40" rx="5" fill="#fdf6e3" stroke="#b7791f"/>
+<text x="848" y="1584" font-size="9" font-weight="normal" text-anchor="start" fill="#52606d">INTERMEDIATE.int_lca_case_candidates</text>
+<text x="848" y="1600" font-size="12" font-weight="bold" text-anchor="start" fill="#1f2933">county_fips</text>
+<path class="column-edge" d="M800,1588.0 L840,1588.0" stroke="#b7791f" stroke-width="1.6" marker-end="url(#arrow)"/>
+<text x="30" y="1650" font-size="12" font-weight="bold" text-anchor="start" fill="#1f2933">public_lca_county_from_place_county_fips</text>
+<rect x="30" y="1658" width="230" height="40" rx="5" fill="#fdf6e3" stroke="#b7791f"/>
+<text x="38" y="1674" font-size="9" font-weight="normal" text-anchor="start" fill="#52606d">STAGING.place_county_fips</text>
+<text x="38" y="1690" font-size="12" font-weight="bold" text-anchor="start" fill="#1f2933">county_fips</text>
+<rect x="300" y="1658" width="230" height="40" rx="5" fill="#fdf6e3" stroke="#b7791f"/>
+<text x="308" y="1674" font-size="9" font-weight="normal" text-anchor="start" fill="#52606d">STAGING.stg_lca</text>
+<text x="308" y="1690" font-size="12" font-weight="bold" text-anchor="start" fill="#1f2933">county_fips</text>
+<path class="column-edge" d="M260,1678.0 L300,1678.0" stroke="#b7791f" stroke-width="1.6" marker-end="url(#arrow)"/>
+<rect x="570" y="1658" width="230" height="40" rx="5" fill="#fdf6e3" stroke="#b7791f"/>
+<text x="578" y="1674" font-size="9" font-weight="normal" text-anchor="start" fill="#52606d">FACTS_INPUT.lca</text>
+<text x="578" y="1690" font-size="12" font-weight="bold" text-anchor="start" fill="#1f2933">county_fips</text>
+<path class="column-edge" d="M530,1678.0 L570,1678.0" stroke="#b7791f" stroke-width="1.6" marker-end="url(#arrow)"/>
+<rect x="840" y="1658" width="230" height="40" rx="5" fill="#fdf6e3" stroke="#b7791f"/>
+<text x="848" y="1674" font-size="9" font-weight="normal" text-anchor="start" fill="#52606d">INTERMEDIATE.int_lca_case_candidates</text>
+<text x="848" y="1690" font-size="12" font-weight="bold" text-anchor="start" fill="#1f2933">county_fips</text>
+<path class="column-edge" d="M800,1678.0 L840,1678.0" stroke="#b7791f" stroke-width="1.6" marker-end="url(#arrow)"/>
+</svg>

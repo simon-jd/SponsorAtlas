@@ -1,0 +1,27 @@
+# Artifact-only local DuckDB metadata. This is NOT a Snowflake connection.
+source:
+  type: dbt
+  serviceName: sponsoratlas_local_synthetic_duckdb
+  sourceConfig:
+    config:
+      type: DBT
+      dbtConfigSource:
+        dbtConfigType: local
+        dbtManifestFilePath: ${SA_DBT_ARTIFACT_DIR}/manifest.json
+        dbtCatalogFilePath: ${SA_DBT_ARTIFACT_DIR}/catalog.json
+        dbtRunResultsFilePath: ${SA_DBT_ARTIFACT_DIR}/run_results.json
+      dbtUpdateDescriptions: true
+      dbtUpdateOwners: true
+      includeTags: true
+      tableFilterPattern:
+        includes: ['(?i)^(CDC_APPLICATION_EVENTS|stg_private_application_events|fact_my_applications)$']
+sink:
+  type: metadata-rest
+  config: {}
+workflowConfig:
+  loggerLevel: INFO
+  openMetadataServerConfig:
+    hostPort: http://127.0.0.1:18585/api
+    authProvider: openmetadata
+    securityConfig:
+      jwtToken: ${SA_OM_TOKEN}

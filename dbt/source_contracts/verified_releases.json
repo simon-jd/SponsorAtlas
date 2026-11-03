@@ -1,0 +1,73 @@
+{
+  "description": "Task3 pinned official originals actually downloaded and inspected 2026-10-24 UTC. LCA files cover observed July-September quarter, not full fiscal-year history. BLS excluded because actual ZIP download remains403. FY2025 Q1-Q3 added 2026-10-27 UTC (curl -fsSL from www.dol.gov; SHA pinned on first retrieval).",
+  "releases": [
+    {
+      "id": "lca_fy2024_q4",
+      "source": "LCA",
+      "release": "FY2024_Q4",
+      "url": "https://www.dol.gov/sites/dolgov/files/ETA/oflc/pdfs/LCA_Disclosure_Data_FY2024_Q4.xlsx",
+      "format": "xlsx",
+      "expected_sha256": "23bc116e679e7ff10b9ac947dc4faf7942ae59ef1c3ffb5a10be61c4ae31ba30",
+      "sheet": "Q4",
+      "header_row": 1
+    },
+    {
+      "id": "lca_fy2025_q1",
+      "source": "LCA",
+      "release": "FY2025_Q1",
+      "url": "https://www.dol.gov/sites/dolgov/files/ETA/oflc/pdfs/LCA_Disclosure_Data_FY2025_Q1.xlsx",
+      "format": "xlsx",
+      "expected_sha256": "17c08eccf8b2d543f502553f502b8165d85e3e93d86de6f7dbaed3e87c86911d",
+      "sheet": "LCA_Disclosure_Data_FY2025_Q1",
+      "header_row": 1
+    },
+    {
+      "id": "lca_fy2025_q2",
+      "source": "LCA",
+      "release": "FY2025_Q2",
+      "url": "https://www.dol.gov/sites/dolgov/files/ETA/oflc/pdfs/LCA_Disclosure_Data_FY2025_Q2.xlsx",
+      "format": "xlsx",
+      "expected_sha256": "bc5aaf90fa89ee2666757fe8b065ae95a8b40dde785df04adba226b4fb388d30",
+      "sheet": "LCA_Disclosure_Data_FY2025_Q2",
+      "header_row": 1
+    },
+    {
+      "id": "lca_fy2025_q3",
+      "source": "LCA",
+      "release": "FY2025_Q3",
+      "url": "https://www.dol.gov/sites/dolgov/files/ETA/oflc/pdfs/LCA_Disclosure_Data_FY2025_Q3.xlsx",
+      "format": "xlsx",
+      "expected_sha256": "fcabedf38c8cc3036334b7d38981878d29afb3d8ad7455ec12f127ed091a0d5e",
+      "sheet": "LCA_Disclosure_Data_FY2025_Q3",
+      "header_row": 1
+    },
+    {
+      "id": "lca_fy2025_q4",
+      "source": "LCA",
+      "release": "FY2025_Q4",
+      "url": "https://www.dol.gov/sites/dolgov/files/ETA/oflc/pdfs/LCA_Disclosure_Data_FY2025_Q4.xlsx",
+      "format": "xlsx",
+      "expected_sha256": "81ebf97d471014b91ae685cb7eb505369d7c80af2de67944ddd7531814976370",
+      "sheet": "LCA_Disclosure_Data_FY2025_Q4",
+      "header_row": 1
+    },
+    {
+      "id": "uscis_fy2022",
+      "source": "USCIS",
+      "release": "FY2022",
+      "url": "https://www.uscis.gov/sites/default/files/document/data/h1b_datahubexport-2022.csv",
+      "format": "csv",
+      "expected_sha256": "692cc11c7d48739d5ff4363a6ba7cbe0c422334c417dd88813aa1ff596d5f879",
+      "header_row": 1
+    },
+    {
+      "id": "uscis_fy2023",
+      "source": "USCIS",
+      "release": "FY2023",
+      "url": "https://www.uscis.gov/sites/default/files/document/data/h1b_datahubexport-2023.csv",
+      "format": "csv",
+      "expected_sha256": "96f42309393249a7368bd418b2b2c5111b45acc7ccec487a0f024dfa07d71931",
+      "header_row": 1
+    }
+  ]
+}

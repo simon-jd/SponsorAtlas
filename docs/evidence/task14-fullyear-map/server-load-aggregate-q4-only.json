@@ -1,0 +1,208 @@
+{
+ "nproc": 32,
+ "loadavgStart": [
+  10.45,
+  8.98,
+  6.97
+ ],
+ "baseline": {
+  "rssMB": 82,
+  "heapUsedMB": 11,
+  "externalMB": 43
+ },
+ "load": {
+  "ms": 266,
+  "rows": 195240,
+  "bytes": 39314703,
+  "rssMB": 363,
+  "heapUsedMB": 155,
+  "externalMB": 82
+ },
+ "scopes": [
+  {
+   "scope": {
+    "resolution": 0
+   },
+   "ms": [
+    215,
+    187,
+    173
+   ],
+   "cells": 10,
+   "total": 238891,
+   "responseBytes": 1459,
+   "rssMB": 433,
+   "heapUsedMB": 215,
+   "externalMB": 82
+  },
+  {
+   "scope": {
+    "resolution": 1
+   },
+   "ms": [
+    199,
+    187,
+    253
+   ],
+   "cells": 39,
+   "total": 238891,
+   "responseBytes": 3075,
+   "rssMB": 476,
+   "heapUsedMB": 244,
+   "externalMB": 82
+  },
+  {
+   "scope": {
+    "resolution": 2
+   },
+   "ms": [
+    181,
+    177,
+    183
+   ],
+   "cells": 143,
+   "total": 238891,
+   "responseBytes": 8707,
+   "rssMB": 517,
+   "heapUsedMB": 290,
+   "externalMB": 82
+  },
+  {
+   "scope": {
+    "resolution": 3
+   },
+   "ms": [
+    196,
+    191,
+    247
+   ],
+   "cells": 632,
+   "total": 238891,
+   "responseBytes": 35094,
+   "rssMB": 557,
+   "heapUsedMB": 339,
+   "externalMB": 82
+  },
+  {
+   "scope": {
+    "resolution": 4
+   },
+   "ms": [
+    211,
+    208,
+    205
+   ],
+   "cells": 2061,
+   "total": 238891,
+   "responseBytes": 111507,
+   "rssMB": 602,
+   "heapUsedMB": 350,
+   "externalMB": 82
+  },
+  {
+   "scope": {
+    "resolution": 5
+   },
+   "ms": [
+    275,
+    222,
+    215
+   ],
+   "cells": 4285,
+   "total": 238891,
+   "responseBytes": 230665,
+   "rssMB": 647,
+   "heapUsedMB": 411,
+   "externalMB": 82
+  },
+  {
+   "scope": {
+    "resolution": 6
+   },
+   "ms": [
+    256,
+    291,
+    263
+   ],
+   "cells": 7562,
+   "total": 238891,
+   "responseBytes": 406394,
+   "rssMB": 699,
+   "heapUsedMB": 443,
+   "externalMB": 82
+  },
+  {
+   "scope": {
+    "resolution": 7
+   },
+   "ms": [
+    324,
+    395,
+    270
+   ],
+   "cells": 9479,
+   "total": 238891,
+   "responseBytes": 508825,
+   "rssMB": 694,
+   "heapUsedMB": 183,
+   "externalMB": 82
+  },
+  {
+   "scope": {
+    "resolution": 3,
+    "year": 2025
+   },
+   "ms": [
+    99,
+    100,
+    98
+   ],
+   "cells": 577,
+   "total": 118580,
+   "responseBytes": 31990,
+   "rssMB": 694,
+   "heapUsedMB": 242,
+   "externalMB": 82
+  },
+  {
+   "scope": {
+    "resolution": 3,
+    "year": 2024
+   },
+   "ms": [
+    94,
+    96,
+    123
+   ],
+   "cells": 573,
+   "total": 120311,
+   "responseBytes": 31735,
+   "rssMB": 694,
+   "heapUsedMB": 229,
+   "externalMB": 82
+  },
+  {
+   "scope": {
+    "resolution": 5,
+    "employer": "first-employer"
+   },
+   "ms": [
+    5,
+    3,
+    3
+   ],
+   "cells": 3,
+   "total": 8,
+   "responseBytes": 875,
+   "rssMB": 694,
+   "heapUsedMB": 253,
+   "externalMB": 82
+  }
+ ],
+ "peakRssMB": 705,
+ "loadavgEnd": [
+  9.91,
+  8.92,
+  6.97
+ ]
+}

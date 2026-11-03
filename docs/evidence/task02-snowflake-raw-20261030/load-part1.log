@@ -1,0 +1,22 @@
+loading RAW.BLS.BLS_FY2025 (413527 rows)
+loading RAW.LCA.LCA_FY2024_Q4 (120897 rows)
+loading RAW.LCA.LCA_FY2025_Q1 (107414 rows)
+loading RAW.LCA.LCA_FY2025_Q2 (132133 rows)
+loading RAW.LCA.LCA_FY2025_Q3 (238425 rows)
+loading RAW.LCA.LCA_FY2025_Q4 (118580 rows)
+loading RAW.USCIS.USCIS_FY2022 (59983 rows)
+loading RAW.USCIS.USCIS_FY2023 (33332 rows)
+loading RAW.BLS.BLS_FY2024 (0 rows)
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/home/postedism/Desktop/SponsorAtlas/scripts/load_snowflake_raw.py", line 316, in <module>
+    if __name__ == "__main__":
+                         ^^^^^^
+  File "/home/postedism/Desktop/SponsorAtlas/scripts/load_snowflake_raw.py", line 301, in main
+    print(f"loading {item['table']} ({item['expected_rows']} rows)", file=sys.stderr)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/postedism/Desktop/SponsorAtlas/scripts/load_snowflake_raw.py", line 257, in load_item
+    "snowflake_rows": rows,
+                            
+TypeError: int() argument must be a string, a bytes-like object or a real number, not 'NoneType'

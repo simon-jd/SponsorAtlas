@@ -1,0 +1,39 @@
+{
+  "generator_version": 2,
+  "counts": {
+    "soc": 1447,
+    "county_2023": 3222,
+    "county_cbsa_2023": 1915
+  },
+  "sources": [
+    {
+      "official_filename": "soc_structure_2018.xlsx",
+      "archived_filename": "soc_structure_2018_SOC2018_ade08af40923266f3a854842e888ca3e93c15b26a147c20a2b12a61f4c4f4077.xlsx",
+      "vintage": "SOC2018",
+      "sha256": "ade08af40923266f3a854842e888ca3e93c15b26a147c20a2b12a61f4c4f4077",
+      "url": "https://www2.census.gov/programs-surveys/demo/guidance/industry-occupation/soc_structure_2018.xlsx",
+      "bytes": 51367
+    },
+    {
+      "official_filename": "list1_2023.xlsx",
+      "archived_filename": "list1_2023_CBSA2023-07_952c4b1e78acbb54e6ec9412434b7602fedacbf021736351a63c181bdb753629.xlsx",
+      "vintage": "CBSA2023-07",
+      "sha256": "952c4b1e78acbb54e6ec9412434b7602fedacbf021736351a63c181bdb753629",
+      "url": "https://www2.census.gov/programs-surveys/metro-micro/geographies/reference-files/2023/delineation-files/list1_2023.xlsx",
+      "bytes": 143798
+    },
+    {
+      "official_filename": "2023_Gaz_counties_national.zip",
+      "archived_filename": "2023_Gaz_counties_national_Census2023_919df59ba90759cce85468c0337e898e4b39c08eaffce86ddd88fa41f1f7f0c8.zip",
+      "vintage": "Census2023",
+      "sha256": "919df59ba90759cce85468c0337e898e4b39c08eaffce86ddd88fa41f1f7f0c8",
+      "url": "https://www2.census.gov/geo/docs/maps-data/data/gazetteer/2023_Gazetteer/2023_Gaz_counties_national.zip",
+      "bytes": 141650
+    }
+  ],
+  "seeds": {
+    "ref_county_2023.csv": "0fd23f954d0718fa602175d1306e208d5840b1ef53b3910c15237aaeb0c3d8ca",
+    "ref_county_cbsa_2023.csv": "0b2619d42cdd7e9dc3e8150b08bf3cecb71d7f1f769dfefe69e377e89b0065c1",
+    "ref_soc_2018.csv": "6164794126fa7cb6d8c5036ea2a415341a00a7c218a5c0877063841a1845e6ec"
+  }
+}

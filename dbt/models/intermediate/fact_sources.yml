@@ -1,0 +1,14 @@
+version: 2
+sources:
+  # Locally a schema of the fact database; on Snowflake the RAW tables that
+  # scripts.load_snowflake_raw loads (Terraform has no FACTS_INPUT schema).
+  - name: facts_input
+    database: "{{ 'RAW' if target.type == 'snowflake' else target.database }}"
+    schema: "{{ 'LCA' if target.type == 'snowflake' else 'FACTS_INPUT' }}"
+    tables:
+      - name: lca
+        identifier: "{{ 'FACTS_INPUT_LCA' if target.type == 'snowflake' else 'lca' }}"
+      - name: job_observations
+        identifier: "{{ 'FACTS_INPUT_JOB_OBSERVATIONS' if target.type == 'snowflake' else 'job_observations' }}"
+      - name: lineage
+        identifier: "{{ 'FACTS_INPUT_LINEAGE' if target.type == 'snowflake' else 'lineage' }}"

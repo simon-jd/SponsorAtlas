@@ -1,0 +1,11 @@
+table SurveyYear
+
+	column survey_year
+		dataType: int64
+		isKey
+		sourceColumn: [survey_year]
+		summarizeBy: none
+
+	partition SurveyYear = calculated
+		mode: import
+		source = DISTINCT(SELECTCOLUMNS(wages, "survey_year", wages[survey_year]))

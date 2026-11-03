@@ -1,0 +1,33 @@
+{
+  "time_utc": "2026-10-24T19:37:07.980994+00:00",
+  "workspace_path_bytes_including_file_symlink_targets": 11025302691,
+  "docker_image_reported_bytes": 822376285,
+  "docker_image_ids": {
+    "postgres:16-alpine": "sha256:f4610795587492cd4fb887c2dc3de301b813278bb6f616992061141b5f15ac36",
+    "eclipse-temurin:21-jre-jammy": "sha256:affcab5356e1270ac35d2361ee83135af2f03e8d580eca78a6d5d6fdbf048db0"
+  },
+  "postgres_data_bytes_added": 111251276,
+  "docker_log_reserve_bytes": 30000000,
+  "project_build_cache_bytes": 0,
+  "project_named_volume_bytes": 0,
+  "container_writable_bytes": 94208,
+  "conservative_total_bytes": 12811400745,
+  "cap_bytes": 18000000000,
+  "container_memory": {
+    "/sponsoratlas-governance-server-1": {
+      "cap_bytes": 4294967296,
+      "peak_bytes": 1158033408
+    },
+    "/sponsoratlas-governance-postgres-1": {
+      "cap_bytes": 536870912,
+      "peak_bytes": 256663552
+    },
+    "/sponsoratlas-governance-elasticsearch-1": {
+      "cap_bytes": 2147483648,
+      "peak_bytes": 1131876352
+    }
+  },
+  "unreadable_host_paths": [
+    "/home/postedism/Desktop/SponsorAtlas/.tools/governance/pg-data"
+  ]
+}

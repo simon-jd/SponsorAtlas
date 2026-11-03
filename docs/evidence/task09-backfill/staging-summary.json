@@ -1,0 +1,369 @@
+{
+  "database": ".tools/staging/fy2025-full.duckdb",
+  "exit_code": 1,
+  "dbt_status_counts": {
+    "pass": 36,
+    "success": 7,
+    "fail": 1
+  },
+  "failed_or_errored": [
+    {
+      "unique_id": "test.sponsoratlas.staging_flag_limits",
+      "status": "fail",
+      "failures": 1
+    }
+  ],
+  "reconciliation": [
+    {
+      "source": "lca",
+      "release": "FY2024_Q4",
+      "raw_rows": 120897,
+      "staging_rows": 120897
+    },
+    {
+      "source": "uscis",
+      "release": "FY2023",
+      "raw_rows": 33332,
+      "staging_rows": 33332
+    },
+    {
+      "source": "uscis",
+      "release": "FY2022",
+      "raw_rows": 59983,
+      "staging_rows": 59983
+    },
+    {
+      "source": "lca",
+      "release": "FY2025_Q4",
+      "raw_rows": 118580,
+      "staging_rows": 118580
+    },
+    {
+      "source": "lca",
+      "release": "FY2025_Q3",
+      "raw_rows": 238425,
+      "staging_rows": 238425
+    },
+    {
+      "source": "lca",
+      "release": "FY2025_Q2",
+      "raw_rows": 132133,
+      "staging_rows": 132133
+    },
+    {
+      "source": "lca",
+      "release": "FY2025_Q1",
+      "raw_rows": 107414,
+      "staging_rows": 107414
+    }
+  ],
+  "rows_reconcile": true,
+  "flag_shares": [
+    {
+      "source": "lca",
+      "fiscal_year": 2024,
+      "flag": "geo_unresolved",
+      "rows": 120897,
+      "flagged": 56,
+      "share": 0.0005,
+      "limit": 0.05,
+      "ok": true
+    },
+    {
+      "source": "lca",
+      "fiscal_year": 2024,
+      "flag": "soc_unresolved",
+      "rows": 120897,
+      "flagged": 0,
+      "share": 0.0,
+      "limit": 0.001,
+      "ok": true
+    },
+    {
+      "source": "lca",
+      "fiscal_year": 2025,
+      "flag": "geo_unresolved",
+      "rows": 596552,
+      "flagged": 6716,
+      "share": 0.0113,
+      "limit": 0.05,
+      "ok": true
+    },
+    {
+      "source": "lca",
+      "fiscal_year": 2025,
+      "flag": "soc_unresolved",
+      "rows": 596552,
+      "flagged": 4,
+      "share": 0.0,
+      "limit": 0.001,
+      "ok": true
+    },
+    {
+      "source": "uscis",
+      "fiscal_year": 2022,
+      "flag": "employer_name_missing",
+      "rows": 59983,
+      "flagged": 7,
+      "share": 0.0001,
+      "limit": 0.001,
+      "ok": true
+    },
+    {
+      "source": "uscis",
+      "fiscal_year": 2022,
+      "flag": "state_unresolved",
+      "rows": 59983,
+      "flagged": 16,
+      "share": 0.0003,
+      "limit": 0.05,
+      "ok": true
+    },
+    {
+      "source": "uscis",
+      "fiscal_year": 2023,
+      "flag": "employer_name_missing",
+      "rows": 33332,
+      "flagged": 1,
+      "share": 0.0,
+      "limit": 0.001,
+      "ok": true
+    },
+    {
+      "source": "uscis",
+      "fiscal_year": 2023,
+      "flag": "state_unresolved",
+      "rows": 33332,
+      "flagged": 2481,
+      "share": 0.0744,
+      "limit": 0.05,
+      "ok": false
+    }
+  ],
+  "geography_by_year": [
+    {
+      "fiscal_year": 2024,
+      "geography_status": "MATCHED",
+      "county_match_rule": "SOURCE_COUNTY",
+      "rows": 113183
+    },
+    {
+      "fiscal_year": 2024,
+      "geography_status": "MATCHED_FROM_CITY",
+      "county_match_rule": "PLACE_UNIQUE",
+      "rows": 381
+    },
+    {
+      "fiscal_year": 2024,
+      "geography_status": "MATCHED_FROM_ZIP",
+      "county_match_rule": "ZCTA_DOMINANT_90",
+      "rows": 307
+    },
+    {
+      "fiscal_year": 2024,
+      "geography_status": "MATCHED_FROM_ZIP",
+      "county_match_rule": "ZCTA_UNIQUE",
+      "rows": 6970
+    },
+    {
+      "fiscal_year": 2024,
+      "geography_status": "UNRESOLVED_COUNTY",
+      "county_match_rule": null,
+      "rows": 56
+    },
+    {
+      "fiscal_year": 2025,
+      "geography_status": "MATCHED",
+      "county_match_rule": "SOURCE_COUNTY",
+      "rows": 465068
+    },
+    {
+      "fiscal_year": 2025,
+      "geography_status": "MATCHED_FROM_CITY",
+      "county_match_rule": "INCORPORATED_OVER_CDP",
+      "rows": 14
+    },
+    {
+      "fiscal_year": 2025,
+      "geography_status": "MATCHED_FROM_CITY",
+      "county_match_rule": "PLACE_UNIQUE",
+      "rows": 7507
+    },
+    {
+      "fiscal_year": 2025,
+      "geography_status": "MATCHED_FROM_ZIP",
+      "county_match_rule": "ZCTA_DOMINANT_90",
+      "rows": 7712
+    },
+    {
+      "fiscal_year": 2025,
+      "geography_status": "MATCHED_FROM_ZIP",
+      "county_match_rule": "ZCTA_UNIQUE",
+      "rows": 109535
+    },
+    {
+      "fiscal_year": 2025,
+      "geography_status": "SOURCE_COUNTY_MISSING",
+      "county_match_rule": null,
+      "rows": 6480
+    },
+    {
+      "fiscal_year": 2025,
+      "geography_status": "UNRESOLVED_COUNTY",
+      "county_match_rule": null,
+      "rows": 236
+    }
+  ],
+  "top_unresolved_cities": [
+    {
+      "fiscal_year": 2025,
+      "state": "TX",
+      "city": "PLANO",
+      "rows": 1250
+    },
+    {
+      "fiscal_year": 2025,
+      "state": "TX",
+      "city": "WESTLAKE",
+      "rows": 437
+    },
+    {
+      "fiscal_year": 2025,
+      "state": "TX",
+      "city": "FRISCO",
+      "rows": 417
+    },
+    {
+      "fiscal_year": 2025,
+      "state": "TX",
+      "city": "RICHARDSON",
+      "rows": 415
+    },
+    {
+      "fiscal_year": 2025,
+      "state": "NY",
+      "city": "NEW YORK",
+      "rows": 333
+    },
+    {
+      "fiscal_year": 2025,
+      "state": "TX",
+      "city": "LEANDER",
+      "rows": 242
+    },
+    {
+      "fiscal_year": 2025,
+      "state": "NC",
+      "city": "MORRISVILLE",
+      "rows": 237
+    },
+    {
+      "fiscal_year": 2025,
+      "state": "TX",
+      "city": "KATY",
+      "rows": 170
+    },
+    {
+      "fiscal_year": 2025,
+      "state": "TX",
+      "city": "AUSTIN",
+      "rows": 165
+    },
+    {
+      "fiscal_year": 2025,
+      "state": "TX",
+      "city": "PROSPER",
+      "rows": 151
+    },
+    {
+      "fiscal_year": 2025,
+      "state": "TX",
+      "city": "SAN ANTONIO",
+      "rows": 150
+    },
+    {
+      "fiscal_year": 2025,
+      "state": "GA",
+      "city": "ATLANTA",
+      "rows": 123
+    },
+    {
+      "fiscal_year": 2025,
+      "state": "TX",
+      "city": "ROUND ROCK",
+      "rows": 112
+    },
+    {
+      "fiscal_year": 2025,
+      "state": "OH",
+      "city": "DUBLIN",
+      "rows": 96
+    },
+    {
+      "fiscal_year": 2025,
+      "state": "IL",
+      "city": "AURORA",
+      "rows": 84
+    },
+    {
+      "fiscal_year": 2025,
+      "state": "IL",
+      "city": "BUFFALO GROVE",
+      "rows": 82
+    },
+    {
+      "fiscal_year": 2025,
+      "state": "TN",
+      "city": "OAK RIDGE",
+      "rows": 61
+    },
+    {
+      "fiscal_year": 2025,
+      "state": "NC",
+      "city": "DURHAM",
+      "rows": 60
+    },
+    {
+      "fiscal_year": 2025,
+      "state": "MA",
+      "city": "DEVENS",
+      "rows": 54
+    },
+    {
+      "fiscal_year": 2025,
+      "state": "OR",
+      "city": "PORTLAND",
+      "rows": 52
+    },
+    {
+      "fiscal_year": 2025,
+      "state": "NC",
+      "city": "FUQUAY VARINA",
+      "rows": 51
+    },
+    {
+      "fiscal_year": 2025,
+      "state": "PA",
+      "city": "NEWTOWN SQUARE",
+      "rows": 49
+    },
+    {
+      "fiscal_year": 2025,
+      "state": "CT",
+      "city": "FARMINGTON",
+      "rows": 46
+    },
+    {
+      "fiscal_year": 2025,
+      "state": "TX",
+      "city": "CEDAR PARK",
+      "rows": 45
+    },
+    {
+      "fiscal_year": 2025,
+      "state": "IA",
+      "city": "WEST DES MOINES",
+      "rows": 43
+    }
+  ]
+}

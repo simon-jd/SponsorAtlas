@@ -1,0 +1,2 @@
+import {defineConfig} from '@playwright/test';
+export default defineConfig({testDir:'tests/visual',workers:1,timeout:30000,reporter:'list',snapshotPathTemplate:'{testDir}/baselines/{arg}{ext}',expect:{toHaveScreenshot:{maxDiffPixels:0,threshold:0.1,animations:'disabled'}},use:{baseURL:'http://127.0.0.1:3100',viewport:{width:1280,height:900},deviceScaleFactor:1,locale:'en-US',timezoneId:'UTC',reducedMotion:'reduce',launchOptions:{executablePath:'/usr/bin/google-chrome',args:['--no-sandbox','--disable-gpu','--disable-webgl']}}});

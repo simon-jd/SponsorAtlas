@@ -1,0 +1,84 @@
+table lca
+
+	column case_number
+		dataType: string
+		sourceColumn: case_number
+		summarizeBy: none
+		isHidden
+
+	column is_certified
+		dataType: boolean
+		sourceColumn: is_certified
+		summarizeBy: none
+
+	column annual_wage
+		dataType: double
+		sourceColumn: annual_wage
+		summarizeBy: none
+
+	column employer
+		dataType: string
+		sourceColumn: employer
+		summarizeBy: none
+
+	column soc_major
+		dataType: string
+		sourceColumn: soc_major
+		summarizeBy: none
+
+	column soc
+		dataType: string
+		sourceColumn: soc
+		summarizeBy: none
+
+	column metro
+		dataType: string
+		sourceColumn: metro
+		summarizeBy: none
+
+	column fiscal_year
+		dataType: int64
+		sourceColumn: fiscal_year
+		summarizeBy: none
+
+	column employer_history_status
+		dataType: string
+		sourceColumn: employer_history_status
+		summarizeBy: none
+
+	measure 'Case Count' = COALESCE(COUNTROWS(lca), 0)
+		formatString: #,0
+
+	measure 'Certified Rate' = DIVIDE(SUMX(lca, IF(lca[is_certified], 1, 0)), [Case Count])
+		formatString: 0.00%
+
+	measure 'Wage P50' = PERCENTILEX.INC(FILTER(lca, NOT ISBLANK(lca[annual_wage])), lca[annual_wage], 0.5)
+		formatString: $#,0.00
+
+	measure 'Wage P75' = PERCENTILEX.INC(FILTER(lca, NOT ISBLANK(lca[annual_wage])), lca[annual_wage], 0.75)
+		formatString: $#,0.00
+
+	measure 'Wage P90' = PERCENTILEX.INC(FILTER(lca, NOT ISBLANK(lca[annual_wage])), lca[annual_wage], 0.9)
+		formatString: $#,0.00
+
+	measure 'Comparison Wage P50' = VAR Area = SELECTEDVALUE(PublishedArea[area]) RETURN IF(HASONEVALUE(SOC[soc]), SWITCH(TRUE(), Area = "1:99", CALCULATE([Wage P50], REMOVEFILTERS(Metro), REMOVEFILTERS(lca[metro])), LEFT(Area, 2) = "4:" && LEN(Area) = 7, CALCULATE([Wage P50], REMOVEFILTERS(Metro), REMOVEFILTERS(lca[metro]), TREATAS({MID(Area, 3, 5)}, lca[metro])), BLANK()))
+		formatString: $#,0.00
+
+	measure 'Comparison Wage P75' = VAR Area = SELECTEDVALUE(PublishedArea[area]) RETURN IF(HASONEVALUE(SOC[soc]), SWITCH(TRUE(), Area = "1:99", CALCULATE([Wage P75], REMOVEFILTERS(Metro), REMOVEFILTERS(lca[metro])), LEFT(Area, 2) = "4:" && LEN(Area) = 7, CALCULATE([Wage P75], REMOVEFILTERS(Metro), REMOVEFILTERS(lca[metro]), TREATAS({MID(Area, 3, 5)}, lca[metro])), BLANK()))
+		formatString: $#,0.00
+
+	measure 'Comparison Wage P90' = VAR Area = SELECTEDVALUE(PublishedArea[area]) RETURN IF(HASONEVALUE(SOC[soc]), SWITCH(TRUE(), Area = "1:99", CALCULATE([Wage P90], REMOVEFILTERS(Metro), REMOVEFILTERS(lca[metro])), LEFT(Area, 2) = "4:" && LEN(Area) = 7, CALCULATE([Wage P90], REMOVEFILTERS(Metro), REMOVEFILTERS(lca[metro]), TREATAS({MID(Area, 3, 5)}, lca[metro])), BLANK()))
+		formatString: $#,0.00
+
+	measure 'Wage P75 vs OEWS' = DIVIDE([Comparison Wage P75], [Comparison OEWS Median])
+		formatString: 0.00x
+
+	measure 'Comparison Scope' = VAR Area = SELECTEDVALUE(PublishedArea[area]) VAR Supported = Area = "1:99" || (LEFT(Area, 2) = "4:" && LEN(Area) = 7) RETURN "SOC " & SELECTEDVALUE(SOC[soc], "select exactly one") & " | Area " & SELECTEDVALUE(PublishedArea[area], "select exactly one") & " | LCA FY " & IF(ISFILTERED(FiscalYear[fiscal_year]), CONCATENATEX(VALUES(FiscalYear[fiscal_year]), FiscalYear[fiscal_year], ", "), "all archived") & " | OEWS survey " & SELECTEDVALUE(SurveyYear[survey_year], "select exactly one") & " | " & SWITCH(TRUE(), NOT HASONEVALUE(SOC[soc]) || NOT HASONEVALUE(PublishedArea[area]), "Choose one shared SOC and published area", NOT Supported, "Not comparable: state/nonmetropolitan/unknown area has no LCA mapping", ISBLANK([Comparison Wage P75]), "No matched non-null LCA wages", ISBLANK([Comparison OEWS Median]), "Benchmark unavailable: choose one survey year; inspect missing/multiple/suppressed estimate", "Matched national/CBSA scope; FY and survey year remain distinct")
+
+	measure 'Disclaimer' = "LCA applications are not approvals and do not guarantee sponsorship. LCA 申请不等于获批，也不代表这个岗位一定提供担保。"
+
+	measure 'Coverage Status' = "Archived Q4 releases only | Employer identity and history provisional | Unknown mappings retained"
+
+	partition lca = m
+		mode: import
+		source = Public_lca

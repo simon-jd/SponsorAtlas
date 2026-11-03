@@ -1,0 +1,33 @@
+/home/postedism/Desktop/SponsorAtlas/.venv/bin/python -m semantic.scripts.export_worksite_coordinates
+{
+  "kind": "WORKSITE_ZCTA_OR_PLACE_INTERNAL_POINT",
+  "sourceSnapshot": "2533889c5fe50b4941a6a8a734d63683d8bb0d7421631b7ed2a8fdf025b80338",
+  "sha256": "e80aa43e3938fd5e41399c7b6c102a7e922ba4a5d4cf757ea577b9a9f219ca70",
+  "bytes": 103036467,
+  "rows": 713467,
+  "frequencyRows": 517991,
+  "nullWages": 0,
+  "unmapped": 336,
+  "bySemantics": {
+    "COUNTY_INTERNAL_POINT_NOT_WORKSITE": 1729,
+    "PLACE_INTERNAL_POINT": 25396,
+    "UNMAPPED": 336,
+    "ZCTA_INTERNAL_POINT": 686006
+  },
+  "checks": [
+    [
+      713467,
+      713467
+    ],
+    [
+      713467
+    ],
+    [
+      0
+    ]
+  ],
+  "sourceProtection": {
+    "unchanged": true
+  },
+  "coordinateCaveat": "Census2020 ZCTA/place internal points, county internal point as fallback; representative points, not worksite addresses"
+}

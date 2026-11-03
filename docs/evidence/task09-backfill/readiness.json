@@ -1,0 +1,23 @@
+{
+  "status": "READY",
+  "fiscal_year": 2025,
+  "requested_interval": [
+    "2024-10-01",
+    "2025-10-01"
+  ],
+  "available_releases": [
+    "FY2025_Q1",
+    "FY2025_Q2",
+    "FY2025_Q3",
+    "FY2025_Q4"
+  ],
+  "missing_releases": [],
+  "raw_rows": 596552,
+  "source_date_coverage": [
+    "2024-10-01",
+    "2025-09-30"
+  ],
+  "reason": null,
+  "mutations_started": false,
+  "seconds": 0.1920319349737838
+}

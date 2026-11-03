@@ -1,0 +1,13 @@
+{
+  "input_kind": "real-staging-lca-uscis",
+  "namespace": "SponsorAtlas.employer.v1",
+  "registry_sha256": "c9f8610f1dd368da11f727cd2915318f38f9ea7b67ff8f8ae4d68309749b5e38",
+  "registry_previous_sha256": null,
+  "input_records_sha256": "d8f472be399555c50ea3116b3693df204bafa4d6588ad0e28f7daf9ce6c75ca6",
+  "input_occurrences_sha256": "c5481c0f04b6cf0ae3182fe1c72b14a26588e9cfd391b7571d9293a58e60a78c",
+  "model_sha256": "1ff107cef0514d99748be797347617b0ae7461c4ba6c7177025b4c40455f097c",
+  "xref_sha256": "7fffd469af1a086c00ebc3fcbe920a73628897fb8dabe24c9c7bd27dff268275",
+  "source_database": "/home/postedism/Desktop/SponsorAtlas/.tools/staging/fy2025-full.duckdb",
+  "loaded_at_utc": "2026-10-28T03:21:07.043498+00:00",
+  "acceptance_status": "UNVALIDATED_HUMAN_LABELS_REQUIRED"
+}

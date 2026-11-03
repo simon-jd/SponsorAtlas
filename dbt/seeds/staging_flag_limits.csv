@@ -1,0 +1,5 @@
+source_system,flag,max_share,reason
+lca,geo_unresolved,0.05,county FIPS feeds the county map and county aggregates; at most 5% of a fiscal year may lack it
+lca,soc_unresolved,0.001,SOC feeds every occupation metric; a malformed code is a rare source typo
+uscis,employer_name_missing,0.001,employer name is the entity-resolution key; an empty name is a rare source gap
+uscis,state_unresolved,0.05,state feeds the state view; blank/XX/military-post codes have no state FIPS

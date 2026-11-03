@@ -1,0 +1,13 @@
+sponsoratlas:
+  target: local
+  outputs:
+    local:
+      type: duckdb
+      path: "{{ env_var('SPONSORATLAS_DUCKDB_PATH') }}"
+      read_only: true
+      schema: STAGING
+      threads: 1
+      settings:
+        threads: 1
+        memory_limit: 512MB
+        max_temp_directory_size: 128MB

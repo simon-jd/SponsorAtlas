@@ -1,0 +1,27 @@
+{
+  "name": "ui",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "sideEffects": [
+    "**/*.css"
+  ],
+  "exports": {
+    ".": "./src/index.ts",
+    "./styles.css": "./src/styles.css",
+    "./tokens.css": "./src/generated/tokens.css",
+    "./tailwind.css": "./src/generated/tailwind.css"
+  },
+  "scripts": {
+    "storybook": "storybook dev --host 127.0.0.1 --port 6006 --ci --no-open",
+    "build-storybook": "storybook build",
+    "test-storybook": "test-storybook --url http://127.0.0.1:6006 --maxWorkers=1",
+    "typecheck": "tsc --noEmit",
+    "tokens": "node style-dictionary.config.js",
+    "test-tokens": "node --test tests/tokens.test.mjs"
+  },
+  "peerDependencies": {
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1"
+  }
+}

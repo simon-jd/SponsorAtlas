@@ -1,0 +1,56 @@
+{
+  "origin": "ACTUAL_HYPER_EXTRACT_API_AND_SQL_NOT_TABLEAU_VIZQL",
+  "manifest_sha256": "b76f529c69a84b0d9a4305f12ab5825e2675afc636f047006fbe601693801a36",
+  "executed_at": "2026-10-24T22:10:37.096220+00:00",
+  "sdk_import": "bi/.work/hyper-sdk/tableauhyperapi/__init__.py",
+  "cffi_import": ".venv/lib/python3.12/site-packages/cffi/__init__.py",
+  "telemetry": "DO_NOT_SEND_USAGE_DATA_TO_TABLEAU",
+  "memory_limit": "1G",
+  "cpu_affinity": [
+    0,
+    1
+  ],
+  "extracts": {
+    "lca": {
+      "rows": 238891,
+      "sql": "SELECT COUNT(*), SUM(CASE WHEN is_certified THEN 1 ELSE 0 END)::DOUBLE PRECISION/COUNT(*), PERCENTILE_CONT(0.75) WITHIN GROUP (ORDER BY annual_wage) FROM \"Extract\".\"Extract\"",
+      "values": [
+        [
+          238891,
+          0.9777848474827432,
+          160000.0
+        ]
+      ],
+      "bytes": 11141120,
+      "sha256": "216813ee7549c267ca40fb5072816299fc37db37e81629004a2fee87917b7260"
+    },
+    "postings": {
+      "rows": 86,
+      "sql": "SELECT SUM(CASE WHEN is_active THEN 1 ELSE 0 END) FROM \"Extract\".\"Extract\"",
+      "values": [
+        [
+          86
+        ]
+      ],
+      "bytes": 65536,
+      "sha256": "6901c35a59dbc01e48688834319a4edebfb49032d949ff6b58cdeb15608f94bf"
+    },
+    "wages": {
+      "rows": 237514,
+      "sql": "SELECT CASE WHEN COUNT(*)=1 THEN MAX(annual_median_wage) END FROM \"Extract\".\"Extract\" WHERE soc='15-1252' AND area='1:99' AND survey_year=2025",
+      "values": [
+        [
+          135980.0
+        ]
+      ],
+      "bytes": 3145728,
+      "sha256": "5dcd8e07f80134fb809b6db13ec8009e5f62e8d3635e97c88a3a81b21f298c57"
+    }
+  },
+  "engine": "Hyper 9.1.0 emulation, hyper version main.0.0.26963.r84171622",
+  "hyper_children_max_rss_kib": 287300,
+  "python_max_rss_kib": 154580,
+  "twbx_sha256": "97c4a81b7e349c40912e0a2e77e18d4bf339653f749d4f5ee4964c1a46c4cc03",
+  "native_tableau_open_render": "NOT_EXECUTED",
+  "xml_repack_preserved_extracts": true
+}

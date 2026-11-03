@@ -1,0 +1,48 @@
+version: 2
+models:
+  - name: stg_private_application_events
+    description: "Private Postgres CDC v2 snapshots. Local demonstrations are synthetic; actual personal source contract is OPEN."
+    config:
+      meta:
+        owner: sponsoratlas-governance
+        openmetadata: {owner: sponsoratlas-governance}
+        data_contract:
+          version: 2
+          grain: event_id
+          privacy: private_no_samples_no_profiler
+          lifecycle: "Full event snapshot; CDC tombstone deletes only its event. application_deleted is a retained application tombstone."
+    columns:
+      - {name: event_id, description: "Event primary key, never an application identifier."}
+      - {name: application_id, description: "Stable ID shared by events for one application."}
+      - {name: owner_role, description: "Approved uppercase SPONSORATLAS_OWNER_* account role; never inferred."}
+      - {name: contact_email, description: "Private nullable contact address. No samples/profiling."}
+  - name: fact_my_applications
+    description: "One row per nondeleted application. Strictly private, excluded from Cube and Blob exports."
+    config:
+      meta:
+        owner: sponsoratlas-governance
+        openmetadata: {owner: sponsoratlas-governance}
+        data_contract:
+          version: 2
+          grain: application_id
+          ownership: "Immutable owner_role per application; only that active role or its legitimate inheritors can see rows."
+          ordering: "event_at DESC, numeric source_lsn DESC, event_id DESC"
+          lifecycle: "Latest retained event wins; application_deleted removes the application. Event tombstone only retracts its own event."
+          refresh: "Atomic protected CTAS replacement; no MERGE, tmp, backup, or post-hook binding."
+          privacy: private_no_samples_no_profiler
+    columns:
+      - name: application_id
+        data_type: varchar
+        data_tests: [unique, not_null]
+      - {name: owner_role, data_type: varchar, data_tests: [not_null]}
+      - {name: job_id, data_type: varchar, data_tests: [not_null]}
+      - {name: event_id, data_type: varchar, data_tests: [not_null]}
+      - {name: application_status, data_type: varchar, data_tests: [not_null]}
+      - {name: last_event_at, data_type: timestamp}
+      - name: contact_email
+        data_type: varchar
+        config:
+          meta: {pii: true, sensitivity: restricted}
+      - {name: source_lsn, data_type: 'decimal(38,0)'}
+      - {name: source_cdc_updated_at, data_type: timestamp}
+      - {name: source_extracted_at, data_type: timestamp}

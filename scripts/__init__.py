@@ -1,0 +1,1 @@
+"""SponsorAtlas reproducible ingestion tools."""

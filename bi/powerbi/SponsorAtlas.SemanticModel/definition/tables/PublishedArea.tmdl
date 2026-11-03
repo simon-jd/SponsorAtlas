@@ -1,0 +1,11 @@
+table PublishedArea
+
+	column area
+		dataType: string
+		isKey
+		sourceColumn: [area]
+		summarizeBy: none
+
+	partition PublishedArea = calculated
+		mode: import
+		source = DISTINCT(SELECTCOLUMNS(wages, "area", wages[area]))

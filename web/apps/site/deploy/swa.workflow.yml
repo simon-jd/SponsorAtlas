@@ -1,0 +1,64 @@
+# INERT: enable only after review, current price/ledger gate and publication authorization.
+# Exact hosted Next16/SWA hybrid adapter compatibility remains unobserved.
+name: SponsorAtlas SWA Free hybrid (approval required)
+on:
+  workflow_dispatch:
+    inputs:
+      projection_artifact_run:
+        description: Reviewed workflow run containing the private actual-public-viz artifact
+        required: true
+        type: string
+      snapshot_sha:
+        description: Independently reviewed LCA public projection SHA256
+        required: true
+        type: string
+permissions:
+  contents: read
+  actions: read
+jobs:
+  deploy:
+    environment: sponsoratlas-reviewed-publication
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24.22.1'
+      - uses: actions/download-artifact@v4
+        with:
+          name: actual-public-viz
+          path: web/apps/site/deploy/downloaded-viz
+          run-id: ${{ inputs.projection_artifact_run }}
+          github-token: ${{ github.token }}
+      - name: Verify the existing quality gate
+        run: |
+          bash web/scripts/bootstrap.sh
+          bash web/scripts/quality-ci.sh
+      - name: Build actual identity and assemble the complete prebuilt application
+        env:
+          SITE_DATA_SOURCE: parquet
+          SITE_SNAPSHOT_SHA: ${{ inputs.snapshot_sha }}
+          SITE_SOURCE_VERSION: ${{ inputs.snapshot_sha }}
+        run: |
+          source web/scripts/env.sh
+          cd web/apps/site
+          chmod 444 deploy/downloaded-viz/manifest.json deploy/downloaded-viz/frequencies.json
+          bash ../../scripts/site-command.sh pnpm build
+          node deploy/package-swa.mjs .next/standalone .next/static deploy/downloaded-viz deploy/artifact "$SITE_SNAPSHOT_SHA"
+          node deploy/inspect-artifact.mjs deploy/artifact > artifact-receipt.json
+      # Runtime secrets/settings must already be reviewed/configured on the target service:
+      # CUBE_REST_URL=https://<ACA>/cubejs-api/v1/load, CUBEJS_API_SECRET, RUM_ORIGIN,
+      # RUM_ENABLED=1, RUM_STORAGE=azure-blob, private finite RUM_BLOB_SAS_URL.
+      # Artifact .env.production supplies actual identity + package-relative projection mode.
+      # SITE_VIZ_DIRECTORY must be unset: a host path override is rejected in package mode.
+      - name: Upload the assembled artifact through the official hybrid adapter
+        uses: Azure/static-web-apps-deploy@v1
+        with:
+          azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN }}
+          action: upload
+          app_location: web/apps/site/deploy/artifact
+          api_location: ''
+          output_location: ''
+          skip_app_build: true
+        env:
+          IS_STATIC_EXPORT: 'false'

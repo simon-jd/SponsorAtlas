@@ -1,0 +1,81 @@
+version: 2
+models:
+  - name: stg_lca
+    description: "One file release/hash/source-row; original payload retained. LCA is an application, not approval or a sponsorship promise. Annual wage assumes 2080h/52wk/26biweekly/12mo."
+    columns:
+      - name: case_number
+        data_tests: [not_null]
+      - name: employer_name
+        data_tests: [not_null]
+      - name: wage_unit
+        data_tests:
+          - not_null
+          - accepted_values:
+              arguments:
+                values: [Hour, Week, Bi-Weekly, Month, Year]
+      - name: soc_code
+        description: "NULL only when soc_unresolved; the share is bounded by staging_flag_limits."
+      - name: county_fips
+        description: "From the source county, else from the worksite ZIP (Census2020 ZCTA seed, same state), else from the worksite city (Census2020 place seed). NULL only when geo_unresolved; bounded by staging_flag_limits."
+      - name: geography_status
+        data_tests:
+          - not_null
+          - accepted_values:
+              arguments:
+                values: [MATCHED, MATCHED_FROM_ZIP, MATCHED_FROM_CITY, SOURCE_COUNTY_MISSING, UNRESOLVED_COUNTY]
+      - name: geo_unresolved
+        data_tests: [not_null]
+      - name: soc_unresolved
+        data_tests: [not_null]
+      - name: received_date
+        data_tests: [not_null]
+      - name: decision_date
+        data_tests: [not_null]
+  - name: stg_uscis
+    columns:
+      - name: employer_name
+        description: "NULL only when employer_name_missing; bounded by staging_flag_limits."
+      - name: employer_name_missing
+        data_tests: [not_null]
+      - name: state_unresolved
+        data_tests: [not_null]
+      - name: released
+        description: "False when state, city and ZIP are all blank. Those rows stay for raw reconciliation and are excluded from the release gate, ER export and dimension load. The 5% state_unresolved limit is unchanged."
+        data_tests: [not_null]
+  - name: stg_bls
+    description: "OEWS May calendar-year survey. Archive FY labels are not survey fiscal years. Suppression/topcode retained as wage_status."
+    columns:
+      - name: soc_code
+        data_tests: [not_null]
+  - name: stg_board_jobs
+    columns:
+      - name: job_key
+        data_tests: [unique, not_null]
+      - name: job_title
+        data_tests: [not_null]
+      - name: job_url
+        data_tests: [not_null]
+      - name: source_provider
+        data_tests:
+          - accepted_values:
+              arguments: {values: [greenhouse, lever, ashby]}
+  - name: stg_cdc_job_postings
+    columns:
+      - name: job_id
+        data_tests: [unique, not_null]
+      - name: employer_name
+        data_tests: [not_null]
+      - name: job_title
+        data_tests: [not_null]
+      - name: source_lsn
+        data_tests: [not_null]
+  - name: stg_cdc_application_events
+    columns:
+      - name: event_id
+        data_tests: [unique, not_null]
+      - name: job_id
+        data_tests: [not_null]
+      - name: event_type
+        data_tests: [not_null]
+      - name: source_lsn
+        data_tests: [not_null]

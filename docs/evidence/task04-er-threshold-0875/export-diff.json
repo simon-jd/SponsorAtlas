@@ -1,0 +1,24 @@
+{
+ "lca_columns": [
+  "case_number",
+  "is_certified",
+  "annual_wage",
+  "employer",
+  "soc_major",
+  "soc",
+  "metro",
+  "fiscal_year",
+  "employer_history_status"
+ ],
+ "lca_rows_only_new": 55202,
+ "lca_values_only_new_per_column": {
+  "employer": 55202
+ },
+ "map_rows": [
+  517991,
+  517991
+ ],
+ "map_rows_only_new": 33044,
+ "map_rows_only_old": 33044,
+ "map_columns_equal": true
+}

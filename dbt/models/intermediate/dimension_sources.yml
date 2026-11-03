@@ -1,0 +1,14 @@
+version: 2
+sources:
+  # Locally a schema of the dimension database; on Snowflake the RAW tables that
+  # scripts.load_snowflake_raw loads (Terraform has no DIMENSIONS_INPUT schema).
+  - name: dimensions_input
+    database: "{{ 'RAW' if target.type == 'snowflake' else target.database }}"
+    schema: "{{ 'LCA' if target.type == 'snowflake' else 'DIMENSIONS_INPUT' }}"
+    tables:
+      - name: employer_sources
+        identifier: "{{ 'DIMENSIONS_INPUT_EMPLOYER_SOURCES' if target.type == 'snowflake' else 'employer_sources' }}"
+      - name: lca_attributes
+        identifier: "{{ 'DIMENSIONS_INPUT_LCA_ATTRIBUTES' if target.type == 'snowflake' else 'lca_attributes' }}"
+      - name: lineage
+        identifier: "{{ 'DIMENSIONS_INPUT_LINEAGE' if target.type == 'snowflake' else 'lineage' }}"

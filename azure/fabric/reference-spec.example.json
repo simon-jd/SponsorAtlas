@@ -1,0 +1,36 @@
+{
+  "er_quality_disclosure": "Agent weak-reference evaluation is not human-adjudicated ground truth; human quality gate remains OPEN.",
+  "references": [
+    {
+      "table": "county_fips",
+      "format": "csv",
+      "local_path": "dbt/seeds/county_fips.csv"
+    },
+    {
+      "table": "ref_soc_2018",
+      "format": "csv",
+      "local_path": "dbt/seeds/ref_soc_2018.csv"
+    },
+    {
+      "table": "ref_county_2023",
+      "format": "csv",
+      "local_path": "dbt/seeds/ref_county_2023.csv"
+    },
+    {
+      "table": "ref_county_cbsa_2023",
+      "format": "csv",
+      "local_path": "dbt/seeds/ref_county_cbsa_2023.csv"
+    },
+    {
+      "table": "employer_xref",
+      "format": "jsonl",
+      "local_path": "REQUIRED_REVIEWED_XREF_EXPORT_JSONL"
+    },
+    {
+      "table": "employer_history",
+      "format": "jsonl",
+      "local_path": "REQUIRED_NATIVE_FULL_CAPTURE_HISTORY_JSONL"
+    }
+  ],
+  "history_export_receipt_file": "REQUIRED_NATIVE_EXPORT_DIRECTORY/receipt.json"
+}

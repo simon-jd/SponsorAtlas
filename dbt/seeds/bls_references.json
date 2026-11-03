@@ -1,0 +1,10 @@
+{
+  "original_sha256": "86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde",
+  "jsonl_sha256": "56ea8a7aa33e1913c332e7d28d9f06742a408e746fb33c9a3fb5f383ced31dfa",
+  "reader": "archive JSONL payload_json",
+  "survey_reference": "May2025",
+  "counts": {
+    "areas": 585,
+    "occupations": 6
+  }
+}

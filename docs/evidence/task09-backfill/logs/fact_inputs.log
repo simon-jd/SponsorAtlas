@@ -1,0 +1,11 @@
+{
+  "kind": "LOCAL_ARCHIVE_REPLAY",
+  "database": "/home/postedism/Desktop/SponsorAtlas/.tools/facts/fy2025-full.duckdb",
+  "bls_raw_rows": 413527,
+  "job_rows": {
+    "greenhouse": 19,
+    "lever": 0,
+    "ashby": 67
+  },
+  "database_bytes": 1197748224
+}

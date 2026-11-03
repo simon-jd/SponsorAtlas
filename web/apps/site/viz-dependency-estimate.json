@@ -1,0 +1,1216 @@
+{
+  "metadataOnly": true,
+  "base": "7f867199ab2753aca5ff6b652daca08ff95a8047",
+  "packages": [
+    {
+      "name": "@deck.gl/core",
+      "version": "9.4.0",
+      "bytes": 8418224,
+      "os": null,
+      "cpu": null,
+      "libc": null,
+      "integrity": "sha512-0isP+x2eGNxteO7lT650lYO7oiAYXAu4aF1jG+BMi8aKYh38HtPugLq1TlQTravIXzBSi5Oe1oZNuVj8h4ZEjA=="
+    },
+    {
+      "name": "@deck.gl/extensions",
+      "version": "9.4.0",
+      "bytes": 1240013,
+      "os": null,
+      "cpu": null,
+      "libc": null,
+      "integrity": "sha512-KHtB0233PSVRac8oHTk0RDivOBORLRIvSQgMpteNxVUO1lRPEa3yoMj4AE2qcKa2w2jqwaT9zt881uyFEB0eSg=="
+    },
+    {
+      "name": "@deck.gl/geo-layers",
+      "version": "9.4.0",
+      "bytes": 3148504,
+      "os": null,
+      "cpu": null,
+      "libc": null,
+      "integrity": "sha512-wpm+nixH+LSv5zBLqxfWmSY0M4WyGc/T8QDV2ZUPVjRJu+QpX1tHmN4nL02gU+k9Tbeqzcqfb8+6Lv7kv/FHmw=="
+    },
+    {
+      "name": "@deck.gl/layers",
+      "version": "9.4.0",
+      "bytes": 3189289,
+      "os": null,
+      "cpu": null,
+      "libc": null,
+      "integrity": "sha512-jSL/xje2Ez7DmnP8AAIdhhg6IAtfXMmnXiUAKNgpl/TTaEL+iL5TAnagCdt39H3azmKVcCG33kOlIoWFAuLuRg=="
+    },
+    {
+      "name": "@deck.gl/mesh-layers",
+      "version": "9.4.0",
+      "bytes": 1373043,
+      "os": null,
+      "cpu": null,
+      "libc": null,
+      "integrity": "sha512-NlLraZYYEoPACHEao+VfQCzyO4s/IaElM79Af6ngqWtM/wpHI1pTs1ISe5NNU9sbW717M/wNHiGqkYwQDbt1aA=="
+    },
+    {
+      "name": "@deck.gl/react",
+      "version": "9.4.0",
+      "bytes": 148321,
+      "os": null,
+      "cpu": null,
+      "libc": null,
+      "integrity": "sha512-bDzQB4qJguHfrb/8sxS/YDMwoKAGGIp3cyw7vAbnwzkyZ/uoGTH4EMHJfATtxjI8d1eZYuzqxD/P6yE21UjJZA=="
+    },
+    {
+      "name": "@deck.gl/widgets",
+      "version": "9.4.0",
+      "bytes": 1146659,
+      "os": null,
+      "cpu": null,
+      "libc": null,
+      "integrity": "sha512-Ou8d9XiymjWT9zkPKtI+YezAfh48N3uxayhjSlNnp24rCrf40QtEnlZyC5daE0bk5Ehrj6SrmE8fOtpbhIPnYQ=="
+    },
+    {
+      "name": "@floating-ui/core",
+      "version": "1.8.0",
+      "bytes": 218589,
+      "os": null,
+      "cpu": null,
+      "libc": null,
+      "integrity": "sha512-0CIZ5itps/8x7BG8dEIhs53BvCUH2PCoogtakwRTut+Arm58sJooJ0AuZhLw2HJYIR5cMLNPBSS728sPho2khQ=="
+    },
+    {
+      "name": "@floating-ui/dom",
+      "version": "1.8.0",
+      "bytes": 174208,
+      "os": null,
+      "cpu": null,
+      "libc": null,
+      "integrity": "sha512-yXSrzeHZBTZadLOlfyhCkJHNeLJnHRnRInwdZ40L7ZiaAtrBwoYlsDrX3v5zB1Utk7CLfzcOVnVVWoXEky7Ceg=="
+    },
+    {
+      "name": "@floating-ui/utils",
+      "version": "0.2.12",
+      "bytes": 66066,
+      "os": null,
+      "cpu": null,
+      "libc": null,
+      "integrity": "sha512-HpCo8tmWzLVad5s2d19EhAz5zqrrQ6s69qd6moPMQvkOuSwDT1YgRfWSVuc4ennqrgv3OHppiOGMQ7oC13yIww=="
+    },
+    {
+      "name": "@loaders.gl/3d-tiles",
+      "version": "4.5.4",
+      "bytes": 1901334,
+      "os": null,
+      "cpu": null,
+      "libc": null,
+      "integrity": "sha512-hkrOU3EC+jOgpgORb9OP9sETRiMGNEpukuBHQNppULcFnbhXjBsYtrVg2s/FEW7mdW5uERgaNtfRTyDxLF++uA=="
+    },
+    {
+      "name": "@loaders.gl/compression",
+      "version": "4.5.4",
+      "bytes": 2725034,
+      "os": null,
+      "cpu": null,
+      "libc": null,
+      "integrity": "sha512-iQ5EzYYCqcWDskVKG3OIYFpYWKG6AhWWQYcvyh87KymZAcrOqxyValFFUzaOA+41g7oadw0598TVuhEl3En7+w=="
+    },
+    {
+      "name": "@loaders.gl/core",
+      "version": "4.4.5",
+      "bytes": 761318,
+      "os": null,
+      "cpu": null,
+      "libc": null,
+      "integrity": "sha512-hlpE200MinDAyU0kMjEM4yk+0TDxiB9nT+GcwOCrXc7buE0e0YwTn+Ynz2Q85dwDKvJZw3kNHTTBGvQwq9533A=="
+    },
+    {
+      "name": "@loaders.gl/core",
+      "version": "4.5.4",
+      "bytes": 762174,
+      "os": null,
+      "cpu": null,
+      "libc": null,
+      "integrity": "sha512-mhO2TT5KWU3GbFYSQ78nPAhoeCnoUfTYjzwxzhHAhd656U4MW/Rq5CxZxM6liKk0Jt11dCQ8VT4nXu8334CmqQ=="
+    },
+    {
+      "name": "@loaders.gl/crypto",
+      "version": "4.5.4",
+      "bytes": 500816,
+      "os": null,
+      "cpu": null,
+      "libc": null,
+      "integrity": "sha512-4X0kPytkE7AtzBMBdGvdp/7Y/i5eq6sbR9IHYwsHvyV4eKWWuKg/Lb2QjZGa2MF2EzxcFPzQuz4WMVnrQNYgMA=="
+    },
+    {
+      "name": "@loaders.gl/draco",
+      "version": "4.4.5",
+      "bytes": 15683955,
+      "os": null,
+      "cpu": null,
+      "libc": null,
+      "integrity": "sha512-J4DuzoUQNJhjxmErCArF5J1PC0LCMbhPkY/YdkTaDmUwxSQdh1M/VWg85AXKLAxUiwGkhmC8AUUaSyPxTpCUrQ=="
+    },
+    {
+      "name": "@loaders.gl/draco",
+      "version": "4.5.4",
+      "bytes": 15702869,
+      "os": null,
+      "cpu": null,
+      "libc": null,
+      "integrity": "sha512-CK0AgHxSC+goyyIh4rEyemN3eOtINtTfXcdyO390+8mRn3zGFccITSwl7eKHS8PKkFjQfJC+E4B8MUDVRSZvhA=="
+    },
+    {
+      "name": "@loaders.gl/geoarrow",
+      "version": "4.5.4",
+      "bytes": 195427,
+      "os": null,
+      "cpu": null,
+      "libc": null,
+      "integrity": "sha512-XnhKvcWLk7gk61n8lC4q7cy9JebQZxu15bV764XSBUXvJFMdJDp4EEAPqAb58I7EFCZIPTMWi3Vcmn0J7gRI2w=="
+    },
+    {
+      "name": "@loaders.gl/gis",
+      "version": "4.5.4",
+      "bytes": 807493,
+      "os": null,
+      "cpu": null,
+      "libc": null,
+      "integrity": "sha512-zk4Q+j+RVF9LH9wkWnzDJg45iw6jM1EdF6m3lSzLBZ3NoSeFISkicqe+jXubtGDFWIFWyix1OxfppxNKR2oAJg=="
+    },
+    {
+      "name": "@loaders.gl/gltf",
+      "version": "4.4.5",
+      "bytes": 1666221,
+      "os": null,
+      "cpu": null,
+      "libc": null,
+      "integrity": "sha512-YIhgeoDYdRbfXQS+cpRWYbiRiiaajF5UCqpEoFpDEpOpcW6pKC2sfp5vZ1LiUIXu2CVv/HFJaDeLuQjeX5uVlQ=="
+    },
+    {
+      "name": "@loaders.gl/gltf",
+      "version": "4.5.4",
+      "bytes": 1686526,
+      "os": null,
+      "cpu": null,
+      "libc": null,
+      "integrity": "sha512-xkAyyVzXV3dkAgf0HU4Ft16lvu+tZROxqj+4jmeIRxKb0Agj9mmmS22zfIebPGDQh6rj7+AwpmaQVYlHxL8HGg=="
+    },
+    {
+      "name": "@loaders.gl/images",
+      "version": "4.4.5",
+      "bytes": 200226,
+      "os": null,
+      "cpu": null,
+      "libc": null,
+      "integrity": "sha512-7/odHt5n67OVLHelTm1euNNw5gCwycezQI7Wg3NBUg7q3bHWmTPY++Z4uz2egiuzJNY3GLegfg8AI1c3fD64Jw=="
+    },
+    {
+      "name": "@loaders.gl/images",
+      "version": "4.5.4",
+      "bytes": 201468,
+      "os": null,
+      "cpu": null,
+      "libc": null,
+      "integrity": "sha512-Z/7SSC9v+iQdcpwkr7nSloCpgAREuO2/3yD4niAhk+ar7nrgRByaiBH16L51M5Juse8MG3oC67gaO85VuUb3jA=="
+    },
+    {
+      "name": "@loaders.gl/loader-utils",
+      "version": "4.4.5",
+      "bytes": 584343,
+      "os": null,
+      "cpu": null,
+      "libc": null,
+      "integrity": "sha512-c4h2RUMEru+hbfvgZEIy5cLQKyQka2TPQZW/2Wy+yIPr3FU7RKwfp+vLwIfir6Xkdn2zniWyWretZwE02aY/Ug=="
+    },
+    {
+      "name": "@loaders.gl/loader-utils",
+      "version": "4.5.4",
+      "bytes": 598010,
+      "os": null,
+      "cpu": null,
+      "libc": null,
+      "integrity": "sha512-ZUNn/4+DEn8yTKGUKdjlbA7ok2JyNrica/Lvf1d8dwx7vCUSZ84PBB9cNtrx8VDXmVjkIClQzmnriz16QHjTMQ=="
+    },
+    {
+      "name": "@loaders.gl/math",
+      "version": "4.5.4",
+      "bytes": 184070,
+      "os": null,
+      "cpu": null,
+      "libc": null,
+      "integrity": "sha512-fCLno7Jlp3cxECUSzATmlpUWw/5qQhzQvY+MPBgwWbV49EFPuWn9+qCGjg6PpqRd6/SyflJ0wstlMLyQ4jGiQw=="
+    },
+    {
+      "name": "@loaders.gl/mvt",
+      "version": "4.5.4",
+      "bytes": 2022228,
+      "os": null,
+      "cpu": null,
+      "libc": null,
+      "integrity": "sha512-FHEHuSzoT9cFnWplz4ajYCWru1qRXcxeavMK65UmlDYROliwc0TpcM96NUSWVGN4mcEVQS9Vxui/fslGE8jaCA=="
+    },
+    {
+      "name": "@loaders.gl/schema-utils",
+      "version": "4.4.5",
+      "bytes": 1387460,
+      "os": null,
+      "cpu": null,
+      "libc": null,
+      "integrity": "sha512-vi6AROLWvoLIN609tVmchwotTaHK5rHv8SWjoVUWLhPCXmIc9npz0rCl7NJScCgr7UjYifZG1rWOnrAxaYTlyA=="
+    },
+    {
+      "name": "@loaders.gl/schema-utils",
+      "version": "4.5.4",
+      "bytes": 1387460,
+      "os": null,
+      "cpu": null,
+      "libc": null,
+      "integrity": "sha512-vV52aT4RJiHzzbHlwdkX254d/ubdNzcxJuFfrfDeyUZkKDa//YPhVFjCxfNlxXgS+7pS0TGakfNB18vyYkk3FA=="
+    },
+    {
+      "name": "@loaders.gl/schema",
+      "version": "4.4.5",
+      "bytes": 268954,
+      "os": null,
+      "cpu": null,
+      "libc": null,
+      "integrity": "sha512-q2XNquegw+hX+ZEshacKYL/+FKBUIS5FHA+2Ft3JWmcNiR6umGnYCdXQhDcFCqAm8Ks87fMCV+z/zTloxaIZgQ=="
+    },
+    {
+      "name": "@loaders.gl/schema",
+      "version": "4.5.4",
+      "bytes": 269232,
+      "os": null,
+      "cpu": null,
+      "libc": null,
+      "integrity": "sha512-5CO/TY2OkmM53+qfSvzMt17LwVJhBatqi/QaO45VOn8poTK1jqyZvnI0qvKFqOsMWzHh4yoQVUnxaWiV4CZ41w=="
+    },
+    {
+      "name": "@loaders.gl/terrain",
+      "version": "4.5.4",
+      "bytes": 402530,
+      "os": null,
+      "cpu": null,
+      "libc": null,
+      "integrity": "sha512-7cQL0P+Pc2TznYqS9eudHHzS0ZGPWxjO12Q/hlc8c2Lukoe6WcSyX5dITPq2f1GXrO3z2Ta+WHOOa/vLHJ1jSw=="
+    },
+    {
+      "name": "@loaders.gl/textures",
+      "version": "4.4.5",
+      "bytes": 11901874,
+      "os": null,
+      "cpu": null,
+      "libc": null,
+      "integrity": "sha512-zB9xMIKiU3tQN6q5/A6yaXw/DbodA+bqMDTVu7pzk4lw4zcBwWiGtD5LV0QjgtlTj2ZnwV8cCd1rYk9bwiX2Bw=="
+    },
+    {
+      "name": "@loaders.gl/textures",
+      "version": "4.5.4",
+      "bytes": 19083673,
+      "os": null,
+      "cpu": null,
+      "libc": null,
+      "integrity": "sha512-rfLWejZo0QKlTHSUhPDhZnRDC7Fuk+dw+sBojggRG2NLLAo1UAz/uN7sM//7iyxfd0R3LhNntVYKSi41xbYKrQ=="
+    },
+    {
+      "name": "@loaders.gl/tiles",
+      "version": "4.5.4",
+      "bytes": 1067493,
+      "os": null,
+      "cpu": null,
+      "libc": null,
+      "integrity": "sha512-ACKBIuod7SqkmdYg2dMrksb13mCp6jUzrMrmGgB1YoM34d9TAHgpTtjGRz9U4xZWwbGVZR0DzNpdmY8BPYw60Q=="
+    },
+    {
+      "name": "@loaders.gl/wms",
+      "version": "4.5.4",
+      "bytes": 664132,
+      "os": null,
+      "cpu": null,
+      "libc": null,
+      "integrity": "sha512-ugUX7RZ56BcEimk4+W4Lg39DI5DBuEPlnlD43FJ6d3qbVPQGurFsrcOBSDKZh/Xmwmz4Mda30l3PBeGYQX2wMA=="
+    },
+    {
+      "name": "@loaders.gl/worker-utils",
+      "version": "4.4.5",
+      "bytes": 374798,
+      "os": null,
+      "cpu": null,
+      "libc": null,
+      "integrity": "sha512-ZQDoM6f/HpZ3Lzj6vjtPHXSvi+cUK0QG7yJz+MKWAokmeWa98WMZwswS8zkn/qNkY95rLcxh66N4Sl96+7hqAQ=="
+    },
+    {
+      "name": "@loaders.gl/worker-utils",
+      "version": "4.5.4",
+      "bytes": 376685,
+      "os": null,
+      "cpu": null,
+      "libc": null,
+      "integrity": "sha512-OvVMMLh56QdBQgyMDxuho9doWq6oiz7paqP3rwidb+LqgJB5GvdqcoL+GbUcku2X8k0ZxCldvo+l46Yhpv0bfQ=="
+    },
+    {
+      "name": "@loaders.gl/xml",
+      "version": "4.5.4",
+      "bytes": 460810,
+      "os": null,
+      "cpu": null,
+      "libc": null,
+      "integrity": "sha512-R7y++RAtLlyENML3zkBSBC9/R31HotVfncXCo+gXyftZTk1273F4ALxh57/yeDtmho3Z3fBGpM+NskfTlQxO+g=="
+    },
+    {
+      "name": "@loaders.gl/zip",
+      "version": "4.5.4",
+      "bytes": 962741,
+      "os": null,
+      "cpu": null,
+      "libc": null,
+      "integrity": "sha512-sZ/pt26RlzJQp7NWZZWCS362LLAyloXCNpxosPMMTmNSkfx2SaFbbUVLwpdr3kAbcauJx77VLG2BO22OIvxC3w=="
+    },
+    {
+      "name": "@luma.gl/core",
+      "version": "9.4.2",
+      "bytes": 1858341,
+      "os": null,
+      "cpu": null,
+      "libc": null,
+      "integrity": "sha512-VFol6FUSHQeYR40NrkCM/mkP5DX7aI8pcDewxI8DBjtrcP4+ZJiJwnxWZnsMBzM4RuuvmDoHkPWCxj6Ob9yo+w=="
+    },
+    {
+      "name": "@luma.gl/engine",
+      "version": "9.4.2",
+      "bytes": 2649916,
+      "os": null,
+      "cpu": null,
+      "libc": null,
+      "integrity": "sha512-gBAcn+b1jOwE4pDF5zbuzMxCa/KGY3Q2Gq0gNUPU1AZHNk4aDgOEQaY2sqMsaoGHkDXB+pxneJQPw5c6Q5mnHA=="
+    },
+    {
+      "name": "@luma.gl/gltf",
+      "version": "9.4.2",
+      "bytes": 1630889,
+      "os": null,
+      "cpu": null,
+      "libc": null,
+      "integrity": "sha512-086JqT2piej2S0+P2cvMbB0Chlzz/siXm5Pydv7BcVX2yX+TCJuSowU3zl/6yDE6z6zcVcnuWoiHbvUj9EO2FQ=="
+    },
+    {
+      "name": "@luma.gl/gpgpu",
+      "version": "9.4.2",
+      "bytes": 8370826,
+      "os": null,
+      "cpu": null,
+      "libc": null,
+      "integrity": "sha512-LoEqoViPZqMHqQzvq/txFuOLsxI6sn8xmv+IZyovRFBqcWaV184PE/8Ieufww0pjVyJMfubhUCQmGuGrOME8oA=="
+    },
+    {
+      "name": "@luma.gl/shadertools",
+      "version": "9.4.2",
+      "bytes": 3520885,
+      "os": null,
+      "cpu": null,
+      "libc": null,
+      "integrity": "sha512-0/6pLZSfnQnvcWdYePKKSwVet+gFtAAnKeGXNfxpgp3I8E3WsF/SbD6oEzgU7jdnRqONwGsoACWNpQHO0zZvIQ=="
+    },
+    {
+      "name": "@luma.gl/webgl",
+      "version": "9.4.2",
+      "bytes": 2636898,
+      "os": null,
+      "cpu": null,
+      "libc": null,
+      "integrity": "sha512-D3GqnxTgQI+vsyH56hX5+jwqdVUhvhbpnPurTwbQOSlSQ8mshhNKcRdrZytTy10qiodDwrcjTnndPEAP6UgCzA=="
+    },
+    {
+      "name": "@luma.gl/webgpu",
+      "version": "9.4.2",
+      "bytes": 1155892,
+      "os": null,
+      "cpu": null,
+      "libc": null,
+      "integrity": "sha512-24gDOmLyL81fVHxn+UXajnYN5jVln7XgB9fvobc1Yh3PAtXjlcAkmVTqYRvULVGeEamuqvqPDscAkaK/T+R1iQ=="
+    },
+    {
+      "name": "@mapbox/martini",
+      "version": "0.2.0",
+      "bytes": 17954,
+      "os": null,
+      "cpu": null,
+      "libc": null,
+      "integrity": "sha512-7hFhtkb0KTLEls+TRw/rWayq5EeHtTaErgm/NskVoXmtgAQu/9D299aeyj6mzAR/6XUnYRp2lU+4IcrYRFjVsQ=="
+    },
+    {
+      "name": "@mapbox/point-geometry",
+      "version": "0.1.0",
+      "bytes": 23849,
+      "os": null,
+      "cpu": null,
+      "libc": null,
+      "integrity": "sha512-6j56HdLTwWGO0fJPlrZtdU/B13q8Uwmo18Ck2GnGgN9PCFyKTZ3UbXeEdRFh18i9XQ92eH2VdtpJHpBD3aripQ==",
+      "compressedBytes": 4860,
+      "sizeEvidence": "integrity-verified tar regular-member sum, in-memory only, no extraction"
+    },
+    {
+      "name": "@mapbox/tiny-sdf",
+      "version": "2.3.0",
+      "bytes": 12970,
+      "os": null,
+      "cpu": null,
+      "libc": null,
+      "integrity": "sha512-gBvcNDBBB66bgQYvnaJ6Jk+VCaMmVq5+IZR2kWPisT88Z8s0kBQt6hfVi8QgRW8Vpg0UWZzBA4ZSyzHHC+VeRA=="
+    },
+    {
+      "name": "@mapbox/vector-tile",
+      "version": "1.3.1",
+      "bytes": 261972,
+      "os": null,
+      "cpu": null,
+      "libc": null,
+      "integrity": "sha512-MCEddb8u44/xfQ3oD+Srl/tNcQoqTw3goGk2oLsrFxOTc3dUp+kAnby3PvAeeBYSMSjSPD1nd1AJA6W49WnoUw=="
+    },
+    {
+      "name": "@math.gl/core",
+      "version": "4.1.0",
+      "bytes": 1665772,
+      "os": null,
+      "cpu": null,
+      "libc": null,
+      "integrity": "sha512-FrdHBCVG3QdrworwrUSzXIaK+/9OCRLscxI2OUy6sLOHyHgBMyfnEGs99/m3KNvs+95BsnQLWklVfpKfQzfwKA=="
+    },
+    {
+      "name": "@math.gl/culling",
+      "version": "4.1.0",
+      "bytes": 378764,
+      "os": null,
+      "cpu": null,
+      "libc": null,
+      "integrity": "sha512-jFmjFEACnP9kVl8qhZxFNhCyd47qPfSVmSvvjR0/dIL6R9oD5zhR1ub2gN16eKDO/UM7JF9OHKU3EBIfeR7gtg=="
+    },
+    {
+      "name": "@math.gl/geospatial",
+      "version": "4.1.0",
+      "bytes": 133645,
+      "os": null,
+      "cpu": null,
+      "libc": null,
+      "integrity": "sha512-BzsUhpVvnmleyYF6qdqJIip6FtIzJmnWuPTGhlBuPzh7VBHLonCFSPtQpbkRuoyAlbSyaGXcVt6p6lm9eK2vtg=="
+    },
+    {
+      "name": "@math.gl/polygon",
+      "version": "4.1.0",
+      "bytes": 301947,
+      "os": null,
+      "cpu": null,
+      "libc": null,
+      "integrity": "sha512-YA/9PzaCRHbIP5/0E9uTYrqe+jsYTQoqoDWhf6/b0Ixz8bPZBaGDEafLg3z7ffBomZLacUty9U3TlPjqMtzPjA=="
+    },
+    {
+      "name": "@math.gl/sun",
+      "version": "4.1.0",
+      "bytes": 29933,
+      "os": null,
+      "cpu": null,
+      "libc": null,
+      "integrity": "sha512-i3q6OCBLSZ5wgZVhXg+X7gsjY/TUtuFW/2KBiq/U1ypLso3S4sEykoU/MGjxUv1xiiGtr+v8TeMbO1OBIh/HmA=="
+    },
+    {
+      "name": "@math.gl/types",
+      "version": "4.1.0",
+      "bytes": 33982,
+      "os": null,
+      "cpu": null,
+      "libc": null,
+      "integrity": "sha512-clYZdHcmRvMzVK5fjeDkQlHUzXQSNdZ7s4xOqC3nJPgz4C/TZkUecTo9YS4PruZqtDda/ag4erndP0MIn40dGA=="
+    },
+    {
+      "name": "@math.gl/web-mercator",
+      "version": "4.1.0",
+      "bytes": 226040,
+      "os": null,
+      "cpu": null,
+      "libc": null,
+      "integrity": "sha512-HZo3vO5GCMkXJThxRJ5/QYUYRr3XumfT8CzNNCwoJfinxy5NtKUd7dusNTXn7yJ40UoB8FMIwkVwNlqaiRZZAw=="
+    },
+    {
+      "name": "@nodable/entities",
+      "version": "3.1.0",
+      "bytes": 74539,
+      "os": null,
+      "cpu": null,
+      "libc": null,
+      "integrity": "sha512-LsS/DjHr+uDM647Gru/cA8+J3a3HfhttwCKLyuoyN7yXTFCxKBtSgMQBvrW9yNPa2/zDRUNuGPaH5QUFoa4arQ=="
+    },
+    {
+      "name": "@probe.gl/env",
+      "version": "4.1.2",
+      "bytes": 23050,
+      "os": null,
+      "cpu": null,
+      "libc": null,
+      "integrity": "sha512-KIcdjrEiEZVIGX9nh7pZSmTMIKrd+wCb09gyXqpYYI4hs9WMqrQHvKZ7KD8ASutf6kwARwgd4WNQn8aucLSz3g=="
+    },
+    {
+      "name": "@probe.gl/log",
+      "version": "4.1.2",
+      "bytes": 133062,
+      "os": null,
+      "cpu": null,
+      "libc": null,
+      "integrity": "sha512-2LqSq4CHhc/HJQasHMPOzA6c7rprlGz8CCREGebo19jxcuKdvXQo0DEmlfId076U6UldMp6jGhWvDHEFLX111Q=="
+    },
+    {
+      "name": "@probe.gl/stats",
+      "version": "4.1.2",
+      "bytes": 36607,
+      "os": null,
+      "cpu": null,
+      "libc": null,
+      "integrity": "sha512-Hqc0UIHd0IZ2+JbovzTz7lYG7CY9D8yCB81zyP92Zl9UDSPcw2cLbTySW14keAQeAo1sjGjUw0+KHxr0Y2h/hA=="
+    },
+    {
+      "name": "@turf/boolean-clockwise",
+      "version": "5.1.5",
+      "bytes": 7469,
+      "os": null,
+      "cpu": null,
+      "libc": null,
+      "integrity": "sha512-FqbmEEOJ4rU4/2t7FKx0HUWmjFEVqR+NJrFP7ymGSjja2SQ7Q91nnBihGuT+yuHHl6ElMjQ3ttsB/eTmyCycxA==",
+      "compressedBytes": 2668,
+      "sizeEvidence": "integrity-verified tar regular-member sum, in-memory only, no extraction"
+    },
+    {
+      "name": "@turf/clone",
+      "version": "5.1.5",
+      "bytes": 15605,
+      "os": null,
+      "cpu": null,
+      "libc": null,
+      "integrity": "sha512-//pITsQ8xUdcQ9pVb4JqXiSqG4dos5Q9N4sYFoWghX21tfOV2dhc5TGqYOhnHrQS7RiKQL1vQ48kIK34gQ5oRg==",
+      "compressedBytes": 3104,
+      "sizeEvidence": "integrity-verified tar regular-member sum, in-memory only, no extraction"
+    },
+    {
+      "name": "@turf/helpers",
+      "version": "5.1.5",
+      "bytes": 126042,
+      "os": null,
+      "cpu": null,
+      "libc": null,
+      "integrity": "sha512-/lF+JR+qNDHZ8bF9d+Cp58nxtZWJ3sqFe6n3u3Vpj+/0cqkjk4nXKYBSY0azm+GIYB5mWKxUXvuP/m0ZnKj1bw==",
+      "compressedBytes": 12367,
+      "sizeEvidence": "integrity-verified tar regular-member sum, in-memory only, no extraction"
+    },
+    {
+      "name": "@turf/invariant",
+      "version": "5.2.0",
+      "bytes": 32342,
+      "os": null,
+      "cpu": null,
+      "libc": null,
+      "integrity": "sha512-28RCBGvCYsajVkw2EydpzLdcYyhSA77LovuOvgCJplJWaNVyJYH6BOR3HR9w50MEkPqb/Vc/jdo6I6ermlRtQA==",
+      "compressedBytes": 4807,
+      "sizeEvidence": "integrity-verified tar regular-member sum, in-memory only, no extraction"
+    },
+    {
+      "name": "@turf/meta",
+      "version": "5.2.0",
+      "bytes": 186941,
+      "os": null,
+      "cpu": null,
+      "libc": null,
+      "integrity": "sha512-ZjQ3Ii62X9FjnK4hhdsbT+64AYRpaI8XMBMcyftEOGSmPMUVnkbvuv3C9geuElAXfQU7Zk1oWGOcrGOD9zr78Q==",
+      "compressedBytes": 20327,
+      "sizeEvidence": "integrity-verified tar regular-member sum, in-memory only, no extraction"
+    },
+    {
+      "name": "@turf/rewind",
+      "version": "5.1.5",
+      "bytes": 18141,
+      "os": null,
+      "cpu": null,
+      "libc": null,
+      "integrity": "sha512-Gdem7JXNu+G4hMllQHXRFRihJl3+pNl7qY+l4qhQFxq+hiU1cQoVFnyoleIqWKIrdK/i2YubaSwc3SCM7N5mMw==",
+      "compressedBytes": 3693,
+      "sizeEvidence": "integrity-verified tar regular-member sum, in-memory only, no extraction"
+    },
+    {
+      "name": "@types/brotli",
+      "version": "1.3.5",
+      "bytes": 4010,
+      "os": null,
+      "cpu": null,
+      "libc": null,
+      "integrity": "sha512-9xoNr+bcxT236/7ZgcWw/6Pb2RRetE13p4bFy1xYSckKwyOiRfmInay8baUWZgH7/284Wl6IPe7+nOI9+OQg/A=="
+    },
+    {
+      "name": "@types/crypto-js",
+      "version": "4.2.2",
+      "bytes": 60435,
+      "os": null,
+      "cpu": null,
+      "libc": null,
+      "integrity": "sha512-sDOLlVbHhXpAUAL0YHDUUwDZf3iN4Bwi4W6a0W0b+QcAezUbRtH4FVb+9J4h+XFPW7l/gQ9F8qC7P+Ec4k8QVQ=="
+    },
+    {
+      "name": "@types/geojson",
+      "version": "7946.0.16",
+      "bytes": 9514,
+      "os": null,
+      "cpu": null,
+      "libc": null,
+      "integrity": "sha512-6C8nqWur3j98U6+lXDfTUWIfgvZU+EumvpHKcYjujKH7woYyLj2sUmff0tRhrqM7BohUw7Pz3ZB1jj2gW9Fvmg=="
+    },
+    {
+      "name": "@types/node",
+      "version": "25.9.9",
+      "bytes": 2392781,
+      "os": null,
+      "cpu": null,
+      "libc": null,
+      "integrity": "sha512-b4e2xxj/yMeT2hNlD6x7zNFiQK2Dlmkb9CQ6v3/1G2RezKN4YS2lcEv8lzGm1mhs4f2lM4yNAMI/zUDBZBBt7w=="
+    },
+    {
+      "name": "@types/offscreencanvas",
+      "version": "2019.7.3",
+      "bytes": 8887,
+      "os": null,
+      "cpu": null,
+      "libc": null,
+      "integrity": "sha512-ieXiYmgSRXUDeOntE1InxjWyvEelZGP63M+cGuquuRLuIKKT1osnkXjxev9B7d1nXSug5vpunx+gNlbVxMlC9A=="
+    },
+    {
+      "name": "@types/pako",
+      "version": "1.0.7",
+      "bytes": 7271,
+      "os": null,
+      "cpu": null,
+      "libc": null,
+      "integrity": "sha512-YBtzT2ztNF6R/9+UXj2wTGFnC9NklAnASt3sC0h2m1bbH7G6FyBIkt4AN8ThZpNfxUo1b2iMVO0UawiJymEt8A=="
+    },
+    {
+      "name": "@webgpu/types",
+      "version": "0.1.74",
+      "bytes": 124868,
+      "os": null,
+      "cpu": null,
+      "libc": null,
+      "integrity": "sha512-lgiI4hbuLcI9unnm2cL/tvCaQU45dp0xcLWJh5uB/9MBGvIA4F8XIk7nSiBeg+K4xWGYwgZKn80LmERI5CxoTA=="
+    },
+    {
+      "name": "a5-js",
+      "version": "0.10.1",
+      "bytes": 1390114,
+      "os": null,
+      "cpu": null,
+      "libc": null,
+      "integrity": "sha512-UeTPtqZzXpDBLX0sm9GaUXArwHntBGQ9M1Bh7rB/wjibQEOmvaq5amgJKc4xf0A9GO9JgFhHRvlvdCeiav2+/g=="
+    },
+    {
+      "name": "anynum",
+      "version": "1.0.1",
+      "bytes": 16050,
+      "os": null,
+      "cpu": null,
+      "libc": null,
+      "integrity": "sha512-N6//FLET/tXYNM/F6ABca1oH6fWB+KlTt909Le28WMDBk8oaT4vY17DCrwg2MvmuqUKt3Ni4N5dGJ/EoBgcO6A=="
+    },
+    {
+      "name": "apache-arrow",
+      "version": "21.2.0",
+      "bytes": 5818996,
+      "os": null,
+      "cpu": null,
+      "libc": null,
+      "integrity": "sha512-Hxe6Agq26gQOM954qpzYSllJBPJl+e16U5CkfuMUhLrNba+5nKkttIVlflaovN6oaTratqMGAO8H5u/aNhmHWQ=="
+    },
+    {
+      "name": "brotli",
+      "version": "1.3.3",
+      "bytes": 1503586,
+      "os": null,
+      "cpu": null,
+      "libc": null,
+      "integrity": "sha512-oTKjJdShmDuGW94SyyaoQvAjf30dZaHnjJ8uAF+u2/vGJkJbJPJAT1gDiOJP5v1Zb6f9KEyW/1HpuaWIXtGHPg=="
+    },
+    {
+      "name": "buf-compare",
+      "version": "1.0.1",
+      "bytes": 3095,
+      "os": null,
+      "cpu": null,
+      "libc": null,
+      "integrity": "sha512-Bvx4xH00qweepGc43xFvMs5BKASXTbHaHm6+kDYIK9p/4iFwjATQkmPKHQSgJZzKbAymhztRbXUf1Nqhzl73/Q==",
+      "compressedBytes": 1712,
+      "sizeEvidence": "integrity-verified tar regular-member sum, in-memory only, no extraction"
+    },
+    {
+      "name": "charenc",
+      "version": "0.0.2",
+      "bytes": 2933,
+      "os": null,
+      "cpu": null,
+      "libc": null,
+      "integrity": "sha512-yrLQ/yVUFXkzg7EDQsPieE/53+0RlaWTs+wBrvW36cyilJ2SaDWfl4Yj7MtLTXleV9uEKefbAGUPv2/iWSooRA==",
+      "compressedBytes": 1571,
+      "sizeEvidence": "integrity-verified tar regular-member sum, in-memory only, no extraction"
+    },
+    {
+      "name": "core-assert",
+      "version": "0.2.1",
+      "bytes": 15018,
+      "os": null,
+      "cpu": null,
+      "libc": null,
+      "integrity": "sha512-IG97qShIP+nrJCXMCgkNZgH7jZQ4n8RpPyPeXX++T6avR/KhLhgLiHKoEn5Rc1KjfycSfA9DMa6m+4C4eguHhw==",
+      "compressedBytes": 4985,
+      "sizeEvidence": "integrity-verified tar regular-member sum, in-memory only, no extraction"
+    },
+    {
+      "name": "core-util-is",
+      "version": "1.0.3",
+      "bytes": 4982,
+      "os": null,
+      "cpu": null,
+      "libc": null,
+      "integrity": "sha512-ZQBvi1DcpJ4GDqanjucZ2Hj3wEO5pZDS89BWbkcrvdxksJorwUDDZamX9ldFkp9aw2lmBDLgkObEA4DWNJ9FYQ=="
+    },
+    {
+      "name": "crypt",
+      "version": "0.0.2",
+      "bytes": 5029,
+      "os": null,
+      "cpu": null,
+      "libc": null,
+      "integrity": "sha512-mCxBlsHFYh9C+HVpiEacem8FEBnMXgU9gy4zmNC+SXAZNB/1idgp/aulFJ4FgCi7GPEVbfyng092GqL2k2rmow==",
+      "compressedBytes": 2307,
+      "sizeEvidence": "integrity-verified tar regular-member sum, in-memory only, no extraction"
+    },
+    {
+      "name": "deep-strict-equal",
+      "version": "0.2.0",
+      "bytes": 2955,
+      "os": null,
+      "cpu": null,
+      "libc": null,
+      "integrity": "sha512-3daSWyvZ/zwJvuMGlzG1O+Ow0YSadGfb3jsh9xoCutv2tWyB9dA4YvR9L9/fSdDZa2dByYQe+TqapSGUrjnkoA==",
+      "compressedBytes": 1622,
+      "sizeEvidence": "integrity-verified tar regular-member sum, in-memory only, no extraction"
+    },
+    {
+      "name": "draco3d",
+      "version": "1.5.7",
+      "bytes": 873175,
+      "os": null,
+      "cpu": null,
+      "libc": null,
+      "integrity": "sha512-m6WCKt/erDXcw+70IJXnG7M3awwQPAsZvJGX5zY7beBqpELw6RDGkYVU0W43AFxye4pDZ5i2Lbyc/NNGqwjUVQ=="
+    },
+    {
+      "name": "earcut",
+      "version": "2.2.4",
+      "bytes": 95170,
+      "os": null,
+      "cpu": null,
+      "libc": null,
+      "integrity": "sha512-/pjZsA1b4RPHbeWZQn66SWS8nZZWLQQ23oE3Eam7aroEFGEvwKAsJfZ9ytiEMycfzXWpca4FA9QIOehf7PocBQ=="
+    },
+    {
+      "name": "fast-xml-builder",
+      "version": "1.3.1",
+      "bytes": 223768,
+      "os": null,
+      "cpu": null,
+      "libc": null,
+      "integrity": "sha512-pIM/1n3ntFXKYrUZwW7QCK0gAW7XY+wzj1YMIV3tLDvPj/V+zTGJK5e3/4WJfwj0qWw2ElNXiTixda/R+3YSug=="
+    },
+    {
+      "name": "fast-xml-parser",
+      "version": "5.11.2",
+      "bytes": 1315394,
+      "os": null,
+      "cpu": null,
+      "libc": null,
+      "integrity": "sha512-R9iDuNrQYeQut46cn2r2wHKn4HYzVDvDm5J1wW+koZewykv0yuO2HChTYeZtrULyHIDM9cj9TUXloCsueCQUog=="
+    },
+    {
+      "name": "fflate",
+      "version": "0.7.4",
+      "bytes": 535414,
+      "os": null,
+      "cpu": null,
+      "libc": null,
+      "integrity": "sha512-5u2V/CDW15QM1XbbgS+0DfPxVB+jUKhWEKuuFuHncbk3tEEqzmoXL+2KyOFuKGqOnmdIy0/davWF1CkuwtibCw=="
+    },
+    {
+      "name": "flatbuffers",
+      "version": "25.9.23",
+      "bytes": 288122,
+      "os": null,
+      "cpu": null,
+      "libc": null,
+      "integrity": "sha512-MI1qs7Lo4Syw0EOzUl0xjs2lsoeqFku44KpngfIduHBYvzm8h2+7K8YMQh1JtVVVrUvhLpNwqVi4DERegUJhPQ=="
+    },
+    {
+      "name": "framer-motion",
+      "version": "14.6.0",
+      "bytes": 6257578,
+      "os": null,
+      "cpu": null,
+      "libc": null,
+      "integrity": "sha512-MzBgZxGgoHPfSLEXmo4o5XlZvb+nVRFdHtGjVhm6LMIEJKTt/8hNO023euL5mYyzc8llV/hQTfjnN68tNRHalw=="
+    },
+    {
+      "name": "gl-matrix",
+      "version": "3.4.4",
+      "bytes": 780912,
+      "os": null,
+      "cpu": null,
+      "libc": null,
+      "integrity": "sha512-latSnyDNt/8zYUB6VIJ6PCh2jBjJX6gnDsoCZ7LyW7GkqrD51EWwa9qCoGixj8YqBtETQK/xY7OmpTF8xz1DdQ=="
+    },
+    {
+      "name": "h3-js",
+      "version": "4.5.0",
+      "bytes": 7679316,
+      "os": null,
+      "cpu": null,
+      "libc": null,
+      "integrity": "sha512-uKmdPc+DuarnR+XqZxEuWOMw7KzzKROrx3MLeJpFnMOs78S9M5eZ+X5RieS9UcSFQqbeXzbfWuX/W9Pyajinqw=="
+    },
+    {
+      "name": "image-size",
+      "version": "0.7.5",
+      "bytes": 30514,
+      "os": null,
+      "cpu": null,
+      "libc": null,
+      "integrity": "sha512-Hiyv+mXHfFEP7LzUL/llg9RwFxxY+o9N3JVLIeG5E7iFIFAalxvRU9UZthBdYDEVnzHMgjnKJPPpay5BWf1g9g=="
+    },
+    {
+      "name": "immediate",
+      "version": "3.0.6",
+      "bytes": 14646,
+      "os": null,
+      "cpu": null,
+      "libc": null,
+      "integrity": "sha512-XXOFtyqDjNDAQxVfYxuF7g9Il/IbWmmlQg2MYKOH8ExIT1qg6xc4zyS3HaEEATgs1btfzxq15ciUiY7gjSXRGQ==",
+      "compressedBytes": 4905,
+      "sizeEvidence": "integrity-verified tar regular-member sum, in-memory only, no extraction"
+    },
+    {
+      "name": "is-buffer",
+      "version": "1.1.6",
+      "bytes": 5575,
+      "os": null,
+      "cpu": null,
+      "libc": null,
+      "integrity": "sha512-NcdALwpXkTm5Zvvbk7owOUSvVvBKDgKP5/ewfXEznmQFfs4ZRmanOeKBTjRVjka3QFoN6XJ+9F3USqfHqTaU5w==",
+      "compressedBytes": 2394,
+      "sizeEvidence": "integrity-verified tar regular-member sum, in-memory only, no extraction"
+    },
+    {
+      "name": "is-error",
+      "version": "2.2.2",
+      "bytes": 6224,
+      "os": null,
+      "cpu": null,
+      "libc": null,
+      "integrity": "sha512-IOQqts/aHWbiisY5DuPJQ0gcbvaLFCa7fBa9xoLfxBZvQ+ZI/Zh9xoI7Gk+G64N0FdK4AbibytHht2tWgpJWLg=="
+    },
+    {
+      "name": "is-unsafe",
+      "version": "2.0.2",
+      "bytes": 64551,
+      "os": null,
+      "cpu": null,
+      "libc": null,
+      "integrity": "sha512-HgbIHPBH0KHHCcjLfGsCvhtPTVxjaAZlXjwdz7/GQC40SjSe4sfQsar8J5VFo8JOSbarkpV0OLG95bbaNd9aAQ=="
+    },
+    {
+      "name": "isarray",
+      "version": "1.0.0",
+      "bytes": 3886,
+      "os": null,
+      "cpu": null,
+      "libc": null,
+      "integrity": "sha512-VLghIWNM6ELQzo7zwmcg0NmTVyWKYjvIeM83yjp0wRDTmUnrM678fQbcKBo6n2CJEF0szoG//ytg+TKla89ALQ==",
+      "compressedBytes": 2021,
+      "sizeEvidence": "integrity-verified tar regular-member sum, in-memory only, no extraction"
+    },
+    {
+      "name": "json-with-bigint",
+      "version": "3.5.12",
+      "bytes": 73035,
+      "os": null,
+      "cpu": null,
+      "libc": null,
+      "integrity": "sha512-uwbF/wSSuOgC7qqlq27Xp5B6a2MHVug3t0idZdTqu0JnlFvgJuH7ju+KAk/J06C7GfhoYy2gnb9wz2INqcne7w=="
+    },
+    {
+      "name": "jszip",
+      "version": "3.10.2",
+      "bytes": 693061,
+      "os": null,
+      "cpu": null,
+      "libc": null,
+      "integrity": "sha512-3l+rb15IOWtUhU0H5MFqES/T6Kh7abYwjosBey/vD6hDt8zoEffkSC5Ws5SGtgVw3gBx2NEbhTeSW1+kWkpyTQ=="
+    },
+    {
+      "name": "ktx-parse",
+      "version": "0.7.1",
+      "bytes": 516092,
+      "os": null,
+      "cpu": null,
+      "libc": null,
+      "integrity": "sha512-FeA3g56ksdFNwjXJJsc1CCc7co+AJYDp6ipIp878zZ2bU8kWROatLYf39TQEd4/XRSUvBXovQ8gaVKWPXsCLEQ=="
+    },
+    {
+      "name": "lie",
+      "version": "3.3.0",
+      "bytes": 59145,
+      "os": null,
+      "cpu": null,
+      "libc": null,
+      "integrity": "sha512-UaiMJzeWRlEujzAuw5LokY1L5ecNQYZKfmyZ9L7wDHb/p5etKaxXhohBcrw0EYby+G/NA52vRSN4N39dxHAIwQ=="
+    },
+    {
+      "name": "long",
+      "version": "3.2.0",
+      "bytes": 196662,
+      "os": null,
+      "cpu": null,
+      "libc": null,
+      "integrity": "sha512-ZYvPPOMqUwPoDsbJaR10iQJYnMuZhRTvHYl62ErLIEX7RgFlziSBUUvrt3OVfc47QlHHpzPZYP17g3Fv7oeJkg==",
+      "compressedBytes": 49179,
+      "sizeEvidence": "integrity-verified tar regular-member sum, in-memory only, no extraction"
+    },
+    {
+      "name": "long",
+      "version": "5.3.2",
+      "bytes": 139458,
+      "os": null,
+      "cpu": null,
+      "libc": null,
+      "integrity": "sha512-mNAgZ1GmyNhD7AuqnTG3/VQ26o760+ZYBPKjPvugO8+nLbYfX6TVpJPseBvopbdY+qpZ/lKUnmEc1LeZYS3QAA=="
+    },
+    {
+      "name": "lz4js",
+      "version": "0.2.0",
+      "bytes": 36379,
+      "os": null,
+      "cpu": null,
+      "libc": null,
+      "integrity": "sha512-gY2Ia9Lm7Ep8qMiuGRhvUq0Q7qUereeldZPP1PMEJxPtEWHJLqw9pgX68oHajBH0nzJK4MaZEA/YNV3jT8u8Bg==",
+      "compressedBytes": 9262,
+      "sizeEvidence": "integrity-verified tar regular-member sum, in-memory only, no extraction"
+    },
+    {
+      "name": "md5",
+      "version": "2.3.0",
+      "bytes": 21352,
+      "os": null,
+      "cpu": null,
+      "libc": null,
+      "integrity": "sha512-T1GITYmFaKuO91vxyoQMFETst+O71VUPEU3ze5GNzDm0OWdP8v1ziTaAEPUr/3kLsY3Sftgz242A1SetQiDL7g=="
+    },
+    {
+      "name": "meshoptimizer",
+      "version": "1.3.0",
+      "bytes": 313134,
+      "os": null,
+      "cpu": null,
+      "libc": null,
+      "integrity": "sha512-2oZqMAcEEiCtXWUjIGtZ71oPx1B0ZxYGTqIKsXB1wzWFhleNsCFxQuUJzgCV706bRcwPWtMGf1odmQvAcqKkIw=="
+    },
+    {
+      "name": "mjolnir.js",
+      "version": "3.1.1",
+      "bytes": 594208,
+      "os": null,
+      "cpu": null,
+      "libc": null,
+      "integrity": "sha512-Em3+0p6n2RamaiiDenHByvaWNolr+K0fWsFpgUgUXRssFI59ramCMdp0crU6V75clbA4fDJBVTBXfBF5rlPB9A=="
+    },
+    {
+      "name": "motion-dom",
+      "version": "14.6.0",
+      "bytes": 4499289,
+      "os": null,
+      "cpu": null,
+      "libc": null,
+      "integrity": "sha512-lIojTl9aYSPIkeOOSzBliy1nNvpdO3JtVzW2WgTXQlOP4ZMuJhtWO3fP7OD4TVFwlRucdvxlDSMkL+fEQnQ52A=="
+    },
+    {
+      "name": "motion-utils",
+      "version": "14.6.0",
+      "bytes": 96315,
+      "os": null,
+      "cpu": null,
+      "libc": null,
+      "integrity": "sha512-bZJo2AmQ2aOFkaato6VXrTbkPG0XhMzivWUWSaI59pxyllj8QMQUFZ84MYRQnPkK+7dr4KldyJwF2+RM0sdq/w=="
+    },
+    {
+      "name": "pako",
+      "version": "1.0.11",
+      "bytes": 788283,
+      "os": null,
+      "cpu": null,
+      "libc": null,
+      "integrity": "sha512-4hLB8Py4zZce5s4yd9XzopqwVv/yGNhV1Bl8NTmCq1763HeK2+EwVTv+leGeL13Dnh2wfbqowVPXCIO0z4taYw=="
+    },
+    {
+      "name": "path-expression-matcher",
+      "version": "1.6.2",
+      "bytes": 170626,
+      "os": null,
+      "cpu": null,
+      "libc": null,
+      "integrity": "sha512-enSlaiat05iasnzmgNxRj8reFdj3puY2QpNgP1aPIaVfT6nn9ICuPoFlKHk8EN22HcwewshO+mN2DGbkCEOtqQ=="
+    },
+    {
+      "name": "pbf",
+      "version": "3.3.0",
+      "bytes": 126091,
+      "os": null,
+      "cpu": null,
+      "libc": null,
+      "integrity": "sha512-XDF38WCH3z5OV/OVa8GKUNtLAyneuzbCisx7QUCF8Q6Nutx0WnJrQe5O+kOtBlLfRNUws98Y58Lblp+NJG5T4Q=="
+    },
+    {
+      "name": "preact",
+      "version": "10.29.8",
+      "bytes": 1561257,
+      "os": null,
+      "cpu": null,
+      "libc": null,
+      "integrity": "sha512-ej2aVZ+vZ8WO7tvlQWRM9N63A0KzF9q4mWJfDUHgYaIofWY9hu74QdnQrjoPMmZi2/nZ5gN0bJCQF49xQqx09Q=="
+    },
+    {
+      "name": "process-nextick-args",
+      "version": "2.0.1",
+      "bytes": 3175,
+      "os": null,
+      "cpu": null,
+      "libc": null,
+      "integrity": "sha512-3ouUOpQhtgrbOa17J7+uxOTpITYWaGP7/AhoR3+A+/1e9skrzelGi/dXzEYyvbxubEF6Wn2ypscTKiKJFFn1ag=="
+    },
+    {
+      "name": "protocol-buffers-schema",
+      "version": "3.6.1",
+      "bytes": 68888,
+      "os": null,
+      "cpu": null,
+      "libc": null,
+      "integrity": "sha512-VG2K63Igkiv9p76tk1lilczEK1cT+kCjKtkdhw1dQZV3k3IXJbd3o6Ho8b9zJZaHSnT2hKe4I+ObmX9w6m5SmQ=="
+    },
+    {
+      "name": "readable-stream",
+      "version": "2.3.8",
+      "bytes": 88115,
+      "os": null,
+      "cpu": null,
+      "libc": null,
+      "integrity": "sha512-8p0AUk4XODgIewSi0l8Epjs+EVnWiK7NoDIEGU0HhE7+ZyY8D1IMY7odu5lRrFXGg71L15KG8QrPmum45RTtdA=="
+    },
+    {
+      "name": "resolve-protobuf-schema",
+      "version": "2.1.0",
+      "bytes": 5243,
+      "os": null,
+      "cpu": null,
+      "libc": null,
+      "integrity": "sha512-kI5ffTiZWmJaS/huM8wZfEMer1eRd7oJQhDuxeCLe3t7N7mX3z94CN0xPxBQxFYQTSNz9T0i+v6inKqSdK8xrQ=="
+    },
+    {
+      "name": "safe-buffer",
+      "version": "5.1.2",
+      "bytes": 31686,
+      "os": null,
+      "cpu": null,
+      "libc": null,
+      "integrity": "sha512-Gd2UZBJDkXlY7GbJxfsE8/nvKkUEU1G38c1siN6QP6a9PT9MmHB8GnpscSmMJSoF8LOIrt8ud/wPtojys4G6+g=="
+    },
+    {
+      "name": "setimmediate",
+      "version": "1.0.5",
+      "bytes": 8558,
+      "os": null,
+      "cpu": null,
+      "libc": null,
+      "integrity": "sha512-MATJdZp8sLqDl/68LfQmbP8zKPLQNV6BIZoIgrscFDQ+RsvK/BxeDQOgyxKKoh0y/8h3BqVFnCqQ/gd+reiIXA==",
+      "compressedBytes": 3255,
+      "sizeEvidence": "integrity-verified tar regular-member sum, in-memory only, no extraction"
+    },
+    {
+      "name": "snappyjs",
+      "version": "0.6.1",
+      "bytes": 61661,
+      "os": null,
+      "cpu": null,
+      "libc": null,
+      "integrity": "sha512-YIK6I2lsH072UE0aOFxxY1dPDCS43I5ktqHpeAsuLNYWkE5pGxRGWfDM4/vSUfNzXjC1Ivzt3qx31PCLmc9yqg=="
+    },
+    {
+      "name": "string_decoder",
+      "version": "1.1.1",
+      "bytes": 15298,
+      "os": null,
+      "cpu": null,
+      "libc": null,
+      "integrity": "sha512-n/ShnvDi6FHbbVfviro+WojiFzv+s8MPMHBczVePfUpDJLwoLT0ht1l4YwBCbi8pJAveEEdnkHyPyTP/mzRfwg=="
+    },
+    {
+      "name": "strnum",
+      "version": "2.5.1",
+      "bytes": 14932,
+      "os": null,
+      "cpu": null,
+      "libc": null,
+      "integrity": "sha512-UM4nTLWzQiDBseVxUGxN0wJzIk0UU89Qi7pKXz9qISo+lhviJikTuikBsK/oFRlpvYHvSdz0TVoLyQ+sEpYwxA=="
+    },
+    {
+      "name": "texture-compressor",
+      "version": "1.0.2",
+      "bytes": 33495452,
+      "os": null,
+      "cpu": null,
+      "libc": null,
+      "integrity": "sha512-dStVgoaQ11mA5htJ+RzZ51ZxIZqNOgWKAIvtjLrW1AliQQLCmrDqNzQZ8Jh91YealQ95DXt4MEduLzJmbs6lig=="
+    },
+    {
+      "name": "undici-types",
+      "version": "7.24.6",
+      "bytes": 116546,
+      "os": null,
+      "cpu": null,
+      "libc": null,
+      "integrity": "sha512-WRNW+sJgj5OBN4/0JpHFqtqzhpbnV0GuB+OozA9gCL7a993SmU+1JBZCzLNxYsbMfIeDL+lTsphD5jN5N+n0zg=="
+    },
+    {
+      "name": "xml-naming",
+      "version": "0.3.0",
+      "bytes": 31395,
+      "os": null,
+      "cpu": null,
+      "libc": null,
+      "integrity": "sha512-ghig2TBE/H11aOVgmahA3MhimvkBr6JIYknH/Dhdk10nXwdbIqBJsbfMxpvFPG8bAw77gN29aQWvKpmVoPlvPQ=="
+    },
+    {
+      "name": "zod",
+      "version": "4.6.7",
+      "bytes": 6148944,
+      "os": null,
+      "cpu": null,
+      "libc": null,
+      "integrity": "sha512-g8W2D2kU6a8untc053fX1uVBKzM7yqAxW/3zwk83+6RyF2+SKOuV+c0wBDhUwzV1PaGapmZH+rmcUzPf+3CGwg=="
+    },
+    {
+      "name": "zstd-codec",
+      "version": "0.1.5",
+      "bytes": 2078690,
+      "os": null,
+      "cpu": null,
+      "libc": null,
+      "integrity": "sha512-v3fyjpK8S/dpY/X5WxqTK3IoCnp/ZOLxn144GZVlNUjtwAchzrVo03h+oMATFhCIiJ5KTr4V3vDQQYz4RU684g=="
+    }
+  ],
+  "count": 130,
+  "allPlatformsUnpacked": 211076282,
+  "linuxX64GlibcUnpacked": 211076282,
+  "missingSizeInspectionCombinedBytes": 840164
+}

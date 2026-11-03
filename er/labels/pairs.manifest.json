@@ -1,0 +1,281 @@
+{
+  "source": {
+    "path": "/home/postedism/Desktop/SponsorAtlas/.cache/human-labels-20261029/SponsorAtlas-ER-人工标注.xlsx",
+    "sha256": "8a6a3fd8c65b290c532331f08b085fe4558d61cdd0d82d1e6fa46609b73a0853",
+    "format": "xlsx",
+    "sheet": "pairs"
+  },
+  "reviewer": "Junrui",
+  "reviewed_at": "2026-10-30T05:42:46.623777+00:00",
+  "reviewed_at_meaning": "conversion time of this import (UTC); the workbook records no per-pair review time",
+  "input": "/home/postedism/Desktop/SponsorAtlas/.tools/er/fy2025-backfill/input",
+  "input_records_sha256": "ebbca4e6c437dc27a69b9b9def6d8d13192cbec3cb1dbc14dd644f5bf800f736",
+  "rows_read": 600,
+  "frozen_pairs": {
+    "checked": 600,
+    "all_frozen": true
+  },
+  "written": 559,
+  "evidence_from_source_rows": {
+    "count": 600,
+    "meaning": "evidence was empty in the workbook; it names the official source rows the workbook showed the reviewer (左·出现记录 / 右·出现记录), not external evidence"
+  },
+  "skipped_empty_label": {
+    "count": 0,
+    "pair_ids": []
+  },
+  "skipped_unmatched": {
+    "count": 41,
+    "pairs": [
+      {
+        "pair_id": "sponsoratlas-agent-v1-0022",
+        "reason": "RIGHT_ABSENT",
+        "left_id": "447b3f2ee2ffaf94d024e4a50f513c265d9e1fbc492011c019cc5b4371178caa",
+        "right_id": "8623c6fd782f6a514000b255d4b6e039183775a005c5733efcd6a535509a98e0"
+      },
+      {
+        "pair_id": "sponsoratlas-agent-v1-0030",
+        "reason": "RIGHT_ABSENT",
+        "left_id": "d9bfcecb52b390b20e1607f7686d8f12b7a3277bb2cc71f55d74ff63a057968d",
+        "right_id": "f8ce5d10e4a28a1fa736c85d415e79ba244fd0b670910e489635a2dddb77cb46"
+      },
+      {
+        "pair_id": "sponsoratlas-agent-v1-0046",
+        "reason": "RIGHT_ABSENT",
+        "left_id": "3fa0a22f7f9c5b7fa9967d9db7ac5d4951e485dae11f83806667c7a28bc0338c",
+        "right_id": "f719d93f4cb22e1c07f9879f99c3738cfab3abee8604fe69f538a5dfa70cf14d"
+      },
+      {
+        "pair_id": "sponsoratlas-agent-v1-0070",
+        "reason": "LEFT_ABSENT",
+        "left_id": "76de57817de8f0f260cb1446bc246db2b762a70e0af2a9efb63cd9365ee7d8fd",
+        "right_id": "7bd86a58e5cb955e95e5000636df102728d68f038362aaec646265eb5757bc31"
+      },
+      {
+        "pair_id": "sponsoratlas-agent-v1-0110",
+        "reason": "RIGHT_ABSENT",
+        "left_id": "46136d2d1b45eb3b7dc9d385dfb3e70f0657d5c47d3febaa4309dd641aae8a52",
+        "right_id": "b833f0cb2f8d5791974ec66e507fb6d4d6becd582610a87c9195ad03390d3161"
+      },
+      {
+        "pair_id": "sponsoratlas-agent-v1-0118",
+        "reason": "LEFT_ABSENT",
+        "left_id": "4240b4099ffe8caf543b25c1ad27cd1ffc48598794bc43a7d9fa345d66d0f252",
+        "right_id": "d4c8f3af1ec063450553e87ed640f75510580676ac36859f8eda86a9533e6647"
+      },
+      {
+        "pair_id": "sponsoratlas-agent-v1-0126",
+        "reason": "RIGHT_ABSENT",
+        "left_id": "1f8cad53146e2701d152576455fd29c208dcf2e10f06956043c00f7050d5cb3b",
+        "right_id": "fd0414b423a24114683741f5f6c92a9922a04e4c0332945f15130785bfa4404a"
+      },
+      {
+        "pair_id": "sponsoratlas-agent-v1-0166",
+        "reason": "RIGHT_ABSENT",
+        "left_id": "446f6a479cff68d3983e355e2b8961d8b9d5e9b59f5a58d6363e99a66958fb3d",
+        "right_id": "cb65126f3018ef7188b9d93fd1c1e3109e5ed586445a195bcc1d5853978a9698"
+      },
+      {
+        "pair_id": "sponsoratlas-agent-v1-0182",
+        "reason": "LEFT_ABSENT",
+        "left_id": "27830453fa10eb0780487da008d4294303d8ba7271e32d6de357309b4aa81dc9",
+        "right_id": "9b827ed1888b3dc1eb30d105464670e421395b13eaad7c55be8a74cf163f870b"
+      },
+      {
+        "pair_id": "sponsoratlas-agent-v1-0222",
+        "reason": "LEFT_ABSENT",
+        "left_id": "b60d282b5d41719d284d876dc29dadd7e4ce8bbaafad7d1da582b3639d6a0e8f",
+        "right_id": "f95b51c87dab7c4f3b0795ad8bba033fd4cb2c60de2006699913f2137c0c6dce"
+      },
+      {
+        "pair_id": "sponsoratlas-agent-v1-0236",
+        "reason": "RIGHT_ABSENT",
+        "left_id": "1a1bd858e316fd3d4d05e94370e31b114c4c1dfe4138c39fb9fc3a4f80fcae08",
+        "right_id": "9210e30971c8cbbf8d88fdac7681525c9aac798945938dc9f962e02062d18fab"
+      },
+      {
+        "pair_id": "sponsoratlas-agent-v1-0242",
+        "reason": "LEFT_ABSENT",
+        "left_id": "25f6080c2ff2d5255ebe88f6a976a10a0f5771f296ad6ad24afb9d3e3515a0ed",
+        "right_id": "d7db29973799d4475fc0779c0567654ad1b0dd05eabc2192a5c99c2555c671a7"
+      },
+      {
+        "pair_id": "sponsoratlas-agent-v1-0243",
+        "reason": "LEFT_ABSENT",
+        "left_id": "550848c3fc2aa644b09ca1a30da5e1dda326e3fe767c1bdcb5099b62b000399e",
+        "right_id": "5685a8b0ec411a29e6bc7a0af52adf2407364514852e358a6df9d30bec2c4ab4"
+      },
+      {
+        "pair_id": "sponsoratlas-agent-v1-0249",
+        "reason": "LEFT_ABSENT",
+        "left_id": "41340c7fa7f9434367fbc3c73185a7326efa684f55a1999db48673bc32c70ad5",
+        "right_id": "7e4702c3d5f31ae77de2fc5768c36106f7d8eb3d69a6217af8ddc732a99d6695"
+      },
+      {
+        "pair_id": "sponsoratlas-agent-v1-0250",
+        "reason": "LEFT_ABSENT",
+        "left_id": "91adc4f85162571368f64322ec06e7bced51238cbf47010dfd0de3c1a1ac444d",
+        "right_id": "a1b480e4f49fe8ec65aa88dcd5d48897c0c9ed3282fbda75c945c2cefd22ece8"
+      },
+      {
+        "pair_id": "sponsoratlas-agent-v1-0264",
+        "reason": "RIGHT_ABSENT",
+        "left_id": "3b6e82b9068a6adcb65e1e2529aa0b3800bbda59620ab927130921d730da06e9",
+        "right_id": "e621a816400f3ed44517b03f8f744d8ffa98c42d963e85bf5960c7c759dcc668"
+      },
+      {
+        "pair_id": "sponsoratlas-agent-v1-0271",
+        "reason": "LEFT_ABSENT",
+        "left_id": "b16277ed6b32379155dfe6d5f2574a954603005810d64349020b22f815352862",
+        "right_id": "b75305a29bc1721106fc44bf54a4e9bba305830756e4aa1ad2ea819e93856d8c"
+      },
+      {
+        "pair_id": "sponsoratlas-agent-v1-0285",
+        "reason": "RIGHT_ABSENT",
+        "left_id": "090b774d395dd4308bfc2e284967195d6cb28204cfb1a40b37ad146e08e29289",
+        "right_id": "801712bb99ade6e04dfeb9a3df1ac4d9b4c1993e90f6e89026d7400b8966fc44"
+      },
+      {
+        "pair_id": "sponsoratlas-agent-v1-0291",
+        "reason": "RIGHT_ABSENT",
+        "left_id": "7dcc33f8c36849d9c0335a01d2a585f660a1d51f111468f3cf70e13d01030877",
+        "right_id": "dfb116299639218518db477878023eb64d5863dc251d5cf15c7618958b15dc0a"
+      },
+      {
+        "pair_id": "sponsoratlas-agent-v1-0299",
+        "reason": "RIGHT_ABSENT",
+        "left_id": "091a4484c07474a3c4b4dd1dae760f31c5b25ea970b2ac23c27c2e5007d6093e",
+        "right_id": "a0f0979eb42f60ff17de8d11d163d78eb4caf5f7f23f05f82a6ebbd157f50d47"
+      },
+      {
+        "pair_id": "sponsoratlas-agent-v1-0306",
+        "reason": "RIGHT_ABSENT",
+        "left_id": "c34022ecaf35e0d380c276778e1e7683494ea3a5d657789b5b159cf45b4efd88",
+        "right_id": "f48e238dacfee564d82a0d5863ae6a2d65b658d187c3d152f99e08b1666066bf"
+      },
+      {
+        "pair_id": "sponsoratlas-agent-v1-0320",
+        "reason": "LEFT_ABSENT",
+        "left_id": "8447540d32e498d79454afc040d355dc92ab23bda3940eb511d73993a5a3401f",
+        "right_id": "95716a93d1c51cbb72467319daeb0906c400c665e751983a6be3cdb91b7144eb"
+      },
+      {
+        "pair_id": "sponsoratlas-agent-v1-0369",
+        "reason": "LEFT_ABSENT",
+        "left_id": "6e5c119509176eaa5285d97a5499804afd1d50aa65ee69a65cb1440931ae44e3",
+        "right_id": "dc1a21cec72d411cfb7452527b26ad191d3b23f9691ab75b7cc15ff5b884d3e9"
+      },
+      {
+        "pair_id": "sponsoratlas-agent-v1-0397",
+        "reason": "RIGHT_ABSENT",
+        "left_id": "93fa6b356d119ed76b9d0d5b7eb315d0fad56c7ab21fb5ef8f52e2b05bc22dc2",
+        "right_id": "e3a998fdc8a38f18ae959b2e56026055a2df01851505d9b7e052fe759bacf87a"
+      },
+      {
+        "pair_id": "sponsoratlas-agent-v1-0411",
+        "reason": "LEFT_ABSENT",
+        "left_id": "603f7d4509524e6d3358921c927bf58e7a27b582ad8ab2920bbd65ca52ce5d96",
+        "right_id": "675235894c910a099afcde5812231b270af3bb9469543d2d3050eebf67bac19b"
+      },
+      {
+        "pair_id": "sponsoratlas-agent-v1-0431",
+        "reason": "RIGHT_ABSENT",
+        "left_id": "6e23c0e94517bbef9ac7aff446384c85d6036441c029e7c2edc0986476a9a57c",
+        "right_id": "deef6d2229811327c70024a6be6fcd55bf0fbf7ec0bdbb39a504e4a5956e8182"
+      },
+      {
+        "pair_id": "sponsoratlas-agent-v1-0439",
+        "reason": "LEFT_ABSENT",
+        "left_id": "a0942c8b1ce259f210bfab719f3701e039c859c2b6e212d04f1916774d6a19aa",
+        "right_id": "e96673318d8359bae5a358dd45539b46a53a91b650b7c64e8637148004f9ca1f"
+      },
+      {
+        "pair_id": "sponsoratlas-agent-v1-0446",
+        "reason": "LEFT_ABSENT",
+        "left_id": "0063c5659e362d76c7fcd23b4b9f489bb647415c0609f4e858394ae5387c4f33",
+        "right_id": "c53dff7cea3e47e4c0d7a8896c88769928d5392610ea36bf8b2aadf399217089"
+      },
+      {
+        "pair_id": "sponsoratlas-agent-v1-0453",
+        "reason": "LEFT_ABSENT",
+        "left_id": "13bd76c42a0d128d3aa96115e3e5e6f1ddb883fc950c9890adff686cd5e4b40a",
+        "right_id": "535b1214f0d49b42654ae6cf34e4edfffaedf74e5b6666365a0c36b65c27da8e"
+      },
+      {
+        "pair_id": "sponsoratlas-agent-v1-0467",
+        "reason": "LEFT_ABSENT",
+        "left_id": "082d1dc04330d47fa74411cde4ccf150441b77ac5e2d67643f00b7763fde261b",
+        "right_id": "f0896cdfe0e78db3325f3de589db053a8979578ae0bb8c2507ce807edf222980"
+      },
+      {
+        "pair_id": "sponsoratlas-agent-v1-0487",
+        "reason": "RIGHT_ABSENT",
+        "left_id": "480885c9688b8cbea289f587b6e6a0cea0acc3eca97c6b13e608976a94527bcc",
+        "right_id": "555bb23e100e155267b78d7a25cf0bbe0e9b94d6fc6ccafabf3af20a1ea17463"
+      },
+      {
+        "pair_id": "sponsoratlas-agent-v1-0495",
+        "reason": "RIGHT_ABSENT",
+        "left_id": "34f4879fa694081fd8443f0d90a4e0a5f1e3720843d5428249c9962e345478ea",
+        "right_id": "bda87054c34d9e23a8f125aeeaa8405cd4940624a4f1400aeca7bc7e7bc883f8"
+      },
+      {
+        "pair_id": "sponsoratlas-agent-v1-0509",
+        "reason": "RIGHT_ABSENT",
+        "left_id": "62341cc362ccc721706424a97328381bdaeaa81eacdb3782440d6d3e20ea2946",
+        "right_id": "e8e6fa123d021acd01dcd35c1b99ad6bf7b98c1d312b27ebb60b7b974dc5caf0"
+      },
+      {
+        "pair_id": "sponsoratlas-agent-v1-0523",
+        "reason": "LEFT_ABSENT",
+        "left_id": "5327cb303f5c32745c2a5692a3f677c29850c0aec739730c0f8e7d94ce419520",
+        "right_id": "5e6fdc1e5fefbbcd428269ec16298d27b4f3a3dbcc71bd839f66e8843f747602"
+      },
+      {
+        "pair_id": "sponsoratlas-agent-v1-0530",
+        "reason": "RIGHT_ABSENT",
+        "left_id": "0220c8490bd7b9fcd9e2d734ce4437c01a4dab51a6a0b4ca4c707a3583b58dc8",
+        "right_id": "056e517c4c7c3657ffe06e220bdc64a6b8a1e1db617475e0eb12b42c864f5803"
+      },
+      {
+        "pair_id": "sponsoratlas-agent-v1-0544",
+        "reason": "RIGHT_ABSENT",
+        "left_id": "629ba36212eab901c90dac1c31e86f0d1957afd3a7696ad6e353224861c41aab",
+        "right_id": "f719d93f4cb22e1c07f9879f99c3738cfab3abee8604fe69f538a5dfa70cf14d"
+      },
+      {
+        "pair_id": "sponsoratlas-agent-v1-0558",
+        "reason": "RIGHT_ABSENT",
+        "left_id": "b517ffd541ffe3603e753fef7f5bf6c0cdd4a9bf2566074224cba37776d424f9",
+        "right_id": "f4f35a8cae93e14e4c39f3df8165239085de858300d091c1d4aa5c9062dbf84d"
+      },
+      {
+        "pair_id": "sponsoratlas-agent-v1-0572",
+        "reason": "RIGHT_ABSENT",
+        "left_id": "229b18457d1dfe6948c404b2a1087c443f24d052777e1b448d90a39da770ea88",
+        "right_id": "9f7ecdd278a179f017d50032686003dfe8a7584d4346af3605dc4f6d2cd79674"
+      },
+      {
+        "pair_id": "sponsoratlas-agent-v1-0585",
+        "reason": "LEFT_ABSENT",
+        "left_id": "6c57f2703ac9205710daade9480d15c81bce62db0e1baac21b26ffbc37a0d9a6",
+        "right_id": "d0d3f48455a422eb7b12c3542cae8839341a0e856da111e663dce547bd88a912"
+      },
+      {
+        "pair_id": "sponsoratlas-agent-v1-0592",
+        "reason": "LEFT_ABSENT",
+        "left_id": "6ce4dbce5e0586d056d84dba58dcf39c88946855193015e96ecf3d624402976c",
+        "right_id": "e940ed55b2a2017917baddbd8d4c68f27bc7d8e24d379f849ccf1be767beae4b"
+      },
+      {
+        "pair_id": "sponsoratlas-agent-v1-0599",
+        "reason": "RIGHT_ABSENT",
+        "left_id": "a4a16ebc51ab3023cce7b0ff3193e1a5a8a39eaf02a862d872a5827cbbe9ebfc",
+        "right_id": "db78e912afed16f85398ffc6091fb29b833e586aedebdf60a2f992a60427f517"
+      }
+    ]
+  },
+  "gate_validation": "MET",
+  "output": "/home/postedism/Desktop/SponsorAtlas/er/labels/pairs.csv",
+  "output_sha256": "d290ca4fd87dde34748c9281ba47ac526745577e53ed1fd88f72ec68814931e8"
+}

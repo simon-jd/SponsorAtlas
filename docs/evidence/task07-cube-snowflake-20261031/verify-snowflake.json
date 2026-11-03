@@ -1,0 +1,469 @@
+{
+  "kind": "ACTUAL_SNOWFLAKE_REAL_CUBE_REST_SQL",
+  "status": "PASS",
+  "preflight": {
+    "identity": [
+      {
+        "user": "CUBE_SVC",
+        "role": "ANALYST",
+        "warehouse": "SPONSORATLAS_XS",
+        "secondary_roles": "{\"roles\":\"\",\"value\":\"\"}"
+      }
+    ],
+    "warehouse": {
+      "name": "SPONSORATLAS_XS",
+      "size": "X-Small",
+      "auto_suspend": "60"
+    },
+    "checks": [
+      {
+        "table": "dim_occupation",
+        "rows": "1453"
+      },
+      {
+        "table": "dim_geography",
+        "rows": "7042"
+      },
+      {
+        "table": "dim_date",
+        "rows": "13149"
+      },
+      {
+        "table": "fact_lca_case",
+        "rows": "713467"
+      },
+      {
+        "table": "fact_job_posting_daily",
+        "rows": "86"
+      },
+      {
+        "table": "fact_wage_benchmark",
+        "rows": "237514"
+      }
+    ],
+    "kind": "ACTUAL_SNOWFLAKE_PREFLIGHT"
+  },
+  "expected": {
+    "case_count": "713467",
+    "certified_count": "697613",
+    "wage_p50": "120000.00000",
+    "wage_p75": "156383.63000",
+    "wage_p90": "200000.00000",
+    "certified_rate": 0.9777789302098064
+  },
+  "posting": {
+    "value": "86"
+  },
+  "wage": {
+    "estimates": "1",
+    "value": "135980.00"
+  },
+  "fiscal_groups": [
+    {
+      "fy": "2024",
+      "n": "118646",
+      "certified": "116224"
+    },
+    {
+      "fy": "2025",
+      "n": "594821",
+      "certified": "581389"
+    }
+  ],
+  "local": {
+    "oracle": ".tools/semantic/actual/oracle.json",
+    "status": "EXACT_MATCH",
+    "lca": {
+      "case_count": 713467,
+      "certified_rate": 0.9777789302098064,
+      "wage_p50": 120000,
+      "wage_p75": 156383.63,
+      "wage_p90": 200000
+    },
+    "postings": 86,
+    "oews_median": 135980,
+    "lca_groups": {
+      "count": 280799,
+      "sha256": "f9fd5aa4763cca7a69feffd5ef42f23875311ab7600da1098c7563b0f92158ea"
+    },
+    "fiscal_groups": [
+      {
+        "fiscal_year": 2024,
+        "case_count": 118646,
+        "certified_rate": 0.9795863324511572
+      },
+      {
+        "fiscal_year": 2025,
+        "case_count": 594821,
+        "certified_rate": 0.977418416632903
+      }
+    ]
+  },
+  "source_before": {
+    "lca": {
+      "rows": "713467",
+      "hash": "-6364709766770351715"
+    },
+    "postings": {
+      "rows": "86",
+      "hash": "-7719017897154369397"
+    },
+    "wages": {
+      "rows": "237514",
+      "hash": "1426529515131372330"
+    }
+  },
+  "source_after": {
+    "lca": {
+      "rows": "713467",
+      "hash": "-6364709766770351715"
+    },
+    "postings": {
+      "rows": "86",
+      "hash": "-7719017897154369397"
+    },
+    "wages": {
+      "rows": "237514",
+      "hash": "1426529515131372330"
+    }
+  },
+  "groups": 280799,
+  "groupHash": "f9fd5aa4763cca7a69feffd5ef42f23875311ab7600da1098c7563b0f92158ea",
+  "records": [
+    {
+      "query": {
+        "measures": [
+          "lca.case_count",
+          "lca.certified_rate",
+          "lca.wage_p50",
+          "lca.wage_p75",
+          "lca.wage_p90"
+        ]
+      },
+      "status": 200,
+      "rows": 1,
+      "usedPreAggregations": [],
+      "data": [
+        {
+          "lca.case_count": "713467",
+          "lca.certified_rate": "0.977779",
+          "lca.wage_p50": "120000.00000",
+          "lca.wage_p75": "156383.63000",
+          "lca.wage_p90": "200000.00000"
+        }
+      ]
+    },
+    {
+      "query": {
+        "measures": [
+          "postings.count"
+        ]
+      },
+      "status": 200,
+      "rows": 1,
+      "usedPreAggregations": [
+        "semantic_preagg.postings_counts"
+      ],
+      "data": [
+        {
+          "postings.count": "86"
+        }
+      ]
+    },
+    {
+      "query": {
+        "measures": [
+          "wages.oews_median"
+        ],
+        "filters": [
+          {
+            "member": "wages.soc",
+            "operator": "equals",
+            "values": [
+              "15-1252"
+            ]
+          },
+          {
+            "member": "wages.area",
+            "operator": "equals",
+            "values": [
+              "1:99"
+            ]
+          },
+          {
+            "member": "wages.survey_year",
+            "operator": "equals",
+            "values": [
+              "2025"
+            ]
+          }
+        ]
+      },
+      "status": 200,
+      "rows": 1,
+      "usedPreAggregations": [],
+      "data": [
+        {
+          "wages.oews_median": "135980.00"
+        }
+      ]
+    },
+    {
+      "query": {
+        "measures": [
+          "lca.case_count",
+          "lca.certified_rate"
+        ],
+        "dimensions": [
+          "lca.fiscal_year"
+        ]
+      },
+      "status": 200,
+      "rows": 2,
+      "usedPreAggregations": [
+        "semantic_preagg.lca_counts"
+      ],
+      "data": [
+        {
+          "lca.fiscal_year": "2025",
+          "lca.case_count": "594821",
+          "lca.certified_rate": "0.977418416632903"
+        },
+        {
+          "lca.fiscal_year": "2024",
+          "lca.case_count": "118646",
+          "lca.certified_rate": "0.9795863324511572"
+        }
+      ]
+    },
+    {
+      "query": {
+        "measures": [
+          "lca.case_count"
+        ],
+        "dimensions": [
+          "lca.employer",
+          "lca.soc_major",
+          "lca.soc",
+          "lca.metro",
+          "lca.fiscal_year"
+        ],
+        "order": {
+          "lca.employer": "asc",
+          "lca.soc_major": "asc",
+          "lca.soc": "asc",
+          "lca.metro": "asc",
+          "lca.fiscal_year": "asc"
+        },
+        "offset": 0,
+        "limit": 50000
+      },
+      "status": 200,
+      "rows": 50000,
+      "usedPreAggregations": []
+    },
+    {
+      "query": {
+        "measures": [
+          "lca.case_count"
+        ],
+        "dimensions": [
+          "lca.employer",
+          "lca.soc_major",
+          "lca.soc",
+          "lca.metro",
+          "lca.fiscal_year"
+        ],
+        "order": {
+          "lca.employer": "asc",
+          "lca.soc_major": "asc",
+          "lca.soc": "asc",
+          "lca.metro": "asc",
+          "lca.fiscal_year": "asc"
+        },
+        "offset": 50000,
+        "limit": 50000
+      },
+      "status": 200,
+      "rows": 50000,
+      "usedPreAggregations": []
+    },
+    {
+      "query": {
+        "measures": [
+          "lca.case_count"
+        ],
+        "dimensions": [
+          "lca.employer",
+          "lca.soc_major",
+          "lca.soc",
+          "lca.metro",
+          "lca.fiscal_year"
+        ],
+        "order": {
+          "lca.employer": "asc",
+          "lca.soc_major": "asc",
+          "lca.soc": "asc",
+          "lca.metro": "asc",
+          "lca.fiscal_year": "asc"
+        },
+        "offset": 100000,
+        "limit": 50000
+      },
+      "status": 200,
+      "rows": 50000,
+      "usedPreAggregations": []
+    },
+    {
+      "query": {
+        "measures": [
+          "lca.case_count"
+        ],
+        "dimensions": [
+          "lca.employer",
+          "lca.soc_major",
+          "lca.soc",
+          "lca.metro",
+          "lca.fiscal_year"
+        ],
+        "order": {
+          "lca.employer": "asc",
+          "lca.soc_major": "asc",
+          "lca.soc": "asc",
+          "lca.metro": "asc",
+          "lca.fiscal_year": "asc"
+        },
+        "offset": 150000,
+        "limit": 50000
+      },
+      "status": 200,
+      "rows": 50000,
+      "usedPreAggregations": []
+    },
+    {
+      "query": {
+        "measures": [
+          "lca.case_count"
+        ],
+        "dimensions": [
+          "lca.employer",
+          "lca.soc_major",
+          "lca.soc",
+          "lca.metro",
+          "lca.fiscal_year"
+        ],
+        "order": {
+          "lca.employer": "asc",
+          "lca.soc_major": "asc",
+          "lca.soc": "asc",
+          "lca.metro": "asc",
+          "lca.fiscal_year": "asc"
+        },
+        "offset": 200000,
+        "limit": 50000
+      },
+      "status": 200,
+      "rows": 50000,
+      "usedPreAggregations": []
+    },
+    {
+      "query": {
+        "measures": [
+          "lca.case_count"
+        ],
+        "dimensions": [
+          "lca.employer",
+          "lca.soc_major",
+          "lca.soc",
+          "lca.metro",
+          "lca.fiscal_year"
+        ],
+        "order": {
+          "lca.employer": "asc",
+          "lca.soc_major": "asc",
+          "lca.soc": "asc",
+          "lca.metro": "asc",
+          "lca.fiscal_year": "asc"
+        },
+        "offset": 250000,
+        "limit": 50000
+      },
+      "status": 200,
+      "rows": 30799,
+      "usedPreAggregations": []
+    },
+    {
+      "query": {
+        "measures": [
+          "lca_metrics.case_count"
+        ]
+      },
+      "status": 200,
+      "rows": 1,
+      "usedPreAggregations": [
+        "semantic_preagg.lca_counts"
+      ],
+      "data": [
+        {
+          "lca_metrics.case_count": "713467"
+        }
+      ]
+    },
+    {
+      "query": {
+        "measures": [
+          "posting_metrics.count"
+        ]
+      },
+      "status": 200,
+      "rows": 1,
+      "usedPreAggregations": [
+        "semantic_preagg.postings_counts"
+      ],
+      "data": [
+        {
+          "posting_metrics.count": "86"
+        }
+      ]
+    },
+    {
+      "query": {
+        "measures": [
+          "wage_metrics.oews_median"
+        ],
+        "filters": [
+          {
+            "member": "wage_metrics.soc",
+            "operator": "equals",
+            "values": [
+              "15-1252"
+            ]
+          },
+          {
+            "member": "wage_metrics.area",
+            "operator": "equals",
+            "values": [
+              "1:99"
+            ]
+          },
+          {
+            "member": "wage_metrics.survey_year",
+            "operator": "equals",
+            "values": [
+              "2025"
+            ]
+          }
+        ]
+      },
+      "status": 200,
+      "rows": 1,
+      "usedPreAggregations": [],
+      "data": [
+        {
+          "wage_metrics.oews_median": "135980.00"
+        }
+      ]
+    }
+  ],
+  "records_note": "REST responses as returned; grouped pages keep only their row counts"
+}

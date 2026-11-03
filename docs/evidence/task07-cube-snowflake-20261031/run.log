@@ -1,0 +1,26 @@
+# Phase 9 item 1, 2026-10-31 (UTC). Host: nproc 32; load average 7.0-15.9 (shared CPU, other projects running).
+# Identity CUBE_SVC / ANALYST on SPONSORATLAS_XS. Account and key from SNOWFLAKE_ACCOUNT and SNOWFLAKE_PRIVATE_KEY_FILE.
+# SNOWFLAKE_TRIAL_STARTED_AT=2026-10-25T07:29:00Z, SNOWFLAKE_TRIAL_EXPIRES_AT=2026-11-24T00:00:00Z: derived by the
+# coordinator (earliest ACCOUNT_USAGE.QUERY_HISTORY minute; the resource monitor's end), not read from a billing page.
+
+## 16:22 first run, unchanged code: SEMANTIC_SOURCE=snowflake SEMANTIC_SNOWFLAKE_OPT_IN=1 node semantic/scripts/verify_snowflake.cjs
+Snowflake opt-in verification failed; remote acceptance remains OPEN (details suppressed)
+# cause (diagnostic): preflight "Secondary roles must be disabled". CURRENT_SECONDARY_ROLES() returned
+# {"roles":"","value":""}; the check expected value "NONE". Same check in export_snowflake.py,
+# cost-refresh.cjs and query_profile_report.py; all four now accept "" or "NONE" with no roles.
+
+## 16:26 rate forms on Snowflake (rate-forms-before.json, rate-forms-double.json)
+{"cases":"713467","certified":"697613","avg_form":"0.977779","cube_form":"0.977779","client_ratio":0.9777789302098064}
+{"cases":"713467","certified":"697613","avg_form":"0.977779","cube_form":"0.977779","double_form":"0.9777789302","client_ratio":0.9777789302098064}
+
+## 16:28 verify_snowflake.cjs with exact checks and SEMANTIC_LOCAL_ORACLE=.tools/semantic/actual/oracle.json
+REST/source SQL mismatch (exact)
+## 16:29 same, with field names in the message
+Exact mismatch: sum 665213 != "713467"
+# cause: the five-dimension pagination stopped at offset 250,000; the full year has 280,799 groups.
+
+## 16:29:47-16:30:06 after raising the page bound (19 s)
+{"status":"PASS","kind":"ACTUAL_SNOWFLAKE_REAL_CUBE_REST_SQL","metrics":7,"dimensions":5,"views":3,"external_rollups":2}
+
+## 16:30:25-16:30:48 python -m semantic.scripts.export_snowflake phase9-20261031 (23 s)
+{"kind": "ACTUAL_SNOWFLAKE_PUBLIC_MARTS", "rows": {"dim_occupation": 1453, "dim_geography": 7042, "dim_date": 13149, "fact_lca_case": 713467, "fact_job_posting_daily": 86, "fact_wage_benchmark": 237514}, "validation": {"all_seven_match": true, "engine": "v1.5.5", "kind": "REAL_NATIVE_PARQUET_SQL_VALIDATION"}}

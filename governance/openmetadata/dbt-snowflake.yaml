@@ -1,0 +1,26 @@
+# Must point at artifacts produced by an actual Snowflake dbt invocation, not local copies.
+source:
+  type: dbt
+  serviceName: sponsoratlas_snowflake
+  sourceConfig:
+    config:
+      type: DBT
+      dbtConfigSource:
+        dbtConfigType: local
+        dbtManifestFilePath: ${SNOWFLAKE_DBT_ARTIFACT_DIR}/manifest.json
+        dbtCatalogFilePath: ${SNOWFLAKE_DBT_ARTIFACT_DIR}/catalog.json
+        dbtRunResultsFilePath: ${SNOWFLAKE_DBT_ARTIFACT_DIR}/run_results.json
+      dbtUpdateDescriptions: true
+      dbtUpdateOwners: true
+      includeTags: true
+sink:
+  type: metadata-rest
+  config: {}
+workflowConfig:
+  loggerLevel: INFO
+  openMetadataServerConfig:
+    hostPort: ${OPENMETADATA_URL}
+    storeServiceConnection: false
+    authProvider: openmetadata
+    securityConfig:
+      jwtToken: ${OPENMETADATA_JWT_TOKEN}

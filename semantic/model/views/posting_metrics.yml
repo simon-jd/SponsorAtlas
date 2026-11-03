@@ -1,0 +1,5 @@
+views:
+  - name: posting_metrics
+    cubes:
+      - join_path: postings
+        includes: [count, employer, soc_major, soc, metro, fiscal_year, observation_date, employer_mapping_status, occupation_mapping_status, geography_mapping_status]

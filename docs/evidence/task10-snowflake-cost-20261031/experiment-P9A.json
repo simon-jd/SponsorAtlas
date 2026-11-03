@@ -1,0 +1,959 @@
+{
+  "kind": "ACTUAL_SNOWFLAKE_SOURCE_REFRESH_EXPERIMENT",
+  "schema": "ANALYTICS.TASK10_P9A",
+  "mutation_protocol": 1,
+  "originating_session": 1423876148310050,
+  "mutations": [
+    {
+      "intent_id": "fc86489a606142ddabcb21a017620a10",
+      "originating_session": 1423876148310050,
+      "statement": "CREATE SCHEMA ANALYTICS.TASK10_P9A COMMENT='Task10:ad8a2425bbd44ec69a5eece6427d5b79'",
+      "query_id": "01c81d84-020a-73aa-0005-0f02000cf03e",
+      "state": "SUCCESS"
+    },
+    {
+      "intent_id": "006fdd913a5c43a299a15c6800e3645c",
+      "originating_session": 1423876148310050,
+      "statement": "CREATE TRANSIENT TABLE ANALYTICS.TASK10_P9A.fact_lca_case CLONE ANALYTICS.MARTS.fact_lca_case",
+      "query_id": "01c81d84-020a-71c1-0005-0f02000c908e",
+      "state": "SUCCESS"
+    },
+    {
+      "intent_id": "d79f98b9a05e4e4d9dcff4fa9793f730",
+      "originating_session": 1423876148310050,
+      "statement": "CREATE TRANSIENT TABLE ANALYTICS.TASK10_P9A.fact_job_posting_daily CLONE ANALYTICS.MARTS.fact_job_posting_daily",
+      "query_id": "01c81d84-020a-71c1-0005-0f02000c9092",
+      "state": "SUCCESS"
+    },
+    {
+      "intent_id": "4a435b39d9184de6af394d3a933e6a73",
+      "originating_session": 1423876148310050,
+      "statement": "CREATE TRANSIENT TABLE ANALYTICS.TASK10_P9A.fact_wage_benchmark CLONE ANALYTICS.MARTS.fact_wage_benchmark",
+      "query_id": "01c81d84-020a-71fa-0005-0f02000ca052",
+      "state": "SUCCESS"
+    },
+    {
+      "intent_id": "4e3c4fe82e7e49a9977ecfcabb12b1e1",
+      "originating_session": 1423876148310050,
+      "statement": "CREATE TRANSIENT TABLE ANALYTICS.TASK10_P9A.dim_occupation CLONE ANALYTICS.MARTS.dim_occupation",
+      "query_id": "01c81d84-020a-71c1-0005-0f02000c9096",
+      "state": "SUCCESS"
+    },
+    {
+      "intent_id": "6e96ef1eab7c4290bc7840337514cbd0",
+      "originating_session": 1423876148310050,
+      "statement": "CREATE TRANSIENT TABLE ANALYTICS.TASK10_P9A.dim_geography CLONE ANALYTICS.MARTS.dim_geography",
+      "query_id": "01c81d84-020a-73aa-0005-0f02000cf042",
+      "state": "SUCCESS"
+    },
+    {
+      "intent_id": "9c688e1e4f8a4947a2bdacd646c1ed23",
+      "originating_session": 1423876148310050,
+      "statement": "CREATE TRANSIENT TABLE ANALYTICS.TASK10_P9A.dim_date CLONE ANALYTICS.MARTS.dim_date",
+      "query_id": "01c81d84-020a-71fa-0005-0f02000ca056",
+      "state": "SUCCESS"
+    },
+    {
+      "intent_id": "1b129e027aa743dab46d628a480e5096",
+      "originating_session": 1423876148310050,
+      "statement": "ALTER SESSION SET USE_CACHED_RESULT=FALSE",
+      "query_id": "01c81d84-020a-71fa-0005-0f02000ca062",
+      "state": "SUCCESS"
+    },
+    {
+      "intent_id": "82f65d559a6f451abb73cf6af1c02df5",
+      "originating_session": 1423876148310050,
+      "statement": "ALTER SESSION SET QUERY_TAG='SponsorAtlas_Task10_P9A_baseline'",
+      "query_id": "01c81d84-020a-73aa-0005-0f02000cf052",
+      "state": "SUCCESS"
+    },
+    {
+      "intent_id": "ce6328d6d6a9471e831514acd9985481",
+      "originating_session": 1423876148310050,
+      "statement": "ALTER TABLE ANALYTICS.TASK10_P9A.fact_lca_case CLUSTER BY (fiscal_year,worksite_state)",
+      "query_id": "01c81d84-020a-71c1-0005-0f02000c90ba",
+      "state": "SUCCESS"
+    },
+    {
+      "intent_id": "804945c76aaa4caf8f7fb73b1c44c7b9",
+      "originating_session": 1423876148310050,
+      "statement": "ALTER TABLE ANALYTICS.TASK10_P9A.fact_lca_case RESUME RECLUSTER",
+      "query_id": "01c81d84-020a-71c1-0005-0f02000c90be",
+      "state": "SUCCESS"
+    },
+    {
+      "intent_id": "d26871a579fd4794a516b6888511771a",
+      "originating_session": 1423876148310050,
+      "statement": "ALTER SESSION SET USE_CACHED_RESULT=FALSE",
+      "query_id": "01c81d84-020a-73aa-0005-0f02000cf06e",
+      "state": "SUCCESS"
+    },
+    {
+      "intent_id": "17124bd9c380440783ca4a56ae811ff4",
+      "originating_session": 1423876148310050,
+      "statement": "ALTER SESSION SET QUERY_TAG='SponsorAtlas_Task10_P9A_clustered'",
+      "query_id": "01c81d84-020a-71c1-0005-0f02000c90c2",
+      "state": "SUCCESS"
+    },
+    {
+      "intent_id": "8dc7eb72c8024184ae98e464e577988f",
+      "originating_session": 1423876148310050,
+      "statement": "ALTER WAREHOUSE SPONSORATLAS_XS SET WAREHOUSE_SIZE='SMALL' WAIT_FOR_COMPLETION=TRUE",
+      "query_id": "01c81d84-020a-71c1-0005-0f02000c90d2",
+      "state": "SUCCESS"
+    },
+    {
+      "intent_id": "68faf365398846fa9c692073f8686772",
+      "originating_session": 1423876148310050,
+      "statement": "ALTER SESSION SET USE_CACHED_RESULT=FALSE",
+      "query_id": "01c81d84-020a-73aa-0005-0f02000cf08e",
+      "state": "SUCCESS"
+    },
+    {
+      "intent_id": "6c6b199a404740df81906c908c21fa81",
+      "originating_session": 1423876148310050,
+      "statement": "ALTER SESSION SET QUERY_TAG='SponsorAtlas_Task10_P9A_small'",
+      "query_id": "01c81d84-020a-71c1-0005-0f02000c90d6",
+      "state": "SUCCESS"
+    },
+    {
+      "intent_id": "b59a5354b8854633a429c4979e163025",
+      "originating_session": 1423876148310050,
+      "statement": "ALTER WAREHOUSE SPONSORATLAS_XS SET WAREHOUSE_SIZE='XSMALL' WAIT_FOR_COMPLETION=TRUE",
+      "query_id": "01c81d84-020a-73aa-0005-0f02000cf0aa",
+      "state": "SUCCESS"
+    },
+    {
+      "intent_id": "d31e96cae95c4cce9f7e24245aac680b",
+      "originating_session": 1423876148310050,
+      "statement": "ALTER SESSION SET USE_CACHED_RESULT=TRUE",
+      "query_id": "01c81d84-020a-71fa-0005-0f02000ca0b2",
+      "state": "SUCCESS"
+    },
+    {
+      "intent_id": "ac1cb4c1e21540a1a368ff1180dae5da",
+      "originating_session": 1423876148310050,
+      "statement": "ALTER SESSION SET QUERY_TAG='SponsorAtlas_Task10_P9A_cache_prime'",
+      "query_id": "01c81d84-020a-71c1-0005-0f02000c90ee",
+      "state": "SUCCESS"
+    },
+    {
+      "intent_id": "fdc10bdadd4f4b5faef0c45917959446",
+      "originating_session": 1423876148310050,
+      "statement": "ALTER SESSION SET USE_CACHED_RESULT=TRUE",
+      "query_id": "01c81d84-020a-73aa-0005-0f02000cf0c6",
+      "state": "SUCCESS"
+    },
+    {
+      "intent_id": "866cb0644c704a8bb83155e46a7ce318",
+      "originating_session": 1423876148310050,
+      "statement": "ALTER SESSION SET QUERY_TAG='SponsorAtlas_Task10_P9A_cache_repeat'",
+      "query_id": "01c81d84-020a-71c1-0005-0f02000c910a",
+      "state": "SUCCESS"
+    },
+    {
+      "intent_id": "e2e6651aba3c48599819d8632eb129a6",
+      "originating_session": 1423876148310050,
+      "statement": "ALTER WAREHOUSE SPONSORATLAS_XS ABORT ALL QUERIES",
+      "query_id": "01c81d84-020a-71fa-0005-0f02000ca0ea",
+      "state": "SUCCESS"
+    },
+    {
+      "intent_id": "e3cf8ccc622c44faacb62c961d500d58",
+      "originating_session": 1423876148310050,
+      "statement": "ALTER TABLE ANALYTICS.TASK10_P9A.fact_lca_case SUSPEND RECLUSTER",
+      "query_id": "01c81d84-020a-71c1-0005-0f02000c9136",
+      "state": "SUCCESS"
+    },
+    {
+      "intent_id": "035b941a05394c4c917c171e6a24bb39",
+      "originating_session": 1423876148310050,
+      "statement": "ALTER TABLE ANALYTICS.TASK10_P9A.fact_lca_case DROP CLUSTERING KEY",
+      "query_id": "01c81d84-020a-71fa-0005-0f02000ca0f2",
+      "state": "SUCCESS"
+    },
+    {
+      "intent_id": "2c6bc076554443bc85d04186b449b4e1",
+      "originating_session": 1423876148310050,
+      "statement": "DROP SCHEMA ANALYTICS.TASK10_P9A",
+      "query_id": "01c81d84-020a-71c1-0005-0f02000c913a",
+      "state": "SUCCESS"
+    },
+    {
+      "intent_id": "ddf99ae515804af38d896121548ca499",
+      "originating_session": 1423876148310050,
+      "statement": "ALTER WAREHOUSE SPONSORATLAS_XS SET WAREHOUSE_SIZE='XSMALL' AUTO_SUSPEND=60",
+      "query_id": "01c81d84-020a-73aa-0005-0f02000cf0e6",
+      "state": "SUCCESS"
+    },
+    {
+      "intent_id": "9836308ca21c46b285ed512f77626a19",
+      "originating_session": 1423876148310050,
+      "statement": "ALTER SESSION SET USE_CACHED_RESULT=TRUE",
+      "query_id": "01c81d84-020a-71fa-0005-0f02000ca0f6",
+      "state": "SUCCESS"
+    },
+    {
+      "intent_id": "6899b501f05b4999b70354a6cc4499f2",
+      "originating_session": 1423876148310050,
+      "statement": "ALTER WAREHOUSE SPONSORATLAS_XS SUSPEND",
+      "query_id": "01c81d84-020a-71c1-0005-0f02000c913e",
+      "state": "SUCCESS"
+    }
+  ],
+  "owner_token": "ad8a2425bbd44ec69a5eece6427d5b79",
+  "started_at_utc": "2026-11-01T07:32:00Z",
+  "samples": [
+    {
+      "phase": "baseline",
+      "elapsed_seconds": 0.5094670348335057,
+      "measured_at_utc": "2026-11-01T07:32:17Z",
+      "query_tag": "SponsorAtlas_Task10_P9A_baseline",
+      "query_ids": [
+        "01c81d84-020a-71fa-0005-0f02000ca066",
+        "01c81d84-020a-71fa-0005-0f02000ca06a",
+        "01c81d84-020a-73aa-0005-0f02000cf056"
+      ],
+      "result_sha256": "070100a64fe873c1d84fa1dc71415ba20a467260954d82399e04c90f64109137",
+      "use_cached_result": false,
+      "credits": null,
+      "credits_status": "PENDING_ACCOUNT_USAGE_8H",
+      "persisted_result_hit": "UNKNOWN",
+      "warehouse": "X-Small",
+      "cube": {
+        "kind": "ACTUAL_SNOWFLAKE_CUBE_REFRESH",
+        "revision": "3cbd315901ad2be50522c7740790acba",
+        "elapsed_seconds": 6.402,
+        "results": [
+          {
+            "data": [
+              {
+                "lca.fiscal_year": "2025",
+                "lca.case_count": "594821",
+                "lca.certified_rate": "0.977418416632903"
+              },
+              {
+                "lca.fiscal_year": "2024",
+                "lca.case_count": "118646",
+                "lca.certified_rate": "0.9795863324511572"
+              }
+            ],
+            "usedPreAggregations": {
+              "semantic_preagg.lca_counts": {
+                "preAggregationId": "lca.counts",
+                "lastUpdatedAt": 1793518343000,
+                "type": "rollup"
+              }
+            }
+          },
+          {
+            "data": [
+              {
+                "lca.wage_p50": "120000.00000",
+                "lca.wage_p75": "156383.63000",
+                "lca.wage_p90": "200000.00000"
+              }
+            ]
+          },
+          {
+            "data": [
+              {
+                "postings.count": "86"
+              }
+            ],
+            "usedPreAggregations": {
+              "semantic_preagg.postings_counts": {
+                "preAggregationId": "postings.counts",
+                "lastUpdatedAt": 1793518344000,
+                "type": "rollup"
+              }
+            }
+          },
+          {
+            "data": [
+              {
+                "wages.oews_median": "135980.00"
+              }
+            ]
+          }
+        ],
+        "query_ids": [
+          "01c81d84-020a-71c1-0005-0f02000c90a2",
+          "01c81d84-020a-71fa-0005-0f02000ca06e",
+          "01c81d84-020a-73aa-0005-0f02000cf05e",
+          "01c81d84-020a-71c1-0005-0f02000c90a6",
+          "01c81d84-020a-71c1-0005-0f02000c90aa",
+          "01c81d84-020a-71fa-0005-0f02000ca072",
+          "01c81d84-020a-73aa-0005-0f02000cf062",
+          "01c81d84-020a-71c1-0005-0f02000c90ae",
+          "01c81d84-020a-71fa-0005-0f02000ca076",
+          "01c81d84-020a-71fa-0005-0f02000ca07a",
+          "01c81d84-020a-71c1-0005-0f02000c90b2",
+          "01c81d84-020a-71c1-0005-0f02000c90b6",
+          "01c81d84-020a-73aa-0005-0f02000cf066"
+        ],
+        "query_tag": "SponsorAtlas_Task10_P9A_baseline_cube",
+        "warehouse": {
+          "name": "SPONSORATLAS_XS",
+          "size": "X-Small",
+          "auto_suspend": 60
+        },
+        "use_cached_result": false,
+        "persisted_result_hit": "UNKNOWN",
+        "result_sha256": "25648a95c41a2ebf07b10080c5a8c3d4ae17796433d319bbb77e9f8587a3e743",
+        "closed_file_physical_tables": [
+          {
+            "name": "lca_counts_pw4zihpg_1ets0wr1_1ledqo7",
+            "rows": [
+              {
+                "lca__fiscal_year": 2025,
+                "lca__case_count": 594821,
+                "lca__certified_count": 581389
+              },
+              {
+                "lca__fiscal_year": 2024,
+                "lca__case_count": 118646,
+                "lca__certified_count": 116224
+              }
+            ]
+          },
+          {
+            "name": "postings_counts_vwxgcgm2_w1shd1w1_1ledqo8",
+            "rows": [
+              {
+                "postings__fiscal_year": 2027,
+                "postings__count": 86
+              }
+            ]
+          }
+        ],
+        "rest_elapsed_seconds": 6.275,
+        "maxRSS_KiB": 705412
+      }
+    },
+    {
+      "phase": "clustered",
+      "elapsed_seconds": 0.3778339410200715,
+      "measured_at_utc": "2026-11-01T07:32:27Z",
+      "query_tag": "SponsorAtlas_Task10_P9A_clustered",
+      "query_ids": [
+        "01c81d84-020a-73aa-0005-0f02000cf072",
+        "01c81d84-020a-71fa-0005-0f02000ca07e",
+        "01c81d84-020a-73aa-0005-0f02000cf076"
+      ],
+      "result_sha256": "070100a64fe873c1d84fa1dc71415ba20a467260954d82399e04c90f64109137",
+      "use_cached_result": false,
+      "credits": null,
+      "credits_status": "PENDING_ACCOUNT_USAGE_8H",
+      "persisted_result_hit": "UNKNOWN",
+      "warehouse": "X-Small",
+      "cube": {
+        "kind": "ACTUAL_SNOWFLAKE_CUBE_REFRESH",
+        "revision": "f41b9bf1ae613a24fb7e28fe50ead458",
+        "elapsed_seconds": 4.507,
+        "results": [
+          {
+            "data": [
+              {
+                "lca.fiscal_year": "2025",
+                "lca.case_count": "594821",
+                "lca.certified_rate": "0.977418416632903"
+              },
+              {
+                "lca.fiscal_year": "2024",
+                "lca.case_count": "118646",
+                "lca.certified_rate": "0.9795863324511572"
+              }
+            ],
+            "usedPreAggregations": {
+              "semantic_preagg.lca_counts": {
+                "preAggregationId": "lca.counts",
+                "lastUpdatedAt": 1793518351000,
+                "type": "rollup"
+              }
+            }
+          },
+          {
+            "data": [
+              {
+                "lca.wage_p50": "120000.00000",
+                "lca.wage_p75": "156383.63000",
+                "lca.wage_p90": "200000.00000"
+              }
+            ]
+          },
+          {
+            "data": [
+              {
+                "postings.count": "86"
+              }
+            ],
+            "usedPreAggregations": {
+              "semantic_preagg.postings_counts": {
+                "preAggregationId": "postings.counts",
+                "lastUpdatedAt": 1793518352000,
+                "type": "rollup"
+              }
+            }
+          },
+          {
+            "data": [
+              {
+                "wages.oews_median": "135980.00"
+              }
+            ]
+          }
+        ],
+        "query_ids": [
+          "01c81d84-020a-71fa-0005-0f02000ca086",
+          "01c81d84-020a-73aa-0005-0f02000cf07a",
+          "01c81d84-020a-71fa-0005-0f02000ca08a",
+          "01c81d84-020a-73aa-0005-0f02000cf07e",
+          "01c81d84-020a-71c1-0005-0f02000c90c6",
+          "01c81d84-020a-73aa-0005-0f02000cf082",
+          "01c81d84-020a-73aa-0005-0f02000cf086",
+          "01c81d84-020a-71c1-0005-0f02000c90ca",
+          "01c81d84-020a-71fa-0005-0f02000ca08e",
+          "01c81d84-020a-71fa-0005-0f02000ca092",
+          "01c81d84-020a-73aa-0005-0f02000cf08a",
+          "01c81d84-020a-71c1-0005-0f02000c90ce",
+          "01c81d84-020a-71fa-0005-0f02000ca096"
+        ],
+        "query_tag": "SponsorAtlas_Task10_P9A_clustered_cube",
+        "warehouse": {
+          "name": "SPONSORATLAS_XS",
+          "size": "X-Small",
+          "auto_suspend": 60
+        },
+        "use_cached_result": false,
+        "persisted_result_hit": "UNKNOWN",
+        "result_sha256": "25648a95c41a2ebf07b10080c5a8c3d4ae17796433d319bbb77e9f8587a3e743",
+        "closed_file_physical_tables": [
+          {
+            "name": "lca_counts_zl3dj4py_1ets0wr1_1ledqof",
+            "rows": [
+              {
+                "lca__fiscal_year": 2025,
+                "lca__case_count": 594821,
+                "lca__certified_count": 581389
+              },
+              {
+                "lca__fiscal_year": 2024,
+                "lca__case_count": 118646,
+                "lca__certified_count": 116224
+              }
+            ]
+          },
+          {
+            "name": "postings_counts_ocyem4xh_w1shd1w1_1ledqog",
+            "rows": [
+              {
+                "postings__fiscal_year": 2027,
+                "postings__count": 86
+              }
+            ]
+          }
+        ],
+        "rest_elapsed_seconds": 4.375,
+        "maxRSS_KiB": 695540
+      }
+    },
+    {
+      "phase": "small",
+      "elapsed_seconds": 1.3168258529622108,
+      "measured_at_utc": "2026-11-01T07:32:36Z",
+      "query_tag": "SponsorAtlas_Task10_P9A_small",
+      "query_ids": [
+        "01c81d84-020a-73aa-0005-0f02000cf092",
+        "01c81d84-020a-73aa-0005-0f02000cf096",
+        "01c81d84-020a-71c1-0005-0f02000c90da"
+      ],
+      "result_sha256": "070100a64fe873c1d84fa1dc71415ba20a467260954d82399e04c90f64109137",
+      "use_cached_result": false,
+      "credits": null,
+      "credits_status": "PENDING_ACCOUNT_USAGE_8H",
+      "persisted_result_hit": "UNKNOWN",
+      "warehouse": "Small",
+      "cube": {
+        "kind": "ACTUAL_SNOWFLAKE_CUBE_REFRESH",
+        "revision": "2184bf93b37c35f7f873306756ec5e62",
+        "elapsed_seconds": 5.34,
+        "results": [
+          {
+            "data": [
+              {
+                "lca.fiscal_year": "2025",
+                "lca.case_count": "594821",
+                "lca.certified_rate": "0.977418416632903"
+              },
+              {
+                "lca.fiscal_year": "2024",
+                "lca.case_count": "118646",
+                "lca.certified_rate": "0.9795863324511572"
+              }
+            ],
+            "usedPreAggregations": {
+              "semantic_preagg.lca_counts": {
+                "preAggregationId": "lca.counts",
+                "lastUpdatedAt": 1793518360000,
+                "type": "rollup"
+              }
+            }
+          },
+          {
+            "data": [
+              {
+                "lca.wage_p50": "120000.00000",
+                "lca.wage_p75": "156383.63000",
+                "lca.wage_p90": "200000.00000"
+              }
+            ]
+          },
+          {
+            "data": [
+              {
+                "postings.count": "86"
+              }
+            ],
+            "usedPreAggregations": {
+              "semantic_preagg.postings_counts": {
+                "preAggregationId": "postings.counts",
+                "lastUpdatedAt": 1793518361000,
+                "type": "rollup"
+              }
+            }
+          },
+          {
+            "data": [
+              {
+                "wages.oews_median": "135980.00"
+              }
+            ]
+          }
+        ],
+        "query_ids": [
+          "01c81d84-020a-71fa-0005-0f02000ca09a",
+          "01c81d84-020a-71c1-0005-0f02000c90de",
+          "01c81d84-020a-73aa-0005-0f02000cf09e",
+          "01c81d84-020a-71c1-0005-0f02000c90e2",
+          "01c81d84-020a-73aa-0005-0f02000cf0a2",
+          "01c81d84-020a-71fa-0005-0f02000ca09e",
+          "01c81d84-020a-71c1-0005-0f02000c90e6",
+          "01c81d84-020a-71c1-0005-0f02000c90ea",
+          "01c81d84-020a-71fa-0005-0f02000ca0a2",
+          "01c81d84-020a-71fa-0005-0f02000ca0a6",
+          "01c81d84-020a-71fa-0005-0f02000ca0aa",
+          "01c81d84-020a-71fa-0005-0f02000ca0ae",
+          "01c81d84-020a-73aa-0005-0f02000cf0a6"
+        ],
+        "query_tag": "SponsorAtlas_Task10_P9A_small_cube",
+        "warehouse": {
+          "name": "SPONSORATLAS_XS",
+          "size": "Small",
+          "auto_suspend": 60
+        },
+        "use_cached_result": false,
+        "persisted_result_hit": "UNKNOWN",
+        "result_sha256": "25648a95c41a2ebf07b10080c5a8c3d4ae17796433d319bbb77e9f8587a3e743",
+        "closed_file_physical_tables": [
+          {
+            "name": "lca_counts_ws53topy_1ets0wr1_1ledqoo",
+            "rows": [
+              {
+                "lca__fiscal_year": 2024,
+                "lca__case_count": 118646,
+                "lca__certified_count": 116224
+              },
+              {
+                "lca__fiscal_year": 2025,
+                "lca__case_count": 594821,
+                "lca__certified_count": 581389
+              }
+            ]
+          },
+          {
+            "name": "postings_counts_orlr4faj_w1shd1w1_1ledqop",
+            "rows": [
+              {
+                "postings__fiscal_year": 2027,
+                "postings__count": 86
+              }
+            ]
+          }
+        ],
+        "rest_elapsed_seconds": 5.183,
+        "maxRSS_KiB": 690820
+      }
+    },
+    {
+      "phase": "cache_prime",
+      "elapsed_seconds": 0.4146252148784697,
+      "measured_at_utc": "2026-11-01T07:32:44Z",
+      "query_tag": "SponsorAtlas_Task10_P9A_cache_prime",
+      "query_ids": [
+        "01c81d84-020a-71fa-0005-0f02000ca0b6",
+        "01c81d84-020a-73aa-0005-0f02000cf0ae",
+        "01c81d84-020a-71fa-0005-0f02000ca0ba"
+      ],
+      "result_sha256": "070100a64fe873c1d84fa1dc71415ba20a467260954d82399e04c90f64109137",
+      "use_cached_result": true,
+      "credits": null,
+      "credits_status": "PENDING_ACCOUNT_USAGE_8H",
+      "persisted_result_hit": "UNKNOWN",
+      "warehouse": "X-Small",
+      "cube": {
+        "kind": "ACTUAL_SNOWFLAKE_CUBE_REFRESH",
+        "revision": "6dc21189781fe627c3979756258bdb73",
+        "elapsed_seconds": 4.253,
+        "results": [
+          {
+            "data": [
+              {
+                "lca.fiscal_year": "2025",
+                "lca.case_count": "594821",
+                "lca.certified_rate": "0.977418416632903"
+              },
+              {
+                "lca.fiscal_year": "2024",
+                "lca.case_count": "118646",
+                "lca.certified_rate": "0.9795863324511572"
+              }
+            ],
+            "usedPreAggregations": {
+              "semantic_preagg.lca_counts": {
+                "preAggregationId": "lca.counts",
+                "lastUpdatedAt": 1793518368000,
+                "type": "rollup"
+              }
+            }
+          },
+          {
+            "data": [
+              {
+                "lca.wage_p50": "120000.00000",
+                "lca.wage_p75": "156383.63000",
+                "lca.wage_p90": "200000.00000"
+              }
+            ]
+          },
+          {
+            "data": [
+              {
+                "postings.count": "86"
+              }
+            ],
+            "usedPreAggregations": {
+              "semantic_preagg.postings_counts": {
+                "preAggregationId": "postings.counts",
+                "lastUpdatedAt": 1793518368000,
+                "type": "rollup"
+              }
+            }
+          },
+          {
+            "data": [
+              {
+                "wages.oews_median": "135980.00"
+              }
+            ]
+          }
+        ],
+        "query_ids": [
+          "01c81d84-020a-71c1-0005-0f02000c90f2",
+          "01c81d84-020a-73aa-0005-0f02000cf0b2",
+          "01c81d84-020a-71c1-0005-0f02000c90f6",
+          "01c81d84-020a-71fa-0005-0f02000ca0c2",
+          "01c81d84-020a-73aa-0005-0f02000cf0b6",
+          "01c81d84-020a-71fa-0005-0f02000ca0c6",
+          "01c81d84-020a-73aa-0005-0f02000cf0ba",
+          "01c81d84-020a-71c1-0005-0f02000c90fa",
+          "01c81d84-020a-73aa-0005-0f02000cf0be",
+          "01c81d84-020a-71c1-0005-0f02000c90fe",
+          "01c81d84-020a-71fa-0005-0f02000ca0ca",
+          "01c81d84-020a-71c1-0005-0f02000c9102",
+          "01c81d84-020a-71c1-0005-0f02000c9106"
+        ],
+        "query_tag": "SponsorAtlas_Task10_P9A_cache_prime_cube",
+        "warehouse": {
+          "name": "SPONSORATLAS_XS",
+          "size": "X-Small",
+          "auto_suspend": 60
+        },
+        "use_cached_result": true,
+        "persisted_result_hit": "UNKNOWN",
+        "result_sha256": "25648a95c41a2ebf07b10080c5a8c3d4ae17796433d319bbb77e9f8587a3e743",
+        "closed_file_physical_tables": [
+          {
+            "name": "lca_counts_fkfsbfjx_1ets0wr1_1ledqp0",
+            "rows": [
+              {
+                "lca__fiscal_year": 2024,
+                "lca__case_count": 118646,
+                "lca__certified_count": 116224
+              },
+              {
+                "lca__fiscal_year": 2025,
+                "lca__case_count": 594821,
+                "lca__certified_count": 581389
+              }
+            ]
+          },
+          {
+            "name": "postings_counts_1spg4okt_w1shd1w1_1ledqp0",
+            "rows": [
+              {
+                "postings__fiscal_year": 2027,
+                "postings__count": 86
+              }
+            ]
+          }
+        ],
+        "rest_elapsed_seconds": 4.135,
+        "maxRSS_KiB": 721120
+      }
+    },
+    {
+      "phase": "cache_repeat",
+      "elapsed_seconds": 0.3813237810973078,
+      "measured_at_utc": "2026-11-01T07:32:50Z",
+      "query_tag": "SponsorAtlas_Task10_P9A_cache_repeat",
+      "query_ids": [
+        "01c81d84-020a-71fa-0005-0f02000ca0ce",
+        "01c81d84-020a-71fa-0005-0f02000ca0d2",
+        "01c81d84-020a-71c1-0005-0f02000c910e"
+      ],
+      "result_sha256": "070100a64fe873c1d84fa1dc71415ba20a467260954d82399e04c90f64109137",
+      "use_cached_result": true,
+      "credits": null,
+      "credits_status": "PENDING_ACCOUNT_USAGE_8H",
+      "persisted_result_hit": "UNKNOWN",
+      "warehouse": "X-Small",
+      "cube": {
+        "kind": "ACTUAL_SNOWFLAKE_CUBE_REFRESH",
+        "revision": "73a7522eb603ce4904412a149dc0a2e2",
+        "elapsed_seconds": 3.62,
+        "results": [
+          {
+            "data": [
+              {
+                "lca.fiscal_year": "2025",
+                "lca.case_count": "594821",
+                "lca.certified_rate": "0.977418416632903"
+              },
+              {
+                "lca.fiscal_year": "2024",
+                "lca.case_count": "118646",
+                "lca.certified_rate": "0.9795863324511572"
+              }
+            ],
+            "usedPreAggregations": {
+              "semantic_preagg.lca_counts": {
+                "preAggregationId": "lca.counts",
+                "lastUpdatedAt": 1793518374000,
+                "type": "rollup"
+              }
+            }
+          },
+          {
+            "data": [
+              {
+                "lca.wage_p50": "120000.00000",
+                "lca.wage_p75": "156383.63000",
+                "lca.wage_p90": "200000.00000"
+              }
+            ]
+          },
+          {
+            "data": [
+              {
+                "postings.count": "86"
+              }
+            ],
+            "usedPreAggregations": {
+              "semantic_preagg.postings_counts": {
+                "preAggregationId": "postings.counts",
+                "lastUpdatedAt": 1793518374000,
+                "type": "rollup"
+              }
+            }
+          },
+          {
+            "data": [
+              {
+                "wages.oews_median": "135980.00"
+              }
+            ]
+          }
+        ],
+        "query_ids": [
+          "01c81d84-020a-71c1-0005-0f02000c9112",
+          "01c81d84-020a-71fa-0005-0f02000ca0d6",
+          "01c81d84-020a-73aa-0005-0f02000cf0ce",
+          "01c81d84-020a-71c1-0005-0f02000c9116",
+          "01c81d84-020a-71fa-0005-0f02000ca0da",
+          "01c81d84-020a-71fa-0005-0f02000ca0de",
+          "01c81d84-020a-73aa-0005-0f02000cf0d2",
+          "01c81d84-020a-73aa-0005-0f02000cf0d6",
+          "01c81d84-020a-71c1-0005-0f02000c911a",
+          "01c81d84-020a-71c1-0005-0f02000c911e",
+          "01c81d84-020a-71c1-0005-0f02000c9122",
+          "01c81d84-020a-71fa-0005-0f02000ca0e2",
+          "01c81d84-020a-73aa-0005-0f02000cf0da"
+        ],
+        "query_tag": "SponsorAtlas_Task10_P9A_cache_repeat_cube",
+        "warehouse": {
+          "name": "SPONSORATLAS_XS",
+          "size": "X-Small",
+          "auto_suspend": 60
+        },
+        "use_cached_result": true,
+        "persisted_result_hit": "UNKNOWN",
+        "result_sha256": "25648a95c41a2ebf07b10080c5a8c3d4ae17796433d319bbb77e9f8587a3e743",
+        "closed_file_physical_tables": [
+          {
+            "name": "lca_counts_l1teba2d_1ets0wr1_1ledqp6",
+            "rows": [
+              {
+                "lca__fiscal_year": 2024,
+                "lca__case_count": 118646,
+                "lca__certified_count": 116224
+              },
+              {
+                "lca__fiscal_year": 2025,
+                "lca__case_count": 594821,
+                "lca__certified_count": 581389
+              }
+            ]
+          },
+          {
+            "name": "postings_counts_5djqrmx2_w1shd1w1_1ledqp6",
+            "rows": [
+              {
+                "postings__fiscal_year": 2027,
+                "postings__count": 86
+              }
+            ]
+          }
+        ],
+        "rest_elapsed_seconds": 3.507,
+        "maxRSS_KiB": 703436
+      }
+    }
+  ],
+  "query_ids": [
+    "01c81d83-020a-73aa-0005-0f02000cf032",
+    "01c81d84-020a-73aa-0005-0f02000cf036",
+    "01c81d84-020a-73aa-0005-0f02000cf03a",
+    "01c81d84-020a-71c1-0005-0f02000c908a",
+    "01c81d84-020a-71fa-0005-0f02000ca04e",
+    "01c81d84-020a-73aa-0005-0f02000cf03e",
+    "01c81d84-020a-71c1-0005-0f02000c908e",
+    "01c81d84-020a-71c1-0005-0f02000c9092",
+    "01c81d84-020a-71fa-0005-0f02000ca052",
+    "01c81d84-020a-71c1-0005-0f02000c9096",
+    "01c81d84-020a-73aa-0005-0f02000cf042",
+    "01c81d84-020a-71fa-0005-0f02000ca056",
+    "01c81d84-020a-71fa-0005-0f02000ca05a",
+    "01c81d84-020a-71c1-0005-0f02000c909a",
+    "01c81d84-020a-71fa-0005-0f02000ca05e",
+    "01c81d84-020a-73aa-0005-0f02000cf046",
+    "01c81d84-020a-71c1-0005-0f02000c909e",
+    "01c81d84-020a-73aa-0005-0f02000cf04a",
+    "01c81d84-020a-73aa-0005-0f02000cf04e",
+    "01c81d84-020a-71fa-0005-0f02000ca062",
+    "01c81d84-020a-73aa-0005-0f02000cf052",
+    "01c81d84-020a-71fa-0005-0f02000ca066",
+    "01c81d84-020a-71fa-0005-0f02000ca06a",
+    "01c81d84-020a-73aa-0005-0f02000cf056",
+    "01c81d84-020a-73aa-0005-0f02000cf05a",
+    "01c81d84-020a-71c1-0005-0f02000c90ba",
+    "01c81d84-020a-71c1-0005-0f02000c90be",
+    "01c81d84-020a-73aa-0005-0f02000cf06a",
+    "01c81d84-020a-73aa-0005-0f02000cf06e",
+    "01c81d84-020a-71c1-0005-0f02000c90c2",
+    "01c81d84-020a-73aa-0005-0f02000cf072",
+    "01c81d84-020a-71fa-0005-0f02000ca07e",
+    "01c81d84-020a-73aa-0005-0f02000cf076",
+    "01c81d84-020a-71fa-0005-0f02000ca082",
+    "01c81d84-020a-71c1-0005-0f02000c90d2",
+    "01c81d84-020a-73aa-0005-0f02000cf08e",
+    "01c81d84-020a-71c1-0005-0f02000c90d6",
+    "01c81d84-020a-73aa-0005-0f02000cf092",
+    "01c81d84-020a-73aa-0005-0f02000cf096",
+    "01c81d84-020a-71c1-0005-0f02000c90da",
+    "01c81d84-020a-73aa-0005-0f02000cf09a",
+    "01c81d84-020a-73aa-0005-0f02000cf0aa",
+    "01c81d84-020a-71fa-0005-0f02000ca0b2",
+    "01c81d84-020a-71c1-0005-0f02000c90ee",
+    "01c81d84-020a-71fa-0005-0f02000ca0b6",
+    "01c81d84-020a-73aa-0005-0f02000cf0ae",
+    "01c81d84-020a-71fa-0005-0f02000ca0ba",
+    "01c81d84-020a-71fa-0005-0f02000ca0be",
+    "01c81d84-020a-73aa-0005-0f02000cf0c6",
+    "01c81d84-020a-71c1-0005-0f02000c910a",
+    "01c81d84-020a-71fa-0005-0f02000ca0ce",
+    "01c81d84-020a-71fa-0005-0f02000ca0d2",
+    "01c81d84-020a-71c1-0005-0f02000c910e",
+    "01c81d84-020a-73aa-0005-0f02000cf0ca",
+    "01c81d84-020a-73aa-0005-0f02000cf0de",
+    "01c81d84-020a-71c1-0005-0f02000c9126",
+    "01c81d84-020a-71c1-0005-0f02000c912a",
+    "01c81d84-020a-71fa-0005-0f02000ca0e6",
+    "01c81d84-020a-71c1-0005-0f02000c912e",
+    "01c81d84-020a-73aa-0005-0f02000cf0e2"
+  ],
+  "status": "MEASURED_ATTRIBUTION_PENDING",
+  "cube_end_to_end": "MEASURED_ATTRIBUTION_PENDING",
+  "clustering_allowance_credits": 0.5,
+  "clustering_budget_scope": "operator allowance; serverless billing is delayed, not a hard cap",
+  "source_fingerprints": [
+    [
+      {
+        "N": 713467,
+        "H": 575373465525092646
+      }
+    ],
+    [
+      {
+        "N": 86,
+        "H": -8131953364267740626
+      }
+    ],
+    [
+      {
+        "N": 237514,
+        "H": -1311337240067052453
+      }
+    ],
+    [
+      {
+        "N": 1453,
+        "H": -7147618337733677279
+      }
+    ],
+    [
+      {
+        "N": 7042,
+        "H": 647600777184778431
+      }
+    ],
+    [
+      {
+        "N": 13149,
+        "H": 9114270817110152065
+      }
+    ]
+  ],
+  "cube_result_sha256": "25648a95c41a2ebf07b10080c5a8c3d4ae17796433d319bbb77e9f8587a3e743",
+  "clustering_information": [
+    {
+      "INFO": "{\n  \"average_depth\": 8,\n  \"average_overlaps\": 7,\n  \"cluster_by_keys\": \"LINEAR(fiscal_year,worksite_state)\",\n  \"clustering_errors\": [],\n  \"total_constant_partition_count\": 0,\n  \"total_partition_count\": 8,\n  \"version\": \"OPTIMA\"\n}"
+    }
+  ],
+  "clustering_completion": "UNKNOWN: key configured; asynchronous maintenance not presumed complete",
+  "restoration": {
+    "status": "VERIFIED",
+    "errors": []
+  },
+  "ended_at_utc": "2026-11-01T07:32:58Z"
+}

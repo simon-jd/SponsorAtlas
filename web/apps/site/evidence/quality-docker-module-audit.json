@@ -1,0 +1,11 @@
+{
+  "installedPackagesComparedToLock": 682,
+  "filesAndLinks": 30949,
+  "symlinks": 37,
+  "regularBytes": 478030661,
+  "fileManifestSHA256": "7e9004f7d70f94e85a52382be20e570ac774e4a66ecaf5d05239348365848aa4",
+  "lockSHA256": "f40155c8a6c543ee0520ecf0312c9e5a17ffb895769cb27e43c6b1485293c723",
+  "nativeSHA256": "66b0029ca31686ba843fe1af06f5e215da67b97595033c09914c275ea9f65a8a",
+  "scope": "Installed version/lock and complete file snapshot; not re-download upstream tarball comparison. Actual ABI proof recorded separately.",
+  "mismatches": []
+}

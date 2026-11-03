@@ -1,0 +1,10 @@
+ pg_create_logical_replication_slot 
+------------------------------------
+ (sponsoratlas_airbyte,0/195CF70)
+(1 row)
+
+      slot_name       |  plugin  |   database   | active | restart_lsn | confirmed_flush_lsn | retained_bytes 
+----------------------+----------+--------------+--------+-------------+---------------------+----------------
+ sponsoratlas_airbyte | pgoutput | sponsoratlas | f      | 0/195CF38   | 0/195CF70           |              0
+(1 row)
+

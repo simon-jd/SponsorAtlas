@@ -1,0 +1,9 @@
+{
+  "source_url": "https://www2.census.gov/geo/docs/maps-data/data/rel2020/zcta520/tab20_zcta520_county20_natl.txt",
+  "source_sha256": "3ed41278d637dc249e0323306f68be8a6c234e3090f4de88ef328dee71aeaaaf",
+  "source_bytes": 6821287,
+  "retrieved_at": "2026-10-27",
+  "publisher_checksum": "none published by the Census Bureau for this file",
+  "vintage": "Census2020",
+  "matching": "First five digits of the LCA WORKSITE_POSTAL_CODE (4-digit values left-padded with 0). Kept when the ZCTA's land lies in one county, or one county holds >= 90% of its land area; the county's state must equal the worksite state. Used after the source county and before the worksite city rule. ZCTAs approximate ZIP codes."
+}

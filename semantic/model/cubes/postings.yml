@@ -1,0 +1,49 @@
+cubes:
+  - name: postings
+    sql_table: mart_postings
+    description: Active posting-day observations at their original UTC observation dates; summing dates counts observed days, not unique vacancies.
+    dimensions:
+      - name: posting_day
+        sql: "posting_id || ':' || CAST(observation_date AS VARCHAR)"
+        type: string
+        primary_key: true
+        public: false
+      - name: employer
+        sql: employer
+        type: string
+      - name: soc_major
+        sql: soc_major
+        type: string
+      - name: soc
+        sql: soc
+        type: string
+      - name: metro
+        sql: metro
+        type: string
+      - name: fiscal_year
+        sql: fiscal_year
+        type: number
+        description: Federal fiscal year of the original UTC observation date, not run date.
+      - name: observation_date
+        sql: observation_date
+        type: time
+      - name: employer_mapping_status
+        sql: employer_mapping_status
+        type: string
+      - name: occupation_mapping_status
+        sql: occupation_mapping_status
+        type: string
+      - name: geography_mapping_status
+        sql: geography_mapping_status
+        type: string
+    measures:
+      - name: count
+        sql: CASE WHEN is_active THEN 1 ELSE 0 END
+        type: sum
+    pre_aggregations:
+      - name: counts
+        external: false
+        measures: [count]
+        dimensions: [fiscal_year]
+        refresh_key:
+          every: 1 hour

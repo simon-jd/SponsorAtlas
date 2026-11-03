@@ -1,0 +1,7 @@
+# Pin to the stable community platform; the VM must have Docker and enough disk/RAM.
+# No cloud VM, volume, bucket, or external service is provisioned by this file.
+global:
+  image:
+    tag: 1.8.5
+  auth:
+    enabled: true

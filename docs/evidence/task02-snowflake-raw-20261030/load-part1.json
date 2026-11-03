@@ -1,0 +1,308 @@
+{
+  "tables": [
+    {
+      "table": "RAW.BLS.BLS_FY2025",
+      "kind": "envelope",
+      "source": "data/raw/bls/FY2025/BLS_FY2025__86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde.jsonl",
+      "expected_rows": 413527,
+      "release": "FY2025",
+      "original_sha256": "86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde",
+      "file_sha256": "56ea8a7aa33e1913c332e7d28d9f06742a408e746fb33c9a3fb5f383ced31dfa",
+      "snowflake_rows": 413527,
+      "provenance_mismatches": 0,
+      "local_fingerprint": 887650777032999,
+      "snowflake_fingerprint": 887650777032999,
+      "status": "MATCH",
+      "seconds": {
+        "CREATE": 0.288,
+        "PUT": 14.084,
+        "COPY": 8.181
+      },
+      "query_ids": {
+        "CREATE": "01c81622-020a-6cd6-0005-0f02000aa8f2",
+        "PUT": "01c81622-020a-6cd6-0005-0f02000aa8f6",
+        "COPY": "01c81622-020a-6d55-0005-0f02000a7746"
+      },
+      "copy_result": [
+        [
+          "BLS_FY2025__86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde.jsonl.gz",
+          "LOADED",
+          "413527",
+          "413527",
+          "1",
+          "0",
+          "None",
+          "None",
+          "None",
+          "None"
+        ]
+      ]
+    },
+    {
+      "table": "RAW.LCA.LCA_FY2024_Q4",
+      "kind": "envelope",
+      "source": "data/raw/lca/FY2024_Q4/LCA_FY2024_Q4__23bc116e679e7ff10b9ac947dc4faf7942ae59ef1c3ffb5a10be61c4ae31ba30.jsonl",
+      "expected_rows": 120897,
+      "release": "FY2024_Q4",
+      "original_sha256": "23bc116e679e7ff10b9ac947dc4faf7942ae59ef1c3ffb5a10be61c4ae31ba30",
+      "file_sha256": "89818451477136344251a27c9e8dc8b168e7570af9e204de03f2d7b7c582dbab",
+      "snowflake_rows": 120897,
+      "provenance_mismatches": 0,
+      "local_fingerprint": 258998422484581,
+      "snowflake_fingerprint": 258998422484581,
+      "status": "MATCH",
+      "seconds": {
+        "CREATE": 0.354,
+        "PUT": 14.99,
+        "COPY": 7.333
+      },
+      "query_ids": {
+        "CREATE": "01c81623-020a-6cda-0005-0f02000b500a",
+        "PUT": "01c81623-020a-6cd8-0005-0f02000b179e",
+        "COPY": "01c81623-020a-6cda-0005-0f02000b500e"
+      },
+      "copy_result": [
+        [
+          "LCA_FY2024_Q4__23bc116e679e7ff10b9ac947dc4faf7942ae59ef1c3ffb5a10be61c4ae31ba30.jsonl.gz",
+          "LOADED",
+          "120897",
+          "120897",
+          "1",
+          "0",
+          "None",
+          "None",
+          "None",
+          "None"
+        ]
+      ]
+    },
+    {
+      "table": "RAW.LCA.LCA_FY2025_Q1",
+      "kind": "envelope",
+      "source": "data/raw/lca/FY2025_Q1/LCA_FY2025_Q1__17c08eccf8b2d543f502553f502b8165d85e3e93d86de6f7dbaed3e87c86911d.jsonl.gz",
+      "expected_rows": 107414,
+      "release": "FY2025_Q1",
+      "original_sha256": "17c08eccf8b2d543f502553f502b8165d85e3e93d86de6f7dbaed3e87c86911d",
+      "file_sha256": "5876bd963d2e1da5db7c5490bfde56339887ea470521ae7c90bf69b1807196e5",
+      "snowflake_rows": 107414,
+      "provenance_mismatches": 0,
+      "local_fingerprint": 230788179316990,
+      "snowflake_fingerprint": 230788179316990,
+      "status": "MATCH",
+      "seconds": {
+        "CREATE": 0.268,
+        "PUT": 1.537,
+        "COPY": 5.779
+      },
+      "query_ids": {
+        "CREATE": "01c81623-020a-6d55-0005-0f02000a774e",
+        "PUT": "01c81623-020a-6d55-0005-0f02000a7752",
+        "COPY": "01c81623-020a-6d55-0005-0f02000a7756"
+      },
+      "copy_result": [
+        [
+          "LCA_FY2025_Q1__17c08eccf8b2d543f502553f502b8165d85e3e93d86de6f7dbaed3e87c86911d.jsonl.gz",
+          "LOADED",
+          "107414",
+          "107414",
+          "1",
+          "0",
+          "None",
+          "None",
+          "None",
+          "None"
+        ]
+      ]
+    },
+    {
+      "table": "RAW.LCA.LCA_FY2025_Q2",
+      "kind": "envelope",
+      "source": "data/raw/lca/FY2025_Q2/LCA_FY2025_Q2__bc5aaf90fa89ee2666757fe8b065ae95a8b40dde785df04adba226b4fb388d30.jsonl.gz",
+      "expected_rows": 132133,
+      "release": "FY2025_Q2",
+      "original_sha256": "bc5aaf90fa89ee2666757fe8b065ae95a8b40dde785df04adba226b4fb388d30",
+      "file_sha256": "0e4b67d1cb97fcd143dbe07d6f2811e9bfbf2f23c27711ecee472aa7983f066d",
+      "snowflake_rows": 132133,
+      "provenance_mismatches": 0,
+      "local_fingerprint": 284462994432837,
+      "snowflake_fingerprint": 284462994432837,
+      "status": "MATCH",
+      "seconds": {
+        "CREATE": 0.311,
+        "PUT": 1.851,
+        "COPY": 7.062
+      },
+      "query_ids": {
+        "CREATE": "01c81623-020a-6cda-0005-0f02000b5012",
+        "PUT": "01c81623-020a-6cda-0005-0f02000b5016",
+        "COPY": "01c81623-020a-6cda-0005-0f02000b501a"
+      },
+      "copy_result": [
+        [
+          "LCA_FY2025_Q2__bc5aaf90fa89ee2666757fe8b065ae95a8b40dde785df04adba226b4fb388d30.jsonl.gz",
+          "LOADED",
+          "132133",
+          "132133",
+          "1",
+          "0",
+          "None",
+          "None",
+          "None",
+          "None"
+        ]
+      ]
+    },
+    {
+      "table": "RAW.LCA.LCA_FY2025_Q3",
+      "kind": "envelope",
+      "source": "data/raw/lca/FY2025_Q3/LCA_FY2025_Q3__fcabedf38c8cc3036334b7d38981878d29afb3d8ad7455ec12f127ed091a0d5e.jsonl.gz",
+      "expected_rows": 238425,
+      "release": "FY2025_Q3",
+      "original_sha256": "fcabedf38c8cc3036334b7d38981878d29afb3d8ad7455ec12f127ed091a0d5e",
+      "file_sha256": "4b28d8025f00a4fe976c09fd491a412d02acb691bddf9bd990a7e7d749510555",
+      "snowflake_rows": 238425,
+      "provenance_mismatches": 0,
+      "local_fingerprint": 511689271162667,
+      "snowflake_fingerprint": 511689271162667,
+      "status": "MATCH",
+      "seconds": {
+        "CREATE": 0.321,
+        "PUT": 3.12,
+        "COPY": 10.971
+      },
+      "query_ids": {
+        "CREATE": "01c81623-020a-6cd8-0005-0f02000b17aa",
+        "PUT": "01c81623-020a-6cd6-0005-0f02000aa8fa",
+        "COPY": "01c81623-020a-6d55-0005-0f02000a775a"
+      },
+      "copy_result": [
+        [
+          "LCA_FY2025_Q3__fcabedf38c8cc3036334b7d38981878d29afb3d8ad7455ec12f127ed091a0d5e.jsonl.gz",
+          "LOADED",
+          "238425",
+          "238425",
+          "1",
+          "0",
+          "None",
+          "None",
+          "None",
+          "None"
+        ]
+      ]
+    },
+    {
+      "table": "RAW.LCA.LCA_FY2025_Q4",
+      "kind": "envelope",
+      "source": "data/raw/lca/FY2025_Q4/LCA_FY2025_Q4__81ebf97d471014b91ae685cb7eb505369d7c80af2de67944ddd7531814976370.jsonl",
+      "expected_rows": 118580,
+      "release": "FY2025_Q4",
+      "original_sha256": "81ebf97d471014b91ae685cb7eb505369d7c80af2de67944ddd7531814976370",
+      "file_sha256": "89b84a07a177997a8e41be2db067e788438707a3d01cd95a7d046bd021e120ae",
+      "snowflake_rows": 118580,
+      "provenance_mismatches": 0,
+      "local_fingerprint": 255277902859230,
+      "snowflake_fingerprint": 255277902859230,
+      "status": "MATCH",
+      "seconds": {
+        "CREATE": 0.421,
+        "PUT": 14.702,
+        "COPY": 6.398
+      },
+      "query_ids": {
+        "CREATE": "01c81624-020a-6cd6-0005-0f02000aa902",
+        "PUT": "01c81624-020a-6cd8-0005-0f02000b17ae",
+        "COPY": "01c81624-020a-6cd6-0005-0f02000aa906"
+      },
+      "copy_result": [
+        [
+          "LCA_FY2025_Q4__81ebf97d471014b91ae685cb7eb505369d7c80af2de67944ddd7531814976370.jsonl.gz",
+          "LOADED",
+          "118580",
+          "118580",
+          "1",
+          "0",
+          "None",
+          "None",
+          "None",
+          "None"
+        ]
+      ]
+    },
+    {
+      "table": "RAW.USCIS.USCIS_FY2022",
+      "kind": "envelope",
+      "source": "data/raw/uscis/FY2022/USCIS_FY2022__692cc11c7d48739d5ff4363a6ba7cbe0c422334c417dd88813aa1ff596d5f879.jsonl",
+      "expected_rows": 59983,
+      "release": "FY2022",
+      "original_sha256": "692cc11c7d48739d5ff4363a6ba7cbe0c422334c417dd88813aa1ff596d5f879",
+      "file_sha256": "a3a68d0f3b6a4f23120c1c6e70cff55f5fe9e4a09f78ec45b2a5604d357de116",
+      "snowflake_rows": 59983,
+      "provenance_mismatches": 0,
+      "local_fingerprint": 128608117393083,
+      "snowflake_fingerprint": 128608117393083,
+      "status": "MATCH",
+      "seconds": {
+        "CREATE": 0.278,
+        "PUT": 0.8,
+        "COPY": 2.154
+      },
+      "query_ids": {
+        "CREATE": "01c81624-020a-6cd6-0005-0f02000aa90a",
+        "PUT": "01c81624-020a-6cda-0005-0f02000b5026",
+        "COPY": "01c81624-020a-6d55-0005-0f02000a775e"
+      },
+      "copy_result": [
+        [
+          "USCIS_FY2022__692cc11c7d48739d5ff4363a6ba7cbe0c422334c417dd88813aa1ff596d5f879.jsonl.gz",
+          "LOADED",
+          "59983",
+          "59983",
+          "1",
+          "0",
+          "None",
+          "None",
+          "None",
+          "None"
+        ]
+      ]
+    },
+    {
+      "table": "RAW.USCIS.USCIS_FY2023",
+      "kind": "envelope",
+      "source": "data/raw/uscis/FY2023/USCIS_FY2023__96f42309393249a7368bd418b2b2c5111b45acc7ccec487a0f024dfa07d71931.jsonl",
+      "expected_rows": 33332,
+      "release": "FY2023",
+      "original_sha256": "96f42309393249a7368bd418b2b2c5111b45acc7ccec487a0f024dfa07d71931",
+      "file_sha256": "9946a977a87c0dc2fb73848f729546207ea22bee82049ed2fe0e328010e791b9",
+      "snowflake_rows": 33332,
+      "provenance_mismatches": 0,
+      "local_fingerprint": 71659588410877,
+      "snowflake_fingerprint": 71659588410877,
+      "status": "MATCH",
+      "seconds": {
+        "CREATE": 0.389,
+        "PUT": 0.649,
+        "COPY": 1.353
+      },
+      "query_ids": {
+        "CREATE": "01c81624-020a-6cd6-0005-0f02000aa90e",
+        "PUT": "01c81624-020a-6cd8-0005-0f02000b17b6",
+        "COPY": "01c81624-020a-6d55-0005-0f02000a7762"
+      },
+      "copy_result": [
+        [
+          "USCIS_FY2023__96f42309393249a7368bd418b2b2c5111b45acc7ccec487a0f024dfa07d71931.jsonl.gz",
+          "LOADED",
+          "33332",
+          "33332",
+          "1",
+          "0",
+          "None",
+          "None",
+          "None",
+          "None"
+        ]
+      ]
+    }
+  ]
+}

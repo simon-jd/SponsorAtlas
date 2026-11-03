@@ -1,0 +1,16 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "factoryName": {"value": "REQUIRED_EXISTING_PROJECT_ADF"},
+    "blobServiceEndpoint": {"value": "https://REQUIRED.blob.core.windows.net/"},
+    "blobContainer": {"value": "restricted-lca"},
+    "workspaceId": {"value": "REQUIRED_NEU_WORKSPACE_GUID"},
+    "lakehouseId": {"value": "REQUIRED_LAKEHOUSE_GUID"},
+    "fabricTenantId": {"value": "REQUIRED_NEU_TENANT_GUID"},
+    "fabricServicePrincipalId": {"value": "REQUIRED_APPROVED_CERTIFICATE_PRINCIPAL_GUID"},
+    "keyVaultBaseUrl": {"value": "https://REQUIRED.vault.azure.net/"},
+    "certificateSecretName": {"value": "REQUIRED_PKCS12_CERTIFICATE_SECRET"},
+    "certificateSecretVersion": {"value": "REQUIRED_IMMUTABLE_SECRET_VERSION"}
+  }
+}

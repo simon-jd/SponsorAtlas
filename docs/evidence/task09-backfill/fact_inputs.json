@@ -1,0 +1,23 @@
+{
+  "status": "SUCCEEDED",
+  "nproc": 32,
+  "load_before": [
+    6.79931640625,
+    6.8408203125,
+    6.69384765625
+  ],
+  "steps": [
+    {
+      "name": "fact_inputs",
+      "exit_code": 0,
+      "seconds": 29.229,
+      "load_after": [
+        7.93310546875,
+        7.18603515625,
+        6.8173828125
+      ],
+      "projected_bytes": 20723118361
+    }
+  ],
+  "seconds": 29.598
+}

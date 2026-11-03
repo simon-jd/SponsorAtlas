@@ -1,0 +1,197 @@
+fiscal_year,source_column,standard_column,disposition,reason,verification
+2024,CASE_NUMBER,case_number,mapped,used by staging contract,verified_full_xlsx_header
+2024,CASE_STATUS,case_status,mapped,used by staging contract,verified_full_xlsx_header
+2024,RECEIVED_DATE,received_date_raw,mapped,used by staging contract,verified_full_xlsx_header
+2024,DECISION_DATE,decision_date_raw,mapped,used by staging contract,verified_full_xlsx_header
+2024,ORIGINAL_CERT_DATE,,excluded,excluded: outside Task3 staging contract; retained in RAW payload,verified_full_xlsx_header
+2024,VISA_CLASS,visa_class,mapped,used by staging contract,verified_full_xlsx_header
+2024,JOB_TITLE,job_title,mapped,used by staging contract,verified_full_xlsx_header
+2024,SOC_CODE,soc_code_raw,mapped,used by staging contract,verified_full_xlsx_header
+2024,SOC_TITLE,,excluded,excluded: outside Task3 staging contract; retained in RAW payload,verified_full_xlsx_header
+2024,FULL_TIME_POSITION,,excluded,excluded: outside Task3 staging contract; retained in RAW payload,verified_full_xlsx_header
+2024,BEGIN_DATE,begin_date_raw,mapped,used by staging contract,verified_full_xlsx_header
+2024,END_DATE,end_date_raw,mapped,used by staging contract,verified_full_xlsx_header
+2024,TOTAL_WORKER_POSITIONS,worker_positions_raw,mapped,used by staging contract,verified_full_xlsx_header
+2024,NEW_EMPLOYMENT,,excluded,excluded: outside Task3 staging contract; retained in RAW payload,verified_full_xlsx_header
+2024,CONTINUED_EMPLOYMENT,,excluded,excluded: outside Task3 staging contract; retained in RAW payload,verified_full_xlsx_header
+2024,CHANGE_PREVIOUS_EMPLOYMENT,,excluded,excluded: outside Task3 staging contract; retained in RAW payload,verified_full_xlsx_header
+2024,NEW_CONCURRENT_EMPLOYMENT,,excluded,excluded: outside Task3 staging contract; retained in RAW payload,verified_full_xlsx_header
+2024,CHANGE_EMPLOYER,,excluded,excluded: outside Task3 staging contract; retained in RAW payload,verified_full_xlsx_header
+2024,AMENDED_PETITION,,excluded,excluded: outside Task3 staging contract; retained in RAW payload,verified_full_xlsx_header
+2024,EMPLOYER_NAME,employer_name,mapped,used by staging contract,verified_full_xlsx_header
+2024,TRADE_NAME_DBA,trade_name_dba,mapped,used by staging contract,verified_full_xlsx_header
+2024,EMPLOYER_ADDRESS1,employer_address,mapped,used by staging contract,verified_full_xlsx_header
+2024,EMPLOYER_ADDRESS2,,excluded,excluded: outside Task3 staging contract; retained in RAW payload,verified_full_xlsx_header
+2024,EMPLOYER_CITY,employer_city,mapped,used by staging contract,verified_full_xlsx_header
+2024,EMPLOYER_STATE,employer_state_raw,mapped,used by staging contract,verified_full_xlsx_header
+2024,EMPLOYER_POSTAL_CODE,employer_zip,mapped,used by staging contract,verified_full_xlsx_header
+2024,EMPLOYER_COUNTRY,employer_country,mapped,used by staging contract,verified_full_xlsx_header
+2024,EMPLOYER_PROVINCE,,excluded,excluded: outside Task3 staging contract; retained in RAW payload,verified_full_xlsx_header
+2024,EMPLOYER_PHONE,,excluded,excluded: contact/representative personal data; retained in restricted RAW only,verified_full_xlsx_header
+2024,EMPLOYER_PHONE_EXT,,excluded,excluded: contact/representative personal data; retained in restricted RAW only,verified_full_xlsx_header
+2024,EMPLOYER_FEIN,employer_fein,mapped,used by staging contract,verified_full_xlsx_header
+2024,NAICS_CODE,,excluded,excluded: outside Task3 staging contract; retained in RAW payload,verified_full_xlsx_header
+2024,EMPLOYER_POC_LAST_NAME,,excluded,excluded: contact/representative personal data; retained in restricted RAW only,verified_full_xlsx_header
+2024,EMPLOYER_POC_FIRST_NAME,,excluded,excluded: contact/representative personal data; retained in restricted RAW only,verified_full_xlsx_header
+2024,EMPLOYER_POC_MIDDLE_NAME,,excluded,excluded: contact/representative personal data; retained in restricted RAW only,verified_full_xlsx_header
+2024,EMPLOYER_POC_JOB_TITLE,,excluded,excluded: contact/representative personal data; retained in restricted RAW only,verified_full_xlsx_header
+2024,EMPLOYER_POC_ADDRESS1,,excluded,excluded: contact/representative personal data; retained in restricted RAW only,verified_full_xlsx_header
+2024,EMPLOYER_POC_ADDRESS2,,excluded,excluded: contact/representative personal data; retained in restricted RAW only,verified_full_xlsx_header
+2024,EMPLOYER_POC_CITY,,excluded,excluded: contact/representative personal data; retained in restricted RAW only,verified_full_xlsx_header
+2024,EMPLOYER_POC_STATE,,excluded,excluded: contact/representative personal data; retained in restricted RAW only,verified_full_xlsx_header
+2024,EMPLOYER_POC_POSTAL_CODE,,excluded,excluded: contact/representative personal data; retained in restricted RAW only,verified_full_xlsx_header
+2024,EMPLOYER_POC_COUNTRY,,excluded,excluded: contact/representative personal data; retained in restricted RAW only,verified_full_xlsx_header
+2024,EMPLOYER_POC_PROVINCE,,excluded,excluded: contact/representative personal data; retained in restricted RAW only,verified_full_xlsx_header
+2024,EMPLOYER_POC_PHONE,,excluded,excluded: contact/representative personal data; retained in restricted RAW only,verified_full_xlsx_header
+2024,EMPLOYER_POC_PHONE_EXT,,excluded,excluded: contact/representative personal data; retained in restricted RAW only,verified_full_xlsx_header
+2024,EMPLOYER_POC_EMAIL,,excluded,excluded: contact/representative personal data; retained in restricted RAW only,verified_full_xlsx_header
+2024,AGENT_REPRESENTING_EMPLOYER,,excluded,excluded: outside Task3 staging contract; retained in RAW payload,verified_full_xlsx_header
+2024,AGENT_ATTORNEY_LAST_NAME,,excluded,excluded: contact/representative personal data; retained in restricted RAW only,verified_full_xlsx_header
+2024,AGENT_ATTORNEY_FIRST_NAME,,excluded,excluded: contact/representative personal data; retained in restricted RAW only,verified_full_xlsx_header
+2024,AGENT_ATTORNEY_MIDDLE_NAME,,excluded,excluded: contact/representative personal data; retained in restricted RAW only,verified_full_xlsx_header
+2024,AGENT_ATTORNEY_ADDRESS1,,excluded,excluded: contact/representative personal data; retained in restricted RAW only,verified_full_xlsx_header
+2024,AGENT_ATTORNEY_ADDRESS2,,excluded,excluded: contact/representative personal data; retained in restricted RAW only,verified_full_xlsx_header
+2024,AGENT_ATTORNEY_CITY,,excluded,excluded: contact/representative personal data; retained in restricted RAW only,verified_full_xlsx_header
+2024,AGENT_ATTORNEY_STATE,,excluded,excluded: contact/representative personal data; retained in restricted RAW only,verified_full_xlsx_header
+2024,AGENT_ATTORNEY_POSTAL_CODE,,excluded,excluded: contact/representative personal data; retained in restricted RAW only,verified_full_xlsx_header
+2024,AGENT_ATTORNEY_COUNTRY,,excluded,excluded: contact/representative personal data; retained in restricted RAW only,verified_full_xlsx_header
+2024,AGENT_ATTORNEY_PROVINCE,,excluded,excluded: contact/representative personal data; retained in restricted RAW only,verified_full_xlsx_header
+2024,AGENT_ATTORNEY_PHONE,,excluded,excluded: contact/representative personal data; retained in restricted RAW only,verified_full_xlsx_header
+2024,AGENT_ATTORNEY_PHONE_EXT,,excluded,excluded: contact/representative personal data; retained in restricted RAW only,verified_full_xlsx_header
+2024,AGENT_ATTORNEY_EMAIL_ADDRESS,,excluded,excluded: contact/representative personal data; retained in restricted RAW only,verified_full_xlsx_header
+2024,LAWFIRM_NAME_BUSINESS_NAME,,excluded,excluded: contact/representative personal data; retained in restricted RAW only,verified_full_xlsx_header
+2024,STATE_OF_HIGHEST_COURT,,excluded,excluded: outside Task3 staging contract; retained in RAW payload,verified_full_xlsx_header
+2024,NAME_OF_HIGHEST_STATE_COURT,,excluded,excluded: outside Task3 staging contract; retained in RAW payload,verified_full_xlsx_header
+2024,WORKSITE_WORKERS,,excluded,excluded: outside Task3 staging contract; retained in RAW payload,verified_full_xlsx_header
+2024,SECONDARY_ENTITY,,excluded,excluded: outside Task3 staging contract; retained in RAW payload,verified_full_xlsx_header
+2024,SECONDARY_ENTITY_BUSINESS_NAME,,excluded,excluded: outside Task3 staging contract; retained in RAW payload,verified_full_xlsx_header
+2024,WORKSITE_ADDRESS1,,excluded,excluded: outside Task3 staging contract; retained in RAW payload,verified_full_xlsx_header
+2024,WORKSITE_ADDRESS2,,excluded,excluded: outside Task3 staging contract; retained in RAW payload,verified_full_xlsx_header
+2024,WORKSITE_CITY,worksite_city_raw,mapped,used by staging contract (county fill from Census2020 place),verified_full_xlsx_header
+2024,WORKSITE_COUNTY,worksite_county_raw,mapped,used by staging contract,verified_full_xlsx_header
+2024,WORKSITE_STATE,worksite_state_raw,mapped,used by staging contract,verified_full_xlsx_header
+2024,WORKSITE_POSTAL_CODE,worksite_postal_code_raw,mapped,used by staging contract (county fill from Census2020 ZCTA),verified_full_xlsx_header
+2024,WAGE_RATE_OF_PAY_FROM,wage_amount_raw,mapped,used by staging contract,verified_full_xlsx_header
+2024,WAGE_RATE_OF_PAY_TO,,excluded,excluded: outside Task3 staging contract; retained in RAW payload,verified_full_xlsx_header
+2024,WAGE_UNIT_OF_PAY,wage_unit,mapped,used by staging contract,verified_full_xlsx_header
+2024,PREVAILING_WAGE,,excluded,excluded: outside Task3 staging contract; retained in RAW payload,verified_full_xlsx_header
+2024,PW_UNIT_OF_PAY,,excluded,excluded: outside Task3 staging contract; retained in RAW payload,verified_full_xlsx_header
+2024,PW_TRACKING_NUMBER,,excluded,excluded: outside Task3 staging contract; retained in RAW payload,verified_full_xlsx_header
+2024,PW_WAGE_LEVEL,,excluded,excluded: outside Task3 staging contract; retained in RAW payload,verified_full_xlsx_header
+2024,PW_OES_YEAR,,excluded,excluded: outside Task3 staging contract; retained in RAW payload,verified_full_xlsx_header
+2024,PW_OTHER_SOURCE,,excluded,excluded: outside Task3 staging contract; retained in RAW payload,verified_full_xlsx_header
+2024,PW_OTHER_YEAR,,excluded,excluded: outside Task3 staging contract; retained in RAW payload,verified_full_xlsx_header
+2024,PW_SURVEY_PUBLISHER,,excluded,excluded: outside Task3 staging contract; retained in RAW payload,verified_full_xlsx_header
+2024,PW_SURVEY_NAME,,excluded,excluded: outside Task3 staging contract; retained in RAW payload,verified_full_xlsx_header
+2024,TOTAL_WORKSITE_LOCATIONS,,excluded,excluded: outside Task3 staging contract; retained in RAW payload,verified_full_xlsx_header
+2024,AGREE_TO_LC_STATEMENT,,excluded,excluded: outside Task3 staging contract; retained in RAW payload,verified_full_xlsx_header
+2024,H_1B_DEPENDENT,,excluded,excluded: outside Task3 staging contract; retained in RAW payload,verified_full_xlsx_header
+2024,WILLFUL_VIOLATOR,,excluded,excluded: outside Task3 staging contract; retained in RAW payload,verified_full_xlsx_header
+2024,SUPPORT_H1B,,excluded,excluded: outside Task3 staging contract; retained in RAW payload,verified_full_xlsx_header
+2024,STATUTORY_BASIS,,excluded,excluded: outside Task3 staging contract; retained in RAW payload,verified_full_xlsx_header
+2024,APPENDIX_A_ATTACHED,,excluded,excluded: outside Task3 staging contract; retained in RAW payload,verified_full_xlsx_header
+2024,PUBLIC_DISCLOSURE,,excluded,excluded: outside Task3 staging contract; retained in RAW payload,verified_full_xlsx_header
+2024,PREPARER_LAST_NAME,,excluded,excluded: contact/representative personal data; retained in restricted RAW only,verified_full_xlsx_header
+2024,PREPARER_FIRST_NAME,,excluded,excluded: contact/representative personal data; retained in restricted RAW only,verified_full_xlsx_header
+2024,PREPARER_MIDDLE_INITIAL,,excluded,excluded: contact/representative personal data; retained in restricted RAW only,verified_full_xlsx_header
+2024,PREPARER_BUSINESS_NAME,,excluded,excluded: contact/representative personal data; retained in restricted RAW only,verified_full_xlsx_header
+2024,PREPARER_EMAIL,,excluded,excluded: contact/representative personal data; retained in restricted RAW only,verified_full_xlsx_header
+2025,CASE_NUMBER,case_number,mapped,used by staging contract,verified_full_xlsx_header
+2025,CASE_STATUS,case_status,mapped,used by staging contract,verified_full_xlsx_header
+2025,RECEIVED_DATE,received_date_raw,mapped,used by staging contract,verified_full_xlsx_header
+2025,DECISION_DATE,decision_date_raw,mapped,used by staging contract,verified_full_xlsx_header
+2025,ORIGINAL_CERT_DATE,,excluded,excluded: outside Task3 staging contract; retained in RAW payload,verified_full_xlsx_header
+2025,VISA_CLASS,visa_class,mapped,used by staging contract,verified_full_xlsx_header
+2025,JOB_TITLE,job_title,mapped,used by staging contract,verified_full_xlsx_header
+2025,SOC_CODE,soc_code_raw,mapped,used by staging contract,verified_full_xlsx_header
+2025,SOC_TITLE,,excluded,excluded: outside Task3 staging contract; retained in RAW payload,verified_full_xlsx_header
+2025,FULL_TIME_POSITION,,excluded,excluded: outside Task3 staging contract; retained in RAW payload,verified_full_xlsx_header
+2025,BEGIN_DATE,begin_date_raw,mapped,used by staging contract,verified_full_xlsx_header
+2025,END_DATE,end_date_raw,mapped,used by staging contract,verified_full_xlsx_header
+2025,TOTAL_WORKER_POSITIONS,worker_positions_raw,mapped,used by staging contract,verified_full_xlsx_header
+2025,NEW_EMPLOYMENT,,excluded,excluded: outside Task3 staging contract; retained in RAW payload,verified_full_xlsx_header
+2025,CONTINUED_EMPLOYMENT,,excluded,excluded: outside Task3 staging contract; retained in RAW payload,verified_full_xlsx_header
+2025,CHANGE_PREVIOUS_EMPLOYMENT,,excluded,excluded: outside Task3 staging contract; retained in RAW payload,verified_full_xlsx_header
+2025,NEW_CONCURRENT_EMPLOYMENT,,excluded,excluded: outside Task3 staging contract; retained in RAW payload,verified_full_xlsx_header
+2025,CHANGE_EMPLOYER,,excluded,excluded: outside Task3 staging contract; retained in RAW payload,verified_full_xlsx_header
+2025,AMENDED_PETITION,,excluded,excluded: outside Task3 staging contract; retained in RAW payload,verified_full_xlsx_header
+2025,EMPLOYER_NAME,employer_name,mapped,used by staging contract,verified_full_xlsx_header
+2025,TRADE_NAME_DBA,trade_name_dba,mapped,used by staging contract,verified_full_xlsx_header
+2025,EMPLOYER_ADDRESS1,employer_address,mapped,used by staging contract,verified_full_xlsx_header
+2025,EMPLOYER_ADDRESS2,,excluded,excluded: outside Task3 staging contract; retained in RAW payload,verified_full_xlsx_header
+2025,EMPLOYER_CITY,employer_city,mapped,used by staging contract,verified_full_xlsx_header
+2025,EMPLOYER_STATE,employer_state_raw,mapped,used by staging contract,verified_full_xlsx_header
+2025,EMPLOYER_POSTAL_CODE,employer_zip,mapped,used by staging contract,verified_full_xlsx_header
+2025,EMPLOYER_COUNTRY,employer_country,mapped,used by staging contract,verified_full_xlsx_header
+2025,EMPLOYER_PROVINCE,,excluded,excluded: outside Task3 staging contract; retained in RAW payload,verified_full_xlsx_header
+2025,EMPLOYER_PHONE,,excluded,excluded: contact/representative personal data; retained in restricted RAW only,verified_full_xlsx_header
+2025,EMPLOYER_PHONE_EXT,,excluded,excluded: contact/representative personal data; retained in restricted RAW only,verified_full_xlsx_header
+2025,EMPLOYER_FEIN,employer_fein,mapped,used by staging contract,verified_full_xlsx_header
+2025,NAICS_CODE,,excluded,excluded: outside Task3 staging contract; retained in RAW payload,verified_full_xlsx_header
+2025,EMPLOYER_POC_LAST_NAME,,excluded,excluded: contact/representative personal data; retained in restricted RAW only,verified_full_xlsx_header
+2025,EMPLOYER_POC_FIRST_NAME,,excluded,excluded: contact/representative personal data; retained in restricted RAW only,verified_full_xlsx_header
+2025,EMPLOYER_POC_MIDDLE_NAME,,excluded,excluded: contact/representative personal data; retained in restricted RAW only,verified_full_xlsx_header
+2025,EMPLOYER_POC_JOB_TITLE,,excluded,excluded: contact/representative personal data; retained in restricted RAW only,verified_full_xlsx_header
+2025,EMPLOYER_POC_ADDRESS1,,excluded,excluded: contact/representative personal data; retained in restricted RAW only,verified_full_xlsx_header
+2025,EMPLOYER_POC_ADDRESS2,,excluded,excluded: contact/representative personal data; retained in restricted RAW only,verified_full_xlsx_header
+2025,EMPLOYER_POC_CITY,,excluded,excluded: contact/representative personal data; retained in restricted RAW only,verified_full_xlsx_header
+2025,EMPLOYER_POC_STATE,,excluded,excluded: contact/representative personal data; retained in restricted RAW only,verified_full_xlsx_header
+2025,EMPLOYER_POC_POSTAL_CODE,,excluded,excluded: contact/representative personal data; retained in restricted RAW only,verified_full_xlsx_header
+2025,EMPLOYER_POC_COUNTRY,,excluded,excluded: contact/representative personal data; retained in restricted RAW only,verified_full_xlsx_header
+2025,EMPLOYER_POC_PROVINCE,,excluded,excluded: contact/representative personal data; retained in restricted RAW only,verified_full_xlsx_header
+2025,EMPLOYER_POC_PHONE,,excluded,excluded: contact/representative personal data; retained in restricted RAW only,verified_full_xlsx_header
+2025,EMPLOYER_POC_PHONE_EXT,,excluded,excluded: contact/representative personal data; retained in restricted RAW only,verified_full_xlsx_header
+2025,EMPLOYER_POC_EMAIL,,excluded,excluded: contact/representative personal data; retained in restricted RAW only,verified_full_xlsx_header
+2025,AGENT_REPRESENTING_EMPLOYER,,excluded,excluded: outside Task3 staging contract; retained in RAW payload,verified_full_xlsx_header
+2025,AGENT_ATTORNEY_LAST_NAME,,excluded,excluded: contact/representative personal data; retained in restricted RAW only,verified_full_xlsx_header
+2025,AGENT_ATTORNEY_FIRST_NAME,,excluded,excluded: contact/representative personal data; retained in restricted RAW only,verified_full_xlsx_header
+2025,AGENT_ATTORNEY_MIDDLE_NAME,,excluded,excluded: contact/representative personal data; retained in restricted RAW only,verified_full_xlsx_header
+2025,AGENT_ATTORNEY_ADDRESS1,,excluded,excluded: contact/representative personal data; retained in restricted RAW only,verified_full_xlsx_header
+2025,AGENT_ATTORNEY_ADDRESS2,,excluded,excluded: contact/representative personal data; retained in restricted RAW only,verified_full_xlsx_header
+2025,AGENT_ATTORNEY_CITY,,excluded,excluded: contact/representative personal data; retained in restricted RAW only,verified_full_xlsx_header
+2025,AGENT_ATTORNEY_STATE,,excluded,excluded: contact/representative personal data; retained in restricted RAW only,verified_full_xlsx_header
+2025,AGENT_ATTORNEY_POSTAL_CODE,,excluded,excluded: contact/representative personal data; retained in restricted RAW only,verified_full_xlsx_header
+2025,AGENT_ATTORNEY_COUNTRY,,excluded,excluded: contact/representative personal data; retained in restricted RAW only,verified_full_xlsx_header
+2025,AGENT_ATTORNEY_PROVINCE,,excluded,excluded: contact/representative personal data; retained in restricted RAW only,verified_full_xlsx_header
+2025,AGENT_ATTORNEY_PHONE,,excluded,excluded: contact/representative personal data; retained in restricted RAW only,verified_full_xlsx_header
+2025,AGENT_ATTORNEY_PHONE_EXT,,excluded,excluded: contact/representative personal data; retained in restricted RAW only,verified_full_xlsx_header
+2025,AGENT_ATTORNEY_EMAIL_ADDRESS,,excluded,excluded: contact/representative personal data; retained in restricted RAW only,verified_full_xlsx_header
+2025,LAWFIRM_NAME_BUSINESS_NAME,,excluded,excluded: contact/representative personal data; retained in restricted RAW only,verified_full_xlsx_header
+2025,LAWFIRM_BUSINESS_FEIN,,excluded,excluded: contact/representative personal data; retained in restricted RAW only,verified_full_xlsx_header
+2025,STATE_OF_HIGHEST_COURT,,excluded,excluded: outside Task3 staging contract; retained in RAW payload,verified_full_xlsx_header
+2025,NAME_OF_HIGHEST_STATE_COURT,,excluded,excluded: outside Task3 staging contract; retained in RAW payload,verified_full_xlsx_header
+2025,WORKSITE_WORKERS,,excluded,excluded: outside Task3 staging contract; retained in RAW payload,verified_full_xlsx_header
+2025,SECONDARY_ENTITY,,excluded,excluded: outside Task3 staging contract; retained in RAW payload,verified_full_xlsx_header
+2025,SECONDARY_ENTITY_BUSINESS_NAME,,excluded,excluded: outside Task3 staging contract; retained in RAW payload,verified_full_xlsx_header
+2025,WORKSITE_ADDRESS1,,excluded,excluded: outside Task3 staging contract; retained in RAW payload,verified_full_xlsx_header
+2025,WORKSITE_ADDRESS2,,excluded,excluded: outside Task3 staging contract; retained in RAW payload,verified_full_xlsx_header
+2025,WORKSITE_CITY,worksite_city_raw,mapped,used by staging contract (county fill from Census2020 place),verified_full_xlsx_header
+2025,WORKSITE_COUNTY,worksite_county_raw,mapped,used by staging contract,verified_full_xlsx_header
+2025,WORKSITE_STATE,worksite_state_raw,mapped,used by staging contract,verified_full_xlsx_header
+2025,WORKSITE_POSTAL_CODE,worksite_postal_code_raw,mapped,used by staging contract (county fill from Census2020 ZCTA),verified_full_xlsx_header
+2025,WAGE_RATE_OF_PAY_FROM,wage_amount_raw,mapped,used by staging contract,verified_full_xlsx_header
+2025,WAGE_RATE_OF_PAY_TO,,excluded,excluded: outside Task3 staging contract; retained in RAW payload,verified_full_xlsx_header
+2025,WAGE_UNIT_OF_PAY,wage_unit,mapped,used by staging contract,verified_full_xlsx_header
+2025,PREVAILING_WAGE,,excluded,excluded: outside Task3 staging contract; retained in RAW payload,verified_full_xlsx_header
+2025,PW_UNIT_OF_PAY,,excluded,excluded: outside Task3 staging contract; retained in RAW payload,verified_full_xlsx_header
+2025,PW_TRACKING_NUMBER,,excluded,excluded: outside Task3 staging contract; retained in RAW payload,verified_full_xlsx_header
+2025,PW_WAGE_LEVEL,,excluded,excluded: outside Task3 staging contract; retained in RAW payload,verified_full_xlsx_header
+2025,PW_OES_YEAR,,excluded,excluded: outside Task3 staging contract; retained in RAW payload,verified_full_xlsx_header
+2025,PW_OTHER_SOURCE,,excluded,excluded: outside Task3 staging contract; retained in RAW payload,verified_full_xlsx_header
+2025,PW_OTHER_YEAR,,excluded,excluded: outside Task3 staging contract; retained in RAW payload,verified_full_xlsx_header
+2025,PW_SURVEY_PUBLISHER,,excluded,excluded: outside Task3 staging contract; retained in RAW payload,verified_full_xlsx_header
+2025,PW_SURVEY_NAME,,excluded,excluded: outside Task3 staging contract; retained in RAW payload,verified_full_xlsx_header
+2025,TOTAL_WORKSITE_LOCATIONS,,excluded,excluded: outside Task3 staging contract; retained in RAW payload,verified_full_xlsx_header
+2025,AGREE_TO_LC_STATEMENT,,excluded,excluded: outside Task3 staging contract; retained in RAW payload,verified_full_xlsx_header
+2025,H_1B_DEPENDENT,,excluded,excluded: outside Task3 staging contract; retained in RAW payload,verified_full_xlsx_header
+2025,H-1B_DEPENDENT,,excluded,excluded: FY2025_Q1 spelling of H_1B_DEPENDENT; outside Task3 staging contract; retained in RAW payload,verified_full_xlsx_header
+2025,WILLFUL_VIOLATOR,,excluded,excluded: outside Task3 staging contract; retained in RAW payload,verified_full_xlsx_header
+2025,SUPPORT_H1B,,excluded,excluded: outside Task3 staging contract; retained in RAW payload,verified_full_xlsx_header
+2025,STATUTORY_BASIS,,excluded,excluded: outside Task3 staging contract; retained in RAW payload,verified_full_xlsx_header
+2025,APPENDIX_A_ATTACHED,,excluded,excluded: outside Task3 staging contract; retained in RAW payload,verified_full_xlsx_header
+2025,PUBLIC_DISCLOSURE,,excluded,excluded: outside Task3 staging contract; retained in RAW payload,verified_full_xlsx_header
+2025,PREPARER_LAST_NAME,,excluded,excluded: contact/representative personal data; retained in restricted RAW only,verified_full_xlsx_header
+2025,PREPARER_FIRST_NAME,,excluded,excluded: contact/representative personal data; retained in restricted RAW only,verified_full_xlsx_header
+2025,PREPARER_MIDDLE_INITIAL,,excluded,excluded: contact/representative personal data; retained in restricted RAW only,verified_full_xlsx_header
+2025,PREPARER_BUSINESS_NAME,,excluded,excluded: contact/representative personal data; retained in restricted RAW only,verified_full_xlsx_header
+2025,PREPARER_EMAIL,,excluded,excluded: contact/representative personal data; retained in restricted RAW only,verified_full_xlsx_header

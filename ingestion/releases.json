@@ -1,0 +1,165 @@
+{
+  "description": "Official publisher releases only. Verified actual LCA Q4 and USCIS22/23 files are pinned by SHA256 and exact reader settings; unavailable future USCIS and BLS retain explicit gates. See dbt/source_contracts and docs/dev/evidence/staging.md.",
+  "releases": [
+    {
+      "id": "lca_fy2024_q4",
+      "source": "LCA",
+      "release": "FY2024_Q4",
+      "format": "xlsx",
+      "url": "https://www.dol.gov/sites/dolgov/files/ETA/oflc/pdfs/LCA_Disclosure_Data_FY2024_Q4.xlsx",
+      "header_row": 1,
+      "publisher_page": "https://www.dol.gov/agencies/eta/foreign-labor/performance",
+      "verification": "2026-10-24 UTC: official full XLSX and PDF layout downloaded; complete header and nonempty XML/JSONL/RAW/staging counts verified; workbook contains July-September Q4 records, not full fiscal-year history",
+      "expected_sha256": "23bc116e679e7ff10b9ac947dc4faf7942ae59ef1c3ffb5a10be61c4ae31ba30",
+      "sheet": "Q4",
+      "observed_rows": 120897,
+      "observed_coverage": {
+        "decision_date_start": "2024-07-01",
+        "decision_date_end": "2024-09-30"
+      }
+    },
+    {
+      "id": "lca_fy2025_q1",
+      "source": "LCA",
+      "release": "FY2025_Q1",
+      "format": "xlsx",
+      "url": "https://www.dol.gov/sites/dolgov/files/ETA/oflc/pdfs/LCA_Disclosure_Data_FY2025_Q1.xlsx",
+      "header_row": 1,
+      "publisher_page": "https://www.dol.gov/agencies/eta/foreign-labor/performance",
+      "verification": "2026-10-27 UTC: full XLSX fetched with curl -fsSL; DOL publishes no checksum, SHA256 pinned on first retrieval",
+      "expected_sha256": "17c08eccf8b2d543f502553f502b8165d85e3e93d86de6f7dbaed3e87c86911d",
+      "sheet": "LCA_Disclosure_Data_FY2025_Q1",
+      "derived_compression": "gzip",
+      "observed_rows": 107414,
+      "observed_coverage": {
+        "decision_date_start": "2024-10-01",
+        "decision_date_end": "2024-12-31"
+      }
+    },
+    {
+      "id": "lca_fy2025_q2",
+      "source": "LCA",
+      "release": "FY2025_Q2",
+      "format": "xlsx",
+      "url": "https://www.dol.gov/sites/dolgov/files/ETA/oflc/pdfs/LCA_Disclosure_Data_FY2025_Q2.xlsx",
+      "header_row": 1,
+      "publisher_page": "https://www.dol.gov/agencies/eta/foreign-labor/performance",
+      "verification": "2026-10-27 UTC: full XLSX fetched with curl -fsSL; DOL publishes no checksum, SHA256 pinned on first retrieval; text cells are stored as =\"...\" string-literal formulas (read as their literal); row 109308 PW_SURVEY_PUBLISHER is free text stored as a broken formula and is kept verbatim",
+      "expected_sha256": "bc5aaf90fa89ee2666757fe8b065ae95a8b40dde785df04adba226b4fb388d30",
+      "sheet": "LCA_Disclosure_Data_FY2025_Q2",
+      "derived_compression": "gzip",
+      "formula_text_cells": [
+        "109308:PW_SURVEY_PUBLISHER"
+      ],
+      "observed_rows": 132133,
+      "observed_coverage": {
+        "decision_date_start": "2025-01-01",
+        "decision_date_end": "2025-03-31"
+      }
+    },
+    {
+      "id": "lca_fy2025_q3",
+      "source": "LCA",
+      "release": "FY2025_Q3",
+      "format": "xlsx",
+      "url": "https://www.dol.gov/sites/dolgov/files/ETA/oflc/pdfs/LCA_Disclosure_Data_FY2025_Q3.xlsx",
+      "header_row": 1,
+      "publisher_page": "https://www.dol.gov/agencies/eta/foreign-labor/performance",
+      "verification": "2026-10-27 UTC: full XLSX fetched with curl -fsSL; DOL publishes no checksum, SHA256 pinned on first retrieval",
+      "expected_sha256": "fcabedf38c8cc3036334b7d38981878d29afb3d8ad7455ec12f127ed091a0d5e",
+      "sheet": "LCA_Disclosure_Data_FY2025_Q3",
+      "derived_compression": "gzip",
+      "observed_rows": 238425,
+      "observed_coverage": {
+        "decision_date_start": "2025-04-01",
+        "decision_date_end": "2025-06-30"
+      }
+    },
+    {
+      "id": "lca_fy2025_q4",
+      "source": "LCA",
+      "release": "FY2025_Q4",
+      "format": "xlsx",
+      "url": "https://www.dol.gov/sites/dolgov/files/ETA/oflc/pdfs/LCA_Disclosure_Data_FY2025_Q4.xlsx",
+      "header_row": 1,
+      "publisher_page": "https://www.dol.gov/agencies/eta/foreign-labor/performance",
+      "verification": "2026-10-24 UTC: official full XLSX and PDF layout downloaded; complete header and nonempty XML/JSONL/RAW/staging counts verified; workbook contains July-September Q4 records, not full fiscal-year history",
+      "expected_sha256": "81ebf97d471014b91ae685cb7eb505369d7c80af2de67944ddd7531814976370",
+      "sheet": "LCA_Disclosure_Data_FY2025_Q4",
+      "observed_rows": 118580,
+      "observed_coverage": {
+        "decision_date_start": "2025-07-01",
+        "decision_date_end": "2025-09-30"
+      }
+    },
+    {
+      "id": "uscis_fy2022",
+      "source": "USCIS",
+      "release": "FY2022",
+      "url": "https://www.uscis.gov/sites/default/files/document/data/h1b_datahubexport-2022.csv",
+      "format": "csv",
+      "expected_sha256": "692cc11c7d48739d5ff4363a6ba7cbe0c422334c417dd88813aa1ff596d5f879",
+      "header_row": 1,
+      "publisher_page": "https://www.uscis.gov/tools/reports-and-studies/h-1b-employer-data-hub/h-1b-employer-data-hub-files",
+      "verification": "2026-10-24 UTC: official CSV full original and complete11-column header verified; JSONL/RAW/staging counts agree; Tax ID is not full FEIN",
+      "observed_rows": 59983
+    },
+    {
+      "id": "uscis_fy2023",
+      "source": "USCIS",
+      "release": "FY2023",
+      "url": "https://www.uscis.gov/sites/default/files/document/data/h1b_datahubexport-2023.csv",
+      "format": "csv",
+      "expected_sha256": "96f42309393249a7368bd418b2b2c5111b45acc7ccec487a0f024dfa07d71931",
+      "header_row": 1,
+      "publisher_page": "https://www.uscis.gov/tools/reports-and-studies/h-1b-employer-data-hub/h-1b-employer-data-hub-files",
+      "verification": "2026-10-24 UTC: official CSV full original and complete11-column header verified; JSONL/RAW/staging counts agree; Tax ID is not full FEIN",
+      "observed_rows": 33332
+    },
+    {
+      "id": "uscis_fy2024",
+      "source": "USCIS",
+      "release": "FY2024",
+      "format": "csv",
+      "publisher_page": "https://www.uscis.gov/tools/reports-and-studies/h-1b-employer-data-hub/h-1b-employer-data-hub-files",
+      "verification": "disabled: candidate URL returned404; exact annual download URL must be confirmed from official publisher page (page403 here)",
+      "attempted_url": "https://www.uscis.gov/sites/default/files/document/data/h1b_datahubexport-2024.csv",
+      "requires_official_release_url": true
+    },
+    {
+      "id": "uscis_fy2025",
+      "source": "USCIS",
+      "release": "FY2025",
+      "format": "csv",
+      "publisher_page": "https://www.uscis.gov/tools/reports-and-studies/h-1b-employer-data-hub/h-1b-employer-data-hub-files",
+      "verification": "disabled: candidate URL returned404; exact annual download URL must be confirmed from official publisher page (page403 here)",
+      "attempted_url": "https://www.uscis.gov/sites/default/files/document/data/h1b_datahubexport-2025.csv",
+      "requires_official_release_url": true
+    },
+    {
+      "id": "bls_fy2024",
+      "source": "BLS",
+      "release": "FY2024",
+      "format": "xlsx",
+      "url": "https://www.bls.gov/oes/special-requests/oesm24all.zip",
+      "zip_member": "all_data_M_2024.xlsx",
+      "header_row": 1,
+      "publisher_page": "https://www.bls.gov/oes/tables.htm",
+      "verification": "Official tables page confirms special-requests (hyphen) URL; ordinary GET remains HTTP403 on2026-10-24 UTC; complete ZIP/XLSX header and ZIP member unverified. May calendar-year survey; FY is archive label only."
+    },
+    {
+      "id": "bls_fy2025",
+      "source": "BLS",
+      "release": "FY2025",
+      "format": "xlsx",
+      "url": "https://www.bls.gov/oes/special-requests/oesm25all.zip",
+      "zip_member": "oesm25all/all_data_M_2025.xlsx",
+      "header_row": 1,
+      "publisher_page": "https://www.bls.gov/oes/tables.htm",
+      "verification": "2026-10-24 official ZIP/member CRC, SHA256, complete32-column header and independent XML/JSONL413527 counts verified; May calendar survey, FY archive label; local archive replay only",
+      "sheet": "All May 2025 data",
+      "expected_sha256": "86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde",
+      "observed_rows": 413527
+    }
+  ]
+}

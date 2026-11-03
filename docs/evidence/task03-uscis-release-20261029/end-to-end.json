@@ -1,0 +1,118 @@
+{
+ "raw": [
+  [
+   "FY2022",
+   59983
+  ],
+  [
+   "FY2023",
+   33332
+  ]
+ ],
+ "staging_by_release": [
+  [
+   "FY2022",
+   2022,
+   59983,
+   7,
+   59976
+  ],
+  [
+   "FY2023",
+   2023,
+   33332,
+   2475,
+   30857
+  ]
+ ],
+ "excluded_rows_profile": [
+  [
+   "FY2022",
+   false,
+   true,
+   7
+  ],
+  [
+   "FY2023",
+   false,
+   true,
+   2475
+  ]
+ ],
+ "state_unresolved_share": [
+  [
+   2022,
+   "0.0500",
+   9,
+   59976,
+   0.0002,
+   16,
+   59983,
+   0.0003
+  ],
+  [
+   2023,
+   "0.0500",
+   6,
+   30857,
+   0.0002,
+   2481,
+   33332,
+   0.0744
+  ]
+ ],
+ "limits_seed": [
+  [
+   "lca",
+   "geo_unresolved",
+   "0.0500",
+   "county FIPS feeds the county map and county aggregates; at most 5% of a fiscal year may lack it"
+  ],
+  [
+   "lca",
+   "soc_unresolved",
+   "0.0010",
+   "SOC feeds every occupation metric; a malformed code is a rare source typo"
+  ],
+  [
+   "uscis",
+   "employer_name_missing",
+   "0.0010",
+   "employer name is the entity-resolution key; an empty name is a rare source gap"
+  ],
+  [
+   "uscis",
+   "state_unresolved",
+   "0.0500",
+   "state feeds the state view; blank/XX/military-post codes have no state FIPS"
+  ]
+ ],
+ "er_input_uscis_occurrences": [
+  [
+   "FY2022",
+   59976
+  ],
+  [
+   "FY2023",
+   30857
+  ]
+ ],
+ "dimension_tables": [
+  "DIMENSIONS_INPUT.employer_sources",
+  "DIMENSIONS_INPUT.lca_attributes",
+  "DIMENSIONS_INPUT.lineage",
+  "INTERMEDIATE.int_dimension_mapping",
+  "INTERMEDIATE.int_employer_current",
+  "MARTS.dim_date",
+  "MARTS.dim_employer",
+  "MARTS.dim_geography",
+  "MARTS.dim_occupation",
+  "SNAPSHOTS.snap_employer",
+  "STAGING.county_fips",
+  "STAGING.ref_bls_areas_2025",
+  "STAGING.ref_county_2023",
+  "STAGING.ref_county_cbsa_2023",
+  "STAGING.ref_oews_2025",
+  "STAGING.ref_soc_2018"
+ ]
+}

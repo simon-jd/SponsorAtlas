@@ -1,0 +1,204 @@
+{
+  "steps": {
+    "load_raw": {
+      "status": "SUCCEEDED",
+      "name": "load_raw",
+      "exit_code": 0,
+      "seconds": 10.501,
+      "load_after": [
+        5.435546875,
+        6.537109375,
+        5.39111328125
+      ],
+      "resumed": true
+    },
+    "dbt_seed": {
+      "status": "SUCCEEDED",
+      "name": "dbt_seed",
+      "exit_code": 0,
+      "seconds": 4.136,
+      "load_after": [
+        5.400390625,
+        6.51123046875,
+        5.388671875
+      ]
+    },
+    "dbt_staging": {
+      "status": "COMPLETED_WITH_FAILED_GATES",
+      "name": "dbt_staging",
+      "exit_code": 1,
+      "seconds": 76.733,
+      "load_after": [
+        5.35302734375,
+        6.318359375,
+        5.419921875
+      ],
+      "failed_tests": [
+        "test.sponsoratlas.staging_flag_limits"
+      ]
+    },
+    "er_export": {
+      "status": "SUCCEEDED",
+      "name": "er_export",
+      "exit_code": 0,
+      "seconds": 4.114,
+      "load_after": [
+        5.35302734375,
+        6.318359375,
+        5.419921875
+      ]
+    },
+    "er_train": {
+      "status": "SUCCEEDED",
+      "name": "er_train",
+      "exit_code": 0,
+      "seconds": 8.495,
+      "load_after": [
+        6.17626953125,
+        6.470703125,
+        5.4794921875
+      ]
+    },
+    "er_predict": {
+      "status": "SUCCEEDED",
+      "name": "er_predict",
+      "exit_code": 0,
+      "seconds": 10.173,
+      "load_after": [
+        6.45751953125,
+        6.521484375,
+        5.5068359375
+      ]
+    },
+    "dimension_inputs": {
+      "status": "SUCCEEDED",
+      "name": "dimension_inputs",
+      "exit_code": 0,
+      "seconds": 6.077,
+      "load_after": [
+        6.16552734375,
+        6.455078125,
+        5.49609375
+      ]
+    },
+    "dbt_dimensions": {
+      "status": "SUCCEEDED",
+      "name": "dbt_dimensions",
+      "exit_code": 0,
+      "seconds": 5.779,
+      "load_after": [
+        6.15185546875,
+        6.447265625,
+        5.4990234375
+      ]
+    },
+    "fact_inputs": {
+      "status": "BLOCKED_DISK_SHARE",
+      "name": "fact_inputs",
+      "exit_code": null,
+      "projected_bytes": 20722802969,
+      "share_bytes": 18000000000
+    }
+  },
+  "dagrun_seconds_run3": 138.041715,
+  "first_load_seconds_run2": 15.629,
+  "staging_lca_by_fiscal_year": [
+    {
+      "fiscal_year": 2024,
+      "rows": 120897,
+      "geo_unresolved": 56,
+      "geo_unresolved_pct": 0.05,
+      "soc_unresolved": 0
+    },
+    {
+      "fiscal_year": 2025,
+      "rows": 596552,
+      "geo_unresolved": 6716,
+      "geo_unresolved_pct": 1.13,
+      "soc_unresolved": 4
+    }
+  ],
+  "staging_lca_by_release": [
+    {
+      "release": "FY2024_Q4",
+      "rows": 120897,
+      "decision_date_min": "2024-07-01",
+      "decision_date_max": "2024-09-30",
+      "geo_unresolved": 56
+    },
+    {
+      "release": "FY2025_Q1",
+      "rows": 107414,
+      "decision_date_min": "2024-10-01",
+      "decision_date_max": "2024-12-31",
+      "geo_unresolved": 48
+    },
+    {
+      "release": "FY2025_Q2",
+      "rows": 132133,
+      "decision_date_min": "2025-01-01",
+      "decision_date_max": "2025-03-31",
+      "geo_unresolved": 71
+    },
+    {
+      "release": "FY2025_Q3",
+      "rows": 238425,
+      "decision_date_min": "2025-04-01",
+      "decision_date_max": "2025-06-30",
+      "geo_unresolved": 108
+    },
+    {
+      "release": "FY2025_Q4",
+      "rows": 118580,
+      "decision_date_min": "2025-07-01",
+      "decision_date_max": "2025-09-30",
+      "geo_unresolved": 6489
+    }
+  ],
+  "staging_lca_geography_status": {
+    "MATCHED": 578251,
+    "MATCHED_FROM_ZIP": 124524,
+    "MATCHED_FROM_CITY": 7902,
+    "SOURCE_COUNTY_MISSING": 6480,
+    "UNRESOLVED_COUNTY": 292
+  },
+  "staging_uscis_state_unresolved": [
+    {
+      "fiscal_year": 2022,
+      "rows": 59983,
+      "state_unresolved": 16,
+      "pct": 0.03
+    },
+    {
+      "fiscal_year": 2023,
+      "rows": 33332,
+      "state_unresolved": 2481,
+      "pct": 7.44
+    }
+  ],
+  "dimensions_counts": {
+    "dim_employer": 98343,
+    "dim_occupation": 1453,
+    "dim_geography": 7042,
+    "dim_date": 13149
+  },
+  "lca_attributes_county_fips_by_year": [
+    {
+      "fiscal_year": 2024,
+      "rows": 120897,
+      "with_county_fips": 120841
+    },
+    {
+      "fiscal_year": 2025,
+      "rows": 596552,
+      "with_county_fips": 589836
+    }
+  ],
+  "bytes": {
+    "staging_db": 2066231296,
+    "dimensions_db": 88616960,
+    "er_dir": 362414080,
+    "project_du_after": 17305235456,
+    "unreadable_pg_constant": 110000000
+  }
+}

@@ -1,0 +1,7 @@
+# Replace every placeholder with the corresponding base64 DER RSA PUBLIC key.
+# Never paste a private key, PEM headers, account password, or passphrase here.
+service_public_keys = {
+  AIRBYTE_SVC = "REPLACE_WITH_AIRBYTE_BASE64_DER_PUBLIC_KEY"
+  DBT_SVC     = "REPLACE_WITH_DBT_BASE64_DER_PUBLIC_KEY"
+  CUBE_SVC    = "REPLACE_WITH_CUBE_BASE64_DER_PUBLIC_KEY"
+}

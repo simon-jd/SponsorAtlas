@@ -1,0 +1,23 @@
+{
+  "name": "sponsoratlas-employer-resolution-free",
+  "max_concurrent_runs": 1,
+  "timeout_seconds": 1800,
+  "tasks": [{
+    "task_key": "employer_resolution",
+    "timeout_seconds": 1800,
+    "max_retries": 0,
+    "notebook_task": {
+      "notebook_path": "/Workspace/Shared/SponsorAtlas/er/databricks/notebook",
+      "base_parameters": {
+        "project_root": "/Workspace/Shared/SponsorAtlas",
+        "input_dir": "/Volumes/analytics/intermediate/sponsoratlas/.tools/er/real-input",
+        "output_dir": "/Volumes/analytics/intermediate/sponsoratlas/.tools/er/spark-run-001",
+        "catalog": "analytics",
+        "scratch_schema": "er_scratch",
+        "labels": "",
+        "initialize_registry": "false",
+        "previous_registry": ""
+      }
+    }
+  }]
+}

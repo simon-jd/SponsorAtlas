@@ -1,0 +1,11 @@
+# Phase 9 item 2, 2026-10-31 16:36:15-16:36:39 UTC. Host: nproc 32, load average 7.61 / 9.46 / 6.38 (shared CPU).
+# RUN_SNOWFLAKE_POLICIES=1 .venv/bin/python -m pytest -v warehouse/tests/test_policies.py  -> pytest-live.log
+# Environment as in Part A6 of the human SQL: SNOWFLAKE_POLICY_OWNER_ROLE=SPONSORATLAS_OWNER_POLICY_TEST;
+# ADMIN = SPONSORATLAS_DEPLOY_SVC / SPONSORATLAS_DEPLOY; TRANSFORMER = DBT_SVC / TRANSFORMER;
+# OWNER_ANALYST, NON_OWNER, OWNER_PII, PII_NON_OWNER = SPONSORATLAS_POLICY_<identity> with role ANALYST.
+# Account and key files from SNOWFLAKE_TEST_ACCOUNT and SNOWFLAKE_POLICY_<identity>_PRIVATE_KEY_FILE.
+5 passed, 6 warnings in 23.45s
+
+# 16:37 UTC, afterwards, as DBT_SVC/TRANSFORMER: SHOW TABLES LIKE ... IN SCHEMA ANALYTICS.MARTS
+{"SA_POLICY_TEST_%": [], "SA_POLICY_PROBE_%": [], "SA_MASK_PROBE_%": []}
+# The four SPONSORATLAS_POLICY_* users and SPONSORATLAS_OWNER_POLICY_TEST were left in place; the user removes them.

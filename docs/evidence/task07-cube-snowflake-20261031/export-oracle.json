@@ -1,0 +1,12 @@
+{
+  "lca": {
+    "case_count": 713467,
+    "certified_count": 697613,
+    "certified_rate": 0.9777789302098064,
+    "wage_p50": 120000.0,
+    "wage_p75": 156383.63,
+    "wage_p90": 200000.0
+  },
+  "postings": 86,
+  "oews_median": 135980.0
+}

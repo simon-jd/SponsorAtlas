@@ -1,0 +1,27 @@
+nproc; uptime
+32
+ 13:03:12 up 11 days, 11:05,  4 users,  load average: 2.26, 1.95, 1.83
+flock /var/tmp/rtx4090.lock bash web/scripts/site-command.sh node ../../scripts/viz-browser-run.mjs
+Private SWC cache: /tmp/sponsoratlas-task13-swc.TOi7SmrZ
+$ next start --hostname 127.0.0.1 --port 3100
+▲ Next.js 16.4.3
+- Local:         http://127.0.0.1:3100
+- Network:       http://127.0.0.1:3100
+✓ Ready in 55ms
+✓ Running next.config.mjs took 59ms
+⚠ "next start" does not work with "output: standalone" configuration. Use "node .next/standalone/server.js" instead.
+
+Running 7 tests using 1 worker
+
+  ✓  1 tests/e2e/viz.spec.ts:6:36 › en aggregate fallback, keyboard, dark and a11y (6.1s)
+  ✓  2 tests/e2e/viz.spec.ts:6:36 › zh aggregate fallback, keyboard, dark and a11y (4.3s)
+  ✓  3 tests/e2e/viz.spec.ts:34:1 › reduced motion disables all required viz transitions and keyboard operates map (2.3s)
+  ✓  4 tests/e2e/viz.spec.ts:60:28 › drawn WebGL pan zoom p95 at 1x CPU (20.1s)
+  ✓  5 tests/e2e/viz.spec.ts:60:28 › drawn WebGL pan zoom p95 at 4x CPU (20.0s)
+  ✓  6 tests/e2e/viz.spec.ts:135:1 › aggregate API bounds, no point leakage and deferred first-navigation JavaScript (771ms)
+  ✓  7 tests/e2e/viz.spec.ts:170:1 › controlled coarse pentagons draw and pointer drag remains interactive (1.2s)
+
+  7 passed (55.3s)
+30749712	/tmp/sponsoratlas-task13-swc.TOi7SmrZ
+uptime
+ 13:04:10 up 11 days, 11:06,  4 users,  load average: 6.22, 3.05, 2.21

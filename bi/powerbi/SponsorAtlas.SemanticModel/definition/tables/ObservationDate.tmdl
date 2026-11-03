@@ -1,0 +1,11 @@
+table ObservationDate
+
+	column observation_date
+		dataType: dateTime
+		isKey
+		sourceColumn: [observation_date]
+		summarizeBy: none
+
+	partition ObservationDate = calculated
+		mode: import
+		source = DISTINCT(SELECTCOLUMNS(postings, "observation_date", postings[observation_date]))

@@ -1,0 +1,58 @@
+cubes:
+  - name: wages
+    sql_table: mart_wages
+    description: Official OEWS A_MEDIAN at SOC x published AREA_TYPE/AREA x survey year. Multiple benchmarks return null; never average official medians.
+    dimensions:
+      - name: benchmark_id
+        sql: "soc || ':' || area || ':' || CAST(survey_year AS VARCHAR)"
+        type: string
+        primary_key: true
+        public: false
+      - name: soc
+        sql: soc
+        type: string
+      - name: soc_major
+        sql: soc_major
+        type: string
+        description: Filter occupation_level=major for the official major row; detailed estimates cannot be averaged.
+      - name: metro
+        sql: metro
+        type: string
+        description: Published AREA for MSA only; no county expansion.
+      - name: fiscal_year
+        sql: fiscal_year
+        type: number
+        description: Always null; survey year is not federal fiscal year.
+      - name: survey_year
+        sql: survey_year
+        type: number
+      - name: area
+        sql: area
+        type: string
+        description: Exact published AREA_TYPE:AREA, including national/state/nonmetropolitan levels.
+      - name: geography_level
+        sql: geography_level
+        type: string
+      - name: occupation_level
+        sql: occupation_level
+        type: string
+      - name: median_raw
+        sql: median_raw
+        type: string
+      - name: wage_status
+        sql: wage_status
+        type: string
+      - name: annual_flag
+        sql: annual_flag
+        type: string
+      - name: hourly_flag
+        sql: hourly_flag
+        type: string
+    measures:
+      - name: oews_median
+        sql: CASE WHEN COUNT(*) = 1 THEN MAX(annual_median_wage) ELSE NULL END
+        type: number
+        description: One official annual median; null for zero/multiple benchmarks or suppressed/top-coded A_MEDIAN. Inspect estimate_count, median_raw and wage_status.
+      - name: estimate_count
+        type: count
+        description: Zero/multiple estimates explain why a scalar median is unavailable.

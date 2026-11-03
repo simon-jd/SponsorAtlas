@@ -1,0 +1,586 @@
+area_type,area_code,area_title,state_raw,source_row_number,geography_vintage,source_sha256
+1,99,U.S.,US,1,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+2,01,Alabama,AL,177408,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+2,02,Alaska,AK,178134,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+2,04,Arizona,AZ,178685,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+2,05,Arkansas,AR,179428,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+2,06,California,CA,180133,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+2,08,Colorado,CO,180963,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+2,09,Connecticut,CT,181736,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+2,10,Delaware,DE,182447,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+2,11,District of Columbia,DC,183009,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+2,12,Florida,FL,183507,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+2,13,Georgia,GA,184320,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+2,15,Hawaii,HI,185102,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+2,16,Idaho,ID,185677,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+2,17,Illinois,IL,186337,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+2,18,Indiana,IN,187119,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+2,19,Iowa,IA,187903,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+2,20,Kansas,KS,188644,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+2,21,Kentucky,KY,189344,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+2,22,Louisiana,LA,190079,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+2,23,Maine,ME,190795,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+2,24,Maryland,MD,191467,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+2,25,Massachusetts,MA,192227,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+2,26,Michigan,MI,192987,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+2,27,Minnesota,MN,193796,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+2,28,Mississippi,MS,194552,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+2,29,Missouri,MO,195264,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+2,30,Montana,MT,196037,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+2,31,Nebraska,NE,196674,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+2,32,Nevada,NV,197369,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+2,33,New Hampshire,NH,198071,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+2,34,New Jersey,NJ,198731,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+2,35,New Mexico,NM,199503,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+2,36,New York,NY,200171,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+2,37,North Carolina,NC,200980,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+2,38,North Dakota,ND,201765,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+2,39,Ohio,OH,202347,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+2,40,Oklahoma,OK,203155,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+2,41,Oregon,OR,203897,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+2,42,Pennsylvania,PA,204662,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+2,44,Rhode Island,RI,205476,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+2,45,South Carolina,SC,206053,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+2,46,South Dakota,SD,206804,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+2,47,Tennessee,TN,207394,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+2,48,Texas,TX,208166,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+2,49,Utah,UT,208990,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+2,50,Vermont,VT,209721,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+2,51,Virginia,VA,210285,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+2,53,Washington,WA,211064,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+2,54,West Virginia,WV,211852,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+2,55,Wisconsin,WI,212504,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+2,56,Wyoming,WY,213266,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+3,66,Guam,GU,213804,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+3,72,Puerto Rico,PR,214046,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+3,78,Virgin Islands,VI,214632,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,10180,"Abilene, TX",TX,214816,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,10380,"Aguadilla, PR",PR,215128,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,10420,"Akron, OH",OH,215342,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,10500,"Albany, GA",GA,215844,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,10540,"Albany, OR",OR,216109,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,10580,"Albany-Schenectady-Troy, NY",NY,216374,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,10740,"Albuquerque, NM",NM,216968,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,10780,"Alexandria, LA",LA,217494,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,10900,"Allentown-Bethlehem-Easton, PA-NJ",PA,217745,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,11020,"Altoona, PA",PA,218295,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,11100,"Amarillo, TX",TX,218561,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,11180,"Ames, IA",IA,218923,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,11200,"Amherst Town-Northampton, MA",MA,219193,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,11260,"Anchorage, AK",AK,219501,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,11460,"Ann Arbor, MI",MI,219953,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,11500,"Anniston-Oxford, AL",AL,220416,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,11540,"Appleton, WI",WI,220625,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,11640,"Arecibo, PR",PR,220999,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,11700,"Asheville, NC",NC,221175,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,12020,"Athens-Clarke County, GA",GA,221627,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,12060,"Atlanta-Sandy Springs-Roswell, GA",GA,221956,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,12100,"Atlantic City-Hammonton, NJ",NJ,222676,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,12220,"Auburn-Opelika, AL",AL,223080,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,12260,"Augusta-Richmond County, GA-SC",GA,223367,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,12420,"Austin-Round Rock-San Marcos, TX",TX,223834,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,12540,"Bakersfield-Delano, CA",CA,224466,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,12580,"Baltimore-Columbia-Towson, MD",MD,224968,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,12620,"Bangor, ME",ME,225651,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,12700,"Barnstable Town, MA",MA,225982,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,12940,"Baton Rouge, LA",LA,226300,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,12980,"Battle Creek, MI",MI,226824,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,13020,"Bay City, MI",MI,227073,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,13140,"Beaumont-Port Arthur, TX",TX,227274,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,13220,"Beckley, WV",WV,227671,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,13380,"Bellingham, WA",WA,227891,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,13460,"Bend, OR",OR,228238,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,13740,"Billings, MT",MT,228644,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,13780,"Binghamton, NY",NY,229005,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,13820,"Birmingham, AL",AL,229355,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,13900,"Bismarck, ND",ND,229877,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,13980,"Blacksburg-Christiansburg-Radford, VA",VA,230200,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,14010,"Bloomington, IL",IL,230482,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,14020,"Bloomington, IN",IN,230779,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,14260,"Boise City, ID",ID,231079,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,14460,"Boston-Cambridge-Newton, MA-NH",MA,231616,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,14500,"Boulder, CO",CO,232342,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,14540,"Bowling Green, KY",KY,232790,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,14580,"Bozeman, MT",MT,233093,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,14740,"Bremerton-Silverdale-Port Orchard, WA",WA,233410,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,14860,"Bridgeport-Stamford-Danbury, CT",CT,233743,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,15180,"Brownsville-Harlingen, TX",TX,234255,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,15260,"Brunswick-St. Simons, GA",GA,234592,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,15380,"Buffalo-Cheektowaga, NY",NY,234817,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,15500,"Burlington, NC",NC,235433,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,15540,"Burlington-South Burlington, VT",VT,235722,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,15940,"Canton-Massillon, OH",OH,236147,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,15980,"Cape Coral-Fort Myers, FL",FL,236556,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,16020,"Cape Girardeau, MO-IL",MO,237015,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,16180,"Carson City, NV",NV,237243,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,16220,"Casper, WY",WY,237443,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,16300,"Cedar Rapids, IA",IA,237662,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,16540,"Chambersburg, PA",PA,238077,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,16580,"Champaign-Urbana, IL",IL,238342,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,16620,"Charleston, WV",WV,238689,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,16700,"Charleston-North Charleston, SC",SC,239058,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,16740,"Charlotte-Concord-Gastonia, NC-SC",NC,239602,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,16820,"Charlottesville, VA",VA,240293,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,16860,"Chattanooga, TN-GA",TN,240663,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,16940,"Cheyenne, WY",WY,241158,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,16980,"Chicago-Naperville-Elgin, IL-IN",IL,241404,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,17020,"Chico, CA",CA,242153,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,17140,"Cincinnati, OH-KY-IN",OH,242466,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,17300,"Clarksville, TN-KY",TN,243146,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,17410,"Cleveland, OH",OH,243484,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,17420,"Cleveland, TN",TN,244134,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,17660,"Coeur d'Alene, ID",ID,244355,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,17780,"College Station-Bryan, TX",TX,244638,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,17820,"Colorado Springs, CO",CO,245023,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,17860,"Columbia, MO",MO,245539,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,17900,"Columbia, SC",SC,245903,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,17980,"Columbus, GA-AL",GA,246441,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,18020,"Columbus, IN",IN,246798,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,18140,"Columbus, OH",OH,247010,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,18580,"Corpus Christi, TX",TX,247649,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,18700,"Corvallis, OR",OR,248073,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,18880,"Crestview-Fort Walton Beach-Destin, FL",FL,248320,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,19100,"Dallas-Fort Worth-Arlington, TX",TX,248674,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,19140,"Dalton, GA",GA,249423,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,19300,"Daphne-Fairhope-Foley, AL",AL,249673,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,19340,"Davenport-Moline-Rock Island, IA-IL",IA,249971,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,19430,"Dayton-Kettering-Beavercreek, OH",OH,250427,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,19460,"Decatur, AL",AL,250972,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,19500,"Decatur, IL",IL,251238,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,19660,"Deltona-Daytona Beach-Ormond Beach, FL",FL,251449,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,19740,"Denver-Aurora-Centennial, CO",CO,251879,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,19780,"Des Moines-West Des Moines, IA",IA,252560,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,19820,"Detroit-Warren-Dearborn, MI",MI,253096,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,20020,"Dothan, AL",AL,253798,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,20100,"Dover, DE",DE,254070,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,20220,"Dubuque, IA",IA,254359,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,20260,"Duluth, MN-WI",MN,254633,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,20500,"Durham-Chapel Hill, NC",NC,255032,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,20580,"Eagle Pass, TX",TX,255516,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,20740,"Eau Claire, WI",WI,255611,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,20940,"El Centro, CA",CA,255943,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,21060,"Elizabethtown, KY",KY,256194,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,21140,"Elkhart-Goshen, IN",IN,256429,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,21300,"Elmira, NY",NY,256761,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,21340,"El Paso, TX",TX,256964,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,21420,"Enid, OK",OK,257466,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,21500,"Erie, PA",PA,257623,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,21660,"Eugene-Springfield, OR",OR,257996,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,21780,"Evansville, IN",IN,258459,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,21820,"Fairbanks-College, AK",AK,258859,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,22020,"Fargo, ND-MN",ND,259089,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,22140,"Farmington, NM",NM,259522,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,22180,"Fayetteville, NC",NC,259753,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,22220,"Fayetteville-Springdale-Rogers, AR",AR,260108,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,22380,"Flagstaff, AZ",AZ,260569,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,22420,"Flint, MI",MI,260847,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,22500,"Florence, SC",SC,261204,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,22520,"Florence-Muscle Shoals, AL",AL,261515,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,22540,"Fond du Lac, WI",WI,261758,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,22660,"Fort Collins-Loveland, CO",CO,261982,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,22900,"Fort Smith, AR-OK",AR,262433,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,23060,"Fort Wayne, IN",IN,262759,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,23420,"Fresno, CA",CA,263227,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,23460,"Gadsden, AL",AL,263781,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,23540,"Gainesville, FL",FL,263958,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,23580,"Gainesville, GA",GA,264334,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,23900,"Gettysburg, PA",PA,264660,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,24020,"Glens Falls, NY",NY,264864,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,24140,"Goldsboro, NC",NC,265141,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,24220,"Grand Forks, ND-MN",ND,265362,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,24260,"Grand Island, NE",NE,265634,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,24300,"Grand Junction, CO",CO,265849,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,24340,"Grand Rapids-Wyoming-Kentwood, MI",MI,266160,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,24420,"Grants Pass, OR",OR,266759,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,24500,"Great Falls, MT",MT,266946,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,24540,"Greeley, CO",CO,267183,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,24580,"Green Bay, WI",WI,267575,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,24660,"Greensboro-High Point, NC",NC,268019,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,24780,"Greenville, NC",NC,268546,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,24860,"Greenville-Anderson-Greer, SC",SC,268861,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,25020,"Guayama, PR",PR,269400,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,25060,"Gulfport-Biloxi, MS",MS,269490,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,25180,"Hagerstown-Martinsburg, MD-WV",MD,269903,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,25220,"Hammond, LA",LA,270269,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,25260,"Hanford-Corcoran, CA",CA,270489,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,25420,"Harrisburg-Carlisle, PA",PA,270708,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,25500,"Harrisonburg, VA",VA,271227,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,25540,"Hartford-West Hartford-East Hartford, CT",CT,271509,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,25620,"Hattiesburg, MS",MS,272114,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,25740,"Helena, MT",MT,272381,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,25860,"Hickory-Lenoir-Morganton, NC",NC,272647,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,25940,"Hilton Head Island-Bluffton-Port Royal, SC",SC,273059,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,25980,"Hinesville, GA",GA,273357,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,26140,"Homosassa Springs, FL",FL,273503,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,26300,"Hot Springs, AR",AR,273701,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,26380,"Houma-Bayou Cane-Thibodaux, LA",LA,273905,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,26420,"Houston-Pasadena-The Woodlands, TX",TX,274209,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,26580,"Huntington-Ashland, WV-KY-OH",WV,274940,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,26620,"Huntsville, AL",AL,275347,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,26820,"Idaho Falls, ID",ID,275761,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,26900,"Indianapolis-Carmel-Greenwood, IN",IN,276070,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,26980,"Iowa City, IA",IA,276722,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,27060,"Ithaca, NY",NY,277045,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,27100,"Jackson, MI",MI,277307,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,27140,"Jackson, MS",MS,277562,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,27180,"Jackson, TN",TN,278048,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,27260,"Jacksonville, FL",FL,278358,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,27340,"Jacksonville, NC",NC,278964,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,27500,"Janesville-Beloit, WI",WI,279213,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,27620,"Jefferson City, MO",MO,279507,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,27740,"Johnson City, TN",TN,279830,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,27780,"Johnstown, PA",PA,280141,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,27860,"Jonesboro, AR",AR,280396,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,27900,"Joplin, MO-KS",MO,280670,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,27980,"Kahului-Wailuku, HI",HI,280977,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,28020,"Kalamazoo-Portage, MI",MI,281244,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,28100,"Kankakee, IL",IL,281617,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,28140,"Kansas City, MO-KS",MO,281824,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,28420,"Kennewick-Richland, WA",WA,282470,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,28450,"Kenosha, WI",WI,282834,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,28660,"Killeen-Temple, TX",TX,283124,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,28700,"Kingsport-Bristol, TN-VA",TN,283503,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,28740,"Kingston, NY",NY,283876,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,28880,"Kiryas Joel-Poughkeepsie-Newburgh, NY",NY,284154,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,28940,"Knoxville, TN",TN,284638,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,29020,"Kokomo, IN",IN,285207,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,29100,"La Crosse-Onalaska, WI-MN",WI,285387,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,29180,"Lafayette, LA",LA,285723,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,29200,"Lafayette-West Lafayette, IN",IN,286103,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,29340,"Lake Charles, LA",LA,286435,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,29420,"Lake Havasu City-Kingman, AZ",AZ,286738,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,29460,"Lakeland-Winter Haven, FL",FL,286990,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,29540,"Lancaster, PA",PA,287449,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,29620,"Lansing-East Lansing, MI",MI,287912,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,29700,"Laredo, TX",TX,288394,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,29740,"Las Cruces, NM",NM,288673,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,29820,"Las Vegas-Henderson-North Las Vegas, NV",NV,288971,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,29940,"Lawrence, KS",KS,289610,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,30020,"Lawton, OK",OK,289867,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,30140,"Lebanon, PA",PA,290103,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,30300,"Lewiston, ID-WA",ID,290340,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,30340,"Lewiston-Auburn, ME",ME,290530,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,30460,"Lexington-Fayette, KY",KY,290782,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,30500,"Lexington Park, MD",MD,291280,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,30620,"Lima, OH",OH,291565,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,30700,"Lincoln, NE",NE,291807,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,30780,"Little Rock-North Little Rock-Conway, AR",AR,292282,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,30860,"Logan, UT-ID",UT,292822,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,30980,"Longview, TX",TX,293105,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,31020,"Longview-Kelso, WA",WA,293452,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,31080,"Los Angeles-Long Beach-Anaheim, CA",CA,293674,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,31140,"Louisville/Jefferson County, KY-IN",KY,294451,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,31180,"Lubbock, TX",TX,295041,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,31340,"Lynchburg, VA",VA,295463,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,31420,"Macon-Bibb County, GA",GA,295800,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,31540,"Madison, WI",WI,296122,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,31700,"Manchester-Nashua, NH",NH,296684,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,31740,"Manhattan, KS",KS,297146,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,31860,"Mankato, MN",MN,297407,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,31900,"Mansfield, OH",OH,297677,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,32420,"Mayaguez, PR",PR,297920,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,32580,"McAllen-Edinburg-Mission, TX",TX,298140,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,32780,"Medford, OR",OR,298569,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,32820,"Memphis, TN-MS-AR",TN,298932,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,32900,"Merced, CA",CA,299522,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,33100,"Miami-Fort Lauderdale-West Palm Beach, FL",FL,299818,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,33140,"Michigan City-La Porte, IN",IN,300527,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,33220,"Midland, MI",MI,300745,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,33260,"Midland, TX",TX,300941,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,33340,"Milwaukee-Waukesha, WI",WI,301264,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,33460,"Minneapolis-St. Paul-Bloomington, MN-WI",MN,301887,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,33500,"Minot, ND",ND,302592,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,33540,"Missoula, MT",MT,302776,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,33660,"Mobile, AL",AL,303093,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,33700,"Modesto, CA",CA,303490,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,33740,"Monroe, LA",LA,303913,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,33780,"Monroe, MI",MI,304217,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,33860,"Montgomery, AL",AL,304440,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,34060,"Morgantown, WV",WV,304837,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,34100,"Morristown, TN",TN,305109,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,34580,"Mount Vernon-Anacortes, WA",WA,305341,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,34620,"Muncie, IN",IN,305615,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,34740,"Muskegon-Norton Shores, MI",MI,305830,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,34820,"Myrtle Beach-Conway-North Myrtle Beach, SC",SC,306108,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,34900,"Napa, CA",CA,306440,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,34940,"Naples-Marco Island, FL",FL,306731,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,34980,"Nashville-Davidson--Murfreesboro--Franklin, TN",TN,307104,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,35300,"New Haven, CT",CT,307748,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,35380,"New Orleans-Metairie, LA",LA,308234,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,35620,"New York-Newark-Jersey City, NY-NJ",NY,308780,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,35660,"Niles, MI",MI,309572,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,35840,"North Port-Bradenton-Sarasota, FL",FL,309839,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,35980,"Norwich-New London-Willimantic, CT",CT,310326,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,36100,"Ocala, FL",FL,310695,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,36220,"Odessa, TX",TX,311034,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,36260,"Ogden, UT",UT,311299,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,36420,"Oklahoma City, OK",OK,311777,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,36500,"Olympia-Lacey-Tumwater, WA",WA,312394,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,36540,"Omaha, NE-IA",NE,312765,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,36740,"Orlando-Kissimmee-Sanford, FL",FL,313357,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,36780,"Oshkosh-Neenah, WI",WI,313997,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,36980,"Owensboro, KY",KY,314318,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,37100,"Oxnard-Thousand Oaks-Ventura, CA",CA,314541,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,37140,"Paducah, KY-IL",KY,315060,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,37340,"Palm Bay-Melbourne-Titusville, FL",FL,315293,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,37460,"Panama City-Panama City Beach, FL",FL,315737,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,37620,"Parkersburg-Vienna, WV",WV,316064,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,37860,"Pensacola-Ferry Pass-Brent, FL",FL,316253,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,37900,"Peoria, IL",IL,316666,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,37980,"Philadelphia-Camden-Wilmington, PA-NJ-DE-MD",PA,317073,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,38060,"Phoenix-Mesa-Chandler, AZ",AZ,317830,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,38240,"Pinehurst-Southern Pines, NC",NC,318510,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,38300,"Pittsburgh, PA",PA,318733,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,38340,"Pittsfield, MA",MA,319411,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,38540,"Pocatello, ID",ID,319682,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,38660,"Ponce, PR",PR,319886,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,38860,"Portland-South Portland, ME",ME,320130,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,38900,"Portland-Vancouver-Hillsboro, OR-WA",OR,320661,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,38940,"Port St. Lucie, FL",FL,321374,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,39150,"Prescott Valley-Prescott, AZ",AZ,321758,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,39300,"Providence-Warwick, RI-MA",RI,322041,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,39340,"Provo-Orem-Lehi, UT",UT,322672,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,39380,"Pueblo, CO",CO,323143,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,39460,"Punta Gorda, FL",FL,323427,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,39540,"Racine-Mount Pleasant, WI",WI,323657,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,39580,"Raleigh-Cary, NC",NC,323946,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,39660,"Rapid City, SD",SD,324548,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,39740,"Reading, PA",PA,324886,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,39820,"Redding, CA",CA,325316,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,39900,"Reno, NV",NV,325633,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,40060,"Richmond, VA",VA,326163,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,40140,"Riverside-San Bernardino-Ontario, CA",CA,326784,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,40220,"Roanoke, VA",VA,327489,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,40340,"Rochester, MN",MN,327903,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,40380,"Rochester, NY",NY,328247,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,40420,"Rockford, IL",IL,328839,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,40580,"Rocky Mount, NC",NC,329194,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,40660,"Rome, GA",GA,329463,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,40900,"Sacramento-Roseville-Folsom, CA",CA,329693,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,40980,"Saginaw, MI",MI,330374,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,41060,"St. Cloud, MN",MN,330683,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,41100,"St. George, UT",UT,331032,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,41140,"St. Joseph, MO-KS",MO,331329,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,41180,"St. Louis, MO-IL",MO,331585,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,41420,"Salem, OR",OR,332269,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,41500,"Salinas, CA",CA,332729,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,41540,"Salisbury, MD",MD,333126,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,41620,"Salt Lake City-Murray, UT",UT,333392,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,41660,"San Angelo, TX",TX,334017,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,41700,"San Antonio-New Braunfels, TX",TX,334280,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,41740,"San Diego-Chula Vista-Carlsbad, CA",CA,334932,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,41780,"Sandusky, OH",OH,335637,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,41860,"San Francisco-Oakland-Fremont, CA",CA,335868,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,41940,"San Jose-Sunnyvale-Santa Clara, CA",CA,336592,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,41980,"San Juan-Bayamon-Caguas, PR",PR,337207,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,42020,"San Luis Obispo-Paso Robles, CA",CA,337752,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,42100,"Santa Cruz-Watsonville, CA",CA,338147,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,42140,"Santa Fe, NM",NM,338504,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,42200,"Santa Maria-Santa Barbara, CA",CA,338787,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,42220,"Santa Rosa-Petaluma, CA",CA,339248,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,42340,"Savannah, GA",GA,339695,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,42540,"Scranton--Wilkes-Barre, PA",PA,340117,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,42660,"Seattle-Tacoma-Bellevue, WA",WA,340597,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,42680,"Sebastian-Vero Beach-West Vero Corridor, FL",FL,341322,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,42700,"Sebring, FL",FL,341581,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,43100,"Sheboygan, WI",WI,341762,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,43300,"Sherman-Denison, TX",TX,342031,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,43340,"Shreveport-Bossier City, LA",LA,342273,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,43420,"Sierra Vista-Douglas, AZ",AZ,342641,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,43580,"Sioux City, IA-NE-SD",IA,342845,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,43620,"Sioux Falls, SD-MN",SD,343156,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,43640,"Slidell-Mandeville-Covington, LA",LA,343581,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,43780,"South Bend-Mishawaka, IN-MI",IN,343873,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,43900,"Spartanburg, SC",SC,344285,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,44060,"Spokane-Spokane Valley, WA",WA,344669,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,44100,"Springfield, IL",IL,345165,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,44140,"Springfield, MA",MA,345514,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,44180,"Springfield, MO",MO,345951,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,44220,"Springfield, OH",OH,346410,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,44300,"State College, PA",PA,346641,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,44420,"Staunton-Stuarts Draft, VA",VA,346909,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,44700,"Stockton-Lodi, CA",CA,347142,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,44940,"Sumter, SC",SC,347614,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,45060,"Syracuse, NY",NY,347806,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,45220,"Tallahassee, FL",FL,348352,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,45300,"Tampa-St. Petersburg-Clearwater, FL",FL,348762,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,45460,"Terre Haute, IN",IN,349423,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,45500,"Texarkana, TX-AR",TX,349724,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,45780,"Toledo, OH",OH,349976,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,45820,"Topeka, KS",KS,350476,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,45900,"Traverse City, MI",MI,350835,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,45940,"Trenton-Princeton, NJ",NJ,351154,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,46060,"Tucson, AZ",AZ,351619,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,46140,"Tulsa, OK",OK,352139,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,46220,"Tuscaloosa, AL",AL,352692,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,46300,"Twin Falls, ID",ID,353011,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,46340,"Tyler, TX",TX,353262,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,46520,"Urban Honolulu, HI",HI,353625,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,46540,"Utica-Rome, NY",NY,354141,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,46660,"Valdosta, GA",GA,354518,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,46700,"Vallejo, CA",CA,354777,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,47020,"Victoria, TX",TX,355167,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,47220,"Vineland, NJ",NJ,355382,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,47260,"Virginia Beach-Chesapeake-Norfolk, VA-NC",VA,355637,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,47300,"Visalia, CA",CA,356263,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,47380,"Waco, TX",TX,356651,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,47460,"Walla Walla, WA",WA,357019,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,47580,"Warner Robins, GA",GA,357205,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,47900,"Washington-Arlington-Alexandria, DC-VA-MD-WV",DC,357486,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,47930,"Waterbury-Shelton, CT",CT,358222,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,47940,"Waterloo-Cedar Falls, IA",IA,358638,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,48060,"Watertown-Fort Drum, NY",NY,358974,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,48140,"Wausau, WI",WI,359195,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,48260,"Weirton-Steubenville, WV-OH",WV,359486,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,48300,"Wenatchee-East Wenatchee, WA",WA,359691,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,48540,"Wheeling, WV-OH",WV,359947,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,48620,"Wichita, KS",KS,360232,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,48660,"Wichita Falls, TX",TX,360740,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,48680,"Wildwood-The Villages, FL",FL,360999,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,48700,"Williamsport, PA",PA,361217,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,48900,"Wilmington, NC",NC,361469,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,49020,"Winchester, VA-WV",VA,361911,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,49180,"Winston-Salem, NC",NC,362194,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,49340,"Worcester, MA",MA,362690,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,49420,"Yakima, WA",WA,363201,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,49620,"York-Hanover, PA",PA,363516,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,49660,"Youngstown-Warren, OH",OH,363933,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,49700,"Yuba City, CA",CA,364324,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+4,49740,"Yuma, AZ",AZ,364574,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+6,0100001,Northwest Alabama nonmetropolitan area,AL,364839,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+6,0100002,Northeast Alabama nonmetropolitan area,AL,365097,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+6,0100003,Southwest Alabama nonmetropolitan area,AL,365457,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+6,0100004,Southeast Alabama nonmetropolitan area,AL,365736,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+6,0200006,Alaska nonmetropolitan area,AK,366036,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+6,0400001,Arizona nonmetropolitan area,AZ,366409,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+6,0500001,North Arkansas nonmetropolitan area,AR,366754,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+6,0500002,East Arkansas nonmetropolitan area,AR,367115,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+6,0500003,West Arkansas nonmetropolitan area,AR,367378,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+6,0500004,South Arkansas nonmetropolitan area,AR,367689,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+6,0600003,North Coast Region of California nonmetropolitan area,CA,368064,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+6,0600006,Eastern Sierra-Mother Lode Region of California nonmetropolitan area,CA,368431,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+6,0600007,North Valley-Northern Mountains Region of California nonmetropolitan area,CA,368731,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+6,0800001,Eastern and Southern Colorado nonmetropolitan area,CO,369106,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+6,0800002,Southwest Colorado nonmetropolitan area,CO,369416,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+6,0800003,Northwest Colorado nonmetropolitan area,CO,369791,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+6,0900001,Connecticut nonmetropolitan area,CT,370165,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+6,1000005,Sussex Delaware nonmetropolitan area,DE,370457,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+6,1200003,South Florida nonmetropolitan area,FL,370780,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+6,1200006,North Florida nonmetropolitan area,FL,371088,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+6,1300001,North Georgia nonmetropolitan area,GA,371429,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+6,1300002,Middle Georgia nonmetropolitan area,GA,371848,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+6,1300003,East Georgia nonmetropolitan area,GA,372226,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+6,1300004,South Georgia nonmetropolitan area,GA,372552,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+6,1500001,Hawaii / Kauai nonmetropolitan area,HI,372994,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+6,1600006,Northwestern Idaho nonmetropolitan area,ID,373332,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+6,1600007,Southeast-Central Idaho nonmetropolitan area,ID,373647,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+6,1700001,Northwest Illinois nonmetropolitan area,IL,373982,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+6,1700002,West Central Illinois nonmetropolitan area,IL,374334,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+6,1700003,East Central Illinois nonmetropolitan area,IL,374731,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+6,1700004,South Illinois nonmetropolitan area,IL,375099,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+6,1800001,Northern Indiana nonmetropolitan area,IN,375496,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+6,1800002,Central Indiana nonmetropolitan area,IN,375928,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+6,1800003,Southern Indiana nonmetropolitan area,IN,376330,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+6,1900001,Northeast Iowa nonmetropolitan area,IA,376755,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+6,1900002,Northwest Iowa nonmetropolitan area,IA,377110,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+6,1900003,Southwest Iowa nonmetropolitan area,IA,377504,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+6,1900004,Southeast Iowa nonmetropolitan area,IA,377806,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+6,2000006,Kansas nonmetropolitan area,KS,378254,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+6,2100001,West Kentucky nonmetropolitan area,KY,378766,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+6,2100002,South Central Kentucky nonmetropolitan area,KY,379136,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+6,2100003,Central Kentucky nonmetropolitan area,KY,379528,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+6,2100004,East Kentucky nonmetropolitan area,KY,379969,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+6,2200002,Central Louisiana nonmetropolitan area,LA,380247,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+6,2200003,Northeast Louisiana nonmetropolitan area,LA,380527,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+6,2200006,Southwest Louisiana nonmetropolitan area,LA,380790,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+6,2300001,Northeast Maine nonmetropolitan area,ME,381074,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+6,2300002,Southwest Maine nonmetropolitan area,ME,381375,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+6,2400006,Maryland nonmetropolitan area,MD,381797,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+6,2500001,Massachusetts nonmetropolitan area,MA,382176,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+6,2600001,Upper Peninsula of Michigan nonmetropolitan area,MI,382407,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+6,2600002,Northern Michigan nonmetropolitan area,MI,382814,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+6,2600003,Mid Michigan nonmetropolitan area,MI,383198,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+6,2600004,Southern Michigan nonmetropolitan area,MI,383630,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+6,2700001,Northwest Minnesota nonmetropolitan area,MN,384015,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+6,2700002,Northeast Minnesota nonmetropolitan area,MN,384461,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+6,2700003,Southwest Minnesota nonmetropolitan area,MN,384686,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+6,2700004,Southeast Minnesota nonmetropolitan area,MN,385040,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+6,2800005,West Delta Mississippi nonmetropolitan area,MS,385452,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+6,2800006,Upper East Mississippi nonmetropolitan area,MS,385780,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+6,2800007,Lower West Mississippi nonmetropolitan area,MS,386248,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+6,2800008,Lower East Mississippi nonmetropolitan area,MS,386553,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+6,2900001,Central Missouri nonmetropolitan area,MO,386921,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+6,2900002,North Missouri nonmetropolitan area,MO,387317,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+6,2900003,Southeast Missouri nonmetropolitan area,MO,387662,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+6,2900004,Southwest Missouri nonmetropolitan area,MO,388031,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+6,3000003,Southwest Montana nonmetropolitan area,MT,388315,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+6,3000004,West Montana nonmetropolitan area,MT,388554,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+6,3000006,East-Central Montana nonmetropolitan area,MT,388900,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+6,3100001,Northwest Nebraska nonmetropolitan area,NE,389185,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+6,3100003,Northeast Nebraska nonmetropolitan area,NE,389423,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+6,3100006,South Nebraska nonmetropolitan area,NE,389770,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+6,3200006,Balance of Nevada nonmetropolitan area,NV,390205,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+6,3300001,Northern New Hampshire nonmetropolitan area,NH,390562,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+6,3300002,Central New Hampshire nonmetropolitan area,NH,390900,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+6,3300006,Southwestern New Hampshire nonmetropolitan area,NH,391262,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+6,3500006,Northern New Mexico nonmetropolitan area,NM,391510,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+6,3500007,Eastern New Mexico nonmetropolitan area,NM,391817,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+6,3600001,Capital/Northern New York nonmetropolitan area,NY,392213,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+6,3600004,Southwest New York nonmetropolitan area,NY,392615,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+6,3600006,Central East New York nonmetropolitan area,NY,393070,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+6,3700001,Eastern North Carolina nonmetropolitan area,NC,393503,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+6,3700002,Central North Carolina nonmetropolitan area,NC,394006,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+6,3700003,Western North Carolina nonmetropolitan area,NC,394470,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+6,3800006,West North Dakota nonmetropolitan area,ND,394971,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+6,3800007,East North Dakota nonmetropolitan area,ND,395279,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+6,3900001,West Northwestern Ohio nonmetropolitan area,OH,395575,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+6,3900002,North Northeastern Ohio nonmetropolitan area (noncontiguous),OH,396013,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+6,3900003,Eastern Ohio nonmetropolitan area,OH,396473,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+6,3900004,Southern Ohio nonmetropolitan area,OH,396868,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+6,4000001,Northeast Oklahoma nonmetropolitan area,OK,397271,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+6,4000002,Northwest Oklahoma nonmetropolitan area,OK,397653,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+6,4000003,Southwest Oklahoma nonmetropolitan area,OK,398019,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+6,4000004,Southeast Oklahoma nonmetropolitan area,OK,398299,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+6,4100006,Coast Oregon nonmetropolitan area,OR,398736,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+6,4100007,Central Oregon nonmetropolitan area,OR,399120,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+6,4100008,Eastern Oregon nonmetropolitan area,OR,399406,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+6,4200001,Northwestern Pennsylvania nonmetropolitan area,PA,399720,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+6,4200002,Northeastern Pennsylvania nonmetropolitan area,PA,400120,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+6,4200003,Central Pennsylvania nonmetropolitan area,PA,400498,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+6,4200004,Southwestern Pennsylvania nonmetropolitan area,PA,400928,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+6,4500003,Northwestern South Carolina nonmetropolitan area,SC,401317,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+6,4500005,Southern South Carolina nonmetropolitan area,SC,401654,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+6,4500007,Northeastern South Carolina nonmetropolitan area,SC,401897,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+6,4600002,East South Dakota nonmetropolitan area,SD,402191,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+6,4600003,West South Dakota nonmetropolitan area,SD,402605,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+6,4700001,West Tennessee nonmetropolitan area,TN,402909,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+6,4700002,South Central Tennessee nonmetropolitan area,TN,403258,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+6,4700003,North Central Tennessee nonmetropolitan area,TN,403607,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+6,4700004,East Tennessee nonmetropolitan area,TN,403956,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+6,4800001,Northwestern Region of Texas nonmetropolitan area,TX,404327,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+6,4800002,North Region of Texas nonmetropolitan area,TX,404732,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+6,4800003,Eastern Region of Texas nonmetropolitan area,TX,405206,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+6,4800004,Hill Country Region of Texas nonmetropolitan area,TX,405534,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+6,4800005,Border Region of Texas nonmetropolitan area,TX,405989,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+6,4800006,Coastal Plains Region of Texas nonmetropolitan area,TX,406208,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+6,4900010,Wasatch Front Fringe Utah nonmetropolitan area,UT,406583,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+6,4900011,High Desert Utah nonmetropolitan area,UT,406862,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+6,5000001,Southern Vermont nonmetropolitan area,VT,407236,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+6,5000002,Northern Vermont nonmetropolitan area,VT,407581,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+6,5100001,Southwest Virginia nonmetropolitan area,VA,407942,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+6,5100002,Southside Virginia nonmetropolitan area,VA,408296,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+6,5100003,Northeast Virginia nonmetropolitan area,VA,408643,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+6,5100004,Northwest Virginia nonmetropolitan area,VA,408921,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+6,5300006,Western Washington nonmetropolitan area,WA,409206,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+6,5300007,Eastern Washington nonmetropolitan area,WA,409586,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+6,5400001,Southern West Virginia nonmetropolitan area,WV,409972,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+6,5400002,Northern West Virginia nonmetropolitan area,WV,410278,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+6,5500001,Northwestern Wisconsin nonmetropolitan area,WI,410697,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+6,5500002,Northeastern Wisconsin nonmetropolitan area,WI,410956,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+6,5500003,South Central Wisconsin nonmetropolitan area,WI,411410,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+6,5500004,Western Wisconsin nonmetropolitan area,WI,411856,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+6,5600006,Western Wyoming nonmetropolitan area,WY,412227,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+6,5600007,Eastern Wyoming nonmetropolitan area,WY,412602,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+6,6600001,Guam,GU,412950,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+6,7200006,Puerto Rico nonmetropolitan area,PR,413192,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde
+6,7800001,Virgin Islands,VI,413345,OEWS_May2025,86ffcbbeb27a96b7aa84d01801de71ee94ee9027452152caabebfdec9d764fde

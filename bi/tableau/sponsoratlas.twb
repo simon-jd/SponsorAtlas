@@ -1,0 +1,1697 @@
+<?xml version='1.0' encoding='utf-8'?>
+<workbook version="18.1" source-platform="win">
+  <document-format-change-manifest>
+    <SheetIdentifierTracking />
+  </document-format-change-manifest>
+  <datasources>
+    <datasource name="Parameters" caption="Shared wage comparison controls" inline="true" version="18.1" hasconnection="false">
+      <column name="[Comparison SOC]" caption="Shared detailed SOC (e.g. 15-1252)" datatype="string" role="measure" type="nominal" value="&quot;15-1252&quot;" param-domain-type="any">
+        <calculation class="tableau" formula="&quot;15-1252&quot;" />
+      </column>
+      <column name="[Comparison Area]" caption="Shared area: 1:99 national or 4:CBSA (e.g. 4:35620)" datatype="string" role="measure" type="nominal" value="&quot;1:99&quot;" param-domain-type="any">
+        <calculation class="tableau" formula="&quot;1:99&quot;" />
+      </column>
+      <column name="[Comparison FY]" caption="LCA fiscal year (0 = all archived releases)" datatype="integer" role="measure" type="quantitative" value="0" param-domain-type="any">
+        <calculation class="tableau" formula="0" />
+      </column>
+      <column name="[Comparison Survey Year]" caption="OEWS survey year (independent of LCA FY)" datatype="integer" role="measure" type="quantitative" value="2025" param-domain-type="any">
+        <calculation class="tableau" formula="2025" />
+      </column>
+    </datasource>
+    <datasource name="lca" caption="SponsorAtlas lca" inline="true" version="18.1">
+      <connection class="hyper" dbname="Data/lca.hyper" schema="Extract" access_mode="readonly" authentication="auth-none">
+        <relation name="Extract" table="[Extract].[Extract]" type="table" />
+      </connection>
+      <column name="[case_number]" datatype="string" role="dimension" type="nominal" />
+      <column name="[is_certified]" datatype="boolean" role="dimension" type="nominal" />
+      <column name="[annual_wage]" datatype="real" role="measure" type="quantitative" />
+      <column name="[employer]" datatype="string" role="dimension" type="nominal" />
+      <column name="[soc_major]" datatype="string" role="dimension" type="nominal" />
+      <column name="[soc]" datatype="string" role="dimension" type="nominal" />
+      <column name="[metro]" datatype="string" role="dimension" type="nominal" />
+      <column name="[fiscal_year]" datatype="integer" role="dimension" type="nominal" />
+      <column name="[employer_history_status]" datatype="string" role="dimension" type="nominal" />
+      <column name="[case_count]" datatype="real" role="measure" type="quantitative" caption="case count">
+        <calculation class="tableau" formula="COUNT([case_number])" />
+      </column>
+      <column name="[certified_rate]" datatype="real" role="measure" type="quantitative" caption="certified rate">
+        <calculation class="tableau" formula="SUM(IF [is_certified] THEN 1 ELSE 0 END) / COUNT([case_number])" />
+      </column>
+      <column name="[wage_p50]" datatype="real" role="measure" type="quantitative" caption="wage p50">
+        <calculation class="tableau" formula="PERCENTILE([annual_wage], 0.5)" />
+      </column>
+      <column name="[wage_p75]" datatype="real" role="measure" type="quantitative" caption="wage p75">
+        <calculation class="tableau" formula="PERCENTILE([annual_wage], 0.75)" />
+      </column>
+      <column name="[wage_p90]" datatype="real" role="measure" type="quantitative" caption="wage p90">
+        <calculation class="tableau" formula="PERCENTILE([annual_wage], 0.9)" />
+      </column>
+      <column name="[comparison_match]" datatype="boolean" role="dimension" type="nominal" caption="comparison match">
+        <calculation class="tableau" formula="[soc]=[Parameters].[Comparison SOC] AND ([Parameters].[Comparison Area]=&quot;1:99&quot; OR (LEFT([Parameters].[Comparison Area],2)=&quot;4:&quot; AND LEN([Parameters].[Comparison Area])=7)) AND ([Parameters].[Comparison Area]=&quot;1:99&quot; OR [metro]=MID([Parameters].[Comparison Area],3,5)) AND ([Parameters].[Comparison FY]=0 OR [fiscal_year]=[Parameters].[Comparison FY])" />
+      </column>
+      <column name="[comparison_wage_p50]" datatype="real" role="measure" type="quantitative" caption="comparison wage p50">
+        <calculation class="tableau" formula="PERCENTILE(IF [comparison_match] THEN [annual_wage] END, 0.5)" />
+      </column>
+      <column name="[comparison_wage_p75]" datatype="real" role="measure" type="quantitative" caption="comparison wage p75">
+        <calculation class="tableau" formula="PERCENTILE(IF [comparison_match] THEN [annual_wage] END, 0.75)" />
+      </column>
+      <column name="[comparison_wage_p90]" datatype="real" role="measure" type="quantitative" caption="comparison wage p90">
+        <calculation class="tableau" formula="PERCENTILE(IF [comparison_match] THEN [annual_wage] END, 0.9)" />
+      </column>
+      <column name="[comparison_scope]" datatype="string" role="measure" type="nominal" caption="comparison scope">
+        <calculation class="tableau" formula="&quot;SOC &quot; + [Parameters].[Comparison SOC] + &quot; | Area &quot; + [Parameters].[Comparison Area] + &quot; | LCA FY &quot; + (IF [Parameters].[Comparison FY]=0 THEN &quot;all archived&quot; ELSE STR([Parameters].[Comparison FY]) END) + &quot; | &quot; + (IF NOT ([Parameters].[Comparison Area]=&quot;1:99&quot; OR (LEFT([Parameters].[Comparison Area],2)=&quot;4:&quot; AND LEN([Parameters].[Comparison Area])=7)) THEN &quot;Not comparable: no LCA mapping for state/nonmetropolitan/unknown area&quot; ELSEIF COUNT(IF [comparison_match] THEN [annual_wage] END)=0 THEN &quot;No matched non-null LCA wages&quot; ELSE &quot;Matched national/CBSA LCA wages&quot; END)" />
+      </column>
+    </datasource>
+    <datasource name="postings" caption="SponsorAtlas postings" inline="true" version="18.1">
+      <connection class="hyper" dbname="Data/postings.hyper" schema="Extract" access_mode="readonly" authentication="auth-none">
+        <relation name="Extract" table="[Extract].[Extract]" type="table" />
+      </connection>
+      <column name="[posting_id]" datatype="string" role="dimension" type="nominal" />
+      <column name="[observation_date]" datatype="date" role="dimension" type="nominal" />
+      <column name="[is_active]" datatype="boolean" role="dimension" type="nominal" />
+      <column name="[employer]" datatype="string" role="dimension" type="nominal" />
+      <column name="[soc_major]" datatype="string" role="dimension" type="nominal" />
+      <column name="[soc]" datatype="string" role="dimension" type="nominal" />
+      <column name="[metro]" datatype="string" role="dimension" type="nominal" />
+      <column name="[fiscal_year]" datatype="integer" role="dimension" type="nominal" />
+      <column name="[employer_mapping_status]" datatype="string" role="dimension" type="nominal" />
+      <column name="[occupation_mapping_status]" datatype="string" role="dimension" type="nominal" />
+      <column name="[geography_mapping_status]" datatype="string" role="dimension" type="nominal" />
+      <column name="[active_posting_days]" datatype="real" role="measure" type="quantitative" caption="active posting days">
+        <calculation class="tableau" formula="SUM(IF [is_active] THEN 1 ELSE 0 END)" />
+      </column>
+    </datasource>
+    <datasource name="wages" caption="SponsorAtlas wages" inline="true" version="18.1">
+      <connection class="hyper" dbname="Data/wages.hyper" schema="Extract" access_mode="readonly" authentication="auth-none">
+        <relation name="Extract" table="[Extract].[Extract]" type="table" />
+      </connection>
+      <column name="[soc]" datatype="string" role="dimension" type="nominal" />
+      <column name="[soc_major]" datatype="string" role="dimension" type="nominal" />
+      <column name="[metro]" datatype="string" role="dimension" type="nominal" />
+      <column name="[area]" datatype="string" role="dimension" type="nominal" />
+      <column name="[survey_year]" datatype="integer" role="dimension" type="nominal" />
+      <column name="[fiscal_year]" datatype="integer" role="dimension" type="nominal" />
+      <column name="[occupation_level]" datatype="string" role="dimension" type="nominal" />
+      <column name="[geography_level]" datatype="string" role="dimension" type="nominal" />
+      <column name="[annual_median_wage]" datatype="real" role="measure" type="quantitative" />
+      <column name="[median_raw]" datatype="string" role="dimension" type="nominal" />
+      <column name="[wage_status]" datatype="string" role="dimension" type="nominal" />
+      <column name="[annual_flag]" datatype="string" role="dimension" type="nominal" />
+      <column name="[hourly_flag]" datatype="string" role="dimension" type="nominal" />
+      <column name="[oews_median]" datatype="real" role="measure" type="quantitative" caption="oews median">
+        <calculation class="tableau" formula="IF COUNT([soc]) = 1 THEN MAX([annual_median_wage]) END" />
+      </column>
+      <column name="[estimate_count]" datatype="real" role="measure" type="quantitative" caption="estimate count">
+        <calculation class="tableau" formula="COUNT([soc])" />
+      </column>
+      <column name="[reconcile_oews_median]" datatype="real" role="measure" type="quantitative" caption="reconcile oews median">
+        <calculation class="tableau" formula="IF SUM(IF [soc]=&quot;15-1252&quot; AND [area]=&quot;1:99&quot; AND [survey_year]=2025 THEN 1 ELSE 0 END)=1 THEN MAX(IF [soc]=&quot;15-1252&quot; AND [area]=&quot;1:99&quot; AND [survey_year]=2025 THEN [annual_median_wage] END) END" />
+      </column>
+      <column name="[comparison_match]" datatype="boolean" role="dimension" type="nominal" caption="comparison match">
+        <calculation class="tableau" formula="[soc]=[Parameters].[Comparison SOC] AND ([Parameters].[Comparison Area]=&quot;1:99&quot; OR (LEFT([Parameters].[Comparison Area],2)=&quot;4:&quot; AND LEN([Parameters].[Comparison Area])=7)) AND [area]=[Parameters].[Comparison Area] AND [survey_year]=[Parameters].[Comparison Survey Year]" />
+      </column>
+      <column name="[comparison_estimate_count]" datatype="real" role="measure" type="quantitative" caption="comparison estimate count">
+        <calculation class="tableau" formula="SUM(IF [comparison_match] THEN 1 ELSE 0 END)" />
+      </column>
+      <column name="[comparison_oews_median]" datatype="real" role="measure" type="quantitative" caption="comparison oews median">
+        <calculation class="tableau" formula="IF [comparison_estimate_count]=1 THEN MAX(IF [comparison_match] THEN [annual_median_wage] END) END" />
+      </column>
+      <column name="[comparison_status]" datatype="string" role="measure" type="nominal" caption="comparison status">
+        <calculation class="tableau" formula="&quot;SOC &quot; + [Parameters].[Comparison SOC] + &quot; | Area &quot; + [Parameters].[Comparison Area] + &quot; | OEWS survey &quot; + STR([Parameters].[Comparison Survey Year]) + &quot; | &quot; + (IF NOT ([Parameters].[Comparison Area]=&quot;1:99&quot; OR (LEFT([Parameters].[Comparison Area],2)=&quot;4:&quot; AND LEN([Parameters].[Comparison Area])=7)) THEN &quot;Not comparable: unsupported area&quot; ELSEIF [comparison_estimate_count]=0 THEN &quot;No matching published estimate&quot; ELSEIF [comparison_estimate_count]&lt;&gt;1 THEN &quot;Multiple estimates: benchmark unavailable&quot; ELSEIF ISNULL([comparison_oews_median]) THEN &quot;Suppressed/top-coded: benchmark unavailable&quot; ELSE &quot;One official annual median; survey year is not LCA FY&quot; END)" />
+      </column>
+    </datasource>
+  </datasources>
+  <actions>
+    <action name="[Action1]" caption="Filter overview by employer; clear selection to reset">
+      <activation auto-clear="true" type="on-select" />
+      <source dashboard="SponsorAtlas - applications and observed jobs" type="sheet" worksheet="06 Cases by employer - provisional ER" />
+      <command command="tsc:tsl-filter">
+        <param name="exclude" value="06 Cases by employer - provisional ER,05 OEWS national 15-1252 survey 2025" />
+        <param name="field-captions" value="employer" />
+        <param name="target" value="SponsorAtlas - applications and observed jobs" />
+      </command>
+    </action>
+    <action name="[Action2]" caption="Filter overview by soc; clear selection to reset">
+      <activation auto-clear="true" type="on-select" />
+      <source dashboard="SponsorAtlas - applications and observed jobs" type="sheet" worksheet="07 Cases by detailed SOC" />
+      <command command="tsc:tsl-filter">
+        <param name="exclude" value="07 Cases by detailed SOC,05 OEWS national 15-1252 survey 2025" />
+        <param name="field-captions" value="soc" />
+        <param name="target" value="SponsorAtlas - applications and observed jobs" />
+      </command>
+    </action>
+    <action name="[Action3]" caption="Filter overview by metro; clear selection to reset">
+      <activation auto-clear="true" type="on-select" />
+      <source dashboard="SponsorAtlas - applications and observed jobs" type="sheet" worksheet="08 Cases by metropolitan CBSA" />
+      <command command="tsc:tsl-filter">
+        <param name="exclude" value="08 Cases by metropolitan CBSA,05 OEWS national 15-1252 survey 2025" />
+        <param name="field-captions" value="metro" />
+        <param name="target" value="SponsorAtlas - applications and observed jobs" />
+      </command>
+    </action>
+    <action name="[Action4]" caption="Filter overview by fiscal_year; clear selection to reset">
+      <activation auto-clear="true" type="on-select" />
+      <source dashboard="SponsorAtlas - applications and observed jobs" type="sheet" worksheet="09 Archived release fiscal year" />
+      <command command="tsc:tsl-filter">
+        <param name="exclude" value="09 Archived release fiscal year,05 OEWS national 15-1252 survey 2025" />
+        <param name="field-captions" value="fiscal_year" />
+        <param name="target" value="SponsorAtlas - applications and observed jobs" />
+      </command>
+    </action>
+  </actions>
+  <worksheets>
+    <worksheet name="01 Latest LCA cases">
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>01 Latest LCA cases</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource name="lca" />
+          </datasources>
+          <datasource-dependencies datasource="lca">
+            <column name="[case_number]" datatype="string" role="dimension" type="nominal" />
+            <column name="[is_certified]" datatype="boolean" role="dimension" type="nominal" />
+            <column name="[annual_wage]" datatype="real" role="measure" type="quantitative" />
+            <column name="[employer]" datatype="string" role="dimension" type="nominal" />
+            <column name="[soc_major]" datatype="string" role="dimension" type="nominal" />
+            <column name="[soc]" datatype="string" role="dimension" type="nominal" />
+            <column name="[metro]" datatype="string" role="dimension" type="nominal" />
+            <column name="[fiscal_year]" datatype="integer" role="dimension" type="nominal" />
+            <column name="[employer_history_status]" datatype="string" role="dimension" type="nominal" />
+            <column name="[case_count]" datatype="real" role="measure" type="quantitative" caption="case count">
+              <calculation class="tableau" formula="COUNT([case_number])" />
+            </column>
+            <column name="[certified_rate]" datatype="real" role="measure" type="quantitative" caption="certified rate">
+              <calculation class="tableau" formula="SUM(IF [is_certified] THEN 1 ELSE 0 END) / COUNT([case_number])" />
+            </column>
+            <column name="[wage_p50]" datatype="real" role="measure" type="quantitative" caption="wage p50">
+              <calculation class="tableau" formula="PERCENTILE([annual_wage], 0.5)" />
+            </column>
+            <column name="[wage_p75]" datatype="real" role="measure" type="quantitative" caption="wage p75">
+              <calculation class="tableau" formula="PERCENTILE([annual_wage], 0.75)" />
+            </column>
+            <column name="[wage_p90]" datatype="real" role="measure" type="quantitative" caption="wage p90">
+              <calculation class="tableau" formula="PERCENTILE([annual_wage], 0.9)" />
+            </column>
+            <column-instance column="[case_count]" derivation="User" name="[usr:case_count:qk]" pivot="key" type="quantitative" />
+            <column-instance column="[employer]" derivation="None" name="[none:employer:nk]" pivot="key" type="nominal" />
+            <column-instance column="[soc]" derivation="None" name="[none:soc:nk]" pivot="key" type="nominal" />
+            <column-instance column="[metro]" derivation="None" name="[none:metro:nk]" pivot="key" type="nominal" />
+            <column-instance column="[fiscal_year]" derivation="None" name="[none:fiscal_year:nk]" pivot="key" type="nominal" />
+          </datasource-dependencies>
+          <filter class="categorical" column="[lca].[none:employer:nk]">
+            <groupfilter function="level-members" level="[none:employer:nk]" />
+          </filter>
+          <filter class="categorical" column="[lca].[none:soc:nk]">
+            <groupfilter function="level-members" level="[none:soc:nk]" />
+          </filter>
+          <filter class="categorical" column="[lca].[none:metro:nk]">
+            <groupfilter function="level-members" level="[none:metro:nk]" />
+          </filter>
+          <filter class="categorical" column="[lca].[none:fiscal_year:nk]">
+            <groupfilter function="level-members" level="[none:fiscal_year:nk]" />
+          </filter>
+          <slices>
+            <column>[lca].[none:employer:nk]</column>
+            <column>[lca].[none:soc:nk]</column>
+            <column>[lca].[none:metro:nk]</column>
+            <column>[lca].[none:fiscal_year:nk]</column>
+          </slices>
+          <aggregation value="true" />
+        </view>
+        <style />
+        <panes>
+          <pane>
+            <view>
+              <breakdown value="auto" />
+            </view>
+            <mark class="Text" />
+            <encodings>
+              <text column="[lca].[usr:case_count:qk]" />
+            </encodings>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid="{78303C42-02FC-5888-A712-B8627DFEEE71}" />
+    </worksheet>
+    <worksheet name="02 Certified rate">
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>02 Certified rate</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource name="lca" />
+          </datasources>
+          <datasource-dependencies datasource="lca">
+            <column name="[case_number]" datatype="string" role="dimension" type="nominal" />
+            <column name="[is_certified]" datatype="boolean" role="dimension" type="nominal" />
+            <column name="[annual_wage]" datatype="real" role="measure" type="quantitative" />
+            <column name="[employer]" datatype="string" role="dimension" type="nominal" />
+            <column name="[soc_major]" datatype="string" role="dimension" type="nominal" />
+            <column name="[soc]" datatype="string" role="dimension" type="nominal" />
+            <column name="[metro]" datatype="string" role="dimension" type="nominal" />
+            <column name="[fiscal_year]" datatype="integer" role="dimension" type="nominal" />
+            <column name="[employer_history_status]" datatype="string" role="dimension" type="nominal" />
+            <column name="[case_count]" datatype="real" role="measure" type="quantitative" caption="case count">
+              <calculation class="tableau" formula="COUNT([case_number])" />
+            </column>
+            <column name="[certified_rate]" datatype="real" role="measure" type="quantitative" caption="certified rate">
+              <calculation class="tableau" formula="SUM(IF [is_certified] THEN 1 ELSE 0 END) / COUNT([case_number])" />
+            </column>
+            <column name="[wage_p50]" datatype="real" role="measure" type="quantitative" caption="wage p50">
+              <calculation class="tableau" formula="PERCENTILE([annual_wage], 0.5)" />
+            </column>
+            <column name="[wage_p75]" datatype="real" role="measure" type="quantitative" caption="wage p75">
+              <calculation class="tableau" formula="PERCENTILE([annual_wage], 0.75)" />
+            </column>
+            <column name="[wage_p90]" datatype="real" role="measure" type="quantitative" caption="wage p90">
+              <calculation class="tableau" formula="PERCENTILE([annual_wage], 0.9)" />
+            </column>
+            <column-instance column="[certified_rate]" derivation="User" name="[usr:certified_rate:qk]" pivot="key" type="quantitative" />
+            <column-instance column="[employer]" derivation="None" name="[none:employer:nk]" pivot="key" type="nominal" />
+            <column-instance column="[soc]" derivation="None" name="[none:soc:nk]" pivot="key" type="nominal" />
+            <column-instance column="[metro]" derivation="None" name="[none:metro:nk]" pivot="key" type="nominal" />
+            <column-instance column="[fiscal_year]" derivation="None" name="[none:fiscal_year:nk]" pivot="key" type="nominal" />
+          </datasource-dependencies>
+          <filter class="categorical" column="[lca].[none:employer:nk]">
+            <groupfilter function="level-members" level="[none:employer:nk]" />
+          </filter>
+          <filter class="categorical" column="[lca].[none:soc:nk]">
+            <groupfilter function="level-members" level="[none:soc:nk]" />
+          </filter>
+          <filter class="categorical" column="[lca].[none:metro:nk]">
+            <groupfilter function="level-members" level="[none:metro:nk]" />
+          </filter>
+          <filter class="categorical" column="[lca].[none:fiscal_year:nk]">
+            <groupfilter function="level-members" level="[none:fiscal_year:nk]" />
+          </filter>
+          <slices>
+            <column>[lca].[none:employer:nk]</column>
+            <column>[lca].[none:soc:nk]</column>
+            <column>[lca].[none:metro:nk]</column>
+            <column>[lca].[none:fiscal_year:nk]</column>
+          </slices>
+          <aggregation value="true" />
+        </view>
+        <style />
+        <panes>
+          <pane>
+            <view>
+              <breakdown value="auto" />
+            </view>
+            <mark class="Text" />
+            <encodings>
+              <text column="[lca].[usr:certified_rate:qk]" />
+            </encodings>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid="{C71FB125-F9EA-58FF-AF6A-466165672DB7}" />
+    </worksheet>
+    <worksheet name="03 Annual wage p75 USD">
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>03 Annual wage p75 USD</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource name="lca" />
+          </datasources>
+          <datasource-dependencies datasource="lca">
+            <column name="[case_number]" datatype="string" role="dimension" type="nominal" />
+            <column name="[is_certified]" datatype="boolean" role="dimension" type="nominal" />
+            <column name="[annual_wage]" datatype="real" role="measure" type="quantitative" />
+            <column name="[employer]" datatype="string" role="dimension" type="nominal" />
+            <column name="[soc_major]" datatype="string" role="dimension" type="nominal" />
+            <column name="[soc]" datatype="string" role="dimension" type="nominal" />
+            <column name="[metro]" datatype="string" role="dimension" type="nominal" />
+            <column name="[fiscal_year]" datatype="integer" role="dimension" type="nominal" />
+            <column name="[employer_history_status]" datatype="string" role="dimension" type="nominal" />
+            <column name="[case_count]" datatype="real" role="measure" type="quantitative" caption="case count">
+              <calculation class="tableau" formula="COUNT([case_number])" />
+            </column>
+            <column name="[certified_rate]" datatype="real" role="measure" type="quantitative" caption="certified rate">
+              <calculation class="tableau" formula="SUM(IF [is_certified] THEN 1 ELSE 0 END) / COUNT([case_number])" />
+            </column>
+            <column name="[wage_p50]" datatype="real" role="measure" type="quantitative" caption="wage p50">
+              <calculation class="tableau" formula="PERCENTILE([annual_wage], 0.5)" />
+            </column>
+            <column name="[wage_p75]" datatype="real" role="measure" type="quantitative" caption="wage p75">
+              <calculation class="tableau" formula="PERCENTILE([annual_wage], 0.75)" />
+            </column>
+            <column name="[wage_p90]" datatype="real" role="measure" type="quantitative" caption="wage p90">
+              <calculation class="tableau" formula="PERCENTILE([annual_wage], 0.9)" />
+            </column>
+            <column-instance column="[wage_p75]" derivation="User" name="[usr:wage_p75:qk]" pivot="key" type="quantitative" />
+            <column-instance column="[employer]" derivation="None" name="[none:employer:nk]" pivot="key" type="nominal" />
+            <column-instance column="[soc]" derivation="None" name="[none:soc:nk]" pivot="key" type="nominal" />
+            <column-instance column="[metro]" derivation="None" name="[none:metro:nk]" pivot="key" type="nominal" />
+            <column-instance column="[fiscal_year]" derivation="None" name="[none:fiscal_year:nk]" pivot="key" type="nominal" />
+          </datasource-dependencies>
+          <filter class="categorical" column="[lca].[none:employer:nk]">
+            <groupfilter function="level-members" level="[none:employer:nk]" />
+          </filter>
+          <filter class="categorical" column="[lca].[none:soc:nk]">
+            <groupfilter function="level-members" level="[none:soc:nk]" />
+          </filter>
+          <filter class="categorical" column="[lca].[none:metro:nk]">
+            <groupfilter function="level-members" level="[none:metro:nk]" />
+          </filter>
+          <filter class="categorical" column="[lca].[none:fiscal_year:nk]">
+            <groupfilter function="level-members" level="[none:fiscal_year:nk]" />
+          </filter>
+          <slices>
+            <column>[lca].[none:employer:nk]</column>
+            <column>[lca].[none:soc:nk]</column>
+            <column>[lca].[none:metro:nk]</column>
+            <column>[lca].[none:fiscal_year:nk]</column>
+          </slices>
+          <aggregation value="true" />
+        </view>
+        <style />
+        <panes>
+          <pane>
+            <view>
+              <breakdown value="auto" />
+            </view>
+            <mark class="Text" />
+            <encodings>
+              <text column="[lca].[usr:wage_p75:qk]" />
+            </encodings>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid="{5ED74E98-16AC-5E9A-A6FF-E834E6B9B8C9}" />
+    </worksheet>
+    <worksheet name="04 Active observed posting-days">
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>04 Active observed posting-days</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource name="postings" />
+          </datasources>
+          <datasource-dependencies datasource="postings">
+            <column name="[posting_id]" datatype="string" role="dimension" type="nominal" />
+            <column name="[observation_date]" datatype="date" role="dimension" type="nominal" />
+            <column name="[is_active]" datatype="boolean" role="dimension" type="nominal" />
+            <column name="[employer]" datatype="string" role="dimension" type="nominal" />
+            <column name="[soc_major]" datatype="string" role="dimension" type="nominal" />
+            <column name="[soc]" datatype="string" role="dimension" type="nominal" />
+            <column name="[metro]" datatype="string" role="dimension" type="nominal" />
+            <column name="[fiscal_year]" datatype="integer" role="dimension" type="nominal" />
+            <column name="[employer_mapping_status]" datatype="string" role="dimension" type="nominal" />
+            <column name="[occupation_mapping_status]" datatype="string" role="dimension" type="nominal" />
+            <column name="[geography_mapping_status]" datatype="string" role="dimension" type="nominal" />
+            <column name="[active_posting_days]" datatype="real" role="measure" type="quantitative" caption="active posting days">
+              <calculation class="tableau" formula="SUM(IF [is_active] THEN 1 ELSE 0 END)" />
+            </column>
+            <column-instance column="[active_posting_days]" derivation="User" name="[usr:active_posting_days:qk]" pivot="key" type="quantitative" />
+            <column-instance column="[employer]" derivation="None" name="[none:employer:nk]" pivot="key" type="nominal" />
+            <column-instance column="[soc]" derivation="None" name="[none:soc:nk]" pivot="key" type="nominal" />
+            <column-instance column="[metro]" derivation="None" name="[none:metro:nk]" pivot="key" type="nominal" />
+            <column-instance column="[fiscal_year]" derivation="None" name="[none:fiscal_year:nk]" pivot="key" type="nominal" />
+            <column-instance column="[observation_date]" derivation="None" name="[none:observation_date:nk]" pivot="key" type="nominal" />
+          </datasource-dependencies>
+          <filter class="categorical" column="[postings].[none:employer:nk]">
+            <groupfilter function="level-members" level="[none:employer:nk]" />
+          </filter>
+          <filter class="categorical" column="[postings].[none:soc:nk]">
+            <groupfilter function="level-members" level="[none:soc:nk]" />
+          </filter>
+          <filter class="categorical" column="[postings].[none:metro:nk]">
+            <groupfilter function="level-members" level="[none:metro:nk]" />
+          </filter>
+          <filter class="categorical" column="[postings].[none:fiscal_year:nk]">
+            <groupfilter function="level-members" level="[none:fiscal_year:nk]" />
+          </filter>
+          <filter class="categorical" column="[postings].[none:observation_date:nk]">
+            <groupfilter function="level-members" level="[none:observation_date:nk]" />
+          </filter>
+          <slices>
+            <column>[postings].[none:employer:nk]</column>
+            <column>[postings].[none:soc:nk]</column>
+            <column>[postings].[none:metro:nk]</column>
+            <column>[postings].[none:fiscal_year:nk]</column>
+            <column>[postings].[none:observation_date:nk]</column>
+          </slices>
+          <aggregation value="true" />
+        </view>
+        <style />
+        <panes>
+          <pane>
+            <view>
+              <breakdown value="auto" />
+            </view>
+            <mark class="Text" />
+            <encodings>
+              <text column="[postings].[usr:active_posting_days:qk]" />
+            </encodings>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid="{BF3E0AD9-C854-5338-821F-E8A67A55EC4D}" />
+    </worksheet>
+    <worksheet name="05 OEWS national 15-1252 survey 2025">
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>05 OEWS national 15-1252 survey 2025</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource name="wages" />
+          </datasources>
+          <datasource-dependencies datasource="wages">
+            <column name="[soc]" datatype="string" role="dimension" type="nominal" />
+            <column name="[soc_major]" datatype="string" role="dimension" type="nominal" />
+            <column name="[metro]" datatype="string" role="dimension" type="nominal" />
+            <column name="[area]" datatype="string" role="dimension" type="nominal" />
+            <column name="[survey_year]" datatype="integer" role="dimension" type="nominal" />
+            <column name="[fiscal_year]" datatype="integer" role="dimension" type="nominal" />
+            <column name="[occupation_level]" datatype="string" role="dimension" type="nominal" />
+            <column name="[geography_level]" datatype="string" role="dimension" type="nominal" />
+            <column name="[annual_median_wage]" datatype="real" role="measure" type="quantitative" />
+            <column name="[median_raw]" datatype="string" role="dimension" type="nominal" />
+            <column name="[wage_status]" datatype="string" role="dimension" type="nominal" />
+            <column name="[annual_flag]" datatype="string" role="dimension" type="nominal" />
+            <column name="[hourly_flag]" datatype="string" role="dimension" type="nominal" />
+            <column name="[oews_median]" datatype="real" role="measure" type="quantitative" caption="oews median">
+              <calculation class="tableau" formula="IF COUNT([soc]) = 1 THEN MAX([annual_median_wage]) END" />
+            </column>
+            <column name="[estimate_count]" datatype="real" role="measure" type="quantitative" caption="estimate count">
+              <calculation class="tableau" formula="COUNT([soc])" />
+            </column>
+            <column name="[reconcile_oews_median]" datatype="real" role="measure" type="quantitative" caption="reconcile oews median">
+              <calculation class="tableau" formula="IF SUM(IF [soc]=&quot;15-1252&quot; AND [area]=&quot;1:99&quot; AND [survey_year]=2025 THEN 1 ELSE 0 END)=1 THEN MAX(IF [soc]=&quot;15-1252&quot; AND [area]=&quot;1:99&quot; AND [survey_year]=2025 THEN [annual_median_wage] END) END" />
+            </column>
+            <column-instance column="[reconcile_oews_median]" derivation="User" name="[usr:reconcile_oews_median:qk]" pivot="key" type="quantitative" />
+          </datasource-dependencies>
+          <aggregation value="true" />
+        </view>
+        <style />
+        <panes>
+          <pane>
+            <view>
+              <breakdown value="auto" />
+            </view>
+            <mark class="Text" />
+            <encodings>
+              <text column="[wages].[usr:reconcile_oews_median:qk]" />
+            </encodings>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid="{E65EA136-31A4-52B2-A696-D20FD70C8686}" />
+    </worksheet>
+    <worksheet name="06 Cases by employer - provisional ER">
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>06 Cases by employer - provisional ER</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource name="lca" />
+          </datasources>
+          <datasource-dependencies datasource="lca">
+            <column name="[case_number]" datatype="string" role="dimension" type="nominal" />
+            <column name="[is_certified]" datatype="boolean" role="dimension" type="nominal" />
+            <column name="[annual_wage]" datatype="real" role="measure" type="quantitative" />
+            <column name="[employer]" datatype="string" role="dimension" type="nominal" />
+            <column name="[soc_major]" datatype="string" role="dimension" type="nominal" />
+            <column name="[soc]" datatype="string" role="dimension" type="nominal" />
+            <column name="[metro]" datatype="string" role="dimension" type="nominal" />
+            <column name="[fiscal_year]" datatype="integer" role="dimension" type="nominal" />
+            <column name="[employer_history_status]" datatype="string" role="dimension" type="nominal" />
+            <column name="[case_count]" datatype="real" role="measure" type="quantitative" caption="case count">
+              <calculation class="tableau" formula="COUNT([case_number])" />
+            </column>
+            <column name="[certified_rate]" datatype="real" role="measure" type="quantitative" caption="certified rate">
+              <calculation class="tableau" formula="SUM(IF [is_certified] THEN 1 ELSE 0 END) / COUNT([case_number])" />
+            </column>
+            <column name="[wage_p50]" datatype="real" role="measure" type="quantitative" caption="wage p50">
+              <calculation class="tableau" formula="PERCENTILE([annual_wage], 0.5)" />
+            </column>
+            <column name="[wage_p75]" datatype="real" role="measure" type="quantitative" caption="wage p75">
+              <calculation class="tableau" formula="PERCENTILE([annual_wage], 0.75)" />
+            </column>
+            <column name="[wage_p90]" datatype="real" role="measure" type="quantitative" caption="wage p90">
+              <calculation class="tableau" formula="PERCENTILE([annual_wage], 0.9)" />
+            </column>
+            <column-instance column="[case_count]" derivation="User" name="[usr:case_count:qk]" pivot="key" type="quantitative" />
+            <column-instance column="[employer]" derivation="None" name="[none:employer:nk]" pivot="key" type="nominal" />
+            <column-instance column="[soc]" derivation="None" name="[none:soc:nk]" pivot="key" type="nominal" />
+            <column-instance column="[metro]" derivation="None" name="[none:metro:nk]" pivot="key" type="nominal" />
+            <column-instance column="[fiscal_year]" derivation="None" name="[none:fiscal_year:nk]" pivot="key" type="nominal" />
+          </datasource-dependencies>
+          <filter class="categorical" column="[lca].[none:employer:nk]">
+            <groupfilter function="level-members" level="[none:employer:nk]" />
+          </filter>
+          <filter class="categorical" column="[lca].[none:soc:nk]">
+            <groupfilter function="level-members" level="[none:soc:nk]" />
+          </filter>
+          <filter class="categorical" column="[lca].[none:metro:nk]">
+            <groupfilter function="level-members" level="[none:metro:nk]" />
+          </filter>
+          <filter class="categorical" column="[lca].[none:fiscal_year:nk]">
+            <groupfilter function="level-members" level="[none:fiscal_year:nk]" />
+          </filter>
+          <slices>
+            <column>[lca].[none:employer:nk]</column>
+            <column>[lca].[none:soc:nk]</column>
+            <column>[lca].[none:metro:nk]</column>
+            <column>[lca].[none:fiscal_year:nk]</column>
+          </slices>
+          <aggregation value="true" />
+        </view>
+        <style />
+        <panes>
+          <pane>
+            <view>
+              <breakdown value="auto" />
+            </view>
+            <mark class="Bar" />
+          </pane>
+        </panes>
+        <rows>[lca].[none:employer:nk]</rows>
+        <cols>[lca].[usr:case_count:qk]</cols>
+      </table>
+      <simple-id uuid="{4D2F02AA-D8E6-5B55-9B08-ADF8264D2F98}" />
+    </worksheet>
+    <worksheet name="07 Cases by detailed SOC">
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>07 Cases by detailed SOC</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource name="lca" />
+          </datasources>
+          <datasource-dependencies datasource="lca">
+            <column name="[case_number]" datatype="string" role="dimension" type="nominal" />
+            <column name="[is_certified]" datatype="boolean" role="dimension" type="nominal" />
+            <column name="[annual_wage]" datatype="real" role="measure" type="quantitative" />
+            <column name="[employer]" datatype="string" role="dimension" type="nominal" />
+            <column name="[soc_major]" datatype="string" role="dimension" type="nominal" />
+            <column name="[soc]" datatype="string" role="dimension" type="nominal" />
+            <column name="[metro]" datatype="string" role="dimension" type="nominal" />
+            <column name="[fiscal_year]" datatype="integer" role="dimension" type="nominal" />
+            <column name="[employer_history_status]" datatype="string" role="dimension" type="nominal" />
+            <column name="[case_count]" datatype="real" role="measure" type="quantitative" caption="case count">
+              <calculation class="tableau" formula="COUNT([case_number])" />
+            </column>
+            <column name="[certified_rate]" datatype="real" role="measure" type="quantitative" caption="certified rate">
+              <calculation class="tableau" formula="SUM(IF [is_certified] THEN 1 ELSE 0 END) / COUNT([case_number])" />
+            </column>
+            <column name="[wage_p50]" datatype="real" role="measure" type="quantitative" caption="wage p50">
+              <calculation class="tableau" formula="PERCENTILE([annual_wage], 0.5)" />
+            </column>
+            <column name="[wage_p75]" datatype="real" role="measure" type="quantitative" caption="wage p75">
+              <calculation class="tableau" formula="PERCENTILE([annual_wage], 0.75)" />
+            </column>
+            <column name="[wage_p90]" datatype="real" role="measure" type="quantitative" caption="wage p90">
+              <calculation class="tableau" formula="PERCENTILE([annual_wage], 0.9)" />
+            </column>
+            <column-instance column="[case_count]" derivation="User" name="[usr:case_count:qk]" pivot="key" type="quantitative" />
+            <column-instance column="[soc]" derivation="None" name="[none:soc:nk]" pivot="key" type="nominal" />
+            <column-instance column="[employer]" derivation="None" name="[none:employer:nk]" pivot="key" type="nominal" />
+            <column-instance column="[metro]" derivation="None" name="[none:metro:nk]" pivot="key" type="nominal" />
+            <column-instance column="[fiscal_year]" derivation="None" name="[none:fiscal_year:nk]" pivot="key" type="nominal" />
+          </datasource-dependencies>
+          <filter class="categorical" column="[lca].[none:employer:nk]">
+            <groupfilter function="level-members" level="[none:employer:nk]" />
+          </filter>
+          <filter class="categorical" column="[lca].[none:soc:nk]">
+            <groupfilter function="level-members" level="[none:soc:nk]" />
+          </filter>
+          <filter class="categorical" column="[lca].[none:metro:nk]">
+            <groupfilter function="level-members" level="[none:metro:nk]" />
+          </filter>
+          <filter class="categorical" column="[lca].[none:fiscal_year:nk]">
+            <groupfilter function="level-members" level="[none:fiscal_year:nk]" />
+          </filter>
+          <slices>
+            <column>[lca].[none:employer:nk]</column>
+            <column>[lca].[none:soc:nk]</column>
+            <column>[lca].[none:metro:nk]</column>
+            <column>[lca].[none:fiscal_year:nk]</column>
+          </slices>
+          <aggregation value="true" />
+        </view>
+        <style />
+        <panes>
+          <pane>
+            <view>
+              <breakdown value="auto" />
+            </view>
+            <mark class="Bar" />
+          </pane>
+        </panes>
+        <rows>[lca].[none:soc:nk]</rows>
+        <cols>[lca].[usr:case_count:qk]</cols>
+      </table>
+      <simple-id uuid="{04806BF2-D1EC-5DEB-9263-FB51D86241D6}" />
+    </worksheet>
+    <worksheet name="08 Cases by metropolitan CBSA">
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>08 Cases by metropolitan CBSA</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource name="lca" />
+          </datasources>
+          <datasource-dependencies datasource="lca">
+            <column name="[case_number]" datatype="string" role="dimension" type="nominal" />
+            <column name="[is_certified]" datatype="boolean" role="dimension" type="nominal" />
+            <column name="[annual_wage]" datatype="real" role="measure" type="quantitative" />
+            <column name="[employer]" datatype="string" role="dimension" type="nominal" />
+            <column name="[soc_major]" datatype="string" role="dimension" type="nominal" />
+            <column name="[soc]" datatype="string" role="dimension" type="nominal" />
+            <column name="[metro]" datatype="string" role="dimension" type="nominal" />
+            <column name="[fiscal_year]" datatype="integer" role="dimension" type="nominal" />
+            <column name="[employer_history_status]" datatype="string" role="dimension" type="nominal" />
+            <column name="[case_count]" datatype="real" role="measure" type="quantitative" caption="case count">
+              <calculation class="tableau" formula="COUNT([case_number])" />
+            </column>
+            <column name="[certified_rate]" datatype="real" role="measure" type="quantitative" caption="certified rate">
+              <calculation class="tableau" formula="SUM(IF [is_certified] THEN 1 ELSE 0 END) / COUNT([case_number])" />
+            </column>
+            <column name="[wage_p50]" datatype="real" role="measure" type="quantitative" caption="wage p50">
+              <calculation class="tableau" formula="PERCENTILE([annual_wage], 0.5)" />
+            </column>
+            <column name="[wage_p75]" datatype="real" role="measure" type="quantitative" caption="wage p75">
+              <calculation class="tableau" formula="PERCENTILE([annual_wage], 0.75)" />
+            </column>
+            <column name="[wage_p90]" datatype="real" role="measure" type="quantitative" caption="wage p90">
+              <calculation class="tableau" formula="PERCENTILE([annual_wage], 0.9)" />
+            </column>
+            <column-instance column="[case_count]" derivation="User" name="[usr:case_count:qk]" pivot="key" type="quantitative" />
+            <column-instance column="[metro]" derivation="None" name="[none:metro:nk]" pivot="key" type="nominal" />
+            <column-instance column="[employer]" derivation="None" name="[none:employer:nk]" pivot="key" type="nominal" />
+            <column-instance column="[soc]" derivation="None" name="[none:soc:nk]" pivot="key" type="nominal" />
+            <column-instance column="[fiscal_year]" derivation="None" name="[none:fiscal_year:nk]" pivot="key" type="nominal" />
+          </datasource-dependencies>
+          <filter class="categorical" column="[lca].[none:employer:nk]">
+            <groupfilter function="level-members" level="[none:employer:nk]" />
+          </filter>
+          <filter class="categorical" column="[lca].[none:soc:nk]">
+            <groupfilter function="level-members" level="[none:soc:nk]" />
+          </filter>
+          <filter class="categorical" column="[lca].[none:metro:nk]">
+            <groupfilter function="level-members" level="[none:metro:nk]" />
+          </filter>
+          <filter class="categorical" column="[lca].[none:fiscal_year:nk]">
+            <groupfilter function="level-members" level="[none:fiscal_year:nk]" />
+          </filter>
+          <slices>
+            <column>[lca].[none:employer:nk]</column>
+            <column>[lca].[none:soc:nk]</column>
+            <column>[lca].[none:metro:nk]</column>
+            <column>[lca].[none:fiscal_year:nk]</column>
+          </slices>
+          <aggregation value="true" />
+        </view>
+        <style />
+        <panes>
+          <pane>
+            <view>
+              <breakdown value="auto" />
+            </view>
+            <mark class="Bar" />
+          </pane>
+        </panes>
+        <rows>[lca].[none:metro:nk]</rows>
+        <cols>[lca].[usr:case_count:qk]</cols>
+      </table>
+      <simple-id uuid="{89A2620A-088B-5E06-BDF0-5D36D76A56C0}" />
+    </worksheet>
+    <worksheet name="09 Archived release fiscal year">
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>09 Archived release fiscal year</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource name="lca" />
+          </datasources>
+          <datasource-dependencies datasource="lca">
+            <column name="[case_number]" datatype="string" role="dimension" type="nominal" />
+            <column name="[is_certified]" datatype="boolean" role="dimension" type="nominal" />
+            <column name="[annual_wage]" datatype="real" role="measure" type="quantitative" />
+            <column name="[employer]" datatype="string" role="dimension" type="nominal" />
+            <column name="[soc_major]" datatype="string" role="dimension" type="nominal" />
+            <column name="[soc]" datatype="string" role="dimension" type="nominal" />
+            <column name="[metro]" datatype="string" role="dimension" type="nominal" />
+            <column name="[fiscal_year]" datatype="integer" role="dimension" type="nominal" />
+            <column name="[employer_history_status]" datatype="string" role="dimension" type="nominal" />
+            <column name="[case_count]" datatype="real" role="measure" type="quantitative" caption="case count">
+              <calculation class="tableau" formula="COUNT([case_number])" />
+            </column>
+            <column name="[certified_rate]" datatype="real" role="measure" type="quantitative" caption="certified rate">
+              <calculation class="tableau" formula="SUM(IF [is_certified] THEN 1 ELSE 0 END) / COUNT([case_number])" />
+            </column>
+            <column name="[wage_p50]" datatype="real" role="measure" type="quantitative" caption="wage p50">
+              <calculation class="tableau" formula="PERCENTILE([annual_wage], 0.5)" />
+            </column>
+            <column name="[wage_p75]" datatype="real" role="measure" type="quantitative" caption="wage p75">
+              <calculation class="tableau" formula="PERCENTILE([annual_wage], 0.75)" />
+            </column>
+            <column name="[wage_p90]" datatype="real" role="measure" type="quantitative" caption="wage p90">
+              <calculation class="tableau" formula="PERCENTILE([annual_wage], 0.9)" />
+            </column>
+            <column-instance column="[case_count]" derivation="User" name="[usr:case_count:qk]" pivot="key" type="quantitative" />
+            <column-instance column="[fiscal_year]" derivation="None" name="[none:fiscal_year:nk]" pivot="key" type="nominal" />
+            <column-instance column="[employer]" derivation="None" name="[none:employer:nk]" pivot="key" type="nominal" />
+            <column-instance column="[soc]" derivation="None" name="[none:soc:nk]" pivot="key" type="nominal" />
+            <column-instance column="[metro]" derivation="None" name="[none:metro:nk]" pivot="key" type="nominal" />
+          </datasource-dependencies>
+          <filter class="categorical" column="[lca].[none:employer:nk]">
+            <groupfilter function="level-members" level="[none:employer:nk]" />
+          </filter>
+          <filter class="categorical" column="[lca].[none:soc:nk]">
+            <groupfilter function="level-members" level="[none:soc:nk]" />
+          </filter>
+          <filter class="categorical" column="[lca].[none:metro:nk]">
+            <groupfilter function="level-members" level="[none:metro:nk]" />
+          </filter>
+          <filter class="categorical" column="[lca].[none:fiscal_year:nk]">
+            <groupfilter function="level-members" level="[none:fiscal_year:nk]" />
+          </filter>
+          <slices>
+            <column>[lca].[none:employer:nk]</column>
+            <column>[lca].[none:soc:nk]</column>
+            <column>[lca].[none:metro:nk]</column>
+            <column>[lca].[none:fiscal_year:nk]</column>
+          </slices>
+          <aggregation value="true" />
+        </view>
+        <style />
+        <panes>
+          <pane>
+            <view>
+              <breakdown value="auto" />
+            </view>
+            <mark class="Bar" />
+          </pane>
+        </panes>
+        <rows>[lca].[none:fiscal_year:nk]</rows>
+        <cols>[lca].[usr:case_count:qk]</cols>
+      </table>
+      <simple-id uuid="{17F73667-DA18-57A5-B147-33B958ED0BC3}" />
+    </worksheet>
+    <worksheet name="10 UTC observations - one date is not a trend">
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>10 UTC observations - one date is not a trend</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource name="postings" />
+          </datasources>
+          <datasource-dependencies datasource="postings">
+            <column name="[posting_id]" datatype="string" role="dimension" type="nominal" />
+            <column name="[observation_date]" datatype="date" role="dimension" type="nominal" />
+            <column name="[is_active]" datatype="boolean" role="dimension" type="nominal" />
+            <column name="[employer]" datatype="string" role="dimension" type="nominal" />
+            <column name="[soc_major]" datatype="string" role="dimension" type="nominal" />
+            <column name="[soc]" datatype="string" role="dimension" type="nominal" />
+            <column name="[metro]" datatype="string" role="dimension" type="nominal" />
+            <column name="[fiscal_year]" datatype="integer" role="dimension" type="nominal" />
+            <column name="[employer_mapping_status]" datatype="string" role="dimension" type="nominal" />
+            <column name="[occupation_mapping_status]" datatype="string" role="dimension" type="nominal" />
+            <column name="[geography_mapping_status]" datatype="string" role="dimension" type="nominal" />
+            <column name="[active_posting_days]" datatype="real" role="measure" type="quantitative" caption="active posting days">
+              <calculation class="tableau" formula="SUM(IF [is_active] THEN 1 ELSE 0 END)" />
+            </column>
+            <column-instance column="[active_posting_days]" derivation="User" name="[usr:active_posting_days:qk]" pivot="key" type="quantitative" />
+            <column-instance column="[observation_date]" derivation="None" name="[none:observation_date:nk]" pivot="key" type="nominal" />
+            <column-instance column="[employer]" derivation="None" name="[none:employer:nk]" pivot="key" type="nominal" />
+            <column-instance column="[soc]" derivation="None" name="[none:soc:nk]" pivot="key" type="nominal" />
+            <column-instance column="[metro]" derivation="None" name="[none:metro:nk]" pivot="key" type="nominal" />
+            <column-instance column="[fiscal_year]" derivation="None" name="[none:fiscal_year:nk]" pivot="key" type="nominal" />
+          </datasource-dependencies>
+          <filter class="categorical" column="[postings].[none:employer:nk]">
+            <groupfilter function="level-members" level="[none:employer:nk]" />
+          </filter>
+          <filter class="categorical" column="[postings].[none:soc:nk]">
+            <groupfilter function="level-members" level="[none:soc:nk]" />
+          </filter>
+          <filter class="categorical" column="[postings].[none:metro:nk]">
+            <groupfilter function="level-members" level="[none:metro:nk]" />
+          </filter>
+          <filter class="categorical" column="[postings].[none:fiscal_year:nk]">
+            <groupfilter function="level-members" level="[none:fiscal_year:nk]" />
+          </filter>
+          <filter class="categorical" column="[postings].[none:observation_date:nk]">
+            <groupfilter function="level-members" level="[none:observation_date:nk]" />
+          </filter>
+          <slices>
+            <column>[postings].[none:employer:nk]</column>
+            <column>[postings].[none:soc:nk]</column>
+            <column>[postings].[none:metro:nk]</column>
+            <column>[postings].[none:fiscal_year:nk]</column>
+            <column>[postings].[none:observation_date:nk]</column>
+          </slices>
+          <aggregation value="true" />
+        </view>
+        <style />
+        <panes>
+          <pane>
+            <view>
+              <breakdown value="auto" />
+            </view>
+            <mark class="Bar" />
+          </pane>
+        </panes>
+        <rows>[postings].[none:observation_date:nk]</rows>
+        <cols>[postings].[usr:active_posting_days:qk]</cols>
+      </table>
+      <simple-id uuid="{FE387F3E-0587-5971-81D6-B8070E13C61E}" />
+    </worksheet>
+    <worksheet name="11 Matched LCA wage p50 USD">
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>11 Matched LCA wage p50 USD</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource name="lca" />
+            <datasource name="Parameters" />
+          </datasources>
+          <datasource-dependencies datasource="lca">
+            <column name="[case_number]" datatype="string" role="dimension" type="nominal" />
+            <column name="[is_certified]" datatype="boolean" role="dimension" type="nominal" />
+            <column name="[annual_wage]" datatype="real" role="measure" type="quantitative" />
+            <column name="[employer]" datatype="string" role="dimension" type="nominal" />
+            <column name="[soc_major]" datatype="string" role="dimension" type="nominal" />
+            <column name="[soc]" datatype="string" role="dimension" type="nominal" />
+            <column name="[metro]" datatype="string" role="dimension" type="nominal" />
+            <column name="[fiscal_year]" datatype="integer" role="dimension" type="nominal" />
+            <column name="[employer_history_status]" datatype="string" role="dimension" type="nominal" />
+            <column name="[case_count]" datatype="real" role="measure" type="quantitative" caption="case count">
+              <calculation class="tableau" formula="COUNT([case_number])" />
+            </column>
+            <column name="[certified_rate]" datatype="real" role="measure" type="quantitative" caption="certified rate">
+              <calculation class="tableau" formula="SUM(IF [is_certified] THEN 1 ELSE 0 END) / COUNT([case_number])" />
+            </column>
+            <column name="[wage_p50]" datatype="real" role="measure" type="quantitative" caption="wage p50">
+              <calculation class="tableau" formula="PERCENTILE([annual_wage], 0.5)" />
+            </column>
+            <column name="[wage_p75]" datatype="real" role="measure" type="quantitative" caption="wage p75">
+              <calculation class="tableau" formula="PERCENTILE([annual_wage], 0.75)" />
+            </column>
+            <column name="[wage_p90]" datatype="real" role="measure" type="quantitative" caption="wage p90">
+              <calculation class="tableau" formula="PERCENTILE([annual_wage], 0.9)" />
+            </column>
+            <column name="[comparison_match]" datatype="boolean" role="dimension" type="nominal" caption="comparison match">
+              <calculation class="tableau" formula="[soc]=[Parameters].[Comparison SOC] AND ([Parameters].[Comparison Area]=&quot;1:99&quot; OR (LEFT([Parameters].[Comparison Area],2)=&quot;4:&quot; AND LEN([Parameters].[Comparison Area])=7)) AND ([Parameters].[Comparison Area]=&quot;1:99&quot; OR [metro]=MID([Parameters].[Comparison Area],3,5)) AND ([Parameters].[Comparison FY]=0 OR [fiscal_year]=[Parameters].[Comparison FY])" />
+            </column>
+            <column name="[comparison_wage_p50]" datatype="real" role="measure" type="quantitative" caption="comparison wage p50">
+              <calculation class="tableau" formula="PERCENTILE(IF [comparison_match] THEN [annual_wage] END, 0.5)" />
+            </column>
+            <column name="[comparison_wage_p75]" datatype="real" role="measure" type="quantitative" caption="comparison wage p75">
+              <calculation class="tableau" formula="PERCENTILE(IF [comparison_match] THEN [annual_wage] END, 0.75)" />
+            </column>
+            <column name="[comparison_wage_p90]" datatype="real" role="measure" type="quantitative" caption="comparison wage p90">
+              <calculation class="tableau" formula="PERCENTILE(IF [comparison_match] THEN [annual_wage] END, 0.9)" />
+            </column>
+            <column name="[comparison_scope]" datatype="string" role="measure" type="nominal" caption="comparison scope">
+              <calculation class="tableau" formula="&quot;SOC &quot; + [Parameters].[Comparison SOC] + &quot; | Area &quot; + [Parameters].[Comparison Area] + &quot; | LCA FY &quot; + (IF [Parameters].[Comparison FY]=0 THEN &quot;all archived&quot; ELSE STR([Parameters].[Comparison FY]) END) + &quot; | &quot; + (IF NOT ([Parameters].[Comparison Area]=&quot;1:99&quot; OR (LEFT([Parameters].[Comparison Area],2)=&quot;4:&quot; AND LEN([Parameters].[Comparison Area])=7)) THEN &quot;Not comparable: no LCA mapping for state/nonmetropolitan/unknown area&quot; ELSEIF COUNT(IF [comparison_match] THEN [annual_wage] END)=0 THEN &quot;No matched non-null LCA wages&quot; ELSE &quot;Matched national/CBSA LCA wages&quot; END)" />
+            </column>
+            <column-instance column="[comparison_wage_p50]" derivation="User" name="[usr:comparison_wage_p50:qk]" pivot="key" type="quantitative" />
+          </datasource-dependencies>
+          <datasource-dependencies datasource="Parameters">
+            <column name="[Comparison SOC]" caption="Shared detailed SOC (e.g. 15-1252)" datatype="string" role="measure" type="nominal" value="&quot;15-1252&quot;" param-domain-type="any">
+              <calculation class="tableau" formula="&quot;15-1252&quot;" />
+            </column>
+            <column name="[Comparison Area]" caption="Shared area: 1:99 national or 4:CBSA (e.g. 4:35620)" datatype="string" role="measure" type="nominal" value="&quot;1:99&quot;" param-domain-type="any">
+              <calculation class="tableau" formula="&quot;1:99&quot;" />
+            </column>
+            <column name="[Comparison FY]" caption="LCA fiscal year (0 = all archived releases)" datatype="integer" role="measure" type="quantitative" value="0" param-domain-type="any">
+              <calculation class="tableau" formula="0" />
+            </column>
+            <column name="[Comparison Survey Year]" caption="OEWS survey year (independent of LCA FY)" datatype="integer" role="measure" type="quantitative" value="2025" param-domain-type="any">
+              <calculation class="tableau" formula="2025" />
+            </column>
+          </datasource-dependencies>
+          <aggregation value="true" />
+        </view>
+        <style />
+        <panes>
+          <pane>
+            <view>
+              <breakdown value="auto" />
+            </view>
+            <mark class="Text" />
+            <encodings>
+              <text column="[lca].[usr:comparison_wage_p50:qk]" />
+            </encodings>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid="{D57996A6-4519-5B7A-A1E7-D66D59266C74}" />
+    </worksheet>
+    <worksheet name="11 Matched LCA wage p75 USD">
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>11 Matched LCA wage p75 USD</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource name="lca" />
+            <datasource name="Parameters" />
+          </datasources>
+          <datasource-dependencies datasource="lca">
+            <column name="[case_number]" datatype="string" role="dimension" type="nominal" />
+            <column name="[is_certified]" datatype="boolean" role="dimension" type="nominal" />
+            <column name="[annual_wage]" datatype="real" role="measure" type="quantitative" />
+            <column name="[employer]" datatype="string" role="dimension" type="nominal" />
+            <column name="[soc_major]" datatype="string" role="dimension" type="nominal" />
+            <column name="[soc]" datatype="string" role="dimension" type="nominal" />
+            <column name="[metro]" datatype="string" role="dimension" type="nominal" />
+            <column name="[fiscal_year]" datatype="integer" role="dimension" type="nominal" />
+            <column name="[employer_history_status]" datatype="string" role="dimension" type="nominal" />
+            <column name="[case_count]" datatype="real" role="measure" type="quantitative" caption="case count">
+              <calculation class="tableau" formula="COUNT([case_number])" />
+            </column>
+            <column name="[certified_rate]" datatype="real" role="measure" type="quantitative" caption="certified rate">
+              <calculation class="tableau" formula="SUM(IF [is_certified] THEN 1 ELSE 0 END) / COUNT([case_number])" />
+            </column>
+            <column name="[wage_p50]" datatype="real" role="measure" type="quantitative" caption="wage p50">
+              <calculation class="tableau" formula="PERCENTILE([annual_wage], 0.5)" />
+            </column>
+            <column name="[wage_p75]" datatype="real" role="measure" type="quantitative" caption="wage p75">
+              <calculation class="tableau" formula="PERCENTILE([annual_wage], 0.75)" />
+            </column>
+            <column name="[wage_p90]" datatype="real" role="measure" type="quantitative" caption="wage p90">
+              <calculation class="tableau" formula="PERCENTILE([annual_wage], 0.9)" />
+            </column>
+            <column name="[comparison_match]" datatype="boolean" role="dimension" type="nominal" caption="comparison match">
+              <calculation class="tableau" formula="[soc]=[Parameters].[Comparison SOC] AND ([Parameters].[Comparison Area]=&quot;1:99&quot; OR (LEFT([Parameters].[Comparison Area],2)=&quot;4:&quot; AND LEN([Parameters].[Comparison Area])=7)) AND ([Parameters].[Comparison Area]=&quot;1:99&quot; OR [metro]=MID([Parameters].[Comparison Area],3,5)) AND ([Parameters].[Comparison FY]=0 OR [fiscal_year]=[Parameters].[Comparison FY])" />
+            </column>
+            <column name="[comparison_wage_p50]" datatype="real" role="measure" type="quantitative" caption="comparison wage p50">
+              <calculation class="tableau" formula="PERCENTILE(IF [comparison_match] THEN [annual_wage] END, 0.5)" />
+            </column>
+            <column name="[comparison_wage_p75]" datatype="real" role="measure" type="quantitative" caption="comparison wage p75">
+              <calculation class="tableau" formula="PERCENTILE(IF [comparison_match] THEN [annual_wage] END, 0.75)" />
+            </column>
+            <column name="[comparison_wage_p90]" datatype="real" role="measure" type="quantitative" caption="comparison wage p90">
+              <calculation class="tableau" formula="PERCENTILE(IF [comparison_match] THEN [annual_wage] END, 0.9)" />
+            </column>
+            <column name="[comparison_scope]" datatype="string" role="measure" type="nominal" caption="comparison scope">
+              <calculation class="tableau" formula="&quot;SOC &quot; + [Parameters].[Comparison SOC] + &quot; | Area &quot; + [Parameters].[Comparison Area] + &quot; | LCA FY &quot; + (IF [Parameters].[Comparison FY]=0 THEN &quot;all archived&quot; ELSE STR([Parameters].[Comparison FY]) END) + &quot; | &quot; + (IF NOT ([Parameters].[Comparison Area]=&quot;1:99&quot; OR (LEFT([Parameters].[Comparison Area],2)=&quot;4:&quot; AND LEN([Parameters].[Comparison Area])=7)) THEN &quot;Not comparable: no LCA mapping for state/nonmetropolitan/unknown area&quot; ELSEIF COUNT(IF [comparison_match] THEN [annual_wage] END)=0 THEN &quot;No matched non-null LCA wages&quot; ELSE &quot;Matched national/CBSA LCA wages&quot; END)" />
+            </column>
+            <column-instance column="[comparison_wage_p75]" derivation="User" name="[usr:comparison_wage_p75:qk]" pivot="key" type="quantitative" />
+          </datasource-dependencies>
+          <datasource-dependencies datasource="Parameters">
+            <column name="[Comparison SOC]" caption="Shared detailed SOC (e.g. 15-1252)" datatype="string" role="measure" type="nominal" value="&quot;15-1252&quot;" param-domain-type="any">
+              <calculation class="tableau" formula="&quot;15-1252&quot;" />
+            </column>
+            <column name="[Comparison Area]" caption="Shared area: 1:99 national or 4:CBSA (e.g. 4:35620)" datatype="string" role="measure" type="nominal" value="&quot;1:99&quot;" param-domain-type="any">
+              <calculation class="tableau" formula="&quot;1:99&quot;" />
+            </column>
+            <column name="[Comparison FY]" caption="LCA fiscal year (0 = all archived releases)" datatype="integer" role="measure" type="quantitative" value="0" param-domain-type="any">
+              <calculation class="tableau" formula="0" />
+            </column>
+            <column name="[Comparison Survey Year]" caption="OEWS survey year (independent of LCA FY)" datatype="integer" role="measure" type="quantitative" value="2025" param-domain-type="any">
+              <calculation class="tableau" formula="2025" />
+            </column>
+          </datasource-dependencies>
+          <aggregation value="true" />
+        </view>
+        <style />
+        <panes>
+          <pane>
+            <view>
+              <breakdown value="auto" />
+            </view>
+            <mark class="Text" />
+            <encodings>
+              <text column="[lca].[usr:comparison_wage_p75:qk]" />
+            </encodings>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid="{269CBA5D-7819-55E5-AF26-1F2095D0D85E}" />
+    </worksheet>
+    <worksheet name="11 Matched LCA wage p90 USD">
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>11 Matched LCA wage p90 USD</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource name="lca" />
+            <datasource name="Parameters" />
+          </datasources>
+          <datasource-dependencies datasource="lca">
+            <column name="[case_number]" datatype="string" role="dimension" type="nominal" />
+            <column name="[is_certified]" datatype="boolean" role="dimension" type="nominal" />
+            <column name="[annual_wage]" datatype="real" role="measure" type="quantitative" />
+            <column name="[employer]" datatype="string" role="dimension" type="nominal" />
+            <column name="[soc_major]" datatype="string" role="dimension" type="nominal" />
+            <column name="[soc]" datatype="string" role="dimension" type="nominal" />
+            <column name="[metro]" datatype="string" role="dimension" type="nominal" />
+            <column name="[fiscal_year]" datatype="integer" role="dimension" type="nominal" />
+            <column name="[employer_history_status]" datatype="string" role="dimension" type="nominal" />
+            <column name="[case_count]" datatype="real" role="measure" type="quantitative" caption="case count">
+              <calculation class="tableau" formula="COUNT([case_number])" />
+            </column>
+            <column name="[certified_rate]" datatype="real" role="measure" type="quantitative" caption="certified rate">
+              <calculation class="tableau" formula="SUM(IF [is_certified] THEN 1 ELSE 0 END) / COUNT([case_number])" />
+            </column>
+            <column name="[wage_p50]" datatype="real" role="measure" type="quantitative" caption="wage p50">
+              <calculation class="tableau" formula="PERCENTILE([annual_wage], 0.5)" />
+            </column>
+            <column name="[wage_p75]" datatype="real" role="measure" type="quantitative" caption="wage p75">
+              <calculation class="tableau" formula="PERCENTILE([annual_wage], 0.75)" />
+            </column>
+            <column name="[wage_p90]" datatype="real" role="measure" type="quantitative" caption="wage p90">
+              <calculation class="tableau" formula="PERCENTILE([annual_wage], 0.9)" />
+            </column>
+            <column name="[comparison_match]" datatype="boolean" role="dimension" type="nominal" caption="comparison match">
+              <calculation class="tableau" formula="[soc]=[Parameters].[Comparison SOC] AND ([Parameters].[Comparison Area]=&quot;1:99&quot; OR (LEFT([Parameters].[Comparison Area],2)=&quot;4:&quot; AND LEN([Parameters].[Comparison Area])=7)) AND ([Parameters].[Comparison Area]=&quot;1:99&quot; OR [metro]=MID([Parameters].[Comparison Area],3,5)) AND ([Parameters].[Comparison FY]=0 OR [fiscal_year]=[Parameters].[Comparison FY])" />
+            </column>
+            <column name="[comparison_wage_p50]" datatype="real" role="measure" type="quantitative" caption="comparison wage p50">
+              <calculation class="tableau" formula="PERCENTILE(IF [comparison_match] THEN [annual_wage] END, 0.5)" />
+            </column>
+            <column name="[comparison_wage_p75]" datatype="real" role="measure" type="quantitative" caption="comparison wage p75">
+              <calculation class="tableau" formula="PERCENTILE(IF [comparison_match] THEN [annual_wage] END, 0.75)" />
+            </column>
+            <column name="[comparison_wage_p90]" datatype="real" role="measure" type="quantitative" caption="comparison wage p90">
+              <calculation class="tableau" formula="PERCENTILE(IF [comparison_match] THEN [annual_wage] END, 0.9)" />
+            </column>
+            <column name="[comparison_scope]" datatype="string" role="measure" type="nominal" caption="comparison scope">
+              <calculation class="tableau" formula="&quot;SOC &quot; + [Parameters].[Comparison SOC] + &quot; | Area &quot; + [Parameters].[Comparison Area] + &quot; | LCA FY &quot; + (IF [Parameters].[Comparison FY]=0 THEN &quot;all archived&quot; ELSE STR([Parameters].[Comparison FY]) END) + &quot; | &quot; + (IF NOT ([Parameters].[Comparison Area]=&quot;1:99&quot; OR (LEFT([Parameters].[Comparison Area],2)=&quot;4:&quot; AND LEN([Parameters].[Comparison Area])=7)) THEN &quot;Not comparable: no LCA mapping for state/nonmetropolitan/unknown area&quot; ELSEIF COUNT(IF [comparison_match] THEN [annual_wage] END)=0 THEN &quot;No matched non-null LCA wages&quot; ELSE &quot;Matched national/CBSA LCA wages&quot; END)" />
+            </column>
+            <column-instance column="[comparison_wage_p90]" derivation="User" name="[usr:comparison_wage_p90:qk]" pivot="key" type="quantitative" />
+          </datasource-dependencies>
+          <datasource-dependencies datasource="Parameters">
+            <column name="[Comparison SOC]" caption="Shared detailed SOC (e.g. 15-1252)" datatype="string" role="measure" type="nominal" value="&quot;15-1252&quot;" param-domain-type="any">
+              <calculation class="tableau" formula="&quot;15-1252&quot;" />
+            </column>
+            <column name="[Comparison Area]" caption="Shared area: 1:99 national or 4:CBSA (e.g. 4:35620)" datatype="string" role="measure" type="nominal" value="&quot;1:99&quot;" param-domain-type="any">
+              <calculation class="tableau" formula="&quot;1:99&quot;" />
+            </column>
+            <column name="[Comparison FY]" caption="LCA fiscal year (0 = all archived releases)" datatype="integer" role="measure" type="quantitative" value="0" param-domain-type="any">
+              <calculation class="tableau" formula="0" />
+            </column>
+            <column name="[Comparison Survey Year]" caption="OEWS survey year (independent of LCA FY)" datatype="integer" role="measure" type="quantitative" value="2025" param-domain-type="any">
+              <calculation class="tableau" formula="2025" />
+            </column>
+          </datasource-dependencies>
+          <aggregation value="true" />
+        </view>
+        <style />
+        <panes>
+          <pane>
+            <view>
+              <breakdown value="auto" />
+            </view>
+            <mark class="Text" />
+            <encodings>
+              <text column="[lca].[usr:comparison_wage_p90:qk]" />
+            </encodings>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid="{D7A4D163-2847-5747-974E-F0E194CDFE27}" />
+    </worksheet>
+    <worksheet name="12 Matched official annual median">
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>12 Matched official annual median</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource name="wages" />
+            <datasource name="Parameters" />
+          </datasources>
+          <datasource-dependencies datasource="wages">
+            <column name="[soc]" datatype="string" role="dimension" type="nominal" />
+            <column name="[soc_major]" datatype="string" role="dimension" type="nominal" />
+            <column name="[metro]" datatype="string" role="dimension" type="nominal" />
+            <column name="[area]" datatype="string" role="dimension" type="nominal" />
+            <column name="[survey_year]" datatype="integer" role="dimension" type="nominal" />
+            <column name="[fiscal_year]" datatype="integer" role="dimension" type="nominal" />
+            <column name="[occupation_level]" datatype="string" role="dimension" type="nominal" />
+            <column name="[geography_level]" datatype="string" role="dimension" type="nominal" />
+            <column name="[annual_median_wage]" datatype="real" role="measure" type="quantitative" />
+            <column name="[median_raw]" datatype="string" role="dimension" type="nominal" />
+            <column name="[wage_status]" datatype="string" role="dimension" type="nominal" />
+            <column name="[annual_flag]" datatype="string" role="dimension" type="nominal" />
+            <column name="[hourly_flag]" datatype="string" role="dimension" type="nominal" />
+            <column name="[oews_median]" datatype="real" role="measure" type="quantitative" caption="oews median">
+              <calculation class="tableau" formula="IF COUNT([soc]) = 1 THEN MAX([annual_median_wage]) END" />
+            </column>
+            <column name="[estimate_count]" datatype="real" role="measure" type="quantitative" caption="estimate count">
+              <calculation class="tableau" formula="COUNT([soc])" />
+            </column>
+            <column name="[reconcile_oews_median]" datatype="real" role="measure" type="quantitative" caption="reconcile oews median">
+              <calculation class="tableau" formula="IF SUM(IF [soc]=&quot;15-1252&quot; AND [area]=&quot;1:99&quot; AND [survey_year]=2025 THEN 1 ELSE 0 END)=1 THEN MAX(IF [soc]=&quot;15-1252&quot; AND [area]=&quot;1:99&quot; AND [survey_year]=2025 THEN [annual_median_wage] END) END" />
+            </column>
+            <column name="[comparison_match]" datatype="boolean" role="dimension" type="nominal" caption="comparison match">
+              <calculation class="tableau" formula="[soc]=[Parameters].[Comparison SOC] AND ([Parameters].[Comparison Area]=&quot;1:99&quot; OR (LEFT([Parameters].[Comparison Area],2)=&quot;4:&quot; AND LEN([Parameters].[Comparison Area])=7)) AND [area]=[Parameters].[Comparison Area] AND [survey_year]=[Parameters].[Comparison Survey Year]" />
+            </column>
+            <column name="[comparison_estimate_count]" datatype="real" role="measure" type="quantitative" caption="comparison estimate count">
+              <calculation class="tableau" formula="SUM(IF [comparison_match] THEN 1 ELSE 0 END)" />
+            </column>
+            <column name="[comparison_oews_median]" datatype="real" role="measure" type="quantitative" caption="comparison oews median">
+              <calculation class="tableau" formula="IF [comparison_estimate_count]=1 THEN MAX(IF [comparison_match] THEN [annual_median_wage] END) END" />
+            </column>
+            <column name="[comparison_status]" datatype="string" role="measure" type="nominal" caption="comparison status">
+              <calculation class="tableau" formula="&quot;SOC &quot; + [Parameters].[Comparison SOC] + &quot; | Area &quot; + [Parameters].[Comparison Area] + &quot; | OEWS survey &quot; + STR([Parameters].[Comparison Survey Year]) + &quot; | &quot; + (IF NOT ([Parameters].[Comparison Area]=&quot;1:99&quot; OR (LEFT([Parameters].[Comparison Area],2)=&quot;4:&quot; AND LEN([Parameters].[Comparison Area])=7)) THEN &quot;Not comparable: unsupported area&quot; ELSEIF [comparison_estimate_count]=0 THEN &quot;No matching published estimate&quot; ELSEIF [comparison_estimate_count]&lt;&gt;1 THEN &quot;Multiple estimates: benchmark unavailable&quot; ELSEIF ISNULL([comparison_oews_median]) THEN &quot;Suppressed/top-coded: benchmark unavailable&quot; ELSE &quot;One official annual median; survey year is not LCA FY&quot; END)" />
+            </column>
+            <column-instance column="[comparison_oews_median]" derivation="User" name="[usr:comparison_oews_median:qk]" pivot="key" type="quantitative" />
+          </datasource-dependencies>
+          <datasource-dependencies datasource="Parameters">
+            <column name="[Comparison SOC]" caption="Shared detailed SOC (e.g. 15-1252)" datatype="string" role="measure" type="nominal" value="&quot;15-1252&quot;" param-domain-type="any">
+              <calculation class="tableau" formula="&quot;15-1252&quot;" />
+            </column>
+            <column name="[Comparison Area]" caption="Shared area: 1:99 national or 4:CBSA (e.g. 4:35620)" datatype="string" role="measure" type="nominal" value="&quot;1:99&quot;" param-domain-type="any">
+              <calculation class="tableau" formula="&quot;1:99&quot;" />
+            </column>
+            <column name="[Comparison FY]" caption="LCA fiscal year (0 = all archived releases)" datatype="integer" role="measure" type="quantitative" value="0" param-domain-type="any">
+              <calculation class="tableau" formula="0" />
+            </column>
+            <column name="[Comparison Survey Year]" caption="OEWS survey year (independent of LCA FY)" datatype="integer" role="measure" type="quantitative" value="2025" param-domain-type="any">
+              <calculation class="tableau" formula="2025" />
+            </column>
+          </datasource-dependencies>
+          <aggregation value="true" />
+        </view>
+        <style />
+        <panes>
+          <pane>
+            <view>
+              <breakdown value="auto" />
+            </view>
+            <mark class="Text" />
+            <encodings>
+              <text column="[wages].[usr:comparison_oews_median:qk]" />
+            </encodings>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid="{E7D45873-E3E0-589B-833E-FEF54C6F693B}" />
+    </worksheet>
+    <worksheet name="13 Comparison LCA scope">
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>13 Comparison LCA scope</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource name="lca" />
+            <datasource name="Parameters" />
+          </datasources>
+          <datasource-dependencies datasource="lca">
+            <column name="[case_number]" datatype="string" role="dimension" type="nominal" />
+            <column name="[is_certified]" datatype="boolean" role="dimension" type="nominal" />
+            <column name="[annual_wage]" datatype="real" role="measure" type="quantitative" />
+            <column name="[employer]" datatype="string" role="dimension" type="nominal" />
+            <column name="[soc_major]" datatype="string" role="dimension" type="nominal" />
+            <column name="[soc]" datatype="string" role="dimension" type="nominal" />
+            <column name="[metro]" datatype="string" role="dimension" type="nominal" />
+            <column name="[fiscal_year]" datatype="integer" role="dimension" type="nominal" />
+            <column name="[employer_history_status]" datatype="string" role="dimension" type="nominal" />
+            <column name="[case_count]" datatype="real" role="measure" type="quantitative" caption="case count">
+              <calculation class="tableau" formula="COUNT([case_number])" />
+            </column>
+            <column name="[certified_rate]" datatype="real" role="measure" type="quantitative" caption="certified rate">
+              <calculation class="tableau" formula="SUM(IF [is_certified] THEN 1 ELSE 0 END) / COUNT([case_number])" />
+            </column>
+            <column name="[wage_p50]" datatype="real" role="measure" type="quantitative" caption="wage p50">
+              <calculation class="tableau" formula="PERCENTILE([annual_wage], 0.5)" />
+            </column>
+            <column name="[wage_p75]" datatype="real" role="measure" type="quantitative" caption="wage p75">
+              <calculation class="tableau" formula="PERCENTILE([annual_wage], 0.75)" />
+            </column>
+            <column name="[wage_p90]" datatype="real" role="measure" type="quantitative" caption="wage p90">
+              <calculation class="tableau" formula="PERCENTILE([annual_wage], 0.9)" />
+            </column>
+            <column name="[comparison_match]" datatype="boolean" role="dimension" type="nominal" caption="comparison match">
+              <calculation class="tableau" formula="[soc]=[Parameters].[Comparison SOC] AND ([Parameters].[Comparison Area]=&quot;1:99&quot; OR (LEFT([Parameters].[Comparison Area],2)=&quot;4:&quot; AND LEN([Parameters].[Comparison Area])=7)) AND ([Parameters].[Comparison Area]=&quot;1:99&quot; OR [metro]=MID([Parameters].[Comparison Area],3,5)) AND ([Parameters].[Comparison FY]=0 OR [fiscal_year]=[Parameters].[Comparison FY])" />
+            </column>
+            <column name="[comparison_wage_p50]" datatype="real" role="measure" type="quantitative" caption="comparison wage p50">
+              <calculation class="tableau" formula="PERCENTILE(IF [comparison_match] THEN [annual_wage] END, 0.5)" />
+            </column>
+            <column name="[comparison_wage_p75]" datatype="real" role="measure" type="quantitative" caption="comparison wage p75">
+              <calculation class="tableau" formula="PERCENTILE(IF [comparison_match] THEN [annual_wage] END, 0.75)" />
+            </column>
+            <column name="[comparison_wage_p90]" datatype="real" role="measure" type="quantitative" caption="comparison wage p90">
+              <calculation class="tableau" formula="PERCENTILE(IF [comparison_match] THEN [annual_wage] END, 0.9)" />
+            </column>
+            <column name="[comparison_scope]" datatype="string" role="measure" type="nominal" caption="comparison scope">
+              <calculation class="tableau" formula="&quot;SOC &quot; + [Parameters].[Comparison SOC] + &quot; | Area &quot; + [Parameters].[Comparison Area] + &quot; | LCA FY &quot; + (IF [Parameters].[Comparison FY]=0 THEN &quot;all archived&quot; ELSE STR([Parameters].[Comparison FY]) END) + &quot; | &quot; + (IF NOT ([Parameters].[Comparison Area]=&quot;1:99&quot; OR (LEFT([Parameters].[Comparison Area],2)=&quot;4:&quot; AND LEN([Parameters].[Comparison Area])=7)) THEN &quot;Not comparable: no LCA mapping for state/nonmetropolitan/unknown area&quot; ELSEIF COUNT(IF [comparison_match] THEN [annual_wage] END)=0 THEN &quot;No matched non-null LCA wages&quot; ELSE &quot;Matched national/CBSA LCA wages&quot; END)" />
+            </column>
+            <column-instance column="[comparison_scope]" derivation="User" name="[usr:comparison_scope:nk]" pivot="key" type="nominal" />
+          </datasource-dependencies>
+          <datasource-dependencies datasource="Parameters">
+            <column name="[Comparison SOC]" caption="Shared detailed SOC (e.g. 15-1252)" datatype="string" role="measure" type="nominal" value="&quot;15-1252&quot;" param-domain-type="any">
+              <calculation class="tableau" formula="&quot;15-1252&quot;" />
+            </column>
+            <column name="[Comparison Area]" caption="Shared area: 1:99 national or 4:CBSA (e.g. 4:35620)" datatype="string" role="measure" type="nominal" value="&quot;1:99&quot;" param-domain-type="any">
+              <calculation class="tableau" formula="&quot;1:99&quot;" />
+            </column>
+            <column name="[Comparison FY]" caption="LCA fiscal year (0 = all archived releases)" datatype="integer" role="measure" type="quantitative" value="0" param-domain-type="any">
+              <calculation class="tableau" formula="0" />
+            </column>
+            <column name="[Comparison Survey Year]" caption="OEWS survey year (independent of LCA FY)" datatype="integer" role="measure" type="quantitative" value="2025" param-domain-type="any">
+              <calculation class="tableau" formula="2025" />
+            </column>
+          </datasource-dependencies>
+          <aggregation value="true" />
+        </view>
+        <style />
+        <panes>
+          <pane>
+            <view>
+              <breakdown value="auto" />
+            </view>
+            <mark class="Text" />
+            <encodings>
+              <text column="[lca].[usr:comparison_scope:nk]" />
+            </encodings>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid="{DA68BBC4-AA4D-59A7-9514-FDDED76CFA76}" />
+    </worksheet>
+    <worksheet name="14 Comparison benchmark status">
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>14 Comparison benchmark status</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource name="wages" />
+            <datasource name="Parameters" />
+          </datasources>
+          <datasource-dependencies datasource="wages">
+            <column name="[soc]" datatype="string" role="dimension" type="nominal" />
+            <column name="[soc_major]" datatype="string" role="dimension" type="nominal" />
+            <column name="[metro]" datatype="string" role="dimension" type="nominal" />
+            <column name="[area]" datatype="string" role="dimension" type="nominal" />
+            <column name="[survey_year]" datatype="integer" role="dimension" type="nominal" />
+            <column name="[fiscal_year]" datatype="integer" role="dimension" type="nominal" />
+            <column name="[occupation_level]" datatype="string" role="dimension" type="nominal" />
+            <column name="[geography_level]" datatype="string" role="dimension" type="nominal" />
+            <column name="[annual_median_wage]" datatype="real" role="measure" type="quantitative" />
+            <column name="[median_raw]" datatype="string" role="dimension" type="nominal" />
+            <column name="[wage_status]" datatype="string" role="dimension" type="nominal" />
+            <column name="[annual_flag]" datatype="string" role="dimension" type="nominal" />
+            <column name="[hourly_flag]" datatype="string" role="dimension" type="nominal" />
+            <column name="[oews_median]" datatype="real" role="measure" type="quantitative" caption="oews median">
+              <calculation class="tableau" formula="IF COUNT([soc]) = 1 THEN MAX([annual_median_wage]) END" />
+            </column>
+            <column name="[estimate_count]" datatype="real" role="measure" type="quantitative" caption="estimate count">
+              <calculation class="tableau" formula="COUNT([soc])" />
+            </column>
+            <column name="[reconcile_oews_median]" datatype="real" role="measure" type="quantitative" caption="reconcile oews median">
+              <calculation class="tableau" formula="IF SUM(IF [soc]=&quot;15-1252&quot; AND [area]=&quot;1:99&quot; AND [survey_year]=2025 THEN 1 ELSE 0 END)=1 THEN MAX(IF [soc]=&quot;15-1252&quot; AND [area]=&quot;1:99&quot; AND [survey_year]=2025 THEN [annual_median_wage] END) END" />
+            </column>
+            <column name="[comparison_match]" datatype="boolean" role="dimension" type="nominal" caption="comparison match">
+              <calculation class="tableau" formula="[soc]=[Parameters].[Comparison SOC] AND ([Parameters].[Comparison Area]=&quot;1:99&quot; OR (LEFT([Parameters].[Comparison Area],2)=&quot;4:&quot; AND LEN([Parameters].[Comparison Area])=7)) AND [area]=[Parameters].[Comparison Area] AND [survey_year]=[Parameters].[Comparison Survey Year]" />
+            </column>
+            <column name="[comparison_estimate_count]" datatype="real" role="measure" type="quantitative" caption="comparison estimate count">
+              <calculation class="tableau" formula="SUM(IF [comparison_match] THEN 1 ELSE 0 END)" />
+            </column>
+            <column name="[comparison_oews_median]" datatype="real" role="measure" type="quantitative" caption="comparison oews median">
+              <calculation class="tableau" formula="IF [comparison_estimate_count]=1 THEN MAX(IF [comparison_match] THEN [annual_median_wage] END) END" />
+            </column>
+            <column name="[comparison_status]" datatype="string" role="measure" type="nominal" caption="comparison status">
+              <calculation class="tableau" formula="&quot;SOC &quot; + [Parameters].[Comparison SOC] + &quot; | Area &quot; + [Parameters].[Comparison Area] + &quot; | OEWS survey &quot; + STR([Parameters].[Comparison Survey Year]) + &quot; | &quot; + (IF NOT ([Parameters].[Comparison Area]=&quot;1:99&quot; OR (LEFT([Parameters].[Comparison Area],2)=&quot;4:&quot; AND LEN([Parameters].[Comparison Area])=7)) THEN &quot;Not comparable: unsupported area&quot; ELSEIF [comparison_estimate_count]=0 THEN &quot;No matching published estimate&quot; ELSEIF [comparison_estimate_count]&lt;&gt;1 THEN &quot;Multiple estimates: benchmark unavailable&quot; ELSEIF ISNULL([comparison_oews_median]) THEN &quot;Suppressed/top-coded: benchmark unavailable&quot; ELSE &quot;One official annual median; survey year is not LCA FY&quot; END)" />
+            </column>
+            <column-instance column="[comparison_status]" derivation="User" name="[usr:comparison_status:nk]" pivot="key" type="nominal" />
+          </datasource-dependencies>
+          <datasource-dependencies datasource="Parameters">
+            <column name="[Comparison SOC]" caption="Shared detailed SOC (e.g. 15-1252)" datatype="string" role="measure" type="nominal" value="&quot;15-1252&quot;" param-domain-type="any">
+              <calculation class="tableau" formula="&quot;15-1252&quot;" />
+            </column>
+            <column name="[Comparison Area]" caption="Shared area: 1:99 national or 4:CBSA (e.g. 4:35620)" datatype="string" role="measure" type="nominal" value="&quot;1:99&quot;" param-domain-type="any">
+              <calculation class="tableau" formula="&quot;1:99&quot;" />
+            </column>
+            <column name="[Comparison FY]" caption="LCA fiscal year (0 = all archived releases)" datatype="integer" role="measure" type="quantitative" value="0" param-domain-type="any">
+              <calculation class="tableau" formula="0" />
+            </column>
+            <column name="[Comparison Survey Year]" caption="OEWS survey year (independent of LCA FY)" datatype="integer" role="measure" type="quantitative" value="2025" param-domain-type="any">
+              <calculation class="tableau" formula="2025" />
+            </column>
+          </datasource-dependencies>
+          <aggregation value="true" />
+        </view>
+        <style />
+        <panes>
+          <pane>
+            <view>
+              <breakdown value="auto" />
+            </view>
+            <mark class="Text" />
+            <encodings>
+              <text column="[wages].[usr:comparison_status:nk]" />
+            </encodings>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid="{F40F0052-1E89-5B03-8F52-B25FFBB3219E}" />
+    </worksheet>
+  </worksheets>
+  <dashboards>
+    <dashboard name="SponsorAtlas - applications and observed jobs">
+      <style />
+      <size maxheight="1000" maxwidth="1440" minheight="1000" minwidth="1440" />
+      <zones>
+        <zone id="1" name="01 Latest LCA cases" x="0" y="9000" w="20000" h="14000" />
+        <zone id="2" name="02 Certified rate" x="20000" y="9000" w="20000" h="14000" />
+        <zone id="3" name="03 Annual wage p75 USD" x="40000" y="9000" w="20000" h="14000" />
+        <zone id="4" name="04 Active observed posting-days" x="60000" y="9000" w="20000" h="14000" />
+        <zone id="5" name="05 OEWS national 15-1252 survey 2025" x="80000" y="9000" w="20000" h="14000" />
+        <zone id="6" name="06 Cases by employer - provisional ER" x="0" y="25000" w="33333" h="33000" />
+        <zone id="7" name="07 Cases by detailed SOC" x="33333" y="25000" w="33333" h="33000" />
+        <zone id="8" name="08 Cases by metropolitan CBSA" x="66666" y="25000" w="33333" h="33000" />
+        <zone id="9" name="09 Archived release fiscal year" x="0" y="60000" w="50000" h="26000" />
+        <zone id="10" name="10 UTC observations - one date is not a trend" x="50000" y="60000" w="50000" h="26000" />
+        <zone id="20" x="0" y="0" w="100000" h="6000" type-v2="text">
+          <formatted-text>
+            <run>SponsorAtlas | Click employer, SOC, metro or FY marks to filter; clear selection to reset.</run>
+          </formatted-text>
+        </zone>
+        <zone id="21" x="0" y="88000" w="100000" h="6000" type-v2="text">
+          <formatted-text>
+            <run>Archived Q4 only; ER/history provisional. One original posting date is not a trend. Fixed OEWS card stays national 15-1252 / 2025.</run>
+          </formatted-text>
+        </zone>
+        <zone id="22" x="0" y="94000" w="100000" h="6000" type-v2="text">
+          <formatted-text>
+            <run>LCA applications are not approvals and do not guarantee sponsorship. LCA 申请不等于获批，也不代表这个岗位一定提供担保。</run>
+          </formatted-text>
+        </zone>
+      </zones>
+      <simple-id uuid="{F103DE07-938D-568A-AE56-59027312907B}" />
+    </dashboard>
+    <dashboard name="SponsorAtlas - matched wage comparison">
+      <style />
+      <size maxheight="1000" maxwidth="1440" minheight="1000" minwidth="1440" />
+      <zones>
+        <zone id="30" x="0" y="8000" w="25000" h="12000" type-v2="paramctrl" name="Parameters" param="[Parameters].[Comparison SOC]" show-title="true" />
+        <zone id="31" x="25000" y="8000" w="25000" h="12000" type-v2="paramctrl" name="Parameters" param="[Parameters].[Comparison Area]" show-title="true" />
+        <zone id="32" x="50000" y="8000" w="25000" h="12000" type-v2="paramctrl" name="Parameters" param="[Parameters].[Comparison FY]" show-title="true" />
+        <zone id="33" x="75000" y="8000" w="25000" h="12000" type-v2="paramctrl" name="Parameters" param="[Parameters].[Comparison Survey Year]" show-title="true" />
+        <zone id="40" name="11 Matched LCA wage p50 USD" x="0" y="23000" w="33333" h="20000" />
+        <zone id="41" name="11 Matched LCA wage p75 USD" x="33333" y="23000" w="33333" h="20000" />
+        <zone id="42" name="11 Matched LCA wage p90 USD" x="66666" y="23000" w="33333" h="20000" />
+        <zone id="43" name="12 Matched official annual median" x="0" y="46000" w="100000" h="13000" />
+        <zone id="44" name="13 Comparison LCA scope" x="0" y="61000" w="100000" h="13000" />
+        <zone id="45" name="14 Comparison benchmark status" x="0" y="76000" w="100000" h="13000" />
+        <zone id="50" x="0" y="0" w="100000" h="7000" type-v2="text">
+          <formatted-text>
+            <run>Matched wages | Edit shared SOC and area once for all four values. Annual USD; percentiles are not OEWS ranks.</run>
+          </formatted-text>
+        </zone>
+        <zone id="51" x="0" y="92000" w="100000" h="7000" type-v2="text">
+          <formatted-text>
+            <run>LCA applications are not approvals and do not guarantee sponsorship. LCA 申请不等于获批，也不代表这个岗位一定提供担保。</run>
+          </formatted-text>
+        </zone>
+      </zones>
+      <simple-id uuid="{1F68C617-3704-5815-BB43-17658AA18906}" />
+    </dashboard>
+  </dashboards>
+  <windows>
+    <window name="01 Latest LCA cases" class="worksheet">
+      <cards>
+        <edge name="right">
+          <strip size="200">
+            <card type="filter" param="[lca].[none:employer:nk]" mode="checkdropdown" />
+            <card type="filter" param="[lca].[none:soc:nk]" mode="checkdropdown" />
+            <card type="filter" param="[lca].[none:metro:nk]" mode="checkdropdown" />
+            <card type="filter" param="[lca].[none:fiscal_year:nk]" mode="checkdropdown" />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid="{C3850E5A-2BD0-5A98-BEF7-79D87103F53F}" />
+    </window>
+    <window name="02 Certified rate" class="worksheet">
+      <cards>
+        <edge name="right">
+          <strip size="200">
+            <card type="filter" param="[lca].[none:employer:nk]" mode="checkdropdown" />
+            <card type="filter" param="[lca].[none:soc:nk]" mode="checkdropdown" />
+            <card type="filter" param="[lca].[none:metro:nk]" mode="checkdropdown" />
+            <card type="filter" param="[lca].[none:fiscal_year:nk]" mode="checkdropdown" />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid="{2A246671-CF03-554C-AB75-E36A5E3280F9}" />
+    </window>
+    <window name="03 Annual wage p75 USD" class="worksheet">
+      <cards>
+        <edge name="right">
+          <strip size="200">
+            <card type="filter" param="[lca].[none:employer:nk]" mode="checkdropdown" />
+            <card type="filter" param="[lca].[none:soc:nk]" mode="checkdropdown" />
+            <card type="filter" param="[lca].[none:metro:nk]" mode="checkdropdown" />
+            <card type="filter" param="[lca].[none:fiscal_year:nk]" mode="checkdropdown" />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid="{26333350-6F56-5A7A-8569-14632E391386}" />
+    </window>
+    <window name="04 Active observed posting-days" class="worksheet">
+      <cards>
+        <edge name="right">
+          <strip size="200">
+            <card type="filter" param="[postings].[none:employer:nk]" mode="checkdropdown" />
+            <card type="filter" param="[postings].[none:soc:nk]" mode="checkdropdown" />
+            <card type="filter" param="[postings].[none:metro:nk]" mode="checkdropdown" />
+            <card type="filter" param="[postings].[none:fiscal_year:nk]" mode="checkdropdown" />
+            <card type="filter" param="[postings].[none:observation_date:nk]" mode="checkdropdown" />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid="{6DBDB3D5-C90E-5CC4-BF76-5CCEB48EA18C}" />
+    </window>
+    <window name="05 OEWS national 15-1252 survey 2025" class="worksheet">
+      <cards>
+        <edge name="right">
+          <strip size="200" />
+        </edge>
+      </cards>
+      <simple-id uuid="{75A56FA5-0FDF-5B6C-B29A-1D9B4AB4288D}" />
+    </window>
+    <window name="06 Cases by employer - provisional ER" class="worksheet">
+      <cards>
+        <edge name="right">
+          <strip size="200">
+            <card type="filter" param="[lca].[none:employer:nk]" mode="checkdropdown" />
+            <card type="filter" param="[lca].[none:soc:nk]" mode="checkdropdown" />
+            <card type="filter" param="[lca].[none:metro:nk]" mode="checkdropdown" />
+            <card type="filter" param="[lca].[none:fiscal_year:nk]" mode="checkdropdown" />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid="{D4E7830A-3C25-5185-8C57-4AD223A6CE60}" />
+    </window>
+    <window name="07 Cases by detailed SOC" class="worksheet">
+      <cards>
+        <edge name="right">
+          <strip size="200">
+            <card type="filter" param="[lca].[none:employer:nk]" mode="checkdropdown" />
+            <card type="filter" param="[lca].[none:soc:nk]" mode="checkdropdown" />
+            <card type="filter" param="[lca].[none:metro:nk]" mode="checkdropdown" />
+            <card type="filter" param="[lca].[none:fiscal_year:nk]" mode="checkdropdown" />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid="{04763879-1507-596E-A36B-6D9952219838}" />
+    </window>
+    <window name="08 Cases by metropolitan CBSA" class="worksheet">
+      <cards>
+        <edge name="right">
+          <strip size="200">
+            <card type="filter" param="[lca].[none:employer:nk]" mode="checkdropdown" />
+            <card type="filter" param="[lca].[none:soc:nk]" mode="checkdropdown" />
+            <card type="filter" param="[lca].[none:metro:nk]" mode="checkdropdown" />
+            <card type="filter" param="[lca].[none:fiscal_year:nk]" mode="checkdropdown" />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid="{92DFDD90-4CDA-5787-ABDC-7203E77DF17C}" />
+    </window>
+    <window name="09 Archived release fiscal year" class="worksheet">
+      <cards>
+        <edge name="right">
+          <strip size="200">
+            <card type="filter" param="[lca].[none:employer:nk]" mode="checkdropdown" />
+            <card type="filter" param="[lca].[none:soc:nk]" mode="checkdropdown" />
+            <card type="filter" param="[lca].[none:metro:nk]" mode="checkdropdown" />
+            <card type="filter" param="[lca].[none:fiscal_year:nk]" mode="checkdropdown" />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid="{D62FF1D6-DEA6-53E9-BB58-EA6F6B333084}" />
+    </window>
+    <window name="10 UTC observations - one date is not a trend" class="worksheet">
+      <cards>
+        <edge name="right">
+          <strip size="200">
+            <card type="filter" param="[postings].[none:employer:nk]" mode="checkdropdown" />
+            <card type="filter" param="[postings].[none:soc:nk]" mode="checkdropdown" />
+            <card type="filter" param="[postings].[none:metro:nk]" mode="checkdropdown" />
+            <card type="filter" param="[postings].[none:fiscal_year:nk]" mode="checkdropdown" />
+            <card type="filter" param="[postings].[none:observation_date:nk]" mode="checkdropdown" />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid="{A7A7984E-C2A1-58F4-B5B7-1B34BE50185F}" />
+    </window>
+    <window name="11 Matched LCA wage p50 USD" class="worksheet">
+      <cards>
+        <edge name="right">
+          <strip size="200" />
+        </edge>
+      </cards>
+      <simple-id uuid="{E0BEA767-919C-5AE6-A358-D33D5BE89755}" />
+    </window>
+    <window name="11 Matched LCA wage p75 USD" class="worksheet">
+      <cards>
+        <edge name="right">
+          <strip size="200" />
+        </edge>
+      </cards>
+      <simple-id uuid="{F8D77B27-B3E8-5821-A70A-7E65BF436B22}" />
+    </window>
+    <window name="11 Matched LCA wage p90 USD" class="worksheet">
+      <cards>
+        <edge name="right">
+          <strip size="200" />
+        </edge>
+      </cards>
+      <simple-id uuid="{039A0173-5FDB-51A4-95BE-EB0A3E60CA0B}" />
+    </window>
+    <window name="12 Matched official annual median" class="worksheet">
+      <cards>
+        <edge name="right">
+          <strip size="200" />
+        </edge>
+      </cards>
+      <simple-id uuid="{79A8F1E1-4477-5672-88A4-A0A17BD6973B}" />
+    </window>
+    <window name="13 Comparison LCA scope" class="worksheet">
+      <cards>
+        <edge name="right">
+          <strip size="200" />
+        </edge>
+      </cards>
+      <simple-id uuid="{28AB472E-326C-51A3-90BB-293451DB4ED0}" />
+    </window>
+    <window name="14 Comparison benchmark status" class="worksheet">
+      <cards>
+        <edge name="right">
+          <strip size="200" />
+        </edge>
+      </cards>
+      <simple-id uuid="{135ADA47-1BD6-5B4D-9FB9-0EFC29563A25}" />
+    </window>
+    <window name="SponsorAtlas - applications and observed jobs" class="dashboard" maximized="true">
+      <viewpoints />
+      <active id="1" />
+      <simple-id uuid="{D2C7B438-368E-53EB-BC66-FEFBBAA192AB}" />
+    </window>
+    <window name="SponsorAtlas - matched wage comparison" class="dashboard">
+      <viewpoints />
+      <active id="40" />
+      <simple-id uuid="{9A9C70B1-739B-504B-859F-789DEBDCF319}" />
+    </window>
+  </windows>
+</workbook>

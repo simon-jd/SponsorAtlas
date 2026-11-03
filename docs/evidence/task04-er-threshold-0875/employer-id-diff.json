@@ -1,0 +1,8 @@
+{
+ "records_in_both": 161596,
+ "employer_id_changed": 1616,
+ "old_employer_ids_reassigned": 599,
+ "records_whose_cluster_members_changed": 0,
+ "employers_old": 98343,
+ "employers_new": 98188
+}

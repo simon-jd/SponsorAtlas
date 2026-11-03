@@ -1,0 +1,261 @@
+# Terraform creates one independent source definition per API from this shared manifest.
+version: 7.39.1
+type: DeclarativeSource
+check:
+  type: CheckStream
+  stream_names:
+  - greenhouse
+  - lever
+  - ashby
+definitions:
+  schema:
+    type: InlineSchemaLoader
+    schema:
+      $schema: http://json-schema.org/draft-07/schema#
+      type: object
+      additionalProperties: true
+      required:
+      - job_key
+      - source_provider
+      - source_board
+      - payload_json
+      properties:
+        job_key:
+          type: string
+        source_provider:
+          type: string
+        source_board:
+          type: string
+        payload_json:
+          type: string
+        source_url:
+          type: string
+  provenance:
+    type: AddFields
+    fields:
+    - type: AddedFieldDefinition
+      path:
+      - payload_json
+      value: '{{ record | tojson }}'
+      value_type: string
+    - type: AddedFieldDefinition
+      path:
+      - source_board
+      value: '{{ config[''board''] }}'
+      value_type: string
+streams:
+- type: DeclarativeStream
+  name: greenhouse
+  primary_key:
+  - job_key
+  schema_loader:
+    $ref: '#/definitions/schema'
+  retriever:
+    type: SimpleRetriever
+    requester:
+      type: HttpRequester
+      url: https://boards-api.greenhouse.io/v1/boards/{{ config['board'] }}/jobs
+      http_method: GET
+      request_parameters:
+        content: 'true'
+      request_headers:
+        Accept: application/json
+      error_handler:
+        type: DefaultErrorHandler
+        max_retries: 5
+        response_filters:
+        - type: HttpResponseFilter
+          action: RETRY
+          http_codes:
+          - 408
+          - 429
+          - 500
+          - 502
+          - 503
+          - 504
+        - type: HttpResponseFilter
+          action: FAIL
+          failure_type: config_error
+          predicate: '{{ response is not mapping or ''jobs'' not in response or response[''jobs''] is
+            not sequence or response[''jobs''] is string or response[''jobs''] is mapping or response[''jobs'']
+            | selectattr(''id'', ''undefined'') | list | length > 0 or response[''jobs''] | selectattr(''id'',
+            ''none'') | list | length > 0 }}'
+          error_message: Unexpected public board API response shape; snapshot refused
+    record_selector:
+      type: RecordSelector
+      extractor:
+        type: DpathExtractor
+        field_path:
+        - jobs
+    paginator:
+      type: NoPagination
+  transformations:
+  - $ref: '#/definitions/provenance'
+  - type: AddFields
+    fields:
+    - type: AddedFieldDefinition
+      path:
+      - source_provider
+      value: greenhouse
+      value_type: string
+    - type: AddedFieldDefinition
+      path:
+      - job_key
+      value: '{{ ''greenhouse:'' ~ config[''board''] ~ '':'' ~ record[''id''] }}'
+      value_type: string
+    - type: AddedFieldDefinition
+      path:
+      - source_url
+      value: https://boards-api.greenhouse.io/v1/boards/{{ config['board'] }}/jobs
+      value_type: string
+- type: DeclarativeStream
+  name: lever
+  primary_key:
+  - job_key
+  schema_loader:
+    $ref: '#/definitions/schema'
+  retriever:
+    type: SimpleRetriever
+    requester:
+      type: HttpRequester
+      url: https://api.lever.co/v0/postings/{{ config['board'] }}
+      http_method: GET
+      request_parameters:
+        mode: json
+      request_headers:
+        Accept: application/json
+      error_handler:
+        type: DefaultErrorHandler
+        max_retries: 5
+        response_filters:
+        - type: HttpResponseFilter
+          action: RETRY
+          http_codes:
+          - 408
+          - 429
+          - 500
+          - 502
+          - 503
+          - 504
+        - type: HttpResponseFilter
+          action: FAIL
+          failure_type: config_error
+          predicate: '{{ response is mapping or response is string or response is not sequence or response
+            | selectattr(''id'', ''undefined'') | list | length > 0 or response | selectattr(''id'', ''none'')
+            | list | length > 0 }}'
+          error_message: Unexpected public board API response shape; snapshot refused
+    record_selector:
+      type: RecordSelector
+      extractor:
+        type: DpathExtractor
+        field_path: []
+    paginator:
+      type: DefaultPaginator
+      pagination_strategy:
+        type: OffsetIncrement
+        page_size: 100
+        inject_on_first_request: true
+      page_size_option:
+        type: RequestOption
+        inject_into: request_parameter
+        field_name: limit
+      page_token_option:
+        type: RequestOption
+        inject_into: request_parameter
+        field_name: skip
+  transformations:
+  - $ref: '#/definitions/provenance'
+  - type: AddFields
+    fields:
+    - type: AddedFieldDefinition
+      path:
+      - source_provider
+      value: lever
+      value_type: string
+    - type: AddedFieldDefinition
+      path:
+      - job_key
+      value: '{{ ''lever:'' ~ config[''board''] ~ '':'' ~ record[''id''] }}'
+      value_type: string
+    - type: AddedFieldDefinition
+      path:
+      - source_url
+      value: https://api.lever.co/v0/postings/{{ config['board'] }}
+      value_type: string
+- type: DeclarativeStream
+  name: ashby
+  primary_key:
+  - job_key
+  schema_loader:
+    $ref: '#/definitions/schema'
+  retriever:
+    type: SimpleRetriever
+    requester:
+      type: HttpRequester
+      url: https://api.ashbyhq.com/posting-api/job-board/{{ config['board'] }}
+      http_method: GET
+      request_parameters:
+        includeCompensation: 'true'
+      request_headers:
+        Accept: application/json
+      error_handler:
+        type: DefaultErrorHandler
+        max_retries: 5
+        response_filters:
+        - type: HttpResponseFilter
+          action: RETRY
+          http_codes:
+          - 408
+          - 429
+          - 500
+          - 502
+          - 503
+          - 504
+        - type: HttpResponseFilter
+          action: FAIL
+          failure_type: config_error
+          predicate: '{{ response is not mapping or ''jobs'' not in response or response[''jobs''] is
+            not sequence or response[''jobs''] is string or response[''jobs''] is mapping or response[''jobs'']
+            | selectattr(''jobUrl'', ''undefined'') | list | length > 0 or response[''jobs''] | selectattr(''jobUrl'',
+            ''none'') | list | length > 0 }}'
+          error_message: Unexpected public board API response shape; snapshot refused
+    record_selector:
+      type: RecordSelector
+      extractor:
+        type: DpathExtractor
+        field_path:
+        - jobs
+    paginator:
+      type: NoPagination
+  transformations:
+  - $ref: '#/definitions/provenance'
+  - type: AddFields
+    fields:
+    - type: AddedFieldDefinition
+      path:
+      - source_provider
+      value: ashby
+      value_type: string
+    - type: AddedFieldDefinition
+      path:
+      - job_key
+      value: '{{ ''ashby:'' ~ config[''board''] ~ '':'' ~ record[''jobUrl''] }}'
+      value_type: string
+    - type: AddedFieldDefinition
+      path:
+      - source_url
+      value: https://api.ashbyhq.com/posting-api/job-board/{{ config['board'] }}
+      value_type: string
+spec:
+  type: Spec
+  connection_specification:
+    $schema: http://json-schema.org/draft-07/schema#
+    type: object
+    required:
+    - board
+    additionalProperties: false
+    properties:
+      board:
+        type: string
+        title: Public board token/site/name
+        pattern: ^[A-Za-z0-9_-]+$

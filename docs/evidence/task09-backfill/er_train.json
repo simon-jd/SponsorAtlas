@@ -1,0 +1,22 @@
+{
+  "status": "SUCCEEDED",
+  "nproc": 32,
+  "load_before": [
+    6.3662109375,
+    6.5126953125,
+    5.48779296875
+  ],
+  "steps": [
+    {
+      "name": "er_train",
+      "exit_code": 0,
+      "seconds": 8.495,
+      "load_after": [
+        6.17626953125,
+        6.470703125,
+        5.4794921875
+      ]
+    }
+  ],
+  "seconds": 8.495
+}

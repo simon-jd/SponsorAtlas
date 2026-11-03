@@ -1,0 +1,322 @@
+{
+  "origin": "ACTUAL_CUBE_1.8_REST",
+  "executed_at": "2026-10-24T22:08:42.360Z",
+  "manifest_sha256": "b76f529c69a84b0d9a4305f12ab5825e2675afc636f047006fbe601693801a36",
+  "queries_sha256": "1f05055bc732440a102f00fa40db766a042315f38395a281de59564a1d2b46e6",
+  "records": [
+    {
+      "metric": "case_count",
+      "query": {
+        "measures": [
+          "lca.case_count"
+        ]
+      },
+      "status": 200,
+      "body": {
+        "query": {
+          "measures": [
+            "lca.case_count"
+          ],
+          "dimensions": [],
+          "timeDimensions": [],
+          "limit": 10000,
+          "timezone": "UTC",
+          "filters": [],
+          "rowLimit": 10000
+        },
+        "lastRefreshTime": "2026-10-24T22:08:42.000Z",
+        "usedPreAggregations": {
+          "semantic_preagg.lca_counts": {
+            "preAggregationId": "lca.counts",
+            "lastUpdatedAt": 1792879722000,
+            "type": "rollup"
+          }
+        },
+        "annotation": {
+          "measures": {
+            "lca.case_count": {
+              "title": "Lca Case Count",
+              "shortTitle": "Case Count",
+              "description": "Count of unique case_number in latest-case facts, including unknown employer history.",
+              "type": "number",
+              "drillMembers": [],
+              "drillMembersGrouped": {
+                "measures": [],
+                "dimensions": []
+              }
+            }
+          },
+          "dimensions": {},
+          "timeDimensions": {},
+          "segments": {}
+        },
+        "dataSource": "default",
+        "dbType": "duckdb",
+        "external": false,
+        "slowQuery": false,
+        "data": [
+          {
+            "lca.case_count": "238891"
+          }
+        ]
+      }
+    },
+    {
+      "metric": "certified_rate",
+      "query": {
+        "measures": [
+          "lca.certified_rate"
+        ]
+      },
+      "status": 200,
+      "body": {
+        "query": {
+          "measures": [
+            "lca.certified_rate"
+          ],
+          "dimensions": [],
+          "timeDimensions": [],
+          "limit": 10000,
+          "timezone": "UTC",
+          "filters": [],
+          "rowLimit": 10000
+        },
+        "lastRefreshTime": "2026-10-24T22:08:42.000Z",
+        "usedPreAggregations": {
+          "semantic_preagg.lca_counts": {
+            "preAggregationId": "lca.counts",
+            "lastUpdatedAt": 1792879722000,
+            "type": "rollup"
+          }
+        },
+        "annotation": {
+          "dimensions": {},
+          "segments": {},
+          "measures": {
+            "lca.certified_rate": {
+              "title": "Lca Certified Rate",
+              "shortTitle": "Certified Rate",
+              "description": "Certified plus Certified - Withdrawn divided by every latest case, including denied and withdrawn; empty denominator returns null.",
+              "type": "number",
+              "drillMembers": [],
+              "drillMembersGrouped": {
+                "measures": [],
+                "dimensions": []
+              }
+            }
+          },
+          "timeDimensions": {}
+        },
+        "dataSource": "default",
+        "dbType": "duckdb",
+        "external": false,
+        "slowQuery": false,
+        "data": [
+          {
+            "lca.certified_rate": "0.9777848474827432"
+          }
+        ]
+      }
+    },
+    {
+      "metric": "wage_p75",
+      "query": {
+        "measures": [
+          "lca.wage_p75"
+        ]
+      },
+      "status": 200,
+      "body": {
+        "query": {
+          "measures": [
+            "lca.wage_p75"
+          ],
+          "dimensions": [],
+          "timeDimensions": [],
+          "limit": 10000,
+          "timezone": "UTC",
+          "filters": [],
+          "rowLimit": 10000
+        },
+        "lastRefreshTime": "2026-10-24T22:08:42.317Z",
+        "annotation": {
+          "timeDimensions": {},
+          "measures": {
+            "lca.wage_p75": {
+              "title": "Lca Wage P75",
+              "shortTitle": "Wage P75",
+              "type": "number",
+              "drillMembers": [],
+              "drillMembersGrouped": {
+                "measures": [],
+                "dimensions": []
+              }
+            }
+          },
+          "segments": {},
+          "dimensions": {}
+        },
+        "dataSource": "default",
+        "dbType": "duckdb",
+        "external": false,
+        "slowQuery": false,
+        "data": [
+          {
+            "lca.wage_p75": "160000"
+          }
+        ]
+      }
+    },
+    {
+      "metric": "active_posting_days",
+      "query": {
+        "measures": [
+          "postings.count"
+        ]
+      },
+      "status": 200,
+      "body": {
+        "query": {
+          "measures": [
+            "postings.count"
+          ],
+          "dimensions": [],
+          "timeDimensions": [],
+          "limit": 10000,
+          "timezone": "UTC",
+          "filters": [],
+          "rowLimit": 10000
+        },
+        "lastRefreshTime": "2026-10-24T22:08:42.000Z",
+        "usedPreAggregations": {
+          "semantic_preagg.postings_counts": {
+            "preAggregationId": "postings.counts",
+            "lastUpdatedAt": 1792879722000,
+            "type": "rollup"
+          }
+        },
+        "annotation": {
+          "segments": {},
+          "timeDimensions": {},
+          "dimensions": {},
+          "measures": {
+            "postings.count": {
+              "title": "Postings Count",
+              "shortTitle": "Count",
+              "type": "number",
+              "drillMembers": [],
+              "drillMembersGrouped": {
+                "measures": [],
+                "dimensions": []
+              }
+            }
+          }
+        },
+        "dataSource": "default",
+        "dbType": "duckdb",
+        "external": false,
+        "slowQuery": false,
+        "data": [
+          {
+            "postings.count": "86"
+          }
+        ]
+      }
+    },
+    {
+      "metric": "oews_median",
+      "query": {
+        "measures": [
+          "wages.oews_median"
+        ],
+        "filters": [
+          {
+            "member": "wages.soc",
+            "operator": "equals",
+            "values": [
+              "15-1252"
+            ]
+          },
+          {
+            "member": "wages.area",
+            "operator": "equals",
+            "values": [
+              "1:99"
+            ]
+          },
+          {
+            "member": "wages.survey_year",
+            "operator": "equals",
+            "values": [
+              "2025"
+            ]
+          }
+        ]
+      },
+      "status": 200,
+      "body": {
+        "query": {
+          "measures": [
+            "wages.oews_median"
+          ],
+          "dimensions": [],
+          "timeDimensions": [],
+          "limit": 10000,
+          "timezone": "UTC",
+          "filters": [
+            {
+              "member": "wages.soc",
+              "operator": "equals",
+              "values": [
+                "15-1252"
+              ]
+            },
+            {
+              "member": "wages.area",
+              "operator": "equals",
+              "values": [
+                "1:99"
+              ]
+            },
+            {
+              "member": "wages.survey_year",
+              "operator": "equals",
+              "values": [
+                "2025"
+              ]
+            }
+          ],
+          "rowLimit": 10000
+        },
+        "lastRefreshTime": "2026-10-24T22:08:42.358Z",
+        "annotation": {
+          "measures": {
+            "wages.oews_median": {
+              "title": "Wages Oews Median",
+              "shortTitle": "Oews Median",
+              "description": "One official annual median; null for zero/multiple benchmarks or suppressed/top-coded A_MEDIAN. Inspect estimate_count, median_raw and wage_status.",
+              "type": "number",
+              "drillMembers": [],
+              "drillMembersGrouped": {
+                "measures": [],
+                "dimensions": []
+              }
+            }
+          },
+          "dimensions": {},
+          "segments": {},
+          "timeDimensions": {}
+        },
+        "dataSource": "default",
+        "dbType": "duckdb",
+        "external": false,
+        "slowQuery": false,
+        "data": [
+          {
+            "wages.oews_median": "135980"
+          }
+        ]
+      }
+    }
+  ]
+}

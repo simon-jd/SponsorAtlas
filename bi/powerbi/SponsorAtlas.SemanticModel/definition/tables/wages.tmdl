@@ -1,0 +1,84 @@
+table wages
+
+	column soc
+		dataType: string
+		sourceColumn: soc
+		summarizeBy: none
+
+	column soc_major
+		dataType: string
+		sourceColumn: soc_major
+		summarizeBy: none
+
+	column metro
+		dataType: string
+		sourceColumn: metro
+		summarizeBy: none
+
+	column area
+		dataType: string
+		sourceColumn: area
+		summarizeBy: none
+
+	column survey_year
+		dataType: int64
+		sourceColumn: survey_year
+		summarizeBy: none
+
+	column fiscal_year
+		dataType: int64
+		sourceColumn: fiscal_year
+		summarizeBy: none
+
+	column occupation_level
+		dataType: string
+		sourceColumn: occupation_level
+		summarizeBy: none
+
+	column geography_level
+		dataType: string
+		sourceColumn: geography_level
+		summarizeBy: none
+
+	column annual_median_wage
+		dataType: double
+		sourceColumn: annual_median_wage
+		summarizeBy: none
+
+	column median_raw
+		dataType: string
+		sourceColumn: median_raw
+		summarizeBy: none
+
+	column wage_status
+		dataType: string
+		sourceColumn: wage_status
+		summarizeBy: none
+
+	column annual_flag
+		dataType: string
+		sourceColumn: annual_flag
+		summarizeBy: none
+
+	column hourly_flag
+		dataType: string
+		sourceColumn: hourly_flag
+		summarizeBy: none
+
+	measure 'OEWS Estimate Count' = COALESCE(COUNTROWS(wages), 0)
+		formatString: #,0
+
+	measure 'OEWS Median' = IF([OEWS Estimate Count] = 1, MAX(wages[annual_median_wage]), BLANK())
+		formatString: $#,0.00
+
+	measure 'Comparison OEWS Median' = VAR Area = SELECTEDVALUE(PublishedArea[area]) RETURN IF(HASONEVALUE(SOC[soc]) && HASONEVALUE(SurveyYear[survey_year]) && (Area = "1:99" || (LEFT(Area, 2) = "4:" && LEN(Area) = 7)), CALCULATE([OEWS Median], REMOVEFILTERS(Metro)))
+		formatString: $#,0.00
+
+	measure 'Reconcile OEWS Median' = CALCULATE([OEWS Median], REMOVEFILTERS(), wages[soc]="15-1252", wages[area]="1:99", wages[survey_year]=2025)
+		formatString: $#,0.00
+
+	measure 'Benchmark Status' = IF([OEWS Estimate Count] <> 1, "Select exactly one SOC / published area / survey year", IF(ISBLANK([OEWS Median]), "Suppressed or top-coded: inspect wage_status and median_raw", "One published annual median"))
+
+	partition wages = m
+		mode: import
+		source = Public_wages

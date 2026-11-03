@@ -1,0 +1,130 @@
+2026-10-28T03:16:23.689654Z [warning  ] Could not import graphviz. Rendering graph to the graphical format will not be possible. 
+You might need to install the graphviz package and necessary system packages.
+Run `pip install graphviz` to attempt to install it. [py.warnings] category=UserWarning filename=/home/postedism/Desktop/SponsorAtlas/.tools/orchestration/venv/lib/python3.12/site-packages/airflow/cli/commands/dag_command.py lineno=57
+2026-10-28T03:16:23.880008Z [info     ] DAG bundles loaded: dags-folder [airflow.dag_processing.bundles.manager.DagBundlesManager] loc=manager.py:304
+2026-10-28T03:16:23.882712Z [info     ] Filling up the DagBag from /home/postedism/Desktop/SponsorAtlas/orchestration/dags [airflow.dag_processing.dagbag.BundleDagBag] loc=dagbag.py:460
+2026-10-28T03:16:23.904513Z [warning  ] To enable emitting Openlineage events, install apache-airflow-providers-openlineage. [cosmos.operators.local] loc=local.py:146
+2026-10-28T03:16:23.906317Z [info     ] ::group::Cosmos DAG parsing logs [cosmos.converter] loc=converter.py:321
+2026-10-28T03:16:23.906558Z [info     ] Trying to parse the dbt project using dbt ls cache ... [cosmos.dbt.graph] loc=graph.py:869
+2026-10-28T03:16:23.906607Z [info     ] Cosmos performance: Cache miss for  - skipped [cosmos.dbt.graph] loc=graph.py:900
+2026-10-28T03:16:23.906682Z [info     ] Trying to parse the dbt project in `/home/postedism/Desktop/SponsorAtlas/dbt` using dbt ls... [cosmos.dbt.graph] loc=graph.py:983
+2026-10-28T03:16:23.906925Z [info     ] Using user-supplied profiles.yml at /home/postedism/Desktop/SponsorAtlas/dbt/profiles.yml [cosmos.config] loc=config.py:395
+2026-10-28T03:16:23.907044Z [info     ] Running command with Python subprocess: `/home/postedism/Desktop/SponsorAtlas/.venv/bin/dbt ls --output json --output-keys name unique_id resource_type depends_on original_file_path tags config freshness fqn --project-dir /tmp/tmplmisr04i --profiles-dir /home/postedism/Desktop/SponsorAtlas/dbt --profile sponsoratlas --target snowflake --select tag:staging tag:dimensions tag:facts --vars {"enable_private_applications": false} --no-partial-parse` [cosmos.dbt.graph] loc=graph.py:361
+2026-10-28T03:16:27.667380Z [info     ] Total nodes: 116               [cosmos.dbt.graph] loc=graph.py:799
+2026-10-28T03:16:27.667469Z [info     ] Total filtered nodes: 116      [cosmos.dbt.graph] loc=graph.py:800
+2026-10-28T03:16:27.667510Z [info     ] Cosmos performance (None) - [postedism-ubuntu-system-selfuse|4158742]: It took 3.76s to parse the dbt project for DAG using LoadMode.DBT_LS [cosmos.converter] loc=converter.py:371
+2026-10-28T03:16:27.667735Z [info     ] Project /home/postedism/Desktop/SponsorAtlas/dbt does not have {'dependencies.yml', 'packages.yml'} [cosmos.dbt.project] loc=project.py:40
+2026-10-28T03:16:27.681647Z [warning  ] Unavailable conversion function for <DbtResourceType.UNIT_TEST> (node <unit_test.sponsoratlas.annualize_wage_examples.annualize_wage_exact_cases>). Define a converter function using render_config.node_converters. [cosmos.airflow.graph] loc=graph.py:567
+2026-10-28T03:16:27.681956Z [info     ] Cosmos performance (None) - [postedism-ubuntu-system-selfuse|4158742]: It took 0.0144s to build the Airflow DAG. [cosmos.converter] loc=converter.py:423
+2026-10-28T03:16:27.682001Z [info     ] ::endgroup::Cosmos DAG parsing logs [cosmos.converter] loc=converter.py:430
+2026-10-28T03:16:27.698144Z [info     ] Bulk-writing dags to db        [airflow.serialization.definitions.dag] count=2 loc=dag.py:218
+2026-10-28T03:16:27.704333Z [info     ] Creating ORM DAG for sponsoratlas_backfill [airflow.dag_processing.collection] loc=collection.py:102
+2026-10-28T03:16:27.793853Z [info     ] get next_dagrun_info_v2        [airflow.serialization.definitions.dag] last_automated_run_info=DagRunInfo(run_after=DateTime(2026, 10, 24, 8, 0, 0, tzinfo=Timezone('UTC')), data_interval=DataInterval(start=DateTime(2026, 10, 24, 8, 0, 0, tzinfo=Timezone('UTC')), end=DateTime(2026, 10, 24, 8, 0, 0, tzinfo=Timezone('UTC'))), partition_date=None, partition_key=None) loc=dag.py:453 next_info=DagRunInfo(run_after=DateTime(2026, 10, 27, 8, 0, 0, tzinfo=Timezone('UTC')), data_interval=DataInterval(start=DateTime(2026, 10, 27, 8, 0, 0, tzinfo=Timezone('UTC')), end=DateTime(2026, 10, 27, 8, 0, 0, tzinfo=Timezone('UTC'))), partition_date=None, partition_key=None)
+2026-10-28T03:16:27.794023Z [info     ] setting next dagrun info       [airflow.models.dag] loc=dag.py:848 next_dagrun='2026-10-27 08:00:00+00:00' next_dagrun_create_after='2026-10-27 08:00:00+00:00' next_dagrun_data_interval_end='2026-10-27 08:00:00+00:00' next_dagrun_data_interval_start='2026-10-27 08:00:00+00:00' next_dagrun_partition_date=None next_dagrun_partition_key=None
+2026-10-28T03:16:27.794767Z [info     ] get next_dagrun_info_v2        [airflow.serialization.definitions.dag] last_automated_run_info=None loc=dag.py:453 next_info=None
+2026-10-28T03:16:27.794817Z [info     ] setting next dagrun info       [airflow.models.dag] loc=dag.py:848 next_dagrun=None next_dagrun_create_after=None next_dagrun_data_interval_end=None next_dagrun_data_interval_start=None next_dagrun_partition_date=None next_dagrun_partition_key=None
+2026-10-28T03:16:27.831340Z [info     ] DAG bundles loaded: dags-folder [airflow.dag_processing.bundles.manager.DagBundlesManager] loc=manager.py:304
+2026-10-28T03:16:27.832782Z [info     ] Filling up the DagBag from /home/postedism/Desktop/SponsorAtlas/orchestration/dags [airflow.dag_processing.dagbag.BundleDagBag] loc=dagbag.py:460
+2026-10-28T03:16:27.835332Z [info     ] ::group::Cosmos DAG parsing logs [cosmos.converter] loc=converter.py:321
+2026-10-28T03:16:27.835482Z [info     ] Trying to parse the dbt project using dbt ls cache ... [cosmos.dbt.graph] loc=graph.py:869
+2026-10-28T03:16:27.835523Z [info     ] Cosmos performance: Cache miss for  - skipped [cosmos.dbt.graph] loc=graph.py:900
+2026-10-28T03:16:27.835566Z [info     ] Trying to parse the dbt project in `/home/postedism/Desktop/SponsorAtlas/dbt` using dbt ls... [cosmos.dbt.graph] loc=graph.py:983
+2026-10-28T03:16:27.835774Z [info     ] Using user-supplied profiles.yml at /home/postedism/Desktop/SponsorAtlas/dbt/profiles.yml [cosmos.config] loc=config.py:395
+2026-10-28T03:16:27.835878Z [info     ] Running command with Python subprocess: `/home/postedism/Desktop/SponsorAtlas/.venv/bin/dbt ls --output json --output-keys name unique_id resource_type depends_on original_file_path tags config freshness fqn --project-dir /tmp/tmptkqyf0n3 --profiles-dir /home/postedism/Desktop/SponsorAtlas/dbt --profile sponsoratlas --target snowflake --select tag:staging tag:dimensions tag:facts --vars {"enable_private_applications": false} --no-partial-parse` [cosmos.dbt.graph] loc=graph.py:361
+2026-10-28T03:16:31.249579Z [info     ] Total nodes: 116               [cosmos.dbt.graph] loc=graph.py:799
+2026-10-28T03:16:31.249667Z [info     ] Total filtered nodes: 116      [cosmos.dbt.graph] loc=graph.py:800
+2026-10-28T03:16:31.249709Z [info     ] Cosmos performance (None) - [postedism-ubuntu-system-selfuse|4158742]: It took 3.41s to parse the dbt project for DAG using LoadMode.DBT_LS [cosmos.converter] loc=converter.py:371
+2026-10-28T03:16:31.249823Z [info     ] Project /home/postedism/Desktop/SponsorAtlas/dbt does not have {'dependencies.yml', 'packages.yml'} [cosmos.dbt.project] loc=project.py:40
+2026-10-28T03:16:31.265739Z [warning  ] Unavailable conversion function for <DbtResourceType.UNIT_TEST> (node <unit_test.sponsoratlas.annualize_wage_examples.annualize_wage_exact_cases>). Define a converter function using render_config.node_converters. [cosmos.airflow.graph] loc=graph.py:567
+2026-10-28T03:16:31.266018Z [info     ] Cosmos performance (None) - [postedism-ubuntu-system-selfuse|4158742]: It took 0.0163s to build the Airflow DAG. [cosmos.converter] loc=converter.py:423
+2026-10-28T03:16:31.266066Z [info     ] ::endgroup::Cosmos DAG parsing logs [cosmos.converter] loc=converter.py:430
+2026-10-28T03:16:31.274917Z [info     ] Bulk-writing dags to db        [airflow.serialization.definitions.dag] count=2 loc=dag.py:218
+2026-10-28T03:16:31.279577Z [info     ] get next_dagrun_info_v2        [airflow.serialization.definitions.dag] last_automated_run_info=DagRunInfo(run_after=DateTime(2026, 10, 24, 8, 0, 0, tzinfo=Timezone('UTC')), data_interval=DataInterval(start=DateTime(2026, 10, 24, 8, 0, 0, tzinfo=Timezone('UTC')), end=DateTime(2026, 10, 24, 8, 0, 0, tzinfo=Timezone('UTC'))), partition_date=None, partition_key=None) loc=dag.py:453 next_info=DagRunInfo(run_after=DateTime(2026, 10, 27, 8, 0, 0, tzinfo=Timezone('UTC')), data_interval=DataInterval(start=DateTime(2026, 10, 27, 8, 0, 0, tzinfo=Timezone('UTC')), end=DateTime(2026, 10, 27, 8, 0, 0, tzinfo=Timezone('UTC'))), partition_date=None, partition_key=None)
+2026-10-28T03:16:31.279690Z [info     ] setting next dagrun info       [airflow.models.dag] loc=dag.py:848 next_dagrun='2026-10-27 08:00:00+00:00' next_dagrun_create_after='2026-10-27 08:00:00+00:00' next_dagrun_data_interval_end='2026-10-27 08:00:00+00:00' next_dagrun_data_interval_start='2026-10-27 08:00:00+00:00' next_dagrun_partition_date=None next_dagrun_partition_key=None
+2026-10-28T03:16:31.280312Z [info     ] get next_dagrun_info_v2        [airflow.serialization.definitions.dag] last_automated_run_info=None loc=dag.py:453 next_info=None
+2026-10-28T03:16:31.280360Z [info     ] setting next dagrun info       [airflow.models.dag] loc=dag.py:848 next_dagrun=None next_dagrun_create_after=None next_dagrun_data_interval_end=None next_dagrun_data_interval_start=None next_dagrun_partition_date=None next_dagrun_partition_key=None
+2026-10-28T03:16:31.296595Z [info     ] creating dag run               [airflow.serialization.definitions.dag] loc=dag.py:615 logical_date=DateTime(2026, 10, 28, 3, 16, 23, 879294, tzinfo=Timezone('UTC')) partition_key=None run_after=DateTime(2026, 10, 28, 3, 16, 27, 831169, tzinfo=Timezone('UTC')) run_id=manual__2026-10-28T03:16:27.831169+00:00
+2026-10-28T03:16:31.387521Z [info     ] Created dag run.               [airflow.models.dagrun] dagrun=<DagRun sponsoratlas_backfill @ 2026-10-28 03:16:23.879294+00:00: manual__2026-10-28T03:16:27.831169+00:00, state:running, queued_at: None. run_type: manual> loc=dagrun.py:2464
+2026-10-28T03:16:31.405339Z [info     ] [DAG TEST] starting task_id=load_raw map_index=-1 [airflow.sdk.definitions.dag] loc=dag.py:1501
+2026-10-28T03:16:31.405546Z [info     ] [DAG TEST] running task <TaskInstance: sponsoratlas_backfill.load_raw manual__2026-10-28T03:16:27.831169+00:00 [TaskInstanceState.SCHEDULED] ti_id=01a18082-63d0-78b2-93c9-813d4dcf8b00> [airflow.sdk.definitions.dag] loc=dag.py:1504
+2026-10-28T03:16:33.636970Z [info     ] Task started                   [airflow.api_fastapi.execution_api.routes.task_instances] correlation_id=01a18082-65d1-75d5-80e0-163e2efc9286 hostname=postedism-ubuntu-system-selfuse loc=task_instances.py:226 previous_state=queued ti_id=01a18082-63d0-78b2-93c9-813d4dcf8b00
+2026-10-28T03:16:33.639034Z [info     ] Task instance state updated    [airflow.api_fastapi.execution_api.routes.task_instances] correlation_id=01a18082-65d1-75d5-80e0-163e2efc9286 loc=task_instances.py:254 rows_affected=1 ti_id=01a18082-63d0-78b2-93c9-813d4dcf8b00
+2026-10-28T03:16:33.667181Z [info     ] Updating RenderedTaskInstanceFields [airflow.api_fastapi.execution_api.routes.task_instances] correlation_id=01a18082-6cff-707f-a6c6-d8b592128d5b field_count=3 loc=task_instances.py:1017 ti_id=01a18082-63d0-78b2-93c9-813d4dcf8b00
+2026-10-28T03:16:33.684258Z [info     ] ::endgroup::                   [task] loc=task_runner.py:2232
+2026-10-28T03:16:34.151392Z [error    ] Task failed with exception     [task] loc=task_runner.py:1676
+Traceback (most recent call last):
+  File "/home/postedism/Desktop/SponsorAtlas/.tools/orchestration/venv/lib/python3.12/site-packages/airflow/sdk/execution_time/task_runner.py", line 1579, in _run_task_and_map_outcome
+    result = _execute_task(context=context, ti=ti, log=log)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/postedism/Desktop/SponsorAtlas/.tools/orchestration/venv/lib/python3.12/site-packages/airflow/sdk/execution_time/task_runner.py", line 197, in wrapper
+    return f(*inner_args, **inner_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/postedism/Desktop/SponsorAtlas/.tools/orchestration/venv/lib/python3.12/site-packages/airflow/sdk/execution_time/task_runner.py", line 2234, in _execute_task
+    result = _run_execute_callable(context, execute, task)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/postedism/Desktop/SponsorAtlas/.tools/orchestration/venv/lib/python3.12/site-packages/airflow/sdk/execution_time/task_runner.py", line 197, in wrapper
+    return f(*inner_args, **inner_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/postedism/Desktop/SponsorAtlas/.tools/orchestration/venv/lib/python3.12/site-packages/airflow/sdk/execution_time/task_runner.py", line 2187, in _run_execute_callable
+    result = ctx.run(execute, context=context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/postedism/Desktop/SponsorAtlas/.tools/orchestration/venv/lib/python3.12/site-packages/airflow/sdk/bases/operator.py", line 462, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/postedism/Desktop/SponsorAtlas/.tools/orchestration/venv/lib/python3.12/site-packages/airflow/providers/standard/operators/python.py", line 231, in execute
+    return_value = self.execute_callable()
+                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/postedism/Desktop/SponsorAtlas/.tools/orchestration/venv/lib/python3.12/site-packages/airflow/providers/standard/operators/python.py", line 254, in execute_callable
+    return runner.run(*self.op_args, **self.op_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/postedism/Desktop/SponsorAtlas/.tools/orchestration/venv/lib/python3.12/site-packages/airflow/sdk/execution_time/callback_runner.py", line 97, in run
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/postedism/Desktop/SponsorAtlas/orchestration/sponsoratlas_orchestration/backfill.py", line 249, in run_one
+    raise RuntimeError(f"backfill step {name} failed: {result['steps'][-1]}")
+RuntimeError: backfill step load_raw failed: {'name': 'load_raw', 'exit_code': 2, 'seconds': 0.074, 'load_after': [6.17626953125, 7.318359375, 5.3828125], 'projected_bytes': 16901135488}
+2026-10-28T03:16:34.152581Z [info     ] ::group::Post Execute          [task] loc=task_runner.py:1677
+2026-10-28T03:16:34.162754Z [error    ] Failed to run task callback    [task] callback=<function notify at 0x715b36a531a0> index=0 kind=on_failure_callback loc=task_runner.py:2063
+Traceback (most recent call last):
+  File "/home/postedism/Desktop/SponsorAtlas/.tools/orchestration/venv/lib/python3.12/site-packages/airflow/sdk/execution_time/task_runner.py", line 2061, in _run_task_state_change_callbacks
+    create_executable_runner(callback, context_get_outlet_events(context), logger=log).run(context)
+  File "/home/postedism/Desktop/SponsorAtlas/.tools/orchestration/venv/lib/python3.12/site-packages/airflow/sdk/execution_time/callback_runner.py", line 97, in run
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/postedism/Desktop/SponsorAtlas/orchestration/sponsoratlas_orchestration/runtime.py", line 130, in notify
+    kind = notification_settings()
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/postedism/Desktop/SponsorAtlas/orchestration/sponsoratlas_orchestration/runtime.py", line 93, in notification_settings
+    kind = required("SPONSORATLAS_ALERT_TRANSPORT")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/postedism/Desktop/SponsorAtlas/orchestration/sponsoratlas_orchestration/runtime.py", line 49, in required
+    raise RuntimeError(f"Required configuration missing: {name}")
+RuntimeError: Required configuration missing: SPONSORATLAS_ALERT_TRANSPORT
+2026-10-28T03:16:34.163183Z [info     ] ::endgroup::                   [task] loc=task_runner.py:2379
+2026-10-28T03:16:34.173068Z [info     ] Task instance state updated    [airflow.api_fastapi.execution_api.routes.task_instances] correlation_id=01a18082-6ef3-763e-9322-bd68eb7ffee2 loc=task_instances.py:485 new_state=failed rows_affected=1 ti_id=01a18082-63d0-78b2-93c9-813d4dcf8b00
+2026-10-28T03:16:34.196984Z [info     ] [DAG TEST] end task task_id=load_raw map_index=-1 [airflow.sdk.definitions.dag] loc=dag.py:1563
+2026-10-28T03:16:34.212155Z [warning  ] No tasks to run. unrunnable tasks: {<TaskInstance: sponsoratlas_backfill.dbt_staging manual__2026-10-28T03:16:27.831169+00:00 [None] ti_id=01a18082-63d2-7666-84f3-6d833663f963>, <TaskInstance: sponsoratlas_backfill.fact_inputs manual__2026-10-28T03:16:27.831169+00:00 [None] ti_id=01a18082-63d8-76e1-8742-441a4288af74>, <TaskInstance: sponsoratlas_backfill.er_predict manual__2026-10-28T03:16:27.831169+00:00 [None] ti_id=01a18082-63d5-78b2-ac5f-ff095ee32dac>, <TaskInstance: sponsoratlas_backfill.dbt_dimensions manual__2026-10-28T03:16:27.831169+00:00 [None] ti_id=01a18082-63d7-7a49-9cde-802929e853ba>, <TaskInstance: sponsoratlas_backfill.er_train manual__2026-10-28T03:16:27.831169+00:00 [None] ti_id=01a18082-63d4-7625-b319-1c0cfd4afbf0>, <TaskInstance: sponsoratlas_backfill.dimension_inputs manual__2026-10-28T03:16:27.831169+00:00 [None] ti_id=01a18082-63d6-7e65-b6f1-fdc36428e78a>, <TaskInstance: sponsoratlas_backfill.dbt_facts manual__2026-10-28T03:16:27.831169+00:00 [None] ti_id=01a18082-63d9-7546-9e7b-843098b13e6c>, <TaskInstance: sponsoratlas_backfill.er_export manual__2026-10-28T03:16:27.831169+00:00 [None] ti_id=01a18082-63d3-74a6-932b-6284264fa4a0>} [airflow.sdk.definitions.dag] loc=dag.py:1424
+2026-10-28T03:16:35.235902Z [warning  ] No tasks to run. unrunnable tasks: {<TaskInstance: sponsoratlas_backfill.fact_inputs manual__2026-10-28T03:16:27.831169+00:00 [None] ti_id=01a18082-63d8-76e1-8742-441a4288af74>, <TaskInstance: sponsoratlas_backfill.er_train manual__2026-10-28T03:16:27.831169+00:00 [None] ti_id=01a18082-63d4-7625-b319-1c0cfd4afbf0>, <TaskInstance: sponsoratlas_backfill.er_export manual__2026-10-28T03:16:27.831169+00:00 [None] ti_id=01a18082-63d3-74a6-932b-6284264fa4a0>, <TaskInstance: sponsoratlas_backfill.er_predict manual__2026-10-28T03:16:27.831169+00:00 [None] ti_id=01a18082-63d5-78b2-ac5f-ff095ee32dac>, <TaskInstance: sponsoratlas_backfill.dimension_inputs manual__2026-10-28T03:16:27.831169+00:00 [None] ti_id=01a18082-63d6-7e65-b6f1-fdc36428e78a>, <TaskInstance: sponsoratlas_backfill.dbt_dimensions manual__2026-10-28T03:16:27.831169+00:00 [None] ti_id=01a18082-63d7-7a49-9cde-802929e853ba>, <TaskInstance: sponsoratlas_backfill.dbt_facts manual__2026-10-28T03:16:27.831169+00:00 [None] ti_id=01a18082-63d9-7546-9e7b-843098b13e6c>} [airflow.sdk.definitions.dag] loc=dag.py:1424
+2026-10-28T03:16:36.258906Z [warning  ] No tasks to run. unrunnable tasks: {<TaskInstance: sponsoratlas_backfill.fact_inputs manual__2026-10-28T03:16:27.831169+00:00 [None] ti_id=01a18082-63d8-76e1-8742-441a4288af74>, <TaskInstance: sponsoratlas_backfill.er_train manual__2026-10-28T03:16:27.831169+00:00 [None] ti_id=01a18082-63d4-7625-b319-1c0cfd4afbf0>, <TaskInstance: sponsoratlas_backfill.er_predict manual__2026-10-28T03:16:27.831169+00:00 [None] ti_id=01a18082-63d5-78b2-ac5f-ff095ee32dac>, <TaskInstance: sponsoratlas_backfill.dimension_inputs manual__2026-10-28T03:16:27.831169+00:00 [None] ti_id=01a18082-63d6-7e65-b6f1-fdc36428e78a>, <TaskInstance: sponsoratlas_backfill.dbt_dimensions manual__2026-10-28T03:16:27.831169+00:00 [None] ti_id=01a18082-63d7-7a49-9cde-802929e853ba>, <TaskInstance: sponsoratlas_backfill.dbt_facts manual__2026-10-28T03:16:27.831169+00:00 [None] ti_id=01a18082-63d9-7546-9e7b-843098b13e6c>} [airflow.sdk.definitions.dag] loc=dag.py:1424
+2026-10-28T03:16:37.280507Z [warning  ] No tasks to run. unrunnable tasks: {<TaskInstance: sponsoratlas_backfill.fact_inputs manual__2026-10-28T03:16:27.831169+00:00 [None] ti_id=01a18082-63d8-76e1-8742-441a4288af74>, <TaskInstance: sponsoratlas_backfill.er_predict manual__2026-10-28T03:16:27.831169+00:00 [None] ti_id=01a18082-63d5-78b2-ac5f-ff095ee32dac>, <TaskInstance: sponsoratlas_backfill.dimension_inputs manual__2026-10-28T03:16:27.831169+00:00 [None] ti_id=01a18082-63d6-7e65-b6f1-fdc36428e78a>, <TaskInstance: sponsoratlas_backfill.dbt_dimensions manual__2026-10-28T03:16:27.831169+00:00 [None] ti_id=01a18082-63d7-7a49-9cde-802929e853ba>, <TaskInstance: sponsoratlas_backfill.dbt_facts manual__2026-10-28T03:16:27.831169+00:00 [None] ti_id=01a18082-63d9-7546-9e7b-843098b13e6c>} [airflow.sdk.definitions.dag] loc=dag.py:1424
+2026-10-28T03:16:38.303868Z [warning  ] No tasks to run. unrunnable tasks: {<TaskInstance: sponsoratlas_backfill.dimension_inputs manual__2026-10-28T03:16:27.831169+00:00 [None] ti_id=01a18082-63d6-7e65-b6f1-fdc36428e78a>, <TaskInstance: sponsoratlas_backfill.fact_inputs manual__2026-10-28T03:16:27.831169+00:00 [None] ti_id=01a18082-63d8-76e1-8742-441a4288af74>, <TaskInstance: sponsoratlas_backfill.dbt_dimensions manual__2026-10-28T03:16:27.831169+00:00 [None] ti_id=01a18082-63d7-7a49-9cde-802929e853ba>, <TaskInstance: sponsoratlas_backfill.dbt_facts manual__2026-10-28T03:16:27.831169+00:00 [None] ti_id=01a18082-63d9-7546-9e7b-843098b13e6c>} [airflow.sdk.definitions.dag] loc=dag.py:1424
+2026-10-28T03:16:39.326884Z [warning  ] No tasks to run. unrunnable tasks: {<TaskInstance: sponsoratlas_backfill.fact_inputs manual__2026-10-28T03:16:27.831169+00:00 [None] ti_id=01a18082-63d8-76e1-8742-441a4288af74>, <TaskInstance: sponsoratlas_backfill.dbt_dimensions manual__2026-10-28T03:16:27.831169+00:00 [None] ti_id=01a18082-63d7-7a49-9cde-802929e853ba>, <TaskInstance: sponsoratlas_backfill.dbt_facts manual__2026-10-28T03:16:27.831169+00:00 [None] ti_id=01a18082-63d9-7546-9e7b-843098b13e6c>} [airflow.sdk.definitions.dag] loc=dag.py:1424
+2026-10-28T03:16:40.349775Z [warning  ] No tasks to run. unrunnable tasks: {<TaskInstance: sponsoratlas_backfill.fact_inputs manual__2026-10-28T03:16:27.831169+00:00 [None] ti_id=01a18082-63d8-76e1-8742-441a4288af74>, <TaskInstance: sponsoratlas_backfill.dbt_facts manual__2026-10-28T03:16:27.831169+00:00 [None] ti_id=01a18082-63d9-7546-9e7b-843098b13e6c>} [airflow.sdk.definitions.dag] loc=dag.py:1424
+2026-10-28T03:16:41.372549Z [warning  ] No tasks to run. unrunnable tasks: {<TaskInstance: sponsoratlas_backfill.dbt_facts manual__2026-10-28T03:16:27.831169+00:00 [None] ti_id=01a18082-63d9-7546-9e7b-843098b13e6c>} [airflow.sdk.definitions.dag] loc=dag.py:1424
+2026-10-28T03:16:42.396518Z [info     ] Marking run <DagRun sponsoratlas_backfill @ 2026-10-28 03:16:23.879294+00:00: manual__2026-10-28T03:16:27.831169+00:00, state:running, queued_at: None. run_type: manual> failed [airflow.models.dagrun.DagRun] loc=dagrun.py:1219
+2026-10-28T03:16:42.397284Z [info     ] Executing on_failure dag callback: notify [airflow.models.dagrun.DagRun] loc=dagrun.py:1496
+2026-10-28T03:16:42.397360Z [error    ] Callback failed for sponsoratlas_backfill [airflow.models.dagrun.DagRun] loc=dagrun.py:1504
+Traceback (most recent call last):
+  File "/home/postedism/Desktop/SponsorAtlas/.tools/orchestration/venv/lib/python3.12/site-packages/airflow/models/dagrun.py", line 1502, in execute_dag_callbacks
+    callback(context)
+  File "/home/postedism/Desktop/SponsorAtlas/orchestration/sponsoratlas_orchestration/runtime.py", line 130, in notify
+    kind = notification_settings()
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/postedism/Desktop/SponsorAtlas/orchestration/sponsoratlas_orchestration/runtime.py", line 93, in notification_settings
+    kind = required("SPONSORATLAS_ALERT_TRANSPORT")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/postedism/Desktop/SponsorAtlas/orchestration/sponsoratlas_orchestration/runtime.py", line 49, in required
+    raise RuntimeError(f"Required configuration missing: {name}")
+RuntimeError: Required configuration missing: SPONSORATLAS_ALERT_TRANSPORT
+2026-10-28T03:16:42.397818Z [info     ] DagRun Finished: dag_id=sponsoratlas_backfill, logical_date=2026-10-28 03:16:23.879294+00:00, run_id=manual__2026-10-28T03:16:27.831169+00:00, run_start_date=2026-10-28 03:16:23.879294+00:00, run_end_date=2026-10-28 03:16:42.396598+00:00, run_duration=18.517304, state=failed, run_type=manual, data_interval_start=2026-10-28 03:16:23.879294+00:00, data_interval_end=2026-10-28 03:16:23.879294+00:00, [airflow.models.dagrun.DagRun] loc=dagrun.py:1315
+DagRun failed

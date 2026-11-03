@@ -1,0 +1,190 @@
+{
+  "status": "PASS",
+  "threshold": 0.875,
+  "labels": 559,
+  "hard_cases": 243,
+  "holdout_pairs": 105,
+  "metrics": {
+    "tp": 50,
+    "fp": 0,
+    "fn": 5,
+    "tn": 50,
+    "precision": 1.0,
+    "recall": 0.9090909090909091,
+    "missing_predictions": 0,
+    "pairs": 105,
+    "direct_score_missing": 18,
+    "hard_cases": {
+      "tp": 30,
+      "fp": 0,
+      "fn": 3,
+      "tn": 9,
+      "precision": 1.0,
+      "recall": 0.9090909090909091,
+      "missing_predictions": 0,
+      "pairs": 42
+    },
+    "threshold": 0.875
+  },
+  "threshold_curve": [
+    {
+      "threshold": 0.5,
+      "status": "IDENTITY_REVIEW_REQUIRED",
+      "error": "MERGE_REQUIRED: {\"component\": \"007d28ba529290d5dbc217c867062816c720707edb95c6a30a59f1efd02f5470\", \"employer_ids\": [\"emp_007d28ba529290d5dbc217c867062816c720707edb95c6a30a59f1efd02f5470\", \"emp_f5dd672947bcf48a71bc52a43112424bfcb0853edd8c8a28e0dcdccc2e4121c3\"]}; preserve previous registry and review migration"
+    },
+    {
+      "threshold": 0.7,
+      "status": "IDENTITY_REVIEW_REQUIRED",
+      "error": "MERGE_REQUIRED: {\"component\": \"007d28ba529290d5dbc217c867062816c720707edb95c6a30a59f1efd02f5470\", \"employer_ids\": [\"emp_007d28ba529290d5dbc217c867062816c720707edb95c6a30a59f1efd02f5470\", \"emp_f5dd672947bcf48a71bc52a43112424bfcb0853edd8c8a28e0dcdccc2e4121c3\"]}; preserve previous registry and review migration"
+    },
+    {
+      "tp": 50,
+      "fp": 0,
+      "fn": 5,
+      "tn": 50,
+      "precision": 1.0,
+      "recall": 0.9090909090909091,
+      "missing_predictions": 0,
+      "pairs": 105,
+      "direct_score_missing": 18,
+      "hard_cases": {
+        "tp": 30,
+        "fp": 0,
+        "fn": 3,
+        "tn": 9,
+        "precision": 1.0,
+        "recall": 0.9090909090909091,
+        "missing_predictions": 0,
+        "pairs": 42
+      },
+      "threshold": 0.8
+    },
+    {
+      "tp": 50,
+      "fp": 0,
+      "fn": 5,
+      "tn": 50,
+      "precision": 1.0,
+      "recall": 0.9090909090909091,
+      "missing_predictions": 0,
+      "pairs": 105,
+      "direct_score_missing": 18,
+      "hard_cases": {
+        "tp": 30,
+        "fp": 0,
+        "fn": 3,
+        "tn": 9,
+        "precision": 1.0,
+        "recall": 0.9090909090909091,
+        "missing_predictions": 0,
+        "pairs": 42
+      },
+      "threshold": 0.85
+    },
+    {
+      "tp": 50,
+      "fp": 0,
+      "fn": 5,
+      "tn": 50,
+      "precision": 1.0,
+      "recall": 0.9090909090909091,
+      "missing_predictions": 0,
+      "pairs": 105,
+      "direct_score_missing": 18,
+      "hard_cases": {
+        "tp": 30,
+        "fp": 0,
+        "fn": 3,
+        "tn": 9,
+        "precision": 1.0,
+        "recall": 0.9090909090909091,
+        "missing_predictions": 0,
+        "pairs": 42
+      },
+      "threshold": 0.875
+    },
+    {
+      "tp": 50,
+      "fp": 0,
+      "fn": 5,
+      "tn": 50,
+      "precision": 1.0,
+      "recall": 0.9090909090909091,
+      "missing_predictions": 0,
+      "pairs": 105,
+      "direct_score_missing": 18,
+      "hard_cases": {
+        "tp": 30,
+        "fp": 0,
+        "fn": 3,
+        "tn": 9,
+        "precision": 1.0,
+        "recall": 0.9090909090909091,
+        "missing_predictions": 0,
+        "pairs": 42
+      },
+      "threshold": 0.9
+    },
+    {
+      "threshold": 0.95,
+      "status": "IDENTITY_REVIEW_REQUIRED",
+      "error": "SPLIT_REQUIRED: {\"components\": [\"0065265a8ba882839f67f4f93269849f9b4371ebd8b8d4f3924920a567cdd087\", \"b3018f6a72c392875a5c3d8562d10f47cea26a644437f198a769d9670f237af8\"], \"employer_id\": \"emp_0065265a8ba882839f67f4f93269849f9b4371ebd8b8d4f3924920a567cdd087\"}; preserve previous registry and review migration"
+    },
+    {
+      "threshold": 0.97,
+      "status": "IDENTITY_REVIEW_REQUIRED",
+      "error": "SPLIT_REQUIRED: {\"components\": [\"0065265a8ba882839f67f4f93269849f9b4371ebd8b8d4f3924920a567cdd087\", \"b3018f6a72c392875a5c3d8562d10f47cea26a644437f198a769d9670f237af8\"], \"employer_id\": \"emp_0065265a8ba882839f67f4f93269849f9b4371ebd8b8d4f3924920a567cdd087\"}; preserve previous registry and review migration"
+    },
+    {
+      "threshold": 0.99,
+      "status": "IDENTITY_REVIEW_REQUIRED",
+      "error": "SPLIT_REQUIRED: {\"components\": [\"004031149faae3960cc246bba55207964b58afc060ae60bd8b1be219a083f007\", \"a6c151ed5e6e653b441941daa162366f418571a54fb8d54bf33dfb5994e382bc\"], \"employer_id\": \"emp_004031149faae3960cc246bba55207964b58afc060ae60bd8b1be219a083f007\"}; preserve previous registry and review migration"
+    }
+  ],
+  "errors": [
+    {
+      "left_id": "76575f3c4fc56405b65cc695ff9f22df207903edd6858e740cd6c0d1976cbb24",
+      "right_id": "c17e3f73a9b14ff74bc01d385e62c0f3f42337663da2348b468f38615bdc1992",
+      "truth": "1",
+      "predicted": 0,
+      "hard_case": "1",
+      "rationale": "右侧是左侧的 DBA/简称或截断写法，地址支持同一雇主"
+    },
+    {
+      "left_id": "043d0e8072900c747b7eb5dc8cf13288b193febcbcc19d60bdab544da20730c8",
+      "right_id": "e90c4423f474f5946ec55101e2a5eb99a4c21be650ca33cc88ce8a35fa2a8d37",
+      "truth": "1",
+      "predicted": 0,
+      "hard_case": "0",
+      "rationale": "名称只是后缀/缩写/标点/截断差异，地址一致"
+    },
+    {
+      "left_id": "9b1dd2b9c81745ef9f95b84ee1a13d653b1aa4d566feec2a2ca2217e722c64ce",
+      "right_id": "f319848e9d0e33a789bed33b433ac10ede096e76e33243a699b9ea1f3e026211",
+      "truth": "1",
+      "predicted": 0,
+      "hard_case": "1",
+      "rationale": "右侧是左侧的 DBA/简称或截断写法，地址支持同一雇主"
+    },
+    {
+      "left_id": "89ba7e42b5a96eb6359363f436b23c31d06d0d59b4128092f9cf15ad5fd9c0f7",
+      "right_id": "d090debaddf6ab270a589a8bcb08ab73465de8fe9cfdb40f9d6199ebc10b520c",
+      "truth": "1",
+      "predicted": 0,
+      "hard_case": "0",
+      "rationale": "名称和地址一致，税号一侧缺失，按同一雇主处理"
+    },
+    {
+      "left_id": "3128136724a68266396afbe5a58dc3d6342273ea7406e08a8c61b85e8083c14a",
+      "right_id": "42782e25d823edc842be856f5fe3b15902e196ee870aa1ca716c98fb7fc7614a",
+      "truth": "1",
+      "predicted": 0,
+      "hard_case": "1",
+      "rationale": "右侧是左侧名称的截断写法，地址一致"
+    }
+  ],
+  "labels_sha256": "d290ca4fd87dde34748c9281ba47ac526745577e53ed1fd88f72ec68814931e8",
+  "model_sha256": "905d18c6a79623f6f189eeb39f50cf161243f9a864e47c906253b2e1ef2aac2a",
+  "input_occurrences_sha256": "7220500b38dd2b119ac480dbd24ee9d4a2163daa735904d7e82070b9badbc81b",
+  "registry_sha256": "7b98fb2067383727c7d3080523ad6c113b0c3eb59be58d73c81a3b85306d426a"
+}

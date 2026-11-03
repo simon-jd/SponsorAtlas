@@ -1,0 +1,25 @@
+============================= test session starts ==============================
+platform linux -- Python 3.12.15, pytest-8.4.2, pluggy-1.7.0 -- /home/postedism/Desktop/SponsorAtlas/.venv/bin/python
+rootdir: /home/postedism/Desktop/SponsorAtlas
+configfile: pyproject.toml
+plugins: platformdirs-4.13.5
+collecting ... collected 5 items
+
+warehouse/tests/test_policies.py::test_policy_ddl_has_no_unprotected_creation_or_transformer_bypass PASSED [ 20%]
+warehouse/tests/test_policies.py::test_analyst_sees_masked_email PASSED  [ 40%]
+warehouse/tests/test_policies.py::test_non_owner_sees_zero_application_rows PASSED [ 60%]
+warehouse/tests/test_policies.py::test_owner_pii_reader_sees_plain_email PASSED [ 80%]
+warehouse/tests/test_policies.py::test_apply_grants_are_object_scoped_and_owner_roles_have_no_service_grants PASSED [100%]
+
+=============================== warnings summary ===============================
+warehouse/tests/test_policies.py::test_analyst_sees_masked_email
+warehouse/tests/test_policies.py::test_analyst_sees_masked_email
+warehouse/tests/test_policies.py::test_analyst_sees_masked_email
+warehouse/tests/test_policies.py::test_analyst_sees_masked_email
+warehouse/tests/test_policies.py::test_analyst_sees_masked_email
+warehouse/tests/test_policies.py::test_analyst_sees_masked_email
+  /home/postedism/Desktop/SponsorAtlas/.venv/lib/python3.12/site-packages/snowflake/connector/vendored/urllib3/contrib/pyopenssl.py:413: DeprecationWarning: X509.get_subject is deprecated. You should use cryptography's X.509 APIs instead.
+    "subject": ((("commonName", x509.get_subject().CN),),),  # type: ignore[dict-item]
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+======================== 5 passed, 6 warnings in 23.45s ========================

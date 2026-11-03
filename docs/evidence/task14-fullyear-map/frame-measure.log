@@ -1,0 +1,22 @@
+nproc; uptime
+32
+ 08:32:11 up 11 days,  6:34,  3 users,  load average: 6.93, 9.70, 8.37
+flock /var/tmp/rtx4090.lock web/scripts/viz-frame-run.sh measure fy2025-full
+Private SWC cache: /tmp/sponsoratlas-task13-swc.od3pReTs
+$ next start --hostname 127.0.0.1 --port 3100
+▲ Next.js 16.4.3
+- Local:         http://127.0.0.1:3100
+- Network:       http://127.0.0.1:3100
+✓ Ready in 61ms
+✓ Running next.config.mjs took 63ms
+⚠ "next start" does not work with "output: standalone" configuration. Use "node .next/standalone/server.js" instead.
+
+Running 2 tests using 1 worker
+
+  ✓  1 tests/e2e/viz.spec.ts:60:28 › drawn WebGL pan zoom p95 at 1x CPU (12.4s)
+  ✓  2 tests/e2e/viz.spec.ts:60:28 › drawn WebGL pan zoom p95 at 4x CPU (11.0s)
+
+  2 passed (23.9s)
+30749712	/tmp/sponsoratlas-task13-swc.od3pReTs
+uptime
+ 08:48:25 up 11 days,  6:50,  3 users,  load average: 7.31, 6.53, 7.21

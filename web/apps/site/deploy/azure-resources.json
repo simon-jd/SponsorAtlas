@@ -1,0 +1,267 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "ttl": {
+      "type": "string"
+    },
+    "estimatedHourlyUSD": {
+      "type": "string"
+    },
+    "siteName": {
+      "type": "string"
+    },
+    "storageName": {
+      "type": "string"
+    },
+    "cubeImageDigest": {
+      "type": "string"
+    },
+    "registryServer": {
+      "type": "string"
+    },
+    "registryUsername": {
+      "type": "string"
+    },
+    "location": {
+      "type": "string",
+      "defaultValue": "westus2"
+    },
+    "registryPassword": {
+      "type": "securestring"
+    },
+    "cubeSecret": {
+      "type": "securestring",
+      "minLength": 32
+    }
+  },
+  "resources": [
+    {
+      "type": "Microsoft.Web/staticSites",
+      "apiVersion": "2023-12-01",
+      "name": "[parameters('siteName')]",
+      "location": "[parameters('location')]",
+      "tags": {
+        "project": "sponsoratlas",
+        "owner": "codex-sponsoratlas",
+        "ttl": "[parameters('ttl')]",
+        "est_usd_per_hour": "[parameters('estimatedHourlyUSD')]"
+      },
+      "properties": {
+        "allowConfigFileUpdates": false
+      },
+      "sku": {
+        "name": "Free",
+        "tier": "Free"
+      }
+    },
+    {
+      "type": "Microsoft.App/managedEnvironments",
+      "apiVersion": "2024-03-01",
+      "name": "sponsoratlas-consumption",
+      "location": "[parameters('location')]",
+      "tags": {
+        "project": "sponsoratlas",
+        "owner": "codex-sponsoratlas",
+        "ttl": "[parameters('ttl')]",
+        "est_usd_per_hour": "[parameters('estimatedHourlyUSD')]"
+      },
+      "properties": {
+        "workloadProfiles": [
+          {
+            "name": "Consumption",
+            "workloadProfileType": "Consumption"
+          }
+        ]
+      }
+    },
+    {
+      "type": "Microsoft.App/containerApps",
+      "apiVersion": "2024-03-01",
+      "name": "sponsoratlas-cube",
+      "location": "[parameters('location')]",
+      "tags": {
+        "project": "sponsoratlas",
+        "owner": "codex-sponsoratlas",
+        "ttl": "[parameters('ttl')]",
+        "est_usd_per_hour": "[parameters('estimatedHourlyUSD')]"
+      },
+      "properties": {
+        "managedEnvironmentId": "[resourceId('Microsoft.App/managedEnvironments','sponsoratlas-consumption')]",
+        "workloadProfileName": "Consumption",
+        "configuration": {
+          "activeRevisionsMode": "Single",
+          "ingress": {
+            "external": true,
+            "allowInsecure": false,
+            "targetPort": 4000,
+            "transport": "http"
+          },
+          "secrets": [
+            {
+              "name": "cube-secret",
+              "value": "[parameters('cubeSecret')]"
+            },
+            {
+              "name": "registry-password",
+              "value": "[parameters('registryPassword')]"
+            }
+          ],
+          "registries": [
+            {
+              "server": "[parameters('registryServer')]",
+              "username": "[parameters('registryUsername')]",
+              "passwordSecretRef": "registry-password"
+            }
+          ]
+        },
+        "template": {
+          "containers": [
+            {
+              "name": "cube",
+              "image": "[parameters('cubeImageDigest')]",
+              "resources": {
+                "cpu": 1,
+                "memory": "2Gi"
+              },
+              "env": [
+                {
+                  "name": "CUBEJS_API_SECRET",
+                  "secretRef": "cube-secret"
+                }
+              ],
+              "probes": [
+                {
+                  "type": "Startup",
+                  "tcpSocket": {
+                    "port": 4000
+                  },
+                  "initialDelaySeconds": 5,
+                  "periodSeconds": 5,
+                  "failureThreshold": 24
+                },
+                {
+                  "type": "Readiness",
+                  "tcpSocket": {
+                    "port": 4000
+                  },
+                  "periodSeconds": 10,
+                  "failureThreshold": 3
+                }
+              ]
+            }
+          ],
+          "scale": {
+            "minReplicas": 0,
+            "maxReplicas": 1,
+            "rules": [
+              {
+                "name": "http",
+                "http": {
+                  "metadata": {
+                    "concurrentRequests": "10"
+                  }
+                }
+              }
+            ]
+          }
+        }
+      },
+      "dependsOn": [
+        "[resourceId('Microsoft.App/managedEnvironments','sponsoratlas-consumption')]"
+      ]
+    },
+    {
+      "type": "Microsoft.Storage/storageAccounts",
+      "apiVersion": "2023-05-01",
+      "name": "[parameters('storageName')]",
+      "location": "[parameters('location')]",
+      "tags": {
+        "project": "sponsoratlas",
+        "owner": "codex-sponsoratlas",
+        "ttl": "[parameters('ttl')]",
+        "est_usd_per_hour": "[parameters('estimatedHourlyUSD')]"
+      },
+      "sku": {
+        "name": "Standard_LRS"
+      },
+      "kind": "StorageV2",
+      "properties": {
+        "minimumTlsVersion": "TLS1_2",
+        "supportsHttpsTrafficOnly": true,
+        "allowBlobPublicAccess": false,
+        "accessTier": "Hot"
+      }
+    },
+    {
+      "type": "Microsoft.Storage/storageAccounts/blobServices",
+      "apiVersion": "2023-05-01",
+      "name": "[concat(parameters('storageName'),'/default')]",
+      "dependsOn": [
+        "[resourceId('Microsoft.Storage/storageAccounts',parameters('storageName'))]"
+      ],
+      "properties": {
+        "isVersioningEnabled": false,
+        "deleteRetentionPolicy": {
+          "enabled": false
+        },
+        "containerDeleteRetentionPolicy": {
+          "enabled": false
+        }
+      }
+    },
+    {
+      "type": "Microsoft.Storage/storageAccounts/blobServices/containers",
+      "apiVersion": "2023-05-01",
+      "name": "[concat(parameters('storageName'),'/default/vitals')]",
+      "dependsOn": [
+        "[resourceId('Microsoft.Storage/storageAccounts/blobServices',parameters('storageName'),'default')]"
+      ],
+      "properties": {
+        "publicAccess": "None"
+      }
+    },
+    {
+      "type": "Microsoft.Storage/storageAccounts/managementPolicies",
+      "apiVersion": "2023-05-01",
+      "name": "[concat(parameters('storageName'),'/default')]",
+      "dependsOn": [
+        "[resourceId('Microsoft.Storage/storageAccounts',parameters('storageName'))]"
+      ],
+      "properties": {
+        "policy": {
+          "rules": [
+            {
+              "enabled": true,
+              "name": "expire-inactive-vitals",
+              "type": "Lifecycle",
+              "definition": {
+                "filters": {
+                  "blobTypes": [
+                    "blockBlob"
+                  ],
+                  "prefixMatch": [
+                    "vitals/vitals.json"
+                  ]
+                },
+                "actions": {
+                  "baseBlob": {
+                    "delete": {
+                      "daysAfterModificationGreaterThan": 7
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "outputs": {
+    "cubeURL": {
+      "type": "string",
+      "value": "[concat('https://',reference(resourceId('Microsoft.App/containerApps','sponsoratlas-cube'),'2024-03-01').configuration.ingress.fqdn,'/cubejs-api/v1/load')]"
+    }
+  }
+}

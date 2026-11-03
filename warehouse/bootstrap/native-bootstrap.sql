@@ -1,0 +1,131 @@
+-- SOURCE ONLY / INERT: every line is a comment. Do not execute this file.
+-- Review fragments for a future human-only, one-step-at-a-time package.
+-- No account/key/SQL/warehouse/credit authorization is supplied by this source.
+-- Read README.md: local encryption, state lifecycle, fresh account proof and
+-- independent review must be complete before the human's final sensitive action.
+-- Existing personal SSO is not authorization for a programmatic admin identity.
+-- No credentials, public/private key examples, key enrollment or shell wrapper.
+--
+-- A. FRESH READ-ONLY PROOF, BEFORE ANY MUTATION (NOT PERFORMED)
+-- Same account: users, roles, databases, schemas, warehouse, monitor and policy
+-- collisions; grants TO/OF each relevant role, TO each user, ON each object,
+-- future grants, recursive inheritance and PUBLIC access. Capture actual owners.
+-- A collision, incomplete visibility or unexplained grant stops the sequence.
+-- Never use CREATE OR REPLACE/IF NOT EXISTS to adopt an unexpected object.
+--
+-- B. HUMAN BOOTSTRAP, ONLY AFTER THE COMPLETE PACKAGE IS REVIEWED
+-- Human ACCOUNTADMIN-only monitor creation/assignment; no machine admin role.
+-- The end timestamp is UNRESOLVED and intentionally unusable. A future approved
+-- package must supply a concrete UTC literal with confirmed timezone interpretation
+-- and end within the approved <=10min window. No expressions/retries/extensions.
+-- CREATE RESOURCE MONITOR SPONSORATLAS_BOOTSTRAP_RM WITH
+--   CREDIT_QUOTA = 1 FREQUENCY = NEVER START_TIMESTAMP = IMMEDIATELY
+--   END_TIMESTAMP = '<UNRESOLVED_REVIEWED_UTC_END_TIMESTAMP>'
+--   TRIGGERS ON 100 PERCENT DO SUSPEND_IMMEDIATE;
+-- NEVER does not reset quota; FREQUENCY requires START_TIMESTAMP.
+-- END_TIMESTAMP suspends assigned warehouses; delayed controls are not hard caps.
+-- CREATE WAREHOUSE SPONSORATLAS_XS WITH
+--   WAREHOUSE_TYPE = STANDARD WAREHOUSE_SIZE = XSMALL
+--   MIN_CLUSTER_COUNT = 1 MAX_CLUSTER_COUNT = 1
+--   AUTO_SUSPEND = 60 AUTO_RESUME = TRUE INITIALLY_SUSPENDED = TRUE
+--   RESOURCE_MONITOR = SPONSORATLAS_BOOTSTRAP_RM
+--   STATEMENT_TIMEOUT_IN_SECONDS = 300 STATEMENT_QUEUED_TIMEOUT_IN_SECONDS = 60
+--   COMMENT = 'XS only; no apply without nonproduction budget authorization.';
+-- Only exact project XS; monitor bound at CREATE, before any provider query.
+-- No generation/acceleration/new settings or learning warehouse.
+--
+-- Metadata before creation proves absence; repeat afterward to inspect binding.
+-- SHOW RESOURCE MONITORS;
+-- SHOW WAREHOUSES;
+-- SHOW RESOURCE MONITORS LIKE 'SPONSORATLAS_BOOTSTRAP_RM';
+-- SHOW WAREHOUSES LIKE 'SPONSORATLAS_XS';
+-- SHOW requires no running warehouse. LIKE '_'/'%' are wildcards, not equality.
+-- Compare exact names/fields/current account/role; stop on collisions, partial
+-- visibility or truncated results. Expect monitor level WAREHOUSE, not ACCOUNT,
+-- and exact suspended XS with its exact named monitor. Project-only binding
+-- needs complete warehouse-assignment visibility, not a prefix/filtered row.
+--
+-- After monitor/XS verification, prepare the temporary identity.
+-- CREATE ROLE SPONSORATLAS_DEPLOY;
+-- CREATE USER SPONSORATLAS_DEPLOY_SVC
+--   TYPE = SERVICE DISABLED = TRUE
+--   DEFAULT_ROLE = SPONSORATLAS_DEPLOY DEFAULT_SECONDARY_ROLES = ()
+--   DEFAULT_WAREHOUSE = SPONSORATLAS_XS;
+-- GRANT ROLE SPONSORATLAS_DEPLOY TO USER SPONSORATLAS_DEPLOY_SVC;
+-- Human owns deploy user/role and monitor. Inspect exact outbound XS grants:
+-- transfer assumes none; do not add COPY/REVOKE CURRENT GRANTS to hide conflict.
+-- GRANT OWNERSHIP ON WAREHOUSE SPONSORATLAS_XS TO ROLE SPONSORATLAS_DEPLOY;
+-- Import reads the monitor name; require no-op and reject any monitor change,
+-- without deploy privilege expansion/fallback. Full defaults/generation/import/
+-- no-op/live privilege and monitor effectiveness remain unproved.
+-- Separate public-key enrollment/enablement is NOT encoded; no app roots created
+-- by the human. Dedicated SERVICE/JWT/secondary NONE only, no personal admin key.
+-- Sources and human/key-package blockers: README.md.
+--
+-- C. EXACT TEMPORARY ACCOUNT CAPABILITIES (NONE CURRENTLY AUTHORIZED)
+-- These are ACCOUNT-WIDE, not restricted to the listed project object names.
+-- Plan allowlists and a ten-minute window do not create an IAM name boundary.
+-- GRANT CREATE DATABASE ON ACCOUNT TO ROLE SPONSORATLAS_DEPLOY;
+-- GRANT CREATE ROLE ON ACCOUNT TO ROLE SPONSORATLAS_DEPLOY;
+-- GRANT CREATE USER ON ACCOUNT TO ROLE SPONSORATLAS_DEPLOY;
+-- No grant option, CREATE WAREHOUSE, MANAGE GRANTS, account APPLY or inheritance.
+--
+-- D. FUTURE TERRAFORM CREATE_DISABLED, NOT INVOKED HERE
+-- Import only XS. Terraform must create RAW/ANALYTICS, seven managed schemas,
+-- four functional roles, three DISABLED SERVICE users, policies/tags/grants.
+-- The deployment role owns its creations; actual read/grant behavior is OPEN.
+-- Reject unintended changes to XS/monitor or anything outside the HCL inventory.
+-- Preserve the three application public-key entries and empty application owners.
+--
+-- E. HUMAN EXACT BINDING, AFTER NEW USERS ARE VERIFIED DISABLED
+-- Inspect each existing policy binding and the exact KEYPAIR-only policy first.
+-- Any preexisting/unexpected binding or unauthorized/hidden read is a stop.
+-- Independently inspect nested mfa_policy/pat_policy/workload_identity_policy;
+-- provider no-op does not prove those fields are unchanged.
+-- ALTER USER AIRBYTE_SVC SET AUTHENTICATION POLICY ANALYTICS.STAGING.SERVICE_KEY_PAIR_ONLY;
+-- ALTER USER DBT_SVC SET AUTHENTICATION POLICY ANALYTICS.STAGING.SERVICE_KEY_PAIR_ONLY;
+-- ALTER USER CUBE_SVC SET AUTHENTICATION POLICY ANALYTICS.STAGING.SERVICE_KEY_PAIR_ONLY;
+-- Never append FORCE; never bind the account/human/all SERVICE users/deploy user.
+--
+-- F. FUTURE IMPORT_DISABLED, STILL NO ENABLEMENT
+-- Import exactly the three original attachment addresses; zero remote mutations.
+-- Require a subsequent refresh/no-op with all three users still disabled.
+-- Reject every authorization warning/cleared ID or attachment mutation.
+--
+-- G. HUMAN REVOKE AND VERIFY BEFORE A NEW READY PLAN
+-- REVOKE CREATE DATABASE ON ACCOUNT FROM ROLE SPONSORATLAS_DEPLOY;
+-- REVOKE CREATE ROLE ON ACCOUNT FROM ROLE SPONSORATLAS_DEPLOY;
+-- REVOKE CREATE USER ON ACCOUNT FROM ROLE SPONSORATLAS_DEPLOY;
+-- Prove direct/inherited absence, exact bindings, disabled users and monitor.
+-- Then a newly reviewed READY plan may contain ONLY three disabled true->false
+-- user updates. Do not reuse an earlier plan, skip phases or revert to NORMAL.
+-- Import declarations stay in place; they never authorize recreated bindings.
+--
+-- H. HUMAN ABORT FRAGMENTS, ONLY FOR OBJECTS PROVED TO EXIST
+-- Partial creation/enablement is possible; these operations are not atomic.
+-- ALTER USER AIRBYTE_SVC SET DISABLED = TRUE;
+-- ALTER USER DBT_SVC SET DISABLED = TRUE;
+-- ALTER USER CUBE_SVC SET DISABLED = TRUE;
+-- Repeat exact three CREATE revocations from G, verifying each outcome.
+-- ALTER WAREHOUSE SPONSORATLAS_XS SUSPEND;
+-- Verify actual suspended state; a timeout or cleanup attempt is not proof.
+-- ALTER USER SPONSORATLAS_DEPLOY_SVC SET DISABLED = TRUE;
+-- If cleanup/access fails, retain evidence/state and report the unresolved state.
+-- Do not detach policies, drop roots or destroy resources as an automatic undo.
+--
+-- I. HUMAN SUCCESS SHUTDOWN, AFTER NO FURTHER DEPLOY QUERIES ARE NEEDED
+-- ALTER WAREHOUSE SPONSORATLAS_XS SUSPEND;
+-- Verify suspension and the three app-user policies/roles/keys.
+-- REVOKE ROLE SPONSORATLAS_DEPLOY FROM USER SPONSORATLAS_DEPLOY_SVC;
+-- DROP USER SPONSORATLAS_DEPLOY_SVC;
+-- Final app-user count remains three; the owner role can still own the project.
+-- CREATE revocation does not undo OWNERSHIP. Transfers/dependent grants/data
+-- require separate reconciliation; neither credit nor state rollback is proved.
+--
+-- J. STATE REMAINS BLOCKED
+-- Blob SSE does not encrypt local errored.tfstate/plans/cache/crash/temp files.
+-- Preserve existing project AzureCLI config; no HOME reset or credential copy.
+-- No new mount/device/FUSE or retroactive encryption assumption.
+-- Finite TTL/export/independent encrypted restore proof must precede backend
+-- deletion; current reaper/down has no state retention gate. No TTL bypass.
+-- No Azure creation until Retail API/ledger <=$5.40 of $6, own RG/four tags/TTL.

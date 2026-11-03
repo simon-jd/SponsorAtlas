@@ -1,0 +1,8 @@
+{
+  "source_url": "https://www2.census.gov/geo/docs/reference/codes2020/national_place_by_county2020.txt",
+  "source_sha256": "9996494d33cf6ee4527491508aa1b8dae85dcff3a979886e19b0b375e5d06ec6",
+  "source_bytes": 2736928,
+  "retrieved_at": "2026-10-24T04:02:15.570995+00:00",
+  "vintage": "Census2020",
+  "matching": "Place name without its Census type suffix, uppercased, periods/apostrophes removed, whitespace collapsed. Kept only when all places of that name in the state lie in one county. Used only when the source county is missing or does not match county_fips."
+}

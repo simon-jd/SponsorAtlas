@@ -1,0 +1,86 @@
+{
+  "kind": "ACTUAL_SNOWFLAKE_PUBLIC_MARTS",
+  "exported_at_utc": "2026-10-31T16:30:47Z",
+  "trial": {
+    "cutoff": 1795477980000,
+    "start": 1792913340000,
+    "expires": 1795478400000
+  },
+  "identity": [
+    "CUBE_SVC",
+    "ANALYST",
+    "SPONSORATLAS_XS",
+    "{\"roles\":\"\",\"value\":\"\"}"
+  ],
+  "warehouse": {
+    "name": "SPONSORATLAS_XS",
+    "size": "X-Small",
+    "auto_suspend": 60
+  },
+  "connector_version": "4.8.0",
+  "source_versions": {
+    "lca": [
+      "713467",
+      "-6364709766770351715"
+    ],
+    "postings": [
+      "86",
+      "-7719017897154369397"
+    ],
+    "wages": [
+      "237514",
+      "1426529515131372330"
+    ]
+  },
+  "exports": [
+    {
+      "path": "/home/postedism/Desktop/SponsorAtlas/.tools/semantic/snowflake-export-phase9-20261031/lca.parquet",
+      "size": 24094556,
+      "mtime_ns": 1793464243906954792,
+      "sha256": "30187a604ed54ad01645e03904ed86ad37640e507a391b4a0e80fee83ea6f65b",
+      "source_table": "ANALYTICS.MARTS.fact_lca_case",
+      "rows": 713467,
+      "query": "select f.case_number, f.is_certified, f.annual_wage,\n coalesce(f.employer_id,'UNKNOWN') employer, coalesce(o.major_code,'UNKNOWN') soc_major,\n coalesce(f.soc_code,'UNKNOWN') soc,\n coalesce(case when g.cbsa_type='Metropolitan Statistical Area' then g.cbsa_code end,'UNKNOWN') metro,\n f.fiscal_year, f.employer_history_status\n from ANALYTICS.MARTS.fact_lca_case f left join ANALYTICS.MARTS.dim_occupation o using(occupation_key)\n left join ANALYTICS.MARTS.dim_geography g using(geography_key)"
+    },
+    {
+      "path": "/home/postedism/Desktop/SponsorAtlas/.tools/semantic/snowflake-export-phase9-20261031/postings.parquet",
+      "size": 9236,
+      "mtime_ns": 1793464244624949642,
+      "sha256": "8a31945bbf76b44a4b208744ae3e052f270dff58275c1fc60f43bcbd7415e74b",
+      "source_table": "ANALYTICS.MARTS.fact_job_posting_daily",
+      "rows": 86,
+      "query": "select f.posting_id, f.observation_date, f.is_active,\n coalesce(f.employer_id,'UNKNOWN') employer, coalesce(o.major_code,'UNKNOWN') soc_major,\n coalesce(o.soc_code,'UNKNOWN') soc,\n coalesce(case when g.cbsa_type='Metropolitan Statistical Area' then g.cbsa_code end,'UNKNOWN') metro,\n d.fiscal_year, f.employer_mapping_status, f.occupation_mapping_status, f.geography_mapping_status\n from ANALYTICS.MARTS.fact_job_posting_daily f left join ANALYTICS.MARTS.dim_occupation o using(occupation_key)\n left join ANALYTICS.MARTS.dim_geography g using(geography_key)\n left join ANALYTICS.MARTS.dim_date d on f.observation_date_key=d.date_key"
+    },
+    {
+      "path": "/home/postedism/Desktop/SponsorAtlas/.tools/semantic/snowflake-export-phase9-20261031/wages.parquet",
+      "size": 3301658,
+      "mtime_ns": 1793464245948940146,
+      "sha256": "fb82f71a948b28c696eb269e816b16f3031acdd9c15898d3e8d29198f4acbd01",
+      "source_table": "ANALYTICS.MARTS.fact_wage_benchmark",
+      "rows": 237514,
+      "query": "select f.soc_code soc, coalesce(o.major_code,'UNKNOWN') soc_major,\n case when f.area_type='4' then f.area_code else 'UNKNOWN' end metro,\n f.area_type||':'||f.area_code area, f.survey_year,\n cast(null as integer) fiscal_year, f.occupation_group occupation_level,\n g.geography_level, f.annual_median_wage, f.annual_median_wage_raw median_raw,\n f.wage_status, f.annual_flag, f.hourly_flag\n from ANALYTICS.MARTS.fact_wage_benchmark f left join ANALYTICS.MARTS.dim_occupation o using(occupation_key)\n left join ANALYTICS.MARTS.dim_geography g using(geography_key)"
+    }
+  ],
+  "oracle": {
+    "lca": {
+      "case_count": 713467,
+      "certified_count": 697613,
+      "certified_rate": 0.9777789302098064,
+      "wage_p50": 120000.0,
+      "wage_p75": 156383.63,
+      "wage_p90": 200000.0
+    },
+    "postings": 86,
+    "oews_median": 135980.0
+  },
+  "validation": {
+    "all_seven_match": true,
+    "engine": "v1.5.5",
+    "checksums": {
+      "lca": "30187a604ed54ad01645e03904ed86ad37640e507a391b4a0e80fee83ea6f65b",
+      "postings": "8a31945bbf76b44a4b208744ae3e052f270dff58275c1fc60f43bcbd7415e74b",
+      "wages": "fb82f71a948b28c696eb269e816b16f3031acdd9c15898d3e8d29198f4acbd01"
+    },
+    "kind": "REAL_NATIVE_PARQUET_SQL_VALIDATION"
+  }
+}

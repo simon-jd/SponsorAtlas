@@ -1,0 +1,269 @@
+{
+  "metric_identity": [
+    "CUBE_SVC",
+    "ANALYST"
+  ],
+  "relations": {
+    "stg_lca": {
+      "snowflake_relation": "ANALYTICS.STAGING.stg_lca",
+      "local_rows": 717449,
+      "snowflake_rows": 717449,
+      "columns_compared": 53,
+      "mismatched_columns": [],
+      "skipped_columns": [],
+      "status": "SAME"
+    },
+    "stg_uscis": {
+      "snowflake_relation": "ANALYTICS.STAGING.stg_uscis",
+      "local_rows": 93315,
+      "snowflake_rows": 93315,
+      "columns_compared": 30,
+      "mismatched_columns": [],
+      "skipped_columns": [],
+      "status": "SAME"
+    },
+    "stg_board_jobs": {
+      "snowflake_relation": "ANALYTICS.STAGING.stg_board_jobs",
+      "local_rows": 3,
+      "snowflake_rows": 3,
+      "columns_compared": 15,
+      "mismatched_columns": [],
+      "skipped_columns": [
+        "source_extracted_at"
+      ],
+      "status": "SAME"
+    },
+    "stg_cdc_job_postings": {
+      "snowflake_relation": "ANALYTICS.STAGING.stg_cdc_job_postings",
+      "local_rows": 1,
+      "snowflake_rows": 1,
+      "columns_compared": 8,
+      "mismatched_columns": [
+        "source_relation"
+      ],
+      "skipped_columns": [
+        "updated_at",
+        "source_cdc_updated_at",
+        "source_deleted_at",
+        "source_extracted_at"
+      ],
+      "status": "DIFF"
+    },
+    "stg_cdc_application_events": {
+      "snowflake_relation": "ANALYTICS.STAGING.stg_cdc_application_events",
+      "local_rows": 1,
+      "snowflake_rows": 1,
+      "columns_compared": 6,
+      "mismatched_columns": [
+        "source_relation"
+      ],
+      "skipped_columns": [
+        "event_at",
+        "source_cdc_updated_at",
+        "source_deleted_at",
+        "source_extracted_at"
+      ],
+      "status": "DIFF"
+    },
+    "stg_bls": {
+      "snowflake_relation": "ANALYTICS.STAGING.stg_bls",
+      "local_rows": 413527,
+      "snowflake_rows": 413527,
+      "columns_compared": 63,
+      "mismatched_columns": [],
+      "skipped_columns": [],
+      "status": "SAME"
+    },
+    "snap_employer": {
+      "snowflake_relation": "ANALYTICS.INTERMEDIATE.snap_employer",
+      "local_rows": 98188,
+      "snowflake_rows": 98188,
+      "columns_compared": 15,
+      "mismatched_columns": [
+        "dbt_scd_id"
+      ],
+      "skipped_columns": [
+        "dbt_updated_at",
+        "dbt_valid_from",
+        "dbt_valid_to"
+      ],
+      "status": "DIFF"
+    },
+    "int_dimension_mapping": {
+      "snowflake_relation": "ANALYTICS.INTERMEDIATE.int_dimension_mapping",
+      "local_rows": 717449,
+      "snowflake_rows": 717449,
+      "columns_compared": 22,
+      "mismatched_columns": [],
+      "skipped_columns": [],
+      "status": "SAME"
+    },
+    "int_lca_case_candidates": {
+      "snowflake_relation": "ANALYTICS.INTERMEDIATE.int_lca_case_candidates",
+      "local_rows": 717449,
+      "snowflake_rows": 717449,
+      "columns_compared": 61,
+      "mismatched_columns": [],
+      "skipped_columns": [],
+      "status": "SAME"
+    },
+    "int_bls_benchmark_candidates": {
+      "snowflake_relation": "ANALYTICS.INTERMEDIATE.int_bls_benchmark_candidates",
+      "local_rows": 237521,
+      "snowflake_rows": 237521,
+      "columns_compared": 69,
+      "mismatched_columns": [],
+      "skipped_columns": [],
+      "status": "SAME"
+    },
+    "int_employer_current": {
+      "snowflake_relation": "ANALYTICS.INTERMEDIATE.int_employer_current",
+      "local_rows": 98188,
+      "snowflake_rows": 98188,
+      "columns_compared": 14,
+      "mismatched_columns": [],
+      "skipped_columns": [],
+      "status": "SAME"
+    },
+    "dim_date": {
+      "snowflake_relation": "ANALYTICS.MARTS.dim_date",
+      "local_rows": 13149,
+      "snowflake_rows": 13149,
+      "columns_compared": 8,
+      "mismatched_columns": [],
+      "skipped_columns": [],
+      "status": "SAME"
+    },
+    "dim_employer": {
+      "snowflake_relation": "ANALYTICS.MARTS.dim_employer",
+      "local_rows": 98188,
+      "snowflake_rows": 98188,
+      "columns_compared": 17,
+      "mismatched_columns": [
+        "employer_key"
+      ],
+      "skipped_columns": [
+        "valid_from",
+        "valid_to"
+      ],
+      "status": "DIFF"
+    },
+    "dim_geography": {
+      "snowflake_relation": "ANALYTICS.MARTS.dim_geography",
+      "local_rows": 7042,
+      "snowflake_rows": 7042,
+      "columns_compared": 20,
+      "mismatched_columns": [],
+      "skipped_columns": [],
+      "status": "SAME"
+    },
+    "dim_occupation": {
+      "snowflake_relation": "ANALYTICS.MARTS.dim_occupation",
+      "local_rows": 1453,
+      "snowflake_rows": 1453,
+      "columns_compared": 13,
+      "mismatched_columns": [],
+      "skipped_columns": [],
+      "status": "SAME"
+    },
+    "fact_lca_case": {
+      "snowflake_relation": "ANALYTICS.MARTS.fact_lca_case",
+      "local_rows": 713467,
+      "snowflake_rows": 713467,
+      "columns_compared": 35,
+      "mismatched_columns": [],
+      "skipped_columns": [],
+      "status": "SAME"
+    },
+    "fact_job_posting_daily": {
+      "snowflake_relation": "ANALYTICS.MARTS.fact_job_posting_daily",
+      "local_rows": 86,
+      "snowflake_rows": 86,
+      "columns_compared": 23,
+      "mismatched_columns": [],
+      "skipped_columns": [
+        "observed_at_utc",
+        "source_deleted_at"
+      ],
+      "status": "SAME"
+    },
+    "fact_wage_benchmark": {
+      "snowflake_relation": "ANALYTICS.MARTS.fact_wage_benchmark",
+      "local_rows": 237514,
+      "snowflake_rows": 237514,
+      "columns_compared": 42,
+      "mismatched_columns": [],
+      "skipped_columns": [],
+      "status": "SAME"
+    }
+  },
+  "metrics": {
+    "case_count": {
+      "local": 713467,
+      "snowflake": 713467,
+      "equal": true
+    },
+    "certified_cases": {
+      "local": 697613,
+      "snowflake": 697613,
+      "equal": true
+    },
+    "latest_rows": {
+      "local": 713467,
+      "snowflake": 713467,
+      "equal": true
+    },
+    "certified_rate": {
+      "local": 0.9777789302098064,
+      "snowflake": 0.9777789302098064,
+      "equal": true
+    },
+    "certified_rate_avg_sql": {
+      "local": 0.9777789302098064,
+      "snowflake": 0.977779,
+      "equal": false
+    },
+    "wage_p50": {
+      "local": 120000.0,
+      "snowflake": 120000.0,
+      "equal": true
+    },
+    "wage_p75": {
+      "local": 156383.63,
+      "snowflake": 156383.63,
+      "equal": true
+    },
+    "wage_p90": {
+      "local": 200000.0,
+      "snowflake": 200000.0,
+      "equal": true
+    },
+    "active_posting_days": {
+      "local": 86,
+      "snowflake": 86,
+      "equal": true
+    },
+    "oews_estimates_15_1252_us_2025": {
+      "local": 1,
+      "snowflake": 1,
+      "equal": true
+    },
+    "oews_median_15_1252_us_2025": {
+      "local": 135980.0,
+      "snowflake": 135980.0,
+      "equal": true
+    }
+  },
+  "lca_groups": {
+    "local": {
+      "count": 280799,
+      "sha256": "f9fd5aa4763cca7a69feffd5ef42f23875311ab7600da1098c7563b0f92158ea"
+    },
+    "snowflake": {
+      "count": 280799,
+      "sha256": "f9fd5aa4763cca7a69feffd5ef42f23875311ab7600da1098c7563b0f92158ea"
+    },
+    "equal": true
+  },
+  "wall_seconds": 23.9
+}

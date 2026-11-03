@@ -1,0 +1,65 @@
+source_system,fiscal_year,source_column,standard_column,disposition,reason,verification
+uscis,2022,Fiscal Year,source_fiscal_year_raw,mapped,official complete CSV header,verified_full_csv_header
+uscis,2022,Employer,employer_name,mapped,official complete CSV header,verified_full_csv_header
+uscis,2022,Tax ID,employer_tax_id,mapped,official complete CSV header,verified_full_csv_header
+uscis,2022,State,employer_state_raw,mapped,official complete CSV header,verified_full_csv_header
+uscis,2022,City,employer_city,mapped,official complete CSV header,verified_full_csv_header
+uscis,2022,ZIP,employer_zip,mapped,official complete CSV header,verified_full_csv_header
+uscis,2022,Initial Approval,initial_approvals_raw,mapped,official complete CSV header,verified_full_csv_header
+uscis,2022,Initial Denial,initial_denials_raw,mapped,official complete CSV header,verified_full_csv_header
+uscis,2022,Continuing Approval,continuing_approvals_raw,mapped,official complete CSV header,verified_full_csv_header
+uscis,2022,Continuing Denial,continuing_denials_raw,mapped,official complete CSV header,verified_full_csv_header
+uscis,2022,NAICS,naics_code,mapped,official complete CSV header,verified_full_csv_header
+uscis,2023,Fiscal Year,source_fiscal_year_raw,mapped,official complete CSV header,verified_full_csv_header
+uscis,2023,Employer,employer_name,mapped,official complete CSV header,verified_full_csv_header
+uscis,2023,Tax ID,employer_tax_id,mapped,official complete CSV header,verified_full_csv_header
+uscis,2023,State,employer_state_raw,mapped,official complete CSV header,verified_full_csv_header
+uscis,2023,City,employer_city,mapped,official complete CSV header,verified_full_csv_header
+uscis,2023,ZIP,employer_zip,mapped,official complete CSV header,verified_full_csv_header
+uscis,2023,Initial Approval,initial_approvals_raw,mapped,official complete CSV header,verified_full_csv_header
+uscis,2023,Initial Denial,initial_denials_raw,mapped,official complete CSV header,verified_full_csv_header
+uscis,2023,Continuing Approval,continuing_approvals_raw,mapped,official complete CSV header,verified_full_csv_header
+uscis,2023,Continuing Denial,continuing_denials_raw,mapped,official complete CSV header,verified_full_csv_header
+uscis,2023,NAICS,naics_code,mapped,official complete CSV header,verified_full_csv_header
+bls,2024,AREA,area_code,mapped,fixture-supported explicit subset; actual FY full header pending,fixture_only
+bls,2024,AREA_TITLE,area_title,mapped,fixture-supported explicit subset; actual FY full header pending,fixture_only
+bls,2024,AREA_TYPE,area_type,mapped,fixture-supported explicit subset; actual FY full header pending,fixture_only
+bls,2024,PRIM_STATE,state_raw,mapped,fixture-supported explicit subset; actual FY full header pending,fixture_only
+bls,2024,OCC_CODE,soc_code_raw,mapped,fixture-supported explicit subset; actual FY full header pending,fixture_only
+bls,2024,OCC_TITLE,occupation_title,mapped,fixture-supported explicit subset; actual FY full header pending,fixture_only
+bls,2024,O_GROUP,occupation_group,mapped,fixture-supported explicit subset; actual FY full header pending,fixture_only
+bls,2024,A_MEAN,annual_mean_wage_raw,mapped,fixture-supported explicit subset; actual FY full header pending,fixture_only
+bls,2024,H_MEAN,hourly_mean_wage_raw,mapped,fixture-supported explicit subset; actual FY full header pending,fixture_only
+bls,2024,TOT_EMP,total_employment_raw,mapped,fixture-supported explicit subset; actual FY full header pending,fixture_only
+bls,2025,AREA,area_code,mapped,verified May2025 full32-column source; retained for official estimates or source strata,verified_86ffcbbeb27a96b7
+bls,2025,AREA_TITLE,area_title,mapped,verified May2025 full32-column source; retained for official estimates or source strata,verified_86ffcbbeb27a96b7
+bls,2025,AREA_TYPE,area_type,mapped,verified May2025 full32-column source; retained for official estimates or source strata,verified_86ffcbbeb27a96b7
+bls,2025,PRIM_STATE,state_raw,mapped,verified May2025 full32-column source; retained for official estimates or source strata,verified_86ffcbbeb27a96b7
+bls,2025,NAICS,naics,mapped,verified May2025 full32-column source; retained for official estimates or source strata,verified_86ffcbbeb27a96b7
+bls,2025,NAICS_TITLE,naics_title,mapped,verified May2025 full32-column source; retained for official estimates or source strata,verified_86ffcbbeb27a96b7
+bls,2025,I_GROUP,industry_group,mapped,verified May2025 full32-column source; retained for official estimates or source strata,verified_86ffcbbeb27a96b7
+bls,2025,OWN_CODE,ownership_code,mapped,verified May2025 full32-column source; retained for official estimates or source strata,verified_86ffcbbeb27a96b7
+bls,2025,OCC_CODE,soc_code_raw,mapped,verified May2025 full32-column source; retained for official estimates or source strata,verified_86ffcbbeb27a96b7
+bls,2025,OCC_TITLE,occupation_title,mapped,verified May2025 full32-column source; retained for official estimates or source strata,verified_86ffcbbeb27a96b7
+bls,2025,O_GROUP,occupation_group,mapped,verified May2025 full32-column source; retained for official estimates or source strata,verified_86ffcbbeb27a96b7
+bls,2025,TOT_EMP,total_employment_raw,mapped,verified May2025 full32-column source; retained for official estimates or source strata,verified_86ffcbbeb27a96b7
+bls,2025,H_MEAN,hourly_mean_wage_raw,mapped,verified May2025 full32-column source; retained for official estimates or source strata,verified_86ffcbbeb27a96b7
+bls,2025,A_MEAN,annual_mean_wage_raw,mapped,verified May2025 full32-column source; retained for official estimates or source strata,verified_86ffcbbeb27a96b7
+bls,2025,H_PCT10,hourly_p10_wage_raw,mapped,verified May2025 full32-column source; retained for official estimates or source strata,verified_86ffcbbeb27a96b7
+bls,2025,H_PCT25,hourly_p25_wage_raw,mapped,verified May2025 full32-column source; retained for official estimates or source strata,verified_86ffcbbeb27a96b7
+bls,2025,H_MEDIAN,hourly_median_wage_raw,mapped,verified May2025 full32-column source; retained for official estimates or source strata,verified_86ffcbbeb27a96b7
+bls,2025,H_PCT75,hourly_p75_wage_raw,mapped,verified May2025 full32-column source; retained for official estimates or source strata,verified_86ffcbbeb27a96b7
+bls,2025,H_PCT90,hourly_p90_wage_raw,mapped,verified May2025 full32-column source; retained for official estimates or source strata,verified_86ffcbbeb27a96b7
+bls,2025,A_PCT10,annual_p10_wage_raw,mapped,verified May2025 full32-column source; retained for official estimates or source strata,verified_86ffcbbeb27a96b7
+bls,2025,A_PCT25,annual_p25_wage_raw,mapped,verified May2025 full32-column source; retained for official estimates or source strata,verified_86ffcbbeb27a96b7
+bls,2025,A_MEDIAN,annual_median_wage_raw,mapped,verified May2025 full32-column source; retained for official estimates or source strata,verified_86ffcbbeb27a96b7
+bls,2025,A_PCT75,annual_p75_wage_raw,mapped,verified May2025 full32-column source; retained for official estimates or source strata,verified_86ffcbbeb27a96b7
+bls,2025,A_PCT90,annual_p90_wage_raw,mapped,verified May2025 full32-column source; retained for official estimates or source strata,verified_86ffcbbeb27a96b7
+bls,2025,EMP_PRSE,employment_prse_raw,mapped,verified May2025 full32-column source; retained for official estimates or source strata,verified_86ffcbbeb27a96b7
+bls,2025,JOBS_1000,jobs_per_1000_raw,mapped,verified May2025 full32-column source; retained for official estimates or source strata,verified_86ffcbbeb27a96b7
+bls,2025,LOC_QUOTIENT,location_quotient_raw,mapped,verified May2025 full32-column source; retained for official estimates or source strata,verified_86ffcbbeb27a96b7
+bls,2025,PCT_TOTAL,pct_total_raw,mapped,verified May2025 full32-column source; retained for official estimates or source strata,verified_86ffcbbeb27a96b7
+bls,2025,PCT_RPT,pct_reporting_raw,mapped,verified May2025 full32-column source; retained for official estimates or source strata,verified_86ffcbbeb27a96b7
+bls,2025,MEAN_PRSE,mean_prse_raw,mapped,verified May2025 full32-column source; retained for official estimates or source strata,verified_86ffcbbeb27a96b7
+bls,2025,ANNUAL,annual_flag,mapped,verified May2025 full32-column source; retained for official estimates or source strata,verified_86ffcbbeb27a96b7
+bls,2025,HOURLY,hourly_flag,mapped,verified May2025 full32-column source; retained for official estimates or source strata,verified_86ffcbbeb27a96b7

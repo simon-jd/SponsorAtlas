@@ -1,0 +1,77 @@
+# Mounted official distributions; no cloud resources and no Airflow replica.
+name: sponsoratlas-governance
+services:
+  postgres:
+    image: postgres:16-alpine@sha256:f4610795587492cd4fb887c2dc3de301b813278bb6f616992061141b5f15ac36
+    labels: {project: sponsoratlas, component: governance}
+    mem_limit: 512m
+    memswap_limit: 512m
+    cpus: 1
+    environment:
+      POSTGRES_USER: sponsoratlas_om
+      POSTGRES_DB: sponsoratlas_om
+      POSTGRES_PASSWORD: ${SA_OM_DB_PASSWORD:?generated private environment required}
+    command: [postgres, -c, shared_buffers=64MB, -c, work_mem=8MB, -c, temp_file_limit=262144, -c, max_connections=40]
+    ports: ["127.0.0.1:18532:5432"]
+    volumes: ["../../.tools/governance/pg-data:/var/lib/postgresql/data"]
+    logging: {driver: json-file, options: {max-size: 5m, max-file: '2'}}
+  elasticsearch:
+    image: eclipse-temurin:21-jre-jammy@sha256:affcab5356e1270ac35d2361ee83135af2f03e8d580eca78a6d5d6fdbf048db0
+    labels: {project: sponsoratlas, component: governance}
+    user: "1000:1000"
+    mem_limit: 2g
+    memswap_limit: 2g
+    cpus: 2
+    working_dir: /runtime
+    entrypoint: ["/runtime/bin/elasticsearch"]
+    environment:
+      ES_JAVA_OPTS: -Xms512m -Xmx512m -XX:MaxDirectMemorySize=256m
+    ports: ["127.0.0.1:19200:9200"]
+    volumes: ["../../.tools/governance/elasticsearch-9.3.0:/runtime"]
+    logging: {driver: json-file, options: {max-size: 5m, max-file: '2'}}
+  server:
+    image: eclipse-temurin:21-jre-jammy@sha256:affcab5356e1270ac35d2361ee83135af2f03e8d580eca78a6d5d6fdbf048db0
+    labels: {project: sponsoratlas, component: governance}
+    user: "1000:1000"
+    mem_limit: 4g
+    memswap_limit: 4g
+    cpus: 2
+    working_dir: /runtime
+    entrypoint: ["java", "-Xms512m", "-Xmx1536m", "-XX:MaxDirectMemorySize=256m", "-XX:ActiveProcessorCount=2", "-cp", "/runtime/libs/*", "org.openmetadata.service.OpenMetadataApplication", "server", "/runtime/conf/openmetadata.yaml"]
+    environment:
+      OPENMETADATA_CLUSTER_NAME: sponsoratlas-local
+      SERVER_HOST: 0.0.0.0
+      SERVER_PORT: 8585
+      SERVER_ADMIN_PORT: 8586
+      SERVER_SELECTOR_THREADS: 2
+      SERVER_MAX_THREADS: 50
+      SERVER_MIN_THREADS: 10
+      DB_DRIVER_CLASS: org.postgresql.Driver
+      DB_SCHEME: postgresql
+      DB_HOST: postgres
+      DB_PORT: 5432
+      DB_USER: sponsoratlas_om
+      OM_DATABASE: sponsoratlas_om
+      DB_USER_PASSWORD: ${SA_OM_DB_PASSWORD:?generated private environment required}
+      DB_PARAMS: ""
+      DB_CONNECTION_POOL_MAX_SIZE: 10
+      DB_CONNECTION_POOL_MIN_SIZE: 2
+      DB_CONNECTION_POOL_MIN_IDLE: 2
+      DB_CONNECTION_POOL_INITIAL_SIZE: 2
+      ELASTICSEARCH_HOST: elasticsearch
+      ELASTICSEARCH_PORT: 9200
+      PIPELINE_SERVICE_CLIENT_ENABLED: 'false'
+      AUTHENTICATION_ENABLE_SELF_SIGNUP: 'false'
+      AUTHORIZER_ADMIN_PRINCIPALS: '[sponsoratlas-admin]'
+      AUTHORIZER_PRINCIPAL_DOMAIN: example.invalid
+      AUTHORIZER_ALLOWED_REGISTRATION_DOMAIN: '[example.invalid]'
+      AUTHENTICATION_PUBLIC_KEYS: '[http://localhost:8585/api/v1/system/config/jwks]'
+      RSA_PUBLIC_KEY_FILE_PATH: /runtime/conf/sponsoratlas-public.der
+      RSA_PRIVATE_KEY_FILE_PATH: /runtime/conf/sponsoratlas-private.der
+      FERNET_KEY: ${SA_OM_FERNET_KEY:?generated private environment required}
+    ports: ["127.0.0.1:18585:8585", "127.0.0.1:18586:8586"]
+    volumes: ["../../.tools/governance/openmetadata-2.0.6:/runtime"]
+    logging: {driver: json-file, options: {max-size: 5m, max-file: '2'}}
+networks:
+  default:
+    labels: {project: sponsoratlas, component: governance}

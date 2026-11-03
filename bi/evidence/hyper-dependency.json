@@ -1,0 +1,10 @@
+{
+  "version": "0.0.26963",
+  "url": "https://files.pythonhosted.org/packages/13/0f/a60fdcfbf8f9745333d611c5eacf483ba513d5dccb51bfc1a50420820dfe/tableauhyperapi-0.0.26963-py3-none-manylinux2014_x86_64.whl",
+  "sha256": "35376f598c6fdfa52fe25769778f756e2daec1c124ff8f471b5e098cb9cf7863",
+  "wheel_bytes": 90909073,
+  "expanded_bytes": 304810419,
+  "license": "Apache-2.0",
+  "runtime": ".venv/bin/python (Python3.12); SDK via bi/.work/hyper-sdk; existing cffi2.1.1/pycparser3.12",
+  "official_installation": "https://tableau.github.io/hyper-db/docs/installation/"
+}

@@ -1,0 +1,25 @@
+{
+  "status": "COMPLETED_WITH_FAILED_GATES",
+  "nproc": 32,
+  "load_before": [
+    5.400390625,
+    6.51123046875,
+    5.388671875
+  ],
+  "steps": [
+    {
+      "name": "dbt_staging",
+      "exit_code": 1,
+      "seconds": 76.733,
+      "load_after": [
+        5.35302734375,
+        6.318359375,
+        5.419921875
+      ],
+      "failed_tests": [
+        "test.sponsoratlas.staging_flag_limits"
+      ]
+    }
+  ],
+  "seconds": 76.734
+}
