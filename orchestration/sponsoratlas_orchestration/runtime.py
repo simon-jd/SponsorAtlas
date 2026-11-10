@@ -1,4 +1,4 @@
-"""Runtime boundaries: bounded Airbyte jobs, native freshness, and configured alerts.
+"""Runtime boundaries: board loads, bounded Airbyte jobs, native freshness, configured alerts.
 
 No service calls at module import. State must be on a durable shared volume for
 production workers; an ambiguous POST is never silently repeated on retry.
@@ -9,6 +9,7 @@ from __future__ import annotations
 import hashlib
 import json
 import os
+import re
 import smtplib
 import subprocess
 import time
@@ -20,14 +21,22 @@ from urllib.parse import urlsplit
 from urllib.request import Request, urlopen
 
 ROOT = Path(__file__).resolve().parents[2]
-PUBLIC_SOURCES = [
-    "source:jobs.greenhouse",
-    "source:jobs.lever",
-    "source:jobs.ashby",
-    "source:jobs.cdc_job_postings",
-]
+ARTIFACTS_ROOT = ROOT / ".tools/orchestration/artifacts"
+ALERT_LOG = ROOT / ".tools/orchestration/alerts/alerts.jsonl"
+OBSERVATION_SOURCE = "source:facts_input.job_observations"
+OBSERVATION_SOURCE_ID = "source.sponsoratlas.facts_input.job_observations"
+# Terraform has no SNAPSHOTS schema, so the Snowflake snapshot lives in INTERMEDIATE (dbt/README.md).
+DBT_VARS = {"enable_private_applications": False, "snapshot_schema": "INTERMEDIATE"}
+_DBT_ARTIFACTS = (
+    str(ARTIFACTS_ROOT)
+    + "/{{ run_id | replace('/', '_') | replace('..', '_') }}/{{ task.task_id }}"
+)
+DBT_ENV = {"DBT_TARGET_PATH": _DBT_ARTIFACTS + "/target", "DBT_LOG_PATH": _DBT_ARTIFACTS + "/logs"}
+JOB_GATES = ["facts_grain", "facts_job_observation_accounting", "facts_job_fields_present"]
 QUALITY_GATES = [
     "facts_grain",
+    "facts_job_observation_accounting",
+    "facts_job_fields_present",
     "facts_accounting",
     "facts_bls_conflicts",
     "facts_bls_headers",
@@ -41,6 +50,15 @@ QUALITY_GATES = [
     "board_provenance",
     "cdc_quality",
 ]
+
+
+def safe_run_id(run_id):
+    """A file name for an Airflow run id, which can hold ':' and '+'."""
+    return re.sub(r"[^A-Za-z0-9._-]", "_", run_id).strip(".") or "_"
+
+
+def run_dir(run_id):
+    return ARTIFACTS_ROOT / safe_run_id(run_id)
 
 
 def required(name):
@@ -98,6 +116,8 @@ def notification_settings():
         ):
             raise ValueError("local_http alerts require explicit synthetic_http mode")
         checked_url(required("SPONSORATLAS_ALERT_URL"), local_only=kind == "local_http")
+    elif kind == "local_log":
+        pass  # Explicit opt-in: nothing is delivered, and every line says so.
     elif kind == "smtp":
         for key in [
             "SPONSORATLAS_SMTP_HOST",
@@ -108,11 +128,32 @@ def notification_settings():
         ]:
             required(key)
     else:
-        raise ValueError("Alert transport must be slack, smtp, or local_http")
+        raise ValueError("Alert transport must be slack, smtp, local_log, or local_http")
     return kind
 
 
-def notify(context=None, *, event="task_failure"):
+def append_local_alert(payload):
+    ALERT_LOG.parent.mkdir(parents=True, exist_ok=True, mode=0o700)
+    line = {
+        **payload,
+        "at": datetime.now(UTC).isoformat(),
+        "delivery": "LOCAL_LOG_NOT_DELIVERED",
+    }
+    fd = os.open(ALERT_LOG, os.O_WRONLY | os.O_CREAT | os.O_APPEND, 0o600)
+    try:
+        os.fchmod(fd, 0o600)
+        os.write(fd, (json.dumps(line, sort_keys=True) + "\n").encode())
+        os.fsync(fd)
+    finally:
+        os.close(fd)
+    directory = os.open(ALERT_LOG.parent, os.O_RDONLY)
+    try:
+        os.fsync(directory)
+    finally:
+        os.close(directory)
+
+
+def notify(context=None, *, event="task_failure", detail=None):
     context = context or {}
     run = context.get("dag_run") or {}
     ti = context.get("task_instance")
@@ -126,9 +167,13 @@ def notify(context=None, *, event="task_failure"):
         "run_id": field(run, "run_id") or field(run, "dag_run_id") or context.get("run_id"),
         "task_id": field(ti, "task_id"),
     }
+    if detail:
+        payload["detail"] = detail
     text = "SponsorAtlas " + json.dumps(payload, sort_keys=True)
     kind = notification_settings()
-    if kind == "smtp":
+    if kind == "local_log":
+        append_local_alert(payload)
+    elif kind == "smtp":
         message = EmailMessage()
         message["From"] = required("SPONSORATLAS_ALERT_FROM")
         message["To"] = required("SPONSORATLAS_ALERT_TO")
@@ -318,6 +363,37 @@ def _airbyte_job(context, mode, url, connection, store, state):
         raise
 
 
+def run_date(context):
+    """The run's UTC date; a manual run can have no logical date, so fall back to run_after."""
+    value = context.get("logical_date") or context["dag_run"].run_after
+    return value.astimezone(UTC).date().isoformat()
+
+
+def load_boards(**context):
+    """Load one day of board observations under .venv: the Airflow venv has no loader deps."""
+    from orchestration.sponsoratlas_orchestration.trial import refuse_when_stopped, trial_remaining
+
+    refuse_when_stopped()
+    trial_remaining(960)
+    manifest = run_dir(context["run_id"]) / "board-manifest.json"
+    manifest.parent.mkdir(parents=True, exist_ok=True)
+    subprocess.run(
+        [
+            str(ROOT / ".venv/bin/python"),
+            "-m",
+            "scripts.load_board_observations",
+            "--date",
+            run_date(context),
+            "--output",
+            str(manifest),
+        ],
+        cwd=ROOT,
+        check=True,
+        timeout=840,
+    )
+    return str(manifest)
+
+
 def freshness(**context):
     target = required("DBT_TARGET")
     if target not in {"local", "snowflake"}:
@@ -333,10 +409,12 @@ def freshness(**context):
         "--target",
         target,
         "--select",
-        *PUBLIC_SOURCES,
+        OBSERVATION_SOURCE,
+        "--vars",
+        json.dumps(DBT_VARS),
     ]
     identity = hashlib.sha256(context["run_id"].encode()).hexdigest()
-    artifacts = ROOT / ".tools/orchestration/artifacts" / identity / "jobs_source_freshness"
+    artifacts = ARTIFACTS_ROOT / identity / "observations_freshness"
     env = {
         **os.environ,
         "DBT_TARGET_PATH": str(artifacts / "target"),
@@ -344,6 +422,38 @@ def freshness(**context):
         "SPONSORATLAS_DBT_PROCESS_TIMEOUT": "150",
     }
     subprocess.run(command, cwd=ROOT, env=env, check=True, timeout=180)
+    # dbt exits 0 with "Nothing to do" when the source declares no freshness: never a pass.
+    results = json.loads((artifacts / "target/sources.json").read_text())["results"]
+    status = {r["unique_id"]: r["status"] for r in results}.get(OBSERVATION_SOURCE_ID)
+    if status != "pass":
+        raise RuntimeError(f"{OBSERVATION_SOURCE} was not proven fresh (dbt status: {status})")
+
+
+def clear_dead_refresh_owner(work):
+    """A killed refresh leaves semantic/maintenance.cjs's lock behind, and nothing else clears it.
+
+    Remove it only when it names a refresh whose process is gone. Anything else is a real owner,
+    or unknown, and is refused here with a message the suppressed Node error cannot give.
+    """
+    lock = Path(work) / "work-owner.json"
+    try:
+        owner = json.loads(lock.read_text())
+    except FileNotFoundError:
+        return
+    except ValueError:
+        raise RuntimeError(f"Unreadable Cube work lock {lock}; reconcile it by hand") from None
+    kind, pid = owner.get("kind"), owner.get("pid")
+    if kind != "refresh" or not isinstance(pid, int) or pid <= 0:
+        raise RuntimeError(f"Cube work {lock} is owned by {kind} pid {pid}; stop that owner first")
+    try:
+        os.kill(pid, 0)
+    except ProcessLookupError:
+        lock.unlink()
+        print(json.dumps({"cube_lock": "removed_dead_refresh_owner", "pid": pid}))
+    except PermissionError:
+        raise RuntimeError(f"Cube work {lock} is owned by live refresh pid {pid}") from None
+    else:
+        raise RuntimeError(f"Cube work {lock} is owned by live refresh pid {pid}")
 
 
 def cube_refresh(**context):
@@ -363,13 +473,15 @@ def cube_refresh(**context):
         raise ValueError("Explicit parquet or snowflake Cube source required")
     env = {**os.environ, "SEMANTIC_WORK": str(work)}
     if source == "snowflake":
-        from orchestration.sponsoratlas_orchestration.trial import trial_remaining
+        from orchestration.sponsoratlas_orchestration.trial import refuse_when_stopped, trial_remaining
 
+        refuse_when_stopped()
         trial_remaining(360)
         env["SNOWFLAKE_PRIVATE_KEY_FILE"] = required("SPONSORATLAS_CUBE_PRIVATE_KEY_FILE")
         env["SNOWFLAKE_PRIVATE_KEY_PASSPHRASE"] = os.environ.get(
             "SPONSORATLAS_CUBE_PRIVATE_KEY_PASSPHRASE", ""
         )
+    clear_dead_refresh_owner(work)
     subprocess.run(
         [
             str(ROOT / ".tools/node-runtime/node-v24.22.1-linux-x64/bin/node"),

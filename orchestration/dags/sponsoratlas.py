@@ -1,18 +1,29 @@
-"""Daily public pipeline. Parsing renders dbt metadata only; all I/O is runtime opt-in."""
+"""Weekly full public build. Parsing renders dbt metadata only; all I/O is runtime opt-in.
+
+preflight skips the whole run on any guard reason. The Airbyte task is retired from this DAG:
+no Airbyte credentials exist, and job observations arrive through sponsoratlas_daily.
+"""
 
 import os
 from datetime import UTC, datetime, timedelta
 
-from airflow.providers.standard.operators.python import PythonOperator
+from airflow.providers.standard.operators.python import PythonOperator, ShortCircuitOperator
 from airflow.sdk import DAG, DeadlineAlert, DeadlineReference, SyncCallback
 from cosmos import DbtTaskGroup, ExecutionConfig, ProfileConfig, ProjectConfig, RenderConfig
 from cosmos.constants import InvocationMode, LoadMode, TestBehavior, TestIndirectSelection
 from cosmos.operators.local import DbtTestLocalOperator
 
+from orchestration.sponsoratlas_orchestration.guard import (
+    RUN_MINUTES,
+    on_run_failure,
+    preflight,
+    record_usage,
+)
 from orchestration.sponsoratlas_orchestration.runtime import (
+    DBT_ENV,
+    DBT_VARS,
     QUALITY_GATES,
     ROOT,
-    airbyte_sync,
     cube_refresh,
     deadline_alert,
     freshness,
@@ -27,15 +38,13 @@ PROFILE = ProfileConfig(
     profiles_yml_filepath=ROOT / "dbt/profiles.yml",
 )
 SELECTION = ["tag:staging", "tag:dimensions", "tag:facts"]
-ARTIFACTS = (
-    str(ROOT / ".tools/orchestration/artifacts")
-    + "/{{ run_id | replace('/', '_') | replace('..', '_') }}/{{ task.task_id }}"
-)
-DBT_ENV = {"DBT_TARGET_PATH": ARTIFACTS + "/target", "DBT_LOG_PATH": ARTIFACTS + "/logs"}
 with DAG(
     dag_id="sponsoratlas",
-    schedule="0 8 * * *",
-    start_date=datetime(2024, 10, 1, tzinfo=UTC),
+    # Sunday 09:00 UTC. start_date and end_date allow only Nov 8 and Nov 15; an earlier start
+    # would make Airflow run the latest past Sunday as soon as the DAG is unpaused.
+    schedule="0 9 * * 0",
+    start_date=datetime(2026, 11, 6, tzinfo=UTC),
+    end_date=datetime(2026, 11, 16, tzinfo=UTC),
     catchup=False,
     max_active_runs=1,
     max_active_tasks=1,
@@ -45,7 +54,9 @@ with DAG(
         "execution_timeout": timedelta(minutes=15),
         "on_failure_callback": notify,
     },
-    on_failure_callback=notify,
+    on_failure_callback=on_run_failure,
+    # Unlike the deadline below, this ends the run: it is the hard bound on spend per run.
+    dagrun_timeout=timedelta(minutes=RUN_MINUTES["sponsoratlas"]),
     deadline=DeadlineAlert(
         reference=DeadlineReference.DAGRUN_QUEUED_AT,
         interval=timedelta(minutes=30),
@@ -53,15 +64,18 @@ with DAG(
     ),
     tags=["sponsoratlas", "public"],
 ) as dag:
-    sync = PythonOperator(task_id="airbyte_sync", python_callable=airbyte_sync)
-    fresh = PythonOperator(task_id="jobs_source_freshness", python_callable=freshness)
+    # Five minutes between attempts, so a short Snowflake outage does not use up the retries.
+    guard = ShortCircuitOperator(
+        task_id="preflight", python_callable=preflight, retry_delay=timedelta(minutes=5)
+    )
+    fresh = PythonOperator(task_id="observations_freshness", python_callable=freshness)
     public = DbtTaskGroup(
         group_id="dbt_public",
         project_config=ProjectConfig(
             ROOT / "dbt",
             install_dbt_deps=False,
             partial_parse=False,
-            dbt_vars={"enable_private_applications": False},
+            dbt_vars=DBT_VARS,
         ),
         profile_config=PROFILE,
         execution_config=ExecutionConfig(
@@ -94,11 +108,12 @@ with DAG(
         invocation_mode=InvocationMode.SUBPROCESS,
         select=SELECTION + QUALITY_GATES,
         indirect_selection="cautious",
-        dbt_vars={"enable_private_applications": False},
+        vars=DBT_VARS,  # An operator takes vars=; it silently drops dbt_vars=.
         install_deps=False,
         append_env=True,
         partial_parse=False,
         env=DBT_ENV,
     )
     refresh = PythonOperator(task_id="cube_refresh", python_callable=cube_refresh)
-    sync >> fresh >> public >> quality >> refresh
+    usage = PythonOperator(task_id="record_usage", python_callable=record_usage)
+    guard >> fresh >> public >> quality >> refresh >> usage

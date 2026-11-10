@@ -2,7 +2,9 @@
  unique_key=['soc_code','area_type','area_code','survey_year'],schema='MARTS',on_schema_change='fail',tags=['facts']) }}
 -- Duplicate estimates must be identical across all31 non-O_GROUP original fields.
 -- Conflicts remain in the diagnostic relation and make facts_bls_conflicts fail.
-select b.soc_code,b.area_type,b.area_code,b.survey_year,b.survey_month,
+-- Cast to the contract type: on Snowflake the input is NUMBER(4,0) and on_schema_change='fail'
+-- rejects that against the contract's NUMBER(38,0) from the second run on.
+select b.soc_code,b.area_type,b.area_code,cast(b.survey_year as integer) as survey_year,b.survey_month,
  o.occupation_key,g.geography_key,d.date_key as survey_date_key,
  case when o.classification_type='STANDARD_SOC' then 'SOC2018' else 'OEWS_May2025' end as occupation_vintage,
  b.occupation_title,b.occupation_group,b.area_title,b.industry_group,b.naics,b.ownership_code,

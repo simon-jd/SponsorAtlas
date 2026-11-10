@@ -4,12 +4,17 @@ from pathlib import Path
 
 import pytest
 
+from orchestration.sponsoratlas_orchestration import backfill
 from orchestration.sponsoratlas_orchestration.backfill import (
     backfill_steps,
     fiscal_year_readiness,
+    labelled_paths,
+    labelled_steps,
+    run_one,
     run_steps,
     steps_from,
 )
+from orchestration.sponsoratlas_orchestration.runtime import ROOT
 
 
 def test_existing_quarter_archive_cannot_be_a_full_fiscal_year():
@@ -208,3 +213,175 @@ def test_er_predict_inherits_the_archived_registry_unless_reset(tmp_path):
     default = next(s for s in backfill_steps(2025) if s["name"] == "er_predict")["argv"]
     output = Path(default[default.index("--output") + 1])
     assert not Path(default[default.index("--archive") + 1]).is_relative_to(output.parent)
+
+
+@pytest.fixture
+def archive(tmp_path):
+    """A registry archive shaped like .tools/er/registry-archive-fy2025; steps only read it."""
+    root = tmp_path / "archive"
+    root.mkdir()
+    (root / "abc.json").write_text("{}")
+    (root / "LATEST").write_text("abc.json\n")
+    return root
+
+
+def written_paths(step):
+    """Every project path a step names, except its executable and the registry it reads."""
+    values = [*step["argv"][1:], *step.get("resume_argv", [])[1:], *step.get("env", {}).values()]
+    values += [step[k] for k in ("work", "destination", "manifest", "run_results") if k in step]
+    argv = step["argv"]
+    if "--previous-registry" in argv:
+        values.remove(argv[argv.index("--previous-registry") + 1])
+    return [Path(v).resolve() for v in map(str, values) if v.startswith(str(ROOT))]
+
+
+def test_labelled_run_never_resolves_to_a_canonical_path(archive):
+    from scripts.canonical_paths import CANONICAL
+
+    forbidden = [
+        *CANONICAL,
+        ROOT / ".tools/er",
+        ROOT / ".tools/orchestration/backfill-fy2025",
+    ]
+    allowed = [
+        ROOT / ".tools/backfill-runs/verify-1",
+        *(ROOT / ".tools" / area / "backfill-runs/verify-1" for area in
+          ("staging", "dimensions", "facts")),
+    ]  # fmt: skip
+    paths = [p for s in labelled_steps(2025, "verify-1", archive=archive) for p in written_paths(s)]
+    assert paths
+    for path in paths:
+        assert not any(path == f or path.is_relative_to(f) for f in forbidden), path
+        assert any(path.is_relative_to(a) for a in allowed), path
+
+
+def test_labelled_databases_pass_the_loader_location_guards():
+    paths = labelled_paths(2025, "verify-1")
+    tools = ROOT / ".tools"
+    assert paths["staging"].is_relative_to(tools / "staging")
+    assert paths["dimensions"].is_relative_to(tools / "dimensions")
+    assert paths["facts"].is_relative_to(tools / "facts")
+    assert paths["er"].is_relative_to(tools)
+
+
+@pytest.mark.parametrize("label", ["", "../../facts", "a/b", "/tmp/x", ".", "A", "1a", 20261106])
+def test_a_label_cannot_escape_or_silently_mean_canonical(label):
+    with pytest.raises(ValueError):
+        labelled_paths(2025, label)
+
+
+def test_labelled_er_predict_inherits_read_only_and_leaves_the_archive_alone(archive):
+    before = {p.name: p.read_bytes() for p in archive.iterdir()}
+    steps = labelled_steps(2025, "verify-1", archive=archive)
+    argv = next(s for s in steps if s["name"] == "er_predict")["argv"]
+    # er.predict has no archive argument and never publishes; er.registry_archive does.
+    assert argv[1:3] == ["-m", "er.predict"]
+    assert argv[argv.index("--previous-registry") + 1] == str(archive / "abc.json")
+    assert "--archive" not in argv
+    assert "--initialize-registry" not in argv
+    assert not any("er.registry_archive" in " ".join(s["argv"]) for s in steps)
+    assert {p.name: p.read_bytes() for p in archive.iterdir()} == before
+
+
+def test_labelled_run_without_a_registry_fails_before_any_step(tmp_path):
+    with pytest.raises(FileNotFoundError):
+        labelled_steps(2025, "verify-1", archive=tmp_path / "empty")
+
+
+def test_unlabelled_er_predict_still_publishes_to_the_archive():
+    argv = next(s for s in backfill_steps(2025) if s["name"] == "er_predict")["argv"]
+    assert argv[1:3] == ["-m", "er.registry_archive"]
+    assert argv[argv.index("--archive") + 1] == str(ROOT / ".tools/er/registry-archive-fy2025")
+
+
+@pytest.mark.parametrize(
+    "build",
+    [lambda a: backfill_steps(2025), lambda a: labelled_steps(2025, "v", archive=a)],
+    ids=["unlabelled", "labelled"],
+)
+def test_every_dbt_step_overrides_a_snowflake_environment(build, archive, monkeypatch, tmp_path):
+    # profiles.yml reads DBT_TARGET; the deployed environment sets it to snowflake.
+    monkeypatch.setenv("DBT_TARGET", "snowflake")
+    steps = [s for s in build(archive) if s["argv"][0] == backfill.DBT]
+    assert len(steps) == 4
+    seen = tmp_path / "target"
+    write = f"import os; open({str(seen)!r}, 'a').write(os.environ['DBT_TARGET'] + ' ')"
+    probes = [
+        {"name": s["name"], "argv": [sys.executable, "-c", write], "env": s["env"]} for s in steps
+    ]
+    assert run_steps(probes, tmp_path / "out.json", logs=tmp_path)["status"] == "SUCCEEDED"
+    assert seen.read_text().split() == ["local"] * 4
+
+
+def capture_run_steps(monkeypatch):
+    calls = []
+
+    def fake(steps, output, *, logs):
+        calls.append({"steps": steps, "output": Path(output), "logs": Path(logs)})
+        return {"status": "SUCCEEDED", "steps": []}
+
+    monkeypatch.setattr(backfill, "run_steps", fake)
+    return calls
+
+
+def test_run_one_with_a_label_uses_labelled_steps_and_its_own_evidence(monkeypatch, tmp_path):
+    calls = capture_run_steps(monkeypatch)
+    made = []
+    monkeypatch.setattr(
+        backfill,
+        "labelled_paths",
+        lambda year, label: {k: tmp_path / k / "db" for k in ("staging", "dimensions", "facts")},
+    )
+    monkeypatch.setattr(
+        backfill, "labelled_steps", lambda year, label: made.append(label) or [{"name": "dbt_seed"}]
+    )
+    assert run_one(2025, "dbt_seed", "/ignored", label="verify-1") == "SUCCEEDED"
+    assert made == ["verify-1"]
+    evidence = ROOT / "docs/evidence/task09-backfill-airflow-verify-1"
+    assert calls[0]["output"] == evidence / "dbt_seed.json"
+    assert calls[0]["logs"] == evidence / "logs"
+    assert (tmp_path / "facts").is_dir()
+
+
+def test_run_one_on_canonical_paths_needs_the_explicit_flag(monkeypatch, tmp_path):
+    calls = capture_run_steps(monkeypatch)
+    run_one(2025, "dbt_seed", tmp_path, label=None, overwrite_canonical=True)
+    assert calls[0]["steps"] == [s for s in backfill_steps(2025) if s["name"] == "dbt_seed"]
+    assert calls[0]["output"] == tmp_path / "dbt_seed.json"
+
+
+@pytest.mark.parametrize("flag", [False, None, "true", "True", 1])
+def test_run_one_without_a_label_refuses_before_any_step(monkeypatch, tmp_path, flag):
+    calls = capture_run_steps(monkeypatch)
+    with pytest.raises(ValueError, match="label"):
+        run_one(2025, "dbt_seed", tmp_path, label=None, overwrite_canonical=flag)
+    assert calls == [] and not list(tmp_path.iterdir())
+
+
+@pytest.mark.parametrize(
+    ("conf", "label", "overwrite"),
+    [
+        ({}, None, False),
+        ({"fiscal_year": 2025}, None, False),
+        ({"fiscal_year": 2025, "Label": "typo"}, None, False),
+        ({"fiscal_year": 2025, "overwrite_canonical": "yes"}, None, "yes"),
+        ({"fiscal_year": 2025, "overwrite_canonical": True}, None, True),
+        ({"fiscal_year": 2025, "label": "verify-20261106"}, "verify-20261106", False),
+    ],
+)
+def test_dag_renders_the_conf_into_run_one(conf, label, overwrite):
+    import importlib
+    from types import SimpleNamespace
+
+    dag = importlib.import_module("orchestration.dags.sponsoratlas_backfill").dag
+    assert dag.schedule is None
+    task = dag.get_task("load_raw")
+    rendered = task.render_template(
+        task.op_kwargs, {"dag_run": SimpleNamespace(conf=conf)}, jinja_env=dag.get_template_env()
+    )
+    assert rendered["label"] == label
+    assert rendered["year"] == 2025
+    assert rendered["overwrite_canonical"] == overwrite
+    if label is None and overwrite is not True:
+        with pytest.raises(ValueError, match="label"):
+            run_one(rendered["year"], "load_raw", "/ignored", label, rendered["overwrite_canonical"])

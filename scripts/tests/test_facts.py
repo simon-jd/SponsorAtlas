@@ -23,13 +23,18 @@ def test_bls_reference_replay_and_digest_rejection(tmp_path):
         build(tmp_path / "bad", jsonl=corrupt)
 
 
-def test_fact_models_declare_native_merge_and_enforced_contract():
+def test_fact_models_declare_native_strategy_and_enforced_contract():
     import yaml
 
-    for name in ["fact_lca_case", "fact_job_posting_daily", "fact_wage_benchmark"]:
+    for name, strategy in {
+        "fact_lca_case": "merge",
+        # Replaces whole observation dates, so a refetch that drops a posting leaves no stale row.
+        "fact_job_posting_daily": "delete+insert",
+        "fact_wage_benchmark": "merge",
+    }.items():
         sql = (ROOT / "dbt/models/marts" / (name + ".sql")).read_text()
         spec = yaml.safe_load((ROOT / "dbt/models/marts" / (name + ".yml")).read_text())
-        assert "incremental_strategy='merge'" in sql
+        assert f"incremental_strategy='{strategy}'" in sql
         assert spec["models"][0]["config"]["contract"]["enforced"] is True
         assert all(c.get("data_type") for c in spec["models"][0]["columns"])
 

@@ -7,9 +7,17 @@ resolves the many spellings of one employer into a single stable employer ID, an
 result through a Cube semantic layer to a bilingual (English/Chinese) Next.js site with employer
 search, comparison and an H3 map of worksites and wages. The goal is to answer, from official data
 and with every number traceable to a source file, which employers file for H-1B workers, where,
-and at what wages. Everything below ran locally on one machine on DuckDB; the cloud targets
-(Snowflake, Databricks, Azure) are written but have not been run. An LCA is not a visa approval
-and does not mean that a particular job offers sponsorship.
+and at what wages. Entity resolution, the site and the map ran locally on one machine, on DuckDB.
+The dbt build and Cube also ran on a Snowflake trial account, by hand from 2026-10-30 to 2026-11-01
+and from Airflow since 2026-11-06 (the full build and a Cube refresh by hand on 2026-11-06 and on
+the weekly schedule on 2026-11-08; the job-posting fact daily; both schedules end in November 2026),
+on script-loaded RAW that includes exports of the local ER output, so Snowflake is not
+independent of the local build (see Results). A static snapshot of the Snowflake marts, exported on
+2026-11-06 before any scheduled run, was published on
+[Tableau Public](https://public.tableau.com/app/profile/simon.d5578/viz/SponsorAtlas-public/SponsorAtlaspublicsnapshot)
+on 2026-11-10 and reconciled 5/5 against the snapshot; it does not refresh. Databricks and Azure
+exist as code only and were not run. An LCA is not a visa approval and does not mean that a
+particular job offers sponsorship.
 
 ![Map page on the full-year data](docs/images/map-fy2025.png)
 
@@ -38,13 +46,23 @@ Census 2020 ZIP-area or place reference points, not worksite addresses.*
                          ▼
    Next.js 16 site (en/zh): employer search, detail, compare, deck.gl H3 map with SVG fallback
 
- Orchestration: Airflow 3 + Cosmos (daily DAG tested on a synthetic source; manual fiscal-year backfill DAG)
+ Orchestration: Airflow 3 + Cosmos on one home machine (LocalExecutor, SQLite, systemd --user units: a
+ development deployment). Since 2026-11-06 a daily DAG loads public job-board observations into Snowflake
+ RAW and builds the job-posting fact and its gates; a weekly DAG runs the full dbt build, quality gates and
+ a Cube refresh on Snowflake, over the same script-loaded RAW (no new LCA, USCIS or BLS data). Alerts go
+ to a local log only. An earlier daily DAG was rehearsed on a synthetic source on 2026-10-24. Manual
+ fiscal-year backfill DAG (local DuckDB)
+ Snowflake trial: RAW loaded by script → the same dbt project → Cube REST verification; the site and map do not read it
+ Tableau Public (bi/public): static snapshot of the Snowflake marts exported 2026-11-06, published 2026-11-10,
+ reconciled 5/5; not connected to Snowflake and not refreshed:
+ https://public.tableau.com/app/profile/simon.d5578/viz/SponsorAtlas-public/SponsorAtlaspublicsnapshot
 ```
 
 ## Results
 
-All numbers come from local runs on one Linux machine (32 cores, shared with other workloads).
-Each row links the raw output it was read from.
+Numbers come from local runs on one Linux machine (32 cores, shared with other workloads), except
+the rows that start with Snowflake, which that machine ran against a Snowflake trial account on the
+X-Small warehouse `SPONSORATLAS_XS`. Each row links the raw output it was read from.
 
 | Result | Scope | Evidence |
 |---|---|---|
@@ -63,7 +81,15 @@ Each row links the raw output it was read from.
 | Column lineage from the local OpenMetadata API: 25 tables, 24 table edges, 449 column edges; 5/5 checked column chains complete | local DuckDB catalogs | [summary.json](docs/evidence/task08-lineage-fy2025/summary.json), [verify-lineage.log](docs/evidence/task08-lineage-fy2025/verify-lineage.log), [lineage.svg](docs/evidence/task08-lineage-fy2025/lineage.svg) |
 | CDC drill: Postgres 16 logical replication (pgoutput) → DuckDB RAW; inserts, updates and deletes on two tables all landed within 29.44 s at 30 s polling | Docker, synthetic rows, own pgoutput reader (not Airbyte) | [drill.json](docs/evidence/task02-cdc/drill.json) |
 | Backfill DAG (`airflow dags test`, FY2025): load → staging → ER → dimensions ran as Airflow tasks; the run stopped at the disk-share guard before facts (20.7 GB projected, 18 GB share at the time); the fact tasks ran afterwards on their own | 2026-10-28; staging still reported the USCIS FY2023 gate failure fixed on 2026-10-29 | [summary.json](docs/evidence/task09-backfill/summary.json), [DAG log](docs/evidence/task09-backfill/airflow-dags-test-run3.log) |
-| `make test` exits 0: pytest 511 passed, 8 skipped (6 live Snowflake, 1 ER acceptance, 1 Spark Connect); orchestration tests (Airflow environment) 52; Cube fixture and source tests 11 + 23; site, UI and environment tests 34 + 2 + 1; other Node tests 6 + 11 | offline suites only, 2026-10-29 | `make test` |
+| Backfill DAG, FY2025 verification run: all 10 steps (RAW load → staging → ER → dimensions → facts) succeeded as Airflow tasks in 219.7 s of DAG wall time (the steps sum to 215.8 s); dbt seed 15/15, staging 45/45, dimensions 30/30, facts 50/50; ER 161,596 source records → 98,188 employers, inheriting the archived registry | 2026-11-06, local DuckDB, separate `verify-20261106` databases | [task09-backfill-airflow-verify-20261106/](docs/evidence/task09-backfill-airflow-verify-20261106/) |
+| Snowflake foundation: Terraform state holds 22 objects plus 69 grants and attachments, 91 instances in all. Grant tests 8/8 PASS (7 live, 1 offline helper): CUBE_SVC reads all 7 marts and is denied the 5 checked RAW, STAGING and INTERMEDIATE tables; AIRBYTE_SVC, DBT_SVC and CUBE_SVC each see only `SPONSORATLAS_XS` | trial account; Terraform applied 2026-10-30, tests 2026-10-31 | `warehouse/terraform/terraform.tfstate` (local, git-ignored), [pytest-live.log](docs/evidence/task01-snowflake-grants-20261031/pytest-live.log) |
+| Snowflake RAW: 20 tables match on row count and fingerprint. The 8 official files hold 1,224,291 rows, difference 0 per file. The other 12 tables are 1 empty BLS table, 5 synthetic `RAW.JOBS` fixtures and 6 exports of local `DIMENSIONS_INPUT` and `FACTS_INPUT` | 2026-10-30; loaded by script (PUT + COPY INTO as AIRBYTE_SVC), not Airbyte | [load-summary.json](docs/evidence/task02-snowflake-raw-20261030/load-summary.json), [reconcile-snowflake.csv](docs/evidence/task02-snowflake-raw-20261030/reconcile-snowflake.csv) |
+| Snowflake dbt build: seed 15/15 in 36.14 s, staging 45/45 in 39.80 s, dimensions 30/30 in 14.31 s, facts 48/48 in 31.73 s; 122.0 s in total at 2 threads. The 138 executions are 110 distinct nodes (15 seeds, 18 models, 1 snapshot, 75 data tests, 1 unit test) | 2026-10-30, one run | [run_results and logs](docs/evidence/task06-snowflake-dbt-20261030/) |
+| Snowflake vs the local DuckDB build: 18 relations, all row counts equal; per-column checksums 14 SAME, 4 DIFF (`dbt_scd_id`; `employer_key`, the same value renamed; `source_relation` twice, on synthetic CDC fixtures). 10 of 11 metrics equal; `certified_rate_avg_sql` differs only by Snowflake AVG rounding (0.977779). SHA-256 over 280,799 LCA groups equal | checksums only; float and timestamp columns are skipped (`scripts/snowflake_compare.py:3-5`); 12 compared columns are all NULL locally, in 5 relations, including `fact_lca_case.employer_key` and the employer, occupation and geography keys on the 86 job rows, so a match says nothing for those columns; not independent of the local build, see limitations | [compare.json](docs/evidence/task06-snowflake-dbt-20261030/compare.json) |
+| Snowflake Cube REST: PASS as CUBE_SVC / ANALYST with 7 metrics, 5 dimensions, 3 views and 2 external rollups, exact against the local oracle over 280,799 groups. The exact check first caught a page bound in the verifier: pagination stopped at offset 250,000 and the groups summed to 665,213, not 713,467 | 2026-10-31 | [run.log](docs/evidence/task07-cube-snowflake-20261031/run.log), [verify-snowflake.json](docs/evidence/task07-cube-snowflake-20261031/verify-snowflake.json) |
+| Snowflake policies: 5/5 PASS (3 live, 2 static): ANALYST sees a masked email, a non-owner sees 0 application rows, an owner with PII_READER sees the plain email | 2026-10-31, probe tables only; the real marts have no policies attached ([policy references](docs/evidence/task01-snowflake-grants-20261031/pytest-live.log)) | [pytest-live.log](docs/evidence/task08-snowflake-policies-20261031/pytest-live.log) |
+| Snowflake cost: one experiment on an 8-partition transient clone of `fact_lca_case`, one run per phase. The two attributed queries scanned 8 of 8 partitions with and without the clustering key. Per-phase credits are null, so no per-run credit figure exists. The resource monitor read 0.81 of 20 credits afterwards (a lagging, whole-warehouse number) | 2026-11-01, one experiment | [experiment-P9A-reconciled-8h.json](docs/evidence/task10-snowflake-cost-20261031/experiment-P9A-reconciled-8h.json), [top20-remote.json](docs/evidence/task10-snowflake-cost-20261031/top20-remote.json), [credits.jsonl](docs/evidence/task10-snowflake-cost-20261031/credits.jsonl) |
+| `make test` exits 0: pytest 670 passed, 12 skipped (10 live Snowflake, 1 ER acceptance, 1 Spark Connect); orchestration tests (Airflow environment) 170; Cube fixture and source tests 11 + 26; site, UI and environment tests 34 + 2 + 1; other Node tests 6 + 11 | offline suites only, 2026-11-10, on commit 82aaae3 plus the changes committed with the log | [make-test.log](docs/evidence/test-run-20261110/make-test.log) |
 
 ## Running it
 
@@ -116,29 +142,66 @@ make cdc-drill             # throw-away Postgres container → DuckDB RAW
 | `semantic/` | Cube model, REST server wrapper, Parquet and map-projection exports |
 | `web/` | `apps/site` (Next.js 16 site), `packages/ui` (design tokens and components), test scripts |
 | `governance/` | private applications contract, local OpenMetadata, lineage export and checks |
-| `warehouse/` | Snowflake Terraform and bootstrap notes (not applied) |
+| `warehouse/` | Snowflake Terraform (applied to a trial account on 2026-10-30), bootstrap notes, live grant and policy tests |
 | `azure/` | Azure Data Factory pipeline and Fabric SQL/notebook port with offline tests (not provisioned) |
-| `bi/` | script-generated Power BI project and Tableau workbook, reconciliation SQL |
+| `bi/` | script-generated Power BI project and Tableau workbook, reconciliation SQL; `bi/public` builds the static [Tableau Public workbook](https://public.tableau.com/app/profile/simon.d5578/viz/SponsorAtlas-public/SponsorAtlaspublicsnapshot) published on 2026-11-10 and reconciled 5/5 (see limitations) |
 | `data/reference/` | Census, CBSA and SOC reference files pinned by SHA-256 |
 | `docs/evidence/` | raw outputs behind the results table ([index](docs/evidence/README.md)) |
 | `docs/dev/` | per-task development evidence notes and the Snowflake bootstrap runbook |
 
 ## Not done and limitations
 
-- **Cloud and native tools were not run.** Snowflake: Terraform, bootstrap SQL and the dbt target
-  exist and are tested offline; nothing was applied, and the live grant and policy tests skip.
-  Databricks: Spark Connect adapter and job template, never run. Azure: ADF pipeline and Fabric
-  SQL/notebook with offline tests, never provisioned. Airbyte: configuration as code only; the local
-  `abctl` install failed on this host (kube-proxy "too many open files") and has not been re-run.
-- **BI is not met.** The Power BI and Tableau files are generated by script and were never opened in
-  either tool. The five-number reconciliation matches Cube against SQL but fails for both dashboards,
-  which have no values ([reconciliation.json](bi/evidence/reconciliation.json)).
-- **No deployment.** No git remote, no remote CI, no public site, no real-user monitoring. The site
-  runs only locally; quality gates (Lighthouse, bundle budget, visual diffs) ran locally on fixture
-  data. No native Figma file exists.
-- **Governance is partial.** Lineage is local; Snowflake row-access and masking policies are written
-  and tested only offline; failure alerts were only drilled against a local HTTP sink. The cost report runs only
-  on a fixture query history.
+- **Snowflake is a trial-account run, not production.** The trial started 2026-10-25 and ends
+  2026-11-24; both dates are derived from query history and the resource monitor, not read from a
+  billing page ([run.log](docs/evidence/task07-cube-snowflake-20261031/run.log)). It has no production users. Since 2026-11-06 two Airflow DAGs
+  have run against it from a development deployment on one home machine (LocalExecutor, SQLite
+  metadata, systemd --user units). The 5 scheduled daily runs from 2026-11-06 to 2026-11-10 and the
+  scheduled weekly run on 2026-11-08 succeeded in every task, each on its first try
+  ([orchestration/README.md](orchestration/README.md)). The schedules end before the trial does: the
+  last daily run is due 2026-11-22 08:00 UTC and the last weekly run 2026-11-15 09:00 UTC.
+  RAW was loaded by script, not
+  Airbyte. ER ran locally: Snowflake dimensions and facts read script-loaded exports of the local ER
+  output and `FACTS_INPUT` ([load-summary.json](docs/evidence/task02-snowflake-raw-20261030/load-summary.json)), so Snowflake is not
+  independent of the local build.
+- **Other cloud and native tools were not run.** Databricks: Spark Connect adapter and job template,
+  never run. Azure: ADF pipeline and Fabric SQL/notebook with offline tests, never provisioned.
+  Airbyte: configuration as code only; the local `abctl` install failed on this host (kube-proxy
+  "too many open files") and has not been re-run.
+- **BI is partly met.** The files in `bi/powerbi` and `bi/tableau` are generated by script and were
+  never opened in either tool. The five-number reconciliation matches Cube against SQL but fails for
+  both dashboards, which have no values, on an older 238,891-case snapshot
+  ([reconciliation.json](bi/evidence/reconciliation.json)). `bi/public` is the public dashboard path: its generated
+  workbook, built from a Snowflake snapshot taken on 2026-11-06, opened in Tableau Public 2026.2.3 with no
+  error and the queries behind all four sheets returned rows
+  ([evidence](docs/evidence/task11-tableau-public-20261105/desktop-load-20261106.json)). It is a static snapshot, not connected to Snowflake.
+  That check read the app's log, not its screen. The workbook was published on Tableau Public on
+  2026-11-10 at 19:37 UTC ([SponsorAtlas public snapshot](https://public.tableau.com/app/profile/simon.d5578/viz/SponsorAtlas-public/SponsorAtlaspublicsnapshot)).
+  It holds snapshot `20261106T052440Z-aa007296`, exported from the Snowflake public marts on
+  2026-11-06 at 05:24:40 UTC, before any scheduled Airflow run, so it has no data from those runs (its
+  86 posting rows are the 2026-10-24 archive rows), and it does not refresh. On 2026-11-10 at
+  19:39 UTC `reconcile_public.py` read the published Reconciliation sheet: 5 of 5 metrics PASS against
+  the snapshot at tolerance 1e-8 (the sheet's CSV export gives `certified_rate` with 9 decimals,
+  within the tolerance; [evidence](docs/evidence/task11-tableau-public-20261105/published-20261110/)).
+  The other three published sheets have 0 differences
+  from DuckDB over the snapshot CSVs, apart from display rounding. Employers are shown by ID, not
+  name, but `case_id` is the raw DOL case number, and workbook download is on, so anyone can download
+  the full 713,467-row case table.
+- **No site deployment.** The repository has been public at github.com/simon-jd/SponsorAtlas since
+  2026-11-03 (GitHub repository metadata), but there is no public site and no real-user monitoring,
+  and [web.yml](.github/workflows/web.yml) has no recorded run on GitHub. The site runs only locally;
+  quality gates (Lighthouse, bundle budget, visual diffs) ran locally on fixture data. No native
+  Figma file exists. The only running service deployment is the development Airflow one on the build
+  machine.
+- **Governance is partial.** Lineage is local. Snowflake row-access and masking policies passed live
+  on probe tables only ([log](docs/evidence/task08-snowflake-policies-20261031/pytest-live.log)); the real marts have no policies attached
+  ([log](docs/evidence/task01-snowflake-grants-20261031/pytest-live.log)). Failure alerts are not delivered: they were drilled against a local
+  HTTP sink on 2026-10-24, and the Snowflake DAGs append them to a local log
+  (`.tools/orchestration/alerts/alerts.jsonl`) that notifies nobody. Its 6 entries are all from the
+  two failed manual runs on 2026-11-06. A deadline alert fires 30 minutes after a run was queued
+  unless the run has succeeded by then; the two so far fired after their manual runs had failed.
+- **Cost evidence is thin.** One experiment on an 8-partition clone shows no partition pruning, and
+  clustering completion is unknown. Per-phase credits are null, so there is no per-run credit figure
+  ([experiment](docs/evidence/task10-snowflake-cost-20261031/experiment-P9A-reconciled-8h.json)).
 - **ER evaluation caveats.** The 0.875 threshold was chosen after the results on a holdout labelled
   by a sub-agent had been seen, so the holdout numbers are not an unbiased estimate. The human labels
   come from one reviewer with no second review, and the workbook's evidence column was left empty.
@@ -146,7 +209,18 @@ make cdc-drill             # throw-away Postgres container → DuckDB RAW
   The deployed clusters come from the unsupervised model; the model retrained with the labels gives
   identical clusters (0 of 161,596 records differ).
 - **Coverage.** One full fiscal year (FY2025) plus FY2024 Q4 for LCA; USCIS FY2022–FY2023 only. The
-  job-posting fact has 86 rows and says nothing about the hiring market.
+  local job-posting fact and the published Tableau snapshot have 86 real vendor-board rows
+  (Greenhouse 19, Ashby 67) from one snapshot on 2026-10-24, replay kind `LOCAL_ARCHIVE_REPLAY`
+  (`FACTS_INPUT.job_observations`, `scripts/load_fact_inputs.py:176`, [load-summary.json](docs/evidence/task02-snowflake-raw-20261030/load-summary.json)). On
+  Snowflake the daily DAG also loads one UTC day of public board observations per run into
+  `RAW.LCA.FACTS_INPUT_JOB_OBSERVATIONS` (13 boards: Greenhouse 7, Lever 3, Ashby 3; 4,904 to 4,911
+  rows a day from 2026-11-06 to 2026-11-10). The runs from 2026-11-07 fetched the boards live at about
+  08:00 UTC. The 2026-11-06 run reused the archive a manual run had fetched at 05:26 UTC, although its
+  replay kind is also recorded as `LIVE_BOARD_FETCH`. Seven boards returned byte-identical responses
+  on some consecutive days, so many rows are re-observations. Postings are not linked to LCA
+  employers (`employer_mapping_status` is `UNRESOLVED_SOURCE_EMPLOYER`) and say nothing about the
+  hiring market. `RAW.JOBS`, `stg_board_jobs` and `stg_cdc_*` hold synthetic ACME and CDC
+  fixtures that feed only tests.
 - **Map.** Points are Census representative points of ZIP areas or places, not addresses. H3
   aggregation runs in the Next.js server (h3-js), not in DuckDB or Snowflake. Frame cost was measured
   once, on an RTX 4090, not on low-end hardware.

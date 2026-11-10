@@ -1,6 +1,6 @@
-# Native strict-create phases — SOURCE ONLY
+# Native strict-create phases
 
-This source implements the selected strict-create proposal. It has not been formatted, parsed by Terraform, initialized, planned, imported, applied or tested. Native Task1 acceptance remains **OPEN**. Neither this document, a phase value, nor the commented [manual SQL](../../warehouse/bootstrap/native-bootstrap.sql) authorizes account access, keys, grants, resource creation or query charges.
+This source implements the selected strict-create proposal. It was applied to the Snowflake trial account on 2026-10-30 in three phases: CREATE_DISABLED (1 imported, 87 added, 1 changed), IMPORT_DISABLED (3 imported) and READY (4 changed); the apply logs were written between 22:21 and 22:28 UTC. The plan after READY showed no changes (logs in `.tools/terraform/plans/`, not in git). Live grant tests passed 8/8 on 2026-10-31. Native Task1 acceptance remains **OPEN**: no acceptance record closes it. The rest of this document describes the source review and the planned sequence before that apply and has not been updated for it. Neither this document, a phase value, nor the commented [manual SQL](../../warehouse/bootstrap/native-bootstrap.sql) authorizes account access, keys, grants, resource creation or query charges.
 
 The review target is Terraform 1.13.5 with the existing `snowflakedb/snowflake = 2.22.0` pin and existing Terraform version constraint. No backend is provisioned or configured by this change. The original two databases, seven managed schemas, four functional roles and three application service users must be created by a future authorized Terraform apply. Human creation followed by importing those roots would not meet that requirement.
 

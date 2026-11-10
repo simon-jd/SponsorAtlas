@@ -1,0 +1,22 @@
+{
+  "status": "SUCCEEDED",
+  "nproc": 32,
+  "load_before": [
+    6.75341796875,
+    6.673828125,
+    6.5771484375
+  ],
+  "steps": [
+    {
+      "name": "er_predict",
+      "exit_code": 0,
+      "seconds": 11.937,
+      "load_after": [
+        6.81298828125,
+        6.6904296875,
+        6.58349609375
+      ]
+    }
+  ],
+  "seconds": 11.937
+}

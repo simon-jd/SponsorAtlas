@@ -1,0 +1,22 @@
+{
+  "status": "SUCCEEDED",
+  "nproc": 32,
+  "load_before": [
+    5.66943359375,
+    6.4892578125,
+    6.5087890625
+  ],
+  "steps": [
+    {
+      "name": "dbt_staging",
+      "exit_code": 0,
+      "seconds": 82.097,
+      "load_after": [
+        6.8720703125,
+        6.69091796875,
+        6.5810546875
+      ]
+    }
+  ],
+  "seconds": 82.097
+}

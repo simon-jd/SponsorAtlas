@@ -1,0 +1,457 @@
+{
+ "checked": "2026-11-06, about 00:07 to 00:20 PST",
+ "app": "Tableau Public 2026.2.3 (20262.26.0912.1023), macOS, opened with open -g, no clicks or keystrokes, no sign-in",
+ "workbook": {
+  "file": "r6-full-data-SponsorAtlas-public.twbx, delivered as SponsorAtlas-public.twbx",
+  "sha256": "d08584d4603cb2728e82ef0a8690a18fb228bef8ad23044cafc26ac6880fed53",
+  "twb_sha256": "60036fcc867d7af5ba8201416c947b9f4bb113e26739f0c4a27acea810a15044",
+  "snapshot_id": "20261106T052440Z-aa007296",
+  "kind": "ACTUAL_SNOWFLAKE_PUBLIC_MARTS",
+  "names": "ids"
+ },
+ "shows": [
+  "With the manifest fix, the D2E8DA72 refusal is gone, including with CSV sources. CSV sources then fail with 3c242d89: the app requires extracts.",
+  "With Hyper extracts every rung opened: skeleton, Who and When, Pay, Reconciliation, dashboard, and the full data. No error dialog and no log event of severity error or fatal.",
+  "At full data the app ran one data query per sheet: Pay 25 rows, When 14, Who 25, Reconciliation 1. It logged 8 visual model updates and the soc_label filter domain (263 rows).",
+  "The same SQL, taken from the app log and re-run on the packaged extracts, gives the same row and column counts. Its Who, When and Pay results equal a separate DuckDB calculation over the CSV files, and its Reconciliation row equals the manifest and projection oracle."
+ ],
+ "does_not_show": [
+  "Pixels, in this automated check: no screen was read. Screen Recording is not granted and Accessibility returned 0 windows. See user_check for the later look on screen.",
+  "That the values on screen equal the query results, beyond the app having run these queries.",
+  "Publishing: Save to Tableau Public was not tried. reconcile_public.py has not run because there is no public URL.",
+  "Interaction: filters and tabs were not operated."
+ ],
+ "internal_warnings_at_full_data": [
+  "LazyConnect ConnectivityException at authentication stage for class hyper, before the connections that then succeeded.",
+  "UnknownColumn TEMP_NORM_(Calculation_8923543655999651066), logged as \"Skipping the logical query cache\"; that calculation is Certified rate on the Who sheet. The Who data query had already returned 25 rows and the sort query returned 25 after it. No dialog. Not investigated further.",
+  "Every quit needed SIGTERM after the 20 s graceful wait, including when nothing else was wrong. The reason was not established."
+ ],
+ "csv_source_run": [
+  {
+   "id": "r1",
+   "file": "r1-skeleton-1csv-1sheet-SAMPLE.twbx",
+   "adds": "Skeleton: one sampled CSV, plain columns, one plain bar sheet, the new manifest",
+   "status": "fail",
+   "pass_signal": null,
+   "reason": "the app logged an error for this load",
+   "seconds": 18.4,
+   "error_codes": [
+    "3c242d89"
+   ],
+   "worksheets": [
+    "Skeleton bar"
+   ],
+   "dashboards": [],
+   "data_files": {
+    "Data/SponsorAtlas/lca.csv": 190709
+   },
+   "features": [
+    "SchemaViewerObjectModel",
+    "SetMembershipControl",
+    "SheetIdentifierTracking",
+    "SortTagCleanup",
+    "WindowsPersistSimpleIdentifiers"
+   ],
+   "milestones": {
+    "dom_loaded": {
+     "ts": "2026-11-06T00:07:34.519",
+     "rk": "ok",
+     "elapsed": 0.026
+    }
+   },
+   "errors": [
+    {
+     "ts": "2026-11-06T00:07:37.447",
+     "kind": "error-dialog",
+     "command": "tabdoc:show-detailed-error-dialog",
+     "code": "3c242d89",
+     "message": "Workbooks saved to Tableau Public must use extracts. To create an extract, click the Data Source tab, then select Create Extract.The data source, LCA cases, is not an extract.",
+     "details": "\"*****\""
+    }
+   ],
+   "sev_error_or_fatal": [],
+   "log_rendered": [],
+   "quit": "term"
+  }
+ ],
+ "extract_ladder": [
+  {
+   "id": "r1",
+   "file": "r1-skeleton-1csv-1sheet-SAMPLE.twbx",
+   "adds": "Skeleton: one sampled CSV, plain columns, one plain bar sheet, the new manifest",
+   "status": "pass",
+   "pass_signal": "end-workspace load-workbook or open-workbook rk=ok, no error event",
+   "reason": null,
+   "seconds": 15.5,
+   "error_codes": [],
+   "worksheets": [
+    "Skeleton bar"
+   ],
+   "dashboards": [],
+   "data_files": {
+    "Data/SponsorAtlas/lca.hyper": 131072
+   },
+   "features": [
+    "SchemaViewerObjectModel",
+    "SetMembershipControl",
+    "SheetIdentifierTracking",
+    "SortTagCleanup",
+    "WindowsPersistSimpleIdentifiers"
+   ],
+   "milestones": {
+    "dom_loaded": {
+     "ts": "2026-11-06T00:11:58.462",
+     "rk": "ok",
+     "elapsed": 0.025
+    },
+    "load_workbook": {
+     "ts": "2026-11-06T00:11:59.019",
+     "rk": "ok",
+     "elapsed": 0.585
+    },
+    "open_workbook": {
+     "ts": "2026-11-06T00:11:59.122",
+     "rk": "ok",
+     "elapsed": 0.694
+    }
+   },
+   "errors": [],
+   "sev_error_or_fatal": [],
+   "log_rendered": [
+    "Skeleton bar"
+   ],
+   "quit": "term"
+  },
+  {
+   "id": "r2",
+   "file": "r2-lca-source-calcs-filters-SAMPLE.twbx",
+   "adds": "Real LCA source: metadata records, semantic values, calcs; Who and When sheets with Top-N, member filters, computed sort, titles, label panes",
+   "status": "pass",
+   "pass_signal": "end-workspace load-workbook or open-workbook rk=ok, no error event",
+   "reason": null,
+   "seconds": 14.6,
+   "error_codes": [],
+   "worksheets": [
+    "Who sponsors data roles?",
+    "When employers file"
+   ],
+   "dashboards": [],
+   "data_files": {
+    "Data/SponsorAtlas/lca.hyper": 131072
+   },
+   "features": [
+    "SchemaViewerObjectModel",
+    "SetMembershipControl",
+    "SheetIdentifierTracking",
+    "SortTagCleanup",
+    "WindowsPersistSimpleIdentifiers"
+   ],
+   "milestones": {
+    "dom_loaded": {
+     "ts": "2026-11-06T00:12:34.146",
+     "rk": "ok",
+     "elapsed": 0.024
+    },
+    "load_workbook": {
+     "ts": "2026-11-06T00:12:34.621",
+     "rk": "ok",
+     "elapsed": 0.501
+    },
+    "open_workbook": {
+     "ts": "2026-11-06T00:12:34.777",
+     "rk": "ok",
+     "elapsed": 0.663
+    }
+   },
+   "errors": [],
+   "sev_error_or_fatal": [],
+   "log_rendered": [
+    "Who sponsors data roles?"
+   ],
+   "quit": "term"
+  },
+  {
+   "id": "r3",
+   "file": "r3-measure-names-3-more-csvs-SAMPLE.twbx",
+   "adds": "Benchmark, postings and wages sources; Pay sheet with Measure Names, Multiple Values, shape and color encodings, right-edge cards",
+   "status": "pass",
+   "pass_signal": "end-workspace load-workbook or open-workbook rk=ok, no error event",
+   "reason": null,
+   "seconds": 14.6,
+   "error_codes": [],
+   "worksheets": [
+    "Who sponsors data roles?",
+    "Offered pay vs benchmark",
+    "When employers file"
+   ],
+   "dashboards": [],
+   "data_files": {
+    "Data/SponsorAtlas/lca.hyper": 131072,
+    "Data/SponsorAtlas/benchmark.hyper": 131072,
+    "Data/SponsorAtlas/postings.hyper": 65536,
+    "Data/SponsorAtlas/wages.hyper": 196608
+   },
+   "features": [
+    "SchemaViewerObjectModel",
+    "SetMembershipControl",
+    "SheetIdentifierTracking",
+    "SortTagCleanup",
+    "WindowsPersistSimpleIdentifiers"
+   ],
+   "milestones": {
+    "dom_loaded": {
+     "ts": "2026-11-06T00:13:09.570",
+     "rk": "ok",
+     "elapsed": 0.025
+    },
+    "load_workbook": {
+     "ts": "2026-11-06T00:13:10.118",
+     "rk": "ok",
+     "elapsed": 0.576
+    },
+    "open_workbook": {
+     "ts": "2026-11-06T00:13:10.207",
+     "rk": "ok",
+     "elapsed": 0.67
+    }
+   },
+   "errors": [],
+   "sev_error_or_fatal": [],
+   "log_rendered": [
+    "Who sponsors data roles?"
+   ],
+   "quit": "term"
+  },
+  {
+   "id": "r4",
+   "file": "r4-union-reconciliation-SAMPLE.twbx",
+   "adds": "Row-union source and the Reconciliation sheet",
+   "status": "pass",
+   "pass_signal": "end-workspace load-workbook or open-workbook rk=ok, no error event",
+   "reason": null,
+   "seconds": 14.6,
+   "error_codes": [],
+   "worksheets": [
+    "Who sponsors data roles?",
+    "Offered pay vs benchmark",
+    "When employers file",
+    "Reconciliation"
+   ],
+   "dashboards": [],
+   "data_files": {
+    "Data/SponsorAtlas/lca.hyper": 131072,
+    "Data/SponsorAtlas/benchmark.hyper": 131072,
+    "Data/SponsorAtlas/postings.hyper": 65536,
+    "Data/SponsorAtlas/wages.hyper": 196608,
+    "Data/SponsorAtlas/reconcile.hyper": 262144
+   },
+   "features": [
+    "SchemaViewerObjectModel",
+    "SetMembershipControl",
+    "SheetIdentifierTracking",
+    "SortTagCleanup",
+    "WindowsPersistSimpleIdentifiers"
+   ],
+   "milestones": {
+    "dom_loaded": {
+     "ts": "2026-11-06T00:13:45.006",
+     "rk": "ok",
+     "elapsed": 0.026
+    },
+    "load_workbook": {
+     "ts": "2026-11-06T00:13:45.580",
+     "rk": "ok",
+     "elapsed": 0.603
+    },
+    "open_workbook": {
+     "ts": "2026-11-06T00:13:45.668",
+     "rk": "ok",
+     "elapsed": 0.696
+    }
+   },
+   "errors": [],
+   "sev_error_or_fatal": [],
+   "log_rendered": [
+    "Who sponsors data roles?"
+   ],
+   "quit": "term"
+  },
+  {
+   "id": "r5",
+   "file": "r5-dashboard-SAMPLE.twbx",
+   "adds": "Dashboard: zones with type-v2, filter and legend zones, text panel, dashboard window. TWB is byte-identical to r6",
+   "status": "pass",
+   "pass_signal": "end-workspace load-workbook or open-workbook rk=ok, no error event",
+   "reason": null,
+   "seconds": 14.6,
+   "error_codes": [],
+   "worksheets": [
+    "Who sponsors data roles?",
+    "Offered pay vs benchmark",
+    "When employers file",
+    "Reconciliation"
+   ],
+   "dashboards": [
+    "SponsorAtlas public snapshot"
+   ],
+   "data_files": {
+    "Data/SponsorAtlas/lca.hyper": 131072,
+    "Data/SponsorAtlas/benchmark.hyper": 131072,
+    "Data/SponsorAtlas/postings.hyper": 65536,
+    "Data/SponsorAtlas/wages.hyper": 196608,
+    "Data/SponsorAtlas/reconcile.hyper": 262144
+   },
+   "features": [
+    "SchemaViewerObjectModel",
+    "SetMembershipControl",
+    "SheetIdentifierTracking",
+    "SortTagCleanup",
+    "WindowsPersistSimpleIdentifiers"
+   ],
+   "milestones": {
+    "dom_loaded": {
+     "ts": "2026-11-06T00:14:20.537",
+     "rk": "ok",
+     "elapsed": 0.026
+    },
+    "load_workbook": {
+     "ts": "2026-11-06T00:14:21.119",
+     "rk": "ok",
+     "elapsed": 0.61
+    },
+    "open_workbook": {
+     "ts": "2026-11-06T00:14:21.264",
+     "rk": "ok",
+     "elapsed": 0.761
+    }
+   },
+   "errors": [],
+   "sev_error_or_fatal": [],
+   "log_rendered": [
+    "SponsorAtlas public snapshot"
+   ],
+   "quit": "term"
+  },
+  {
+   "id": "r6",
+   "file": "r6-full-data-SponsorAtlas-public.twbx",
+   "adds": "Full snapshot CSVs (713,467 LCA rows). Only the data changes from r5; this is the only publishable candidate",
+   "status": "pass",
+   "pass_signal": "end-workspace load-workbook or open-workbook rk=ok, no error event",
+   "reason": null,
+   "seconds": 14.6,
+   "error_codes": [],
+   "worksheets": [
+    "Who sponsors data roles?",
+    "Offered pay vs benchmark",
+    "When employers file",
+    "Reconciliation"
+   ],
+   "dashboards": [
+    "SponsorAtlas public snapshot"
+   ],
+   "data_files": {
+    "Data/SponsorAtlas/lca.hyper": 38731776,
+    "Data/SponsorAtlas/benchmark.hyper": 393216,
+    "Data/SponsorAtlas/postings.hyper": 65536,
+    "Data/SponsorAtlas/wages.hyper": 196608,
+    "Data/SponsorAtlas/reconcile.hyper": 38731776
+   },
+   "features": [
+    "SchemaViewerObjectModel",
+    "SetMembershipControl",
+    "SheetIdentifierTracking",
+    "SortTagCleanup",
+    "WindowsPersistSimpleIdentifiers"
+   ],
+   "milestones": {
+    "dom_loaded": {
+     "ts": "2026-11-06T00:14:56.181",
+     "rk": "ok",
+     "elapsed": 0.026
+    },
+    "load_workbook": {
+     "ts": "2026-11-06T00:14:56.763",
+     "rk": "ok",
+     "elapsed": 0.75
+    },
+    "open_workbook": {
+     "ts": "2026-11-06T00:14:57.339",
+     "rk": "ok",
+     "elapsed": 1.333
+    }
+   },
+   "errors": [],
+   "sev_error_or_fatal": [],
+   "log_rendered": [
+    "SponsorAtlas public snapshot"
+   ],
+   "quit": "term"
+  }
+ ],
+ "full_data_app_queries": [
+  {
+   "ts": "2026-11-06T00:14:56.784",
+   "category": "Data",
+   "cols": 6,
+   "rows": 25,
+   "sql": "SELECT \"Extract\".\"metro_title\" AS \"metro_title\",\n  SUM(\"Extract\".\"lca_cases\") AS \"sum:lca_cases:ok\",\n  MAX(\"Extract\".\"oews_median\") AS \"usr:Calculation_1072832929630727379:ok\",\n  MAX(\"Extract\".\"lca_p50\") AS \"usr:Calculation_6121456055088610824:ok\",\n  MAX(\"Extract\".\"lca_p75\") AS \"usr:Calculation_6382079093195468333:ok\",\n  MAX(\"Extract\".\"lca_p90\") AS \"usr:Calculation_7896150639207011454:ok\"\nFROM \"Extract\".\"Extract\" \"Extract\"\nWHERE ((\"Extract\".\"metro_top25\" = 1) AND (\"Extract\".\"soc_label\" = '15-1252 Software Developers'))\nGROUP BY 1"
+  },
+  {
+   "ts": "2026-11-06T00:14:56.787",
+   "category": "Data",
+   "cols": 2,
+   "rows": 14,
+   "sql": "SELECT (CASE WHEN (\"Extract\".\"received_month\" < '2024-09') THEN '2024-08 or earlier' ELSE \"Extract\".\"received_month\" END) AS \"Calculation_8934522910058655250\",\n  COUNT(\"Extract\".\"case_id\") AS \"usr:Calculation_3401231562416764474:ok\"\nFROM \"Extract\".\"Extract\" \"Extract\"\nWHERE (\"Extract\".\"fiscal_year\" = 2025)\nGROUP BY 1"
+  },
+  {
+   "ts": "2026-11-06T00:14:56.795",
+   "category": "QuickFilter",
+   "cols": 1,
+   "rows": 263,
+   "sql": "SELECT \"Extract\".\"soc_label\" AS \"soc_label\"\nFROM \"Extract\".\"Extract\" \"Extract\"\nGROUP BY 1\nORDER BY \"soc_label\" ASC NULLS FIRST"
+  },
+  {
+   "ts": "2026-11-06T00:14:56.816",
+   "category": "Data",
+   "cols": 4,
+   "rows": 25,
+   "sql": "SELECT SUM(\"Extract\".\"is_certified\") AS \"TEMP(Calculation_8923543655999651066)(1792492237)(0)\",\n  COUNT(\"Extract\".\"case_id\") AS \"TEMP(Calculation_8923543655999651066)(603105487)(0)\",\n  \"Extract\".\"employer_id\" AS \"employer_id\",\n  MEDIAN(\"Extract\".\"annual_wage\") AS \"usr:Calculation_5454371521732328664:ok\"\nFROM \"Extract\".\"Extract\" \"Extract\"\nWHERE (\"Extract\".\"data_role\" = 1) AND EXISTS (\nSELECT 1 AS \"one\"\nFROM (\n  SELECT \"Extract\".\"employer_id\" AS \"employer_id\",\n    SUM(\"Extract\".\"data_role\") AS \"$__alias__0\"\n  FROM \"Extract\".\"Extract\" \"Extract\"\n  GROUP BY 1\n  ORDER BY \"$__alias__0\" DESC NULLS LAST,\n    \"employer_id\" ASC NULLS FIRST\n  LIMIT 25\n) \"t0\"\nWHERE (\"Extract\".\"employer_id\" IS NOT DISTINCT FROM \"t0\".\"employer_id\")\n)\nGROUP BY 3"
+  },
+  {
+   "ts": "2026-11-06T00:14:57.214",
+   "category": "Data",
+   "cols": 9,
+   "rows": 1,
+   "sql": "SELECT MAX((CASE WHEN ((\"Extract\".\"soc\" = '15-1252') AND (\"Extract\".\"area\" = '1:99') AND (\"Extract\".\"survey_year\" = 2025)) THEN \"Extract\".\"annual_median_wage\" ELSE null::double precision END)) AS \"TEMP(Calculation_3712301671509974071)(107307673)(0)\",\n  COUNT((CASE WHEN ((\"Extract\".\"soc\" = '15-1252') AND (\"Extract\".\"area\" = '1:99') AND (\"Extract\".\"survey_year\" = 2025)) THEN \"Extract\".\"annual_median_wage\" ELSE null::double precision END)) AS \"TEMP(Calculation_3712301671509974071)(2613515873)(0)\",\n  SUM(\"Extract\".\"is_certified\") AS \"TEMP(Calculation_7263587721379993760)(1792492237)(0)\",\n  COUNT(\"Extract\".\"case_id\") AS \"TEMP(Calculation_7263587721379993760)(603105487)(0)\",\n  \"Extract\".\"snapshot_id\" AS \"snapshot_id\",\n  \"Extract\".\"snapshot_kind\" AS \"snapshot_kind\",\n  COUNT(DISTINCT \"Extract\".\"case_id\") AS \"usr:Calculation_1085837900395418063:ok\",\n  (PERCENTILE_CONT('0.75'::double precision) WITHIN GROUP (ORDER BY \"Extract\".\"annual_wage\" ASC)) AS \"usr:Calculation_4825404769913467796:ok\",\n  SUM(\"Extract\".\"is_active\") AS \"usr:Calculation_5956792164354131971:ok\"\nFROM \"Extract\".\"Extract\" \"Extract\"\nGROUP BY 5,\n  6"
+  },
+  {
+   "ts": "2026-11-06T00:14:57.299",
+   "category": "Sort",
+   "cols": 2,
+   "rows": 25,
+   "sql": "SELECT \"Extract\".\"employer_id\" AS \"employer_id\",\n  COUNT(\"Extract\".\"case_id\") AS \"usr:Calculation_3401231562416764474:ok\"\nFROM \"Extract\".\"Extract\" \"Extract\"\nWHERE (\"Extract\".\"data_role\" = 1) AND EXISTS (\nSELECT 1 AS \"one\"\nFROM (\n  SELECT \"Extract\".\"employer_id\" AS \"employer_id\",\n    SUM(\"Extract\".\"data_role\") AS \"$__alias__0\"\n  FROM \"Extract\".\"Extract\" \"Extract\"\n  GROUP BY 1\n  ORDER BY \"$__alias__0\" DESC NULLS LAST,\n    \"employer_id\" ASC NULLS FIRST\n  LIMIT 25\n) \"t0\"\nWHERE (\"Extract\".\"employer_id\" IS NOT DISTINCT FROM \"t0\".\"employer_id\")\n)\nGROUP BY 1"
+  }
+ ],
+ "offline_rerun_stdout": [
+  "0 Data benchmark app rows 25 cols 6 | offline rows 25 cols 6 MATCH",
+  "1 Data lca app rows 14 cols 2 | offline rows 14 cols 2 MATCH",
+  "2 QuickFilter benchmark app rows 263 cols 1 | offline rows 263 cols 1 MATCH",
+  "3 Data lca app rows 25 cols 4 | offline rows 25 cols 4 MATCH",
+  "4 Data reconcile app rows 1 cols 9 | offline rows 1 cols 9 MATCH",
+  "5 Sort lca app rows 25 cols 2 | offline rows 25 cols 2 MATCH",
+  "lca rows 713467",
+  "benchmark rows 4626",
+  "postings rows 86",
+  "wages rows 1394",
+  "reconcile rows 714947"
+ ],
+ "offline_crosscheck_stdout": [
+  "who rows 25 differences 0 []",
+  "when rows 14 equal True total 594821",
+  "pay rows 25 differences 0 []",
+  "{'case_count': (713467, 713467, True), 'certified_rate': (0.9777789302098064, 0.9777789302098064, True), 'wage_p75': (156383.63, 156383.63, True), 'oews_median': (135980.0, 135980.0, True), 'active_posting_days': (86, 86, True), 'snapshot': (True, True)}",
+  "{'lca.csv': 713467, 'postings.csv': 86, 'wages.csv': 1394, 'benchmark.csv': 4626} union expected 714947"
+ ],
+ "user_check": "2026-11-06: the user opened SponsorAtlas-public.twbx in the app and reported that the data is right. This is the user's report, with no screenshot retained."
+}

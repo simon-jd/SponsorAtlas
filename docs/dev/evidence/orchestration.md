@@ -1,5 +1,28 @@
 # Task 9 — Airflow 编排、24h freshness、告警与回填证据
 
+## 2026-11-06 起：Snowflake 上的计划运行
+
+部署在一台家用机器上，是开发部署，不是生产环境：Airflow 3.3.2、Astronomer Cosmos 1.15.1、dbt-core 1.12.6、dbt-snowflake 1.12.4；LocalExecutor，元数据库为 SQLite；scheduler、api-server、dag-processor 三个 systemd --user 单元自 2026-11-06 05:25 UTC 起运行。主机在 2026-11-08 约 04:54 UTC 停机，07:22 UTC 恢复；单元随之重启，没有错过调度时刻。
+
+| DAG | 调度 | 任务数 | 计划运行 | 结果 |
+|---|---|---:|---|---|
+| `sponsoratlas_daily` | 每天 08:00 UTC | 6 | 2026-11-06 至 2026-11-10，共 5 次 | 全部成功，每个任务第一次尝试即成功，每次 58–91 s |
+| `sponsoratlas` | 每周日 09:00 UTC | 39 | 2026-11-08，1 次 | 成功，485 s；180 个 dbt 节点，0 失败；每个任务第一次尝试即成功；`cube_refresh` 读取 Snowflake |
+
+每日 DAG 的 6 个任务：preflight、load_boards、observations_freshness、dbt_job_fact、job_gates、record_usage。2026-11-07 至 2026-11-10 的运行在约 08:00 UTC 实时抓取 13 个职位板（Greenhouse 7、Lever 3、Ashby 3），每天 4,904–4,911 行，写入 `RAW.LCA.FACTS_INPUT_JOB_OBSERVATIONS`，然后 dbt 在 Snowflake 上构建 `fact_job_posting_daily` 及其门禁。有 7 个职位板在部分相邻日期返回逐字节相同的内容，所以很多行是重复观测。2026-11-06 的计划运行没有抓取：它复用了当天 05:26 UTC 一次手动运行抓取的存档（4,905 行）。运行清单的 `replay_kind` 始终是 `LIVE_BOARD_FETCH`，证据规则（`export_runs.py`）不记录存档复用，所以这次运行也计为 evidence=yes。
+
+每周 DAG 对两张大事实表做全量重算，再用 MERGE 写入全部行。手动运行 `manual_full_snowflake_20261106_r2` 也成功。
+
+告警只写本地日志，不通知任何人。日志里的 6 条都来自 2026-11-06 失败的手动运行。Deadline 告警在运行排队 30 分钟后触发，除非运行在此之前已经成功；每周 DAG 的超时是 45 分钟，所以 30 分钟时仍在运行的每周运行也会告警，之后仍可能成功。目前的 2 条 Deadline 告警都在 2026-11-06 两次手动运行失败结束之后触发；没有计划运行到达 30 分钟的 deadline。
+
+Credit：账本对 SponsorAtlas 运行的估算（ESTIMATE）为 1.0192（守护上限 2.5）。整个账号的计量总量在 2026-11-10 08:00 UTC 为 112.1444（守护上限 123.0），其中包括同一试用账号上的其他项目，且滞后数小时，所以没有实测的单次运行 credit 数。
+
+结束：每日 DAG 的 end_date 为 2026-11-23T00:00Z，最后一次运行是 2026-11-22 08:00 UTC；每周 DAG 的 end_date 为 2026-11-16，最后一次运行是 2026-11-15 09:00 UTC；结束定时器定在 2026-11-23 00:30 UTC。
+
+2026-11-06，`sponsoratlas_backfill` 在本地 DuckDB 上做了一次 FY2025 验证运行（label `verify-20261106`），10/10 步成功（[证据](../../evidence/task09-backfill-airflow-verify-20261106/)）。
+
+输出：[runs](../../evidence/task09-airflow-snowflake-20261106/runs/)（每次运行一份清单）。
+
 ## FY2025 backfill, facts layer (2026-10-28 UTC, phase 5)
 
 The user raised the disk share to 36 GB (internal resource budget, 2026-10-27); the guard now reads
@@ -121,7 +144,7 @@ Airbyte按endpoint/connection/run_id保存共享耐久状态，先排他写入tr
 
 本地新导出只允许orchestration-owned独立DB，校验维度/事实grain、投影计数、SHA manifest、128MiB/100万行上限；失败清理输出。既有六份公开Parquet与受保护1.7GB事实库均未改。既有Snowflake export路径未调用/修改，原deferred M1仍保留；新本地导出进口/失败清理与拒绝fanout已覆盖。
 
-## 财年回填仍OPEN
+## FY2024 回填仍OPEN（仅有Q4；FY2025已于2026-10-28完成，见上文）
 
 执行 `.venv/bin/python -m orchestration.sponsoratlas_orchestration.backfill --fiscal-year 2024`，退出2：要求 `2023-10-01,2024-10-01)`，实际仅FY2024_Q4、120897行，覆盖2024-07-01～2024-09-30，Q1/Q2/Q3缺失；**无mutation/sync**。[预检及耗时。约0.045s是拒绝前置检查耗时，不是全FY回填耗时。
 

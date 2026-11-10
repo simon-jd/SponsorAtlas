@@ -1,0 +1,179 @@
+----- Estimating u probabilities using random sampling -----
+Estimating u with: max_pairs = 2,000,000, min_count_per_level = 100, num_chunks = 10
+
+Estimating u for: name_norm (Comparison 1 of 5)
+  Running probe chunk (~1.00% of max_pairs)
+  Min u_count: 0 for comparison level Levenshtein distance of name_norm <= 1 (cvv=2)
+  Probe did not converge; restarting with normal chunking
+
+  Running chunk 1/10
+  Count of 0 for level Levenshtein distance of name_norm <= 1 (cvv=2). Chunk took 0.2 seconds.
+  Min u_count not hit, continuing.
+  Running chunk 2/10
+  Count of 0 for level Levenshtein distance of name_norm <= 1 (cvv=2). Chunk took 0.3 seconds.
+  Min u_count not hit, continuing.
+  Running chunk 3/10
+  Count of 0 for level Levenshtein distance of name_norm <= 1 (cvv=2). Chunk took 0.3 seconds.
+  Min u_count not hit, continuing.
+  Running chunk 4/10
+  Count of 2 for level Levenshtein distance of name_norm <= 1 (cvv=2). Chunk took 0.3 seconds.
+  Min u_count not hit, continuing.
+  Running chunk 5/10
+  Count of 3 for level Levenshtein distance of name_norm <= 1 (cvv=2). Chunk took 0.3 seconds.
+  Min u_count not hit, continuing.
+  Running chunk 6/10
+  Count of 3 for level Levenshtein distance of name_norm <= 1 (cvv=2). Chunk took 0.3 seconds.
+  Min u_count not hit, continuing.
+  Running chunk 7/10
+  Count of 4 for level Levenshtein distance of name_norm <= 1 (cvv=2). Chunk took 0.2 seconds.
+  Min u_count not hit, continuing.
+  Running chunk 8/10
+  Count of 4 for level Levenshtein distance of name_norm <= 1 (cvv=2). Chunk took 0.2 seconds.
+  Min u_count not hit, continuing.
+  Running chunk 9/10
+  Count of 4 for level Levenshtein distance of name_norm <= 1 (cvv=2). Chunk took 0.3 seconds.
+  Min u_count not hit, continuing.
+  Running chunk 10/10
+  Count of 4 for level Levenshtein distance of name_norm <= 1 (cvv=2). Chunk took 0.3 seconds.
+  Min u_count not hit, continuing.
+
+Estimating u for: city (Comparison 2 of 5)
+  Running probe chunk (~1.00% of max_pairs)
+  Min u_count: 230 for comparison level Exact match on city (cvv=1)
+  Exiting early since min count of 230 exceeds min_count_per_level = 100
+
+Estimating u for: postcode (Comparison 3 of 5)
+  Running probe chunk (~1.00% of max_pairs)
+  Min u_count: 15 for comparison level Exact match on postcode (cvv=1)
+  Probe did not converge; restarting with normal chunking
+
+  Running chunk 1/10
+  Count of 171 for level Exact match on postcode (cvv=1). Chunk took 0.0 seconds.
+  Exiting early since min count of 171 exceeds min_count_per_level = 100
+
+Estimating u for: tax_last4 (Comparison 4 of 5)
+  Running probe chunk (~1.00% of max_pairs)
+  Min u_count: 4 for comparison level Exact match on tax_last4 (cvv=1)
+  Probe did not converge; restarting with normal chunking
+
+  Running chunk 1/10
+  Count of 15 for level Exact match on tax_last4 (cvv=1). Chunk took 0.0 seconds.
+  Min u_count not hit, continuing.
+  Running chunk 2/10
+  Count of 39 for level Exact match on tax_last4 (cvv=1). Chunk took 0.0 seconds.
+  Min u_count not hit, continuing.
+  Running chunk 3/10
+  Count of 62 for level Exact match on tax_last4 (cvv=1). Chunk took 0.0 seconds.
+  Min u_count not hit, continuing.
+  Running chunk 4/10
+  Count of 74 for level Exact match on tax_last4 (cvv=1). Chunk took 0.0 seconds.
+  Min u_count not hit, continuing.
+  Running chunk 5/10
+  Count of 97 for level Exact match on tax_last4 (cvv=1). Chunk took 0.0 seconds.
+  Min u_count not hit, continuing.
+  Running chunk 6/10
+  Count of 116 for level Exact match on tax_last4 (cvv=1). Chunk took 0.0 seconds.
+  Exiting early since min count of 116 exceeds min_count_per_level = 100
+
+Estimating u for: strong_id (Comparison 5 of 5)
+  Running probe chunk (~1.00% of max_pairs)
+  Min u_count: 0 for comparison level Exact match on strong_id (cvv=1)
+  Probe did not converge; restarting with normal chunking
+
+  Running chunk 1/10
+  Count of 0 for level Exact match on strong_id (cvv=1). Chunk took 0.0 seconds.
+  Min u_count not hit, continuing.
+  Running chunk 2/10
+  Count of 1 for level Exact match on strong_id (cvv=1). Chunk took 0.0 seconds.
+  Min u_count not hit, continuing.
+  Running chunk 3/10
+  Count of 1 for level Exact match on strong_id (cvv=1). Chunk took 0.0 seconds.
+  Min u_count not hit, continuing.
+  Running chunk 4/10
+  Count of 2 for level Exact match on strong_id (cvv=1). Chunk took 0.0 seconds.
+  Min u_count not hit, continuing.
+  Running chunk 5/10
+  Count of 2 for level Exact match on strong_id (cvv=1). Chunk took 0.0 seconds.
+  Min u_count not hit, continuing.
+  Running chunk 6/10
+  Count of 2 for level Exact match on strong_id (cvv=1). Chunk took 0.0 seconds.
+  Min u_count not hit, continuing.
+  Running chunk 7/10
+  Count of 2 for level Exact match on strong_id (cvv=1). Chunk took 0.0 seconds.
+  Min u_count not hit, continuing.
+  Running chunk 8/10
+  Count of 3 for level Exact match on strong_id (cvv=1). Chunk took 0.0 seconds.
+  Min u_count not hit, continuing.
+  Running chunk 9/10
+  Count of 3 for level Exact match on strong_id (cvv=1). Chunk took 0.0 seconds.
+  Min u_count not hit, continuing.
+  Running chunk 10/10
+  Count of 4 for level Exact match on strong_id (cvv=1). Chunk took 0.0 seconds.
+  Min u_count not hit, continuing.
+
+Estimated u probabilities using random sampling
+
+Your model is not yet fully trained. Missing estimates for:
+    - name_norm (no m values are trained).
+    - city (no m values are trained).
+    - postcode (no m values are trained).
+    - tax_last4 (no m values are trained).
+    - strong_id (no m values are trained).
+
+----- Starting EM training session -----
+
+[EM sampling] max_pairs is None — no sampling will be applied
+Estimating the m probabilities of the model by blocking on:
+l.first_token = r.first_token AND l.state = r.state
+
+Parameter estimates will be made for the following comparison(s):
+    - name_norm
+    - city
+    - postcode
+    - tax_last4
+    - strong_id
+
+Parameter estimates cannot be made for the following comparison(s) since they are used in the blocking rules: 
+
+Iteration 1: Largest change in params was 0.199 in the m_probability of postcode, level `All other comparisons`
+Iteration 2: Largest change in params was 0.27 in the m_probability of strong_id, level `All other comparisons`
+Iteration 3: Largest change in params was 0.135 in the m_probability of tax_last4, level `All other comparisons`
+Iteration 4: Largest change in params was -0.108 in the m_probability of strong_id, level `Exact match on strong_id`
+Iteration 5: Largest change in params was -0.0365 in the m_probability of strong_id, level `Exact match on strong_id`
+Iteration 6: Largest change in params was 0.00828 in the m_probability of strong_id, level `All other comparisons`
+Iteration 7: Largest change in params was -0.00196 in the m_probability of strong_id, level `Exact match on strong_id`
+Iteration 8: Largest change in params was -0.000508 in the m_probability of strong_id, level `Exact match on strong_id`
+Iteration 9: Largest change in params was -0.000139 in the m_probability of strong_id, level `Exact match on strong_id`
+Iteration 10: Largest change in params was 3.89e-05 in the m_probability of strong_id, level `All other comparisons`
+
+EM converged after 10 iterations
+
+Your model is fully trained. All comparisons have at least one estimate for their m and u values
+
+----- Starting EM training session -----
+
+[EM sampling] max_pairs is None — no sampling will be applied
+Estimating the m probabilities of the model by blocking on:
+l.strong_id = r.strong_id
+
+Parameter estimates will be made for the following comparison(s):
+    - name_norm
+    - city
+    - postcode
+    - tax_last4
+
+Parameter estimates cannot be made for the following comparison(s) since they are used in the blocking rules: 
+    - strong_id
+
+WARNING:
+Level All other comparisons on comparison tax_last4 not observed in dataset, unable to train m value
+
+Iteration 1: Largest change in params was 0.543 in the m_probability of tax_last4, level `Exact match on tax_last4`
+Iteration 2: Largest change in params was 0.000101 in probability_two_random_records_match
+Iteration 3: Largest change in params was 3.75e-08 in probability_two_random_records_match
+
+EM converged after 3 iterations
+m probability not trained for tax_last4 - All other comparisons (comparison vector value: 0). This usually means the comparison level was never observed in the training data.
+
+Your model is fully trained. All comparisons have at least one estimate for their m and u values
+{"kind": "splink-duckdb-u-em", "input_kind": "real-staging-lca-uscis", "splink_version": "5.0.0", "seed": 42, "records": 161384, "excluded_holdout_records": 203, "labels_sha256": "d290ca4fd87dde34748c9281ba47ac526745577e53ed1fd88f72ec68814931e8", "acceptance_eligible": true, "untrained_parameters": [], "input_records_sha256": "ebbca4e6c437dc27a69b9b9def6d8d13192cbec3cb1dbc14dd644f5bf800f736", "input_occurrences_sha256": "7220500b38dd2b119ac480dbd24ee9d4a2163daa735904d7e82070b9badbc81b", "model_sha256": "905d18c6a79623f6f189eeb39f50cf161243f9a864e47c906253b2e1ef2aac2a", "training_ids_sha256": "72a2a90f77759399b1c786c4951aaa915169eac6a3950dc23104d47cd70b01a2", "candidate_upper_bound": 707194, "max_u_pairs": 2000000, "em_sessions": [{"rule": "l.first_token = r.first_token AND l.state = r.state", "pairs": 596038}, {"rule": "l.strong_id = r.strong_id", "pairs": 29386}], "limits": {"max_temp_directory_size": "1.8 GiB", "memory_limit": "3.7 GiB", "temp_directory": "/home/postedism/Desktop/SponsorAtlas/.tools/backfill-runs/verify-20261106/er/model/spill", "threads": "1"}, "seconds": 10.039}

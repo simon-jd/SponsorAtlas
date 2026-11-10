@@ -8,12 +8,18 @@ RAW load -> dbt staging -> ER export/train/predict -> dimension inputs -> dbt di
 log are recorded. Destinations must not exist yet (the loaders refuse to overwrite).
 ER predict inherits the archived employer registry (er.registry_archive), so employer IDs
 survive a rebuild; `run --initialize-registry` starts new IDs instead.
+
+A labelled run (`run_one(..., label=...)`, DAG conf "label") is a verification: every
+destination is a new label directory and the canonical databases and registry stay untouched.
+An unlabelled Airflow run rewrites the canonical paths, and the dbt steps rebuild in place, so it
+also needs `overwrite_canonical=True`, DAG conf "overwrite_canonical": true.
 """
 
 import argparse
 import hashlib
 import json
 import os
+import re
 import subprocess
 import time
 from pathlib import Path
@@ -41,6 +47,7 @@ FACT_SELECT = (
     "dim_occupation dim_geography int_dimension_mapping stg_bls tag:facts "
     "dimension_reference_integrity dimension_mapping_accounting"
 ).split()
+LABEL = re.compile(r"[a-z][a-z0-9-]{0,62}")
 
 
 def fiscal_year_readiness(year):
@@ -101,6 +108,8 @@ def backfill_steps(
     facts=None,
     er=None,
     registry_archive=None,
+    previous_registry=None,
+    work=None,
     initialize_registry=False,
 ):
     # New files next to the Q4-only databases: the loaders refuse to overwrite.
@@ -110,7 +119,7 @@ def backfill_steps(
     er = Path(er or ROOT / f".tools/er/fy{year}-backfill")
     # Outside the backfill directory, which is moved aside before a rebuild.
     registry_archive = Path(registry_archive or ROOT / f".tools/er/registry-archive-fy{year}")
-    work = ROOT / f".tools/orchestration/backfill-fy{year}"
+    work = Path(work or ROOT / f".tools/orchestration/backfill-fy{year}")
 
     def dbt(database, label, *args, **extra):
         target = work / label
@@ -119,6 +128,8 @@ def backfill_steps(
             "name": label,
             "argv": [DBT, *args],
             "env": {
+                # The deployed environment sets DBT_TARGET=snowflake; this rebuild is local.
+                "DBT_TARGET": "local",
                 "SPONSORATLAS_DUCKDB_PATH": str(database),
                 "DBT_TARGET_PATH": str(target / "target"),
                 "DBT_LOG_PATH": str(target / "logs"),
@@ -132,6 +143,14 @@ def backfill_steps(
         "--model-dir", str(er / "model"),
         "--prediction-dir", str(er / "prediction"),
     ]  # fmt: skip
+    predict_paths = ["--input", str(er / "input"), "--model", str(er / "model"),
+                     "--output", str(er / "prediction")]  # fmt: skip
+    if previous_registry:
+        # Reads this one file and publishes nothing, so no archive can change.
+        predict = ["er.predict", *predict_paths, "--previous-registry", str(previous_registry)]
+    else:
+        predict = ["er.registry_archive", *predict_paths, "--archive", str(registry_archive),
+                   *(["--initialize-registry"] if initialize_registry else [])]  # fmt: skip
     return [
         {
             "name": "load_raw",
@@ -160,11 +179,8 @@ def backfill_steps(
         },  # fmt: skip
         {
             "name": "er_predict",
-            "argv": [PYTHON, "-m", "er.registry_archive", "--input", str(er / "input"),
-                     "--model", str(er / "model"), "--output", str(er / "prediction"),
-                     "--archive", str(registry_archive),
-                     *(["--initialize-registry"] if initialize_registry else [])],
-        },  # fmt: skip
+            "argv": [PYTHON, "-m", *predict],
+        },
         {
             "name": "dimension_inputs",
             "argv": [PYTHON, "-m", "scripts.load_dimension_inputs", "--database",
@@ -182,6 +198,30 @@ def backfill_steps(
         dbt(facts, "dbt_facts", "--warn-error", "build",
             "--indirect-selection", "cautious", "--select", *FACT_SELECT),  # fmt: skip
     ]
+
+
+def labelled_paths(year, label):
+    """Where a labelled run writes. Each database gets a label directory inside its own area:
+    the loaders refuse anything else (load_staging_files.py:111, load_fact_inputs.py:121-126)."""
+    if not isinstance(label, str) or not LABEL.fullmatch(label):
+        raise ValueError(f"Backfill label must match {LABEL.pattern}, got {label!r}")
+    database = Path("backfill-runs") / label / f"fy{year}.duckdb"
+    run = ROOT / ".tools/backfill-runs" / label
+    return {
+        "staging": ROOT / ".tools/staging" / database,
+        "dimensions": ROOT / ".tools/dimensions" / database,
+        "facts": ROOT / ".tools/facts" / database,
+        "er": run / "er",
+        "work": run / "work",
+    }
+
+
+def labelled_steps(year, label, *, archive=None):
+    """The steps of a labelled run. ER inherits the canonical registry's newest file read only."""
+    paths = labelled_paths(year, label)
+    archive = Path(archive or ROOT / f".tools/er/registry-archive-fy{year}")
+    previous = archive / (archive / "LATEST").read_text().strip()
+    return backfill_steps(year, **paths, previous_registry=previous)
 
 
 def steps_from(steps, start):
@@ -286,9 +326,25 @@ def run_steps(steps, output, *, logs):
     return result
 
 
-def run_one(year, name, evidence):
-    """Airflow task body: run one named step; raise unless it succeeded (or only gates failed)."""
-    step = next(s for s in backfill_steps(year) if s["name"] == name)
+def run_one(year, name, evidence, label=None, overwrite_canonical=False):
+    """Airflow task body: run one named step; raise unless it succeeded (or only gates failed).
+
+    With a label the step uses labelled_steps and its own evidence directory. Without one it
+    refuses unless the conf says true, so a missing or mistyped label cannot reach canonical paths.
+    """
+    if label is None:
+        if overwrite_canonical is not True:
+            raise ValueError(
+                'Backfill conf needs {"label": "verify-YYYYMMDD"}, or '
+                '{"overwrite_canonical": true} to rewrite the canonical databases'
+            )
+        steps = backfill_steps(year)
+    else:
+        steps = labelled_steps(year, label)
+        for area in ("staging", "dimensions", "facts"):
+            labelled_paths(year, label)[area].parent.mkdir(parents=True, exist_ok=True)
+        evidence = ROOT / f"docs/evidence/task09-backfill-airflow-{label}"
+    step = next(s for s in steps if s["name"] == name)
     evidence = Path(evidence)
     result = run_steps([step], evidence / f"{name}.json", logs=evidence / "logs")
     if result["status"] in {"FAILED", "BLOCKED_DISK_SHARE"}:

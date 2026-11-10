@@ -1,6 +1,6 @@
 # SponsorAtlas Cube semantic API
 
-The Cube semantic layer over the public marts, with two sources: validated local Parquet and explicit opt-in trial Snowflake. It runs the real Cube 1.8.0 REST gateway and DuckDB 1.5.5, with an independent Python DuckDB 2.0 SQL oracle. Snowflake and Azure deployment have not been executed.
+The Cube semantic layer over the public marts, with two sources: validated local Parquet and explicit opt-in trial Snowflake. It runs the real Cube 1.8.0 REST gateway and DuckDB 1.5.5, with an independent Python DuckDB 2.0 SQL oracle. Cube has run against the Snowflake trial as a local process (`verify-snowflake` PASS on 2026-10-31; the Airflow `cube_refresh` task read Snowflake on 2026-11-06 and 2026-11-08). It is not deployed as a service, and there is no Azure deployment.
 
 Use project Node **24.22.1** (npm **11.19.1**) at `.tools/node-runtime/node-v24.22.1-linux-x64/bin`. The parent has already verified the [official Node archive](https://nodejs.org/dist/v24.22.1/) against SHA256 `6c172a9ab6718f7b801fb5a7bd486af2ee5e32758086a04b84fcce2aa77095e6`. The Python commands use the existing project `.venv` (DuckDB 2.0.0). No global runtime changes are needed.
 

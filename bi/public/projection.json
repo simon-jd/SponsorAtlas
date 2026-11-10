@@ -1,0 +1,33 @@
+{
+  "_comment": "Public Tableau projection. Separate from semantic/projections.json, which Cube shares. {s} is the marts schema. SQL stays portable between Snowflake and DuckDB; data_role, posting_key and the short employer id are computed in Python so both sources give the same values; every public CSV also carries that export's snapshot_kind and snapshot_id. The oracle fixes what cannot change: the LCA and OEWS values and the archived 86 job-posting rows. Daily loads add live rows, so total posting values are read from the source at export time and recorded in the manifest.",
+  "data_role": {
+    "regex": "\\b(?:(?:big[\\s\\-_/]+)?data[\\s\\-_/]*(?:eng(?:ineer(?:ing)?s?)?|scien(?:ce|tists?)|analy(?:sts?|tics)|architect(?:s|ure)?|modell?ers?|warehous(?:e|ing)|platforms?|pipelines?|integration|developers?)|big[\\s\\-_/]+data|etl|analytics[\\s\\-_/]+engineer(?:ing|s)?|business[\\s\\-_/]+intelligence|bi[\\s\\-_/]+(?:engineers?|developers?|analysts?)|machine[\\s\\-_/]+learning[\\s\\-_/]+engineer(?:ing|s)?|ml[\\s\\-_/]+engineer(?:ing|s)?)\\b",
+    "flags": "case-insensitive; Python re.search",
+    "applied_to": "fact_lca_case.job_title",
+    "meaning": "1 when the free-text job title names data engineering, data science, data analytics, data architecture or modeling, data warehousing, ETL, analytics engineering, business intelligence or machine learning engineering. A title match only: it is not a validated occupation, and it ignores SOC. Excluded on purpose: database administrator, data center, data entry, clinical data manager."
+  },
+  "benchmark_min_lca_cases": 10,
+  "benchmark_top_metros": 25,
+  "oews_survey_year": 2025,
+  "trial_end_utc": "2026-11-24T00:00:00Z",
+  "oracle": {
+    "case_count": 713467,
+    "certified_rate": 0.9777789302098064,
+    "wage_p75": 156383.63,
+    "oews_median": 135980.0,
+    "archive_posting_rows": 86,
+    "archive_active_posting_days": 86
+  },
+  "tolerance": 1e-08,
+  "queries": {
+    "lca": "select f.case_number as case_id, f.fiscal_year, coalesce(cast(extract(year from f.received_date) as varchar)||'-'||lpad(cast(extract(month from f.received_date) as varchar),2,'0'),'UNKNOWN') as received_month,\n coalesce(f.soc_code,'UNKNOWN') as soc, coalesce(o.soc_title,'Unknown occupation') as soc_title,\n coalesce(case when g.cbsa_type='Metropolitan Statistical Area' then g.cbsa_code end,'UNKNOWN') as metro_cbsa,\n coalesce(case when g.cbsa_type='Metropolitan Statistical Area' then g.cbsa_title end,'Unknown or non-metropolitan') as metro_title,\n coalesce(f.worksite_state,'UNKNOWN') as state, case when f.is_certified then 1 else 0 end as is_certified,\n f.annual_wage, coalesce(f.employer_id,'UNKNOWN') as employer_id, f.job_title\nfrom {s}.fact_lca_case f left join {s}.dim_occupation o using(occupation_key)\n left join {s}.dim_geography g using(geography_key)\norder by f.case_number",
+    "postings": "select f.posting_id, f.observation_date, case when f.is_active then 1 else 0 end as is_active,\n coalesce(f.employer_id,'UNKNOWN') as employer_id, coalesce(o.soc_code,'UNKNOWN') as soc,\n coalesce(case when g.cbsa_type='Metropolitan Statistical Area' then g.cbsa_code end,'UNKNOWN') as metro_cbsa,\n f.employer_mapping_status, f.replay_kind\nfrom {s}.fact_job_posting_daily f left join {s}.dim_occupation o using(occupation_key)\n left join {s}.dim_geography g using(geography_key)\norder by f.posting_id, f.observation_date",
+    "wages": "select f.soc_code as soc, f.occupation_title as soc_title, f.area_type||':'||f.area_code as area,\n f.survey_year, f.annual_median_wage, f.annual_median_wage_raw as median_raw, f.wage_status\nfrom {s}.fact_wage_benchmark f where f.area_type='1' order by 1,3,4",
+    "benchmark": "with lca as (\n select f.soc_code as soc, g.cbsa_code as metro_cbsa, max(g.cbsa_title) as metro_title, count(*) as lca_cases,\n  percentile_cont(0.5) within group (order by cast(f.annual_wage as double)) as lca_p50,\n  percentile_cont(0.75) within group (order by cast(f.annual_wage as double)) as lca_p75,\n  percentile_cont(0.9) within group (order by cast(f.annual_wage as double)) as lca_p90\n from {s}.fact_lca_case f join {s}.dim_geography g using(geography_key)\n where g.cbsa_type='Metropolitan Statistical Area' and f.soc_code is not null\n group by f.soc_code, g.cbsa_code having count(*)>={min_cases}\n), ranked as (\n select l.*, row_number() over(partition by soc order by lca_cases desc, metro_cbsa) as metro_rank from lca l\n), titles as (\n select soc_code, max(soc_title) as soc_title from {s}.dim_occupation group by soc_code\n)\nselect r.soc, coalesce(t.soc_title,'Unknown occupation') as soc_title,\n r.soc||' '||coalesce(t.soc_title,'Unknown occupation') as soc_label,\n r.metro_cbsa, r.metro_title, r.lca_cases, case when r.metro_rank<={top_metros} then 1 else 0 end as metro_top25,\n r.lca_p50, r.lca_p75, r.lca_p90, w.annual_median_wage as oews_median,\n coalesce(w.wage_status,'NOT_PUBLISHED') as oews_status, {survey_year} as oews_survey_year\nfrom ranked r left join titles t on r.soc=t.soc_code\n left join {s}.fact_wage_benchmark w on w.soc_code=r.soc and w.area_type='4'\n  and w.area_code=r.metro_cbsa and w.survey_year={survey_year}\norder by r.soc, r.metro_rank",
+    "employer_names": "select coalesce(f.employer_id,'UNKNOWN') as employer_id, f.source_employer_name, count(*) as cases\nfrom {s}.fact_lca_case f group by 1,2 order by 1, 3 desc, 2",
+    "oracle_lca": "select count(*), count(distinct case_number), sum(case when is_certified then 1 else 0 end),\n percentile_cont(0.75) within group (order by cast(annual_wage as double)) from {s}.fact_lca_case",
+    "oracle_postings": "select count(*), sum(case when is_active then 1 else 0 end),\n sum(case when replay_kind='LOCAL_ARCHIVE_REPLAY' then 1 else 0 end),\n sum(case when replay_kind='LOCAL_ARCHIVE_REPLAY' and is_active then 1 else 0 end)\nfrom {s}.fact_job_posting_daily",
+    "oracle_oews": "select count(*), max(annual_median_wage) from {s}.fact_wage_benchmark\n where soc_code='15-1252' and area_type='1' and area_code='99' and survey_year=2025",
+    "releases": "select 'LCA' as fact, source_release as release, count(*) as row_count from {s}.fact_lca_case group by source_release\nunion all select 'OEWS', source_release, count(*) from {s}.fact_wage_benchmark group by source_release\nunion all select 'POSTINGS', replay_kind||' '||cast(observation_date as varchar), count(*)\n from {s}.fact_job_posting_daily group by replay_kind, observation_date\norder by 1,2"
+  }
+}

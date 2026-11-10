@@ -1,0 +1,162 @@
+{
+ "checked": "2026-11-10. Public pages and files fetched by the published audit from 19:44:48 to 19:49:36 UTC; comparisons, hashes and name scan re-run from those files on home-ubuntu at about 20:25 UTC.",
+ "url": "https://public.tableau.com/app/profile/simon.d5578/viz/SponsorAtlas-public/SponsorAtlaspublicsnapshot",
+ "workbook": {
+  "title": "SponsorAtlas-public",
+  "repo_url_name": "SponsorAtlas-public",
+  "default_view": "SponsorAtlas public snapshot",
+  "first_publish_utc": "2026-11-10T19:37:43.949Z",
+  "last_publish_utc": "2026-11-10T19:37:43.949Z",
+  "revision": "1.0",
+  "size_bytes": 34178064,
+  "published_from": "Tableau Public 2026.2.3 (20262.26.0912.1023) on the Mac; its log shows the upload from 19:37:35 to 19:37:41 UTC",
+  "settings": {"showTabs": false, "allowDataAccess": true, "warnDataAccess": false, "showInProfile": true, "showToolbar": true, "showShareOptions": true, "showWatermark": true, "showByline": true},
+  "settings_source": "GET https://public.tableau.com/profile/api/single_workbook/SponsorAtlas-public (HTTP 200)"
+ },
+ "snapshot": {
+  "snapshot_id": "20261106T052440Z-aa007296",
+  "kind": "ACTUAL_SNOWFLAKE_PUBLIC_MARTS",
+  "exported_utc": "2026-11-06T05:24:40Z",
+  "note": "Static snapshot exported before any scheduled Airflow run. Its 86 posting rows are the LOCAL_ARCHIVE_REPLAY rows of 2026-10-24; it holds no data from the scheduled runs."
+ },
+ "views": [
+  {"title": "SponsorAtlas public snapshot", "url_name": "SponsorAtlaspublicsnapshot", "kind": "dashboard", "png": {"fetched_at_utc": "2026-11-10T19:49:32Z", "http_status": 200, "bytes": 386712}},
+  {
+   "title": "Who sponsors data roles?",
+   "url_name": "Whosponsorsdataroles",
+   "kind": "worksheet",
+   "csv": {
+    "fetched_at_utc": "2026-11-10T19:45:12Z",
+    "http_status": 200,
+    "bytes": 2962,
+    "sha256": "15e5570351c083b56570a3a40ab7255b9d56b5bf3075c84ab8beb93c7c63adf3",
+    "columns": ["Employer id", "Certified rate", "Filings", "Median offered wage"],
+    "data_rows": 75
+   }
+  },
+  {
+   "title": "Offered pay vs benchmark",
+   "url_name": "Offeredpayvsbenchmark",
+   "kind": "worksheet",
+   "csv": {
+    "fetched_at_utc": "2026-11-10T19:45:15Z",
+    "http_status": 200,
+    "bytes": 5938,
+    "sha256": "2733cb27fef4a1fc8718f804fd92228d144aa64133e6badd7e585df43d97cd07",
+    "columns": ["Measure Names", "Metro", "Measure Values"],
+    "data_rows": 100
+   }
+  },
+  {
+   "title": "When employers file",
+   "url_name": "Whenemployersfile",
+   "kind": "worksheet",
+   "csv": {
+    "fetched_at_utc": "2026-11-10T19:45:18Z",
+    "http_status": 200,
+    "bytes": 271,
+    "sha256": "59ea36f54620a71138d0e3fb41b076d1cc6b4f4b96736c1e1cd8205f6b211dcc",
+    "columns": ["Received month", "Filings"],
+    "data_rows": 14
+   }
+  },
+  {
+   "title": "Reconciliation",
+   "url_name": "Reconciliation",
+   "kind": "worksheet",
+   "csv": {
+    "fetched_at_utc": "2026-11-10T19:45:21Z",
+    "http_status": 200,
+    "bytes": 450,
+    "sha256": "0e4d6f2958f5be40cbced5d5534ad7b45b959026dfd0a7599a390e0b0027c488",
+    "columns": ["Measure Names", "Snapshot id", "Snapshot kind", "Measure Values"],
+    "data_rows": 5
+   }
+  }
+ ],
+ "comparison_with_duckdb": {
+  "method": "DuckDB over the snapshot CSV files (lca.csv, benchmark.csv, postings.csv, wages.csv), recomputing each sheet's query, then compared cell by cell with the fetched sheet CSV at the precision shown.",
+  "who": {
+   "data_rows": 75,
+   "distinct_rows": 25,
+   "row_blocks_identical": true,
+   "note": "The CSV export repeats the 25 rows once per measure pane (3 x 25). The sheet shows 25 rows.",
+   "differences": 0,
+   "certified_rate_cells_rounded_for_display": 14,
+   "median_wage_cells_rounded_for_display": 4
+  },
+  "pay_default_15-1252": {
+   "data_rows": 100,
+   "metros": 25,
+   "measures": ["LCA P50 offered", "LCA P75 offered", "LCA P90 offered", "OEWS median"],
+   "metro_order_matches_lca_cases_desc": true,
+   "differences": 0,
+   "cells_differing_only_by_float_representation": 6
+  },
+  "pay_filter_15-2051": {"url_filter": "soc_label=15-2051 Data Scientists", "http_status": 200, "data_rows": 100, "metros": 25, "metro_order_matches": true, "differences": 0},
+  "when": {"data_rows": 14, "differences": 0, "total_filings": 594821},
+  "reconciliation": [
+   {"metric": "case_count", "shown": "713,467", "expected": 713467, "decimals_shown": 0, "matches_at_shown_precision": true, "abs_diff": 0.0},
+   {"metric": "certified_rate", "shown": "0.977778930", "expected": 0.9777789302098064, "decimals_shown": 9, "matches_at_shown_precision": true, "abs_diff": 2.098064e-10},
+   {"metric": "wage_p75", "shown": "156,383.63", "expected": 156383.63, "decimals_shown": 2, "matches_at_shown_precision": true, "abs_diff": 0.0},
+   {"metric": "active_posting_days", "shown": "86", "expected": 86, "decimals_shown": 0, "matches_at_shown_precision": true, "abs_diff": 0.0},
+   {"metric": "oews_median", "shown": "135,980", "expected": 135980.0, "decimals_shown": 0, "matches_at_shown_precision": true, "abs_diff": 0.0}
+  ]
+ },
+ "reconcile_public": {
+  "result": "result.json",
+  "sheet_csv": "sheet.csv",
+  "sheet_png": "sheet.png",
+  "checked_at_utc": "20261110T193942Z",
+  "passed": true,
+  "tolerance": 1e-08,
+  "sheet_csv_identical_to_audit_fetch": true,
+  "on_screen_certified_rate": "0.9777789302098060 (sheet.png); the CSV export shows 0.977778930"
+ },
+ "download": {
+  "url": "https://public.tableau.com/workbooks/SponsorAtlas-public.twb",
+  "http_status": 200,
+  "content_type": "application/x-twb",
+  "bytes": 34178170,
+  "zip_sha256_note": "Tableau Public re-packs the zip on each download, so the zip's sha256 is not stable. The TWB inside was the same in two downloads.",
+  "local_package": {"file": ".tools/bi-public/20261106T052440Z/SponsorAtlas-public.twbx", "bytes": 32336648, "sha256": "d08584d4603cb2728e82ef0a8690a18fb228bef8ad23044cafc26ac6880fed53"},
+  "members": [
+   {
+    "member": "SponsorAtlas-public.twb",
+    "identical_to_local": false,
+    "local_bytes": 88776,
+    "local_sha256": "60036fcc867d7af5ba8201416c947b9f4bb113e26739f0c4a27acea810a15044",
+    "published_bytes": 104253,
+    "published_sha256": "97786dd95c766f46f3dc1b061c3eaaac3d7fa829874896faefb11a4991c9da63"
+   },
+   {"member": "Data/SponsorAtlas/lca.hyper", "rows": 713467, "bytes": 38731776, "sha256": "af13c3ce06dc793898d0a170e1a7066f1d1e2a888dfcaddc5d758e7ec32b777d", "identical_to_local": true},
+   {"member": "Data/SponsorAtlas/benchmark.hyper", "rows": 4626, "bytes": 393216, "sha256": "d3d1d7b5a14aa25a46fded3e2a76d3017d326af7288d3072e6b3c962d8999a17", "identical_to_local": true},
+   {"member": "Data/SponsorAtlas/postings.hyper", "rows": 86, "bytes": 65536, "sha256": "410b4001cc9630dc737d87dbd7842652cb49124332586bf86ad21fbdc14e069f", "identical_to_local": true},
+   {"member": "Data/SponsorAtlas/wages.hyper", "rows": 1394, "bytes": 196608, "sha256": "8ec58b85dfff4a4fbc7b32a642b7077e89aea36ba6c7e0fa3334ceab6bd13162", "identical_to_local": true},
+   {"member": "Data/SponsorAtlas/reconcile.hyper", "rows": 714947, "bytes": 38731776, "sha256": "4567e99dfbdeafb05e07337ca5e42ad6f6f5fe3f412a18d5b11e0c5ad0a110b1", "identical_to_local": true}
+  ],
+  "summary": "All 5 Hyper extracts are byte-identical to the local package. Only the TWB differs: Tableau re-saved it on publish."
+ },
+ "private_name_scan": {
+  "names_checked": 82905,
+  "source": "the snapshot's one file marked private in manifest.json; values never printed",
+  "extracts": {"local": {"extracts": 5, "text_columns": 50, "exact_hits": 0, "casefold_hits": 0}, "published": {"extracts": 5, "text_columns": 50, "exact_hits": 0, "casefold_hits": 0}},
+  "twb": [
+   {"file": "local", "exact_hits": 0, "casefold_hits": 0, "substring_hits": 0, "substring_names_checked": 81316},
+   {"file": "published", "exact_hits": 0, "casefold_hits": 0, "substring_hits": 0, "substring_names_checked": 81316}
+  ],
+  "sheet_csvs": [
+   {"file": "Whosponsorsdataroles.csv", "cells": 304, "exact_hits": 0, "casefold_hits": 0},
+   {"file": "Offeredpayvsbenchmark.csv", "cells": 303, "exact_hits": 0, "casefold_hits": 0},
+   {"file": "Whenemployersfile.csv", "cells": 30, "exact_hits": 0, "casefold_hits": 0},
+   {"file": "Reconciliation.csv", "cells": 24, "exact_hits": 0, "casefold_hits": 0},
+   {"file": "pay_soc_label_15-2051.csv", "cells": 303, "exact_hits": 0, "casefold_hits": 0}
+  ]
+ },
+ "does_not_show": [
+  "A live or refreshing dashboard: the workbook has Hyper extracts and no connection to Snowflake.",
+  "That employer identity is validated. Employers are shown by ID, not name.",
+  "That IDs cannot be traced: download is on, the case table's case_id is the raw DOL case number, so employer IDs can likely be mapped back to names through DOL's public disclosure file."
+ ],
+ "not_copied_here": "The downloaded .twbx and .twb, the extracts and the private name file stay in .tools/ on home-ubuntu."
+}

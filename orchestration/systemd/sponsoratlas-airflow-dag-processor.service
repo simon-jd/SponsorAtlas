@@ -1,0 +1,14 @@
+[Unit]
+Description=SponsorAtlas Airflow DAG processor (development deployment)
+ConditionPathExists=!%h/Desktop/SponsorAtlas/.tools/orchestration/STOP
+
+[Service]
+WorkingDirectory=%h/Desktop/SponsorAtlas
+EnvironmentFile=%h/.config/sponsoratlas/airflow.env
+ExecStart=%h/Desktop/SponsorAtlas/orchestration/run.sh airflow dag-processor
+Restart=on-failure
+RestartSec=30
+MemoryMax=4G
+
+[Install]
+WantedBy=default.target

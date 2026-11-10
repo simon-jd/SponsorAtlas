@@ -3,9 +3,19 @@
 import os
 import re
 from datetime import UTC, datetime
+from pathlib import Path
+
+STOP = Path(__file__).resolve().parents[2] / ".tools/orchestration/STOP"
 
 
-def trial_remaining(minimum_seconds=0, *, now=None):
+def refuse_when_stopped():
+    """Preflight admits a run once; a STOP written later must end its remaining paid work."""
+    if os.environ.get("SPONSORATLAS_ORCHESTRATION_MODE") == "production" and STOP.exists():
+        raise RuntimeError("STOP marker present; external work refused")
+
+
+def trial_seconds_left(*, now=None):
+    """Seconds to the configured trial end, without the cleanup margin of trial_remaining."""
     mode = os.environ.get("SPONSORATLAS_ORCHESTRATION_MODE")
     if mode == "synthetic_http":
         if os.environ.get("DBT_TARGET") != "local":
@@ -27,7 +37,11 @@ def trial_remaining(minimum_seconds=0, *, now=None):
     now = now or datetime.now(UTC)
     if not 0 < (end - start).total_seconds() <= 30 * 86400 or now < start:
         raise RuntimeError("Snowflake trial must be active and at most 30 days")
-    remaining = (end - now).total_seconds() - 420
+    return (end - now).total_seconds()
+
+
+def trial_remaining(minimum_seconds=0, *, now=None):
+    remaining = trial_seconds_left(now=now) - 420
     if remaining <= minimum_seconds:
         raise RuntimeError(
             "Insufficient trial window for bounded work and cleanup; dispatch refused"
@@ -50,7 +64,8 @@ def bounded_snowflake_options(options):
     result = {
         **options,
         "login_timeout": 15,
-        "network_timeout": 30,
+        # Above the 240 s statement limit: a shorter socket timeout would cancel statements first.
+        "network_timeout": 300,
         "client_session_keep_alive": False,
     }
     result["session_parameters"] = {

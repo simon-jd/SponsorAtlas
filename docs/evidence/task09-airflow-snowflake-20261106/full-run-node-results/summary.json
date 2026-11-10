@@ -1,0 +1,1093 @@
+{
+ "run_id": "manual_full_snowflake_20261106_r2",
+ "dbt_targets": [
+  "snowflake"
+ ],
+ "status_counts": {
+  "pass": 146,
+  "success": 34
+ },
+ "distinct_nodes": 119,
+ "results": [
+  {
+   "task": "dbt_public.annualize_wage_examples_model_build",
+   "node": "unit_test.sponsoratlas.annualize_wage_examples.annualize_wage_exact_cases",
+   "status": "pass",
+   "seconds": 1.23
+  },
+  {
+   "task": "dbt_public.annualize_wage_examples_model_build",
+   "node": "model.sponsoratlas.annualize_wage_examples",
+   "status": "success",
+   "seconds": 1.02
+  },
+  {
+   "task": "dbt_public.board_column_map_seed_build",
+   "node": "seed.sponsoratlas.board_column_map",
+   "status": "success",
+   "seconds": 1.14
+  },
+  {
+   "task": "dbt_public.county_fips_seed_build",
+   "node": "seed.sponsoratlas.county_fips",
+   "status": "success",
+   "seconds": 3.17
+  },
+  {
+   "task": "dbt_public.dim_date_model_build",
+   "node": "model.sponsoratlas.dim_date",
+   "status": "success",
+   "seconds": 0.78
+  },
+  {
+   "task": "dbt_public.dim_date_model_build",
+   "node": "test.sponsoratlas.not_null_dim_date_date_key.881d0a31b6",
+   "status": "pass",
+   "seconds": 0.18
+  },
+  {
+   "task": "dbt_public.dim_date_model_build",
+   "node": "test.sponsoratlas.not_null_dim_date_calendar_date.98c13acc7a",
+   "status": "pass",
+   "seconds": 0.2
+  },
+  {
+   "task": "dbt_public.dim_date_model_build",
+   "node": "test.sponsoratlas.unique_dim_date_date_key.0869fd48f9",
+   "status": "pass",
+   "seconds": 0.16
+  },
+  {
+   "task": "dbt_public.dim_date_model_build",
+   "node": "test.sponsoratlas.unique_dim_date_calendar_date.abd0942d2a",
+   "status": "pass",
+   "seconds": 0.2
+  },
+  {
+   "task": "dbt_public.dim_employer_model_build",
+   "node": "model.sponsoratlas.dim_employer",
+   "status": "success",
+   "seconds": 1.84
+  },
+  {
+   "task": "dbt_public.dim_employer_model_build",
+   "node": "test.sponsoratlas.not_null_dim_employer_employer_key.6af1a27012",
+   "status": "pass",
+   "seconds": 0.17
+  },
+  {
+   "task": "dbt_public.dim_employer_model_build",
+   "node": "test.sponsoratlas.not_null_dim_employer_employer_id.e65273903e",
+   "status": "pass",
+   "seconds": 0.21
+  },
+  {
+   "task": "dbt_public.dim_employer_model_build",
+   "node": "test.sponsoratlas.unique_dim_employer_employer_key.2b00bf9dc1",
+   "status": "pass",
+   "seconds": 0.23
+  },
+  {
+   "task": "dbt_public.dim_employer_model_build",
+   "node": "test.sponsoratlas.scd2_no_overlap",
+   "status": "pass",
+   "seconds": 0.3
+  },
+  {
+   "task": "dbt_public.dim_geography_model_build",
+   "node": "model.sponsoratlas.dim_geography",
+   "status": "success",
+   "seconds": 1.61
+  },
+  {
+   "task": "dbt_public.dim_geography_model_build",
+   "node": "test.sponsoratlas.not_null_dim_geography_geography_key.c102675438",
+   "status": "pass",
+   "seconds": 0.21
+  },
+  {
+   "task": "dbt_public.dim_geography_model_build",
+   "node": "test.sponsoratlas.unique_dim_geography_geography_key.0bbb80e1c1",
+   "status": "pass",
+   "seconds": 0.22
+  },
+  {
+   "task": "dbt_public.dim_occupation_model_build",
+   "node": "model.sponsoratlas.dim_occupation",
+   "status": "success",
+   "seconds": 1.67
+  },
+  {
+   "task": "dbt_public.dim_occupation_model_build",
+   "node": "test.sponsoratlas.not_null_dim_occupation_occupation_key.c0feabd3fc",
+   "status": "pass",
+   "seconds": 0.2
+  },
+  {
+   "task": "dbt_public.dim_occupation_model_build",
+   "node": "test.sponsoratlas.not_null_dim_occupation_soc_code.26309cb4b4",
+   "status": "pass",
+   "seconds": 0.22
+  },
+  {
+   "task": "dbt_public.dim_occupation_model_build",
+   "node": "test.sponsoratlas.not_null_dim_occupation_soc_vintage.a9e5faccfb",
+   "status": "pass",
+   "seconds": 0.15
+  },
+  {
+   "task": "dbt_public.dim_occupation_model_build",
+   "node": "test.sponsoratlas.unique_dim_occupation_occupation_key.e9eb40a08d",
+   "status": "pass",
+   "seconds": 0.19
+  },
+  {
+   "task": "dbt_public.dim_occupation_model_build",
+   "node": "test.sponsoratlas.unique_dim_occupation_soc_code.7233a05b58",
+   "status": "pass",
+   "seconds": 0.11
+  },
+  {
+   "task": "dbt_public.fact_job_posting_daily_model_build",
+   "node": "model.sponsoratlas.fact_job_posting_daily",
+   "status": "success",
+   "seconds": 5.9
+  },
+  {
+   "task": "dbt_public.fact_job_posting_daily_model_build",
+   "node": "test.sponsoratlas.not_null_fact_job_posting_daily_observation_date.385ccc795b",
+   "status": "pass",
+   "seconds": 0.15
+  },
+  {
+   "task": "dbt_public.fact_job_posting_daily_model_build",
+   "node": "test.sponsoratlas.facts_job_fields_present",
+   "status": "pass",
+   "seconds": 0.22
+  },
+  {
+   "task": "dbt_public.fact_job_posting_daily_model_build",
+   "node": "test.sponsoratlas.not_null_fact_job_posting_daily_observation_date_key.b3ed446780",
+   "status": "pass",
+   "seconds": 0.14
+  },
+  {
+   "task": "dbt_public.fact_job_posting_daily_model_build",
+   "node": "test.sponsoratlas.not_null_fact_job_posting_daily_posting_id.5986dc71cd",
+   "status": "pass",
+   "seconds": 0.11
+  },
+  {
+   "task": "dbt_public.fact_lca_case_model_build",
+   "node": "model.sponsoratlas.fact_lca_case",
+   "status": "success",
+   "seconds": 7.18
+  },
+  {
+   "task": "dbt_public.fact_lca_case_model_build",
+   "node": "test.sponsoratlas.not_null_fact_lca_case_case_number.ae4f640e51",
+   "status": "pass",
+   "seconds": 0.14
+  },
+  {
+   "task": "dbt_public.fact_lca_case_model_build",
+   "node": "test.sponsoratlas.unique_fact_lca_case_case_number.b3302976ea",
+   "status": "pass",
+   "seconds": 0.2
+  },
+  {
+   "task": "dbt_public.fact_wage_benchmark_model_build",
+   "node": "model.sponsoratlas.fact_wage_benchmark",
+   "status": "success",
+   "seconds": 5.76
+  },
+  {
+   "task": "dbt_public.fact_wage_benchmark_model_build",
+   "node": "test.sponsoratlas.not_null_fact_wage_benchmark_area_code.b4efa85b14",
+   "status": "pass",
+   "seconds": 0.24
+  },
+  {
+   "task": "dbt_public.fact_wage_benchmark_model_build",
+   "node": "test.sponsoratlas.not_null_fact_wage_benchmark_area_type.86bb0aa89c",
+   "status": "pass",
+   "seconds": 0.24
+  },
+  {
+   "task": "dbt_public.fact_wage_benchmark_model_build",
+   "node": "test.sponsoratlas.not_null_fact_wage_benchmark_geography_key.91ef069932",
+   "status": "pass",
+   "seconds": 0.11
+  },
+  {
+   "task": "dbt_public.fact_wage_benchmark_model_build",
+   "node": "test.sponsoratlas.not_null_fact_wage_benchmark_occupation_key.1392fc4155",
+   "status": "pass",
+   "seconds": 0.12
+  },
+  {
+   "task": "dbt_public.fact_wage_benchmark_model_build",
+   "node": "test.sponsoratlas.not_null_fact_wage_benchmark_survey_date_key.c3e9974f03",
+   "status": "pass",
+   "seconds": 0.11
+  },
+  {
+   "task": "dbt_public.fact_wage_benchmark_model_build",
+   "node": "test.sponsoratlas.not_null_fact_wage_benchmark_soc_code.85c6e28aa8",
+   "status": "pass",
+   "seconds": 0.14
+  },
+  {
+   "task": "dbt_public.fact_wage_benchmark_model_build",
+   "node": "test.sponsoratlas.not_null_fact_wage_benchmark_survey_year.f3b1b09c7f",
+   "status": "pass",
+   "seconds": 0.15
+  },
+  {
+   "task": "dbt_public.file_column_map_seed_build",
+   "node": "seed.sponsoratlas.file_column_map",
+   "status": "success",
+   "seconds": 1.13
+  },
+  {
+   "task": "dbt_public.int_bls_benchmark_candidates_model_build",
+   "node": "model.sponsoratlas.int_bls_benchmark_candidates",
+   "status": "success",
+   "seconds": 3.73
+  },
+  {
+   "task": "dbt_public.int_bls_benchmark_candidates_model_build",
+   "node": "test.sponsoratlas.facts_bls_conflicts",
+   "status": "pass",
+   "seconds": 0.17
+  },
+  {
+   "task": "dbt_public.int_dimension_mapping_model_build",
+   "node": "model.sponsoratlas.int_dimension_mapping",
+   "status": "success",
+   "seconds": 2.8
+  },
+  {
+   "task": "dbt_public.int_employer_current_model_build",
+   "node": "model.sponsoratlas.int_employer_current",
+   "status": "success",
+   "seconds": 1.32
+  },
+  {
+   "task": "dbt_public.int_lca_case_candidates_model_build",
+   "node": "model.sponsoratlas.int_lca_case_candidates",
+   "status": "success",
+   "seconds": 6.43
+  },
+  {
+   "task": "dbt_public.lca_column_map_seed_build",
+   "node": "seed.sponsoratlas.lca_column_map",
+   "status": "success",
+   "seconds": 0.92
+  },
+  {
+   "task": "dbt_public.physical_column_map_seed_build",
+   "node": "seed.sponsoratlas.physical_column_map",
+   "status": "success",
+   "seconds": 1.32
+  },
+  {
+   "task": "dbt_public.place_county_fips_seed_build",
+   "node": "seed.sponsoratlas.place_county_fips",
+   "status": "success",
+   "seconds": 16.78
+  },
+  {
+   "task": "dbt_public.ref_bls_areas_2025_seed_build",
+   "node": "seed.sponsoratlas.ref_bls_areas_2025",
+   "status": "success",
+   "seconds": 2.21
+  },
+  {
+   "task": "dbt_public.ref_county_2023_seed_build",
+   "node": "seed.sponsoratlas.ref_county_2023",
+   "status": "success",
+   "seconds": 2.19
+  },
+  {
+   "task": "dbt_public.ref_county_cbsa_2023_seed_build",
+   "node": "seed.sponsoratlas.ref_county_cbsa_2023",
+   "status": "success",
+   "seconds": 1.57
+  },
+  {
+   "task": "dbt_public.ref_oews_2025_seed_build",
+   "node": "seed.sponsoratlas.ref_oews_2025",
+   "status": "success",
+   "seconds": 1.09
+  },
+  {
+   "task": "dbt_public.ref_soc_2018_seed_build",
+   "node": "seed.sponsoratlas.ref_soc_2018",
+   "status": "success",
+   "seconds": 1.24
+  },
+  {
+   "task": "dbt_public.snap_employer_snapshot_build",
+   "node": "snapshot.sponsoratlas.snap_employer",
+   "status": "success",
+   "seconds": 3.91
+  },
+  {
+   "task": "dbt_public.staging_flag_limits_seed_build",
+   "node": "seed.sponsoratlas.staging_flag_limits",
+   "status": "success",
+   "seconds": 0.98
+  },
+  {
+   "task": "dbt_public.staging_flag_limits_seed_build",
+   "node": "test.sponsoratlas.staging_flag_limits",
+   "status": "pass",
+   "seconds": 0.4
+  },
+  {
+   "task": "dbt_public.state_fips_seed_build",
+   "node": "seed.sponsoratlas.state_fips",
+   "status": "success",
+   "seconds": 0.96
+  },
+  {
+   "task": "dbt_public.stg_bls_model_build",
+   "node": "model.sponsoratlas.stg_bls",
+   "status": "success",
+   "seconds": 6.49
+  },
+  {
+   "task": "dbt_public.stg_bls_model_build",
+   "node": "test.sponsoratlas.not_null_stg_bls_soc_code.027759e2ac",
+   "status": "pass",
+   "seconds": 0.21
+  },
+  {
+   "task": "dbt_public.stg_board_jobs_model_build",
+   "node": "model.sponsoratlas.stg_board_jobs",
+   "status": "success",
+   "seconds": 1.08
+  },
+  {
+   "task": "dbt_public.stg_board_jobs_model_build",
+   "node": "test.sponsoratlas.board_provenance",
+   "status": "pass",
+   "seconds": 0.2
+  },
+  {
+   "task": "dbt_public.stg_board_jobs_model_build",
+   "node": "test.sponsoratlas.accepted_values_stg_board_jobs_source_provider__greenhouse__lever__ashby.66232a663c",
+   "status": "pass",
+   "seconds": 0.25
+  },
+  {
+   "task": "dbt_public.stg_board_jobs_model_build",
+   "node": "test.sponsoratlas.not_null_stg_board_jobs_job_key.102d4b2390",
+   "status": "pass",
+   "seconds": 0.19
+  },
+  {
+   "task": "dbt_public.stg_board_jobs_model_build",
+   "node": "test.sponsoratlas.not_null_stg_board_jobs_job_title.00e0564d9f",
+   "status": "pass",
+   "seconds": 0.18
+  },
+  {
+   "task": "dbt_public.stg_board_jobs_model_build",
+   "node": "test.sponsoratlas.not_null_stg_board_jobs_job_url.5f88322b85",
+   "status": "pass",
+   "seconds": 0.19
+  },
+  {
+   "task": "dbt_public.stg_board_jobs_model_build",
+   "node": "test.sponsoratlas.unique_stg_board_jobs_job_key.b354ddbf2a",
+   "status": "pass",
+   "seconds": 0.18
+  },
+  {
+   "task": "dbt_public.stg_cdc_application_events_model_build",
+   "node": "model.sponsoratlas.stg_cdc_application_events",
+   "status": "success",
+   "seconds": 0.9
+  },
+  {
+   "task": "dbt_public.stg_cdc_application_events_model_build",
+   "node": "test.sponsoratlas.not_null_stg_cdc_application_events_event_id.b2e150733f",
+   "status": "pass",
+   "seconds": 0.2
+  },
+  {
+   "task": "dbt_public.stg_cdc_application_events_model_build",
+   "node": "test.sponsoratlas.not_null_stg_cdc_application_events_event_type.113ba15c73",
+   "status": "pass",
+   "seconds": 0.21
+  },
+  {
+   "task": "dbt_public.stg_cdc_application_events_model_build",
+   "node": "test.sponsoratlas.not_null_stg_cdc_application_events_source_lsn.fe7134ff19",
+   "status": "pass",
+   "seconds": 0.11
+  },
+  {
+   "task": "dbt_public.stg_cdc_application_events_model_build",
+   "node": "test.sponsoratlas.not_null_stg_cdc_application_events_job_id.4a8b15fdf4",
+   "status": "pass",
+   "seconds": 0.22
+  },
+  {
+   "task": "dbt_public.stg_cdc_application_events_model_build",
+   "node": "test.sponsoratlas.unique_stg_cdc_application_events_event_id.707aaa5da9",
+   "status": "pass",
+   "seconds": 0.16
+  },
+  {
+   "task": "dbt_public.stg_cdc_job_postings_model_build",
+   "node": "model.sponsoratlas.stg_cdc_job_postings",
+   "status": "success",
+   "seconds": 1.14
+  },
+  {
+   "task": "dbt_public.stg_cdc_job_postings_model_build",
+   "node": "test.sponsoratlas.not_null_stg_cdc_job_postings_job_id.e46c3fd50a",
+   "status": "pass",
+   "seconds": 0.18
+  },
+  {
+   "task": "dbt_public.stg_cdc_job_postings_model_build",
+   "node": "test.sponsoratlas.not_null_stg_cdc_job_postings_employer_name.929702f5c5",
+   "status": "pass",
+   "seconds": 0.2
+  },
+  {
+   "task": "dbt_public.stg_cdc_job_postings_model_build",
+   "node": "test.sponsoratlas.not_null_stg_cdc_job_postings_job_title.d36fda3021",
+   "status": "pass",
+   "seconds": 0.11
+  },
+  {
+   "task": "dbt_public.stg_cdc_job_postings_model_build",
+   "node": "test.sponsoratlas.not_null_stg_cdc_job_postings_source_lsn.f73992a5a9",
+   "status": "pass",
+   "seconds": 0.15
+  },
+  {
+   "task": "dbt_public.stg_cdc_job_postings_model_build",
+   "node": "test.sponsoratlas.unique_stg_cdc_job_postings_job_id.93da135027",
+   "status": "pass",
+   "seconds": 0.09
+  },
+  {
+   "task": "dbt_public.stg_lca_model_build",
+   "node": "model.sponsoratlas.stg_lca",
+   "status": "success",
+   "seconds": 12.15
+  },
+  {
+   "task": "dbt_public.stg_lca_model_build",
+   "node": "test.sponsoratlas.accepted_values_stg_lca_wage_unit__Hour__Week__Bi_Weekly__Month__Year.80cbdd978f",
+   "status": "pass",
+   "seconds": 0.28
+  },
+  {
+   "task": "dbt_public.stg_lca_model_build",
+   "node": "test.sponsoratlas.accepted_values_stg_lca_geography_status__MATCHED__MATCHED_FROM_ZIP__MATCHED_FROM_CITY__SOURCE_COUNTY_MISSING__UNRESOLVED_COUNTY.3269b6ab91",
+   "status": "pass",
+   "seconds": 0.29
+  },
+  {
+   "task": "dbt_public.stg_lca_model_build",
+   "node": "test.sponsoratlas.not_null_stg_lca_decision_date.d8bef14ffd",
+   "status": "pass",
+   "seconds": 0.09
+  },
+  {
+   "task": "dbt_public.stg_lca_model_build",
+   "node": "test.sponsoratlas.not_null_stg_lca_case_number.6cb4540132",
+   "status": "pass",
+   "seconds": 0.2
+  },
+  {
+   "task": "dbt_public.stg_lca_model_build",
+   "node": "test.sponsoratlas.not_null_stg_lca_employer_name.a3e69af749",
+   "status": "pass",
+   "seconds": 0.15
+  },
+  {
+   "task": "dbt_public.stg_lca_model_build",
+   "node": "test.sponsoratlas.not_null_stg_lca_geo_unresolved.a9bbf82652",
+   "status": "pass",
+   "seconds": 0.11
+  },
+  {
+   "task": "dbt_public.stg_lca_model_build",
+   "node": "test.sponsoratlas.not_null_stg_lca_geography_status.71956e8ce4",
+   "status": "pass",
+   "seconds": 0.19
+  },
+  {
+   "task": "dbt_public.stg_lca_model_build",
+   "node": "test.sponsoratlas.not_null_stg_lca_received_date.a7d33777f1",
+   "status": "pass",
+   "seconds": 0.18
+  },
+  {
+   "task": "dbt_public.stg_lca_model_build",
+   "node": "test.sponsoratlas.not_null_stg_lca_wage_unit.fadf335492",
+   "status": "pass",
+   "seconds": 0.13
+  },
+  {
+   "task": "dbt_public.stg_lca_model_build",
+   "node": "test.sponsoratlas.not_null_stg_lca_soc_unresolved.f6616dab1a",
+   "status": "pass",
+   "seconds": 0.2
+  },
+  {
+   "task": "dbt_public.stg_uscis_model_build",
+   "node": "model.sponsoratlas.stg_uscis",
+   "status": "success",
+   "seconds": 3.35
+  },
+  {
+   "task": "dbt_public.stg_uscis_model_build",
+   "node": "test.sponsoratlas.not_null_stg_uscis_released.f281d9e2ae",
+   "status": "pass",
+   "seconds": 0.18
+  },
+  {
+   "task": "dbt_public.stg_uscis_model_build",
+   "node": "test.sponsoratlas.not_null_stg_uscis_employer_name_missing.b61e8b0bf1",
+   "status": "pass",
+   "seconds": 0.21
+  },
+  {
+   "task": "dbt_public.stg_uscis_model_build",
+   "node": "test.sponsoratlas.not_null_stg_uscis_state_unresolved.021431e330",
+   "status": "pass",
+   "seconds": 0.15
+  },
+  {
+   "task": "dbt_public.wage_test_inputs_seed_build",
+   "node": "seed.sponsoratlas.wage_test_inputs",
+   "status": "success",
+   "seconds": 0.86
+  },
+  {
+   "task": "dbt_public.zcta_county_fips_seed_build",
+   "node": "seed.sponsoratlas.zcta_county_fips",
+   "status": "success",
+   "seconds": 12.96
+  },
+  {
+   "task": "public_quality_gates",
+   "node": "test.sponsoratlas.accepted_values_stg_lca_geography_status__MATCHED__MATCHED_FROM_ZIP__MATCHED_FROM_CITY__SOURCE_COUNTY_MISSING__UNRESOLVED_COUNTY.3269b6ab91",
+   "status": "pass",
+   "seconds": 0.18
+  },
+  {
+   "task": "public_quality_gates",
+   "node": "test.sponsoratlas.accepted_values_stg_board_jobs_source_provider__greenhouse__lever__ashby.66232a663c",
+   "status": "pass",
+   "seconds": 0.19
+  },
+  {
+   "task": "public_quality_gates",
+   "node": "test.sponsoratlas.accepted_values_stg_lca_wage_unit__Hour__Week__Bi_Weekly__Month__Year.80cbdd978f",
+   "status": "pass",
+   "seconds": 0.09
+  },
+  {
+   "task": "public_quality_gates",
+   "node": "test.sponsoratlas.board_provenance",
+   "status": "pass",
+   "seconds": 0.13
+  },
+  {
+   "task": "public_quality_gates",
+   "node": "test.sponsoratlas.cdc_quality",
+   "status": "pass",
+   "seconds": 0.16
+  },
+  {
+   "task": "public_quality_gates",
+   "node": "test.sponsoratlas.dimension_mapping_accounting",
+   "status": "pass",
+   "seconds": 0.59
+  },
+  {
+   "task": "public_quality_gates",
+   "node": "test.sponsoratlas.dimension_reference_integrity",
+   "status": "pass",
+   "seconds": 0.53
+  },
+  {
+   "task": "public_quality_gates",
+   "node": "test.sponsoratlas.facts_bls_conflicts",
+   "status": "pass",
+   "seconds": 0.1
+  },
+  {
+   "task": "public_quality_gates",
+   "node": "test.sponsoratlas.facts_accounting",
+   "status": "pass",
+   "seconds": 0.76
+  },
+  {
+   "task": "public_quality_gates",
+   "node": "test.sponsoratlas.facts_grain",
+   "status": "pass",
+   "seconds": 0.2
+  },
+  {
+   "task": "public_quality_gates",
+   "node": "test.sponsoratlas.facts_job_fields_present",
+   "status": "pass",
+   "seconds": 0.08
+  },
+  {
+   "task": "public_quality_gates",
+   "node": "test.sponsoratlas.facts_bls_headers",
+   "status": "pass",
+   "seconds": 1.02
+  },
+  {
+   "task": "public_quality_gates",
+   "node": "test.sponsoratlas.facts_job_observation_accounting",
+   "status": "pass",
+   "seconds": 0.18
+  },
+  {
+   "task": "public_quality_gates",
+   "node": "test.sponsoratlas.mapping_integrity",
+   "status": "pass",
+   "seconds": 0.34
+  },
+  {
+   "task": "public_quality_gates",
+   "node": "test.sponsoratlas.not_null_dim_date_calendar_date.98c13acc7a",
+   "status": "pass",
+   "seconds": 0.08
+  },
+  {
+   "task": "public_quality_gates",
+   "node": "test.sponsoratlas.file_provenance",
+   "status": "pass",
+   "seconds": 0.51
+  },
+  {
+   "task": "public_quality_gates",
+   "node": "test.sponsoratlas.not_null_dim_date_date_key.881d0a31b6",
+   "status": "pass",
+   "seconds": 0.14
+  },
+  {
+   "task": "public_quality_gates",
+   "node": "test.sponsoratlas.not_null_dim_employer_employer_id.e65273903e",
+   "status": "pass",
+   "seconds": 0.12
+  },
+  {
+   "task": "public_quality_gates",
+   "node": "test.sponsoratlas.not_null_dim_employer_employer_key.6af1a27012",
+   "status": "pass",
+   "seconds": 0.09
+  },
+  {
+   "task": "public_quality_gates",
+   "node": "test.sponsoratlas.not_null_dim_geography_geography_key.c102675438",
+   "status": "pass",
+   "seconds": 0.1
+  },
+  {
+   "task": "public_quality_gates",
+   "node": "test.sponsoratlas.not_null_dim_occupation_soc_code.26309cb4b4",
+   "status": "pass",
+   "seconds": 0.09
+  },
+  {
+   "task": "public_quality_gates",
+   "node": "test.sponsoratlas.not_null_dim_occupation_occupation_key.c0feabd3fc",
+   "status": "pass",
+   "seconds": 0.13
+  },
+  {
+   "task": "public_quality_gates",
+   "node": "test.sponsoratlas.not_null_dim_occupation_soc_vintage.a9e5faccfb",
+   "status": "pass",
+   "seconds": 0.11
+  },
+  {
+   "task": "public_quality_gates",
+   "node": "test.sponsoratlas.not_null_fact_job_posting_daily_observation_date.385ccc795b",
+   "status": "pass",
+   "seconds": 0.1
+  },
+  {
+   "task": "public_quality_gates",
+   "node": "test.sponsoratlas.not_null_fact_job_posting_daily_posting_id.5986dc71cd",
+   "status": "pass",
+   "seconds": 0.1
+  },
+  {
+   "task": "public_quality_gates",
+   "node": "test.sponsoratlas.not_null_fact_job_posting_daily_observation_date_key.b3ed446780",
+   "status": "pass",
+   "seconds": 0.11
+  },
+  {
+   "task": "public_quality_gates",
+   "node": "test.sponsoratlas.not_null_fact_lca_case_case_number.ae4f640e51",
+   "status": "pass",
+   "seconds": 0.12
+  },
+  {
+   "task": "public_quality_gates",
+   "node": "test.sponsoratlas.not_null_fact_wage_benchmark_area_code.b4efa85b14",
+   "status": "pass",
+   "seconds": 0.12
+  },
+  {
+   "task": "public_quality_gates",
+   "node": "test.sponsoratlas.not_null_fact_wage_benchmark_area_type.86bb0aa89c",
+   "status": "pass",
+   "seconds": 0.13
+  },
+  {
+   "task": "public_quality_gates",
+   "node": "test.sponsoratlas.not_null_fact_wage_benchmark_geography_key.91ef069932",
+   "status": "pass",
+   "seconds": 0.21
+  },
+  {
+   "task": "public_quality_gates",
+   "node": "test.sponsoratlas.not_null_fact_wage_benchmark_occupation_key.1392fc4155",
+   "status": "pass",
+   "seconds": 0.16
+  },
+  {
+   "task": "public_quality_gates",
+   "node": "test.sponsoratlas.not_null_fact_wage_benchmark_soc_code.85c6e28aa8",
+   "status": "pass",
+   "seconds": 0.11
+  },
+  {
+   "task": "public_quality_gates",
+   "node": "test.sponsoratlas.not_null_fact_wage_benchmark_survey_date_key.c3e9974f03",
+   "status": "pass",
+   "seconds": 0.1
+  },
+  {
+   "task": "public_quality_gates",
+   "node": "test.sponsoratlas.not_null_fact_wage_benchmark_survey_year.f3b1b09c7f",
+   "status": "pass",
+   "seconds": 0.1
+  },
+  {
+   "task": "public_quality_gates",
+   "node": "test.sponsoratlas.not_null_stg_bls_soc_code.027759e2ac",
+   "status": "pass",
+   "seconds": 0.13
+  },
+  {
+   "task": "public_quality_gates",
+   "node": "test.sponsoratlas.not_null_stg_board_jobs_job_key.102d4b2390",
+   "status": "pass",
+   "seconds": 0.13
+  },
+  {
+   "task": "public_quality_gates",
+   "node": "test.sponsoratlas.not_null_stg_board_jobs_job_url.5f88322b85",
+   "status": "pass",
+   "seconds": 0.08
+  },
+  {
+   "task": "public_quality_gates",
+   "node": "test.sponsoratlas.not_null_stg_board_jobs_job_title.00e0564d9f",
+   "status": "pass",
+   "seconds": 0.12
+  },
+  {
+   "task": "public_quality_gates",
+   "node": "test.sponsoratlas.not_null_stg_cdc_application_events_event_type.113ba15c73",
+   "status": "pass",
+   "seconds": 0.1
+  },
+  {
+   "task": "public_quality_gates",
+   "node": "test.sponsoratlas.not_null_stg_cdc_application_events_event_id.b2e150733f",
+   "status": "pass",
+   "seconds": 0.11
+  },
+  {
+   "task": "public_quality_gates",
+   "node": "test.sponsoratlas.not_null_stg_cdc_application_events_job_id.4a8b15fdf4",
+   "status": "pass",
+   "seconds": 0.1
+  },
+  {
+   "task": "public_quality_gates",
+   "node": "test.sponsoratlas.not_null_stg_cdc_application_events_source_lsn.fe7134ff19",
+   "status": "pass",
+   "seconds": 0.14
+  },
+  {
+   "task": "public_quality_gates",
+   "node": "test.sponsoratlas.not_null_stg_cdc_job_postings_employer_name.929702f5c5",
+   "status": "pass",
+   "seconds": 0.1
+  },
+  {
+   "task": "public_quality_gates",
+   "node": "test.sponsoratlas.not_null_stg_cdc_job_postings_job_id.e46c3fd50a",
+   "status": "pass",
+   "seconds": 0.11
+  },
+  {
+   "task": "public_quality_gates",
+   "node": "test.sponsoratlas.not_null_stg_cdc_job_postings_job_title.d36fda3021",
+   "status": "pass",
+   "seconds": 0.08
+  },
+  {
+   "task": "public_quality_gates",
+   "node": "test.sponsoratlas.not_null_stg_cdc_job_postings_source_lsn.f73992a5a9",
+   "status": "pass",
+   "seconds": 0.08
+  },
+  {
+   "task": "public_quality_gates",
+   "node": "test.sponsoratlas.not_null_stg_lca_case_number.6cb4540132",
+   "status": "pass",
+   "seconds": 0.07
+  },
+  {
+   "task": "public_quality_gates",
+   "node": "test.sponsoratlas.not_null_stg_lca_decision_date.d8bef14ffd",
+   "status": "pass",
+   "seconds": 0.07
+  },
+  {
+   "task": "public_quality_gates",
+   "node": "test.sponsoratlas.not_null_stg_lca_employer_name.a3e69af749",
+   "status": "pass",
+   "seconds": 0.08
+  },
+  {
+   "task": "public_quality_gates",
+   "node": "test.sponsoratlas.not_null_stg_lca_geo_unresolved.a9bbf82652",
+   "status": "pass",
+   "seconds": 0.08
+  },
+  {
+   "task": "public_quality_gates",
+   "node": "test.sponsoratlas.not_null_stg_lca_geography_status.71956e8ce4",
+   "status": "pass",
+   "seconds": 0.07
+  },
+  {
+   "task": "public_quality_gates",
+   "node": "test.sponsoratlas.not_null_stg_lca_soc_unresolved.f6616dab1a",
+   "status": "pass",
+   "seconds": 0.07
+  },
+  {
+   "task": "public_quality_gates",
+   "node": "test.sponsoratlas.not_null_stg_lca_received_date.a7d33777f1",
+   "status": "pass",
+   "seconds": 0.09
+  },
+  {
+   "task": "public_quality_gates",
+   "node": "test.sponsoratlas.not_null_stg_uscis_employer_name_missing.b61e8b0bf1",
+   "status": "pass",
+   "seconds": 0.11
+  },
+  {
+   "task": "public_quality_gates",
+   "node": "test.sponsoratlas.not_null_stg_lca_wage_unit.fadf335492",
+   "status": "pass",
+   "seconds": 0.13
+  },
+  {
+   "task": "public_quality_gates",
+   "node": "test.sponsoratlas.not_null_stg_uscis_released.f281d9e2ae",
+   "status": "pass",
+   "seconds": 0.06
+  },
+  {
+   "task": "public_quality_gates",
+   "node": "test.sponsoratlas.not_null_stg_uscis_state_unresolved.021431e330",
+   "status": "pass",
+   "seconds": 0.08
+  },
+  {
+   "task": "public_quality_gates",
+   "node": "test.sponsoratlas.relationships_fact_job_posting_daily_employer_id__employer_id__ref_dim_employer_.f795368bda",
+   "status": "pass",
+   "seconds": 0.1
+  },
+  {
+   "task": "public_quality_gates",
+   "node": "test.sponsoratlas.relationships_fact_job_posting_daily_employer_key__employer_key__ref_dim_employer_.f32251f1b4",
+   "status": "pass",
+   "seconds": 0.13
+  },
+  {
+   "task": "public_quality_gates",
+   "node": "test.sponsoratlas.relationships_fact_job_posting_daily_geography_key__geography_key__ref_dim_geography_.db5ba3fa40",
+   "status": "pass",
+   "seconds": 0.17
+  },
+  {
+   "task": "public_quality_gates",
+   "node": "test.sponsoratlas.relationships_fact_job_posting_daily_occupation_key__occupation_key__ref_dim_occupation_.02829a75c9",
+   "status": "pass",
+   "seconds": 0.12
+  },
+  {
+   "task": "public_quality_gates",
+   "node": "test.sponsoratlas.relationships_fact_job_posting_daily_observation_date_key__date_key__ref_dim_date_.c4f2f4e490",
+   "status": "pass",
+   "seconds": 0.26
+  },
+  {
+   "task": "public_quality_gates",
+   "node": "test.sponsoratlas.relationships_fact_lca_case_decision_date_key__date_key__ref_dim_date_.2bb43bd886",
+   "status": "pass",
+   "seconds": 0.19
+  },
+  {
+   "task": "public_quality_gates",
+   "node": "test.sponsoratlas.relationships_fact_lca_case_employer_id__employer_id__ref_dim_employer_.c88f8eecb5",
+   "status": "pass",
+   "seconds": 0.28
+  },
+  {
+   "task": "public_quality_gates",
+   "node": "test.sponsoratlas.relationships_fact_lca_case_employer_key__employer_key__ref_dim_employer_.50cfcb57e0",
+   "status": "pass",
+   "seconds": 0.13
+  },
+  {
+   "task": "public_quality_gates",
+   "node": "test.sponsoratlas.relationships_fact_lca_case_geography_key__geography_key__ref_dim_geography_.afafe536af",
+   "status": "pass",
+   "seconds": 0.27
+  },
+  {
+   "task": "public_quality_gates",
+   "node": "test.sponsoratlas.relationships_fact_lca_case_occupation_key__occupation_key__ref_dim_occupation_.6570a98d84",
+   "status": "pass",
+   "seconds": 0.27
+  },
+  {
+   "task": "public_quality_gates",
+   "node": "test.sponsoratlas.relationships_fact_wage_benchmark_occupation_key__occupation_key__ref_dim_occupation_.180a933ba2",
+   "status": "pass",
+   "seconds": 0.21
+  },
+  {
+   "task": "public_quality_gates",
+   "node": "test.sponsoratlas.relationships_fact_wage_benchmark_geography_key__geography_key__ref_dim_geography_.2cdfaccd79",
+   "status": "pass",
+   "seconds": 0.27
+  },
+  {
+   "task": "public_quality_gates",
+   "node": "test.sponsoratlas.scd2_no_overlap",
+   "status": "pass",
+   "seconds": 0.09
+  },
+  {
+   "task": "public_quality_gates",
+   "node": "test.sponsoratlas.relationships_fact_wage_benchmark_survey_date_key__date_key__ref_dim_date_.7e4b3855de",
+   "status": "pass",
+   "seconds": 0.2
+  },
+  {
+   "task": "public_quality_gates",
+   "node": "test.sponsoratlas.staging_flag_limits",
+   "status": "pass",
+   "seconds": 0.14
+  },
+  {
+   "task": "public_quality_gates",
+   "node": "test.sponsoratlas.unique_dim_date_calendar_date.abd0942d2a",
+   "status": "pass",
+   "seconds": 0.1
+  },
+  {
+   "task": "public_quality_gates",
+   "node": "test.sponsoratlas.staging_quality",
+   "status": "pass",
+   "seconds": 0.23
+  },
+  {
+   "task": "public_quality_gates",
+   "node": "test.sponsoratlas.unique_dim_date_date_key.0869fd48f9",
+   "status": "pass",
+   "seconds": 0.08
+  },
+  {
+   "task": "public_quality_gates",
+   "node": "test.sponsoratlas.unique_dim_employer_employer_key.2b00bf9dc1",
+   "status": "pass",
+   "seconds": 0.08
+  },
+  {
+   "task": "public_quality_gates",
+   "node": "test.sponsoratlas.unique_dim_geography_geography_key.0bbb80e1c1",
+   "status": "pass",
+   "seconds": 0.1
+  },
+  {
+   "task": "public_quality_gates",
+   "node": "test.sponsoratlas.unique_dim_occupation_occupation_key.e9eb40a08d",
+   "status": "pass",
+   "seconds": 0.09
+  },
+  {
+   "task": "public_quality_gates",
+   "node": "test.sponsoratlas.unique_dim_occupation_soc_code.7233a05b58",
+   "status": "pass",
+   "seconds": 0.1
+  },
+  {
+   "task": "public_quality_gates",
+   "node": "test.sponsoratlas.unique_fact_lca_case_case_number.b3302976ea",
+   "status": "pass",
+   "seconds": 0.09
+  },
+  {
+   "task": "public_quality_gates",
+   "node": "test.sponsoratlas.unique_stg_board_jobs_job_key.b354ddbf2a",
+   "status": "pass",
+   "seconds": 0.08
+  },
+  {
+   "task": "public_quality_gates",
+   "node": "test.sponsoratlas.unique_stg_cdc_application_events_event_id.707aaa5da9",
+   "status": "pass",
+   "seconds": 0.07
+  },
+  {
+   "task": "public_quality_gates",
+   "node": "test.sponsoratlas.unique_stg_cdc_job_postings_job_id.93da135027",
+   "status": "pass",
+   "seconds": 0.09
+  },
+  {
+   "task": "public_quality_gates",
+   "node": "unit_test.sponsoratlas.annualize_wage_examples.annualize_wage_exact_cases",
+   "status": "pass",
+   "seconds": 1.3
+  },
+  {
+   "task": "public_quality_gates",
+   "node": "test.sponsoratlas.unmapped_columns",
+   "status": "pass",
+   "seconds": 17.9
+  }
+ ]
+}

@@ -4,6 +4,8 @@ The original acceptance is **OPEN**. The repository contains editable Power BI
 PBIP/PBIR/TMDL and a Tableau TWB/TWBX with genuine Hyper extracts. No PBIX has been
 created, and neither report has been opened/rendered in its native application.
 Structural checks and Hyper SQL do not establish DAX or Tableau VizQL execution.
+For the public dashboard `bi/public` supersedes `bi/tableau` and `bi/powerbi`
+(see [native acceptance](#source-lifecycle-and-native-acceptance)).
 
 ## Sources and grains
 
@@ -11,7 +13,8 @@ Use only `semantic/projections.json`, with the exact reviewed public snapshot
 manifest `.tools/semantic/actual/export-evidence.json`. Keep its source archive
 lineage and SHA256; never overwrite the source snapshots. Source facts are latest
 LCA case_number, posting_id × original UTC observation_date, and published OEWS
-SOC × AREA_TYPE:AREA × survey_year. The source release is archived Q4 coverage,
+SOC × AREA_TYPE:AREA × survey_year. The source release behind the BI evidence is
+archived Q4 coverage (238,891 cases, [reconciliation](evidence/reconciliation.json)),
 not a complete fiscal-year population. Current employer identity/history is
 provisional and must not be presented as human-validated historical attributes.
 
@@ -116,8 +119,10 @@ ANALYTICS.MARTS projections/ANALYST role/SPONSORATLAS_XS, bounded query timeout 
 explicit active <=30-day trial window with seven-minute cutoff. Credentials are
 entered only via the application's KeyPair credential flow. No passwords or keys
 are embedded. Before using it, run the existing semantic remote preflight to
-verify live identity, unique keys and XS/auto_suspend=60; no remote verification
-has occurred without real credentials. Do not grant CUBE_SVC new permissions.
+verify live identity, unique keys and XS/auto_suspend=60. That preflight passed for
+Cube on 2026-10-31
+([verify-snowflake.json](../docs/evidence/task07-cube-snowflake-20261031/verify-snowflake.json));
+these M expressions have not run against Snowflake. Do not grant CUBE_SVC new permissions.
 
 The source default is **Parquet**, explicitly selected. Set SnapshotDirectory to
 the verified local snapshot. The model calls `Parquet.Document(File.Contents())`
@@ -137,15 +142,19 @@ Open `tableau/sponsoratlas.twbx` in Tableau Desktop/Public Desktop 2022.4.1 or n
 workbook in the app, verify the serialized filter cards/actions, execute each
 of the five KPI worksheets, export exact values, take native screenshots and
 save the verified local TWBX. Hyper SQL tests do not execute Tableau PERCENTILE
-or the worksheet's calculated fields. Public publishing is prohibited; no Tableau
-Public URL is fabricated or hidden-by-profile publication attempted.
+or the worksheet's calculated fields. `tableau/sponsoratlas.twbx` has not been published. The public
+dashboard is the separate `bi/public` workbook, a static snapshot published on Tableau Public on
+2026-11-10 (see [`public/BUILD.md`](public/BUILD.md)).
 
 On 2026-10-24 CUA reached the normal Power BI home. Automatic approval rejected
 the visible New report action because the earlier read-only rejection was not
 followed by recognized user approval. No report was created; no alternate URL
 or hidden API was tried. This is an approval gate, **not** evidence that web
-authoring is unavailable. Snowflake credentials, tenant/native export capability,
-PBIX/DAX/render and Tableau native render remain unverified.
+authoring is unavailable. Snowflake key-pair access works for Cube
+([run.log](../docs/evidence/task07-cube-snowflake-20261031/run.log)) but has not been
+used from a BI tool. Tenant/native export capability, PBIX/DAX/render and the native render of `bi/tableau`
+remain unverified. The separate `bi/public` workbook is published on Tableau Public (see
+[`public/BUILD.md`](public/BUILD.md)).
 
 References: [Power BI PBIR](https://learn.microsoft.com/en-us/power-bi/developer/projects/projects-report),
 [TMDL](https://learn.microsoft.com/en-us/analysis-services/tmdl/tmdl-overview),

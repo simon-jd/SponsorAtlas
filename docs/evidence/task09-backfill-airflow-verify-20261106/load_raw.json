@@ -1,0 +1,23 @@
+{
+  "status": "SUCCEEDED",
+  "nproc": 32,
+  "load_before": [
+    5.41845703125,
+    6.50537109375,
+    6.51416015625
+  ],
+  "steps": [
+    {
+      "name": "load_raw",
+      "exit_code": 0,
+      "seconds": 15.403,
+      "load_after": [
+        5.55322265625,
+        6.48046875,
+        6.505859375
+      ],
+      "projected_bytes": 21457034368
+    }
+  ],
+  "seconds": 15.766
+}

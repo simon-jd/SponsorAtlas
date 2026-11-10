@@ -5,6 +5,7 @@ import pytest
 from orchestration.sponsoratlas_orchestration.trial import (
     bounded_snowflake_options,
     trial_remaining,
+    trial_seconds_left,
 )
 
 
@@ -26,6 +27,15 @@ def test_missing_expired_or_oversize_trial_fails_before_dispatch(monkeypatch):
         trial_remaining(960, now=now + timedelta(hours=23, minutes=50))
 
 
+def test_seconds_left_ignore_the_cleanup_margin(monkeypatch):
+    monkeypatch.setenv("SPONSORATLAS_ORCHESTRATION_MODE", "production")
+    monkeypatch.setenv("SNOWFLAKE_TRIAL_STARTED_AT", "2026-10-25T07:29:00Z")
+    monkeypatch.setenv("SNOWFLAKE_TRIAL_EXPIRES_AT", "2026-11-24T00:00:00Z")
+    now = datetime(2026, 11, 23, 23, tzinfo=UTC)
+    assert trial_seconds_left(now=now) == 3600
+    assert trial_remaining(now=now) == 3600 - 420
+
+
 def test_production_snowflake_cli_options_are_bounded_and_identity_fixed(monkeypatch):
     monkeypatch.setenv("SPONSORATLAS_ORCHESTRATION_MODE", "production")
     # The window is relative to the real clock: a fixed expiry turns this test red once it passes.
@@ -44,7 +54,11 @@ def test_production_snowflake_cli_options_are_bounded_and_identity_fixed(monkeyp
     assert options["session_parameters"]["STATEMENT_TIMEOUT_IN_SECONDS"] == 240
     assert options["session_parameters"]["STATEMENT_QUEUED_TIMEOUT_IN_SECONDS"] == 60
     assert options["session_parameters"]["ABORT_DETACHED_QUERY"] is True
-    assert options["login_timeout"] == 15 and options["network_timeout"] == 30
+    assert options["login_timeout"] == 15 and options["network_timeout"] == 300
+    # A network timeout under the statement limit would cancel statements before it applies.
+    assert (
+        options["network_timeout"] > options["session_parameters"]["STATEMENT_TIMEOUT_IN_SECONDS"]
+    )
     with pytest.raises(RuntimeError):
         bounded_snowflake_options({"user": "ACCOUNTADMIN"})
 

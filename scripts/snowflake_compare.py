@@ -21,9 +21,16 @@ from pathlib import Path
 import duckdb
 
 from scripts.canonical_paths import DIMENSIONS_DB, FACTS_DB, STAGING_DB
-from scripts.load_snowflake_raw import fingerprint_sql
+from scripts.load_snowflake_raw import LIVE_REPLAY_KIND, fingerprint_sql
 
 SKIP_TYPES = ("DOUBLE", "FLOAT", "REAL", "TIMESTAMP")
+# Live board fetches load Snowflake only, so these cannot match the local replay once they exist.
+JOB_POSTING_RELATIONS = {"fact_job_posting_daily"}
+JOB_POSTING_METRICS = {"active_posting_days"}
+LIVE_FACT_ROWS = (
+    "SELECT COUNT(*) FROM ANALYTICS.MARTS.fact_job_posting_daily"
+    f" WHERE REPLAY_KIND = '{LIVE_REPLAY_KIND}'"
+)
 # relation name -> (local database, local schema, Snowflake relation)
 RELATIONS = {
     **{
@@ -142,6 +149,18 @@ def diff(local: dict, remote: dict) -> dict:
     }
 
 
+def expected_divergence(name: str, status: str, live_rows: int) -> str:
+    """A job-posting DIFF is expected once live rows exist; everything else keeps its status."""
+    expected = status == "DIFF" and live_rows and name in JOB_POSTING_RELATIONS
+    return "EXPECTED_DIVERGED" if expected else status
+
+
+def metric_status(name: str, equal: bool, live_rows: int) -> str:
+    if equal:
+        return "EQUAL"
+    return "EXPECTED_DIVERGED" if live_rows and name in JOB_POSTING_METRICS else "DIFF"
+
+
 def main(argv=None) -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--output", type=Path, required=True)
@@ -152,12 +171,16 @@ def main(argv=None) -> int:
     started, relations = time.monotonic(), {}
     local_dbs = {p: duckdb.connect(str(p), read_only=True) for p in {STAGING_DB, DIMENSIONS_DB, FACTS_DB}}
     with connect("TRANSFORMER", query_tag="sponsoratlas:phase8:compare") as dbt_conn:
+        live_rows = int(dbt_conn.cursor().execute(LIVE_FACT_ROWS).fetchone()[0])
         for name, (database, schema, relation) in RELATIONS.items():
             if args.only and name not in args.only:
                 continue
             local = local_table(local_dbs[database], schema, name)
             remote = remote_table(dbt_conn.cursor(), relation, list(local["fingerprints"]))
             relations[name] = {"snowflake_relation": relation, **diff(local, remote)}
+            relations[name]["status"] = expected_divergence(
+                name, relations[name]["status"], live_rows
+            )
             print(f"{relations[name]['status']}\t{name}\t{local['rows']}\t{remote['rows']}"
                   f"\t{relations[name]['mismatched_columns']}")  # fmt: skip
     facts = local_dbs[FACTS_DB]
@@ -176,11 +199,13 @@ def main(argv=None) -> int:
         db.close()
     metrics = {
         k: {"local": local_metrics[k], "snowflake": remote_metrics[k],
-            "equal": local_metrics[k] == remote_metrics[k]}
+            "equal": local_metrics[k] == remote_metrics[k],
+            "status": metric_status(k, local_metrics[k] == remote_metrics[k], live_rows)}
         for k in local_metrics
     }  # fmt: skip
     result = {
         "metric_identity": list(identity),
+        "live_job_posting_rows": live_rows,
         "relations": relations,
         "metrics": metrics,
         "lca_groups": {"local": local_groups, "snowflake": remote_groups,
@@ -189,7 +214,7 @@ def main(argv=None) -> int:
     }  # fmt: skip
     args.output.write_text(json.dumps(result, indent=2) + "\n")
     for k, v in metrics.items():
-        print(f"{'EQUAL' if v['equal'] else 'DIFF'}\t{k}\t{v['local']}\t{v['snowflake']}")
+        print(f"{v['status']}\t{k}\t{v['local']}\t{v['snowflake']}")
     print(f"groups\t{local_groups}\t{remote_groups}")
     return 0
 

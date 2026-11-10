@@ -1,0 +1,15 @@
+[Unit]
+Description=SponsorAtlas Airflow API server (loopback, development deployment)
+ConditionPathExists=!%h/Desktop/SponsorAtlas/.tools/orchestration/STOP
+
+[Service]
+WorkingDirectory=%h/Desktop/SponsorAtlas
+EnvironmentFile=%h/.config/sponsoratlas/airflow.env
+# Only what task workers need, as in supervise.py: no UI, no REST API, no generated login.
+ExecStart=%h/Desktop/SponsorAtlas/orchestration/run.sh airflow api-server --host 127.0.0.1 --port 18780 --apps execution
+Restart=on-failure
+RestartSec=30
+MemoryMax=4G
+
+[Install]
+WantedBy=default.target

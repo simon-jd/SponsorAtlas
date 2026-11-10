@@ -1,0 +1,44 @@
+{
+  "kind": "ACTUAL_SNOWFLAKE_PUBLIC_MARTS",
+  "snapshot_id": "20261106T052440Z-aa007296",
+  "results": [
+    {
+      "metric": "case_count",
+      "expected": 713467.0,
+      "found": 713467.0,
+      "status": "PASS"
+    },
+    {
+      "metric": "certified_rate",
+      "expected": 0.9777789302098064,
+      "found": 0.97777893,
+      "status": "PASS"
+    },
+    {
+      "metric": "wage_p75",
+      "expected": 156383.63,
+      "found": 156383.63,
+      "status": "PASS"
+    },
+    {
+      "metric": "active_posting_days",
+      "expected": 86.0,
+      "found": 86.0,
+      "status": "PASS"
+    },
+    {
+      "metric": "oews_median",
+      "expected": 135980.0,
+      "found": 135980.0,
+      "status": "PASS"
+    }
+  ],
+  "passed": true,
+  "checked_at_utc": "20261110T193942Z",
+  "tolerance": 1e-08,
+  "originals": {
+    "csv_url": "https://public.tableau.com/views/SponsorAtlas-public/Reconciliation.csv?:showVizHome=no",
+    "png_url": "https://public.tableau.com/views/SponsorAtlas-public/Reconciliation.png?:showVizHome=no"
+  },
+  "csv_sha256": "0e4d6f2958f5be40cbced5d5534ad7b45b959026dfd0a7599a390e0b0027c488"
+}

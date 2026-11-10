@@ -46,7 +46,7 @@ fixture 明确标注 `SYNTHETIC_QUERY_HISTORY`，不会连接 Snowflake；排序
 
 维护窗口暂停生产刷新/写入，保留旧表/备份与原 grain/FK/accounting/rejects 基线；新目标核验 source SHA/row、总数、唯一 case、关系、原列内容与事件州后才切换。失败回到旧目标，不手工添加全 NULL 新列绕过 backfill；迁移不自动覆盖保护库。本地测试演练此拒绝/重建路径。完整实际库迁移与 fullFY 仍 OPEN。
 
-## 私有真实试用实验接口（尚未执行）
+## 私有真实试用实验接口（2026-11-01 已执行一次：P9A，状态 MEASURED_ATTRIBUTION_PENDING，见 warehouse-foundation.md）
 
 观测身份与实验身份独立，均 JWT key-pair，RSA ≥2048 且密钥文件 0600，不加载 `.env`，不接受密码、无限试用或编排 synthetic 模式。需要操作者明确设置：
 
@@ -96,4 +96,4 @@ fixture 明确标注 `SYNTHETIC_QUERY_HISTORY`，不会连接 Snowflake；排序
 
 本地原生及资源原件 保存 dbt 六步骤、Cube 物理结果与控制者 **21:32:22 UTC** 点位：保守总计 **13,457,822,266B**，已包含该点位的 Task10 文件；不要再加一次全部 Task10 目录。口径为 `max(路径11,607,161,654,分配11,671,252,992)+停机PG111,742,976+镜像双计1,644,752,570+RW73,728+logs30,000,000`，named volumes空。唯一walk权限缺口PG按既有实测最大值另计；三个治理容器自19:37停机且未重启。该点位后仅新增KB级文档/JSON/提交，没有新安装/镜像/服务；不能将点位冒充未来实时数。
 
-尚需用户提供真实有限试用、独立最小身份/权限与余额/monitor，执行完整实验并在归属视图成熟后收集 query/warehouse/clustering credits。真实性能与成本验收为 OPEN。
+2026-11-01 已用用户提供的试用账号和身份执行一次实验（P9A，见 warehouse-foundation.md），8 h 后对账状态仍为 `MEASURED_ATTRIBUTION_PENDING`，各阶段 credits 大多未归因。真实性能与成本验收仍为 OPEN。

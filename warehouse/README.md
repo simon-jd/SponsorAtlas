@@ -2,10 +2,11 @@
 
 Terraform for the Snowflake account objects, using the `snowflakedb/snowflake` provider 2.22.0
 (lock file committed) and Terraform 1.13.5 from `.tools/terraform/`. Applied on 2026-10-30 to
-a Snowflake trial account with `native_phase=READY` (91 objects, no drift; local Terraform
-state, git-ignored). The warehouse runs under a resource monitor that never resets and
+a Snowflake trial account with `native_phase=READY` (Terraform state: 22 objects plus 69 grants
+and attachments, 91 instances; no drift in the plan of 2026-10-31; local state, git-ignored).
+The warehouse runs under a resource monitor that never resets and
 suspends at 80% / immediately at 100%; its quota was 5 credits and is 20 since 2026-10-30
-(ends 2026-11-24 00:00 UTC). The live grant and policy tests pass on that account (below).
+(ends 2026-11-24 00:00 UTC). The live grant and policy tests passed on that account on 2026-10-31 (below).
 
 | Object | Configuration |
 |---|---|

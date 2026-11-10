@@ -1,8 +1,19 @@
 # Task 11 BI evidence — 2026-10-24
 
+Update 2026-11-10: this file covers `bi/tableau` and `bi/powerbi`. Neither has been opened in
+its native tool, and their reconciliation is still 5/5 FAIL. The separate `bi/public` workbook,
+a static snapshot exported from the Snowflake public marts on 2026-11-06 05:24:40 UTC
+(`20261106T052440Z-aa007296`), was published by the user on Tableau Public on 2026-11-10 at
+19:37:43 UTC:
+<https://public.tableau.com/app/profile/simon.d5578/viz/SponsorAtlas-public/SponsorAtlaspublicsnapshot>.
+`reconcile_public.py` read its published Reconciliation sheet at 19:39:42 UTC: 5 of 5 PASS.
+It is not connected to Snowflake, does not refresh, and holds no data from the scheduled
+Airflow runs. Workbook download is on, so anyone can download the full 713,467-row case table.
+See [`bi/public/BUILD.md`](../../../bi/public/BUILD.md).
+
 **Original acceptance: OPEN / blocked.** Actual Power BI report/PBIX/DAX and
-Tableau worksheet/VizQL/render have not executed. No Tableau Public publication
-or link exists. A genuine extract-backed TWBX and editable Power BI project
+Tableau worksheet/VizQL/render have not executed. This workbook was not published
+on Tableau Public. A genuine extract-backed TWBX and editable Power BI project
 sources are delivered as implementation material, with their limits below.
 
 ## Five-number reconciliation

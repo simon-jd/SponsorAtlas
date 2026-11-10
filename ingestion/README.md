@@ -1,7 +1,14 @@
 # Ingestion
 
-How official files and job data reach RAW. Locally, RAW is a DuckDB database; the Airbyte to
-Snowflake path is written as Terraform but has never been applied.
+How official files and job data reach RAW. Locally, RAW is a DuckDB database. On the Snowflake trial
+account RAW was loaded by script on 2026-10-30 (`scripts.load_snowflake_raw`: PUT to a table stage and
+COPY INTO, as AIRBYTE_SVC / LOADER), not by Airbyte: 20 tables match, among them the 8 official files
+with 1,224,291 rows and difference 0
+([load summary](../docs/evidence/task02-snowflake-raw-20261030/load-summary.json),
+[reconciliation](../docs/evidence/task02-snowflake-raw-20261030/reconcile-snowflake.csv)). Since
+2026-11-06 the daily Airflow DAG also loads job-board observations into RAW with
+`scripts.load_board_observations` (a script as AIRBYTE_SVC / LOADER, not Airbyte). The Airbyte
+to Snowflake path exists only as Terraform, not applied, and no Airbyte credentials exist.
 
 | Path | Contents |
 |---|---|
@@ -32,6 +39,18 @@ fails on unmapped columns.
 Row counts per file are compared with RAW by `scripts.reconcile_counts` (Snowflake, or a local
 DuckDB copy with `--duckdb`; exit 1 on any mismatch).
 
+Job data on Snowflake: `RAW.JOBS` holds only synthetic ACME and CDC fixtures that feed only tests. The
+script load above put 86 real vendor-board rows (Greenhouse 19, Ashby 67) from one snapshot on
+2026-10-24, replay kind `LOCAL_ARCHIVE_REPLAY`, into `RAW.LCA.FACTS_INPUT_JOB_OBSERVATIONS`, the table
+behind `fact_job_posting_daily`
+(`scripts/load_fact_inputs.py:176`, [load summary](../docs/evidence/task02-snowflake-raw-20261030/load-summary.json)).
+Since 2026-11-06 each daily DAG run replaces only that UTC day's rows with public board observations
+from the 13 boards in `board_api/live_boards.yaml` (4,904 to 4,911 rows a day from 2026-11-06 to
+2026-11-10); the loader does not touch other dates, including the 86 archived rows. The runs from
+2026-11-07 fetched the boards live. The 2026-11-06 run reused an archive a manual run had fetched at
+05:26 UTC; the replay kind is recorded as `LIVE_BOARD_FETCH` for every run, fetched or reused.
+These rows are not linked to LCA employers.
+
 ## Change data capture
 
 `make cdc-drill` starts a throw-away Postgres 16 container (`wal_level=logical`), loads the demo
@@ -45,8 +64,9 @@ synthetic local drill, not Airbyte CDC.
 
 - Airbyte: `make airbyte-up` (abctl 0.30.4, kind) failed on this host because kube-proxy hit
   "too many open files"; it has not been re-run since the host limits were raised.
-- No sync to Snowflake has run; `scripts.cdc_probe` (Airbyte CDC acceptance) and the live
-  reconciliation have not been executed.
+- No Airbyte sync to Snowflake has run, and `scripts.cdc_probe` (Airbyte CDC acceptance) has not been
+  executed. The live reconciliation has run, on the script-loaded RAW only
+  ([reconciliation](../docs/evidence/task02-snowflake-raw-20261030/reconcile-snowflake.csv)).
 
 Offline checks: `make test` covers the archive, reconciliation, board manifest and CDC code;
 `terraform validate` / `terraform test` need `terraform init`, which downloads providers, so they

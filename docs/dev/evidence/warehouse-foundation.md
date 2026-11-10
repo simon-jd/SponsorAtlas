@@ -58,7 +58,7 @@ AssertionError: Snowflake Terraform implementation is missing
 
 ## 2026-10-30 在线验证
 
-账号：一个 Snowflake 试用账号（Enterprise 功能可用），账号标识和密钥只通过环境变量传入（`SNOWFLAKE_TEST_ACCOUNT`、`SNOWFLAKE_TEST_{ADMIN,LOADER,TRANSFORMER,ANALYST}_PRIVATE_KEY_FILE`），不进仓库。用户和协调者在 2026-10-30 以 `native_phase=READY` apply 了全部 `warehouse/terraform`（91 个对象，无漂移）；Terraform state 为本地文件（用户接受，替代 Azure Blob）。成本上限是 5 credit、到期不重置的资源监视器（80% 挂起、100% 立即挂起）。
+账号：一个 Snowflake 试用账号（Enterprise 功能可用），账号标识和密钥只通过环境变量传入（`SNOWFLAKE_TEST_ACCOUNT`、`SNOWFLAKE_TEST_{ADMIN,LOADER,TRANSFORMER,ANALYST}_PRIVATE_KEY_FILE`），不进仓库。用户和协调者在 2026-10-30 以 `native_phase=READY` apply 了全部 `warehouse/terraform`（Terraform state 为 22 个对象加 69 个授权与绑定，共 91 个实例；READY 之后的 plan 无变更）；Terraform state 为本地文件（用户接受，替代 Azure Blob）。成本上限是 5 credit、到期不重置的资源监视器（80% 挂起、100% 立即挂起）。
 
 | 检查 | 结果 |
 |---|---|

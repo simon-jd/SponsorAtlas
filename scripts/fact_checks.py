@@ -265,7 +265,8 @@ def verify(actual, output):
         )
         assert contents(actual) == initial, "actual rerun changed count or content"
     actual_logs = "".join((output / f"actual-merge-{i + 1}.log").read_text() for i in range(2))
-    if actual_logs.lower().count("merge into") < 6:
+    # Two runs of the two merge facts; fact_job_posting_daily replaces dates with delete+insert.
+    if actual_logs.lower().count("merge into") < 4:
         raise AssertionError("native MERGE SQL missing")
     fixture = output / "fixture.duckdb"
     case, decision = prepare_fixture(actual, fixture)

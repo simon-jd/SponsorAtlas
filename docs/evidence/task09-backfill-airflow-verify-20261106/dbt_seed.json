@@ -1,0 +1,22 @@
+{
+  "status": "SUCCEEDED",
+  "nproc": 32,
+  "load_before": [
+    5.55322265625,
+    6.48046875,
+    6.505859375
+  ],
+  "steps": [
+    {
+      "name": "dbt_seed",
+      "exit_code": 0,
+      "seconds": 4.455,
+      "load_after": [
+        5.66943359375,
+        6.4892578125,
+        6.5087890625
+      ]
+    }
+  ],
+  "seconds": 4.455
+}

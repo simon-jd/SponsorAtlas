@@ -41,6 +41,9 @@ ENVELOPE = [
     ("PAYLOAD_JSON", "VARCHAR"),
 ]
 ENVELOPE_FINGERPRINT = ["source_row_number", "payload_json"]
+# scripts.load_board_observations owns this table's dates once live fetches have started.
+JOB_OBSERVATIONS = "RAW.LCA.FACTS_INPUT_JOB_OBSERVATIONS"
+LIVE_REPLAY_KIND = "LIVE_BOARD_FETCH"
 INTEGERS = {"TINYINT", "SMALLINT", "INTEGER", "BIGINT", "HUGEINT"}
 SIMPLE_TYPES = {
     "VARCHAR": "VARCHAR",
@@ -72,7 +75,7 @@ LOCAL_INPUTS = [
      ["source_sha256", "source_row_number", "payload_json", "case_number", "decision_date"]),
     (FACTS_DB, "FACTS_INPUT", "lineage", "RAW.LCA.FACTS_INPUT_LINEAGE", ["manifest_json"]),
     # One RAW schema per dbt source: dbt sources cannot set a schema per table.
-    (FACTS_DB, "FACTS_INPUT", "job_observations", "RAW.LCA.FACTS_INPUT_JOB_OBSERVATIONS",
+    (FACTS_DB, "FACTS_INPUT", "job_observations", JOB_OBSERVATIONS,
      ["job_key", "source_sha256", "payload_json"]),
 ]  # fmt: skip
 
@@ -266,6 +269,19 @@ def load_item(connection, item: dict, *, replace: bool = False) -> dict:
     }
 
 
+def live_board_rows(connection) -> int:
+    """LIVE_BOARD_FETCH rows in the job-observation table; a table not yet created has none."""
+    from snowflake.connector.errors import ProgrammingError
+
+    sql = f"SELECT COUNT(*) FROM {JOB_OBSERVATIONS} WHERE REPLAY_KIND = '{LIVE_REPLAY_KIND}'"
+    try:
+        return int(connection.cursor().execute(sql).fetchone()[0])
+    except ProgrammingError as exc:
+        if exc.errno == 2003:  # does not exist or not authorized
+            return 0
+        raise
+
+
 def plan(archive_root: Path, workdir: Path, only=None) -> list[dict]:
     wanted = set(only or [])
     items = []
@@ -298,6 +314,14 @@ def main(argv=None) -> int:
 
     results, started = [], time.monotonic()
     with connect("LOADER", query_tag="sponsoratlas:phase8:raw-load") as conn:
+        if args.replace and any(item["table"] == JOB_OBSERVATIONS for item in items):
+            if live := live_board_rows(conn):
+                print(
+                    f"REFUSED: --replace would overwrite {live} {LIVE_REPLAY_KIND} rows in"
+                    f" {JOB_OBSERVATIONS} with the local replay; name other tables with --only",
+                    file=sys.stderr,
+                )
+                return 2
         for item in items:
             print(f"loading {item['table']} ({item['expected_rows']} rows)", file=sys.stderr)
             results.append(load_item(conn, item, replace=args.replace))

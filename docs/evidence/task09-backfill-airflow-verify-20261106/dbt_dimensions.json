@@ -1,0 +1,22 @@
+{
+  "status": "SUCCEEDED",
+  "nproc": 32,
+  "load_before": [
+    6.66748046875,
+    6.662109375,
+    6.57470703125
+  ],
+  "steps": [
+    {
+      "name": "dbt_dimensions",
+      "exit_code": 0,
+      "seconds": 6.202,
+      "load_after": [
+        6.61376953125,
+        6.65087890625,
+        6.5712890625
+      ]
+    }
+  ],
+  "seconds": 6.202
+}

@@ -1,0 +1,2 @@
+ERROR: ProgrammingError: 001023 (42601): SQL compilation error:
+Access to the stage area of a table (FACTS_INPUT_JOB_OBSERVATIONS) with the schema of another table (FACTS_INPUT_JOB_OBSERVATIONS_LOAD) is not allowed.

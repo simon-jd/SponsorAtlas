@@ -1,0 +1,12 @@
+make test: 2026-11-10 23:46:25 to 23:51:42 UTC, exit 0 (make-test.log)
+make check: 2026-11-10 23:51:42 UTC, exit 0 (make-check.log)
+Commands: make test > make-test.log 2>&1, then make check > make-check.log 2>&1; each exit status read from $?.
+Host: home-ubuntu, 32 cores, load average 17.37 at the start and 12.74 at the end.
+Tree: commit 82aaae3 plus uncommitted changes (41 modified tracked paths, 37 untracked paths). The commit that
+added this folder holds all of those changes except a one-line edit to warehouse/terraform/warehouses.tf and the
+untracked folders dated before 2026-11-05 (.cache/, older docs/evidence/ folders, web/apps/site/evidence/
+quality-runs/ and two viz-frame files), which stay uncommitted.
+Opt-in variables not set: RUN_SNOWFLAKE_GRANTS, RUN_SNOWFLAKE_POLICIES, SPONSORATLAS_ER_ACCEPTANCE,
+SPONSORATLAS_SPARK_CONNECT_TEST, SPONSORATLAS_WRITE_EVIDENCE, so the live Snowflake tests were skipped.
+No DAG run was created: the Airflow metadata DB had 25 DAG runs before and after. The live STOP marker
+(absent), credit ledger, guard state and alert log were unchanged.

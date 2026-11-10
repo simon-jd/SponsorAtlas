@@ -1,8 +1,13 @@
 """Manual fiscal-year backfill: rebuild the local pipeline from the archived LCA quarters.
 
-Trigger with conf {"fiscal_year": 2025}. Each task runs one step of
-`backfill.backfill_steps` as a subprocess and writes its timing JSON and log under
-docs/evidence/task09-backfill/. Parsing does no I/O.
+Each task runs one step of `backfill.backfill_steps` as a subprocess. Parsing does no I/O.
+
+Conf {"fiscal_year": 2025, "label": "verify-20261106"} is a verification run: it writes only
+to new label directories (`backfill.labelled_paths`) and docs/evidence/task09-backfill-airflow-
+<label>/, and inherits the canonical employer registry read only.
+
+Conf {"fiscal_year": 2025, "overwrite_canonical": true} rewrites the canonical databases and
+docs/evidence/task09-backfill/. Any other conf, including no label at all, is refused.
 """
 
 from datetime import UTC, datetime, timedelta
@@ -15,6 +20,8 @@ from orchestration.sponsoratlas_orchestration.runtime import ROOT, notify
 
 EVIDENCE = str(ROOT / "docs/evidence/task09-backfill")
 YEAR = "{{ dag_run.conf.get('fiscal_year', 2025) }}"
+LABEL = "{{ dag_run.conf.get('label') }}"
+OVERWRITE = "{{ dag_run.conf.get('overwrite_canonical', False) }}"
 
 with DAG(
     dag_id="sponsoratlas_backfill",
@@ -24,7 +31,8 @@ with DAG(
     max_active_runs=1,
     max_active_tasks=1,
     default_args={
-        # Every step refuses to overwrite its destination; a retry would fail the same way.
+        # Only the loaders refuse an existing destination; dbt steps rebuild in place. A failed
+        # step needs a person to look at what it left behind, not an automatic retry.
         "retries": 0,
         "execution_timeout": timedelta(hours=2),
         "on_failure_callback": notify,
@@ -38,7 +46,13 @@ with DAG(
         task = PythonOperator(
             task_id=step["name"],
             python_callable=run_one,
-            op_kwargs={"year": YEAR, "name": step["name"], "evidence": EVIDENCE},
+            op_kwargs={
+                "year": YEAR,
+                "name": step["name"],
+                "evidence": EVIDENCE,
+                "label": LABEL,
+                "overwrite_canonical": OVERWRITE,
+            },
         )
         if previous is not None:
             previous >> task

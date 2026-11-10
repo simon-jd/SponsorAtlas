@@ -1,0 +1,4 @@
+/home/postedism/Desktop/SponsorAtlas/.venv/bin/python -m ruff check .
+All checks passed!
+npm run --silent --prefix web/apps/site typecheck
+npm run --silent --prefix web/packages/ui typecheck

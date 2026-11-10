@@ -1,0 +1,17 @@
+[Unit]
+Description=SponsorAtlas Airflow scheduler with LocalExecutor (development deployment)
+Wants=sponsoratlas-airflow-api-server.service
+After=sponsoratlas-airflow-api-server.service
+ConditionPathExists=!%h/Desktop/SponsorAtlas/.tools/orchestration/STOP
+
+[Service]
+WorkingDirectory=%h/Desktop/SponsorAtlas
+EnvironmentFile=%h/.config/sponsoratlas/airflow.env
+# --skip-serve-logs: the log server would otherwise listen on every interface (port 8793).
+ExecStart=%h/Desktop/SponsorAtlas/orchestration/run.sh airflow scheduler --skip-serve-logs
+Restart=on-failure
+RestartSec=30
+MemoryMax=4G
+
+[Install]
+WantedBy=default.target

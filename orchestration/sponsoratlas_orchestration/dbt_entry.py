@@ -8,6 +8,7 @@ from pathlib import Path
 
 from orchestration.sponsoratlas_orchestration.trial import (
     bounded_snowflake_options,
+    refuse_when_stopped,
     trial_remaining,
 )
 
@@ -30,6 +31,7 @@ def worker(arguments):
 
 
 def main(arguments):
+    refuse_when_stopped()
     trial_remaining(960)  # 840s native process +25s signal cleanup, before the 7min server margin
     budget = min(
         840,

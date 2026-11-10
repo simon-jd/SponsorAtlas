@@ -1,0 +1,62 @@
+{
+  "what": "Load failures of generated bi/public workbook variants in Tableau Public 2026.2.3 on the Mac, extracted from the app's retained logs on 2026-11-05. Timestamps are the Mac's local time (PST).",
+  "variants": {
+    "var-sources-only.twbx": "data sources only, no worksheets or dashboards",
+    "var-s0.twbx": "data sources plus only the sheet 'Who sponsors data roles?'",
+    "var-s1.twbx": "data sources plus only the sheet 'Offered pay vs benchmark'"
+  },
+  "failures": [
+    {
+      "log": "log_bk.txt",
+      "ts": "2026-11-05T20:04:13.248",
+      "pid": 63055,
+      "errorcode": "d2e8da72",
+      "workbook": "var-sources-only.twbx",
+      "message": "Errors occurred while trying to load the workbook. The load was not able to complete successfully."
+    },
+    {
+      "log": "log_bk.txt",
+      "ts": "2026-11-05T20:05:29.531",
+      "pid": 64684,
+      "errorcode": "d2e8da72",
+      "workbook": "var-s0.twbx",
+      "message": "Errors occurred while trying to load the workbook. The load was not able to complete successfully."
+    },
+    {
+      "log": "log_bk.txt",
+      "ts": "2026-11-05T20:05:51.040",
+      "pid": 65023,
+      "errorcode": "d2e8da72",
+      "workbook": "var-s1.twbx",
+      "message": "Errors occurred while trying to load the workbook. The load was not able to complete successfully."
+    },
+    {
+      "log": "log.txt",
+      "ts": "2026-11-05T20:06:30.756",
+      "pid": 65539,
+      "errorcode": "d2e8da72",
+      "workbook": "var-s0.twbx",
+      "message": "Errors occurred while trying to load the workbook. The load was not able to complete successfully."
+    }
+  ],
+  "logs": {
+    "log_bk.txt": {
+      "first_ts": "2026-11-05T20:04:10.723",
+      "last_ts": "2026-11-05T20:05:53.448",
+      "finished_rendering_sheet": 0,
+      "end_open_workbook": 0
+    },
+    "unsupported_notice": {
+      "log": "log_bk.txt",
+      "ts": "2026-11-05T20:04:10.931",
+      "message": "AUTOUPDATE: This product version is no longer supported.  Please upgrade to the latest version."
+    },
+    "log.txt": {
+      "first_ts": "2026-11-05T20:06:27.701",
+      "last_ts": "2026-11-05T20:07:14.502",
+      "finished_rendering_sheet": 0,
+      "end_open_workbook": 0
+    }
+  },
+  "limits": "The app keeps only log.txt and log_bk.txt. The full DEV workbook's own refusal is not in them, and neither are single-sheet variants for 'When employers file' or 'Reconciliation'. No variant in these logs opened or rendered a sheet."
+}

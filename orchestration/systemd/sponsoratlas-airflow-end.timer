@@ -1,0 +1,10 @@
+[Unit]
+Description=End the SponsorAtlas deployment before the Snowflake trial ends
+
+[Timer]
+OnCalendar=2026-11-23 00:30:00 UTC
+Persistent=true
+Unit=sponsoratlas-airflow-end.service
+
+[Install]
+WantedBy=timers.target

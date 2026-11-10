@@ -1,0 +1,5 @@
+# Public, read-only job boards fetched daily by scripts.load_board_observations.
+# Tokens are each provider's public board name; every one answered HTTP 200 when audited.
+greenhouse: [databricks, stripe, doordashusa, coinbase, airbnb, pinterest, robinhood]
+lever: [palantir, zoox, spotify]
+ashby: [openai, snowflake, notion]

@@ -1,0 +1,7 @@
+[Unit]
+Description=Export SponsorAtlas run evidence, then stop and disable its Airflow units
+
+[Service]
+Type=oneshot
+WorkingDirectory=%h/Desktop/SponsorAtlas
+ExecStart=%h/Desktop/SponsorAtlas/orchestration/systemd/sponsoratlas-airflow-end.sh

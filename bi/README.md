@@ -110,5 +110,21 @@ an independent reviewer must inspect the app execution record, artifacts and
 screenshots. Never manufacture these fields from SQL or source formulas.
 
 `reconcile.sql` then joins all four evidence origins with NULL-aware comparisons
-and tolerance 1e-8 before presentation rounding. Native app-open/render review,
-Snowflake source execution and the prohibited Public link remain separate gates.
+and tolerance 1e-8 before presentation rounding. Native app-open/render review and
+Snowflake source execution from Power BI or Tableau remain separate gates. Cube itself
+passed on Snowflake on 2026-10-31
+([run.log](../docs/evidence/task07-cube-snowflake-20261031/run.log)); neither BI tool has
+connected to it.
+
+## Public dashboard
+
+`bi/public` is the path for the public dashboard; `bi/tableau` and `bi/powerbi` stay as the generated
+source described above. Its generated workbook, built from a Snowflake snapshot taken on 2026-11-06, opened
+in Tableau Public 2026.2.3 with no error, and the queries behind all four sheets returned rows
+([evidence](../docs/evidence/task11-tableau-public-20261105/desktop-load-20261106.json)). That check read the app's log, not its screen. The
+workbook is a static snapshot, with Hyper extracts and no connection to Snowflake. The hand-build fallback in
+[`public/BUILD.md`](public/BUILD.md) is untested. The workbook was published on Tableau Public on 2026-11-10
+([SponsorAtlas public snapshot](https://public.tableau.com/app/profile/simon.d5578/viz/SponsorAtlas-public/SponsorAtlaspublicsnapshot)).
+It holds the 2026-11-06 snapshot and no data from the scheduled Airflow runs. The same day
+`reconcile_public.py` read its Reconciliation sheet, and all five metrics passed against the snapshot
+([evidence](../docs/evidence/task11-tableau-public-20261105/published-20261110/)).

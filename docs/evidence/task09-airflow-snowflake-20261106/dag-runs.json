@@ -1,0 +1,3254 @@
+{
+  "all_success_count": 9,
+  "evidence_count": 8,
+  "exported_at": "2026-11-10T20:25:16.687968+00:00",
+  "rule": "A run counts as evidence only when every task instance succeeded, it started on or after 2026-11-06T00:00:00+00:00, and its run manifest shows orchestration_mode production, dbt_target snowflake, a Snowflake identity on SPONSORATLAS_XS and, for the daily DAG, a board load in snowflake mode. Other runs are rehearsals or stubs.",
+  "run_count": 16,
+  "runs": {
+    "sponsoratlas": [
+      {
+        "all_success": true,
+        "counts_as_evidence": true,
+        "dag_id": "sponsoratlas",
+        "end_date": "2026-11-08T09:08:06.932968+00:00",
+        "logical_date": "2026-11-08T09:00:00+00:00",
+        "run_after": "2026-11-08T09:00:00+00:00",
+        "run_id": "scheduled__2026-11-08T09:00:00+00:00",
+        "run_type": "scheduled",
+        "start_date": "2026-11-08T09:00:01.805401+00:00",
+        "state": "success",
+        "state_counts": {
+          "success": 39
+        },
+        "task_instances": [
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-11-08T09:00:11.787562+00:00",
+            "logical_date": "2026-11-08T09:00:00+00:00",
+            "start_date": "2026-11-08T09:00:01.838636+00:00",
+            "state": "success",
+            "task_id": "preflight"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-11-08T09:00:21.623236+00:00",
+            "logical_date": "2026-11-08T09:00:00+00:00",
+            "start_date": "2026-11-08T09:00:12.773907+00:00",
+            "state": "success",
+            "task_id": "observations_freshness"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-11-08T09:04:53.661080+00:00",
+            "logical_date": "2026-11-08T09:00:00+00:00",
+            "start_date": "2026-11-08T09:04:44.394353+00:00",
+            "state": "success",
+            "task_id": "dbt_public.annualize_wage_examples_model_build"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-11-08T09:02:22.760679+00:00",
+            "logical_date": "2026-11-08T09:00:00+00:00",
+            "start_date": "2026-11-08T09:02:14.031810+00:00",
+            "state": "success",
+            "task_id": "dbt_public.dim_date_model_build"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-11-08T09:02:32.295914+00:00",
+            "logical_date": "2026-11-08T09:00:00+00:00",
+            "start_date": "2026-11-08T09:02:23.073026+00:00",
+            "state": "success",
+            "task_id": "dbt_public.dim_employer_model_build"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-11-08T09:01:42.841951+00:00",
+            "logical_date": "2026-11-08T09:00:00+00:00",
+            "start_date": "2026-11-08T09:01:34.093521+00:00",
+            "state": "success",
+            "task_id": "dbt_public.dim_geography_model_build"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-11-08T09:01:52.058898+00:00",
+            "logical_date": "2026-11-08T09:00:00+00:00",
+            "start_date": "2026-11-08T09:01:42.911222+00:00",
+            "state": "success",
+            "task_id": "dbt_public.dim_occupation_model_build"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-11-08T09:05:11.601711+00:00",
+            "logical_date": "2026-11-08T09:00:00+00:00",
+            "start_date": "2026-11-08T09:04:54.656921+00:00",
+            "state": "success",
+            "task_id": "dbt_public.fact_job_posting_daily_model_build"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-11-08T09:05:28.621887+00:00",
+            "logical_date": "2026-11-08T09:00:00+00:00",
+            "start_date": "2026-11-08T09:05:12.375210+00:00",
+            "state": "success",
+            "task_id": "dbt_public.fact_lca_case_model_build"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-11-08T09:05:43.470588+00:00",
+            "logical_date": "2026-11-08T09:00:00+00:00",
+            "start_date": "2026-11-08T09:05:29.524366+00:00",
+            "state": "success",
+            "task_id": "dbt_public.fact_wage_benchmark_model_build"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-11-08T09:03:19.677587+00:00",
+            "logical_date": "2026-11-08T09:00:00+00:00",
+            "start_date": "2026-11-08T09:03:08.256840+00:00",
+            "state": "success",
+            "task_id": "dbt_public.int_bls_benchmark_candidates_model_build"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-11-08T09:02:43.903692+00:00",
+            "logical_date": "2026-11-08T09:00:00+00:00",
+            "start_date": "2026-11-08T09:02:33.159138+00:00",
+            "state": "success",
+            "task_id": "dbt_public.int_dimension_mapping_model_build"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-11-08T09:00:44.261043+00:00",
+            "logical_date": "2026-11-08T09:00:00+00:00",
+            "start_date": "2026-11-08T09:00:34.068996+00:00",
+            "state": "success",
+            "task_id": "dbt_public.int_employer_current_model_build"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-11-08T09:03:34.404575+00:00",
+            "logical_date": "2026-11-08T09:00:00+00:00",
+            "start_date": "2026-11-08T09:03:20.181905+00:00",
+            "state": "success",
+            "task_id": "dbt_public.int_lca_case_candidates_model_build"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-11-08T09:02:58.814619+00:00",
+            "logical_date": "2026-11-08T09:00:00+00:00",
+            "start_date": "2026-11-08T09:02:44.088020+00:00",
+            "state": "success",
+            "task_id": "dbt_public.stg_bls_model_build"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-11-08T09:05:52.629165+00:00",
+            "logical_date": "2026-11-08T09:00:00+00:00",
+            "start_date": "2026-11-08T09:05:43.522110+00:00",
+            "state": "success",
+            "task_id": "dbt_public.stg_board_jobs_model_build"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-11-08T09:06:02.092613+00:00",
+            "logical_date": "2026-11-08T09:00:00+00:00",
+            "start_date": "2026-11-08T09:05:52.791708+00:00",
+            "state": "success",
+            "task_id": "dbt_public.stg_cdc_application_events_model_build"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-11-08T09:06:11.682783+00:00",
+            "logical_date": "2026-11-08T09:00:00+00:00",
+            "start_date": "2026-11-08T09:06:02.735311+00:00",
+            "state": "success",
+            "task_id": "dbt_public.stg_cdc_job_postings_model_build"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-11-08T09:06:34.675583+00:00",
+            "logical_date": "2026-11-08T09:00:00+00:00",
+            "start_date": "2026-11-08T09:06:12.580037+00:00",
+            "state": "success",
+            "task_id": "dbt_public.stg_lca_model_build"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-11-08T09:06:49.804757+00:00",
+            "logical_date": "2026-11-08T09:00:00+00:00",
+            "start_date": "2026-11-08T09:06:35.022754+00:00",
+            "state": "success",
+            "task_id": "dbt_public.stg_uscis_model_build"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-11-08T09:06:58.517427+00:00",
+            "logical_date": "2026-11-08T09:00:00+00:00",
+            "start_date": "2026-11-08T09:06:49.908099+00:00",
+            "state": "success",
+            "task_id": "dbt_public.board_column_map_seed_build"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-11-08T09:00:33.066244+00:00",
+            "logical_date": "2026-11-08T09:00:00+00:00",
+            "start_date": "2026-11-08T09:00:21.678902+00:00",
+            "state": "success",
+            "task_id": "dbt_public.county_fips_seed_build"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-11-08T09:02:01.146835+00:00",
+            "logical_date": "2026-11-08T09:00:00+00:00",
+            "start_date": "2026-11-08T09:01:52.918933+00:00",
+            "state": "success",
+            "task_id": "dbt_public.file_column_map_seed_build"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-11-08T09:03:48.667623+00:00",
+            "logical_date": "2026-11-08T09:00:00+00:00",
+            "start_date": "2026-11-08T09:03:35.053984+00:00",
+            "state": "success",
+            "task_id": "dbt_public.lca_column_map_seed_build"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-11-08T09:07:07.467074+00:00",
+            "logical_date": "2026-11-08T09:00:00+00:00",
+            "start_date": "2026-11-08T09:06:58.780025+00:00",
+            "state": "success",
+            "task_id": "dbt_public.physical_column_map_seed_build"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-11-08T09:04:15.124221+00:00",
+            "logical_date": "2026-11-08T09:00:00+00:00",
+            "start_date": "2026-11-08T09:03:49.262605+00:00",
+            "state": "success",
+            "task_id": "dbt_public.place_county_fips_seed_build"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-11-08T09:00:53.454261+00:00",
+            "logical_date": "2026-11-08T09:00:00+00:00",
+            "start_date": "2026-11-08T09:00:44.509275+00:00",
+            "state": "success",
+            "task_id": "dbt_public.ref_bls_areas_2025_seed_build"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-11-08T09:01:04.075359+00:00",
+            "logical_date": "2026-11-08T09:00:00+00:00",
+            "start_date": "2026-11-08T09:00:53.801135+00:00",
+            "state": "success",
+            "task_id": "dbt_public.ref_county_2023_seed_build"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-11-08T09:01:13.917231+00:00",
+            "logical_date": "2026-11-08T09:00:00+00:00",
+            "start_date": "2026-11-08T09:01:04.575208+00:00",
+            "state": "success",
+            "task_id": "dbt_public.ref_county_cbsa_2023_seed_build"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-11-08T09:01:24.465756+00:00",
+            "logical_date": "2026-11-08T09:00:00+00:00",
+            "start_date": "2026-11-08T09:01:14.613036+00:00",
+            "state": "success",
+            "task_id": "dbt_public.ref_oews_2025_seed_build"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-11-08T09:01:33.781311+00:00",
+            "logical_date": "2026-11-08T09:00:00+00:00",
+            "start_date": "2026-11-08T09:01:24.653467+00:00",
+            "state": "success",
+            "task_id": "dbt_public.ref_soc_2018_seed_build"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-11-08T09:07:16.656118+00:00",
+            "logical_date": "2026-11-08T09:00:00+00:00",
+            "start_date": "2026-11-08T09:07:07.890370+00:00",
+            "state": "success",
+            "task_id": "dbt_public.staging_flag_limits_seed_build"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-11-08T09:03:08.035529+00:00",
+            "logical_date": "2026-11-08T09:00:00+00:00",
+            "start_date": "2026-11-08T09:02:59.125457+00:00",
+            "state": "success",
+            "task_id": "dbt_public.state_fips_seed_build"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-11-08T09:04:24.051031+00:00",
+            "logical_date": "2026-11-08T09:00:00+00:00",
+            "start_date": "2026-11-08T09:04:15.256149+00:00",
+            "state": "success",
+            "task_id": "dbt_public.wage_test_inputs_seed_build"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-11-08T09:04:43.973540+00:00",
+            "logical_date": "2026-11-08T09:00:00+00:00",
+            "start_date": "2026-11-08T09:04:24.621476+00:00",
+            "state": "success",
+            "task_id": "dbt_public.zcta_county_fips_seed_build"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-11-08T09:02:13.641322+00:00",
+            "logical_date": "2026-11-08T09:00:00+00:00",
+            "start_date": "2026-11-08T09:02:02.105216+00:00",
+            "state": "success",
+            "task_id": "dbt_public.snap_employer_snapshot_build"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-11-08T09:07:52.082379+00:00",
+            "logical_date": "2026-11-08T09:00:00+00:00",
+            "start_date": "2026-11-08T09:07:16.883008+00:00",
+            "state": "success",
+            "task_id": "public_quality_gates"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-11-08T09:08:02.479446+00:00",
+            "logical_date": "2026-11-08T09:00:00+00:00",
+            "start_date": "2026-11-08T09:07:53.071360+00:00",
+            "state": "success",
+            "task_id": "cube_refresh"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-11-08T09:08:06.271114+00:00",
+            "logical_date": "2026-11-08T09:00:00+00:00",
+            "start_date": "2026-11-08T09:08:02.992678+00:00",
+            "state": "success",
+            "task_id": "record_usage"
+          }
+        ]
+      },
+      {
+        "all_success": true,
+        "counts_as_evidence": true,
+        "dag_id": "sponsoratlas",
+        "end_date": "2026-11-06T05:49:16.039005+00:00",
+        "logical_date": "",
+        "run_after": "2026-11-06T05:40:36.828886+00:00",
+        "run_id": "manual_full_snowflake_20261106_r2",
+        "run_type": "manual_full_snowflake_20261106_r2",
+        "start_date": "2026-11-06T05:40:37.279492+00:00",
+        "state": "success",
+        "state_counts": {
+          "success": 39
+        },
+        "task_instances": [
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-11-06T05:40:46.853387+00:00",
+            "logical_date": "",
+            "start_date": "2026-11-06T05:40:37.342685+00:00",
+            "state": "success",
+            "task_id": "preflight"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-11-06T05:40:56.660277+00:00",
+            "logical_date": "",
+            "start_date": "2026-11-06T05:40:47.453770+00:00",
+            "state": "success",
+            "task_id": "observations_freshness"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-11-06T05:45:56.876051+00:00",
+            "logical_date": "",
+            "start_date": "2026-11-06T05:45:45.323598+00:00",
+            "state": "success",
+            "task_id": "dbt_public.annualize_wage_examples_model_build"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-11-06T05:43:14.069794+00:00",
+            "logical_date": "",
+            "start_date": "2026-11-06T05:43:03.848567+00:00",
+            "state": "success",
+            "task_id": "dbt_public.dim_date_model_build"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-11-06T05:43:26.050750+00:00",
+            "logical_date": "",
+            "start_date": "2026-11-06T05:43:14.889576+00:00",
+            "state": "success",
+            "task_id": "dbt_public.dim_employer_model_build"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-11-06T05:42:27.566046+00:00",
+            "logical_date": "",
+            "start_date": "2026-11-06T05:42:16.757843+00:00",
+            "state": "success",
+            "task_id": "dbt_public.dim_geography_model_build"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-11-06T05:42:38.854304+00:00",
+            "logical_date": "",
+            "start_date": "2026-11-06T05:42:27.741706+00:00",
+            "state": "success",
+            "task_id": "dbt_public.dim_occupation_model_build"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-11-06T05:46:12.598967+00:00",
+            "logical_date": "",
+            "start_date": "2026-11-06T05:45:57.162544+00:00",
+            "state": "success",
+            "task_id": "dbt_public.fact_job_posting_daily_model_build"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-11-06T05:46:29.921559+00:00",
+            "logical_date": "",
+            "start_date": "2026-11-06T05:46:13.232215+00:00",
+            "state": "success",
+            "task_id": "dbt_public.fact_lca_case_model_build"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-11-06T05:46:46.072181+00:00",
+            "logical_date": "",
+            "start_date": "2026-11-06T05:46:30.308765+00:00",
+            "state": "success",
+            "task_id": "dbt_public.fact_wage_benchmark_model_build"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-11-06T05:44:17.895966+00:00",
+            "logical_date": "",
+            "start_date": "2026-11-06T05:44:05.044672+00:00",
+            "state": "success",
+            "task_id": "dbt_public.int_bls_benchmark_candidates_model_build"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-11-06T05:43:38.710082+00:00",
+            "logical_date": "",
+            "start_date": "2026-11-06T05:43:26.822530+00:00",
+            "state": "success",
+            "task_id": "dbt_public.int_dimension_mapping_model_build"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-11-06T05:41:20.354458+00:00",
+            "logical_date": "",
+            "start_date": "2026-11-06T05:41:09.965525+00:00",
+            "state": "success",
+            "task_id": "dbt_public.int_employer_current_model_build"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-11-06T05:44:33.486448+00:00",
+            "logical_date": "",
+            "start_date": "2026-11-06T05:44:18.163297+00:00",
+            "state": "success",
+            "task_id": "dbt_public.int_lca_case_candidates_model_build"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-11-06T05:43:54.857202+00:00",
+            "logical_date": "",
+            "start_date": "2026-11-06T05:43:39.091720+00:00",
+            "state": "success",
+            "task_id": "dbt_public.stg_bls_model_build"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-11-06T05:46:56.874919+00:00",
+            "logical_date": "",
+            "start_date": "2026-11-06T05:46:46.531297+00:00",
+            "state": "success",
+            "task_id": "dbt_public.stg_board_jobs_model_build"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-11-06T05:47:07.926573+00:00",
+            "logical_date": "",
+            "start_date": "2026-11-06T05:46:57.297174+00:00",
+            "state": "success",
+            "task_id": "dbt_public.stg_cdc_application_events_model_build"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-11-06T05:47:18.923300+00:00",
+            "logical_date": "",
+            "start_date": "2026-11-06T05:47:08.694134+00:00",
+            "state": "success",
+            "task_id": "dbt_public.stg_cdc_job_postings_model_build"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-11-06T05:47:41.883297+00:00",
+            "logical_date": "",
+            "start_date": "2026-11-06T05:47:19.772070+00:00",
+            "state": "success",
+            "task_id": "dbt_public.stg_lca_model_build"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-11-06T05:47:54.905601+00:00",
+            "logical_date": "",
+            "start_date": "2026-11-06T05:47:42.029304+00:00",
+            "state": "success",
+            "task_id": "dbt_public.stg_uscis_model_build"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-11-06T05:48:05.697667+00:00",
+            "logical_date": "",
+            "start_date": "2026-11-06T05:47:55.754055+00:00",
+            "state": "success",
+            "task_id": "dbt_public.board_column_map_seed_build"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-11-06T05:41:09.743658+00:00",
+            "logical_date": "",
+            "start_date": "2026-11-06T05:40:57.589563+00:00",
+            "state": "success",
+            "task_id": "dbt_public.county_fips_seed_build"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-11-06T05:42:49.366837+00:00",
+            "logical_date": "",
+            "start_date": "2026-11-06T05:42:38.973522+00:00",
+            "state": "success",
+            "task_id": "dbt_public.file_column_map_seed_build"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-11-06T05:44:43.974266+00:00",
+            "logical_date": "",
+            "start_date": "2026-11-06T05:44:34.090320+00:00",
+            "state": "success",
+            "task_id": "dbt_public.lca_column_map_seed_build"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-11-06T05:48:16.110221+00:00",
+            "logical_date": "",
+            "start_date": "2026-11-06T05:48:05.764648+00:00",
+            "state": "success",
+            "task_id": "dbt_public.physical_column_map_seed_build"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-11-06T05:45:10.786077+00:00",
+            "logical_date": "",
+            "start_date": "2026-11-06T05:44:44.097877+00:00",
+            "state": "success",
+            "task_id": "dbt_public.place_county_fips_seed_build"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-11-06T05:41:32.165592+00:00",
+            "logical_date": "",
+            "start_date": "2026-11-06T05:41:20.690813+00:00",
+            "state": "success",
+            "task_id": "dbt_public.ref_bls_areas_2025_seed_build"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-11-06T05:41:43.582180+00:00",
+            "logical_date": "",
+            "start_date": "2026-11-06T05:41:32.480922+00:00",
+            "state": "success",
+            "task_id": "dbt_public.ref_county_2023_seed_build"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-11-06T05:41:54.961992+00:00",
+            "logical_date": "",
+            "start_date": "2026-11-06T05:41:44.588072+00:00",
+            "state": "success",
+            "task_id": "dbt_public.ref_county_cbsa_2023_seed_build"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-11-06T05:42:05.494950+00:00",
+            "logical_date": "",
+            "start_date": "2026-11-06T05:41:55.654414+00:00",
+            "state": "success",
+            "task_id": "dbt_public.ref_oews_2025_seed_build"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-11-06T05:42:16.059686+00:00",
+            "logical_date": "",
+            "start_date": "2026-11-06T05:42:05.692585+00:00",
+            "state": "success",
+            "task_id": "dbt_public.ref_soc_2018_seed_build"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-11-06T05:48:27.395940+00:00",
+            "logical_date": "",
+            "start_date": "2026-11-06T05:48:16.870381+00:00",
+            "state": "success",
+            "task_id": "dbt_public.staging_flag_limits_seed_build"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-11-06T05:44:04.822020+00:00",
+            "logical_date": "",
+            "start_date": "2026-11-06T05:43:54.995606+00:00",
+            "state": "success",
+            "task_id": "dbt_public.state_fips_seed_build"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-11-06T05:45:21.757295+00:00",
+            "logical_date": "",
+            "start_date": "2026-11-06T05:45:11.853499+00:00",
+            "state": "success",
+            "task_id": "dbt_public.wage_test_inputs_seed_build"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-11-06T05:45:44.372324+00:00",
+            "logical_date": "",
+            "start_date": "2026-11-06T05:45:22.453485+00:00",
+            "state": "success",
+            "task_id": "dbt_public.zcta_county_fips_seed_build"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-11-06T05:43:03.249203+00:00",
+            "logical_date": "",
+            "start_date": "2026-11-06T05:42:49.984982+00:00",
+            "state": "success",
+            "task_id": "dbt_public.snap_employer_snapshot_build"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-11-06T05:49:00.843916+00:00",
+            "logical_date": "",
+            "start_date": "2026-11-06T05:48:27.502588+00:00",
+            "state": "success",
+            "task_id": "public_quality_gates"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-11-06T05:49:11.686386+00:00",
+            "logical_date": "",
+            "start_date": "2026-11-06T05:49:01.727014+00:00",
+            "state": "success",
+            "task_id": "cube_refresh"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-11-06T05:49:15.917520+00:00",
+            "logical_date": "",
+            "start_date": "2026-11-06T05:49:12.142897+00:00",
+            "state": "success",
+            "task_id": "record_usage"
+          }
+        ]
+      },
+      {
+        "all_success": false,
+        "counts_as_evidence": false,
+        "dag_id": "sponsoratlas",
+        "end_date": "2026-11-06T05:39:25.232814+00:00",
+        "logical_date": "",
+        "run_after": "2026-11-06T05:30:58.718913+00:00",
+        "run_id": "manual_full_snowflake_20261106",
+        "run_type": "manual_full_snowflake_20261106",
+        "start_date": "2026-11-06T05:30:59.294251+00:00",
+        "state": "failed",
+        "state_counts": {
+          "failed": 1,
+          "success": 35,
+          "upstream_failed": 3
+        },
+        "task_instances": [
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-11-06T05:31:07.456820+00:00",
+            "logical_date": "",
+            "start_date": "2026-11-06T05:30:59.348466+00:00",
+            "state": "success",
+            "task_id": "preflight"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-11-06T05:31:17.555981+00:00",
+            "logical_date": "",
+            "start_date": "2026-11-06T05:31:07.619888+00:00",
+            "state": "success",
+            "task_id": "observations_freshness"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-11-06T05:36:25.751481+00:00",
+            "logical_date": "",
+            "start_date": "2026-11-06T05:36:14.675998+00:00",
+            "state": "success",
+            "task_id": "dbt_public.annualize_wage_examples_model_build"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-11-06T05:33:38.113755+00:00",
+            "logical_date": "",
+            "start_date": "2026-11-06T05:33:26.666950+00:00",
+            "state": "success",
+            "task_id": "dbt_public.dim_date_model_build"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-11-06T05:33:49.231248+00:00",
+            "logical_date": "",
+            "start_date": "2026-11-06T05:33:38.318333+00:00",
+            "state": "success",
+            "task_id": "dbt_public.dim_employer_model_build"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-11-06T05:32:50.508175+00:00",
+            "logical_date": "",
+            "start_date": "2026-11-06T05:32:39.100434+00:00",
+            "state": "success",
+            "task_id": "dbt_public.dim_geography_model_build"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-11-06T05:33:01.927165+00:00",
+            "logical_date": "",
+            "start_date": "2026-11-06T05:32:50.916929+00:00",
+            "state": "success",
+            "task_id": "dbt_public.dim_occupation_model_build"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-11-06T05:36:43.097377+00:00",
+            "logical_date": "",
+            "start_date": "2026-11-06T05:36:26.047903+00:00",
+            "state": "success",
+            "task_id": "dbt_public.fact_job_posting_daily_model_build"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-11-06T05:37:00.751646+00:00",
+            "logical_date": "",
+            "start_date": "2026-11-06T05:36:43.716829+00:00",
+            "state": "success",
+            "task_id": "dbt_public.fact_lca_case_model_build"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-11-06T05:37:59.274068+00:00",
+            "logical_date": "",
+            "start_date": "2026-11-06T05:37:49.075640+00:00",
+            "state": "failed",
+            "task_id": "dbt_public.fact_wage_benchmark_model_build"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-11-06T05:34:44.267009+00:00",
+            "logical_date": "",
+            "start_date": "2026-11-06T05:34:30.911220+00:00",
+            "state": "success",
+            "task_id": "dbt_public.int_bls_benchmark_candidates_model_build"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-11-06T05:34:02.218408+00:00",
+            "logical_date": "",
+            "start_date": "2026-11-06T05:33:49.364613+00:00",
+            "state": "success",
+            "task_id": "dbt_public.int_dimension_mapping_model_build"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-11-06T05:31:41.076633+00:00",
+            "logical_date": "",
+            "start_date": "2026-11-06T05:31:30.509216+00:00",
+            "state": "success",
+            "task_id": "dbt_public.int_employer_current_model_build"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-11-06T05:35:00.581469+00:00",
+            "logical_date": "",
+            "start_date": "2026-11-06T05:34:44.361994+00:00",
+            "state": "success",
+            "task_id": "dbt_public.int_lca_case_candidates_model_build"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-11-06T05:34:20.006349+00:00",
+            "logical_date": "",
+            "start_date": "2026-11-06T05:34:03.220471+00:00",
+            "state": "success",
+            "task_id": "dbt_public.stg_bls_model_build"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-11-06T05:37:24.472587+00:00",
+            "logical_date": "",
+            "start_date": "2026-11-06T05:37:12.782687+00:00",
+            "state": "success",
+            "task_id": "dbt_public.stg_board_jobs_model_build"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-11-06T05:37:48.523405+00:00",
+            "logical_date": "",
+            "start_date": "2026-11-06T05:37:35.925303+00:00",
+            "state": "success",
+            "task_id": "dbt_public.stg_cdc_application_events_model_build"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-11-06T05:38:10.672017+00:00",
+            "logical_date": "",
+            "start_date": "2026-11-06T05:37:59.388934+00:00",
+            "state": "success",
+            "task_id": "dbt_public.stg_cdc_job_postings_model_build"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-11-06T05:38:35.924785+00:00",
+            "logical_date": "",
+            "start_date": "2026-11-06T05:38:11.328324+00:00",
+            "state": "success",
+            "task_id": "dbt_public.stg_lca_model_build"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-11-06T05:38:50.417857+00:00",
+            "logical_date": "",
+            "start_date": "2026-11-06T05:38:36.132521+00:00",
+            "state": "success",
+            "task_id": "dbt_public.stg_uscis_model_build"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-11-06T05:39:01.595841+00:00",
+            "logical_date": "",
+            "start_date": "2026-11-06T05:38:51.314633+00:00",
+            "state": "success",
+            "task_id": "dbt_public.board_column_map_seed_build"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-11-06T05:31:29.906066+00:00",
+            "logical_date": "",
+            "start_date": "2026-11-06T05:31:17.841779+00:00",
+            "state": "success",
+            "task_id": "dbt_public.county_fips_seed_build"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-11-06T05:33:12.430269+00:00",
+            "logical_date": "",
+            "start_date": "2026-11-06T05:33:02.004597+00:00",
+            "state": "success",
+            "task_id": "dbt_public.file_column_map_seed_build"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-11-06T05:35:10.912930+00:00",
+            "logical_date": "",
+            "start_date": "2026-11-06T05:35:01.001177+00:00",
+            "state": "success",
+            "task_id": "dbt_public.lca_column_map_seed_build"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-11-06T05:39:12.873153+00:00",
+            "logical_date": "",
+            "start_date": "2026-11-06T05:39:02.085124+00:00",
+            "state": "success",
+            "task_id": "dbt_public.physical_column_map_seed_build"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-11-06T05:35:38.020079+00:00",
+            "logical_date": "",
+            "start_date": "2026-11-06T05:35:11.359900+00:00",
+            "state": "success",
+            "task_id": "dbt_public.place_county_fips_seed_build"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-11-06T05:31:53.262758+00:00",
+            "logical_date": "",
+            "start_date": "2026-11-06T05:31:41.692624+00:00",
+            "state": "success",
+            "task_id": "dbt_public.ref_bls_areas_2025_seed_build"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-11-06T05:32:05.255818+00:00",
+            "logical_date": "",
+            "start_date": "2026-11-06T05:31:53.789273+00:00",
+            "state": "success",
+            "task_id": "dbt_public.ref_county_2023_seed_build"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-11-06T05:32:16.651743+00:00",
+            "logical_date": "",
+            "start_date": "2026-11-06T05:32:05.902325+00:00",
+            "state": "success",
+            "task_id": "dbt_public.ref_county_cbsa_2023_seed_build"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-11-06T05:32:27.291369+00:00",
+            "logical_date": "",
+            "start_date": "2026-11-06T05:32:16.993439+00:00",
+            "state": "success",
+            "task_id": "dbt_public.ref_oews_2025_seed_build"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-11-06T05:32:38.597127+00:00",
+            "logical_date": "",
+            "start_date": "2026-11-06T05:32:27.572241+00:00",
+            "state": "success",
+            "task_id": "dbt_public.ref_soc_2018_seed_build"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-11-06T05:39:24.986927+00:00",
+            "logical_date": "",
+            "start_date": "2026-11-06T05:39:13.173428+00:00",
+            "state": "success",
+            "task_id": "dbt_public.staging_flag_limits_seed_build"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-11-06T05:34:30.561098+00:00",
+            "logical_date": "",
+            "start_date": "2026-11-06T05:34:20.468901+00:00",
+            "state": "success",
+            "task_id": "dbt_public.state_fips_seed_build"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-11-06T05:35:49.635236+00:00",
+            "logical_date": "",
+            "start_date": "2026-11-06T05:35:38.654073+00:00",
+            "state": "success",
+            "task_id": "dbt_public.wage_test_inputs_seed_build"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-11-06T05:36:14.449909+00:00",
+            "logical_date": "",
+            "start_date": "2026-11-06T05:35:49.745067+00:00",
+            "state": "success",
+            "task_id": "dbt_public.zcta_county_fips_seed_build"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-11-06T05:33:26.309543+00:00",
+            "logical_date": "",
+            "start_date": "2026-11-06T05:33:13.061745+00:00",
+            "state": "success",
+            "task_id": "dbt_public.snap_employer_snapshot_build"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-11-06T05:37:59.359502+00:00",
+            "logical_date": "",
+            "start_date": "2026-11-06T05:37:59.359502+00:00",
+            "state": "upstream_failed",
+            "task_id": "public_quality_gates"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-11-06T05:37:59.406253+00:00",
+            "logical_date": "",
+            "start_date": "2026-11-06T05:37:59.406253+00:00",
+            "state": "upstream_failed",
+            "task_id": "cube_refresh"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-11-06T05:38:00.437896+00:00",
+            "logical_date": "",
+            "start_date": "2026-11-06T05:38:00.437896+00:00",
+            "state": "upstream_failed",
+            "task_id": "record_usage"
+          }
+        ]
+      },
+      {
+        "all_success": false,
+        "counts_as_evidence": false,
+        "dag_id": "sponsoratlas",
+        "end_date": "2026-10-24T20:25:03.645437+00:00",
+        "logical_date": "",
+        "run_after": "2026-10-24T20:24:14.943712+00:00",
+        "run_id": "task9_stale_final_20261024",
+        "run_type": "task9_stale_final_20261024",
+        "start_date": "2026-10-24T20:24:16.097531+00:00",
+        "state": "failed",
+        "state_counts": {
+          "failed": 1,
+          "success": 1,
+          "upstream_failed": 33
+        },
+        "task_instances": [
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-10-24T20:24:19.486645+00:00",
+            "logical_date": "",
+            "start_date": "2026-10-24T20:24:16.145499+00:00",
+            "state": "success",
+            "task_id": "airbyte_sync"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-10-24T20:24:58.619090+00:00",
+            "logical_date": "",
+            "start_date": "2026-10-24T20:24:52.606395+00:00",
+            "state": "failed",
+            "task_id": "jobs_source_freshness"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-10-24T20:25:00.558583+00:00",
+            "logical_date": "",
+            "start_date": "2026-10-24T20:25:00.558583+00:00",
+            "state": "upstream_failed",
+            "task_id": "dbt_public.annualize_wage_examples_model_build"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-10-24T20:24:59.520985+00:00",
+            "logical_date": "",
+            "start_date": "2026-10-24T20:24:59.520985+00:00",
+            "state": "upstream_failed",
+            "task_id": "dbt_public.dim_date_model_build"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-10-24T20:25:01.593771+00:00",
+            "logical_date": "",
+            "start_date": "2026-10-24T20:25:01.593771+00:00",
+            "state": "upstream_failed",
+            "task_id": "dbt_public.dim_employer_model_build"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-10-24T20:25:00.559334+00:00",
+            "logical_date": "",
+            "start_date": "2026-10-24T20:25:00.559334+00:00",
+            "state": "upstream_failed",
+            "task_id": "dbt_public.dim_geography_model_build"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-10-24T20:25:00.559696+00:00",
+            "logical_date": "",
+            "start_date": "2026-10-24T20:25:00.559696+00:00",
+            "state": "upstream_failed",
+            "task_id": "dbt_public.dim_occupation_model_build"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-10-24T20:25:00.560022+00:00",
+            "logical_date": "",
+            "start_date": "2026-10-24T20:25:00.560022+00:00",
+            "state": "upstream_failed",
+            "task_id": "dbt_public.fact_job_posting_daily_model_build"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-10-24T20:25:00.560368+00:00",
+            "logical_date": "",
+            "start_date": "2026-10-24T20:25:00.560368+00:00",
+            "state": "upstream_failed",
+            "task_id": "dbt_public.fact_lca_case_model_build"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-10-24T20:25:00.560720+00:00",
+            "logical_date": "",
+            "start_date": "2026-10-24T20:25:00.560720+00:00",
+            "state": "upstream_failed",
+            "task_id": "dbt_public.fact_wage_benchmark_model_build"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-10-24T20:25:01.594077+00:00",
+            "logical_date": "",
+            "start_date": "2026-10-24T20:25:01.594077+00:00",
+            "state": "upstream_failed",
+            "task_id": "dbt_public.int_bls_benchmark_candidates_model_build"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-10-24T20:25:01.594387+00:00",
+            "logical_date": "",
+            "start_date": "2026-10-24T20:25:01.594387+00:00",
+            "state": "upstream_failed",
+            "task_id": "dbt_public.int_dimension_mapping_model_build"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-10-24T20:24:59.522782+00:00",
+            "logical_date": "",
+            "start_date": "2026-10-24T20:24:59.522782+00:00",
+            "state": "upstream_failed",
+            "task_id": "dbt_public.int_employer_current_model_build"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-10-24T20:25:02.614738+00:00",
+            "logical_date": "",
+            "start_date": "2026-10-24T20:25:02.614738+00:00",
+            "state": "upstream_failed",
+            "task_id": "dbt_public.int_lca_case_candidates_model_build"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-10-24T20:25:00.561744+00:00",
+            "logical_date": "",
+            "start_date": "2026-10-24T20:25:00.561744+00:00",
+            "state": "upstream_failed",
+            "task_id": "dbt_public.stg_bls_model_build"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-10-24T20:24:59.526978+00:00",
+            "logical_date": "",
+            "start_date": "2026-10-24T20:24:59.526978+00:00",
+            "state": "upstream_failed",
+            "task_id": "dbt_public.stg_board_jobs_model_build"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-10-24T20:24:59.527378+00:00",
+            "logical_date": "",
+            "start_date": "2026-10-24T20:24:59.527378+00:00",
+            "state": "upstream_failed",
+            "task_id": "dbt_public.stg_cdc_application_events_model_build"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-10-24T20:24:59.527794+00:00",
+            "logical_date": "",
+            "start_date": "2026-10-24T20:24:59.527794+00:00",
+            "state": "upstream_failed",
+            "task_id": "dbt_public.stg_cdc_job_postings_model_build"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-10-24T20:25:00.562212+00:00",
+            "logical_date": "",
+            "start_date": "2026-10-24T20:25:00.562212+00:00",
+            "state": "upstream_failed",
+            "task_id": "dbt_public.stg_lca_model_build"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-10-24T20:25:00.562539+00:00",
+            "logical_date": "",
+            "start_date": "2026-10-24T20:25:00.562539+00:00",
+            "state": "upstream_failed",
+            "task_id": "dbt_public.stg_uscis_model_build"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-10-24T20:24:59.518915+00:00",
+            "logical_date": "",
+            "start_date": "2026-10-24T20:24:59.518915+00:00",
+            "state": "upstream_failed",
+            "task_id": "dbt_public.board_column_map_seed_build"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-10-24T20:24:59.520509+00:00",
+            "logical_date": "",
+            "start_date": "2026-10-24T20:24:59.520509+00:00",
+            "state": "upstream_failed",
+            "task_id": "dbt_public.county_fips_seed_build"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-10-24T20:24:59.522021+00:00",
+            "logical_date": "",
+            "start_date": "2026-10-24T20:24:59.522021+00:00",
+            "state": "upstream_failed",
+            "task_id": "dbt_public.file_column_map_seed_build"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-10-24T20:24:59.523351+00:00",
+            "logical_date": "",
+            "start_date": "2026-10-24T20:24:59.523351+00:00",
+            "state": "upstream_failed",
+            "task_id": "dbt_public.lca_column_map_seed_build"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-10-24T20:24:59.523792+00:00",
+            "logical_date": "",
+            "start_date": "2026-10-24T20:24:59.523792+00:00",
+            "state": "upstream_failed",
+            "task_id": "dbt_public.physical_column_map_seed_build"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-10-24T20:24:59.524213+00:00",
+            "logical_date": "",
+            "start_date": "2026-10-24T20:24:59.524213+00:00",
+            "state": "upstream_failed",
+            "task_id": "dbt_public.ref_bls_areas_2025_seed_build"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-10-24T20:24:59.524631+00:00",
+            "logical_date": "",
+            "start_date": "2026-10-24T20:24:59.524631+00:00",
+            "state": "upstream_failed",
+            "task_id": "dbt_public.ref_county_2023_seed_build"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-10-24T20:24:59.525042+00:00",
+            "logical_date": "",
+            "start_date": "2026-10-24T20:24:59.525042+00:00",
+            "state": "upstream_failed",
+            "task_id": "dbt_public.ref_county_cbsa_2023_seed_build"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-10-24T20:24:59.525462+00:00",
+            "logical_date": "",
+            "start_date": "2026-10-24T20:24:59.525462+00:00",
+            "state": "upstream_failed",
+            "task_id": "dbt_public.ref_oews_2025_seed_build"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-10-24T20:24:59.525873+00:00",
+            "logical_date": "",
+            "start_date": "2026-10-24T20:24:59.525873+00:00",
+            "state": "upstream_failed",
+            "task_id": "dbt_public.ref_soc_2018_seed_build"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-10-24T20:24:59.526376+00:00",
+            "logical_date": "",
+            "start_date": "2026-10-24T20:24:59.526376+00:00",
+            "state": "upstream_failed",
+            "task_id": "dbt_public.state_fips_seed_build"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-10-24T20:24:59.528378+00:00",
+            "logical_date": "",
+            "start_date": "2026-10-24T20:24:59.528378+00:00",
+            "state": "upstream_failed",
+            "task_id": "dbt_public.wage_test_inputs_seed_build"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-10-24T20:25:00.561256+00:00",
+            "logical_date": "",
+            "start_date": "2026-10-24T20:25:00.561256+00:00",
+            "state": "upstream_failed",
+            "task_id": "dbt_public.snap_employer_snapshot_build"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-10-24T20:25:00.562872+00:00",
+            "logical_date": "",
+            "start_date": "2026-10-24T20:25:00.562872+00:00",
+            "state": "upstream_failed",
+            "task_id": "public_quality_gates"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-10-24T20:25:01.593195+00:00",
+            "logical_date": "",
+            "start_date": "2026-10-24T20:25:01.593195+00:00",
+            "state": "upstream_failed",
+            "task_id": "cube_refresh"
+          }
+        ]
+      },
+      {
+        "all_success": true,
+        "counts_as_evidence": false,
+        "dag_id": "sponsoratlas",
+        "end_date": "2026-10-24T20:22:11.247965+00:00",
+        "logical_date": "",
+        "run_after": "2026-10-24T20:16:52.185863+00:00",
+        "run_id": "task9_final_20261024",
+        "run_type": "task9_final_20261024",
+        "start_date": "2026-10-24T20:17:56.493358+00:00",
+        "state": "success",
+        "state_counts": {
+          "success": 35
+        },
+        "task_instances": [
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-10-24T20:18:02.678762+00:00",
+            "logical_date": "",
+            "start_date": "2026-10-24T20:17:56.590574+00:00",
+            "state": "success",
+            "task_id": "airbyte_sync"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-10-24T20:18:10.022900+00:00",
+            "logical_date": "",
+            "start_date": "2026-10-24T20:18:02.827829+00:00",
+            "state": "success",
+            "task_id": "jobs_source_freshness"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-10-24T20:20:40.700536+00:00",
+            "logical_date": "",
+            "start_date": "2026-10-24T20:20:34.107180+00:00",
+            "state": "success",
+            "task_id": "dbt_public.annualize_wage_examples_model_build"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-10-24T20:19:35.312473+00:00",
+            "logical_date": "",
+            "start_date": "2026-10-24T20:19:28.784063+00:00",
+            "state": "success",
+            "task_id": "dbt_public.dim_date_model_build"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-10-24T20:19:42.824059+00:00",
+            "logical_date": "",
+            "start_date": "2026-10-24T20:19:36.035688+00:00",
+            "state": "success",
+            "task_id": "dbt_public.dim_employer_model_build"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-10-24T20:19:05.926753+00:00",
+            "logical_date": "",
+            "start_date": "2026-10-24T20:18:59.746889+00:00",
+            "state": "success",
+            "task_id": "dbt_public.dim_geography_model_build"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-10-24T20:19:13.877772+00:00",
+            "logical_date": "",
+            "start_date": "2026-10-24T20:19:06.683379+00:00",
+            "state": "success",
+            "task_id": "dbt_public.dim_occupation_model_build"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-10-24T20:20:48.330027+00:00",
+            "logical_date": "",
+            "start_date": "2026-10-24T20:20:41.018371+00:00",
+            "state": "success",
+            "task_id": "dbt_public.fact_job_posting_daily_model_build"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-10-24T20:20:55.701718+00:00",
+            "logical_date": "",
+            "start_date": "2026-10-24T20:20:49.038574+00:00",
+            "state": "success",
+            "task_id": "dbt_public.fact_lca_case_model_build"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-10-24T20:21:03.520161+00:00",
+            "logical_date": "",
+            "start_date": "2026-10-24T20:20:56.295383+00:00",
+            "state": "success",
+            "task_id": "dbt_public.fact_wage_benchmark_model_build"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-10-24T20:20:10.650303+00:00",
+            "logical_date": "",
+            "start_date": "2026-10-24T20:20:04.064066+00:00",
+            "state": "success",
+            "task_id": "dbt_public.int_bls_benchmark_candidates_model_build"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-10-24T20:19:50.129607+00:00",
+            "logical_date": "",
+            "start_date": "2026-10-24T20:19:43.758620+00:00",
+            "state": "success",
+            "task_id": "dbt_public.int_dimension_mapping_model_build"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-10-24T20:18:25.303657+00:00",
+            "logical_date": "",
+            "start_date": "2026-10-24T20:18:18.591219+00:00",
+            "state": "success",
+            "task_id": "dbt_public.int_employer_current_model_build"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-10-24T20:20:17.523824+00:00",
+            "logical_date": "",
+            "start_date": "2026-10-24T20:20:10.970475+00:00",
+            "state": "success",
+            "task_id": "dbt_public.int_lca_case_candidates_model_build"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-10-24T20:19:57.395275+00:00",
+            "logical_date": "",
+            "start_date": "2026-10-24T20:19:50.902577+00:00",
+            "state": "success",
+            "task_id": "dbt_public.stg_bls_model_build"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-10-24T20:21:11.340376+00:00",
+            "logical_date": "",
+            "start_date": "2026-10-24T20:21:04.177607+00:00",
+            "state": "success",
+            "task_id": "dbt_public.stg_board_jobs_model_build"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-10-24T20:21:19.256623+00:00",
+            "logical_date": "",
+            "start_date": "2026-10-24T20:21:11.878817+00:00",
+            "state": "success",
+            "task_id": "dbt_public.stg_cdc_application_events_model_build"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-10-24T20:21:27.182704+00:00",
+            "logical_date": "",
+            "start_date": "2026-10-24T20:21:20.207250+00:00",
+            "state": "success",
+            "task_id": "dbt_public.stg_cdc_job_postings_model_build"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-10-24T20:21:35.663754+00:00",
+            "logical_date": "",
+            "start_date": "2026-10-24T20:21:28.123326+00:00",
+            "state": "success",
+            "task_id": "dbt_public.stg_lca_model_build"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-10-24T20:21:43.313102+00:00",
+            "logical_date": "",
+            "start_date": "2026-10-24T20:21:36.400775+00:00",
+            "state": "success",
+            "task_id": "dbt_public.stg_uscis_model_build"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-10-24T20:21:50.695494+00:00",
+            "logical_date": "",
+            "start_date": "2026-10-24T20:21:44.003608+00:00",
+            "state": "success",
+            "task_id": "dbt_public.board_column_map_seed_build"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-10-24T20:18:17.753655+00:00",
+            "logical_date": "",
+            "start_date": "2026-10-24T20:18:10.783224+00:00",
+            "state": "success",
+            "task_id": "dbt_public.county_fips_seed_build"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-10-24T20:19:21.045510+00:00",
+            "logical_date": "",
+            "start_date": "2026-10-24T20:19:14.750665+00:00",
+            "state": "success",
+            "task_id": "dbt_public.file_column_map_seed_build"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-10-24T20:20:25.462836+00:00",
+            "logical_date": "",
+            "start_date": "2026-10-24T20:20:17.900792+00:00",
+            "state": "success",
+            "task_id": "dbt_public.lca_column_map_seed_build"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-10-24T20:21:57.941597+00:00",
+            "logical_date": "",
+            "start_date": "2026-10-24T20:21:51.226331+00:00",
+            "state": "success",
+            "task_id": "dbt_public.physical_column_map_seed_build"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-10-24T20:18:32.639272+00:00",
+            "logical_date": "",
+            "start_date": "2026-10-24T20:18:25.858284+00:00",
+            "state": "success",
+            "task_id": "dbt_public.ref_bls_areas_2025_seed_build"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-10-24T20:18:39.386673+00:00",
+            "logical_date": "",
+            "start_date": "2026-10-24T20:18:32.709774+00:00",
+            "state": "success",
+            "task_id": "dbt_public.ref_county_2023_seed_build"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-10-24T20:18:45.800020+00:00",
+            "logical_date": "",
+            "start_date": "2026-10-24T20:18:39.664500+00:00",
+            "state": "success",
+            "task_id": "dbt_public.ref_county_cbsa_2023_seed_build"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-10-24T20:18:52.685634+00:00",
+            "logical_date": "",
+            "start_date": "2026-10-24T20:18:46.612194+00:00",
+            "state": "success",
+            "task_id": "dbt_public.ref_oews_2025_seed_build"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-10-24T20:18:59.244061+00:00",
+            "logical_date": "",
+            "start_date": "2026-10-24T20:18:52.817534+00:00",
+            "state": "success",
+            "task_id": "dbt_public.ref_soc_2018_seed_build"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-10-24T20:20:04.020998+00:00",
+            "logical_date": "",
+            "start_date": "2026-10-24T20:19:57.843546+00:00",
+            "state": "success",
+            "task_id": "dbt_public.state_fips_seed_build"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-10-24T20:20:33.176930+00:00",
+            "logical_date": "",
+            "start_date": "2026-10-24T20:20:26.190475+00:00",
+            "state": "success",
+            "task_id": "dbt_public.wage_test_inputs_seed_build"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-10-24T20:19:28.303227+00:00",
+            "logical_date": "",
+            "start_date": "2026-10-24T20:19:21.855163+00:00",
+            "state": "success",
+            "task_id": "dbt_public.snap_employer_snapshot_build"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-10-24T20:22:06.175364+00:00",
+            "logical_date": "",
+            "start_date": "2026-10-24T20:21:58.172911+00:00",
+            "state": "success",
+            "task_id": "public_quality_gates"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-10-24T20:22:11.121333+00:00",
+            "logical_date": "",
+            "start_date": "2026-10-24T20:22:06.469860+00:00",
+            "state": "success",
+            "task_id": "cube_refresh"
+          }
+        ]
+      },
+      {
+        "all_success": false,
+        "counts_as_evidence": false,
+        "dag_id": "sponsoratlas",
+        "end_date": "2026-10-24T20:16:39.929280+00:00",
+        "logical_date": "",
+        "run_after": "2026-10-24T20:02:10.799310+00:00",
+        "run_id": "task9_green_isolated_20261024",
+        "run_type": "task9_green_isolated_20261024",
+        "start_date": "2026-10-24T20:02:11.727410+00:00",
+        "state": "failed",
+        "state_counts": {
+          "failed": 1,
+          "success": 34
+        },
+        "task_instances": [
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-10-24T20:02:16.802623+00:00",
+            "logical_date": "",
+            "start_date": "2026-10-24T20:02:11.828070+00:00",
+            "state": "success",
+            "task_id": "airbyte_sync"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-10-24T20:02:24.464339+00:00",
+            "logical_date": "",
+            "start_date": "2026-10-24T20:02:17.772861+00:00",
+            "state": "success",
+            "task_id": "jobs_source_freshness"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-10-24T20:05:09.631842+00:00",
+            "logical_date": "",
+            "start_date": "2026-10-24T20:05:02.235573+00:00",
+            "state": "success",
+            "task_id": "dbt_public.annualize_wage_examples_model_build"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-10-24T20:03:59.123811+00:00",
+            "logical_date": "",
+            "start_date": "2026-10-24T20:03:52.041248+00:00",
+            "state": "success",
+            "task_id": "dbt_public.dim_date_model_build"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-10-24T20:04:07.478709+00:00",
+            "logical_date": "",
+            "start_date": "2026-10-24T20:04:00.076981+00:00",
+            "state": "success",
+            "task_id": "dbt_public.dim_employer_model_build"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-10-24T20:03:27.956734+00:00",
+            "logical_date": "",
+            "start_date": "2026-10-24T20:03:20.922138+00:00",
+            "state": "success",
+            "task_id": "dbt_public.dim_geography_model_build"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-10-24T20:03:36.036047+00:00",
+            "logical_date": "",
+            "start_date": "2026-10-24T20:03:28.950197+00:00",
+            "state": "success",
+            "task_id": "dbt_public.dim_occupation_model_build"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-10-24T20:05:17.496585+00:00",
+            "logical_date": "",
+            "start_date": "2026-10-24T20:05:10.300157+00:00",
+            "state": "success",
+            "task_id": "dbt_public.fact_job_posting_daily_model_build"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-10-24T20:05:25.384935+00:00",
+            "logical_date": "",
+            "start_date": "2026-10-24T20:05:18.199922+00:00",
+            "state": "success",
+            "task_id": "dbt_public.fact_lca_case_model_build"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-10-24T20:05:34.305765+00:00",
+            "logical_date": "",
+            "start_date": "2026-10-24T20:05:26.175567+00:00",
+            "state": "success",
+            "task_id": "dbt_public.fact_wage_benchmark_model_build"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-10-24T20:04:38.428553+00:00",
+            "logical_date": "",
+            "start_date": "2026-10-24T20:04:31.169372+00:00",
+            "state": "success",
+            "task_id": "dbt_public.int_bls_benchmark_candidates_model_build"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-10-24T20:04:15.384036+00:00",
+            "logical_date": "",
+            "start_date": "2026-10-24T20:04:08.117204+00:00",
+            "state": "success",
+            "task_id": "dbt_public.int_dimension_mapping_model_build"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-10-24T20:02:43.971428+00:00",
+            "logical_date": "",
+            "start_date": "2026-10-24T20:02:36.696892+00:00",
+            "state": "success",
+            "task_id": "dbt_public.int_employer_current_model_build"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-10-24T20:04:46.555074+00:00",
+            "logical_date": "",
+            "start_date": "2026-10-24T20:04:39.203872+00:00",
+            "state": "success",
+            "task_id": "dbt_public.int_lca_case_candidates_model_build"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-10-24T20:04:23.755932+00:00",
+            "logical_date": "",
+            "start_date": "2026-10-24T20:04:15.973414+00:00",
+            "state": "success",
+            "task_id": "dbt_public.stg_bls_model_build"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-10-24T20:05:42.064421+00:00",
+            "logical_date": "",
+            "start_date": "2026-10-24T20:05:34.469929+00:00",
+            "state": "success",
+            "task_id": "dbt_public.stg_board_jobs_model_build"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-10-24T20:05:49.571953+00:00",
+            "logical_date": "",
+            "start_date": "2026-10-24T20:05:42.422720+00:00",
+            "state": "success",
+            "task_id": "dbt_public.stg_cdc_application_events_model_build"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-10-24T20:05:57.395523+00:00",
+            "logical_date": "",
+            "start_date": "2026-10-24T20:05:50.346502+00:00",
+            "state": "success",
+            "task_id": "dbt_public.stg_cdc_job_postings_model_build"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-10-24T20:06:05.327739+00:00",
+            "logical_date": "",
+            "start_date": "2026-10-24T20:05:58.300655+00:00",
+            "state": "success",
+            "task_id": "dbt_public.stg_lca_model_build"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-10-24T20:06:12.474006+00:00",
+            "logical_date": "",
+            "start_date": "2026-10-24T20:06:05.563860+00:00",
+            "state": "success",
+            "task_id": "dbt_public.stg_uscis_model_build"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-10-24T20:06:20.390022+00:00",
+            "logical_date": "",
+            "start_date": "2026-10-24T20:06:13.475153+00:00",
+            "state": "success",
+            "task_id": "dbt_public.board_column_map_seed_build"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-10-24T20:02:31.643399+00:00",
+            "logical_date": "",
+            "start_date": "2026-10-24T20:02:24.928885+00:00",
+            "state": "success",
+            "task_id": "dbt_public.county_fips_seed_build"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-10-24T20:03:43.876016+00:00",
+            "logical_date": "",
+            "start_date": "2026-10-24T20:03:37.017095+00:00",
+            "state": "success",
+            "task_id": "dbt_public.file_column_map_seed_build"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-10-24T20:04:54.047528+00:00",
+            "logical_date": "",
+            "start_date": "2026-10-24T20:04:47.088155+00:00",
+            "state": "success",
+            "task_id": "dbt_public.lca_column_map_seed_build"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-10-24T20:06:28.435812+00:00",
+            "logical_date": "",
+            "start_date": "2026-10-24T20:06:21.307481+00:00",
+            "state": "success",
+            "task_id": "dbt_public.physical_column_map_seed_build"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-10-24T20:02:50.766558+00:00",
+            "logical_date": "",
+            "start_date": "2026-10-24T20:02:44.112426+00:00",
+            "state": "success",
+            "task_id": "dbt_public.ref_bls_areas_2025_seed_build"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-10-24T20:02:57.601066+00:00",
+            "logical_date": "",
+            "start_date": "2026-10-24T20:02:50.850508+00:00",
+            "state": "success",
+            "task_id": "dbt_public.ref_county_2023_seed_build"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-10-24T20:03:04.609673+00:00",
+            "logical_date": "",
+            "start_date": "2026-10-24T20:02:57.833932+00:00",
+            "state": "success",
+            "task_id": "dbt_public.ref_county_cbsa_2023_seed_build"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-10-24T20:03:12.124577+00:00",
+            "logical_date": "",
+            "start_date": "2026-10-24T20:03:05.132454+00:00",
+            "state": "success",
+            "task_id": "dbt_public.ref_oews_2025_seed_build"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-10-24T20:03:20.541278+00:00",
+            "logical_date": "",
+            "start_date": "2026-10-24T20:03:13.146706+00:00",
+            "state": "success",
+            "task_id": "dbt_public.ref_soc_2018_seed_build"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-10-24T20:04:30.975838+00:00",
+            "logical_date": "",
+            "start_date": "2026-10-24T20:04:24.189482+00:00",
+            "state": "success",
+            "task_id": "dbt_public.state_fips_seed_build"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-10-24T20:05:01.318546+00:00",
+            "logical_date": "",
+            "start_date": "2026-10-24T20:04:54.270176+00:00",
+            "state": "success",
+            "task_id": "dbt_public.wage_test_inputs_seed_build"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-10-24T20:03:51.334761+00:00",
+            "logical_date": "",
+            "start_date": "2026-10-24T20:03:44.245598+00:00",
+            "state": "success",
+            "task_id": "dbt_public.snap_employer_snapshot_build"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-10-24T20:06:37.860390+00:00",
+            "logical_date": "",
+            "start_date": "2026-10-24T20:06:29.398346+00:00",
+            "state": "success",
+            "task_id": "public_quality_gates"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "",
+            "logical_date": "",
+            "start_date": "2026-10-24T20:06:38.409463+00:00",
+            "state": "failed",
+            "task_id": "cube_refresh"
+          }
+        ]
+      },
+      {
+        "all_success": false,
+        "counts_as_evidence": false,
+        "dag_id": "sponsoratlas",
+        "end_date": "2026-10-24T20:02:02.821247+00:00",
+        "logical_date": "",
+        "run_after": "2026-10-24T19:59:17.462620+00:00",
+        "run_id": "task9_green_20261024",
+        "run_type": "task9_green_20261024",
+        "start_date": "2026-10-24T19:59:18.639232+00:00",
+        "state": "failed",
+        "state_counts": {
+          "": 7,
+          "failed": 4,
+          "running": 1,
+          "scheduled": 11,
+          "success": 3,
+          "up_for_retry": 1,
+          "upstream_failed": 8
+        },
+        "task_instances": [
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-10-24T19:59:20.580318+00:00",
+            "logical_date": "",
+            "start_date": "2026-10-24T19:59:18.702126+00:00",
+            "state": "success",
+            "task_id": "airbyte_sync"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-10-24T19:59:42.327590+00:00",
+            "logical_date": "",
+            "start_date": "2026-10-24T19:59:36.740686+00:00",
+            "state": "success",
+            "task_id": "jobs_source_freshness"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "",
+            "logical_date": "",
+            "start_date": "",
+            "state": "",
+            "task_id": "dbt_public.annualize_wage_examples_model_build"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "",
+            "logical_date": "",
+            "start_date": "",
+            "state": "scheduled",
+            "task_id": "dbt_public.dim_date_model_build"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "",
+            "logical_date": "",
+            "start_date": "",
+            "state": "",
+            "task_id": "dbt_public.dim_employer_model_build"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-10-24T20:00:22.071726+00:00",
+            "logical_date": "",
+            "start_date": "2026-10-24T20:00:22.071726+00:00",
+            "state": "upstream_failed",
+            "task_id": "dbt_public.dim_geography_model_build"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "",
+            "logical_date": "",
+            "start_date": "",
+            "state": "",
+            "task_id": "dbt_public.dim_occupation_model_build"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "",
+            "logical_date": "",
+            "start_date": "",
+            "state": "",
+            "task_id": "dbt_public.fact_job_posting_daily_model_build"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-10-24T20:00:23.186517+00:00",
+            "logical_date": "",
+            "start_date": "2026-10-24T20:00:23.186517+00:00",
+            "state": "upstream_failed",
+            "task_id": "dbt_public.fact_lca_case_model_build"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-10-24T20:00:22.108310+00:00",
+            "logical_date": "",
+            "start_date": "2026-10-24T20:00:22.108310+00:00",
+            "state": "upstream_failed",
+            "task_id": "dbt_public.fact_wage_benchmark_model_build"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "",
+            "logical_date": "",
+            "start_date": "",
+            "state": "",
+            "task_id": "dbt_public.int_bls_benchmark_candidates_model_build"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-10-24T20:00:22.162863+00:00",
+            "logical_date": "",
+            "start_date": "2026-10-24T20:00:22.162863+00:00",
+            "state": "upstream_failed",
+            "task_id": "dbt_public.int_dimension_mapping_model_build"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-10-24T19:59:53.582132+00:00",
+            "logical_date": "",
+            "start_date": "2026-10-24T19:59:49.292017+00:00",
+            "state": "success",
+            "task_id": "dbt_public.int_employer_current_model_build"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-10-24T20:00:23.157867+00:00",
+            "logical_date": "",
+            "start_date": "2026-10-24T20:00:23.157867+00:00",
+            "state": "upstream_failed",
+            "task_id": "dbt_public.int_lca_case_candidates_model_build"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "",
+            "logical_date": "",
+            "start_date": "",
+            "state": "",
+            "task_id": "dbt_public.stg_bls_model_build"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "",
+            "logical_date": "",
+            "start_date": "",
+            "state": "scheduled",
+            "task_id": "dbt_public.stg_board_jobs_model_build"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "",
+            "logical_date": "",
+            "start_date": "",
+            "state": "scheduled",
+            "task_id": "dbt_public.stg_cdc_application_events_model_build"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "",
+            "logical_date": "",
+            "start_date": "",
+            "state": "scheduled",
+            "task_id": "dbt_public.stg_cdc_job_postings_model_build"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-10-24T20:00:22.072968+00:00",
+            "logical_date": "",
+            "start_date": "2026-10-24T20:00:22.072968+00:00",
+            "state": "upstream_failed",
+            "task_id": "dbt_public.stg_lca_model_build"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "",
+            "logical_date": "",
+            "start_date": "",
+            "state": "",
+            "task_id": "dbt_public.stg_uscis_model_build"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "",
+            "logical_date": "",
+            "start_date": "",
+            "state": "scheduled",
+            "task_id": "dbt_public.board_column_map_seed_build"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-10-24T20:00:21.583880+00:00",
+            "logical_date": "",
+            "start_date": "2026-10-24T20:00:17.936997+00:00",
+            "state": "failed",
+            "task_id": "dbt_public.county_fips_seed_build"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "",
+            "logical_date": "",
+            "start_date": "",
+            "state": "scheduled",
+            "task_id": "dbt_public.file_column_map_seed_build"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "",
+            "logical_date": "",
+            "start_date": "",
+            "state": "scheduled",
+            "task_id": "dbt_public.lca_column_map_seed_build"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "",
+            "logical_date": "",
+            "start_date": "",
+            "state": "scheduled",
+            "task_id": "dbt_public.physical_column_map_seed_build"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-10-24T20:00:29.562064+00:00",
+            "logical_date": "",
+            "start_date": "2026-10-24T20:00:25.893007+00:00",
+            "state": "failed",
+            "task_id": "dbt_public.ref_bls_areas_2025_seed_build"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-10-24T20:00:33.826581+00:00",
+            "logical_date": "",
+            "start_date": "2026-10-24T20:00:30.110579+00:00",
+            "state": "failed",
+            "task_id": "dbt_public.ref_county_2023_seed_build"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-10-24T20:00:41.559783+00:00",
+            "logical_date": "",
+            "start_date": "2026-10-24T20:00:38.065917+00:00",
+            "state": "failed",
+            "task_id": "dbt_public.ref_county_cbsa_2023_seed_build"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-10-24T20:00:37.535463+00:00",
+            "logical_date": "",
+            "start_date": "2026-10-24T20:00:33.887425+00:00",
+            "state": "up_for_retry",
+            "task_id": "dbt_public.ref_oews_2025_seed_build"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "",
+            "logical_date": "",
+            "start_date": "2026-10-24T20:00:42.185882+00:00",
+            "state": "running",
+            "task_id": "dbt_public.ref_soc_2018_seed_build"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "",
+            "logical_date": "",
+            "start_date": "",
+            "state": "scheduled",
+            "task_id": "dbt_public.state_fips_seed_build"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "",
+            "logical_date": "",
+            "start_date": "",
+            "state": "scheduled",
+            "task_id": "dbt_public.wage_test_inputs_seed_build"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "",
+            "logical_date": "",
+            "start_date": "",
+            "state": "scheduled",
+            "task_id": "dbt_public.snap_employer_snapshot_build"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-10-24T20:00:22.163524+00:00",
+            "logical_date": "",
+            "start_date": "2026-10-24T20:00:22.163524+00:00",
+            "state": "upstream_failed",
+            "task_id": "public_quality_gates"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-10-24T20:00:23.156204+00:00",
+            "logical_date": "",
+            "start_date": "2026-10-24T20:00:23.156204+00:00",
+            "state": "upstream_failed",
+            "task_id": "cube_refresh"
+          }
+        ]
+      },
+      {
+        "all_success": false,
+        "counts_as_evidence": false,
+        "dag_id": "sponsoratlas",
+        "end_date": "2026-10-24T19:59:00.358187+00:00",
+        "logical_date": "",
+        "run_after": "2026-10-24T19:57:04.133533+00:00",
+        "run_id": "task9_stale_20261024",
+        "run_type": "task9_stale_20261024",
+        "start_date": "2026-10-24T19:58:10.611062+00:00",
+        "state": "failed",
+        "state_counts": {
+          "failed": 1,
+          "success": 1,
+          "upstream_failed": 33
+        },
+        "task_instances": [
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-10-24T19:58:14.055199+00:00",
+            "logical_date": "",
+            "start_date": "2026-10-24T19:58:10.656968+00:00",
+            "state": "success",
+            "task_id": "airbyte_sync"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-10-24T19:58:56.246659+00:00",
+            "logical_date": "",
+            "start_date": "2026-10-24T19:58:48.712765+00:00",
+            "state": "failed",
+            "task_id": "jobs_source_freshness"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-10-24T19:58:57.656128+00:00",
+            "logical_date": "",
+            "start_date": "2026-10-24T19:58:57.656128+00:00",
+            "state": "upstream_failed",
+            "task_id": "dbt_public.annualize_wage_examples_model_build"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-10-24T19:58:56.625352+00:00",
+            "logical_date": "",
+            "start_date": "2026-10-24T19:58:56.625352+00:00",
+            "state": "upstream_failed",
+            "task_id": "dbt_public.dim_date_model_build"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-10-24T19:58:58.300460+00:00",
+            "logical_date": "",
+            "start_date": "2026-10-24T19:58:58.300460+00:00",
+            "state": "upstream_failed",
+            "task_id": "dbt_public.dim_employer_model_build"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-10-24T19:58:57.656889+00:00",
+            "logical_date": "",
+            "start_date": "2026-10-24T19:58:57.656889+00:00",
+            "state": "upstream_failed",
+            "task_id": "dbt_public.dim_geography_model_build"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-10-24T19:58:57.657254+00:00",
+            "logical_date": "",
+            "start_date": "2026-10-24T19:58:57.657254+00:00",
+            "state": "upstream_failed",
+            "task_id": "dbt_public.dim_occupation_model_build"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-10-24T19:58:57.657607+00:00",
+            "logical_date": "",
+            "start_date": "2026-10-24T19:58:57.657607+00:00",
+            "state": "upstream_failed",
+            "task_id": "dbt_public.fact_job_posting_daily_model_build"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-10-24T19:58:57.657926+00:00",
+            "logical_date": "",
+            "start_date": "2026-10-24T19:58:57.657926+00:00",
+            "state": "upstream_failed",
+            "task_id": "dbt_public.fact_lca_case_model_build"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-10-24T19:58:57.658233+00:00",
+            "logical_date": "",
+            "start_date": "2026-10-24T19:58:57.658233+00:00",
+            "state": "upstream_failed",
+            "task_id": "dbt_public.fact_wage_benchmark_model_build"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-10-24T19:58:58.300912+00:00",
+            "logical_date": "",
+            "start_date": "2026-10-24T19:58:58.300912+00:00",
+            "state": "upstream_failed",
+            "task_id": "dbt_public.int_bls_benchmark_candidates_model_build"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-10-24T19:58:58.301464+00:00",
+            "logical_date": "",
+            "start_date": "2026-10-24T19:58:58.301464+00:00",
+            "state": "upstream_failed",
+            "task_id": "dbt_public.int_dimension_mapping_model_build"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-10-24T19:58:56.626446+00:00",
+            "logical_date": "",
+            "start_date": "2026-10-24T19:58:56.626446+00:00",
+            "state": "upstream_failed",
+            "task_id": "dbt_public.int_employer_current_model_build"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-10-24T19:58:59.330154+00:00",
+            "logical_date": "",
+            "start_date": "2026-10-24T19:58:59.330154+00:00",
+            "state": "upstream_failed",
+            "task_id": "dbt_public.int_lca_case_candidates_model_build"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-10-24T19:58:57.659836+00:00",
+            "logical_date": "",
+            "start_date": "2026-10-24T19:58:57.659836+00:00",
+            "state": "upstream_failed",
+            "task_id": "dbt_public.stg_bls_model_build"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-10-24T19:58:56.629447+00:00",
+            "logical_date": "",
+            "start_date": "2026-10-24T19:58:56.629447+00:00",
+            "state": "upstream_failed",
+            "task_id": "dbt_public.stg_board_jobs_model_build"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-10-24T19:58:56.629758+00:00",
+            "logical_date": "",
+            "start_date": "2026-10-24T19:58:56.629758+00:00",
+            "state": "upstream_failed",
+            "task_id": "dbt_public.stg_cdc_application_events_model_build"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-10-24T19:58:56.630114+00:00",
+            "logical_date": "",
+            "start_date": "2026-10-24T19:58:56.630114+00:00",
+            "state": "upstream_failed",
+            "task_id": "dbt_public.stg_cdc_job_postings_model_build"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-10-24T19:58:57.660171+00:00",
+            "logical_date": "",
+            "start_date": "2026-10-24T19:58:57.660171+00:00",
+            "state": "upstream_failed",
+            "task_id": "dbt_public.stg_lca_model_build"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-10-24T19:58:57.660519+00:00",
+            "logical_date": "",
+            "start_date": "2026-10-24T19:58:57.660519+00:00",
+            "state": "upstream_failed",
+            "task_id": "dbt_public.stg_uscis_model_build"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-10-24T19:58:56.624313+00:00",
+            "logical_date": "",
+            "start_date": "2026-10-24T19:58:56.624313+00:00",
+            "state": "upstream_failed",
+            "task_id": "dbt_public.board_column_map_seed_build"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-10-24T19:58:56.625009+00:00",
+            "logical_date": "",
+            "start_date": "2026-10-24T19:58:56.625009+00:00",
+            "state": "upstream_failed",
+            "task_id": "dbt_public.county_fips_seed_build"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-10-24T19:58:56.625990+00:00",
+            "logical_date": "",
+            "start_date": "2026-10-24T19:58:56.625990+00:00",
+            "state": "upstream_failed",
+            "task_id": "dbt_public.file_column_map_seed_build"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-10-24T19:58:56.626833+00:00",
+            "logical_date": "",
+            "start_date": "2026-10-24T19:58:56.626833+00:00",
+            "state": "upstream_failed",
+            "task_id": "dbt_public.lca_column_map_seed_build"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-10-24T19:58:56.627140+00:00",
+            "logical_date": "",
+            "start_date": "2026-10-24T19:58:56.627140+00:00",
+            "state": "upstream_failed",
+            "task_id": "dbt_public.physical_column_map_seed_build"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-10-24T19:58:56.627456+00:00",
+            "logical_date": "",
+            "start_date": "2026-10-24T19:58:56.627456+00:00",
+            "state": "upstream_failed",
+            "task_id": "dbt_public.ref_bls_areas_2025_seed_build"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-10-24T19:58:56.627752+00:00",
+            "logical_date": "",
+            "start_date": "2026-10-24T19:58:56.627752+00:00",
+            "state": "upstream_failed",
+            "task_id": "dbt_public.ref_county_2023_seed_build"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-10-24T19:58:56.628049+00:00",
+            "logical_date": "",
+            "start_date": "2026-10-24T19:58:56.628049+00:00",
+            "state": "upstream_failed",
+            "task_id": "dbt_public.ref_county_cbsa_2023_seed_build"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-10-24T19:58:56.628361+00:00",
+            "logical_date": "",
+            "start_date": "2026-10-24T19:58:56.628361+00:00",
+            "state": "upstream_failed",
+            "task_id": "dbt_public.ref_oews_2025_seed_build"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-10-24T19:58:56.628679+00:00",
+            "logical_date": "",
+            "start_date": "2026-10-24T19:58:56.628679+00:00",
+            "state": "upstream_failed",
+            "task_id": "dbt_public.ref_soc_2018_seed_build"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-10-24T19:58:56.629036+00:00",
+            "logical_date": "",
+            "start_date": "2026-10-24T19:58:56.629036+00:00",
+            "state": "upstream_failed",
+            "task_id": "dbt_public.state_fips_seed_build"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-10-24T19:58:56.630674+00:00",
+            "logical_date": "",
+            "start_date": "2026-10-24T19:58:56.630674+00:00",
+            "state": "upstream_failed",
+            "task_id": "dbt_public.wage_test_inputs_seed_build"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-10-24T19:58:57.659462+00:00",
+            "logical_date": "",
+            "start_date": "2026-10-24T19:58:57.659462+00:00",
+            "state": "upstream_failed",
+            "task_id": "dbt_public.snap_employer_snapshot_build"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-10-24T19:58:57.660856+00:00",
+            "logical_date": "",
+            "start_date": "2026-10-24T19:58:57.660856+00:00",
+            "state": "upstream_failed",
+            "task_id": "public_quality_gates"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-10-24T19:58:58.299625+00:00",
+            "logical_date": "",
+            "start_date": "2026-10-24T19:58:58.299625+00:00",
+            "state": "upstream_failed",
+            "task_id": "cube_refresh"
+          }
+        ]
+      },
+      {
+        "all_success": false,
+        "counts_as_evidence": false,
+        "dag_id": "sponsoratlas",
+        "end_date": "2026-10-24T19:58:09.583356+00:00",
+        "logical_date": "2026-10-24T08:00:00+00:00",
+        "run_after": "2026-10-24T08:00:00+00:00",
+        "run_id": "scheduled__2026-10-24T08:00:00+00:00",
+        "run_type": "scheduled",
+        "start_date": "2026-10-24T19:57:00.147049+00:00",
+        "state": "failed",
+        "state_counts": {
+          "failed": 1,
+          "success": 1,
+          "upstream_failed": 33
+        },
+        "task_instances": [
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-10-24T19:57:04.103999+00:00",
+            "logical_date": "2026-10-24T08:00:00+00:00",
+            "start_date": "2026-10-24T19:57:00.220740+00:00",
+            "state": "success",
+            "task_id": "airbyte_sync"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-10-24T19:58:04.608567+00:00",
+            "logical_date": "2026-10-24T08:00:00+00:00",
+            "start_date": "2026-10-24T19:57:59.415296+00:00",
+            "state": "failed",
+            "task_id": "jobs_source_freshness"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-10-24T19:58:06.427385+00:00",
+            "logical_date": "2026-10-24T08:00:00+00:00",
+            "start_date": "2026-10-24T19:58:06.427385+00:00",
+            "state": "upstream_failed",
+            "task_id": "dbt_public.annualize_wage_examples_model_build"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-10-24T19:58:05.389851+00:00",
+            "logical_date": "2026-10-24T08:00:00+00:00",
+            "start_date": "2026-10-24T19:58:05.389851+00:00",
+            "state": "upstream_failed",
+            "task_id": "dbt_public.dim_date_model_build"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-10-24T19:58:07.541614+00:00",
+            "logical_date": "2026-10-24T08:00:00+00:00",
+            "start_date": "2026-10-24T19:58:07.541614+00:00",
+            "state": "upstream_failed",
+            "task_id": "dbt_public.dim_employer_model_build"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-10-24T19:58:06.428014+00:00",
+            "logical_date": "2026-10-24T08:00:00+00:00",
+            "start_date": "2026-10-24T19:58:06.428014+00:00",
+            "state": "upstream_failed",
+            "task_id": "dbt_public.dim_geography_model_build"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-10-24T19:58:06.428312+00:00",
+            "logical_date": "2026-10-24T08:00:00+00:00",
+            "start_date": "2026-10-24T19:58:06.428312+00:00",
+            "state": "upstream_failed",
+            "task_id": "dbt_public.dim_occupation_model_build"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-10-24T19:58:06.428618+00:00",
+            "logical_date": "2026-10-24T08:00:00+00:00",
+            "start_date": "2026-10-24T19:58:06.428618+00:00",
+            "state": "upstream_failed",
+            "task_id": "dbt_public.fact_job_posting_daily_model_build"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-10-24T19:58:06.428908+00:00",
+            "logical_date": "2026-10-24T08:00:00+00:00",
+            "start_date": "2026-10-24T19:58:06.428908+00:00",
+            "state": "upstream_failed",
+            "task_id": "dbt_public.fact_lca_case_model_build"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-10-24T19:58:06.429181+00:00",
+            "logical_date": "2026-10-24T08:00:00+00:00",
+            "start_date": "2026-10-24T19:58:06.429181+00:00",
+            "state": "upstream_failed",
+            "task_id": "dbt_public.fact_wage_benchmark_model_build"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-10-24T19:58:07.541987+00:00",
+            "logical_date": "2026-10-24T08:00:00+00:00",
+            "start_date": "2026-10-24T19:58:07.541987+00:00",
+            "state": "upstream_failed",
+            "task_id": "dbt_public.int_bls_benchmark_candidates_model_build"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-10-24T19:58:07.542338+00:00",
+            "logical_date": "2026-10-24T08:00:00+00:00",
+            "start_date": "2026-10-24T19:58:07.542338+00:00",
+            "state": "upstream_failed",
+            "task_id": "dbt_public.int_dimension_mapping_model_build"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-10-24T19:58:05.390877+00:00",
+            "logical_date": "2026-10-24T08:00:00+00:00",
+            "start_date": "2026-10-24T19:58:05.390877+00:00",
+            "state": "upstream_failed",
+            "task_id": "dbt_public.int_employer_current_model_build"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-10-24T19:58:08.562565+00:00",
+            "logical_date": "2026-10-24T08:00:00+00:00",
+            "start_date": "2026-10-24T19:58:08.562565+00:00",
+            "state": "upstream_failed",
+            "task_id": "dbt_public.int_lca_case_candidates_model_build"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-10-24T19:58:06.430639+00:00",
+            "logical_date": "2026-10-24T08:00:00+00:00",
+            "start_date": "2026-10-24T19:58:06.430639+00:00",
+            "state": "upstream_failed",
+            "task_id": "dbt_public.stg_bls_model_build"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-10-24T19:58:05.393516+00:00",
+            "logical_date": "2026-10-24T08:00:00+00:00",
+            "start_date": "2026-10-24T19:58:05.393516+00:00",
+            "state": "upstream_failed",
+            "task_id": "dbt_public.stg_board_jobs_model_build"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-10-24T19:58:05.393792+00:00",
+            "logical_date": "2026-10-24T08:00:00+00:00",
+            "start_date": "2026-10-24T19:58:05.393792+00:00",
+            "state": "upstream_failed",
+            "task_id": "dbt_public.stg_cdc_application_events_model_build"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-10-24T19:58:05.394054+00:00",
+            "logical_date": "2026-10-24T08:00:00+00:00",
+            "start_date": "2026-10-24T19:58:05.394054+00:00",
+            "state": "upstream_failed",
+            "task_id": "dbt_public.stg_cdc_job_postings_model_build"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-10-24T19:58:06.430942+00:00",
+            "logical_date": "2026-10-24T08:00:00+00:00",
+            "start_date": "2026-10-24T19:58:06.430942+00:00",
+            "state": "upstream_failed",
+            "task_id": "dbt_public.stg_lca_model_build"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-10-24T19:58:06.431214+00:00",
+            "logical_date": "2026-10-24T08:00:00+00:00",
+            "start_date": "2026-10-24T19:58:06.431214+00:00",
+            "state": "upstream_failed",
+            "task_id": "dbt_public.stg_uscis_model_build"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-10-24T19:58:05.388502+00:00",
+            "logical_date": "2026-10-24T08:00:00+00:00",
+            "start_date": "2026-10-24T19:58:05.388502+00:00",
+            "state": "upstream_failed",
+            "task_id": "dbt_public.board_column_map_seed_build"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-10-24T19:58:05.389514+00:00",
+            "logical_date": "2026-10-24T08:00:00+00:00",
+            "start_date": "2026-10-24T19:58:05.389514+00:00",
+            "state": "upstream_failed",
+            "task_id": "dbt_public.county_fips_seed_build"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-10-24T19:58:05.390433+00:00",
+            "logical_date": "2026-10-24T08:00:00+00:00",
+            "start_date": "2026-10-24T19:58:05.390433+00:00",
+            "state": "upstream_failed",
+            "task_id": "dbt_public.file_column_map_seed_build"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-10-24T19:58:05.391200+00:00",
+            "logical_date": "2026-10-24T08:00:00+00:00",
+            "start_date": "2026-10-24T19:58:05.391200+00:00",
+            "state": "upstream_failed",
+            "task_id": "dbt_public.lca_column_map_seed_build"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-10-24T19:58:05.391495+00:00",
+            "logical_date": "2026-10-24T08:00:00+00:00",
+            "start_date": "2026-10-24T19:58:05.391495+00:00",
+            "state": "upstream_failed",
+            "task_id": "dbt_public.physical_column_map_seed_build"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-10-24T19:58:05.391769+00:00",
+            "logical_date": "2026-10-24T08:00:00+00:00",
+            "start_date": "2026-10-24T19:58:05.391769+00:00",
+            "state": "upstream_failed",
+            "task_id": "dbt_public.ref_bls_areas_2025_seed_build"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-10-24T19:58:05.392030+00:00",
+            "logical_date": "2026-10-24T08:00:00+00:00",
+            "start_date": "2026-10-24T19:58:05.392030+00:00",
+            "state": "upstream_failed",
+            "task_id": "dbt_public.ref_county_2023_seed_build"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-10-24T19:58:05.392295+00:00",
+            "logical_date": "2026-10-24T08:00:00+00:00",
+            "start_date": "2026-10-24T19:58:05.392295+00:00",
+            "state": "upstream_failed",
+            "task_id": "dbt_public.ref_county_cbsa_2023_seed_build"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-10-24T19:58:05.392563+00:00",
+            "logical_date": "2026-10-24T08:00:00+00:00",
+            "start_date": "2026-10-24T19:58:05.392563+00:00",
+            "state": "upstream_failed",
+            "task_id": "dbt_public.ref_oews_2025_seed_build"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-10-24T19:58:05.392844+00:00",
+            "logical_date": "2026-10-24T08:00:00+00:00",
+            "start_date": "2026-10-24T19:58:05.392844+00:00",
+            "state": "upstream_failed",
+            "task_id": "dbt_public.ref_soc_2018_seed_build"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-10-24T19:58:05.393169+00:00",
+            "logical_date": "2026-10-24T08:00:00+00:00",
+            "start_date": "2026-10-24T19:58:05.393169+00:00",
+            "state": "upstream_failed",
+            "task_id": "dbt_public.state_fips_seed_build"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-10-24T19:58:05.394412+00:00",
+            "logical_date": "2026-10-24T08:00:00+00:00",
+            "start_date": "2026-10-24T19:58:05.394412+00:00",
+            "state": "upstream_failed",
+            "task_id": "dbt_public.wage_test_inputs_seed_build"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-10-24T19:58:06.430302+00:00",
+            "logical_date": "2026-10-24T08:00:00+00:00",
+            "start_date": "2026-10-24T19:58:06.430302+00:00",
+            "state": "upstream_failed",
+            "task_id": "dbt_public.snap_employer_snapshot_build"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-10-24T19:58:06.431498+00:00",
+            "logical_date": "2026-10-24T08:00:00+00:00",
+            "start_date": "2026-10-24T19:58:06.431498+00:00",
+            "state": "upstream_failed",
+            "task_id": "public_quality_gates"
+          },
+          {
+            "dag_id": "sponsoratlas",
+            "end_date": "2026-10-24T19:58:07.540903+00:00",
+            "logical_date": "2026-10-24T08:00:00+00:00",
+            "start_date": "2026-10-24T19:58:07.540903+00:00",
+            "state": "upstream_failed",
+            "task_id": "cube_refresh"
+          }
+        ]
+      }
+    ],
+    "sponsoratlas_daily": [
+      {
+        "all_success": true,
+        "counts_as_evidence": true,
+        "dag_id": "sponsoratlas_daily",
+        "end_date": "2026-11-10T08:01:11.951647+00:00",
+        "logical_date": "2026-11-10T08:00:00+00:00",
+        "run_after": "2026-11-10T08:00:00+00:00",
+        "run_id": "scheduled__2026-11-10T08:00:00+00:00",
+        "run_type": "scheduled",
+        "start_date": "2026-11-10T08:00:01.527817+00:00",
+        "state": "success",
+        "state_counts": {
+          "success": 6
+        },
+        "task_instances": [
+          {
+            "dag_id": "sponsoratlas_daily",
+            "end_date": "2026-11-10T08:00:09.756487+00:00",
+            "logical_date": "2026-11-10T08:00:00+00:00",
+            "start_date": "2026-11-10T08:00:01.558459+00:00",
+            "state": "success",
+            "task_id": "preflight"
+          },
+          {
+            "dag_id": "sponsoratlas_daily",
+            "end_date": "2026-11-10T08:00:38.584175+00:00",
+            "logical_date": "2026-11-10T08:00:00+00:00",
+            "start_date": "2026-11-10T08:00:09.854682+00:00",
+            "state": "success",
+            "task_id": "load_boards"
+          },
+          {
+            "dag_id": "sponsoratlas_daily",
+            "end_date": "2026-11-10T08:00:45.347294+00:00",
+            "logical_date": "2026-11-10T08:00:00+00:00",
+            "start_date": "2026-11-10T08:00:39.624864+00:00",
+            "state": "success",
+            "task_id": "observations_freshness"
+          },
+          {
+            "dag_id": "sponsoratlas_daily",
+            "end_date": "2026-11-10T08:01:02.625260+00:00",
+            "logical_date": "2026-11-10T08:00:00+00:00",
+            "start_date": "2026-11-10T08:00:46.054849+00:00",
+            "state": "success",
+            "task_id": "dbt_job_fact"
+          },
+          {
+            "dag_id": "sponsoratlas_daily",
+            "end_date": "2026-11-10T08:01:10.174864+00:00",
+            "logical_date": "2026-11-10T08:00:00+00:00",
+            "start_date": "2026-11-10T08:01:03.446047+00:00",
+            "state": "success",
+            "task_id": "job_gates"
+          },
+          {
+            "dag_id": "sponsoratlas_daily",
+            "end_date": "2026-11-10T08:01:11.099052+00:00",
+            "logical_date": "2026-11-10T08:00:00+00:00",
+            "start_date": "2026-11-10T08:01:10.929426+00:00",
+            "state": "success",
+            "task_id": "record_usage"
+          }
+        ]
+      },
+      {
+        "all_success": true,
+        "counts_as_evidence": true,
+        "dag_id": "sponsoratlas_daily",
+        "end_date": "2026-11-09T08:01:13.111875+00:00",
+        "logical_date": "2026-11-09T08:00:00+00:00",
+        "run_after": "2026-11-09T08:00:00+00:00",
+        "run_id": "scheduled__2026-11-09T08:00:00+00:00",
+        "run_type": "scheduled",
+        "start_date": "2026-11-09T08:00:01.864390+00:00",
+        "state": "success",
+        "state_counts": {
+          "success": 6
+        },
+        "task_instances": [
+          {
+            "dag_id": "sponsoratlas_daily",
+            "end_date": "2026-11-09T08:00:11.024306+00:00",
+            "logical_date": "2026-11-09T08:00:00+00:00",
+            "start_date": "2026-11-09T08:00:01.893815+00:00",
+            "state": "success",
+            "task_id": "preflight"
+          },
+          {
+            "dag_id": "sponsoratlas_daily",
+            "end_date": "2026-11-09T08:00:45.130928+00:00",
+            "logical_date": "2026-11-09T08:00:00+00:00",
+            "start_date": "2026-11-09T08:00:11.951378+00:00",
+            "state": "success",
+            "task_id": "load_boards"
+          },
+          {
+            "dag_id": "sponsoratlas_daily",
+            "end_date": "2026-11-09T08:00:50.759665+00:00",
+            "logical_date": "2026-11-09T08:00:00+00:00",
+            "start_date": "2026-11-09T08:00:45.890536+00:00",
+            "state": "success",
+            "task_id": "observations_freshness"
+          },
+          {
+            "dag_id": "sponsoratlas_daily",
+            "end_date": "2026-11-09T08:01:05.616702+00:00",
+            "logical_date": "2026-11-09T08:00:00+00:00",
+            "start_date": "2026-11-09T08:00:50.954296+00:00",
+            "state": "success",
+            "task_id": "dbt_job_fact"
+          },
+          {
+            "dag_id": "sponsoratlas_daily",
+            "end_date": "2026-11-09T08:01:11.396919+00:00",
+            "logical_date": "2026-11-09T08:00:00+00:00",
+            "start_date": "2026-11-09T08:01:05.898933+00:00",
+            "state": "success",
+            "task_id": "job_gates"
+          },
+          {
+            "dag_id": "sponsoratlas_daily",
+            "end_date": "2026-11-09T08:01:12.199523+00:00",
+            "logical_date": "2026-11-09T08:00:00+00:00",
+            "start_date": "2026-11-09T08:01:12.081641+00:00",
+            "state": "success",
+            "task_id": "record_usage"
+          }
+        ]
+      },
+      {
+        "all_success": true,
+        "counts_as_evidence": true,
+        "dag_id": "sponsoratlas_daily",
+        "end_date": "2026-11-08T08:01:33.323093+00:00",
+        "logical_date": "2026-11-08T08:00:00+00:00",
+        "run_after": "2026-11-08T08:00:00+00:00",
+        "run_id": "scheduled__2026-11-08T08:00:00+00:00",
+        "run_type": "scheduled",
+        "start_date": "2026-11-08T08:00:02.047373+00:00",
+        "state": "success",
+        "state_counts": {
+          "success": 6
+        },
+        "task_instances": [
+          {
+            "dag_id": "sponsoratlas_daily",
+            "end_date": "2026-11-08T08:00:11.324976+00:00",
+            "logical_date": "2026-11-08T08:00:00+00:00",
+            "start_date": "2026-11-08T08:00:02.129769+00:00",
+            "state": "success",
+            "task_id": "preflight"
+          },
+          {
+            "dag_id": "sponsoratlas_daily",
+            "end_date": "2026-11-08T08:01:02.405880+00:00",
+            "logical_date": "2026-11-08T08:00:00+00:00",
+            "start_date": "2026-11-08T08:00:12.113561+00:00",
+            "state": "success",
+            "task_id": "load_boards"
+          },
+          {
+            "dag_id": "sponsoratlas_daily",
+            "end_date": "2026-11-08T08:01:09.454691+00:00",
+            "logical_date": "2026-11-08T08:00:00+00:00",
+            "start_date": "2026-11-08T08:01:03.235132+00:00",
+            "state": "success",
+            "task_id": "observations_freshness"
+          },
+          {
+            "dag_id": "sponsoratlas_daily",
+            "end_date": "2026-11-08T08:01:25.727833+00:00",
+            "logical_date": "2026-11-08T08:00:00+00:00",
+            "start_date": "2026-11-08T08:01:10.169004+00:00",
+            "state": "success",
+            "task_id": "dbt_job_fact"
+          },
+          {
+            "dag_id": "sponsoratlas_daily",
+            "end_date": "2026-11-08T08:01:32.021031+00:00",
+            "logical_date": "2026-11-08T08:00:00+00:00",
+            "start_date": "2026-11-08T08:01:26.460626+00:00",
+            "state": "success",
+            "task_id": "job_gates"
+          },
+          {
+            "dag_id": "sponsoratlas_daily",
+            "end_date": "2026-11-08T08:01:32.426542+00:00",
+            "logical_date": "2026-11-08T08:00:00+00:00",
+            "start_date": "2026-11-08T08:01:32.291984+00:00",
+            "state": "success",
+            "task_id": "record_usage"
+          }
+        ]
+      },
+      {
+        "all_success": true,
+        "counts_as_evidence": true,
+        "dag_id": "sponsoratlas_daily",
+        "end_date": "2026-11-07T08:00:59.468181+00:00",
+        "logical_date": "2026-11-07T08:00:00+00:00",
+        "run_after": "2026-11-07T08:00:00+00:00",
+        "run_id": "scheduled__2026-11-07T08:00:00+00:00",
+        "run_type": "scheduled",
+        "start_date": "2026-11-07T08:00:01.232416+00:00",
+        "state": "success",
+        "state_counts": {
+          "success": 6
+        },
+        "task_instances": [
+          {
+            "dag_id": "sponsoratlas_daily",
+            "end_date": "2026-11-07T08:00:08.634583+00:00",
+            "logical_date": "2026-11-07T08:00:00+00:00",
+            "start_date": "2026-11-07T08:00:01.271973+00:00",
+            "state": "success",
+            "task_id": "preflight"
+          },
+          {
+            "dag_id": "sponsoratlas_daily",
+            "end_date": "2026-11-07T08:00:35.643595+00:00",
+            "logical_date": "2026-11-07T08:00:00+00:00",
+            "start_date": "2026-11-07T08:00:08.742418+00:00",
+            "state": "success",
+            "task_id": "load_boards"
+          },
+          {
+            "dag_id": "sponsoratlas_daily",
+            "end_date": "2026-11-07T08:00:40.738582+00:00",
+            "logical_date": "2026-11-07T08:00:00+00:00",
+            "start_date": "2026-11-07T08:00:36.297619+00:00",
+            "state": "success",
+            "task_id": "observations_freshness"
+          },
+          {
+            "dag_id": "sponsoratlas_daily",
+            "end_date": "2026-11-07T08:00:52.330363+00:00",
+            "logical_date": "2026-11-07T08:00:00+00:00",
+            "start_date": "2026-11-07T08:00:40.876028+00:00",
+            "state": "success",
+            "task_id": "dbt_job_fact"
+          },
+          {
+            "dag_id": "sponsoratlas_daily",
+            "end_date": "2026-11-07T08:00:58.155899+00:00",
+            "logical_date": "2026-11-07T08:00:00+00:00",
+            "start_date": "2026-11-07T08:00:53.373309+00:00",
+            "state": "success",
+            "task_id": "job_gates"
+          },
+          {
+            "dag_id": "sponsoratlas_daily",
+            "end_date": "2026-11-07T08:00:58.559456+00:00",
+            "logical_date": "2026-11-07T08:00:00+00:00",
+            "start_date": "2026-11-07T08:00:58.401520+00:00",
+            "state": "success",
+            "task_id": "record_usage"
+          }
+        ]
+      },
+      {
+        "all_success": true,
+        "counts_as_evidence": true,
+        "dag_id": "sponsoratlas_daily",
+        "end_date": "2026-11-06T08:01:01.544889+00:00",
+        "logical_date": "2026-11-06T08:00:00+00:00",
+        "run_after": "2026-11-06T08:00:00+00:00",
+        "run_id": "scheduled__2026-11-06T08:00:00+00:00",
+        "run_type": "scheduled",
+        "start_date": "2026-11-06T08:00:01.327557+00:00",
+        "state": "success",
+        "state_counts": {
+          "success": 6
+        },
+        "task_instances": [
+          {
+            "dag_id": "sponsoratlas_daily",
+            "end_date": "2026-11-06T08:00:10.619133+00:00",
+            "logical_date": "2026-11-06T08:00:00+00:00",
+            "start_date": "2026-11-06T08:00:01.375617+00:00",
+            "state": "success",
+            "task_id": "preflight"
+          },
+          {
+            "dag_id": "sponsoratlas_daily",
+            "end_date": "2026-11-06T08:00:32.278407+00:00",
+            "logical_date": "2026-11-06T08:00:00+00:00",
+            "start_date": "2026-11-06T08:00:11.144473+00:00",
+            "state": "success",
+            "task_id": "load_boards"
+          },
+          {
+            "dag_id": "sponsoratlas_daily",
+            "end_date": "2026-11-06T08:00:38.503644+00:00",
+            "logical_date": "2026-11-06T08:00:00+00:00",
+            "start_date": "2026-11-06T08:00:32.516529+00:00",
+            "state": "success",
+            "task_id": "observations_freshness"
+          },
+          {
+            "dag_id": "sponsoratlas_daily",
+            "end_date": "2026-11-06T08:00:53.760685+00:00",
+            "logical_date": "2026-11-06T08:00:00+00:00",
+            "start_date": "2026-11-06T08:00:38.909500+00:00",
+            "state": "success",
+            "task_id": "dbt_job_fact"
+          },
+          {
+            "dag_id": "sponsoratlas_daily",
+            "end_date": "2026-11-06T08:01:00.449334+00:00",
+            "logical_date": "2026-11-06T08:00:00+00:00",
+            "start_date": "2026-11-06T08:00:54.641763+00:00",
+            "state": "success",
+            "task_id": "job_gates"
+          },
+          {
+            "dag_id": "sponsoratlas_daily",
+            "end_date": "2026-11-06T08:01:01.117398+00:00",
+            "logical_date": "2026-11-06T08:00:00+00:00",
+            "start_date": "2026-11-06T08:01:00.892379+00:00",
+            "state": "success",
+            "task_id": "record_usage"
+          }
+        ]
+      },
+      {
+        "all_success": true,
+        "counts_as_evidence": true,
+        "dag_id": "sponsoratlas_daily",
+        "end_date": "2026-11-06T05:30:29.363717+00:00",
+        "logical_date": "",
+        "run_after": "2026-11-06T05:29:38.715099+00:00",
+        "run_id": "manual_first_snowflake_20261106_r2",
+        "run_type": "manual_first_snowflake_20261106_r2",
+        "start_date": "2026-11-06T05:29:39.246068+00:00",
+        "state": "success",
+        "state_counts": {
+          "success": 6
+        },
+        "task_instances": [
+          {
+            "dag_id": "sponsoratlas_daily",
+            "end_date": "2026-11-06T05:29:44.122463+00:00",
+            "logical_date": "",
+            "start_date": "2026-11-06T05:29:39.293981+00:00",
+            "state": "success",
+            "task_id": "preflight"
+          },
+          {
+            "dag_id": "sponsoratlas_daily",
+            "end_date": "2026-11-06T05:30:01.282688+00:00",
+            "logical_date": "",
+            "start_date": "2026-11-06T05:29:44.306989+00:00",
+            "state": "success",
+            "task_id": "load_boards"
+          },
+          {
+            "dag_id": "sponsoratlas_daily",
+            "end_date": "2026-11-06T05:30:08.180210+00:00",
+            "logical_date": "",
+            "start_date": "2026-11-06T05:30:02.319310+00:00",
+            "state": "success",
+            "task_id": "observations_freshness"
+          },
+          {
+            "dag_id": "sponsoratlas_daily",
+            "end_date": "2026-11-06T05:30:21.315707+00:00",
+            "logical_date": "",
+            "start_date": "2026-11-06T05:30:08.524514+00:00",
+            "state": "success",
+            "task_id": "dbt_job_fact"
+          },
+          {
+            "dag_id": "sponsoratlas_daily",
+            "end_date": "2026-11-06T05:30:27.974828+00:00",
+            "logical_date": "",
+            "start_date": "2026-11-06T05:30:22.362683+00:00",
+            "state": "success",
+            "task_id": "job_gates"
+          },
+          {
+            "dag_id": "sponsoratlas_daily",
+            "end_date": "2026-11-06T05:30:28.525887+00:00",
+            "logical_date": "",
+            "start_date": "2026-11-06T05:30:28.335832+00:00",
+            "state": "success",
+            "task_id": "record_usage"
+          }
+        ]
+      },
+      {
+        "all_success": false,
+        "counts_as_evidence": false,
+        "dag_id": "sponsoratlas_daily",
+        "end_date": "2026-11-06T05:27:24.919445+00:00",
+        "logical_date": "",
+        "run_after": "2026-11-06T05:26:08.488918+00:00",
+        "run_id": "manual_first_snowflake_20261106",
+        "run_type": "manual_first_snowflake_20261106",
+        "start_date": "2026-11-06T05:26:09.719472+00:00",
+        "state": "failed",
+        "state_counts": {
+          "failed": 1,
+          "success": 1,
+          "upstream_failed": 4
+        },
+        "task_instances": [
+          {
+            "dag_id": "sponsoratlas_daily",
+            "end_date": "2026-11-06T05:26:17.224728+00:00",
+            "logical_date": "",
+            "start_date": "2026-11-06T05:26:09.814698+00:00",
+            "state": "success",
+            "task_id": "preflight"
+          },
+          {
+            "dag_id": "sponsoratlas_daily",
+            "end_date": "2026-11-06T05:27:20.377667+00:00",
+            "logical_date": "",
+            "start_date": "2026-11-06T05:27:09.264390+00:00",
+            "state": "failed",
+            "task_id": "load_boards"
+          },
+          {
+            "dag_id": "sponsoratlas_daily",
+            "end_date": "2026-11-06T05:27:21.015113+00:00",
+            "logical_date": "",
+            "start_date": "2026-11-06T05:27:21.015113+00:00",
+            "state": "upstream_failed",
+            "task_id": "observations_freshness"
+          },
+          {
+            "dag_id": "sponsoratlas_daily",
+            "end_date": "2026-11-06T05:27:22.039000+00:00",
+            "logical_date": "",
+            "start_date": "2026-11-06T05:27:22.039000+00:00",
+            "state": "upstream_failed",
+            "task_id": "dbt_job_fact"
+          },
+          {
+            "dag_id": "sponsoratlas_daily",
+            "end_date": "2026-11-06T05:27:23.069159+00:00",
+            "logical_date": "",
+            "start_date": "2026-11-06T05:27:23.069159+00:00",
+            "state": "upstream_failed",
+            "task_id": "job_gates"
+          },
+          {
+            "dag_id": "sponsoratlas_daily",
+            "end_date": "2026-11-06T05:27:24.105776+00:00",
+            "logical_date": "",
+            "start_date": "2026-11-06T05:27:24.105776+00:00",
+            "state": "upstream_failed",
+            "task_id": "record_usage"
+          }
+        ]
+      }
+    ]
+  }
+}

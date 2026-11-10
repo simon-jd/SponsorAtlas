@@ -1,0 +1,73 @@
+[0m05:52:30  Running with dbt=1.12.6
+[0m05:52:30  Registered adapter: duckdb=1.11.0
+[0m05:52:30  Unable to do partial parsing because saved manifest not found. Starting full parse.
+[0m05:52:32  Found 18 models, 1 snapshot, 84 data tests, 15 seeds, 20 sources, 535 macros, 1 unit test
+[0m05:52:32  
+[0m05:52:32  Concurrency: 1 threads (target='local')
+[0m05:52:32  
+[0m05:52:32  1 of 30 START sql table model MARTS.dim_date ................................... [RUN]
+[0m05:52:32  1 of 30 OK created sql table model MARTS.dim_date .............................. [[32mOK[0m in 0.06s]
+[0m05:52:32  2 of 30 START sql table model INTERMEDIATE.int_employer_current ................ [RUN]
+[0m05:52:32  2 of 30 OK created sql table model INTERMEDIATE.int_employer_current ........... [[32mOK[0m in 0.31s]
+[0m05:52:32  3 of 30 START seed file STAGING.county_fips .................................... [RUN]
+[0m05:52:32  3 of 30 OK loaded seed file STAGING.county_fips ................................ [[32mINSERT 6447[0m in 0.11s]
+[0m05:52:32  4 of 30 START seed file STAGING.ref_bls_areas_2025 ............................. [RUN]
+[0m05:52:32  4 of 30 OK loaded seed file STAGING.ref_bls_areas_2025 ......................... [[32mINSERT 585[0m in 0.02s]
+[0m05:52:32  5 of 30 START seed file STAGING.ref_county_2023 ................................ [RUN]
+[0m05:52:32  5 of 30 OK loaded seed file STAGING.ref_county_2023 ............................ [[32mINSERT 3222[0m in 0.03s]
+[0m05:52:32  6 of 30 START seed file STAGING.ref_county_cbsa_2023 ........................... [RUN]
+[0m05:52:32  6 of 30 OK loaded seed file STAGING.ref_county_cbsa_2023 ....................... [[32mINSERT 1915[0m in 0.02s]
+[0m05:52:32  7 of 30 START seed file STAGING.ref_oews_2025 .................................. [RUN]
+[0m05:52:32  7 of 30 OK loaded seed file STAGING.ref_oews_2025 .............................. [[32mINSERT 6[0m in 0.02s]
+[0m05:52:32  8 of 30 START seed file STAGING.ref_soc_2018 ................................... [RUN]
+[0m05:52:32  8 of 30 OK loaded seed file STAGING.ref_soc_2018 ............................... [[32mINSERT 1447[0m in 0.02s]
+[0m05:52:32  9 of 30 START test not_null_dim_date_calendar_date ............................. [RUN]
+[0m05:52:32  9 of 30 PASS not_null_dim_date_calendar_date ................................... [[32mPASS[0m in 0.02s]
+[0m05:52:32  10 of 30 START test not_null_dim_date_date_key ................................. [RUN]
+[0m05:52:32  10 of 30 PASS not_null_dim_date_date_key ....................................... [[32mPASS[0m in 0.01s]
+[0m05:52:32  11 of 30 START test unique_dim_date_calendar_date .............................. [RUN]
+[0m05:52:32  11 of 30 PASS unique_dim_date_calendar_date .................................... [[32mPASS[0m in 0.01s]
+[0m05:52:32  12 of 30 START test unique_dim_date_date_key ................................... [RUN]
+[0m05:52:32  12 of 30 PASS unique_dim_date_date_key ......................................... [[32mPASS[0m in 0.01s]
+[0m05:52:32  13 of 30 START snapshot SNAPSHOTS.snap_employer ................................ [RUN]
+[0m05:52:33  13 of 30 OK snapshotted SNAPSHOTS.snap_employer ................................ [[32mOK[0m in 0.31s]
+[0m05:52:33  14 of 30 START sql table model MARTS.dim_geography ............................. [RUN]
+[0m05:52:33  14 of 30 OK created sql table model MARTS.dim_geography ........................ [[32mOK[0m in 0.04s]
+[0m05:52:33  15 of 30 START sql table model MARTS.dim_occupation ............................ [RUN]
+[0m05:52:33  15 of 30 OK created sql table model MARTS.dim_occupation ....................... [[32mOK[0m in 0.03s]
+[0m05:52:33  16 of 30 START sql table model MARTS.dim_employer .............................. [RUN]
+[0m05:52:33  16 of 30 OK created sql table model MARTS.dim_employer ......................... [[32mOK[0m in 0.28s]
+[0m05:52:33  17 of 30 START test not_null_dim_geography_geography_key ....................... [RUN]
+[0m05:52:33  17 of 30 PASS not_null_dim_geography_geography_key ............................. [[32mPASS[0m in 0.02s]
+[0m05:52:33  18 of 30 START test unique_dim_geography_geography_key ......................... [RUN]
+[0m05:52:33  18 of 30 PASS unique_dim_geography_geography_key ............................... [[32mPASS[0m in 0.01s]
+[0m05:52:33  19 of 30 START test dimension_reference_integrity .............................. [RUN]
+[0m05:52:33  19 of 30 PASS dimension_reference_integrity .................................... [[32mPASS[0m in 0.01s]
+[0m05:52:33  20 of 30 START test not_null_dim_occupation_occupation_key ..................... [RUN]
+[0m05:52:33  20 of 30 PASS not_null_dim_occupation_occupation_key ........................... [[32mPASS[0m in 0.01s]
+[0m05:52:33  21 of 30 START test not_null_dim_occupation_soc_code ........................... [RUN]
+[0m05:52:33  21 of 30 PASS not_null_dim_occupation_soc_code ................................. [[32mPASS[0m in 0.01s]
+[0m05:52:33  22 of 30 START test not_null_dim_occupation_soc_vintage ........................ [RUN]
+[0m05:52:33  22 of 30 PASS not_null_dim_occupation_soc_vintage .............................. [[32mPASS[0m in 0.01s]
+[0m05:52:33  23 of 30 START test unique_dim_occupation_occupation_key ....................... [RUN]
+[0m05:52:33  23 of 30 PASS unique_dim_occupation_occupation_key ............................. [[32mPASS[0m in 0.01s]
+[0m05:52:33  24 of 30 START test unique_dim_occupation_soc_code ............................. [RUN]
+[0m05:52:33  24 of 30 PASS unique_dim_occupation_soc_code ................................... [[32mPASS[0m in 0.01s]
+[0m05:52:33  25 of 30 START test not_null_dim_employer_employer_id .......................... [RUN]
+[0m05:52:33  25 of 30 PASS not_null_dim_employer_employer_id ................................ [[32mPASS[0m in 0.01s]
+[0m05:52:33  26 of 30 START test not_null_dim_employer_employer_key ......................... [RUN]
+[0m05:52:33  26 of 30 PASS not_null_dim_employer_employer_key ............................... [[32mPASS[0m in 0.01s]
+[0m05:52:33  27 of 30 START test scd2_no_overlap ............................................ [RUN]
+[0m05:52:33  27 of 30 PASS scd2_no_overlap .................................................. [[32mPASS[0m in 0.04s]
+[0m05:52:33  28 of 30 START test unique_dim_employer_employer_key ........................... [RUN]
+[0m05:52:33  28 of 30 PASS unique_dim_employer_employer_key ................................. [[32mPASS[0m in 0.02s]
+[0m05:52:33  29 of 30 START sql table model INTERMEDIATE.int_dimension_mapping .............. [RUN]
+[0m05:52:34  29 of 30 OK created sql table model INTERMEDIATE.int_dimension_mapping ......... [[32mOK[0m in 1.06s]
+[0m05:52:34  30 of 30 START test dimension_mapping_accounting ............................... [RUN]
+[0m05:52:35  30 of 30 PASS dimension_mapping_accounting ..................................... [[32mPASS[0m in 0.15s]
+[0m05:52:35  
+[0m05:52:35  Finished running 6 seeds, 1 snapshot, 6 table models, 17 data tests in 0 hours 0 minutes and 2.87 seconds (2.87s).
+[0m05:52:35  
+[0m05:52:35  [32mCompleted successfully[0m
+[0m05:52:35  
+[0m05:52:35  Done. PASS=30 WARN=0 ERROR=0 SKIP=0 NO-OP=0 REUSED=0 TOTAL=30

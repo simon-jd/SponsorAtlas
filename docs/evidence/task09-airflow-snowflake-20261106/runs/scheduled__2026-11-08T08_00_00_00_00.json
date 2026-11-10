@@ -1,0 +1,76 @@
+{
+  "airflow_python": "3.12.15",
+  "board_manifest_totals": {
+    "mode": "snowflake",
+    "status": "LOADED",
+    "table_count": 4909,
+    "target": "RAW.LCA.FACTS_INPUT_JOB_OBSERVATIONS",
+    "totals": {
+      "boards": 13,
+      "boards_succeeded": 13,
+      "rows": 4909,
+      "rows_by_provider": {
+        "ashby": 1344,
+        "greenhouse": 2934,
+        "lever": 631
+      }
+    }
+  },
+  "dag_id": "sponsoratlas_daily",
+  "dbt_core": "1.12.6",
+  "dbt_target": "snowflake",
+  "end": "2026-11-08T08:01:32.338693+00:00",
+  "git_diff_paths": [
+    "dbt",
+    "er",
+    "governance",
+    "ingestion",
+    "orchestration",
+    "scripts",
+    "semantic"
+  ],
+  "git_diff_scope": "tracked files only; untracked files are not in this hash",
+  "git_diff_sha256": "d31b7947ea6e618b2c04fc3cb9874a11f8ce214fd7a508794d83425c3c3a0650",
+  "git_head": "82aaae3c0b5f5c31e6530ba46303eb723ff985d6",
+  "ledger": {
+    "basis": "ESTIMATE, not metered: (run wall seconds + 60) / 3600 at 1 credit/hour, capped at the DAG's run timeout; an open run is charged 15 minutes and a failed run at least that",
+    "estimated_credits": 0.0411387225,
+    "wall_seconds": 88.099401
+  },
+  "logical_date": "2026-11-08T08:00:00+00:00",
+  "metered_baseline": {
+    "credits_used_total": 107.005178176,
+    "identity": {
+      "account": "redacted",
+      "user": "COST_OBSERVER_SVC",
+      "warehouse": "SPONSORATLAS_XS"
+    },
+    "lag_note": "ACCOUNT_USAGE lags by up to hours, so this total can be lower than the credits actually consumed so far.",
+    "latest_usage_date": "2026-11-06",
+    "queried_at": "2026-11-06T05:26:17.096775+00:00",
+    "recorded_at": "2026-11-06T05:26:11.662910+00:00",
+    "scope": "whole account, all services and projects including SPCS",
+    "source": "SNOWFLAKE.ACCOUNT_USAGE.METERING_DAILY_HISTORY",
+    "status": "ok"
+  },
+  "metered_total": {
+    "credits_used_total": 111.84663452,
+    "identity": {
+      "account": "redacted",
+      "user": "COST_OBSERVER_SVC",
+      "warehouse": "SPONSORATLAS_XS"
+    },
+    "lag_note": "ACCOUNT_USAGE lags by up to hours, so this total can be lower than the credits actually consumed so far.",
+    "latest_usage_date": "2026-11-08",
+    "queried_at": "2026-11-08T08:00:11.206791+00:00",
+    "recorded_at": "2026-11-08T08:00:04.239292+00:00",
+    "scope": "whole account, all services and projects including SPCS",
+    "source": "SNOWFLAKE.ACCOUNT_USAGE.METERING_DAILY_HISTORY",
+    "status": "ok"
+  },
+  "orchestration_mode": "production",
+  "project_python": "3.12.15",
+  "run_id": "scheduled__2026-11-08T08:00:00+00:00",
+  "run_type": "scheduled",
+  "start": "2026-11-08T08:00:04.239292+00:00"
+}

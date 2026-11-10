@@ -105,6 +105,65 @@ def test_production_never_uses_synthetic_fallback(sink, monkeypatch):
     assert events == []
 
 
+def test_local_log_alert_is_durable_private_and_marked_not_delivered(monkeypatch, tmp_path):
+    log = tmp_path / "alerts/alerts.jsonl"
+    monkeypatch.setattr(runtime, "ALERT_LOG", log)
+    monkeypatch.setenv("SPONSORATLAS_ORCHESTRATION_MODE", "production")
+    monkeypatch.setenv("SPONSORATLAS_ALERT_TRANSPORT", "local_log")
+    monkeypatch.delenv("SPONSORATLAS_ALERT_URL", raising=False)
+    fsynced = []
+    real_fsync = runtime.os.fsync
+    monkeypatch.setattr(runtime.os, "fsync", lambda fd: (fsynced.append(fd), real_fsync(fd)))
+    runtime.notify({"dag_run": {"dag_id": "d", "run_id": "one"}})
+    runtime.notify({"dag_run": {"dag_id": "d", "run_id": "two"}}, event="guard_stop", detail="why")
+    lines = [json.loads(line) for line in log.read_text().splitlines()]
+    assert [(x["run_id"], x["event"]) for x in lines] == [
+        ("one", "task_failure"),
+        ("two", "guard_stop"),
+    ]
+    assert lines[1]["detail"] == "why"
+    assert {x["delivery"] for x in lines} == {"LOCAL_LOG_NOT_DELIVERED"}
+    assert log.stat().st_mode & 0o777 == 0o600
+    assert fsynced
+
+
+def test_production_requires_an_explicit_alert_transport(monkeypatch):
+    monkeypatch.setenv("SPONSORATLAS_ORCHESTRATION_MODE", "production")
+    monkeypatch.delenv("SPONSORATLAS_ALERT_TRANSPORT", raising=False)
+    with pytest.raises(RuntimeError, match="SPONSORATLAS_ALERT_TRANSPORT"):
+        runtime.notification_settings()
+    monkeypatch.setenv("SPONSORATLAS_ALERT_TRANSPORT", "local_log")
+    assert runtime.notification_settings() == "local_log"
+    monkeypatch.setenv("SPONSORATLAS_ALERT_TRANSPORT", "local_http")
+    monkeypatch.setenv("SPONSORATLAS_ALERT_URL", "http://127.0.0.1:1/alerts")
+    with pytest.raises(ValueError, match="synthetic_http"):
+        runtime.notification_settings()
+
+
+def test_load_boards_runs_the_loader_under_project_venv(monkeypatch, tmp_path):
+    from datetime import UTC, datetime
+    from types import SimpleNamespace
+
+    monkeypatch.setattr(runtime, "ARTIFACTS_ROOT", tmp_path)
+    monkeypatch.setenv("SPONSORATLAS_ORCHESTRATION_MODE", "synthetic_http")
+    monkeypatch.setenv("DBT_TARGET", "local")
+    calls = []
+    monkeypatch.setattr(runtime.subprocess, "run", lambda args, **_kw: calls.append(args))
+    run_id = "scheduled__2026-11-06T08:00:00+00:00"
+    logical = datetime(2026, 11, 6, 8, tzinfo=UTC)
+    runtime.load_boards(run_id=run_id, logical_date=logical)
+    manual = SimpleNamespace(run_after=datetime(2026, 11, 7, 1, tzinfo=UTC))
+    runtime.load_boards(run_id="manual/../x", logical_date=None, dag_run=manual)
+    assert calls[0][0] == str(runtime.ROOT / ".venv/bin/python")
+    assert calls[0][1:5] == ["-m", "scripts.load_board_observations", "--date", "2026-11-06"]
+    assert calls[0][5:] == [
+        "--output",
+        str(tmp_path / "scheduled__2026-11-06T08_00_00_00_00/board-manifest.json"),
+    ]
+    assert calls[1][4] == "2026-11-07"
+    assert calls[1][6] == str(tmp_path / "manual_.._x/board-manifest.json")
+
+
 def test_missing_target_fails_before_sync(sink, monkeypatch):
     events, _ = sink
     monkeypatch.delenv("SPONSORATLAS_ALERT_URL")
@@ -262,3 +321,62 @@ def test_airbyte_near_trial_cutoff_enters_same_job_cleanup(sink, monkeypatch):
         runtime.airbyte_sync(run_id="trial-near-cutoff")
     assert any(url.endswith("/jobs/42") and method == "DELETE" for url, method in calls)
     assert json.loads(next(sink[1].glob("*.json")).read_text())["status"] == "cancelled"
+
+
+def write_lock(work, **owner):
+    work.mkdir(exist_ok=True)
+    (work / "work-owner.json").write_text(json.dumps(owner))
+    return work / "work-owner.json"
+
+
+def test_a_dead_refresh_owner_is_removed_and_logged(tmp_path, capsys):
+    import subprocess
+
+    dead = subprocess.Popen(["true"])
+    dead.wait()
+    lock = write_lock(tmp_path, kind="refresh", pid=dead.pid, nonce="n")
+    runtime.clear_dead_refresh_owner(tmp_path)
+    assert not lock.exists()
+    assert "removed_dead_refresh_owner" in capsys.readouterr().out
+    runtime.clear_dead_refresh_owner(tmp_path)  # No lock: nothing to do.
+
+
+def test_a_live_owner_or_a_gateway_is_named_and_left_in_place(tmp_path):
+    import os
+
+    lock = write_lock(tmp_path, kind="refresh", pid=os.getpid(), nonce="n")
+    with pytest.raises(RuntimeError, match=f"live refresh pid {os.getpid()}"):
+        runtime.clear_dead_refresh_owner(tmp_path)
+    assert lock.exists()
+    lock = write_lock(tmp_path, kind="gateway", pid=4194999, nonce="n")
+    with pytest.raises(RuntimeError, match="gateway pid"):
+        runtime.clear_dead_refresh_owner(tmp_path)
+    assert lock.exists()
+    for bad in ('{"kind":"refresh","pid":0}', '{"kind":"refresh"}', "", "not json"):
+        lock.write_text(bad)
+        with pytest.raises(RuntimeError, match="Cube work"):
+            runtime.clear_dead_refresh_owner(tmp_path)
+        assert lock.read_text() == bad
+
+
+def test_cube_refresh_retries_past_a_killed_owner_and_runs_once(monkeypatch, tmp_path):
+    import subprocess
+
+    dead = subprocess.Popen(["true"])
+    dead.wait()
+    lock = write_lock(tmp_path, kind="refresh", pid=dead.pid, nonce="n")
+    calls = []
+    real_run = runtime.subprocess.run
+    monkeypatch.setattr(
+        runtime.subprocess,
+        "run",
+        lambda args, **kw: calls.append((args, lock.exists())) if "refresh.cjs" in args[-1] else real_run(args, **kw),
+    )
+    monkeypatch.setenv("SPONSORATLAS_ORCHESTRATION_MODE", "production")
+    monkeypatch.setenv("SEMANTIC_SOURCE", "snowflake")
+    monkeypatch.setenv("SEMANTIC_WORK", str(tmp_path))
+    monkeypatch.setenv("SPONSORATLAS_CUBE_PRIVATE_KEY_FILE", "/keys/CUBE_SVC.p8")
+    monkeypatch.setenv("SNOWFLAKE_TRIAL_STARTED_AT", "2026-10-25T07:29:00Z")
+    monkeypatch.setenv("SNOWFLAKE_TRIAL_EXPIRES_AT", "2026-11-24T00:00:00Z")
+    assert runtime.cube_refresh(run_id="run-1") == str(tmp_path.resolve())
+    assert len(calls) == 1 and calls[0][1] is False

@@ -1,6 +1,6 @@
 # Task15 web quality / vitals evidence
 
-**Local implementation gates only; deployment, remote CI and real-user p75 remain OPEN.** No GitHub push, publication, Azure provisioning, native third-party account actions, or real production traffic occurred. A separately approved local image pull/build and finite runtime validation are recorded in the Task15 report.
+**Local implementation gates only; deployment, remote CI and real-user p75 remain OPEN.** No site publication, Azure provisioning, native third-party account actions, or real production traffic occurred. The repository was later pushed to GitHub (public since 2026-11-03), but `web.yml` has no recorded run there. A separately approved local image pull/build and finite runtime validation are recorded in the Task15 report.
 
 ## Budgets and executable proof
 

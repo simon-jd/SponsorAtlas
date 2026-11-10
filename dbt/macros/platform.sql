@@ -12,6 +12,19 @@
   get(parse_json({{ payload }}), {{ key }})::varchar
 {%- endmacro %}
 
+{# A provider field inside a payload is not guaranteed to be JSON. A bad one reads as NULL here, so
+   one malformed row cannot fail the incremental fact on every later run; the board loader refuses
+   a board where such rows are common. The outer payload stays strict in json_value. #}
+{% macro nested_json_value(payload, key) -%}
+  {{ return(adapter.dispatch('nested_json_value', 'sponsoratlas')(payload, key)) }}
+{%- endmacro %}
+{% macro duckdb__nested_json_value(payload, key) -%}
+  json_extract_string(try_cast({{ payload }} as json), '/' || replace(replace({{ key }}, '~', '~0'), '/', '~1'))
+{%- endmacro %}
+{% macro snowflake__nested_json_value(payload, key) -%}
+  get(try_parse_json({{ payload }}), {{ key }})::varchar
+{%- endmacro %}
+
 {% macro strict_date(value) -%}
   {{ return(adapter.dispatch('strict_date', 'sponsoratlas')(value)) }}
 {%- endmacro %}

@@ -35,6 +35,7 @@ toolchains:
 	@test -x $(PYTHON) || { echo 'missing .venv (see README: uv sync)'; exit 1; }
 	@test "$$($(NODE_BIN)/node --version)" = v24.22.1 || { echo 'missing project Node 24.22.1 in .tools/node-runtime'; exit 1; }
 	@test -x .tools/orchestration/venv/bin/pytest || { echo 'missing .tools/orchestration/venv'; exit 1; }
+	@test -d .tools/hyper-api/tableauhyperapi || { echo 'missing .tools/hyper-api (see bi/public/BUILD.md)'; exit 1; }
 
 test-python:
 	$(PYTEST)
